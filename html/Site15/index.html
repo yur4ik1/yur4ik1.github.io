@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- <div class="loading">
+        <img src="./img/logo.png" alt="logo" class="loading_logo">
+    </div> -->
+
+    <div class="wrapper_global">
+
+        <div class="sidebar">
+            <div class="sidebar_wrap">
+                <img src="./img/logo.png" alt="logo" class="sidebar_logo">
+                <nav class="sidebar_nav">
+                    <img src="./img/svg/burger-close.svg" alt="burger close" class="burger-close" style = "display: none;">
+                    <ul class="nav_itemlist">
+                        <li class="nav_listitem"><a href="#">главная</a></li>
+                        <li class="nav_listitem"><a href="#">услуги</a></li>
+                        <li class="nav_listitem"><a href="#">калькулятор</a></li>
+                        <li class="nav_listitem has_child"><a href="#">дизайн</a>
+                            <ul class="listitem_child">
+                                <li class="childitem"><a href="#">главная</a></li>
+                                <li class="childitem"><a href="#">главная</a></li>
+                                <li class="childitem"><a href="#">главная</a></li>
+                                <li class="childitem"><a href="#">главная</a></li>
+                                <li class="childitem"><a href="#">главная</a></li>
+                                <li class="childitem"><a href="#">требованиятребования</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_listitem"><a href="#">галерея</a></li>
+                        <li class="nav_listitem"><a href="#">требования</a></li>
+                        <li class="nav_listitem"><a href="#">о нас </a></li>
+                        <li class="nav_listitem"><a href="#">контакты</a></li>
+                    </ul>
+                </nav>
+                <img src="./img/burger.png" alt="burger" class="burger" style="display: none;">
+            </div>
+            
+        </div>
+        <main class = "index">
+            <div class="header">
+                <p class = "header_tel"><a href="tel:+74953749588">+7 495 374  95  88</a></p>
+                <p class = "header_mail">
+                    <a class= "mail" href="mailto:info@top-copy.ru">info@top-copy.ru</a>
+                    <span class="contacts_mail-copy" data-clipboard-target = ".mail">копировать адрес</span>
+                </p>
+                <p class = "header_street">ЛЕНИНСКИЙ ПРОСПЕКТ 148</p>
+            </div>
+
+            <div class="index_player">
+                <a href="#" class="player_btn"><img src="./img/index_player_btn.png" alt="player btn"></a>
+                <h2 class="player_title">всё о нашей типографии за 1 минуту</h2>
+            </div>
+
+            <div class="index_intro">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ibg"><img src="./img/index_banner.png" alt="banner"></div>
+                        <div class="swiper-slide ibg"><img src="./img/index_banner.png" alt="banner"></div>
+                        <div class="swiper-slide ibg"><img src="./img/index_banner.png" alt="banner"></div>
+                    
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="index_text">
+                    <p>
+                        <span>Мы рады приветствовать Вас на сайте оперативной полиграфии TOPprint.</span> Наша компания оказывает самый широкий спектр услуг, постоянно обновляя и пополняя их. У нас Вы можете 
+                        заказать полиграфическую продукцию, такую как визитки, буклеты, листовки, флаеры, плакаты, приглашения и т.д., всевозможное сканирование, начиная от документов и чертежей 
+                        и заканчивая рентгеновскими снимками и слайдами, наружную рекламу (штендеры, баннеры и т.д.), оцифровка видео, разработка сайтов , корпоративного стиля и многое другое. 
+                        Сотрудники TOPCOPY - самые разносторонние специалисты, они помогут Вам не только в выводе документов и макетирование изделий, но и распечатке технической и строительной 
+                        документации. И сделают это не только качественно, но и максимально быстро. Какова бы не была Ваша задача, обратитесь к нам и мы приложим все усилия чтобы решить ее!
+                    </p>
+                </div>
+            </div>
+
+            <div class="index_last">
+                <div class="index_last_header">
+                    <h2>последние актуальные видео</h2>
+                </div>
+
+                <div class="index_last_blks">
+                    <div class="index_last_blk ibg"><img src="./img/index_last.png" alt="last img"></div>
+                    <div class="index_last_blk ibg"><img src="./img/index_last.png" alt="last img"></div>
+                    <div class="index_last_blk ibg"><img src="./img/index_last.png" alt="last img"></div>
+                </div>
+
+                <a href="#" class="index_last_all">смотреть всё</a>
+            </div>
+
+            <div class="index_sale">
+                <div class="index_sale_header">
+                    <h2>акционные предложения!</h2>
+                </div>
+
+                <div class="swiper-container1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="index_sale_blk">
+                                <div class="index_sale_blk_img ibg"><img src="./img/index_sale.png" alt="sale img"></div>
+                                <h3 class="index_sale_blk_title">новая акция!</h3>
+                                <p class="index_sale_blk_subtitle">
+                                    специально для вас мы снизили цены на самую актуальную 
+                                    продукцию этого месяца
+                                </p>
+                                <a href="#" class="index_sale_blk_more">подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="index_sale_blk">
+                                <div class="index_sale_blk_img ibg"><img src="./img/index_sale.png" alt="sale img"></div>
+                                <h3 class="index_sale_blk_title">новая акция!</h3>
+                                <p class="index_sale_blk_subtitle">
+                                    специально для вас мы снизили цены на самую актуальную 
+                                    продукцию этого месяца
+                                </p>
+                                <a href="#" class="index_sale_blk_more">подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="index_sale_blk">
+                                <div class="index_sale_blk_img ibg"><img src="./img/index_sale.png" alt="sale img"></div>
+                                <h3 class="index_sale_blk_title">новая акция!</h3>
+                                <p class="index_sale_blk_subtitle">
+                                    специально для вас мы снизили цены на самую актуальную 
+                                    продукцию этого месяца
+                                </p>
+                                <a href="#" class="index_sale_blk_more">подробнее</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="index_sale_blk">
+                                <div class="index_sale_blk_img ibg"><img src="./img/index_sale.png" alt="sale img"></div>
+                                <h3 class="index_sale_blk_title">новая акция!</h3>
+                                <p class="index_sale_blk_subtitle">
+                                    специально для вас мы снизили цены на самую актуальную 
+                                    продукцию этого месяца
+                                </p>
+                                <a href="#" class="index_sale_blk_more">подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><img src="./img/index_sale_right.png" alt="right arrow"></div>
+                    <div class="swiper-button-prev"><img src="./img/index_sale_left.png" alt="left arrow"></div>
+                </div>
+            </div>
+
+            <div class="index_bages">
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_bage.png" alt="bage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="index_steps">
+                <div class="swiper-container3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                            <div class="sale_img_wrapper">
+                                <div class="sale_img">
+                                    <img src="./img/index_steps_idea.jpg" alt = "step">
+                                </div>
+                                
+                                <div class="sale_hover">
+                                    <p>
+                                        наши дизайнеры 
+                                        оперативно помогут  
+                                        вам реализовать свои идеи  
+                                        или подскажут вам 
+                                        в вашем деле
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="sale_name">согласование </p>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="sale_img_wrapper">
+                                <div class="sale_img">
+                                    <img src="./img/index_steps_idea.jpg" alt = "step">
+                                </div>
+                                
+                                <div class="sale_hover">
+                                    <p>
+                                        наши дизайнеры 
+                                        оперативно помогут  
+                                        вам реализовать свои идеи  
+                                        или подскажут вам 
+                                        в вашем деле
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="sale_name">согласование </p>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="sale_img_wrapper">
+                                <div class="sale_img">
+                                    <img src="./img/index_steps_idea.jpg" alt = "step">
+                                </div>
+                                
+                                <div class="sale_hover">
+                                    <p>
+                                        наши дизайнеры 
+                                        оперативно помогут  
+                                        вам реализовать свои идеи  
+                                        или подскажут вам 
+                                        в вашем деле
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="sale_name">согласование </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sale_img_wrapper">
+                                <div class="sale_img">
+                                    <img src="./img/index_steps_idea.jpg" alt = "step">
+                                </div>
+                                
+                                <div class="sale_hover">
+                                    <p>
+                                        наши дизайнеры 
+                                        оперативно помогут  
+                                        вам реализовать свои идеи  
+                                        или подскажут вам 
+                                        в вашем деле
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="sale_name">согласование </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sale_img_wrapper">
+                                <div class="sale_img">
+                                    <img src="./img/index_steps_idea.jpg" alt = "step">
+                                </div>
+                                
+                                <div class="sale_hover">
+                                    <p>
+                                        наши дизайнеры 
+                                        оперативно помогут  
+                                        вам реализовать свои идеи  
+                                        или подскажут вам 
+                                        в вашем деле
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="sale_name">согласование </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="index_map">
+
+            </div>
+
+            <footer>
+                <div class="footer_col1">
+                    <img src="./img/logo.png" alt="logo" class="footer_col1_logo">
+                    <h2 class="footer_col1_title">ОПЕРАТИВНАЯ ПОЛИГРАФИЯ НА ЮГО-ЗАПАДНОЙ</h2>
+                    <p class="footer_col1_desc">
+                        Мы рады приветствовать Вас на сайте 
+                        оперативной полиграфии TOPCOPY. Наша компания 
+                        оказывает самый широкий спектр услуг, 
+                        постоянно обновляя и пополняя их
+                    </p>
+                    <div class="footer_col1_payments">
+                        <img src="./img/footer_byCash.png" alt="by cash">
+                        <img src="./img/footer_visa.png" alt="visa">
+                        <img src="./img/footer_masterCard.png" alt="master card">
+                        <img src="./img/footer_mir.png" alt="mir">
+                    </div>
+                    <p class="footer_col1_payments_subtitle">МЫ ПРИНИМАЕМ</p>
+                </div>
+                <div class="footer_col2">
+                    <h2 class="footer_col2_title">Меню</h2>
+                    <ul class="footer_col2_nav">
+                        <li class="footer_col2_navitem"><a href="#">Вся продукция</a></li>
+                        <li class="footer_col2_navitem"><a href="#">Клиентам</a></li>
+                        <li class="footer_col2_navitem"><a href="#">О типографии</a></li>
+                        <li class="footer_col2_navitem"><a href="#">Отзывы</a></li>
+                        <li class="footer_col2_navitem"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer_col3">
+                    <div class="footer_col3_gallery">
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                        <div class="footer_col3_galleryItem ibg"><img src="./img/footer_gallary.png" alt="gallery item"></div>
+                    </div>
+                    <p class="footer_col3_subscribe">МЫ В СОЦ СЕТЯХ <a href="#">Подпишись</a></p>
+                </div>
+                <div class="footer_col4">
+                    <img src="./img/footer_img.png" alt="footer img" class="footer_col4_title">
+                    <p class="footer_col4_mail"><a href="mailto:info@top-copy.ru">info@top-copy.ru</a></p>
+                    <p class="footer_col4_tel"><a href="tel:+74953749588">+7 495 374  95  88</a></p>
+                    <p class="footer_col4_whatsapp"><a href="#">НАПИСАТЬ В WHATSAPP</a></p>
+                    <p class="footer_col4_inst"><a href="#">topprint.pro</a></p>
+                    <p class="footer_col4_street">Ленинский пр-т 148</p>
+                    <p class="footer_col4_time">Пн-Пт: с  10:00  до  20:00    Сб: с 11:00 до 18:00 </p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/clipboard.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+		var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    
+    <script>
+		var swiper = new Swiper('.swiper-container1', {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    
+    <script>
+		var swiper = new Swiper('.swiper-container2', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 0,
+            loop: true,
+        });
+    </script>
+    
+    <script>
+        if(window.innerWidth > 800){
+            var swiper = new Swiper('.swiper-container3', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+            });
+        }else{
+            var swiper = new Swiper('.swiper-container3', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                centeredSlides: true,
+            });
+        }
+
+        window.addEventListener("resize", ()=>{
+            if(window.innerWidth > 800){
+            var swiper = new Swiper('.swiper-container3', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+            });
+            }else{
+                var swiper = new Swiper('.swiper-container3', {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                });
+            }
+        })
+		
+	</script>
+
+
+</body>
+</html>

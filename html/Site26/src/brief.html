@@ -1,0 +1,932 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>colable - Brief</title>
+    <link rel="icon" href="./img/favicon.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="brief">
+        <div class="wrapper">
+
+            <h1 class="brief__header">бриф</h1>
+            <h2 class="brief__subtitle">Поздравляем! Вы в шаге от того, чтобы вступить в закрытый клуб Colable.</h2>
+            <h2 class="brief__subtitle">Итак, путешествие в мир вашего бренда начинается! Чтобы оно успешно завершилось,
+                просим оставить в брифе как можно больше информации. Let's go!</h2>
+
+            <section class="brief__contacts">
+                <img src="./img/brief-contacts__image.svg" alt="contacts image" class="brief-image">
+                <h2 class="brief__section-title"><span>Контакты</span></h2>
+
+                <div class="brief__input-group">
+                    <h3 class="brief__section-label">Ваши<span>*</span></h3>
+                    <input type="text" placeholder="ФИО" name="yourContactsFIO" class="requiredContent"
+                        id="yourContactsFIO">
+                    <input type="text" placeholder="Должность" name="yourContactsRank" class="requiredContent"
+                        id="yourContactsRank">
+                    <input type="phone" placeholder="Телефон" name="yourContactsPhone" class="requiredContent"
+                        id="yourContactsPhone">
+                    <input type="email" placeholder="Почта" name="yourContactsEmail" class="requiredContent"
+                        id="yourContactsEmail">
+                </div>
+
+                <div class="brief__input-group">
+                    <h3 class="brief__section-label">Запасного контактного лица<span>*</span></h3>
+                    <p class="brief__section-subtitle">К кому мы можем обратиться в случае, если вы будете недоступны
+                    </p>
+                    <input type="text" placeholder="ФИО" name="yourContactsFIO" class="requiredContent"
+                        id="yourContactsFIO">
+                    <input type="text" placeholder="Должность" name="yourContactsRank" class="requiredContent"
+                        id="yourContactsRank">
+                    <input type="phone" placeholder="Телефон" name="yourContactsPhone" class="requiredContent"
+                        id="yourContactsPhone">
+                    <input type="email" placeholder="Почта" name="yourContactsEmail" class="requiredContent"
+                        id="yourContactsEmail">
+                </div>
+
+            </section>
+
+            <section class="brief__brand-platform">
+                <img src="./img/brief-platform__turtle.svg" alt="contacts image" class="brief-image">
+                <h2 class="brief__section-title"><span>Платформа бренда</span></h2>
+
+                <div class="custom-placeholder_container">
+                    <input type="text" id="brandNameTranslit" class="translit" style="display:none;">
+                    <input type="text" class="requiredContent" name="brandPlatformBrandName"
+                        id="brandPlatformBrandName">
+                    <p class="custom-placeholder">Название бренда<span>*</span></p>
+                     
+                </div>
+
+                <div class="custom-placeholder_container">
+                    <input type="text" class="requiredContent" name="brandPlatformSiteLink" id="brandPlatformSiteLink">
+                    <p class="custom-placeholder">Сайт<span>*</span></p>
+                     
+                </div>
+                
+
+                <div class="brief__radio-group">
+                    <h3 class="radio-group_title">География<span>*</span></h3>
+
+                    <input type="text" class="requiredContent" style="display: none;" name="geografyGlobalInput"
+                        class="" id="geografyGlobalInput">
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="geografy" id="geografyLocal">
+                        <label for="geografyLocal">
+                            <p>Локальный</p>
+                            <p class="label__content">
+                                В рамках региона
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="geografy" id="geografyFederal">
+                        <label for="geografyFederal">
+                            <p>Федеральный</p>
+                            <p class="label__content">
+                                В пределах страны
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="geografy" id="geografyMulti">
+                        <label for="geografyMulti">
+                            <p>Международный</p>
+                            <p class="label__content">
+                            </p>
+                        </label>
+                    </div>
+
+                     
+                </div>
+
+                <div class="brief__radio-group">
+                    <h3 class="radio-group_title">Вид бренда</h3>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brand" id="brandMother">
+                        <label for="brandMother">
+                            <p>Материнский</p>
+                            <p class="label__content">
+                                Главный носитель функциональных и эмоциональных ценностей, на основе которого возникают
+                                производные бренды
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brand" id="brandZone">
+                        <label for="brandZone">
+                            <p>Зонтичный</p>
+                            <p class="label__content">
+                                Предполагает использование сразу в нескольких категориях, когда под одним брендом
+                                существуют товары совершенного разного назначения, но объединенные общими
+                                потребительскими ценностями
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brand" id="brandSubbrand">
+                        <label for="brandSubbrand">
+                            <p>Суббренд</p>
+                            <p class="label__content">
+                                Возникает как производный от материнского и несет аналогичные ему базовые атрибуты, но в
+                                названии имеет расширение в виде добавленных слов
+                            </p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="brief__radio-group">
+                    <h3 class="radio-group_title">Тип бренда</h3>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brandType" id="brandTypeMother">
+                        <label for="brandTypeMother">
+                            <p>Потребительский</p>
+                            <p class="label__content">
+                                Cовокупность вербальных и визуальных элементов бренда, транслирующих конкурентные
+                                преимущества продукта/товара целевым группам
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brandType" id="brandTypeZone">
+                        <label for="brandTypeZone">
+                            <p>Корпоративный</p>
+                            <p class="label__content">
+                                Cовокупность визуальных и вербальных элементов бренда компании/предприятия,
+                                транслирующих его конкурентные преимущества/обещания целевым группам: сотрудникам,
+                                инвесторам, дистрибуторам, конечным потребителям товаров или услуг корпорации, а также
+                                обществу и государству
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="radio-group_radio">
+                        <input type="radio" name="brandType" id="brandTypeSubbrand">
+                        <label for="brandTypeSubbrand">
+                            <p>Ритейл</p>
+                            <p class="label__content">
+                                Это образ в сознании покупателя физического места для совершения покупок
+                            </p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="brief__dropdown-group">
+                    <h3 class="dropdonwn__title">Категория бизнеса <span>*</span></h3>
+
+                    <div class="dropdown-wrapper">
+                        <select name="cathegorySelect" class="requiredContent" id="cathegorySelect">
+                            <option value="1">Наука и образование</option>
+                            <option value="1">Развлечения</option>
+                            <option value="1">Логистика</option>
+                            <option value="1">Девелопмент</option>
+                            <option value="1">НКО</option>
+                            <option value="1">Искусство и культура</option>
+                            <option value="1">Мода и одежда</option>
+                            <option value="1">Хозяйственные товары</option>
+                            <option value="1">Бьюти</option>
+                            <option value="1">Бытовая химия</option>
+                            <option value="1">Профессиональные услуги</option>
+                            <option value="1">Производство и промышленность</option>
+                            <option value="1">Сервисы и технологии</option>
+                            <option value="1">E-com</option>
+                            <option value="1">HoReCa</option>
+                            <option value="1">Еда и напитки</option>
+                            <option value="1">Авто</option>
+                            <option value="1">Фарма</option>
+                            <option value="1">Медицина</option>
+                            <option value="1">Финансы</option>
+                            <option value="1">Агросектор</option>
+                            <option value="1">Детские товары</option>
+                            <option value="1">Travel</option>
+                            <option value="1">Спорт</option>
+                            <option value="1">Личный бренд</option>
+                            <option value="1">Государственный сектор</option>
+                            <option value="1">Ритейл</option>
+                            <option value="1">Страхование</option>
+                            <option value="1">Финтех</option>
+                            <option value="1">Другое</option>
+                            <option selected="selected" hidden disabled value="-1">Выберите категорию</option>
+                        </select>
+                         
+                    </div>
+
+                </div>
+
+                <div class="brief__dropdown-group">
+                    <h3 class="dropdonwn__title">Ценовой сегмент<span>*</span></h3>
+
+                    <div class="dropdown-wrapper">
+                        <select name="cathegorySelect" class="requiredContent" id="cathegorySelect">
+                            <option value="1">Luxury</option>
+                            <option value="1">High-priced</option>
+                            <option value="1">Middle-priced</option>
+                            <option value="1">Low-priced</option>
+                            <option selected="selected" hidden disabled value="-1">Выберите сегмент</option>
+                        </select>
+                         
+                    </div>
+
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Позиционирование бренда <span class="red">*</span></h3>
+                    <textarea class="requiredContent" rows="1" name="" id=""></textarea>
+                     
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">RTB <span>(Reasons to believe) </span> </h3>
+                    <textarea rows="1" placeholder="Reasons to believe — основные причины верить вашему бренду." name=""
+                        id=""></textarea>
+
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Рациональные преимущества</h3>
+                    <textarea rows="1"
+                        placeholder="Рациональные преимущества — это характеристики, которые подтверждают эмоциональные составляющие бренда. Они воздействуют на логическое мышление и убеждают потребителя в ценности бренда."
+                        name="" id=""></textarea>
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Эмоциональные преимущества</h3>
+                    <textarea rows="1" placeholder="Эмоциональные преимущества — это характеристики, из которых складывается ключевая ценность бренда и которые формируют образ бренда. Эмоциональные характеристики вдохновляют потребителя." name="" id=""></textarea>
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Ценности</h3>
+                    <textarea rows="1" placeholder="Придают бренду уникальность и выделяют его среди конкурентов." name=""
+                        id=""></textarea>
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Характер бренда <span class="red">*</span></h3>
+                    <textarea rows="1" class="requiredContent"
+                        placeholder="Персонификация, одушевление нашего бренда. Это определенная стилистика, которой подчинены все материалы и коммуникации бренда. "
+                        name="" id=""></textarea>
+                         
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Суть бренда</h3>
+                    <textarea rows="1" placeholder="Результирующее убеждение, ключевое обещание бренда потребителю." name=""
+                        id=""></textarea>
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Миссия</h3>
+                    <textarea rows="1" placeholder="Это смысл существования компании и социальные цели, которым она служит."
+                        name="" id=""></textarea>
+                </div>
+
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Tone of voice <span class="red">*</span></h3>
+                    <textarea rows="1" class="requiredContent"
+                        placeholder="Тональность, которой придерживается бренд в коммуникации со своим потребителем."
+                        name="" id=""></textarea>
+                         
+                </div>
+
+                <div class="brief__file-add">
+                    <div class="file-add_textblock">
+                        <h2>
+                            Загрузите документ, который наиболее полно описывает особенности вашего бренда
+                        </h2>
+                        <p>(бренд-платформа, брендбук и т.д.)<span>*</span></p>
+
+                    </div>
+                    <label class="file-add_input-label" for="fileInput"><span>Добавить</span></label>
+                    <input class="file-add_input" type="file" name="fileInput" id="fileInput">
+                </div>
+
+            </section>
+
+            <section class="brief__brand-media">
+                <img src="./img/brief-media__image.svg" alt="contacts image" class="brief-image">
+                <h2 class="brief__section-title"><span>Медиаресурсы бренда</span> </h2>
+
+                <div class="brand-media_content">
+                    <div class="media_contnet-item">
+                        <p>Медиаресурс</p>
+                        <p>Количество подписчиков</p>
+                    </div>
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/inst-logo.svg" alt="inst inst-logo">
+                            <input type="text" placeholder="Ссылка на Instagram">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="instSubscribersAmount" id="instSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/vk-ico.svg" alt="vk vk-logo">
+                            <input type="text" placeholder="Ссылка на Vkontakte">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="vkSubscribersAmount" id="vkSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/fb-ico.svg" alt="inst inst-logo">
+                            <input type="text" placeholder="Ссылка на Facebook">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="fbSubscribersAmount" id="fbSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/yt-ico.svg" alt="youtube yt-logo">
+                            <input type="text" placeholder="Ссылка на YouTube">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="ytSubscribersAmount" id="ytSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/tg-ico.svg" alt="inst inst-logo">
+                            <input type="text" placeholder="Ссылка на Telegram">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="tgSubscribersAmount" id="tgSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="media_contnet-item">
+                        <div class="content-item_input">
+                            <img src="./img/svg/t-ico.svg" alt="twitter t-logo">
+                            <input type="text" placeholder="Ссылка на Twitter">
+                        </div>
+
+                        <div class="select-wrapper">
+                            <select name="tSubscribersAmount" id="tSubscribersAmount">
+                                <option value="1">до 5 000</option>
+                                <option value="1">до 10 000</option>
+                                <option value="1">10 000-30 000</option>
+                                <option value="1">30 000-50 000</option>
+                                <option value="1">50 000-100 000</option>
+                                <option value="1">больше 100 000</option>
+                                <option disabled selected="selected" hidden value="1">Количество подписчиков</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="brief__core">
+                <h2 class="brief__section-title"><span>Ядро целевой аудитории</span> <span class="red">*</span></h2>
+
+                <div class="core_range-wrapper">
+                    <h3 class="text-block__header">
+                        Процентный состав мужчин и женщин
+                    </h3>
+
+                    <div class="core_range">
+                        <p class="percent_sex m">M</p>
+                        <p class="percent percent-left">30%</p>
+                        <label class="single-range__label" data-foo="20" for="coreRange">
+                            <div class="range-line"></div>
+                            <input type="range" name="coreRange" id="coreRange" min="0" max="100" step="1" value="25">
+                            <input type="range" name="womanRange" id="womanRange" style="display: none;">
+                        </label>
+                        <p class="percent percent-right">70%</p>
+                        <p class="percent_sex">Ж</p>
+                    </div>
+
+                    <div class="brief_double-radio-group">
+                        <h2 class="text-block__header">Возраст</h2>
+
+                        <div class="double-radio__container">
+                            <p class="double-radio__container_from">От</p>
+                            <div class="dual-range" data-min="0" data-max="100">
+                                <span toId="ageFrom" class="handle left"></span>
+                                <span class="highlight"></span>
+                                <span toId="ageTo" class="handle right"></span>
+                            </div>
+                            <p class="double-radio__container_to">До</p>
+                            <input type="range" name="ageFrom" id="ageFrom" style="display: none;">
+                            <input type="range" name="ageTo" id="ageTo" style="display: none;">
+                        </div>
+
+                    </div>
+
+                    <div class="brief_radio-group">
+                        <h2 class="text-block__header">Семейное положение</h2>
+
+                        <input type="text" class="requiredContent" style="display: none;" name="merriageGlobalInput"
+                            id="merriageGlobalInput">
+
+                        <input type="radio" name="coreMarriage" id="coreInMarriage">
+                        <label for="coreInMarriage">В браке</label>
+                        <input type="radio" name="coreMarriage" id="coreNotInMarriage">
+                        <label for="coreNotInMarriage">Не в браке</label>
+                         
+                    </div>
+
+                    <div class="brief__dropdown-group">
+                        <h3 class="dropdonwn__title">Уровень дохода</h3>
+
+                        <div class="dropdown-wrapper">
+                            <select name="cashLevelSelect" class="requiredContent" id="cashLevelSelect">
+                                <option value="1">Нижний средний</option>
+                                <option value="1">Средний класс</option>
+                                <option value="1">Верхний средний</option>
+                                <option value="1">Высокий доход</option>
+                                <option value="1">Бедные</option>
+                                <option selected="selected" hidden disabled="" value="-1">Уровень дохода</option>
+                            </select>
+                             
+                        </div>
+
+                    </div>
+
+                    <div class="brief__dropdown-group">
+                        <h3 class="dropdonwn__title">Род занятости</h3>
+
+                        <div class="dropdown-wrapper">
+                            <select name="occupationSelect" class="requiredContent" id="occupationSelect">
+                                <option value="1">Руководители среднего звена</option>
+                                <option value="1">Топ-менеджеры</option>
+                                <option value="1">Специалисты</option>
+                                <option value="1">Service</option>
+                                <option value="1">Пенсионеры</option>
+                                <option value="1">В декрете</option>
+                                <option value="1">Неработающие</option>
+                                <option selected="selected" hidden disabled="" value="-1">Род занятости</option>
+                            </select>
+                             
+                        </div>
+
+                    </div>
+
+                    <div class="brief__text-block">
+                        <h3 class="text-block__header">Драйверы <span>(причины, мотивы покупки)</span></h3>
+                        <textarea rows="1" name="" class="requiredContent"></textarea>
+                         
+                    </div>
+
+                    <div class="brief__text-block">
+                        <h3 class="text-block__header">Барьеры <span>(причины отказа от покупки, сдерживающие
+                                факторы)</span></h3>
+                        <textarea rows="1" name="" class="requiredContent"></textarea>
+                         
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="brief_data">
+                <h2 class="brief__section-title">
+                    <span>
+                        Данные для отображения на сайте
+                    </span>
+                </h2>
+
+                <div class="spacer-20"></div>
+
+                <p>Если вы хотите пользоваться функционалом личного кабинета, а именно: 
+                    знать, кто сейчас зарегистрирован на платформе; дать возможность другим
+                    брендам узнать, что вы готовы к сотрудничеству; отправлять понравившимся 
+                    брендам инвайты, пожалуйста, заполните этот раздел
+                </p>
+
+                <div class="spacer-44"></div>
+
+                <div class="brief__file-add">
+                    <div class="file-add_textblock">
+                        <h2>
+                            Загрузите логотип бренда
+                        </h2>
+                        <p>(.png / .svg / .ai / .pdf)<span>*</span></p>
+
+                    </div>
+                    <label class="file-add_input-label" for="fileInput"><span>Загрузить</span></label>
+                    <input class="file-add_input" type="file" name="fileInput" id="fileInput">
+                </div>
+                <div class="spacer-20"></div>
+                <p>Мы понимаем, как важно для вас соблюдать все необходимые правила по использованию вашего логотипа сторонними ресурсами. Мы не можем размещать ваш логотип без соответствующего разрешения. Просим скачать шаблон письма, в соответствии с которым ваш логотип на законных основаниях может быть размещен на сайте Colable, заполнить его и выслать нам ввиде скана. Готовы обсудить любые вопросы по содержанию письма и в случае необходимости его скорректировать. </p>
+
+                <div class="spacer-44"></div>
+                <div class="brief__text-block">
+                    <h3 class="text-block__header">Дескриптор</h3>
+                    <textarea rows="1" name="" class="requiredContent" placeholder="Добавьте короткое описание деятельности вашего бренда. Эту информацию увидят другие участники проекта на сайте. Пример дескриптора бренда Western Union: Международная система денежных переводов. "></textarea>
+                     
+                </div>
+                <div class="spacer-44"></div>
+
+                <div class="brief__dropdown-group">
+                    <h3 class="dropdonwn__title">С какими категориями бизнеса вам интересна коллаба?</h3>
+
+                    <div class="multiple-select requiredContent" data-placeholder="Выберите категорию">
+                        <input type="checkbox" name="food" id="food" data-label="Еда и напитки">
+                        <input type="checkbox" name="horeca" id="horeca" data-label="HoReCa">
+                        <input type="checkbox" name="e-com" id="e-com" data-label="E-com">
+                        <input type="checkbox" name="services" id="services" data-label="Сервисы и технологии">
+                        <input type="checkbox" name="production" id="production" data-label="Производство и промышленность">
+                        <input type="checkbox" name="avocation" id="avocation" data-label="Развлечения">
+                        <input type="checkbox" name="prof-services" id="prof-services" data-label="Профессиональные услуги">
+                        <input type="checkbox" name="farma" id="farma" data-label="Фарма">
+                        <input type="checkbox" name="auto" id="auto" data-label="Авто">
+                        <input type="checkbox" name="beauty" id="beauty" data-label="Бьюти">
+                        <input type="checkbox" name="dev" id="dev" data-label="Девелопмент">
+                        <input type="checkbox" name="fashion" id="fashion" data-label="Мода и одежда">
+                        <input type="checkbox" name="culture" id="culture" data-label="Искусство и культура">
+                        <input type="checkbox" name="nko" id="nko" data-label="НКО">
+                        <input type="checkbox" name="chemical" id="chemical" data-label="Бытовая химия">
+                        <input type="checkbox" name="logistic" id="logistic" data-label="Логистика">
+                        <input type="checkbox" name="science" id="science" data-label="Наука и образование">
+                        <input type="checkbox" name="finance" id="finance" data-label="Финансы">
+                        <input type="checkbox" name="med" id="med" data-label="Медицина">
+                        <input type="checkbox" name="goods" id="goods" data-label="Хозяйственные товары">
+                        <input type="checkbox" name="insurance" id="insurance" data-label="Страхование">
+                        <input type="checkbox" name="retail" id="retail" data-label="Ритейл">
+                        <input type="checkbox" name="goverment" id="goverment" data-label="Государственный сектор">
+                        <input type="checkbox" name="brand" id="brand" data-label="Личный бренд">
+                        <input type="checkbox" name="sport" id="sport" data-label="Спорт">
+                        <input type="checkbox" name="travel" id="travel" data-label="Travel">
+                        <input type="checkbox" name="child-goods" id="child-goods" data-label="Детские товары">
+                        <input type="checkbox" name="sector" id="sector" data-label="Агросектор">
+                        <input type="checkbox" name="fintech" id="fintech" data-label="Финтех">
+                        <input type="checkbox" name="enother" id="enother" data-label="Другое">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="brief_total">
+                <h2 class="brief__section-title"><span>Прочее</span></h2>
+                <img src="./img/brief-summary_image.svg" alt="contacts image" class="brief-image">
+
+                <div class="brief__text-block">
+                    <textarea rows="1" placeholder="О чём ещё вы хотели бы упомянуть?" name="" id=""></textarea>
+                </div>
+
+                <div class="brief_radio-group">
+                    <h2 class="text-block__header group-title">Хотите получать новости проекта и быть
+                        в курсе о новых брендах в базе Colable? <span>*</span></h2>
+                    <input type="text" class="requiredContent" style="display: none;" name="newsGlobal" class=""
+                        id="newsGlobal">
+
+                    <input type="radio" name="totalNews" id="totalYesNews">
+                    <label for="totalYesNews">Да</label>
+                    <input type="radio" name="totalNews" id="totalNoNews">
+                    <label for="totalNoNews">Нет</label>
+                     
+                </div>
+
+                <div class="total-submit_wrapper">
+                    <button class="total-submit" disabled>Зарегистрироваться</button>
+                    <div class="total-submit_fake-submit"></div>
+                </div>
+
+
+                <h2 class="total-submit_field-alert active">Заполните все обязательные поля</h2>
+
+                <div class="total-submit_alert ">
+                    <span>Нажимая на кнопку, вы даете согласие на</span> <br>
+                    <a href="./privacy.html">обработку персональных данных.</a>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+        var tx = document.getElementsByTagName('textarea');
+        for (var i = 0; i < tx.length; i++) {
+            tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+            tx[i].addEventListener("input", OnInput, false);
+        }
+
+        function OnInput(e) {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        }
+
+        const html = document.querySelector("html")
+
+        function checkWidth() {
+            (window.outerWidth < 851 && window.outerWidth > 501) ? html.style.fontSize = ((window.outerWidth) / 851) + "px" : html.style.fontSize = "1px";
+        }
+
+        checkWidth()
+
+        window.addEventListener("resize", checkWidth)
+    </script>
+
+
+    <script>
+
+        const customPlaceholder = document.querySelectorAll(".custom-placeholder_container");
+
+        customPlaceholder.forEach(el => {
+            let p = document.createElement('p');
+            let innerHolder = el.querySelector(".custom-placeholder");
+            let innerArea = document.getElementById("brandPlatformBrandName");
+
+            el.addEventListener("input", () => {
+                innerArea.value == "" ? innerHolder.classList.remove("disabled") : innerHolder.classList.add("disabled")
+            })
+        })
+
+        //
+        // Translit
+        //
+
+        const translitItems = document.querySelectorAll(".translit");
+
+        const translitList = {
+            'а': 'a',
+            'б': 'b',
+            'в': 'v',
+            'г': 'g',
+            'д': 'd',
+            'е': 'e',
+            'ё': 'jo',
+            'ж': 'zh',
+            'з': 'z',
+            'и': 'i',
+            'й': 'j',
+            'к': 'k',
+            'л': 'l',
+            'м': 'm',
+            'н': 'n',
+            'о': 'o',
+            'п': 'p',
+            'р': 'r',
+            'с': 's',
+            'т': 't',
+            'у': 'u',
+            'ф': 'f',
+            'х': 'р',
+            'ц': 'с',
+            'ч': 'cg',
+            'ш': 'sh',
+            'щ': 'shh',
+            'ъ': '',
+            'ы': 'y',
+            'ь': '',
+            'э': 'je',
+            'ю': 'ju',
+            'я': 'ja',
+            ' ': '_',
+        }
+
+        function getTranslitedString(testString) {
+            let newString = "";
+
+            for (char of testString.toLowerCase()) {
+                let ch = char;
+
+                if (translitList[char] != undefined) {
+                    ch = translitList[char]
+                }
+
+                newString += ch;
+            }
+
+            return newString
+        }
+
+        if (translitItems.length > 0) {
+            const brandNameInput = document.getElementById("brandPlatformBrandName");
+            const brandNameTranslit = document.getElementById("brandNameTranslit");
+
+            brandNameInput.addEventListener("change", () => {
+                brandNameTranslit.value = getTranslitedString(brandNameInput.value);
+            })
+        }
+
+        //
+        // Scroll to not valid
+        //
+
+        function getOffset(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top + window.scrollY;
+        }
+
+        function ValidMail(el) {
+            var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+            var valid = re.test(el.value);
+            return valid;
+        }
+
+        function ValidPhone(el) {
+            var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+            var valid = re.test(el.value);
+            return valid;
+        }
+
+        const itemsToValidation = document.querySelectorAll('input[type="email"], input[type="tel"]');
+
+        itemsToValidation.forEach(el => {
+            el.addEventListener("change", element => {
+                if (el.getAttribute("type") == "email") {
+                    let validResult = ValidMail(el);
+                    validResult ? el.classList.remove("not-valid") : el.classList.add("not-valid");
+                } else {
+                    let validResult = ValidPhone(el)
+                    validResult ? el.classList.remove("not-valid") : el.classList.add("not-valid");
+                }
+            })
+        })
+
+        const submitButton = document.querySelector(".total-submit");
+        submitButton.addEventListener("click", () => {
+
+            let notValidItem = document.querySelector(".not-valid");
+
+            if (notValidItem) {
+                window.scrollTo({
+                    top: getOffset(notValidItem) - 250,
+                    behavior: "smooth"
+                });
+            }
+
+        })
+
+
+        //
+        // Scroll to need to fill areas
+        //
+
+        const buttonWrapper = document.querySelector(".total-submit_wrapper");
+
+        if (buttonWrapper) {
+            buttonWrapper.addEventListener("click", () => {
+                let needToFillList = document.querySelector('[needtofill="true"]')
+                if (needToFillList) {
+                    let parentElems = needToFillList.parentNode;
+
+                    window.scrollTo({
+                        top: getOffset(parentElems) - 300,
+                        behavior: "smooth"
+                    });
+                }
+            })
+        }
+
+
+    </script>
+
+    <script>
+        const multipleSelect = document.querySelectorAll(".multiple-select");
+        const countLabel = "Выбрано: "
+        
+        // Building an element
+        multipleSelect.forEach((selectContainer)=>{
+            var inputs = selectContainer.querySelectorAll('input[type="checkbox"]');
+            
+            // creating button
+            var selectionButton = document.createElement("button");
+            selectionButton.className = "multiple-select__button";
+            selectionButton.innerHTML = selectContainer.dataset.placeholder
+            selectContainer.removeAttribute("data-placeholder")
+
+            var selectionList = document.createElement("ul")
+            selectionList.className = "multiple-select__list";
+
+            inputs.forEach((input)=>{
+                var listItem = document.createElement("li")
+                listItem.className = "multipleSelect__list-item"
+
+                var newLabel = document.createElement("label")
+
+                newLabel.innerHTML = input.dataset.label
+                newLabel.setAttribute("for", input.getAttribute("id"))
+                input.removeAttribute("data-label")
+
+                listItem.append(input, newLabel)
+                selectionList.append(listItem)
+            })
+
+            selectContainer.innerHTML = ""
+            selectContainer.append(selectionButton,selectionList)
+        })
+        
+        const multipleSelectButtons = document.querySelectorAll(".multiple-select__button");
+
+        // Open an existing list
+        multipleSelectButtons.forEach(button=>{
+            button.addEventListener("click", ()=>{
+                const list = button.parentNode.querySelector(".multiple-select__list");
+                list.classList.toggle("active");
+            })
+        })
+
+        // Change button label on each multiple select
+        multipleSelect.forEach(selectBox=>{
+            const selectBoxInputs = selectBox.querySelectorAll(".multipleSelect__list-item input");
+            const selectBoxButton = selectBox.querySelector(".multiple-select__button")
+
+            selectBoxButton.dataset.label = selectBoxButton.innerHTML
+            
+            selectBoxInputs.forEach(input=>{
+                input.addEventListener("change", ()=>{
+                    var activeCount = 0;
+                    selectBoxInputs.forEach(inputElement=>{
+                        if(inputElement.checked){
+                            activeCount++
+                        }
+                    })
+
+                    if(activeCount > 0){
+                        selectBoxButton.innerHTML = countLabel + activeCount
+                        selectBox.value = 1
+                    } else{
+                        selectBoxButton.innerHTML = selectBoxButton.dataset.label
+                        selectBox.value = -1
+                    }
+
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hara.gr - Shop</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+</head>
+
+<body>
+    @@include('./header.html')
+
+    @@include('./shop-header.html')
+
+    <div class="shop-cathalog">
+
+        <h2 class="shop-cathalog__alert">Free shipping from 40$</h2>
+
+        <div class="wrapper">
+
+            @@include('./shop-card.html', {
+                "image": "./img/item1.webp",
+                "name": "Adelaide",
+                "sale": "20,22",
+                "price": "45,00"                
+            })
+
+            @@include('./shop-card.html', {
+                "image": "./img/item2.webp",
+                "name": "Popinjay",
+                "sale": "",
+                "price": "30,00"                
+            })
+
+            @@include('./shop-card.html', {
+                "image": "./img/item3.webp",
+                "name": "Sea Ya Soon",
+                "sale": "28,22",
+                "price": "45,00"                
+            })
+
+            @@include('./shop-card.html', {
+                "image": "./img/item4.webp",
+                "name": "Seahorse",
+                "sale": "",
+                "price": "45,00"                
+            })
+
+            @@include('./shop-card.html', {
+                "image": "./img/item5.webp",
+                "name": "Seahorse Choker",
+                "sale": "",
+                "price": "35,00"                
+            })
+
+            @@include('./shop-card.html', {
+                "image": "./img/item7.webp",
+                "name": "Roses",
+                "sale": "28,00",
+                "price": "35,00"                
+            })          
+
+
+        </div>
+
+    </div>
+
+
+    @@include('./footer.html')
+   
+    
+    <script src="./js/script.js"></script>
+
+    
+</body>
+
+</html>

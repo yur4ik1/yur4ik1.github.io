@@ -1,0 +1,142 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA - What we do</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="what-we-do-body our-projects-body">
+    
+    @@include('./header.html', {
+        "logoCircle":"#FFE76A",
+        "logoLines":"black"
+    })
+
+    <section class="what-we-do_intro">
+
+        <div class="wrapper">
+
+            <a target="_blank" href="./index.html" class="logo"><img src="./img/svg/logo.svg" alt="logo"></a>
+            <h1 class="intro_title bordered-text">ΤΑ ΕΡΓΑ ΜΑΣ</h1>
+
+            <p class="intro_subtitle">
+                Σκεφτόμαστε, πρωτοπορούμε και αναλαμβάνουμε δράση 
+                για κάθε ιστοσελίδα με το ίδιο πάθος
+            </p>
+
+        </div>
+        
+    </section>
+
+    <div class="our-projects">
+        <img src="./img/svg/our-projects-wave.svg" alt="wave" class="wave wave-top">
+
+        <div class="orange-wrap">
+
+            <div class="wrapper">
+
+                <div class="proj-block">
+                    <a href="#" target="_blank">
+                        <img src="./img/our-work-hara.png" alt="image">
+                        <p>
+                            <span>Hara.gr:</span>
+                            ηλεκτρονικό περιοδικό με θέμα τις γιορτές
+                        </p>
+                    </a>
+                </div>
+
+                <div class="proj-block">
+                    <a href="#" target="_blank">
+                        <img src="./img/our-work-arabella.png" alt="image">
+                        <p>
+                            <span>Hara.gr:</span>
+                            ηλεκτρονικό περιοδικό με θέμα τις γιορτές
+                        </p>
+                    </a>
+                </div>
+
+                <div class="proj-block">
+                    <a href="#" target="_blank">
+                        <img src="./img/our-work-tia.png" alt="image">
+                        <p>
+                            <span>Hara.gr:</span>
+                            ηλεκτρονικό περιοδικό με θέμα τις γιορτές
+                        </p>
+                    </a>
+                </div>
+
+                <div class="proj-block">
+                    <a href="#" target="_blank">
+                        <img src="./img/our-work-tatoo.png" alt="image">
+                        <p>
+                            <span>Hara.gr:</span>
+                            ηλεκτρονικό περιοδικό με θέμα τις γιορτές
+                        </p>
+                    </a>                    
+                </div>
+
+
+            </div>
+
+        </div>
+        
+        <img src="./img/svg/our-projects-wave.svg" alt="wave" class="wave">
+    </div>
+
+    <div class="our-templates">
+
+        <div class="wrapper">
+            <h2 class="proj-title bordered-text">Πρότυπα για τον ιστότοπο</h2>
+
+            <div class="templates-main">
+
+                <div class="proj-block">
+                    <a href="./template.html" target="_blank">
+                        <img src="./img/our-work-hara.png" alt="image">
+                    </a>
+                </div>
+    
+                <div class="proj-block">
+                    <a href="./template.html" target="_blank">
+                        <img src="./img/our-work-hara.png" alt="image">
+                    </a>
+                </div>
+    
+                <div class="proj-block">
+                    <a href="./template.html" target="_blank">
+                        <img src="./img/our-work-hara.png" alt="image">
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <img src="./img/svg/our-templates-wave.svg" alt="wave" class="wave">
+
+    </div>
+
+    @@include('./footer.html', {
+        "button":'',
+        centeredBtn:'<a target="_blank" href="./contacts.html"  class="footer-centered-text"><span class="orange">Ας</span> γνωριστούμε</a>'
+    })
+
+    @@include('./about-you-popup.html')
+
+    @@include('./brief-popup.html')
+
+    <div class="cursor">
+        <img src="./img/svg/coursor.svg" alt="cursor">
+    </div>
+   
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>

@@ -1,0 +1,130 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA - Arabella</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    
+    @@include('./header.html', {
+        "logoCircle":"#FFE76A",
+        "logoLines":"black"
+    })
+
+    <section class="project">
+
+        <div class="wrapper">
+            <a target="_blank" href="./index.html" class="logo"><img src="./img/svg/logo.svg" alt="logo"></a>
+            <h1 class="service_title"><span class="orange">Arabellaship.</span>gr</h1>        
+
+            <p>
+                Το Arabella Cruise Bar είναι ένα πλωτό καφέ-μπαρ στην καρδιά της Θεσσαλονίκης. Κάθε μέρα εκτελεί μικρά δρομολόγια στο Θερμαϊκό με σημείο αφετηρίας τον Λευκό Πύργο
+            </p>
+            
+            <p>
+                Άνθρωποι από όλο τον κόσμο επισκέπτονται το ιστορικό αυτό ξύλινο σκαρί που έχει χαρακτηριστεί ως Κινητό Μνημείο. Η σελίδα που δημιουργήσαμε αντικατοπτρίζει τον χαρακτήρα του πλοίου και εξυπηρετεί τις ανάγκες των πελατών.
+            </p>
+
+            <div class="slider">
+
+                <div class="swiper-container slider1">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next next1"><img src="./img/svg/projects-slider-right.svg" alt="arrow"></div>
+                    <div class="swiper-button-prev prev1"><img src="./img/svg/projects-slider-left.svg" alt="arrow"></div>
+                </div>
+
+            </div>
+
+            <p>
+                Συνδυάζει το υγρό με το ξύλινο στοιχείο και με την πρώτη ματιά «προδίδει» την τοποθεσία του.
+            </p>
+
+            <p>
+                Η Νο1 ερώτηση που θέτει ο κόσμος αφορά τη βόλτα και το χρονόμετρο που έχουμε δημιουργήσει λύνει ακριβώς αυτή την απορία.
+            </p>
+
+            <img src="./img/arabella-s.png" alt="image" class="image-s">
+
+            <p>
+                Υπάρχει μια ξεχωριστή σελίδα όπου φαίνονται αναλυτικά τα δρομολόγια και ο τιμοκατάλογος
+            </p>
+
+            <div class="twin">
+                <img src="./img/twin-left.png" alt="image">
+                <img src="./img/twin-right.png" alt="image">
+            </div>
+
+            <p>
+                Δεν θα μπορούσε να λείπει η μακροχρόνια ιστορία του πλοίου. Ο καθαρός σχεδιασμός τονίζει το πολύτιμο περιεχόμενο.
+            </p>
+
+            <img src="./img/project-arabella-b1.png" alt="image" class="image-b">
+
+            <p>
+                Η Gallery τοποθετεί τις φωτογραφίες σε περιβάλλον που τις αναδεικνύει ακόμα περισσότερο.
+            </p>
+
+            <img src="./img/project-arabella-m.png" alt="image" class="image-m">
+
+            <img src="./img/project-arabella-l.png" alt="image" class="image-l">
+
+            <p>
+                Ένα μοναδικό blog με μεγάλη επισκεψιμότητα που σαν κύριο στόχο έχει να δίνει ιδέες για δραστηριότητες στη Θεσσαλονίκη.
+            </p>
+
+            <img src="./img/project-arabella-b2.png" alt="image" class="image-b">
+
+            <img src="./img/project-arabella-b3.png" alt="image" class="image-b">
+
+        </div>
+    </section>
+
+    @@include('./footer.html', {
+        "button":'',
+        centeredBtn:'<a target="_blank" href="./contacts.html"  class="footer-centered-text"><span class="orange">Ας</span> γνωριστούμε</a>'
+    })
+
+    @@include('./about-you-popup.html')
+
+    @@include('./brief-popup.html')
+
+    <div class="cursor">
+        <img src="./img/svg/coursor.svg" alt="cursor">
+    </div>
+   
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.slider1', {
+          navigation: {
+            nextEl: '.next1',
+            prevEl: '.prev1',
+          },
+          effect: 'fade',
+        });
+      </script>
+</body>

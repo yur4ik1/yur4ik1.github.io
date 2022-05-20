@@ -1,0 +1,108 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body class="black">
+    
+    @@include('./header.html', {
+        "dark":"dark",
+        "logoCircle":"#FFE76A",
+        "logoLines":"black"
+    })
+    
+    <div class="pedia-intro">
+
+        <div class="wrapper">
+
+            <a target="_blank" href="./index.html" class="intro-logo"><img src="./img/svg/logo-black.svg" alt="logo black"></a>
+
+            <h1 class="intro-title">
+                T<span class="orange">I</span>A<span class="orange">pedia</span> 
+            </h1>
+
+        </div>
+        
+        <img src="./img/svg/tiapedia-horizontal-wave.svg" alt="wave" class="split-wave">
+
+        <div class="wrapper">
+            <p>Η γνώση είναι θησαυρός καιμε τα άρθρα μας θα γίνετε πλούσιοι</p>
+        </div>
+
+    </div>
+
+    <div class="pedia-main">
+        <img src="./img/svg/tiapedia-main-wave.svg" alt="main wave" class="wave top-wave">
+        
+        <div class="white-part">
+            <div class="wrapper">
+
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"Τι είναι το domain name; <br> Πώς να διαλέξεις το σωστό για την επιχείρησή σου"})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"Εύρεση του ονόματος domain σας"})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"1.	Διατηρήστε το όνομα τομέα σας σύντομο, προφανές και εύχρηστο "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"2.	Προσπαθήστε να πάρετε το .com (αλλά μην τονίζετε εάν δεν το κάνετε) "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"3.	Συμπεριλάβετε λέξεις-κλειδιά εάν έχει νόημα "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"4.	Δείτε εάν μπορείτε να χρησιμοποιήσετε το όνομα τομέα σας για τις κοινωνικές σας λαβές "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"5.	Ερευνήστε το ιστορικό του ονόματος domain σας "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"5.	Ερευνήστε το ιστορικό του ονόματος domain σας "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"Δημιουργήστε έναν ιστότοπο "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"Δημιουργήστε σελίδες προορισμού "})
+    
+                @@include("./_pedia-main-article-block.html",
+                    {"text":"Συνδέστε τους κοινωνικούς λογαριασμούς σας "})
+    
+            </div>
+        </div>
+
+        
+
+        <img src="./img/svg/tiapedia-main-wave.svg" alt="main wave" class="wave bottom-wave">
+    </div>
+
+    @@include('./footer-white.html',{
+        button:"",
+        centeredBtn:'<a target="_blank" href="./contacts.html"  class="footer-centered-text"><span class="orange">Ας</span> γνωριστούμε</a>'
+    })
+
+    @@include('./about-you-popup.html')
+
+
+    <div class="cursor">
+        <img src="./img/svg/coursor.svg" alt="cursor">
+    </div>
+   
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
+
+

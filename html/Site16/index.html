@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header start -->
+    <header>
+        <div class="desktop">
+            <div class="desktop_header_wrapper">
+                <a href="./index.html"><img src="./img/logo.png" alt="header logo" class="header_logo"></a>
+                
+                <ul class="desktop_nav">
+                    <li class="desktop_nav_items"><a href="./about-us.html">О нас</a></li>
+                    <li class="desktop_nav_items"><a href="./cathalog.html">Продукты</a></li>
+                    <li class="desktop_nav_items"><a href="./coop.html">Сотрудничество</a></li>
+                    <li class="desktop_nav_items"><a href="./circs.html">Доставка и оплата</a></li>
+                    <li class="desktop_nav_items"><a href="./tracking.html">Отследить заказ</a></li>
+                </ul>
+                <div class="desktop_other">
+                    <p>Заказ по телефону</p>
+                    <a href="tel:+89099097700">8 909 909 7700</a>
+                    <p class = "desktop_header_callme">Заказать звонок</p>
+                    <a href="./cart.html" class="desktop_bin">Корзина (0)</a>
+                    <a href="./favorite.html" class="desktop_favorite">Избранное</a>
+                    <a href="./login.html" class="desktop_profile">Александр</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile" style = "display: none;">
+            <a href="./index.html"><img src="./img/logo.png" alt="header logo" class="header_logo"></a>
+            <a href="./cart.html" class="header_mobile_bin"><img src="./img/svg/header_mobile_bin.svg" alt="header ico"></a>
+            <a href="./favorite.html" class="header_mobile_favorite"><img src="./img/svg/header_mobile_favorite.svg" alt="header ico"></a>
+            <a href="./login.html" class="header_mobile_profile"><img src="./img/svg/header_mobile_profile.svg" alt="header ico"></a>
+            <img src="./img/svg/header_burger.svg" alt="burger" class="header_mobile_burger">
+        </div>
+    </header>
+    <div class="header_mobile_nav">
+        <ul class="header_mobile_itemlist">
+            <li class="listitem has-child"><a href="#">Каталог</a>
+                <div class="listitem_childmenu">
+                    <p class="childmenu_back">Назад</p>
+                    <p class="childmenu_header">Каталог</p>
+                    <ul class="childmenu_itemlist">
+                        <li class="childmenu_item child-has-child"><a href="#">Овощи</a> 
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <p class="header_mobile_callme">Заказать звонок</p>
+                    <div class="header_mobile_socials">
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_facebook.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_instagram.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_twitter.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_linkedin.svg" alt="social"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="listitem"><a href="./about-us.html">О нас</a></li>
+            <li class="listitem"><a href="./cathalog.html">Продукты</a></li>
+            <li class="listitem"><a href="./coop.html">Сотрудничество</a></li>
+            <li class="listitem"><a href="./circs.html">Доставка и оплата</a></li>
+        </ul>
+
+        <p class="header_mobile_callme">Заказать звонок</p>
+        <div class="header_mobile_socials">
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_facebook.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_instagram.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_twitter.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_linkedin.svg" alt="social"></a>
+        </div>
+
+        <img src="./img/burger-close.png" alt="burger close" class="burger_close">
+    </div>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main class ="main_index">  
+        <div class="search">
+            <div class="wrapper">
+                <input type="search" name="search" id="searc" placeholder="Начните вводить название товара, например “Банан”" aria-label="main search bar">
+                <a href="#">
+                    <p class="desktop"><span class="desktop-1">Искать</span><span class="desktop-2"><img src="./img/search-mobile.svg" alt="img"></span></p>
+                    <img class="mobile" src="" alt="search">
+                </a>
+            </div>
+        </div>
+
+        <div class="intro">
+            <div class="wrapper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ibg"><img src="./img/intro.png" alt="img"></div>
+                        <div class="swiper-slide ibg"><img src="./img/intro.png" alt="img"></div>
+                        <div class="swiper-slide ibg"><img src="./img/intro.png" alt="img"></div>
+                    </div>
+                    <div class="swiper-button-next"><img src="./img/arrow-right.png" alt="img"></div>
+                    <div class="swiper-button-prev"><img src="./img/arrow-left.png" alt="img"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="categories">
+            <div class="wrapper">
+
+                <div class="categories_blk_mobile">
+                    <a href="#">Овощи</a>
+                    <a href="#">Фрукты</a>
+                    <a href="#">Экзотические фрукты</a>
+                    <a href="#">Ягоды</a> 
+                </div>
+
+                <a href="#" class="categories_blk">
+                    <div class="blk_img ibg"><img src="./img/categories-img.png" alt="img"></div>
+                    <p class="blk_title">Овощи</p>
+                </a>
+                <a href="#" class="categories_blk">
+                    <div class="blk_img ibg"><img src="./img/categories-img.png" alt="img"></div>
+                    <p class="blk_title">Овощи</p>
+                </a>
+                <a href="#" class="categories_blk">
+                    <div class="blk_img ibg"><img src="./img/categories-img.png" alt="img"></div>
+                    <p class="blk_title">Овощи</p>
+                </a>
+                <a href="#" class="categories_blk">
+                    <div class="blk_img ibg"><img src="./img/categories-img.png" alt="img"></div>
+                    <p class="blk_title">Овощи</p>
+                </a>
+                <a href="#" class="categories_blk">
+                    <div class="blk_img ibg"><img src="./img/categories-img.png" alt="img"></div>
+                    <p class="blk_title">Овощи</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div class="wrapper">
+                <h2 class="welcome_title">Добро пожаловать на сайт All-green</h2>
+                <div class="welcome_sub-title">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl id sed etiam pretium cras porttitor. Enim ut suscipit id sed tellus odio. Erat cras sodales in diam sodales et. Accumsan purus eget nulla morbi diam bibendum sit commodo. Orci sed enim vulputate consequat, mauris volutpat feugiat consectetur. Ultrices sit purus neque placerat duis. Diam eu odio mattis quisque. Consectetur quam aenean semper etiam. Sed diam arcu eget ut. Turpis penatibus penatibus arcu habitant nibh risus integer volutpat. Augue est natoque nullam tortor senectus augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl id sed etiam pretium cras porttitor. Enim ut suscipit id sed tellus odio. Erat cras sodales in diam sodales et. Accumsan purus eget nulla morbi diam bibendum sit commodo. Orci sed enim vulputate consequat, mauris volutpat feugiat consectetur. Ultrices sit purus neque placerat duis. Diam eu odio mattis quisque. Consectetur quam aenean semper etiam. Sed diam arcu eget ut. Turpis penatibus penatibus arcu habitant nibh risus integer volutpat. Augue est natoque nullam tortor senectus.</p>
+                </div>
+                <p class="welcome_see-all">Читать далее</p>
+            </div>
+        </div>
+
+        <div class="popular">
+            <div class="wrapper">
+                <h2 class="welcome_title">Популярные товары</h2>
+                <div class="popular_blocks">
+                    <div class="swiper-container1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular_blk">
+                                    <img src="./img/apple.png" alt="img" class="popular_img">
+                                    <p class="popular_country">Россия</p>
+                                    <h2 class="popular_title">Длинное название товара</h2>
+                                    <p class="popular_description">Краткое описание товара</p>
+                                    <p class="popular_availability">В наличие, коробок: <span class="popular_availability-bold">250</span></p>
+                                    <p class="popular_crossed-price">1690 р./10 к</p>
+                                    <p class="popular_price">от 1250 р. <span class="popular-price-little">за 1 коробку</span></p>
+                                    <p class="popular_buy-minimum">Минальная закупка: 10 коробок</p>
+                                    <a href="#" class="popular_button">Подробнее</a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+
+                        <div class="swiper-button-next1"><img src="./img/svg/about-us-arrow-r.svg" alt="arrow"></div>
+                        <div class="swiper-button-prev1"><img src="./img/svg/about-us-arrow-l.svg" alt="arrow"></div>
+                    
+                    </div>
+                    
+                </div>
+                <div class="popular_footer">
+                    <p class="popular-footer-p">Если вы хотите, чтоб наш каталог был у вас всегда под рукой, то вы можете</p>
+                    <a href="#" class="popular-footer-button">Скачать каталог</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="advantages">
+            <div class="wrapper">
+                <div class="advantages_blk">
+                    <h2>Наши преимущества</h2>
+                </div>
+                <div class="advantages_blocks">
+                    <div class="block">
+                        <img src="./img/truck.png" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>  
+                    <div class="block">
+                        <img src="./img/truck.png" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>   
+                    <div class="block">
+                        <img src="./img/truck.png" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>   
+                    <div class="block">
+                        <img src="./img/truck.png" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>   
+                    <div class="block">
+                        <img src="./img/truck.png" alt="img">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>     
+                </div>                  
+            </div>
+        </div>
+
+        <div class="pp__popup">
+            <div class="pp__popup_popup_blk">
+                <h2 class="pp__popup_popup_blk_title">
+                    Заказать звонок
+                </h2>
+                <div class="pp__popup_popup_blk_main">
+                    <p class="pp_input_title">Как к вам обращаться?</p>
+                    <input type="text" name="name" id="nam6" class="pp_input" aria-label="name label">
+
+                    <p class="pp_input_title">Номер телефона</p>
+                    <input type="tel" name="name" id="name5" class="pp_input" aria-label="phone label">
+
+                    <p class="pp_input_title">Удобное время для звонка</p>
+                    <input type="text" name="name" id="name7" class="pp_input" aria-label="time label">
+
+                    <p class="pp_input_title">Напишите вопрос</p>
+                    <textarea name="text" id="text" class="pp_textarea" aria-label="question label"></textarea>
+
+                    <a href="#" class="pp_send">Перезвоните мне</a>
+                </div>
+                <img src="./img/svg/all_popup_close.svg" alt="pp_close" class = "pp_close">
+            </div>
+        </div>
+
+        <div class="pre-order__popup">
+            <div class="pre-order__popup_popup_blk">
+                <h2 class="pp__popup_popup_blk_title">
+                    Предварительный заказ
+                </h2>
+                <div class="pre-order__popup_popup_blk_main">
+                    <p class="pre-order_input_title">ФИО <span>*</span></p>
+                    <input type="text" name="name" id="name" class="pp_input" aria-label="fio input">
+
+                    <p class="pre-order_input_title">E-Mail <span>*</span></p>
+                    <input type="email" name="name" id="name2" class="pp_input" aria-label="email input">
+
+                    <p class="pre-order_input_title">Номер телефона <span>*</span></p>
+                    <input type="tel" name="name" id="name3" class="pp_input" aria-label="phone input">
+
+                    <p class="pre-order_input_title">Комментарий <span>*</span></p>
+                    <textarea name="text" id="text" class="pp_textarea" aria-label="comment input"></textarea>
+
+                    <a href="#" class="pre-order_send">Заказать</a>
+                </div>
+                <img src="./img/svg/all_popup_close.svg" alt="pre-order_close" class = "pre-order_close">
+            </div>
+        </div>
+         
+        
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="wrapper">
+            <div class="footer_logo">
+                <a href="./index.html"><img src="./img/footer_logo.png" alt="footer_logo"></a>
+                
+                <div class="footer_links">
+                    <a href="#"><img src="./img/svg/footer_fb.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_inst.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_twit.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_linkedin.svg" alt="footer link"></a>
+                </div>
+            </div>
+            <div class="footer_menu">
+                <ul class="footer_nav">
+                    <li class="navlistitem">О нас</li>
+                    <li class="navlistitem">Продукты</li>
+                    <li class="navlistitem">Сотрудничество</li>
+                    <li class="navlistitem">Доставка и оплата</li>
+                </ul>
+                <div class="footer_contacts">
+                    <a href="tel:+89099097700" class="footer_tel">8 909 909 7700</a>
+                    <p class="footer_callme">Заказать звонок</p>
+                </div>
+            </div>
+            <div class="footer_rights">
+                <p>Редакция © 2020 all-green.ru Все права защищены </p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer end -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+	    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+    
+    <script>
+        if(window.innerWidth > 768){
+            var swiper = new Swiper('.swiper-container1', {
+                slidesPerView: "auto",
+                freeMode: true,
+                allowTouchMove: false
+            }); 
+        }
+        
+        if(window.innerWidth < 520){
+            var swiper = new Swiper('.swiper-container1', {
+                slidesPerView: "auto",
+                freeMode: false,
+                allowTouchMove: true,
+                
+                navigation: {
+                    nextEl: '.swiper-button-next1',
+                    prevEl: '.swiper-button-prev1',
+                },
+            }); 
+        }
+
+        if(window.innerWidth < 768){
+            console.log('< 768');
+            var swiper = new Swiper('.swiper-container1', {
+                slidesPerView: "auto",
+                freeMode: true,
+                allowTouchMove: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: false,
+                    draggable: true,
+                },
+            });   
+        }
+
+        
+
+        window.addEventListener("resize", ()=>{
+            if(window.innerWidth > 768){
+                var swiper = new Swiper('.swiper-container1', {
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    allowTouchMove: false
+                }); 
+            }
+
+            if(window.innerWidth < 768){
+                var swiper = new Swiper('.swiper-container1', {
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    allowTouchMove: true,
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                        hide: false,
+                        draggable: true,
+                    },
+                });   
+            }
+
+            if(window.innerWidth < 520){
+            var swiper = new Swiper('.swiper-container1', {
+                slidesPerView: "auto",
+                freeMode: false,
+                allowTouchMove: true,
+                
+                navigation: {
+                    nextEl: '.swiper-button-next1',
+                    prevEl: '.swiper-button-prev1',
+                },
+            }); 
+        }
+        })
+    </script>
+</body>
+</html>

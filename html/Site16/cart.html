@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header start -->
+    <header>
+        <div class="desktop">
+            <div class="desktop_header_wrapper">
+                <a href="./index.html"><img src="./img/logo.png" alt="header logo" class="header_logo"></a>
+                
+                <ul class="desktop_nav">
+                    <li class="desktop_nav_items"><a href="./about-us.html">О нас</a></li>
+                    <li class="desktop_nav_items"><a href="./cathalog.html">Продукты</a></li>
+                    <li class="desktop_nav_items"><a href="./coop.html">Сотрудничество</a></li>
+                    <li class="desktop_nav_items"><a href="./circs.html">Доставка и оплата</a></li>
+                    <li class="desktop_nav_items"><a href="./tracking.html">Отследить заказ</a></li>
+                </ul>
+                <div class="desktop_other">
+                    <p>Заказ по телефону</p>
+                    <a href="tel:+89099097700">8 909 909 7700</a>
+                    <p class = "desktop_header_callme">Заказать звонок</p>
+                    <a href="./cart.html" class="desktop_bin">Корзина (0)</a>
+                    <a href="./favorite.html" class="desktop_favorite">Избранное</a>
+                    <a href="./login.html" class="desktop_profile">Александр</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile" style = "display: none;">
+            <a href="./index.html"><img src="./img/logo.png" alt="header logo" class="header_logo"></a>
+            <a href="./cart.html" class="header_mobile_bin"><img src="./img/svg/header_mobile_bin.svg" alt="header ico"></a>
+            <a href="./favorite.html" class="header_mobile_favorite"><img src="./img/svg/header_mobile_favorite.svg" alt="header ico"></a>
+            <a href="./login.html" class="header_mobile_profile"><img src="./img/svg/header_mobile_profile.svg" alt="header ico"></a>
+            <img src="./img/svg/header_burger.svg" alt="burger" class="header_mobile_burger">
+        </div>
+    </header>
+    <div class="header_mobile_nav">
+        <ul class="header_mobile_itemlist">
+            <li class="listitem has-child"><a href="#">Каталог</a>
+                <div class="listitem_childmenu">
+                    <p class="childmenu_back">Назад</p>
+                    <p class="childmenu_header">Каталог</p>
+                    <ul class="childmenu_itemlist">
+                        <li class="childmenu_item child-has-child"><a href="#">Овощи</a> 
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                        <li class="childmenu_item child-has-child"><a href="#">Фрукты</a>
+                            <ul class="childmenu_dropdown">
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                                <li class="dropdown-item"><a href="./cathalog.html">Перец сладкий</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <p class="header_mobile_callme">Заказать звонок</p>
+                    <div class="header_mobile_socials">
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_facebook.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_instagram.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_twitter.svg" alt="social"></a>
+                        <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_linkedin.svg" alt="social"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="listitem"><a href="./about-us.html">О нас</a></li>
+            <li class="listitem"><a href="./cathalog.html">Продукты</a></li>
+            <li class="listitem"><a href="./coop.html">Сотрудничество</a></li>
+            <li class="listitem"><a href="./circs.html">Доставка и оплата</a></li>
+        </ul>
+
+        <p class="header_mobile_callme">Заказать звонок</p>
+        <div class="header_mobile_socials">
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_facebook.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_instagram.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_twitter.svg" alt="social"></a>
+            <a href="#" class="mobile_social"><img src="./img/svg/header_mobile_linkedin.svg" alt="social"></a>
+        </div>
+
+        <img src="./img/burger-close.png" alt="burger close" class="burger_close">
+    </div>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>  
+
+        <div class="navigation">
+            <div class="wrapper">
+                <a href="#">Главная ></a>
+                <a href="#">Продукты ></a>
+                <a href="#">Название товара</a>
+            </div>
+        </div>
+        
+        <div class="cart">
+
+            <div class="wrapper">
+
+                <div class="cart_header">
+                    <h2 class="header_title">Корзина</h2>
+                    <p class="header_subtitle">
+                        У вас в корзине есть товары, которых нет в наличии, вы можете оформить предзаказ, либо удалить эти товары.<br>
+                        Товар будет доставлен вам в течение 14 дней, мы дополнительно свяжемся с вами.
+                    </p>
+                </div>
+
+                <div class="cart_main">
+
+                    <div class="cart_line">
+                        <div class="line_img"><img src="./img/cart_img.png" alt="cart img"></div>
+                        
+                        <p class="line_name">Наименование товара</p>
+
+                        <div class="line_desc">
+                            
+                        </div>
+
+                        <div class="line_country"><p>Страна</p></div>
+
+                        <div class="line_season"><p>Сезон</p></div>
+
+                        <div class="line_size"><p>Размер коробки</p></div>
+
+                        <div class="line_price"><p>Цена</p></div>
+
+                        <div class="line_counter">
+                            <p>Кол-во</p>    
+                        </div>
+
+                        <div class="line_summary">
+                            <p>Итого</p>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="cart_line">
+                        <div class="line_img"><img src="./img/cart_img.png" alt="cart img"></div>
+                        
+                        <p class="line_name">Длинное название товара</p>
+
+                        <div class="line_desc">
+                            <p class="desc_btn">
+                                Подробнее 
+                                о товаре
+                            </p>
+                            <div class="desc_desc">
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Страна</p>
+                                    <p class="desc_line_season">Сезон</p>
+                                    <p class="desc_line_sizes">Размер коробки</p>
+                                </div>
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Россия</p>
+                                    <p class="desc_line_season">Лето</p>
+                                    <p class="desc_line_sizes">Коробка 400х400 75 шт</p>
+                                </div>
+                                <img src="./img/svg/cart-desc-close.svg" alt="close" class="desc_close">
+                            </div>
+                        </div>
+
+                        <div class="line_country"><p>Россия</p></div>
+
+                        <div class="line_season"><p>Лето</p></div>
+
+                        <div class="line_size"><p>Коробка 400х400 75 шт</p></div>
+
+                        <div class="line_price"><p>1050р</p><span style="display: none">Цена</span></div>
+
+                        <div class="line_counter">
+                            <span style="display: none">Кол-во</span>
+                            <img src="./img/svg/counter_minus.svg" alt="minus" class="counter_minus">
+                            <p class="counter_counter">3</p>
+                            <img src="./img/svg/counter_plus.svg" alt="plus" class="counter_plus">
+                        </div>
+
+                        <div class="line_summary">
+                            <span style="display: none">Итого</span>
+                            <p>3150р</p>
+                        </div>
+
+                        <div class="line_delete">
+                            <img src="./img/svg/cart_line_delete.png" alt="delete">
+                        </div>
+                    </div>
+
+                    <div class="cart_line">
+                        <div class="line_img"><img src="./img/cart_img.png" alt="cart img"></div>
+                        
+                        <p class="line_name">Длинное название товара</p>
+
+                        <div class="line_desc">
+                            <p class="desc_btn">
+                                Подробнее 
+                                о товаре
+                            </p>
+                            <div class="desc_desc">
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Страна</p>
+                                    <p class="desc_line_season">Сезон</p>
+                                    <p class="desc_line_sizes">Размер коробки</p>
+                                </div>
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Россия</p>
+                                    <p class="desc_line_season">Лето</p>
+                                    <p class="desc_line_sizes">Коробка 400х400 75 шт</p>
+                                </div>
+                                <img src="./img/svg/cart-desc-close.svg" alt="close" class="desc_close">
+                            </div>
+                        </div>
+
+                        <div class="line_country"><p>Россия</p></div>
+
+                        <div class="line_season"><p>Лето</p></div>
+
+                        <div class="line_size"><p>Коробка 400х400 75 шт</p></div>
+
+                        <div class="line_price"><p>1050р</p><span style="display: none">Цена</span></div>
+
+                        <div class="line_counter">
+                            <span style="display: none">Кол-во</span>
+                            <img src="./img/svg/counter_minus.svg" alt="minus" class="counter_minus">
+                            <p class="counter_counter">3</p>
+                            <img src="./img/svg/counter_plus.svg" alt="plus" class="counter_plus">
+                        </div>
+
+                        <div class="line_summary">
+                            <span style="display: none">Итого</span>
+                            <p>3150р</p>
+                        </div>
+
+                        <div class="line_delete">
+                            <img src="./img/svg/cart_line_delete.png" alt="delete">
+                        </div>
+                    </div>
+
+                    <div class="cart_line">
+                        <div class="line_img"><img src="./img/cart_img.png" alt="cart img"></div>
+                        
+                        <p class="line_name">Длинное название товара</p>
+
+                        <div class="line_desc">
+                            <p class="desc_btn">
+                                Подробнее 
+                                о товаре
+                            </p>
+                            <div class="desc_desc">
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Страна</p>
+                                    <p class="desc_line_season">Сезон</p>
+                                    <p class="desc_line_sizes">Размер коробки</p>
+                                </div>
+                                <div class="desc_line">
+                                    <p class="desc_line_country">Россия</p>
+                                    <p class="desc_line_season">Лето</p>
+                                    <p class="desc_line_sizes">Коробка 400х400 75 шт</p>
+                                </div>
+                                <img src="./img/svg/cart-desc-close.svg" alt="close" class="desc_close">
+                            </div>
+                        </div>
+
+                        <div class="line_country"><p>Россия</p></div>
+
+                        <div class="line_season"><p>Лето</p></div>
+
+                        <div class="line_size"><p>Коробка 400х400 75 шт</p></div>
+
+                        <div class="line_price"><p>1050р</p><span style="display: none">Цена</span></div>
+
+                        <div class="line_counter">
+                            <span style="display: none">Кол-во</span>
+                            <img src="./img/svg/counter_minus.svg" alt="minus" class="counter_minus">
+                            <p class="counter_counter">3</p>
+                            <img src="./img/svg/counter_plus.svg" alt="plus" class="counter_plus">
+                        </div>
+
+                        <div class="line_summary">
+                            <span style="display: none">Итого</span>
+                            <p>3150р</p>
+                        </div>
+
+                        <div class="line_delete">
+                            <img src="./img/svg/cart_line_delete.png" alt="delete">
+                        </div>
+                    </div>
+
+
+                    <div class="cart_summ">
+                        <p>Стоимость покупки: <span>11800 руб</span></p>
+                    </div>
+
+                    <a href="#" class="cart_buy">Оформить заказ</a>
+                </div>
+
+                <div class="cart_sidebar">
+                    <div class="sidebar_blk">
+                        <h2 class="sidebar_blk_title">Скидка 15%</h2>
+                        <p class="sidebar_blk_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl id sed etiam pretium cras porttitor. Enim ut suscipit id sed tellus odio. </p>
+                        <img src="./img/svg/sidebar_sale.svg" alt="sidebar img" class="subtitle_img">
+                    </div>
+                    <div class="sidebar_blk">
+                        <h2 class="sidebar_blk_title">Всё свежее!</h2>
+                        <p class="sidebar_blk_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl id sed etiam pretium cras porttitor. Enim ut suscipit id sed tellus odio. </p>
+                        <img src="./img/svg/sidebar_bowl.svg" alt="sidebar img" class="subtitle_img">
+                    </div>
+                    <div class="sidebar_blk">
+                        <h2 class="sidebar_blk_title">Быстрая доставка</h2>
+                        <p class="sidebar_blk_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl id sed etiam pretium cras porttitor. Enim ut suscipit id sed tellus odio. </p>
+                        <img src="./img/svg/sidebar_car.svg" alt="sidebar img" class="subtitle_img">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="pp__popup">
+            <div class="pp__popup_popup_blk">
+                <h2 class="pp__popup_popup_blk_title">
+                    Заказать звонок
+                </h2>
+                <div class="pp__popup_popup_blk_main">
+                    <p class="pp_input_title">Как к вам обращаться?</p>
+                    <input type="text" name="name" id="nam6" class="pp_input" aria-label="name label">
+
+                    <p class="pp_input_title">Номер телефона</p>
+                    <input type="tel" name="name" id="name5" class="pp_input" aria-label="phone label">
+
+                    <p class="pp_input_title">Удобное время для звонка</p>
+                    <input type="text" name="name" id="name7" class="pp_input" aria-label="time label">
+
+                    <p class="pp_input_title">Напишите вопрос</p>
+                    <textarea name="text" id="text" class="pp_textarea" aria-label="question label"></textarea>
+
+                    <a href="#" class="pp_send">Перезвоните мне</a>
+                </div>
+                <img src="./img/svg/all_popup_close.svg" alt="pp_close" class = "pp_close">
+            </div>
+        </div>
+        
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="wrapper">
+            <div class="footer_logo">
+                <a href="./index.html"><img src="./img/footer_logo.png" alt="footer_logo"></a>
+                
+                <div class="footer_links">
+                    <a href="#"><img src="./img/svg/footer_fb.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_inst.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_twit.svg" alt="footer link"></a>
+                    <a href="#"><img src="./img/svg/footer_linkedin.svg" alt="footer link"></a>
+                </div>
+            </div>
+            <div class="footer_menu">
+                <ul class="footer_nav">
+                    <li class="navlistitem">О нас</li>
+                    <li class="navlistitem">Продукты</li>
+                    <li class="navlistitem">Сотрудничество</li>
+                    <li class="navlistitem">Доставка и оплата</li>
+                </ul>
+                <div class="footer_contacts">
+                    <a href="tel:+89099097700" class="footer_tel">8 909 909 7700</a>
+                    <p class="footer_callme">Заказать звонок</p>
+                </div>
+            </div>
+            <div class="footer_rights">
+                <p>Редакция © 2020 all-green.ru Все права защищены </p>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer end -->
+
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>

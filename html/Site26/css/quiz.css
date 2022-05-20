@@ -1,0 +1,136 @@
+/* <!-- Made by Djigit_ telegram: @Djigit34 */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/montserrat-v18-latin_cyrillic-regular.eot");
+    /* IE9 Compat Modes */
+    src: local(""), url("../fonts/montserrat-v18-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v18-latin_cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v18-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v18-latin_cyrillic-regular.svg#Montserrat") format("svg");
+    /* Legacy iOS */ }
+  
+  @font-face {
+    font-family: 'Root';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/PT-Root-UI_Regular.woff");
+    /* IE9 Compat Modes */
+    src: local(""), url("../fonts/PT-Root-UI_Regular.woff2") format("woff2"); }
+  
+  @font-face {
+    font-family: 'Rounded';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/MPLUSRounded1c-Medium.woff2"); }
+  
+  @font-face {
+    font-family: 'Pix';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Pixerius.otf"); }
+
+.buffer{
+    padding: 10px;
+}
+
+body{
+    background: #1F1F1F;
+}
+
+h1{
+    font-family: 'Rounded';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 114.5%;
+    padding: 13px;
+}
+
+h2{
+    font-family: 'Rounded';
+    font-style: normal;
+    font-size: 27px;
+    line-height: 34px;
+    padding: 13px;
+}
+
+h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+p{
+    font-family: 'Root';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.text-s{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px;
+}
+
+button, .button{
+    background: linear-gradient(90deg, #00FFCB 4.64%, #A597FD 57.32%, #FF598E 99.99%);
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+    border-radius: 78px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 45px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 11px 25px 14px 25px;
+    margin-bottom: 10px;
+    border: 0;
+    font-family: 'Rounded';
+    transition: .3s;
+    min-width: 500px;
+}
+
+button:hover, .button:hover {
+    transform: translateY(-3rem);
+}
+
+input{
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    padding: 16px 20px;
+    max-width: 579px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 50px;
+    color: black;
+    border: 0;
+}
+
+input::placeholder{
+    color: #868686;
+}
+
+.button-quiz{
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 32px 31px;
+    font-size: 20px;
+    line-height: 19px;
+    font-family: 'Root';
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+
+
+
+

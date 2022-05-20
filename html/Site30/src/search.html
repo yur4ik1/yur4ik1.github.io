@@ -1,0 +1,34 @@
+<div class="search-popup">
+    <div class="wrapper search-popup__wrapper">
+        <div class="search_header">
+            <input type="text" placeholder="Search" class="search__input "></input>
+            <p class="search__input-subtitle">
+                <span class="input-subtitle__value">0</span> results for perfumery
+            </p>
+        </div>
+        <div class="search__results">
+            @@include('./search-card.html', {
+                "title":"Lorem Ipsum Lorem ipsum dolor sit amet",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed Lorem ipsum dolor sit amet"
+            })
+
+            @@include('./search-card.html', {
+                "title":"Lorem Ipsum Lorem ipsum dolor sit amet, consectetur ",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisci elit,elit, sed eiusmod temporLorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor inciduntLorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt inciduntLorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunteiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exe."
+            })
+
+            @@include('./search-card.html', {
+                "title":"Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisci elit, sed Lorem ipsum dolor sit."
+            })
+        </div>
+        
+    </div>
+
+    <div class="wrapper search-close__wrapper">
+        <button class="search-close" aria-label="close search">
+            <img width="43" height="43" src="./img/search-close.svg" alt="search close">
+        </button>
+    </div>
+    
+</div>
