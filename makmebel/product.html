@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/osanscondensed.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="shop">
+    <header class="header">
+        <div class="wrapper">
+            <div class="top">
+                <a class="logo" href="index.html"><img src="./img/logo.svg" alt=""></a>
+                <a class="logo-mobile" href="index.html"><img src="./img/logo-mobile.svg" alt=""></a>
+                <div class="heading">
+                    <a class="phone" href="#">+7 (861) 210-33-63</a>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="shop.html">Мебель для гостиниц</a>
+                        </li>
+                        <li>
+                            <a href="shop.html">Мебель для дома</a>
+                        </li>
+                        <li>
+                            <a href="about.html">О нас</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+
+                    <div class="header__burger">
+                        <div class="burger__ico-container">
+                            <svg class="burger__open" width="35" height="26" viewBox="0 0 35 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33.5417 14.0973H1.45833C0.653331 14.0973 0 13.444 0 12.639C0 11.834 0.653331 11.1807 1.45833 11.1807H33.5417C34.3467 11.1807 35 11.834 35 12.639C35 13.444 34.3467 14.0973 33.5417 14.0973Z"
+                                    fill="#0F242B" />
+                                <path
+                                    d="M33.5417 2.91667H1.45833C0.653331 2.91667 0 2.26334 0 1.45833C0 0.653331 0.653331 0 1.45833 0H33.5417C34.3467 0 35 0.653331 35 1.45833C35 2.26334 34.3467 2.91667 33.5417 2.91667Z"
+                                    fill="#0F242B" />
+                                <path
+                                    d="M33.5417 25.2777H1.45833C0.653331 25.2777 0 24.6243 0 23.8193C0 23.0143 0.653331 22.361 1.45833 22.361H33.5417C34.3467 22.361 35 23.0143 35 23.8193C35 24.6243 34.3467 25.2777 33.5417 25.2777Z"
+                                    fill="#0F242B" />
+                            </svg>
+
+                            <svg class="burger__close" width="34" height="32" viewBox="0 0 34 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="-1.5" x2="42.2104" y2="-1.5"
+                                    transform="matrix(-0.708059 0.706153 -0.770449 -0.637502 29.8875 0)" stroke="black"
+                                    stroke-width="3" />
+                                <line y1="-1.5" x2="42.3504" y2="-1.5"
+                                    transform="matrix(0.731988 0.681317 -0.748264 0.663401 0 2.146)" stroke="black"
+                                    stroke-width="3" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="header__burger-slider">
+                        <div class="burger-slider__nav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="shop.html">Мебель для гостиниц</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">Мебель для дома</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                                <a href="#" class="fedback-btn inrto-btn">Заказать звонок</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="callback">
+        <div class="wrapper">
+            <a href="#">
+                <svg class="arrow" width="16" height="8" viewBox="0 0 16 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.646446 3.64645C0.451184 3.84171 0.451184 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM16 3.5L0.999999 3.5V4.5L16 4.5V3.5Z"
+                        fill="black" />
+                </svg> вернуться в каталог
+            </a>
+        </div>
+    </div>
+
+    <section class="active-cart">
+        <div class="wrapper">
+            <div class="cart-product">
+                <div class="gallery">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/nathan-oakley.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/nathan-oakley.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/nathan-oakley.jpg" alt=""></div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="prev">
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <div class="next">
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+                <div class="product-atribut">
+                    <h1 class="product-title">Кровать двухспальная</h1>
+                    <p class="product-desc">Кровать двухспальная FAMALY 140*200</p>
+                    <div class="product-size">
+                        <div>
+                            <p class="size-title">Размер</p>
+                            <p>148*210*100</p>
+                        </div>
+                        <div>
+                            <p class="size-title">Спальное место</p>
+                            <a class="more-size" href="#">140*200 <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_94_67)">
+                                        <path
+                                            d="M5.35688 7.60677L9.85234 3.10982C10.0492 2.9125 10.0492 2.5928 9.85234 2.39498C9.65552 2.19766 9.33582 2.19766 9.13899 2.39498L5.00023 6.53524L0.861462 2.39548C0.664637 2.19815 0.344942 2.19815 0.147619 2.39548C-0.0492065 2.5928 -0.0492065 2.91299 0.147619 3.11032L4.64304 7.60727C4.83783 7.80156 5.16255 7.80156 5.35688 7.60677Z"
+                                            fill="#0F242B" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_94_67">
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(0 10) rotate(-90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <div class="size-active">
+                                <a href="#">180*100</a>
+                                <a href="#">180*100</a>
+                                <a href="#">180*100</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-color">
+                        <div class="double-radio-color">
+
+                            <ul class="color-list">
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background-color: #FF0000;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background-color: #897154;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background-color: #5C3218;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background-color: #1E5ACE;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background-color: #52A91D;"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="filter-swatch" style="background: #FFFFFF;
+                                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <p class="price">56 899</p>
+                        <p class="sale-price">150 999 руб.</p>
+                    </div>
+                    <div class="product-add-to">
+                        <a class="inrto-btn" href="#">Купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="active-cart-elem">
+        <div class="wrapper">
+            <div class="active-cart-content">
+                <div class="left">
+                    <img src="./img/nathan-oakley.jpg" alt="">
+                    <div class="active-cart__fix">
+                        <div>
+                            <h2>Кровать двухспальная</h2>
+                            <p>Кровать двухспальная FAMALY 140*200</p>
+                        </div>
+
+                        <div class="center">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </div>
+                        <div class="add-cart">
+                            <a href="#" class="inrto-btn">Купить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="product-info">
+        <div class="wrapper">
+            <ul class="tabs__caption option">
+                <li class="active">Описание</li>
+                <li>Характеристики</li>
+            </ul>
+            <div class="tabs__content option-desc active">
+                <p>Кровать FAMILY — универсальный дизайн, подходит для любого интерьера. Прямые формы в традиционном
+                    европейском стиле.
+
+                <p> Кровать FAMILY имеет множество преимуществ: </p>
+                <ul>
+                    <li>
+                        доступная цена при высоком качестве;
+                    </li>
+                    <li>
+                        подходит для размещения под окном и для мансардной спальни;
+                    </li>
+                    <li>
+                        усиленное ортопедическое кроватное основание состоит из металлической разборной рамы и упругих
+                        берёзовых ламелей, подарит годы активной эксплуатации;
+                    </li>
+                    <li>
+                        мягкие изголовье и боковые части безопасность и комфорт для всей семьи;
+                    </li>
+                    <li>
+                        ламинированная задняя спинка кровати, не собирает пыль;
+                    </li>
+                    <li>
+                        современные, практичные обивочные материалы;
+                    </li>
+                    <li>
+                        материалы соответствуют высоким европейским стандартам;
+                    </li>
+                    <li>
+                        кровать доставляется в разборном виде. Удобство транспортировки и перемещения.
+                    </li>
+                </ul>
+
+                <p> Инструкция по сборке кровати в комплекте!</p>
+
+                <p> Материалы:</p>
+
+                <p> Кровать FAMILY изготовлена с использованием материалов, которые прошли все необходимые тесты по
+                    экологической безопасности. Каркас кровати изготовлен из ЛДСП европейского качества, экологического
+                    класса Е1. Обивка выполнена из высококачественного материала, который долговечен и прост в уходе.
+                    Для мягкости спинок и царг используется эксклюзивная высокоэластичная пена UniqFoam безопасный и
+                    экологически чистый материал.</p>
+
+            </div>
+
+
+            <div class="tabs__content option-char">
+                <p> Инструкция по сборке кровати в комплекте!</p>
+            </div>
+            <div class="more-text">
+                <span class="more">Посмотреть весь текст
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.9">
+                            <path
+                                d="M6.96468 11.4102L0.221487 4.66473C-0.0737505 4.36875 -0.0737505 3.8892 0.221487 3.59247C0.516725 3.29648 0.996267 3.29648 1.29151 3.59247L7.49966 9.80286L13.7078 3.59322C14.003 3.29723 14.4826 3.29723 14.7786 3.59322C15.0738 3.8892 15.0738 4.36949 14.7786 4.66548L8.03544 11.4109C7.74326 11.7023 7.25618 11.7023 6.96468 11.4102Z"
+                                fill="#0F242B" />
+                        </g>
+                    </svg>
+                </span>
+                <span class="show-text">Скрыть</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="with-this">
+        <div class="wrapper">
+            <h2>С этим товаром покупают</h2>
+            <div class="product-list">
+                <ul>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="with-this related-product">
+        <div class="wrapper">
+            <h2>Похожие товары</h2>
+            <div class="product-list">
+                <ul>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    <li class="product-item">
+                        <div class="swipe">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./img/nathan.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <p class="product-name">Кровать двухспальная</p>
+                        <span class="product-price">
+                            <p class="price">56 899</p>
+                            <p class="sale-price">150 999 руб.</p>
+                        </span>
+                        <span class="add-to">
+                            <a class="inrto-btn" href="#">Купить</a>
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery">
+        <div class="wrapper">
+            <div>
+                <h2>Доставка по всей России</h2>
+                <p>Чтобы заказать товар в магазине, свяжитесь с нашим <br> менеджером по телефону +7 (495) 292-12-97
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <a href="#"><img src="./img/footer-logo.svg" alt=""></a>
+            <div class="heading">
+                <ul class="menu">
+                    <li>
+                        <a href="#">Мебель для гостиниц</a>
+                    </li>
+                    <li>
+                        <a href="#">Мебель для дома</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+
+                <a class="phone" href="#">+7 (861) 210-33-63</a>
+                <a href="#" class="fedback-btn inrto-btn">Заказать звонок</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popop-form">
+        <div class="popup-inner">
+            <div class="popup-popup__close">
+                <a class="popup-close" href="#">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.8783 17.0002L33.611 2.26741C34.1297 1.74872 34.1297 0.907748 33.611 0.389115C33.0923 -0.129517 32.2513 -0.129583 31.7327 0.389115L16.9999 15.1219L2.26729 0.389115C1.74859 -0.129583 0.907625 -0.129583 0.388993 0.389115C-0.129639 0.907814 -0.129705 1.74878 0.388993 2.26741L15.1217 17.0001L0.388993 31.7328C-0.129705 32.2515 -0.129705 33.0925 0.388993 33.6111C0.648309 33.8704 0.988242 34.0001 1.32817 34.0001C1.66811 34.0001 2.00797 33.8704 2.26736 33.6111L16.9999 18.8784L31.7326 33.6111C31.9919 33.8704 32.3319 34.0001 32.6718 34.0001C33.0117 34.0001 33.3516 33.8704 33.611 33.6111C34.1297 33.0924 34.1297 32.2515 33.611 31.7328L18.8783 17.0002Z"
+                            fill="#838282" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="popup__inner-back">
+                <p class="popup-title"> <span>Вы можете нам позвонить прямо сейчас</span><br>
+                    или оставьте ваши контактные данные <br>
+                    и мы вам перезвоним, в ближайшее время.</p>
+                <div class="form">
+                    <input type="text" placeholder="Ваше имя *">
+                    <input type="phone" placeholder="Ваше телефон *">
+                    <button class="form-btn inrto-btn">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        jQuery('ul.tabs__caption').on('click', 'li:not(.active)', function (e) {
+            e.preventDefault();
+            jQuery(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('section.product-info').find('.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+        });
+
+        jQuery(document).on("scroll", window, function () {
+            if (jQuery(window).scrollTop() > 500) {
+                jQuery(".active-cart-elem").show();
+            }
+            else {
+                jQuery(".active-cart-elem").hide();
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+    <script>
+        var swiper2 = new Swiper('.swipe', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>

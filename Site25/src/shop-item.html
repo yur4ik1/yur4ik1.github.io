@@ -1,0 +1,241 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hara.gr - Item</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    @@include('./header.html')
+
+    @@include('./shop-header.html')
+
+    <div class="shop-item">
+        <div class="wrapper">
+
+            <div class="shop-item__left-side">
+
+                <div class="left-side__item-gallery">
+    
+                    <div class="item-gallery_main-photo">
+                        <a data-fancybox="gallery" href="./img/item-gallery1-big.webp"><img src="./img/item-gallery1-big.webp"></a>
+                    </div>
+    
+                    <div class="item-gallery_photo-selection">
+                        <div class="photo-selection_item selected">
+                            <img src="./img/item-gallery1-big.webp" alt="image">
+                        </div>
+    
+                        <div class="photo-selection_item">
+                            <img src="./img/item-gallery2.webp" alt="image">
+                        </div>
+    
+                        <div class="photo-selection_item">
+                            <img src="./img/item-gallery3.webp" alt="image">
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="left-side__product-description">
+                    <p>Handmade plexiglass earrings</p>
+                    <p>Hypoallergic stainless steel stud (nikel free)</p>
+                    <p>Dimensions: 4,3x3,5 cm</p>
+                    <p>Weight: 3 gr</p>
+                </div>
+
+
+            </div>
+
+            <div class="shop-item__right-side">
+    
+                <h2 class="right-side_item-name">Sea Ya Soon</h2>
+
+                <p class="right-side_item-code">E0064</p>
+
+                <p class="right-side_item-price">€22,00</p>
+
+                <p class="right-side_alert">Ο φόρος συμπεριλαμβάνεται</p>
+
+                <div class="right-side_item-type-selection">
+
+                    <p class="right-side_selection-title">Type:</p>
+                    <select name="" id="">
+                        <option value="1">Mirror Pink</option>
+                        <option value="2">Mirror Gold</option>
+                        <option value="3">Mirror Platinum</option>
+                    </select>
+
+                </div>
+
+                <div class="right-side_item-quantity-selection">
+                    <p class="right-side_selection-title">Quantity</p>
+                    <input type="number" name="" id="" value="1" min="1">
+                </div>
+
+                <button class="right-side_add-to-cart">Προσθηκη στο καλαθι</button>
+                <button class="right-side_buy-now">ΑΓΟΡΑ</button>
+
+                <div class="right-side_description-mobile">
+                    <p>Handmade plexiglass earrings</p>
+                    <p>Hypoallergic stainless steel stud (nikel free)</p>
+                    <p>Dimensions: 4,3x3,5 cm</p>
+                    <p>Weight: 3 gr</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="same-items">
+
+        <div class="wrapper">
+            <h2 class="same-items__header">Same items</h2>
+
+            <div class="same-items__carousel">
+                <div class="swiper-container">
+
+                    <div class="swiper-wrapper">
+    
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+
+                        <div class="swiper-slide">
+                            @@include('./shop-card.html', {
+                                "image": "./img/item1.webp",
+                                "name": "Adelaide",
+                                "sale": "20,22",
+                                "price": "45,00"                
+                            })
+                        </div>
+    
+                    </div>
+                </div>   
+                
+                <div class="swiper-button-next">
+                    <img src="./img/svg/slider-arrow.svg" alt="arrow">
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="./img/svg/slider-arrow.svg" alt="arrow">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @@include('./footer.html')
+   
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const carouselWrapper = document.querySelector(".same-items__carousel");
+
+        var swiper = new Swiper('.swiper-container', {
+                slidesPerView: "auto",
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            on: {
+                realIndexChange: function () {
+                    this.isBeginning ? carouselWrapper.classList.add("start") : carouselWrapper.classList.remove("start");
+                    this.isEnd ? carouselWrapper.classList.add("end") : carouselWrapper.classList.remove("end");
+                },
+                
+                init: function(){
+                    carouselWrapper.classList.add("start")
+                }
+
+            }
+        });
+
+
+    </script>
+    
+    
+</body>
+
+</html>

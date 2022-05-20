@@ -1,0 +1,162 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARABELLA - History</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id = "history" class="shop">
+    @@include('./header.html')
+
+    <div class="header-block">
+        <div class="horizontal-line"></div>
+
+        <div class="wrapper">
+            <a href="./index.html"><img src="./img/logo-gray.png" alt="logo" class="logo"></a>
+            
+            <h1>Your basket</h1>
+            
+            <div class="search">
+                <input type="text" name="" id="" placeholder="Ψάχνω για">
+                <button type="submit" class="submit">
+                    <img src="./img/svg/search-ico.svg" alt="ico">
+                </button>
+
+                <a href="./shop-cart.html" class="cart">
+                    <img src="./img/svg/cart-ico.svg" alt="cart">
+                    <p class="products-amount">1</p>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="cart-main">
+
+        <div class="wrapper">
+
+            <a href="./shop.html" class="continue">Continuation of purchases</a>
+
+            <div class="descktop">
+
+                <div class="cart-header">
+
+                    <p>PRODUCT</p>
+                    <p>PRICE</p>
+                    <p>QUANTITY</p>
+                    <p>TOTAL</p>
+    
+                    <div class="line"></div>
+                </div>
+    
+                <div class="item"> 
+    
+                    <div class="product-info">
+                        <img src="./img/item1.png" alt="item image">
+                        <p class="name">Evil Eye</p>
+                    </div>
+    
+                    <p class="price">€32,00</p>
+                    <input type = "num" class="quantity" value="1"></input>
+                    <p class="total">€32,00</p>
+    
+                    <div class="line"></div>
+                </div>
+    
+                <div class="item">
+    
+                    <div class="product-info">
+                        <img src="./img/item1.png" alt="item image">
+                        <p class="name">Evil Eye</p>
+                    </div>
+    
+                    <p class="price">€32,00</p>
+                    <input type = "num" class="quantity" value="1"></input>
+                    <p class="total">€32,00</p>
+    
+                    <div class="line"></div>
+                </div>
+            </div>
+
+            <div class="mobile">
+                <div class="cart-header">
+                    <p>ΠΡΟΙΟΝ</p>
+                    <p>ΤΙΜΗ</p>
+                </div>
+
+                <div class="item">
+                    <div class="top">
+                        <p class="name">Evil Eye</p>
+                        <p class="price">€32,00</p>
+                    </div>
+                    <div class="bottom">
+                        <img src="./img/item1.png" alt="item">
+                        <div class="amount">
+                            <p>ΠΟΣΟΤΗΤΑ</p>
+                            <input type="number" value="1" name="value" id="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="top">
+                        <p class="name">Evil Eye</p>
+                        <p class="price">€32,00</p>
+                    </div>
+                    <div class="bottom">
+                        <img src="./img/item1.png" alt="item">
+                        <div class="amount">
+                            <p>ΠΟΣΟΤΗΤΑ</p>
+                            <input type="number" value="1" name="value" id="">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div class="total-info">
+
+                <div class="left">
+                    <p>Add a note to your order</p>
+                    <textarea placeholder="Γράψτε το σχόλιό σας..." name="" id=""></textarea>
+                </div>
+
+                <div class="right">
+
+                    <div class="title">
+                        <p>Subset</p>
+                        <p>€<span>32,00</span> EUR</p>
+                    </div>
+
+                    <p class="tax">
+                        The tax is included and shipping costs are calculated upon completion of the orde
+                    </p>
+
+                    <button>
+                        Checkout
+                    </button>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    @@include('./footer.html')
+   
+    
+    <script src="./js/script.js"></script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARABELLA</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    @@include('./header.html')
+
+    <div class="gallery-intro">
+        
+        <img src="./img/gallery-bg.png" alt="background" class="bg">
+    
+        <div class="wrapper">
+            <a href="./index.html" class="logo"><img src="./img/svg/logo.svg" alt="logo"></a>
+            
+            
+            <div class="mark-block"></div>
+            <div class="mark-block"></div>
+
+            <div class="swiper-container gallery-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                  <div class="swiper-slide"><img src="./img/creative-part1-img1.png" alt="image"></div>
+                </div>
+                
+                <div class="swiper-button-next"><img src="./img/swiper-arrow.png" alt="arrow"></div>
+                <div class="swiper-button-prev"><img src="./img/swiper-arrow.png" alt="arrow"></div>
+            </div>
+
+        </div>
+
+        <div class="horizontal-line"></div>
+
+    </div>
+
+    <div class="gallery">
+        <div class="wrapper">
+            <a data-fancybox="gallery" href="./img/gallery-1.png"><img src="./img/gallery-1.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-2.png"><img src="./img/gallery-2.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-3.png"><img src="./img/gallery-3.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-4.png"><img src="./img/gallery-4.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-5.png"><img src="./img/gallery-5.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-6.png"><img src="./img/gallery-6.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-7.png"><img src="./img/gallery-7.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-8.png"><img src="./img/gallery-8.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-9.png"><img src="./img/gallery-9.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-10.png"><img src="./img/gallery-10.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-11.png"><img src="./img/gallery-11.png"></a>
+            <a data-fancybox="gallery" href="./img/gallery-12.png"><img src="./img/gallery-12.png"></a>
+        </div>
+        <div class="horizontal-line"></div>
+    </div>
+
+    @@include('./footer.html')
+   
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+
+        if(window.innerWidth < 700){
+            var swiper = new Swiper('.gallery-swiper', {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                loop:true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        } else{
+            var swiper = new Swiper('.gallery-swiper', {
+                slidesPerView: "auto",
+
+                centeredSlides: true,
+                loop:true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 0.5,
+                },
+            });
+
+            let tertiaryLeft;
+            let tetiratyRight;
+            let prevSlideIndex;
+            let nextSlideIndex;
+
+            setTimeout(()=>{
+                swiper.autoplay.stop()
+            } , 10);           
+
+            swiper.on('slideChangeTransitionStart', function () {
+                
+                let activeSlide = document.querySelector(".gallery-swiper")
+                .querySelector(".swiper-slide-active");
+                
+                let slidesList = document.querySelector(".gallery-swiper")
+                .querySelectorAll(".swiper-slide");
+
+                nextSlideIndex = document.querySelector(".gallery-swiper")
+                .querySelector(".swiper-slide-next")
+
+                for (let i = 0; i < slidesList.length; i++) {
+
+                    slidesList[i].classList.remove("tetiratySlide")
+                    slidesList[i].classList.remove("tetiratySlide-left")
+                    slidesList[i].classList.remove("tetiratySlide-right")
+
+                    if(slidesList[i].classList.contains("swiper-slide-next")){
+                        nextSlideIndex = i;
+                    }
+                    
+                    if(slidesList[i].classList.contains("swiper-slide-prev")){
+                        prevSlideIndex = i;
+                    }
+                }
+
+                tetiratyRight = slidesList[nextSlideIndex+1]
+                tertiaryLeft = slidesList[prevSlideIndex-1];
+
+                tertiaryLeft.classList.add("tetiratySlide");
+                tertiaryLeft.classList.add("tetiratySlide-left");
+                tetiratyRight.classList.add("tetiratySlide");
+                tetiratyRight.classList.add("tetiratySlide-right");
+            });
+        }
+       
+    </script>
+</body>
+
+</html>

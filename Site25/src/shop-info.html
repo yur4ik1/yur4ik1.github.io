@@ -1,0 +1,158 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hara.gr - Payment info</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+</head>
+
+<body id = "history" class="shop">
+    @@include('./header.html')
+    @@include("./shop-header.html")
+
+
+    <div class="cart-payment">
+
+        <div class="wrapper">
+
+            <div class="cart-payment__main">
+
+                <div class="payment__main_left">
+
+                    <div class="main_left_way">
+                        <a href="./shop-info.html" class="active">Information</a>
+                        <a href="./shop-payment.html">Payment</a>
+                    </div>
+    
+                    <div class="main_left_contact-info">
+
+                        <p class="main_left_title">Contact information</p>
+                        <input type="email" name="" id="" placeholder="E-mail">
+
+                    </div>
+    
+                    <div class="main_left_shipping-info">
+    
+                        <p class="main_left_title">Shipping address</p>
+    
+                        <div class="input-group">
+                            <input type="text" name="" id="" placeholder="First name">
+                            <input type="text" name="" id="" placeholder="Last name">
+                        </div>
+    
+                        <input type="text" name="" id="" placeholder="Address">
+                        <input type="text" name="" id="" placeholder="Apartment, suite, etc. (optional)">
+    
+                        <div class="input-group">
+                            <input type="text" name="" id="" placeholder="Postal code">
+                            <input type="text" name="" id="" placeholder="City">
+                        </div>
+    
+                        <input type="text" name="" id="" placeholder="Country">
+                        <input type="tel" name="" id="" placeholder="Phone">
+    
+                    </div>
+
+                    <div class="main_left_shipping-method">
+
+                        <p class="main_left_title">Shipping method</p>
+
+                        <input type="radio" name="ship" id="ship" checked>
+                        <label for="ship">
+                            <p class="name">Elta courier (5-7 εργάσιμες)</p>
+                            <p class="price">€3.50</p>
+                        </label>
+
+                    </div>
+    
+                </div>
+    
+                <div class="payment__main_right">
+    
+                    <div class="main_right_item">
+
+                        <div class="right_item_left">
+                            <img src="./img/item1.png" alt="item" class="image">
+                            <p class="name">Seashell Choker</p>
+                            <p class="type">Type: Mirror Gold</p>
+                        </div>
+
+                        <div class="right_item_right">
+                            <p class="price">€35.00</p>
+                            <p class="quantity">Quantity: 1</p>
+                        </div>
+
+                    </div>
+
+                    <div class="main_right_item">
+
+                        <div class="right_item_left">
+                            <img src="./img/item1.png" alt="item" class="image">
+                            <p class="name">Seashell Choker</p>
+                            <p class="type">Type: Mirror Gold</p>
+                        </div>
+
+                        <div class="right_item_right">
+                            <p class="price">€35.00</p>
+                            <p class="quantity">Quantity: 1</p>
+                        </div>
+
+                    </div>
+
+                    <div class="main_right_line"></div>
+
+                    <div class="main_right_sub-total">
+
+                        <div class="group">
+                            <p class="title">Subtotal:</p>
+                            <p class="price">€35.00</p>
+                        </div>
+
+                        <div class="group">
+                            <p class="title">Shiping:</p>
+                            <p class="price">€3.50</p>
+                        </div>
+
+                    </div>
+
+                    <div class="main_right_line"></div>
+
+                    <div class="main_right_total">
+
+                        <p class="title">Total</p>
+                        <p class="price">€38.50</p>
+
+                    </div>
+    
+                </div>
+
+                <div class="payment__main_way-mobile">
+                    <a href="./shop-info.html" class="active">Information</a>
+                    <a href="./shop-payment.html">Payment</a>
+                </div>
+
+            </div>
+
+            <div class="cart-payment__bottom">
+                <a href="./shop-payment.html">Συνεχεια αγορασ</a>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    @@include('./footer.html')
+   
+    <script src="./js/script.js"></script>
+    
+    
+</body>
+
+</html>

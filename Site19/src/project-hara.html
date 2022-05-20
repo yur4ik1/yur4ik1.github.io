@@ -1,0 +1,90 @@
+<!-- Made by Djigit_ telegram: @Djigit34 -->
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIA - Hara</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    
+    @@include('./header.html', {
+        "logoCircle":"#FFE76A",
+        "logoLines":"black"
+    })
+
+    <section class="project">
+        <div class="wrapper">
+            <a target="_blank" href="./index.html" class="logo"><img src="./img/svg/logo.svg" alt="logo"></a>
+            <h1 class="service_title"><span class="orange">Hara.</span>gr</h1>
+            
+            
+
+            <p>
+                Το Hara.gr είναι ένα ηλεκτρονικό περιοδικό με εύθυμο γιορτινό περιεχόμενο. Εδώ θα βρείτε άρθρα σχετικά με μεγάλες και μικρές γιορτές όπως τα Χριστούγεννα, το Πάσχα, τα πάρτι κ.λπ. 
+                Το κοινό του είναι ευρύ και στο e-shop που διαθέτει υπάρχουν δώρα για όλες τις ηλικίες.
+            </p>
+
+            <p>
+                Για να πετύχουμε αυτή τη νότα χαράς που αποπνέει κατά τον σχεδιασμό του χρησιμοποιήσαμε χαρούμενα χρώματα και φαντασία!
+            </p>
+
+            <div class="slider">
+
+                <div class="swiper-container slider1">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="./img/project-hara.png" alt="project">
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-next next1"><img src="./img/svg/projects-slider-right.svg" alt="arrow"></div>
+                    <div class="swiper-button-prev prev1"><img src="./img/svg/projects-slider-left.svg" alt="arrow"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    @@include('./footer.html', {
+        "button":'',
+        centeredBtn:'<a target="_blank" href="./contacts.html"  class="footer-centered-text"><span class="orange">Ας</span> γνωριστούμε</a>'
+    })
+
+    @@include('./about-you-popup.html')
+
+    @@include('./brief-popup.html')
+
+    <div class="cursor">
+        <img src="./img/svg/coursor.svg" alt="cursor">
+    </div>
+   
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.slider1', {
+          navigation: {
+            nextEl: '.next1',
+            prevEl: '.prev1',
+          },
+          effect: 'fade',
+        });
+      </script>
+</body>
