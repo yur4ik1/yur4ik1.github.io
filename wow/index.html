@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Yura K. - Full Stack Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="blobs">
+            <div class="blob-center"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                        result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <header class="header" id="header">
+        <div class="wrapper">
+            <ul class="menu">
+                <li>
+                    <a href="#about-me">About me</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Projects</a>
+                </li>
+                <li>
+                    <a href="#footer">Contacts</a>
+                </li>
+            </ul>
+            <a target="_blank" class="header__write-me" href="#footer">Write me</a>
+        </div>
+    </header>
+    <section class="intro" id="intro">
+        <div class="wrapper">
+            <div class="intro__text">
+                <h1 class="intro__title wow fadeInDown">Portfolio web- <br> developer </h1>
+                <p class="intro__subtitle wow fadeInUp">I am contacted when it is necessary to create a high-quality,
+                    <br> original website
+                </p>
+                <div class="first__write-me">
+                    <a class="intro__write-me" href="#footer">To order a site</a>
+                    <a class="intro__write-me" target="_blank" href="https://kwork.ru/user/yura220">Reviews</a>
+                </div>
+                <div class="line"></div>
+            </div>
+            <img class="intro__img" src="./img/whom-pic.png" alt="">
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="wrapper">
+            <h2 class="services__heading">My services</h2>
+            <div class="services__list">
+                <div class="services__item wow fadeInUp" data-wow-duration="1s">
+                    <h3 class="services__title">LANDING PAGE</h3>
+                    <p class="services__text">A well-thought-out page structure and its loading speed will allow you to
+                        sell you more</p>
+                    <p class="services__price">from 350$</p>
+                </div>
+                <div class="services__item wow fadeInUp" data-wow-duration="1.5s">
+                    <h3 class="services__title">PORTFOLIO SITES</h3>
+                    <p class="services__text">Ideal for photographers, artists and designers to display their
+                        works</p>
+                    <p class="services__price">from 500$</p>
+                </div>
+                <div class="services__item wow fadeInUp" data-wow-duration="2s">
+                    <h3 class="services__title">SITES FOR YOUR BUSINESS</h3>
+                    <p class="services__text">Posting information about various services, activities or products your
+                        company</p>
+                    <p class="services__price">from 550$</p>
+                </div>
+                <div class="services__item wow fadeInUp" data-wow-duration="2.5s">
+                    <h3 class="services__title">ONLINE SHOPS</h3>
+                    <p class="services__text">Fast and optimized online stores for small businesses with fast promotion
+                        of your products in search engines</p>
+                    <p class="services__price">from 1000$</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="benefits" id="benefits">
+        <div class="wrapper">
+            <h2 class="benefits__heading">My benefits</h2>
+            <div class="benefits__list">
+                <div class="benefits__item wow fadeInUp">
+                    <h3 class="benefits__title">SITES WORK LIKE MAGIC!</h3>
+                    <p class="benefits__text">Thanks to the use of the latest technologies, the speed of loading the site is felt
+                        on any device.</p>
+                </div>
+                <div class="benefits__item wow fadeInUp">
+                    <h3 class="benefits__title">SEO OPTIMIZATION</h3>
+                    <p class="benefits__text">This means that soon you will be able to see your site on the first
+                        positions in the search engine.</p>
+                </div>
+                <div class="benefits__item wow fadeInUp">
+                    <h3 class="benefits__title">THREE FREE EDIT</h3>
+                    <p class="benefits__text">During the first month, I will make three edits, absolutely free of charge!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-me" id="about-me">
+        <div class="wrapper">
+            <div class="about-me__content">
+                <img class="about__img" src="./img/program-tip.png" alt="">
+                <div class="about__first">
+                    <div class="line"></div>
+                    <h2 class="about-me__title">About me</h2>
+                    <p class="about-me__text">My name is Yuri, I am a web developer with three years of experience, mainly
+                        I create websites with WordPress and React. Write to me to
+                        clarify what functionality your site needs, terms and cost. We will discuss in detail
+                        project.
+                    </p>
+                    <h3 class="about-me__subtitle">What technologies do I work with?</h3>
+                    <div class="program__content">
+                        <div class="program__tip wow fadeInUp">HTML5</div>
+                        <div class="program__tip wow fadeInUp">CSS3</div>
+                        <div class="program__tip wow fadeInUp">Bootstrap</div>
+                        <div class="program__tip wow fadeInUp">jQuery</div>
+                        <div class="program__tip wow fadeInUp">Grid</div>
+                        <div class="program__tip wow fadeInUp">Node.js</div>
+                        <div class="program__tip wow fadeInUp">sass</div>
+                        <div class="program__tip wow fadeInUp">php</div>
+                        <div class="program__tip wow fadeInUp">mysql</div>
+                        <div class="program__tip wow fadeInUp">WordPress</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="wrapper">
+            <div class="line"></div>
+            <h2 class="portfolio__heading">My works</h2>
+            <div class="portfolio__item">
+                <div class="portfolio__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/photo_2020-08-07_15-15-58.jpg">
+                                        
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/photo_2020-08-07_15-15-58.jpg" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/photo_2020-10-23_14-08-10.jpg">
+                                       
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/photo_2020-10-23_14-08-10.jpg" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/photo_2020-07-23_13-20-04.jpg">
+                                      
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/photo_2020-07-23_13-20-04.jpg" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/photo_2020-04-18_12-44-59.jpg">
+                                       
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/photo_2020-04-18_12-44-59.jpg" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/works-tatoo.png">
+                                       
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/works-tatoo.png" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/works-hara.png">
+                                       
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/works-hara.png" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio__link">
+                                <div class="portfolio__hover-block">
+                                    <a data-fancybox="gallery" href="./img/works-arabella.png">
+                                       
+                                    </a>
+                                </div>
+                                <img class="my-projects__image" src="./img/works-arabella.png" alt="slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <h2 class="footer_heading-title">Contact with me!</h2>
+            <div class="footer__first">
+                <div class="footer__left">
+                    <div class="contact-info-box">
+                        <h3>Address:</h3>
+                        <span>Kyiv, Ukraine</span>
+                    </div>
+                    <div class="contact-info-box">
+                        <h3>Phone:</h3>
+                        <span>+38 (067) 5455 731</span>
+                    </div>
+                    <div class="contact-info-box">
+                        <h3>Email:</h3>
+                        <span>yuriiklevets@mail.com</span>
+                    </div>
+                    <div class="contact-info-box">
+                        <h3>Telegram:</h3>
+                        <span><a href="https://t.me/yur4ik_69">@yur4ik_69</span></a>
+                    </div>
+
+                    <!---  <span>Свяжитесь со мной прямо через соц. сети</span>-->
+                    <ul class="social-link">
+                        <li>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script type="module">
+        let swiper = new Swiper('.portfolio__slider', {
+            // If we need pagination
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    spaceBetween: 10
+                },
+
+                425: {
+                    spaceBetween: 15
+                },
+
+                // when window width is >= 640px
+                1000: {
+                    spaceBetween: 30
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
