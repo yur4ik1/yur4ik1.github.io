@@ -429,7 +429,7 @@ header.not-at-top {
 .footer__left {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -586,6 +586,9 @@ header.not-at-top {
 }
 .program__tip:nth-of-type(10) {
     background: url(../img/wordpess.png) no-repeat left center/26px 26px;
+}
+.program__tip:nth-of-type(11) {
+    background: url(../img/React-icon.svg.png) no-repeat left center/30px 26px;
 }
 
 /* portfolio */
@@ -792,6 +795,7 @@ header.not-at-top {
         margin: inherit;
         justify-content: center;
     }
+
     
     .header .wrapper .menu li {
         margin-right: 0px;
@@ -898,5 +902,8 @@ header.not-at-top {
     }
     .footer .wrapper .footer__first .footer__right .footer__contact-form textarea {
         max-width: 300px;
+    }
+    .footer__left {
+        justify-content: center;
     }
 }
