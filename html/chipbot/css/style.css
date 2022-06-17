@@ -411,3 +411,108 @@ h2 {
 .bool.active {
     left: 34px;
 }
+
+
+.tariffs-blocks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 38px;
+}
+
+.tariffs-block {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(152, 149, 149, 0.25);
+    border-radius: 4px;
+    height: 498px;
+    width: 312px;
+}
+
+.tariffs-text {
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-right: 24px;
+}
+
+.tariffs-subtitle {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #2D3748;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tariffs-blocks .tariffs-block:nth-child(1) .tariffs-subtitle:after {
+    content: url(../img/free.svg);
+}
+.tariffs-blocks .tariffs-block:nth-child(2) .tariffs-subtitle:after {
+    content: url(../img/business.svg);
+}
+.tariffs-blocks .tariffs-block:nth-child(3) .tariffs-subtitle:after {
+    content: url(../img/pro.svg);
+}
+
+.tariffs-price {
+    font-weight: 700;
+    font-size: 38px;
+  
+    color: #000000;
+    margin: 32px 0 32px;
+}
+
+.tariffs-price span {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.tariffs-desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #4A5568; 
+}
+
+.tariffs-list {
+    margin-top: 16px;
+}
+
+.tariffs-list li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #CECECE;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.tariffs-list li.active {
+    color: #2B2C34;
+}
+.tariffs-list li::before {
+    content: url(../img/off.svg);
+    margin-right: 9px;
+}
+.tariffs-list li.active::before {
+    content: url(../img/active.svg);
+}
+
+.tariffs-start {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #2D3748;
+    background: #EDF2F7;
+    padding: 21px 0 21px;
+    width: 100%;
+    display: block;
+}
+
+.tariffs-compare {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3DA9FC;
+    margin-top: 28px;
+}
