@@ -515,4 +515,137 @@ h2 {
     line-height: 18px;
     color: #3DA9FC;
     margin-top: 28px;
+    display: block;
+}
+
+
+
+.articles-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-item {
+    width: 480px;
+    height: 156px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24px;
+}
+
+.acticle-title {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #333333;
+}
+
+.article-img {
+    height: 156px;
+}
+
+.thanks {
+    background: #2B6CC0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 12px 0 12px;
+}
+
+.footer {
+    width: 100%;
+
+    background: #23232A;
+    padding: 24px 0 24px;   
+}
+
+.footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.footer h3 {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px; 
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.footer-menu li {
+    margin-bottom: 4px;
+}
+
+.footer-menu li a {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.footer-serveces li {
+      margin-bottom: 4px;
+}
+.footer-serveces li.active > a {
+    color: #FFFFFF;
+}
+.footer-serveces li a {
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.42);
+  
+}
+
+.footer-payment {
+    display: block;
+}
+
+.more-payment {
+    display: block;
+    font-family: 'Manrope';
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 12px;
+    text-decoration-line: underline;
+    color: #56A0FF;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.pay-info {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.copyright {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 7px;
+    line-height: 8px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 24px;
 }
