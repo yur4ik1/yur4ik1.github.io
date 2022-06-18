@@ -1,4 +1,4 @@
-// burger
+// Burger
 
 const burgerBtn = document.querySelector('.burger-btn');
 const burgerMenu = document.querySelector('.burger-menu');
@@ -8,7 +8,7 @@ burgerBtn.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
 });
 
-// popup
+// Popup
 
 const popup = document.querySelector('.popup');
 const start = () => {
@@ -19,21 +19,17 @@ popup.addEventListener('click', () => {
     popup.classList.remove('active');
 })
 
-// tariff btn
+// Tariffs btn
 
 const tariffsBtn = document.querySelector('.tariffs-btn');
 const bool = document.querySelector('.bool');
-let tariffsPrice = document.querySelector('.tariffs-price');
-
-tariffsBtn.addEventListener('click', () => {
-    bool.classList.toggle('active');
-
-});
+const tariffsPrice = document.querySelector('.tariffs-price');
 
 const year = () => {
     document.querySelector('.tariffs-price1').classList.toggle("year");
     document.querySelector('.tariffs-price2').classList.toggle("year");
-    console.log('click');
+    bool.classList.toggle('active');
+    console.log('clk');
 }
 
 
