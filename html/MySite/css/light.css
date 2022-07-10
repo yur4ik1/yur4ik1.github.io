@@ -523,3 +523,15 @@ header.white {
     margin-top: 16px;
 }
 
+.contacts-item p:nth-child(1)::before {
+    content: url(../img/linkedIn.svg);
+
+}
+.contacts-item p:nth-child(2)::before {
+    content: url(../img/telegram.svg);
+
+}
+.contacts-item p:nth-child(3)::before {
+    content: url(../img/whatsapp.svg);
+
+}
