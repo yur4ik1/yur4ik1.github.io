@@ -12,6 +12,34 @@ const dark = () => {
     back.classList.toggle('dark');
 }
 
+let btn = document.getElementById("dark-btn");
+let link = document.getElementById("theme-link");
+
+btn.addEventListener("click", function () { ChangeTheme(); });
+
+function ChangeTheme()
+{
+    let lightTheme = "css/dark.css";
+    let darkTheme = "css/light.css";
+
+    let currTheme = link.getAttribute("href");
+    let theme = "";
+
+    if(currTheme == lightTheme)
+    {
+   	 currTheme = darkTheme;
+   	 theme = "dark";
+    }
+    else
+    {    
+   	 currTheme = lightTheme;
+   	 theme = "light";
+    }
+
+    link.setAttribute("href", currTheme);
+
+}
+
 // 
 // Scroll header
 // 
@@ -26,6 +54,7 @@ window.onscroll = () => {
         header.classList.remove('white');
     }
 }
+
 
 // 
 // Parallax

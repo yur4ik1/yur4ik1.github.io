@@ -246,3 +246,31 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   box-sizing: border-box;
 }
+
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SFProDisplay-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/SFProDisplay-Heavy.woff2") format("woff2");
+}
+
+
+body {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+}
