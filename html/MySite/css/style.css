@@ -156,11 +156,13 @@ header.white {
 }
 
 .intro-back {
-    background: url(../img/intro.png) no-repeat center top;
+    background: url(../img/pralax.webp) no-repeat center top;
     height: 718px;
     width: 100%;
     position: absolute;
     top: 0;
+    background-size: contain;
+
 }
 
 .intro .wrapper {
@@ -183,7 +185,7 @@ header.white {
 
 
 .author__img {
-    background: url(../img/author-hover.jpg) no-repeat center top;
+    background: url(../img/author-hover.jpg) no-repeat center top / cover;
     height: 192px;
     width: 192px;
     transition: 0.3s;
@@ -194,7 +196,7 @@ header.white {
 }
 
 .author__img:hover {
-    background: url(../img/author.jpg) no-repeat center top;
+    background: url(../img/author.jpg) no-repeat center top / cover;
     ;
 }
 
@@ -348,6 +350,10 @@ header.white {
     height: 100%;
 }
 
+.swiper-wrapper {
+    padding-left: 100px;
+}
+
 .swiper-slide {
     background: #F2F2F7;
     border-radius: 20px 20px 20px 20px;
@@ -363,9 +369,7 @@ header.white {
     ;
 }
 
-.swiper-slide:nth-child(1) {
-    margin-left: 100px;
-}
+
 
 .swiper-slide img {
     display: block;
@@ -424,7 +428,7 @@ header.white {
 }
 
 .swiper-button-disabled {
-    display: none;
+    visibility: hidden;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets,
