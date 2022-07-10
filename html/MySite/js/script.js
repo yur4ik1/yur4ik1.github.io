@@ -24,3 +24,43 @@ window.onscroll = () => {
     }
 }
 
+// 
+// Parallax
+// 
+
+mouseParallax = (elem, factor = 0.1, reversed = false)=> {
+    // Add event listener
+    if(elem.length>0){
+        document.addEventListener("mousemove", parallax);
+    
+        // Magic happens here
+        function parallax(e) {
+            let _w = window.innerWidth/2;
+            let _h = window.innerHeight/2;
+            let _mouseX = e.clientX;
+            let _mouseY = e.clientY;
+            let _depth;
+
+            if(reversed == true){
+                _depth = `${(_mouseX - _w) * -factor}% ,${(_mouseY - _h) * -factor}%`;
+            }
+            else{
+                _depth = `${(_mouseX - _w) * factor}% ,${(_mouseY - _h) * factor}%`;
+            }
+
+            
+            
+            let x = `${_depth}`;
+            elem.forEach((e)=>{
+                e.style.transform = `translate(${x})`;
+            })
+            
+        }
+    }
+    
+
+};
+
+if(window.innerWidth > 1100){
+    mouseParallax(document.querySelectorAll(".intro-back"), 0.001);
+}
