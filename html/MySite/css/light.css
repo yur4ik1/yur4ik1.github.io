@@ -47,6 +47,7 @@ header.white {
     border-radius: 100px;
     margin-left: 10px;
     z-index: 9999999;
+    transition: 0.3s;
 }
 
 .header__contacts a:before {
@@ -522,16 +523,40 @@ header.white {
     color: #000000;
     margin-top: 16px;
 }
+.contacts .contacts-item {
+    transition: 0.3s;
+}
+.contacts .contacts-item:hover {
+    background: #174EE2;
+    color: #fff;
+}
 
-.contacts-item p:nth-child(1)::before {
+.contacts .contacts-item:hover > p {
+    color: #fff;
+}
+
+.contacts .contacts-item:nth-child(1)::before {
     content: url(../img/linkedIn.svg);
-
+    transform: scale(1.5);
 }
-.contacts-item p:nth-child(2)::before {
+.contacts .contacts-item:nth-child(2)::before {
     content: url(../img/telegram.svg);
-
+    transform: scale(1.5);
 }
-.contacts-item p:nth-child(3)::before {
+.contacts  .contacts-item:nth-child(3)::before {
     content: url(../img/whatsapp.svg);
+    transform: scale(1.5);
+}
 
+.contacts .contacts-item:hover:nth-child(1)::before {
+    content: url(../img/linkedIn-hover.svg);
+    transform: scale(1.5);
+}
+.contacts .contacts-item:hover:nth-child(2)::before {
+    content: url(../img/telegram-hover.svg);
+    transform: scale(1.5);
+}
+.contacts .contacts-item:hover:nth-child(3)::before {
+    content: url(../img/whatsapp-hover.svg);
+    transform: scale(1.5);
 }
