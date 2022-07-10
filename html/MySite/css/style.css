@@ -311,8 +311,10 @@ header.white {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .swiper-slide:hover {
-    transform: scale(0.95)!important;;
+    transform: scale(0.95) !important;
+    ;
 }
 
 .swiper-slide:nth-child(1) {
@@ -409,6 +411,7 @@ header.white {
     padding: 32px;
     padding-top: 29px;
 }
+
 .slide_info-left {
     display: flex;
     align-items: center;
@@ -443,3 +446,58 @@ header.white {
 .portfolio__section.child {
     margin-top: 0px;
 }
+
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.footer .wrapper {
+    max-width: 720px;
+}
+
+.contacts-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-text {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    margin-top: 30px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.contacts-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 64px;
+    background: #F2F2F7;
+    border-radius: 20px;
+    width: 220px;
+    transition: 0.3s;
+    height: 141px;
+}
+
+.contacts-item p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 16px;
+}
+
