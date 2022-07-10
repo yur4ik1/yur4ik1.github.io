@@ -72,9 +72,55 @@ header.white {
     background: #F2F2F7;
     border-radius: 100px;
     margin-left: 10px;
-    transition: 0.3s;
+    transition: 0.3s!important;
     z-index: 9999999;
 }
+
+.header__contacts a:before {
+    height: 19px;
+    width: 18px;
+    transition: 0.3s;
+}
+
+/* linkedIn */
+
+.header__contacts a:nth-child(1)::before {
+    content: url(../img/linkedIn.svg);
+    margin-right: 8px;
+}
+
+.header__contacts a:hover:nth-child(1)::before {
+    content: url(../img/linkedIn-hover.svg);
+    margin-right: 8px;
+}
+
+/* telegram */
+
+.header__contacts a:nth-child(2)::before {
+    content: url(../img/telegram.svg);
+    margin-right: 8px;
+}
+
+.header__contacts a:hover:nth-child(2)::before {
+    content: url(../img/telegram-hover.svg);
+    margin-right: 8px;
+}
+
+/* whatsapp */
+
+.header__contacts a:nth-child(3)::before {
+    content: url(../img/whatsapp.svg);
+    margin-right: 8px;
+}
+
+.header__contacts a:hover:nth-child(3)::before {
+    content: url(../img/whatsapp-hover.svg);
+    margin-right: 8px;
+}
+
+
+
+
 
 .header__contacts a:hover {
     background: #174EE2;

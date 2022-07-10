@@ -1,4 +1,6 @@
+// 
 // Dark btn
+// 
 
 const darkBtn = document.querySelector('.dark-btn');
 const bool = document.querySelector('.bool');
@@ -10,8 +12,9 @@ const dark = () => {
     back.classList.toggle('dark');
 }
 
-
+// 
 // Scroll header
+// 
 
 const header = document.querySelector("header");
 
