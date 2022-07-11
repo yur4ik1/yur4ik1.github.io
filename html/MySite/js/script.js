@@ -18,8 +18,8 @@ let link = document.getElementById("theme-link");
 btn.addEventListener("click", function () { ChangeTheme(); });
 
 function ChangeTheme() {
-    let lightTheme = "https://yur4ik1111.000webhostapp.com/css/dark.css";
-    let darkTheme = "https://yur4ik1111.000webhostapp.com/css/light.css";
+    let lightTheme = "css/dark.css";
+    let darkTheme = "css/light.css";
 
     let currTheme = link.getAttribute("href");
     let theme = "";
@@ -58,7 +58,9 @@ window.onscroll = () => {
 
 let bg = document.querySelector(".intro-back");
 window.addEventListener("scroll", function(){
-    bg.style.backgroundSize = 90 + +window.pageYOffset/12+"%";
+    bg.style.backgroundSize = 90 + +window.pageYOffset/30+"%";
+    bg.style.top = -0 - +window.pageYOffset/6+"px";
+    bg.style.height = 1000 + +window.pageYOffset/11+"px";
 })
 
 
