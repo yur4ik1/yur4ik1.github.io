@@ -17,23 +17,20 @@ let link = document.getElementById("theme-link");
 
 btn.addEventListener("click", function () { ChangeTheme(); });
 
-function ChangeTheme()
-{
+function ChangeTheme() {
     let lightTheme = "css/dark.css";
     let darkTheme = "css/light.css";
 
     let currTheme = link.getAttribute("href");
     let theme = "";
 
-    if(currTheme == lightTheme)
-    {
-   	 currTheme = darkTheme;
-   	 theme = "dark";
+    if (currTheme == lightTheme) {
+        currTheme = darkTheme;
+        theme = "dark";
     }
-    else
-    {    
-   	 currTheme = lightTheme;
-   	 theme = "light";
+    else {
+        currTheme = lightTheme;
+        theme = "light";
     }
 
     link.setAttribute("href", currTheme);
@@ -60,39 +57,10 @@ window.onscroll = () => {
 // Parallax
 // 
 
-mouseParallax = (elem, factor = 0.1, reversed = false)=> {
-    // Add event listener
-    if(elem.length>0){
-        document.addEventListener("mousemove", parallax);
-    
-        // Magic happens here
-        function parallax(e) {
-            let _w = window.innerWidth/2;
-            let _h = window.innerHeight/2;
-            let _mouseX = e.clientX;
-            let _mouseY = e.clientY;
-            let _depth;
+let bg = document.querySelector(".intro-back");
+window.addEventListener("scroll", function(){
+    bg.style.backgroundSize = 100 + +window.pageYOffset/12+"%";
+})
 
-            if(reversed == true){
-                _depth = `${(_mouseX - _w) * -factor}% ,${(_mouseY - _h) * -factor}%`;
-            }
-            else{
-                _depth = `${(_mouseX - _w) * factor}% ,${(_mouseY - _h) * factor}%`;
-            }
 
-            
-            
-            let x = `${_depth}`;
-            elem.forEach((e)=>{
-                e.style.transform = `translate(${x})`;
-            })
-            
-        }
-    }
-    
 
-};
-
-if(window.innerWidth > 1100){
-    mouseParallax(document.querySelectorAll(".intro-back"), 0.001);
-}
