@@ -611,7 +611,6 @@ header.white {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 13px 25px;
         width: 119px;
         height: 80px;
         background: #1C1C1E;
@@ -674,7 +673,6 @@ header.white {
         align-items: center;
         padding: 32px;
         width: 382px;
-        height: 233px;
         margin-top: 32px;
     }
 
@@ -844,5 +842,30 @@ header.white {
     }
     .header__contacts-mobile {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__contacts-mobile a {
+        width: 88px;
+        height: 68px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .contacts-item {
+        width: 88px;
+        height: 68px;
+    }
+
+    .contacts-item p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .intro__created {
+        padding-top: 32px;
     }
 }

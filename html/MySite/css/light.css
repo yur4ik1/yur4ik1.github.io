@@ -506,7 +506,7 @@ header.white {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 32px 64px;
+
     background: #F2F2F7;
     border-radius: 20px;
     width: 220px;
@@ -616,7 +616,7 @@ header.white {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 13px 25px;
+
         width: 119px;
         height: 80px;
         background: #F2F2F7;
@@ -679,7 +679,7 @@ header.white {
         align-items: center;
         padding: 32px;
         width: 382px;
-        height: 233px;
+        
         margin-top: 32px;
     }
 
@@ -760,7 +760,7 @@ header.white {
     }
 
     .contacts-item {
-        padding: 13px 25px;
+
         width: 119px;
         height: 90px;
     }
@@ -781,10 +781,12 @@ header.white {
     .wrapper {
         padding: 0 32px;
     }
+
     .header .wrapper {
         max-width: none;
         padding: 0 8px;
     }
+
     .header__download {
         margin-right: 0;
     }
@@ -792,12 +794,15 @@ header.white {
     .swipe-app {
         margin-left: 0;
     }
+
     .pagination {
         margin-left: 0;
     }
+
     .swiper-wrapper {
         padding-left: 0;
     }
+
     .footer .wrapper {
         max-width: none;
     }
@@ -808,17 +813,21 @@ header.white {
         max-width: 382px;
         padding: 0;
     }
+
     .pagination {
         display: none;
     }
+
     .swiper-wrapper {
         flex-direction: column;
         align-items: center;
     }
+
     .swiper-slide {
         margin-bottom: 32px;
         margin-right: 0;
     }
+
     .slide_info-left p {
         margin-left: 14px;
     }
@@ -828,9 +837,11 @@ header.white {
         font-size: 16px;
         line-height: 19px;
     }
+
     .swipe-app p {
         margin-right: 6px;
     }
+
     .swipe-app img {
         height: 24px;
         width: 24px;
@@ -839,15 +850,44 @@ header.white {
 
 @media screen and (max-width: 415px) {
     .wrapper {
-        padding: 0 16px!important;
+        padding: 0 16px !important;
     }
+
     .swiper-slide {
-        width: 100%!important;
+        width: 100% !important;
     }
+
     .dark-mode {
         width: 100%;
     }
+
     .header__contacts-mobile {
         width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .header__contacts-mobile a {
+        width: 88px;
+        height: 68px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .contacts-item {
+        width: 88px;
+        height: 68px;
+    }
+
+    .contacts-item p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .intro__created {
+        padding-top: 32px;
     }
 }
