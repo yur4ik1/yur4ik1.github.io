@@ -802,3 +802,52 @@ header.white {
         max-width: none;
     }
 }
+
+@media screen and (max-width: 661px) {
+    .portfolio__section .wrapper {
+        max-width: 382px;
+        padding: 0;
+    }
+    .pagination {
+        display: none;
+    }
+    .swiper-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .swiper-slide {
+        margin-bottom: 32px;
+        margin-right: 0;
+    }
+    .slide_info-left p {
+        margin-left: 14px;
+    }
+
+
+    .swipe-app {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .swipe-app p {
+        margin-right: 6px;
+    }
+    .swipe-app img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .wrapper {
+        padding: 0 16px!important;
+    }
+    .swiper-slide {
+        width: 100%!important;
+    }
+    .dark-mode {
+        width: 100%;
+    }
+    .header__contacts-mobile {
+        width: 100%;
+    }
+}
