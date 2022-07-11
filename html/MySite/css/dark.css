@@ -794,9 +794,7 @@ header.white {
     .footer .wrapper {
         max-width: none;
     }
-}
 
-@media screen and (max-width: 661px) {
     .portfolio__section .wrapper {
         max-width: 382px;
         padding: 0;
@@ -830,19 +828,14 @@ header.white {
     }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 600px) {
     .wrapper {
         padding: 0 16px!important;
     }
     .swiper-slide {
         width: 100%!important;
     }
-    .dark-mode {
-        width: 100%;
-    }
-    .header__contacts-mobile {
-        width: 100%;
-    }
+
 }
 
 @media screen and (max-width: 414px) {
@@ -852,6 +845,13 @@ header.white {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
+    }
+
+    .dark-mode {
+        width: 100%;
+    }
+    .header__contacts-mobile {
+        width: 100%;
     }
 
     .contacts-item {
