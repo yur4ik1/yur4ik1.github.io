@@ -59,7 +59,7 @@ window.onscroll = () => {
 
 let bg = document.querySelector(".intro-back");
 window.addEventListener("scroll", function(){
-    bg.style.backgroundSize = 100 + +window.pageYOffset/12+"%";
+    bg.style.backgroundSize = 90 + +window.pageYOffset/12+"%";
 })
 
 
