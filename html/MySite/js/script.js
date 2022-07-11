@@ -18,8 +18,8 @@ let link = document.getElementById("theme-link");
 btn.addEventListener("click", function () { ChangeTheme(); });
 
 function ChangeTheme() {
-    let lightTheme = "css/dark.css";
-    let darkTheme = "css/light.css";
+    let lightTheme = "https://yur4ik1111.000webhostapp.com/css/dark.css";
+    let darkTheme = "https://yur4ik1111.000webhostapp.com/css/light.css";
 
     let currTheme = link.getAttribute("href");
     let theme = "";
