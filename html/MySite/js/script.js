@@ -1,6 +1,4 @@
-// 
 // Dark btn
-// 
 
 const darkBtn = document.querySelector('.dark-btn');
 const bool = document.querySelector('.bool');
@@ -37,9 +35,7 @@ function ChangeTheme() {
 
 }
 
-// 
 // Scroll header
-// 
 
 const header = document.querySelector("header");
 
@@ -52,16 +48,15 @@ window.onscroll = () => {
     }
 }
 
-// 
 // Parallax
-// 
 
 let bg = document.querySelector(".intro-back");
-window.addEventListener("scroll", function(){
-    bg.style.backgroundSize = 90 + +window.pageYOffset/20+"%";
-    bg.style.top = -0 - +window.pageYOffset/3+"px";
-    bg.style.height = 1000 + +window.pageYOffset/5+"px";
+window.addEventListener("scroll", () => {
+    bg.style.backgroundSize = 90 + +window.pageYOffset/15+"%";
+    bg.style.top = -0 - +window.pageYOffset/2+"px";
+    bg.style.height = 1000 + +window.pageYOffset/3+"px";
 })
+
 
 
 
