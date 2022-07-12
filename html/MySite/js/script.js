@@ -52,13 +52,18 @@ window.onscroll = () => {
 
 let bg = document.querySelector(".back");
 let bgScale = document.querySelector(".intro-back");
+const width = window.innerWidth
+
 
 window.addEventListener("scroll", () => {
-    bg.style.backgroundSize = 90 + +window.pageYOffset/20+"%";
     bg.style.top = -0 - +window.pageYOffset/2+"px";
     bgScale.style.width = 1500 + +window.pageYOffset/1+"px";
-    console.log(bgScale);
+    if (width < 1204) {
+        bgScale.style.width = 1024 + +window.pageYOffset/1+"px";
+    }
 })
+
+
 
 
 
