@@ -41,7 +41,7 @@ const header = document.querySelector("header");
 
 window.onscroll = () => {
     let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    if (posTop > 0) {
+    if (posTop > 700) {
         header.classList.add('white');
     } else {
         header.classList.remove('white');
@@ -50,14 +50,15 @@ window.onscroll = () => {
 
 // Parallax
 
-let bg = document.querySelector(".intro-back");
+let bg = document.querySelector(".back");
+let bgScale = document.querySelector(".intro-back");
+
 window.addEventListener("scroll", () => {
-    bg.style.backgroundSize = 90 + +window.pageYOffset/15+"%";
-    bg.style.top = -0 - +window.pageYOffset/1+"px";
-    bg.style.height = 2000 + +window.pageYOffset/1+"px";
+    bg.style.backgroundSize = 90 + +window.pageYOffset/20+"%";
+    bg.style.top = -0 - +window.pageYOffset/2+"px";
+    bgScale.style.width = 1500 + +window.pageYOffset/1+"px";
+    console.log(bgScale);
 })
-
-
 
 
 
