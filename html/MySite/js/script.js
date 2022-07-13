@@ -38,6 +38,7 @@ function ChangeTheme() {
 // Scroll header
 
 const header = document.querySelector("header");
+const width = window.innerWidth
 
 window.onscroll = () => {
     let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -46,14 +47,21 @@ window.onscroll = () => {
     } else {
         header.classList.remove('white');
     }
+
+    if (width < 1023) {
+        if (posTop > 0) {
+            header.classList.add('white');
+        } else {
+            header.classList.remove('white');
+        }
+    }
+
 }
 
 // Parallax
 
 let bg = document.querySelector(".back");
 let bgScale = document.querySelector(".intro-back");
-const width = window.innerWidth
-
 
 window.addEventListener("scroll", () => {
     bg.style.top = -0 - +window.pageYOffset/2+"px";
@@ -62,8 +70,6 @@ window.addEventListener("scroll", () => {
         bgScale.style.width = 1024 + +window.pageYOffset/1+"px";
     }
 })
-
-
 
 
 
