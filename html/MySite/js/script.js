@@ -71,6 +71,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
+
 // CV 
 
 let btnMob = document.querySelector('.btn-mob');
@@ -79,6 +80,9 @@ let btnDesck = document.querySelector('.btn-desck');
 if (width < 1023) {
     btnMob.classList.add('active');
     btnDesck.classList.add('active');
+    btnMob.addEventListener('click', () => {
+        window.open('CV_Filin.pdf');
+    });
 } else {
     btnMob.classList.remove('active');
     btnDesck.classList.remove('active');
@@ -87,4 +91,5 @@ if (width < 1023) {
         window.open('CV_Filin.pdf');
     });
 }
+
 
