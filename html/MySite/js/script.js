@@ -71,12 +71,20 @@ window.addEventListener("scroll", () => {
     }
 })
 
-
 // CV 
 
-let svBtn = document.querySelector('.header__download');
-svBtn.addEventListener('click', () => {
-    window.location = 'CV_Filin.pdf';
-})
+let btnMob = document.querySelector('.btn-mob');
+let btnDesck = document.querySelector('.btn-desck');
 
+if (width < 1023) {
+    btnMob.classList.add('active');
+    btnDesck.classList.add('active');
+} else {
+    btnMob.classList.remove('active');
+    btnDesck.classList.remove('active');
+
+    btnDesck.addEventListener('click', () => {
+        window.open('CV_Filin.pdf');
+    });
+}
 
