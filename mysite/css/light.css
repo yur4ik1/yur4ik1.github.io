@@ -49,6 +49,11 @@ header.white {
     transition: 0.3s;
 }
 
+.header__contacts img {
+    height: 18px;
+    margin-right: 8px;
+}
+
 .header__contacts a:before {
     height: 19px;
     width: 18px;
@@ -106,6 +111,7 @@ header.white {
 .header__contacts-mobile {
     display: none;
 }
+
 
 .header__download {
     font-weight: 600;
@@ -583,6 +589,10 @@ header.white {
     height: 141px;
 }
 
+.contacts-item img {
+    height: 32px;
+}
+
 .contacts-item p {
     font-weight: 600;
     font-size: 24px;
@@ -888,6 +898,11 @@ header.white {
         margin-top: 16px;
     }
 
+    .header__contacts-mobile img {
+        height: 22px;
+        margin-bottom: 7px;
+    }
+
     .header__contacts-mobile a {
         display: flex;
         flex-direction: column;
@@ -1157,6 +1172,10 @@ header.white {
 
     .contacts-item p {
         margin-top: 7px;
+    }
+
+    .contacts-item img {
+        height: 20px;
     }
 }
 

@@ -131,25 +131,3 @@ if(window.innerWidth > 1100){
     mouseParallax(document.querySelectorAll(".back"), 0.001);
 }
 
-
-
-
-// CV 
-
-let btnMob = document.querySelector('.btn-mob');
-let btnDesck = document.querySelector('.btn-desck');
-
-if (width < 1023) {
-    btnMob.classList.add('active');
-    btnDesck.classList.add('active');
-    btnMob.addEventListener('click', () => {
-        window.open('CV_Filin.pdf');
-    });
-} else {
-    btnMob.classList.remove('active');
-    btnDesck.classList.remove('active');
-
-    btnDesck.addEventListener('click', () => {
-        setTimeout(function(){document.location.assign(document.location.origin + "/CV_Filin.pdf");},250);
-    });
-}

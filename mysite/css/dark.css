@@ -49,6 +49,11 @@ header.white {
     transition: 0.3s;
 }
 
+.header__contacts img {
+    height: 18px;
+    margin-right: 8px;
+}
+
 .header__contacts a:before {
     height: 19px;
     width: 18px;
@@ -796,6 +801,10 @@ header.white {
 }
 
 
+.contacts-item img {
+    height: 32px;
+}
+
 
 @media screen and (max-width: 1366px) {
     .wrapper {
@@ -870,6 +879,11 @@ header.white {
         justify-content: space-between;
         width: 382px;
         margin-top: 16px;
+    }
+
+    .header__contacts-mobile img {
+        height: 22px;
+        margin-bottom: 7px;
     }
 
     .header__contacts-mobile a {
@@ -1141,6 +1155,10 @@ header.white {
 
     .contacts-item p {
         margin-top: 7px;
+    }
+
+    .contacts-item img {
+        height: 20px;
     }
 }
 
