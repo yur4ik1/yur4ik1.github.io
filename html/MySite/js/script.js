@@ -72,4 +72,11 @@ window.addEventListener("scroll", () => {
 })
 
 
+// CV 
+
+let svBtn = document.querySelector('.header__download');
+svBtn.addEventListener('click', () => {
+    window.location = 'CV_Filin.pdf';
+})
+
 
