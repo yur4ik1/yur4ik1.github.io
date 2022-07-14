@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://yur4ik1111.000webhostapp.com/css/light.css" id="theme-link">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+ 
 </head>
 
 <body>
@@ -69,7 +70,17 @@
                 </a>
             </div>
             <div>
-                <a href="./CV_Filin.pdf" target="_blank" class="header__download">Open CV</a>
+                <script>
+                    const widthDown = window.innerWidth
+                    const downBtn = '<a href="#" target="_blank" class="header__download">Open CV</a>'
+                    const downBtnDown = '<a href="#" target="_blank" download="CV_Filin.pdf" class="header__download">Open CV</a>'
+                    if (widthDown < 1024) {
+                        document.write(downBtn);
+                    } else {
+                        document.write(downBtnDown);
+                    }
+                </script>
+
             </div>
         </div>
     </header>
@@ -194,8 +205,8 @@
 
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://www.figma.com/community/file/1100454552350207772">
+                            <img src="./img/1.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/figma.svg" alt="">
@@ -208,23 +219,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
-                            <div class="slide_info">
-                                <div class="slide_info-left">
-                                    <img src="./img/figma.svg" alt="">
-                                    <p>Twitter Design <br>
-                                        System</p>
-                                </div>
-                                <sapn class="slide_info-btn">Open</span>
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://www.figma.com/community/file/1117853489792559044">
+                            <img src="./img/2.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/figma.svg" alt="">
@@ -238,8 +234,23 @@
 
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://www.figma.com/community/file/1096850834074594886">
+                            <img src="./img/3.jpg" class="portfolio-img" alt="">
+                            <div class="slide_info">
+                                <div class="slide_info-left">
+                                    <img src="./img/figma.svg" alt="">
+                                    <p>Twitter Design <br>
+                                        System</p>
+                                </div>
+                                <sapn class="slide_info-btn">Open</span>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a target="_blank" href="https://www.figma.com/file/XM2J6LfzbC56iOGZImTp07/AntiHack">
+                            <img src="./img/4.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/figma.svg" alt="">
@@ -285,8 +296,9 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank"
+                            href="https://www.behance.net/gallery/146607235/UX-UI-Mobile-App-Password-Manager">
+                            <img src="./img/5.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/behance.svg" alt="">
@@ -299,8 +311,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://www.behance.net/gallery/147804403/Pixel-Cleaner-Figma-Plugin">
+                            <img src="./img/6.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/behance.svg" alt="">
@@ -313,8 +325,9 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank"
+                            href="https://www.behance.net/gallery/144612655/UX-UI-Mobile-App-Concept-Marsium">
+                            <img src="./img/7.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/behance.svg" alt="">
@@ -327,22 +340,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
-                            <div class="slide_info">
-                                <div class="slide_info-left">
-                                    <img src="./img/behance.svg" alt="">
-                                    <p>Twitter Design <br>
-                                        System</p>
-                                </div>
-                                <sapn class="slide_info-btn">Open</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://www.behance.net/gallery/146939617/Why-trees-can-kill-us">
+                            <img src="./img/8.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/behance.svg" alt="">
@@ -388,8 +387,8 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://dribbble.com/shots/17089631--yurafilin">
+                            <img src="./img/9.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/dribble.svg" alt="">
@@ -402,8 +401,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://dribbble.com/shots/17089586--yurafilin">
+                            <img src="./img/10.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/dribble.svg" alt="">
@@ -416,8 +415,8 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://dribbble.com/shots/17090047-Mobile-App-UI-Design">
+                            <img src="./img/11.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/dribble.svg" alt="">
@@ -429,9 +428,10 @@
                         </a>
                     </div>
 
+
                     <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
+                        <a target="_blank" href="https://dribbble.com/shots/17101867-Yandex">
+                            <img src="./img/12.jpg" class="portfolio-img" alt="">
                             <div class="slide_info">
                                 <div class="slide_info-left">
                                     <img src="./img/dribble.svg" alt="">
@@ -443,19 +443,6 @@
                         </a>
                     </div>
 
-                    <div class="swiper-slide">
-                        <a target="_blank" href="!#">
-                            <img src="./img/cart.jpg" class="portfolio-img" alt="">
-                            <div class="slide_info">
-                                <div class="slide_info-left">
-                                    <img src="./img/dribble.svg" alt="">
-                                    <p>Twitter Design <br>
-                                        System</p>
-                                </div>
-                                <sapn class="slide_info-btn">Open</span>
-                            </div>
-                        </a>
-                    </div>
 
                 </div>
             </div>
