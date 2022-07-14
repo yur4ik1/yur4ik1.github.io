@@ -8,6 +8,7 @@
     <meta property="og:image" content="prev.png">
     <title>yuraklevets / portfolio</title>
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/light.css" id="theme-link">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -168,9 +169,9 @@
         <div class="wrapper">
             <div class="intro__created">
                 <div class="intro__text">
-                    <p class="intro__created-text">I am a web developer with 4 years of experience. <br> I create
+                    <p class="intro__created-text wow fadeInDown">I am a web developer with 4 years of experience. <br> I create
                         turnkey websites on WordPress and React.</p>
-                    <p class="intro__created-desc">Write to me if you
+                    <p class="intro__created-desc wow fadeInUp">Write to me if you
                         need an original website</p>
                 </div>
                 <a href="https://t.me/yur4ik_69" target="_blank" class="intro__created-btn">I need a website</a>
@@ -179,7 +180,7 @@
     </section>
 
 
-    <section class="portfolio__section">
+    <section class="portfolio__section wow fadeInUp">
         <div class="wrapper">
             <div class="swiper">
                 <div class="swipe-app">
@@ -276,7 +277,7 @@
     </section>
 
 
-    <section class="portfolio__section child">
+    <section class="portfolio__section child wow fadeInUp">
         <div class="wrapper">
             <div class="swiper">
                 <div class="swipe-app">
@@ -371,7 +372,7 @@
     </section>
 
 
-    <section class="portfolio__section child">
+    <section class="portfolio__section child wow fadeInUp">
         <div class="wrapper">
             <div class="swiper">
                 <div class="swipe-app">
@@ -485,11 +486,11 @@
                 <p class="contacts-text">My contacts:</p>
             </div>
             <div class="contacts">
-                <a href="https://www.instagram.com/yurii.dev/" target="_blank" class="contacts-item">
+                <a href="https://www.instagram.com/yurii.dev/" target="_blank" class="contacts-item wow fadeInUp">
                     <img src="./img/inst.png" alt="">
                     <p>Instagram</p>
                 </a>
-                <a href="https://t.me/yur4ik_69" target="_blank" class="contacts-item">
+                <a href="https://t.me/yur4ik_69" target="_blank" class="contacts-item wow fadeInUp">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path class="tg"
                             d="M16 0C7.16337 0 0 7.16337 0 16C0 24.8366 7.16337 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16337 24.8366 0 16 0Z"
@@ -507,7 +508,7 @@
 
                     <p>Telegram</p>
                 </a>
-                <a href="#" target="_blank" class="contacts-item">
+                <a href="#" target="_blank" class="contacts-item wow fadeInUp">
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_132_437)">
                             <path class="ws"
@@ -556,6 +557,10 @@
         })
     </script>
     <script src="./js/script.js"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
