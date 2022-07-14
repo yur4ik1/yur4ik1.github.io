@@ -13,11 +13,11 @@ const dark = () => {
 let btn = document.getElementById("dark-btn");
 let link = document.getElementById("theme-link");
 
-btn.addEventListener("click", function () { ChangeTheme(); });
+btn.addEventListener("click", () => { ChangeTheme(); });
 
 function ChangeTheme() {
-    let lightTheme = "https://yur4ik1111.000webhostapp.com/css/dark.css";
-    let darkTheme = "https://yur4ik1111.000webhostapp.com/css/light.css";
+    let lightTheme = "css/dark.css";
+    let darkTheme = "css/light.css";
 
     let currTheme = link.getAttribute("href");
     let theme = "";
@@ -42,7 +42,7 @@ const width = window.innerWidth
 
 window.onscroll = () => {
     let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    if (posTop > 700) {
+    if (posTop > 750) {
         header.classList.add('white');
     } else {
         header.classList.remove('white');
@@ -88,8 +88,6 @@ if (width < 1023) {
     btnDesck.classList.remove('active');
 
     btnDesck.addEventListener('click', () => {
-        window.open('CV_Filin.pdf');
+        setTimeout(function(){document.location.assign(document.location.origin + "/CV_Filin.pdf");},250);
     });
 }
-
-
