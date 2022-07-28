@@ -705,14 +705,16 @@ body {
     align-items: center;
 }
 
-.faq__dropdown{
+.faq__dropdown {
     width: 717px;
 }
-.faq__dropdown_block{
+
+.faq__dropdown_block {
     width: 100%;
     margin-bottom: 30px;
 }
-.faq__dropdown_block_header{
+
+.faq__dropdown_block_header {
     display: flex;
     align-items: center;
     transition: .3s;
@@ -729,7 +731,7 @@ body {
     cursor: pointer;
 }
 
-.faq__dropdown_block_header_thumb{
+.faq__dropdown_block_header_thumb {
     width: 60px;
     height: 60px;
     display: flex;
@@ -742,18 +744,21 @@ body {
     background: white;
     color: #000000;
 }
-.faq__dropdown_block_header_text{
+
+.faq__dropdown_block_header_text {
     font-weight: 500;
     font-size: 24px;
     line-height: 140%;
     color: #000000;
     width: fit-content;
 }
-.faq__dropdown_block_header_arrow{
+
+.faq__dropdown_block_header_arrow {
     margin-left: auto;
     transition: .3s;
 }
-.faq__dropdown_block_main{
+
+.faq__dropdown_block_main {
     font-weight: 400;
     font-size: 20px;
     line-height: 140%;
@@ -762,7 +767,8 @@ body {
     overflow: hidden;
     transition: .3s;
 }
-.faq__dropdown_block_header-active::before{
+
+.faq__dropdown_block_header-active::before {
     content: '';
     background: url(../img/open.svg) no-repeat;
     height: 64px;
@@ -770,11 +776,167 @@ body {
     position: relative;
     left: -11px;
 }
-.faq__dropdown_block_header-active .often-q__dropdown_block_header_arrow{
+
+.faq__dropdown_block_header-active .often-q__dropdown_block_header_arrow {
     transform: rotateX(180deg);
 }
-.faq__dropdown_block_main-active{
+
+.faq__dropdown_block_main-active {
     max-height: 900px;
     padding-top: 20px;
     padding-bottom: 30px;
+}
+
+
+
+.contact {
+    margin-top: 144px;
+}
+
+.contact .wrapper {
+    max-width: 1540px;
+}
+
+.contact-first {
+    width: 100%;
+    height: 510px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 70px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 130%;
+    color: #008F8E;
+}
+
+.contact-me {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #000000;
+    margin-top: 16px;
+    margin-bottom: 45px;
+}
+
+.contact-social {
+    display: flex;
+    align-items: center;
+    width: 309px;
+    justify-content: space-between;
+}
+
+.contact-social a {
+    margin-left: ;
+}
+
+.phone {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.ws {
+    margin-top: 65px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #000000;
+}
+
+.contact-right {
+    width: 800px;
+    height: 370px;
+    background: linear-gradient(180deg, #028584 0%, #03ABAA 100%);
+    border-radius: 30px;
+    transform: rotate(-180deg);
+    padding: 62px 80px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.contact-right h3 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 34px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-bottom: 11px;
+}
+
+.input input {
+    width: 300px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.form-footer {
+    margin-top: 47px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-send {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 30px;
+    gap: 10px;
+    width: 180px;
+    height: 48px;
+    background: linear-gradient(360deg, #FF4F4F 0%, #FF876C 100%);
+    box-shadow: 0px 4px 0px #CC1A1A;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-right: 32px;
+}
+
+.form-footer p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.form-footer p a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-decoration: underline;
 }
