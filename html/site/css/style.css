@@ -1029,7 +1029,7 @@ body {
 .copyright {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #FFFFFF;;
+    border-top: 1px solid #FFFFFF;
     opacity: 0.4;
     padding-top: 24px;
 }
@@ -1050,4 +1050,28 @@ body {
     text-decoration-line: underline;
     color: #FFFFFF;
     opacity: 0.6;
+}
+
+@media screen and (max-width: 1570px) {
+    .group {
+        background-size: 832px;
+    }
+
+    .how-back {
+        top: 444px;
+        left: 808px;
+        background-size: 434px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .wrapper {
+        max-width: 1166px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .wrapper {
+        max-width: 964px!important;
+    }
 }
