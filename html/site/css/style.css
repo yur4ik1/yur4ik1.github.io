@@ -556,7 +556,6 @@ body {
 }
 
 .tariffs-block {
-    height: 752px;
     background: #FFFFFF;
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
@@ -799,7 +798,6 @@ body {
 
 .contact-first {
     width: 100%;
-    height: 510px;
     background: #FFFFFF;
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
@@ -1068,10 +1066,246 @@ body {
     .wrapper {
         max-width: 1166px;
     }
+
+    .how-back {
+        top: 528px;
+        left: 699px;
+        background-size: 327px;
+    }
+
+    .why-right {
+        background-size: 450px;
+        position: relative;
+        top: 102px;
+    }
+
+    .about-right {
+        background-size: 523px;
+    }
+
+    .faq-left {
+        background-size: 400px;
+    }
+
+    .group {
+        background-size: 734px;
+    }
+
+    .input input {
+        margin-right: 12px;
+    }
+
+    .tarif-text {
+        width: 554px;
+    }
+
+    .result-block .left .text:nth-child(2) {
+        top: 15px;
+    }
+
+    .result-block .left .text:nth-child(3) {
+        top: 54px;
+    }
+
+    .result-block .left .text:nth-child(4) {
+        top: 79px;
+    }
+
+    .result-block .right .text:nth-child(2) {
+        top: 17px;
+    }
+
+    .result-block .right .text:nth-child(3) {
+        top: 54px;
+    }
+
+    .result-block .right .text:nth-child(4) {
+        top: 54px;
+    }
+}
+
+.group-mob {
+    display: none;
+}
+
+@media screen and (max-width: 1360px) {
+    .group {
+        background: none;
+        height: auto;
+    }
+
+    .result-block .text {
+        padding: 16px 16px 16px 28px;
+        gap: 8px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        position: initial !important;
+        margin-bottom: 30px;
+        height: 176px;
+    }
+
+    .result-block {
+        height: auto;
+    }
+
+    .result-block .left .text:nth-child(1) {
+        border-left: 18px solid #FF6F4F;
+    }
+
+    .result-block .left .text:nth-child(2) {
+        border-left: 18px solid #008F8E;
+    }
+
+    .result-block .left .text:nth-child(3) {
+        border-left: 18px solid #46B6B6;
+    }
+
+    .result-block .left .text:nth-child(4) {
+        border-left: 18px solid #A7EEEE;
+    }
+
+
+    .result-block .right .text:nth-child(1) {
+        border-left: 18px solid #008F8E;
+    }
+
+    .result-block .right .text:nth-child(2) {
+        border-left: 18px solid #46B6B6;
+    }
+
+    .result-block .right .text:nth-child(3) {
+        border-left: 18px solid #A7EEEE;
+    }
+
+    .result-block .right .text:nth-child(4) {
+        border-left: 18px solid #008F8E;
+    }
+
+    .group-mob {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+    .group-mob a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 18px 44px;
+        gap: 10px;
+        width: 350px;
+        height: 61px;
+        background: linear-gradient(360deg, #038483 0%, #00CDCD 100%);
+        box-shadow: 0px 5px 0px #026C6C;
+        border-radius: 40px;
+    }
+
+    .result-block .left .title {
+        font-size: 20px;
+        line-height: 140%;
+        margin-bottom: 13px;
+    }
+
+    .result-block .right .title {
+        font-size: 20px;
+        line-height: 140%;
+        text-align: left;
+        margin-bottom: 13px;
+    }
+
+    .result-block .left .desc {
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    .result-block .right .desc {
+        font-size: 18px;
+        line-height: 140%;
+        text-align: left;
+    }
+
+    .tarif-text {
+        width: 489px;
+    }
 }
 
 @media screen and (max-width: 1250px) {
     .wrapper {
-        max-width: 964px!important;
+        max-width: 1100px;
     }
-}
+
+    .tariffs-info {
+        width: 551px;
+    }
+
+    .tariffs-footer_flex {
+        width: 604px;
+    }
+
+    .tariffs-info .tariffs-header-info:nth-child(2) {
+        left: 9px;
+    }
+
+    .how-back {
+        display: none;
+    }
+
+    .contact-first {
+        flex-direction: column;
+    }
+
+    .how-list_desc {
+        margin-bottom: 23px;
+    }
+
+    .ws {
+        display: none;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .faq-left {
+            background-size: 323px;
+        }
+        .about-right {
+            background-size: 453px;
+        }
+        .about-left {
+            width: 1116px;
+        }
+
+        .contact-left {
+            text-align: center;
+        }
+
+        .contact-social {
+            justify-content: center;
+            width: auto;
+            margin-bottom: 21px;
+        }
+
+        .contact-social a {
+            margin-right: 12px;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        .wrapper {
+            max-width: 768px !important;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
