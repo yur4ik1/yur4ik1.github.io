@@ -1050,6 +1050,26 @@ body {
     opacity: 0.6;
 }
 
+.logo-text_mob {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
+.habitual-center-mob {
+    display: none;
+}
+
+.about-me-title-mob {
+    display: none;
+}
+
+.tariffs-block_mob {
+    display: none;
+}
+
 @media screen and (max-width: 1570px) {
     .group {
         background-size: 832px;
@@ -1135,14 +1155,13 @@ body {
     }
 
     .result-block .text {
-        padding: 16px 16px 16px 28px;
+        padding: 16px 16px 16px 20px;
         gap: 8px;
         background: #FFFFFF;
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
         border-radius: 16px;
         position: initial !important;
         margin-bottom: 30px;
-        height: 176px;
     }
 
     .result-block {
@@ -1209,24 +1228,24 @@ body {
     .result-block .left .title {
         font-size: 20px;
         line-height: 140%;
-        margin-bottom: 13px;
+        margin-bottom: 6px;
     }
 
     .result-block .right .title {
         font-size: 20px;
         line-height: 140%;
         text-align: left;
-        margin-bottom: 13px;
+        margin-bottom: 6px;
     }
 
     .result-block .left .desc {
         font-size: 18px;
-        line-height: 140%;
+        line-height: 112%;
     }
 
     .result-block .right .desc {
         font-size: 18px;
-        line-height: 140%;
+        line-height: 112%;
         text-align: left;
     }
 
@@ -1238,6 +1257,8 @@ body {
 @media screen and (max-width: 1250px) {
     .wrapper {
         max-width: 1100px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .tariffs-info {
@@ -1272,9 +1293,11 @@ body {
         .faq-left {
             background-size: 323px;
         }
+
         .about-right {
             background-size: 453px;
         }
+
         .about-left {
             width: 1116px;
         }
@@ -1292,16 +1315,272 @@ body {
         .contact-social a {
             margin-right: 12px;
         }
+
+        .result-block {
+            padding-left: 36px;
+            padding-right: 36px;
+        }
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1140px) {
+
+        h2 {
+            font-size: 42px !important;
+            line-height: 120%;
+        }
+
+        p {
+            font-size: 18px !important;
+        }
+
+        .title {
+            font-size: 20px !important;
+        }
+
         .wrapper {
             padding-left: 30px;
             padding-right: 30px;
         }
 
+        .header-menu {
+            display: none;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text_mob {
+            display: block;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: #000000;
+            margin-left: 22px;
+        }
+
+        .header-contact {
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 57px;
+            height: 57px;
+            background: linear-gradient(180deg, #038483 0%, #00CDCD 100%);
+            box-shadow: 0px 0px 30px #FFFFFF;
+            transform: rotate(180deg);
+            border-radius: 100%;
+            margin-left: 20px;
+        }
+
+        .intro-title {
+            font-size: 42px;
+            line-height: 140%;
+        }
+
+        .intro-desc {
+            font-size: 24px;
+            line-height: 140%;
+        }
+
+        .intro-list li {
+            font-size: 20px;
+            line-height: 140%;
+        }
+
+        .intro-btn {
+            padding: 18px 44px;
+            width: 400px;
+            height: 61px;
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+        .intro-info {
+            left: -72px;
+            top: 23%;
+
+        }
+
+        .intro-back {
+            height: 723px;
+        }
+
+        .intro {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 22.92%, rgba(255, 255, 255, 0.8) 70.84%, rgba(255, 255, 255, 0) 100%);
+            transform: rotate(-90deg);
+            width: 723px;
+            height: 924.84px;
+            z-index: 999;
+        }
+
+        .intro-title {
+            max-width: 545px;
+        }
+
+        .intro-bottom {
+            height: 236.48px;
+            background: linear-gradient(180deg, #FFFFFF 10.94%, rgba(255, 255, 255, 0) 100%);
+            transform: rotate(-180deg);
+        }
+
+        .tariffs-block {
+            display: none;
+        }
+
+        .habitual-left {
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+        }
+
+        .habitual-right {
+            font-size: 18px;
+            line-height: 130%;
+            text-align: center;
+        }
+
+        .habitual-right p {
+            text-align: center;
+        }
+
+        .habitual-center {
+            background: none;
+        }
+
+        .habitual-center-mob {
+            background: url(../img/habitual-center.jpg) no-repeat center top;
+            display: block;
+            height: 600px;
+        }
+
+        .habitual-bottom {
+            height: 129px;
+            font-size: 18px;
+            line-height: 140%;
+            padding: 27px 43px;
+        }
+
+        .why .wrapper {
+            flex-direction: column;
+        }
+
+        .why p {
+            font-size: 18px;
+            line-height: 140%;
+            margin-bottom: 18px;
+        }
+
+        .why-right {
+            position: inherit;
+            top: 0;
+            background-size: 100%;
+            width: 600px;
+            height: 600px;
+        }
+
+        .about-me .wrapper {
+            flex-direction: column;
+        }
+
+        .about-left {
+            width: auto;
+        }
+
+        .about-right {
+            background-size: 100%;
+            width: 570px;
+            height: 621px;
+        }
+
+
+        .about-me {
+            margin-top: 30px;
+        }
+
+        .about-me h2 {
+            display: none;
+        }
+
+        .about-me-title-mob {
+            display: block !important;
+        }
+
+        .about-left p {
+            font-size: 18px;
+            line-height: 140%;
+            margin-bottom: 17px;
+        }
+
+        .about-left .more-info {
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+
+        .result {
+            margin-top: 61px;
+        }
+
+        .result-block {
+            padding: 0;
+            box-shadow: none;
+        }
+
+        .result-block .text {
+            width: 339px;
+            height: 179px;
+        }
+
+        .result-block .right .desc br {
+            display: none;
+        }
+
+        .result-block .left .desc br {
+            display: none;
+        }
+
+
+        .how h2 {
+            margin-top: 50px;
+        }
+
+        .how-list_title {
+            font-weight: 700;
+        }
+
+        .how-left {
+            width: 146px;
+            height: 722px;
+        }
+
+        .how-list_desc {
+            margin-bottom: 55px;
+        }
+
+        .how .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .how-back {
+            background: url(../img/how-back.jpg) no-repeat center top;
+            display: block;
+            position: initial;
+            width: 600px;
+        }
+
+
+
+        .tariffs {
+            margin-top: 0;
+        }
+
     }
 
-    @media screen and (max-width: 768px) {
-        
-    }
+    @media screen and (max-width: 768px) {}
