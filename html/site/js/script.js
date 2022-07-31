@@ -19,11 +19,11 @@ let popupClose = document.querySelector('.popup-close');
 
 let zIndex = document.querySelector('.habitual');
 
-openPopup.addEventListener('click', () => {
+const popup = () => {
     mobilePopup.classList.add('active');
     mobileMenu.classList.remove('active');
     zIndex.classList.add('none');
-});
+};
 popupClose.addEventListener('click', () => {
     mobilePopup.classList.remove('active');
 });
