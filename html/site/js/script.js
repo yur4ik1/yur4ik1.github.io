@@ -1,3 +1,33 @@
+//  Mobile menu
+
+let burger = document.querySelector('.burger');
+let mobileMenu = document.querySelector('.mobile-menu');
+let closeBtn = document.querySelector('.mobile-menu_close');
+
+burger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+});
+closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
+//  Mobile popup
+
+let openPopup = document.querySelector('.mobile-menu_btn');
+let mobilePopup = document.querySelector('.mobile-popup');
+let popupClose = document.querySelector('.popup-close');
+
+let zIndex = document.querySelector('.habitual');
+
+openPopup.addEventListener('click', () => {
+    mobilePopup.classList.add('active');
+    mobileMenu.classList.remove('active');
+    zIndex.classList.add('none');
+});
+popupClose.addEventListener('click', () => {
+    mobilePopup.classList.remove('active');
+});
+
 //  DropDown
 
 let dropdownHeader = document.querySelectorAll(".faq__dropdown_block_header");

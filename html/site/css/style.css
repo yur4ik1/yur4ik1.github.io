@@ -1074,6 +1074,14 @@ body {
     display: none;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+.mobile-popup {
+    display: none;
+}
+
 @media screen and (max-width: 1570px) {
     .group {
         background-size: 832px;
@@ -1294,6 +1302,191 @@ body {
     }
 
     @media screen and (max-width: 1440px) {
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu {
+            width: 260px;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px 24px;
+        }
+
+        .mobile-menu_close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .mobile-menu li {
+            font-size: 16px;
+            line-height: 15px;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 32px;
+        }
+
+        .mobile-menu_social a:nth-child(1) {
+            margin-right: 13px;
+        }
+
+        .mobile-menu_contact {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .mobile-menu_contact a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #000000;
+            margin-bottom: 9px;
+        }
+
+        .mobile-menu_btn {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 24px 14px 28px;
+            gap: 10px;
+            width: 212px;
+            height: 42px;
+            border: 1px solid #FF4F4F;
+            border-radius: 24px;
+            font-size: 14px;
+            line-height: 13px;
+            text-align: right;
+            letter-spacing: 0.01em;
+            color: #000000;
+        }
+
+        .mobile-popup.active {
+            display: flex;
+        }
+
+        .mobile-popup {
+            background: rgb(25 25 25 / 58%);
+            width: 100%;
+            height: 995px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999999999999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-inner {
+            width: 328px;
+            background: #FFFFFF;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            z-index: 9999999999999999999;
+            position: relative;
+            top: -100px;
+            padding: 0px 32px;
+        }
+
+        .popup-close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 9px;
+            margin-right: 9px;
+        }
+
+        .popup-inner h3 {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 140%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+            margin-top: 54px;
+            margin-bottom: 20px;
+        }
+
+        .popup-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .popup-form p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 13px;
+            color: #76767A;
+            margin-bottom: 8px;
+            text-align: left;
+            margin-top: 16px;
+            position: relative;
+            left: -97px;
+        }
+
+        .popup-form .prev {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            text-align: center;
+            color: #76767A;
+            position: initial;
+            margin-top: 20px;
+            margin-bottom: 21px;
+            width: 279px;
+        }
+        .popup-form .prev a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            text-align: center;
+            color: #76767A;
+            position: initial;
+            text-decoration: underline;
+        }
+
+        .popup-form input {
+            box-sizing: border-box;
+            width: 264px;
+            height: 44px;
+            background: #FFFFFF;
+            border: 1px solid #BFBFC3;
+            border-radius: 8px;
+        }
+
+        .popup-form_btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 30px;
+            gap: 10px;
+            width: 180px;
+            height: 44px;
+            background: linear-gradient(360deg, #FF4F4F 0%, #FF876C 100%);
+            box-shadow: 0px 4px 0px #CC1A1A;
+            border-radius: 50px;
+            margin-top: 22px;
+        }
+
+        .habitual.none {
+            z-index: 0;
+        }
+
+
         .faq-left {
             background-size: 323px;
         }
@@ -1802,13 +1995,15 @@ body {
         .intro-info {
             top: 43%;
         }
+
         .faq-left {
             display: none;
         }
+
         .result-flex {
             justify-content: space-around;
         }
-        
+
     }
 
     @media screen and (max-width: 765px) {
@@ -1816,6 +2011,7 @@ body {
             padding-left: 16px;
             padding-right: 16px;
         }
+
         .footer .footer-flex {
             flex-wrap: wrap;
         }
@@ -2189,16 +2385,19 @@ body {
             font-size: 14px;
             line-height: 140%;
         }
+
         .copyright {
             flex-direction: column;
         }
+
         .copyright p {
-            font-size: 12px!important;
+            font-size: 12px !important;
             font-weight: 400;
             line-height: 140%;
         }
+
         .copyright a {
-            font-size: 12px!important;
+            font-size: 12px !important;
             font-weight: 400;
             line-height: 140%;
             margin-top: 16px;
