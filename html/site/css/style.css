@@ -1375,14 +1375,14 @@ body {
 
         .mobile-popup {
             background: rgb(25 25 25 / 58%);
-            width: 100%;
-            height: 995px;
-            position: absolute;
             top: 0;
             left: 0;
             z-index: 9999999999999;
             justify-content: center;
             align-items: center;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
         }
 
         .popup-inner {
@@ -1443,6 +1443,7 @@ body {
             margin-bottom: 21px;
             width: 279px;
         }
+
         .popup-form .prev a {
             font-weight: 400;
             font-size: 12px;
