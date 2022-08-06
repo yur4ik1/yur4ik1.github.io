@@ -39,6 +39,81 @@ body {
     width: 25px;
 }
 
+.burger-menu {
+    position: fixed;
+    top: -790px;
+    height: 623px;
+    width: 100%;
+    background: #FFFFFF;
+    transition: 0.3s;
+    z-index: 999999999;
+    padding-top: 49px;
+}
+.menu-close {
+    margin-right: 30px;
+}
+.burger-menu.active {
+    top: 0px;
+}
+
+.burger-menu_header {
+    display: flex;
+    justify-content: flex-end;
+}
+.burger-menu-inner {
+    padding: 0px 30px;
+    padding-bottom: 17px;
+}
+.burger-menu-inner .menu li {
+    margin-bottom: 23px;
+}
+
+.burger-menu-inner .menu li a {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.burger-menu_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/bueger-menu.svg) no-repeat center top / cover;
+    padding-top: 25px;
+    padding-bottom: 17px;
+}
+
+.burger-menu_bottom-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 30px;
+    color: #8E57E7;
+    margin-bottom: 22px;
+}
+
+.burger-menu_bottom-desc {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.burger-menu_bottom-btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 14px 19px;
+    display: block;
+    background: #000000;
+    border: 1px solid #000000;
+    border-radius: 0px;
+}
+
 
 .swiper {
     width: 100%;
@@ -1029,6 +1104,7 @@ body {
     .premium-back {
         width: 659px;
     }
+
     .category-list {
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -1070,23 +1146,26 @@ body {
     .wrapper {
         padding: 0px 36px;
     }
+
     .calc .wrapper {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .premium-back {
         width: 570px;
     }
+
     .present-rigth {
         display: none;
     }
 }
 
-@media screen and (max-width: 1027px) { 
+@media screen and (max-width: 1027px) {
     .wrapper {
         padding: 0px 36px;
     }
-   
+
     .premium-back {
         left: -50px;
     }
