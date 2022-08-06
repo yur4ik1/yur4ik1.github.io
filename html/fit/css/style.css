@@ -42,16 +42,17 @@ body {
 .burger-menu {
     position: fixed;
     top: -790px;
-    height: 623px;
     width: 100%;
     background: #FFFFFF;
     transition: 0.3s;
     z-index: 999999999;
     padding-top: 49px;
 }
+
 .menu-close {
     margin-right: 30px;
 }
+
 .burger-menu.active {
     top: 0px;
 }
@@ -60,10 +61,12 @@ body {
     display: flex;
     justify-content: flex-end;
 }
+
 .burger-menu-inner {
     padding: 0px 30px;
     padding-bottom: 17px;
 }
+
 .burger-menu-inner .menu li {
     margin-bottom: 23px;
 }
@@ -1138,6 +1141,16 @@ body {
     .inst .wrapper {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .our-products .wrapper {
+        justify-content: center;
+    }
+
+    .products-back {
+        width: 450px!important;
+        height: 450px!important;
+  
     }
 }
 
