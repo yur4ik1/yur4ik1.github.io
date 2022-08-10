@@ -2355,16 +2355,14 @@ body {
 
 .contract-options li {
     padding-bottom: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
 }
 
 .contract-options li svg {
     margin-top: 5px;
 }
 
-.contract-options li.active>svg .svg-active {
+.contract-options li a.act>svg .svg-active {
     fill: #00A3E1 !important;
 }
 
@@ -2377,6 +2375,9 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contract-head {
@@ -2476,11 +2477,13 @@ body {
     padding-top: 77px;
     padding-bottom: 72px;
 }
+
 .contract-footer .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .contract-footer h2 {
     font-weight: 700;
     font-size: 20px;
@@ -2500,6 +2503,105 @@ body {
     margin-top: 55px;
     display: inline-block;
 }
+
+#tabsWrap .tab {
+    display: none;
+    padding: 2em;
+}
+
+#tabsWrap .tab.act {
+    display: block;
+}
+
+/* wholesale */
+
+.wholesale-intro {
+    background: url(../img/wholesale-intro.jpg) no-repeat center top / cover;
+    width: 100%;
+    padding-top: 74px;
+    padding-bottom: 228px;
+}
+
+.wholesale-intro h1 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.wholesale {
+    padding-top: 0;
+    padding-bottom: 84px;
+}
+
+.wholesale p {
+    margin-top: 30px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.wholesale .contract-head {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.wholesale .contract-content .left {
+    margin-top: 50px;
+}
+
+.wholesale .contract-content .left ul {
+    margin-top: 33px;
+}
+
+.wholesale .contract-content .left ul li {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    color: #000000;
+    list-style: disc !important;
+}
+
+.wholesale .contract-content .left ul li::before {
+    list-style: disc !important;
+}
+
+.wholesale .contract-content .bottom {
+    margin-top: 30px;
+}
+
+.wholesale-footer {
+    background: url(../img/wholesale-footer.jpg) no-repeat center top / cover;
+    width: 100%;
+    padding-top: 82px;
+    padding-bottom: 169px;
+}
+.wholesale-footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wholesale-footer h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.wholesale-footer a {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+    background: #FFFFFF;
+    padding: 8px 19px;
+    margin-top: 47px;
+}
+
 
 
 

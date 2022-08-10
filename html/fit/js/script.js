@@ -57,25 +57,19 @@ if (dropdownHeader2) {
 // Search
 
 let input, search, pr, result, result_arr, locale_HTML, result_store;
-
 locale_HTML = document.body.innerHTML;
-
 function FindOnPage(name, status) {
-
     input = document.getElementById(name).value;
-
     if (input.length < 3 && status == true) {
         alert('Для поиска вы должны ввести три или более символов');
         function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
     }
-
     if (input.length >= 3) {
         function FindOnPageGo() {
             search = '/' + input + '/g';
             pr = document.body.innerHTML;
             result = pr.match(/>(.*?)</g);
             result_arr = [];
-
             for (let i = 0; i < result.length; i++) {
                 result_arr[i] = result[i].replace(eval(search), '<span class="result" style="background-color:yellow;">' + input + '</span>');
             }
@@ -88,8 +82,27 @@ function FindOnPage(name, status) {
             hiddenElement.scrollIntoView({ block: "center", behavior: "smooth" });
         }
     }
-
     function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
     if (status) { FindOnPageBack(); FindOnPageGo(); }
     if (!status) { FindOnPageBack(); }
 }
+
+// Tabs
+
+document.addEventListener('DOMContentLoaded', function(e){ 'use strict';
+    let list = document.querySelectorAll('#tabNav a');
+    list = Array.prototype.slice.call(list, 0);
+    list.forEach(function(el, i, ar) {
+        el.addEventListener('click', function(event){
+            e.preventDefault();
+            let tab = document.querySelector(el.getAttribute('href'));
+
+            document.querySelector('#tabNav .act').classList.remove('act');
+            document.querySelector('#tabsWrap .act').classList.remove('act');
+            
+            el.classList.add('act');
+            tab.classList.add('act');
+
+        })
+    })
+})
