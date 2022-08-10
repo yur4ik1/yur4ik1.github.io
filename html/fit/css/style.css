@@ -2080,7 +2080,7 @@ body {
     flex-direction: column;
 }
 
-.form input {
+.contact-form .form input {
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
@@ -2578,11 +2578,13 @@ span {
     padding-top: 82px;
     padding-bottom: 169px;
 }
+
 .wholesale-footer .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .wholesale-footer h2 {
     font-weight: 700;
     font-size: 32px;
@@ -2682,5 +2684,115 @@ span {
 
     .premium-back {
         left: -50px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    h1 {
+        font-size: 27px !important;
+        line-height: 1.3 !important;
+    }
+
+    h2 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+    .burger-menu-inner .menu li a {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .category-item .category-title {
+        font-size: 20px;
+    }
+
+    .joy-article .article-item {
+        margin-bottom: 35px;
+    }
+
+    .premium-back {
+        left: -125px;
+    }
+
+    .products-back {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .back-1-title,
+    .back-5-title,
+    .back-2-title {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    .back-1-cart {
+        font-size: 20px;
+    }
+
+    .back-2-cart {
+        margin-left: 163px;
+    }
+    .start-item .name {
+        margin-top: 30px;
+    }
+    .marketplaces .wrapper img {
+        margin-bottom: 30px;
+    }
+    .reviews {
+        height: auto;
+    }
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    .premium-back {
+        display: none;
+    }
+
+    .premium-right {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calc-left {
+        width: auto;
+    }
+
+    .calc .wrapper {
+        padding: 0 !important;
+    }
+
+    .calc-rigth {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    .calculator div {
+        justify-content: space-evenly;
+    }
+
+    .calculator input {
+        width: 160px;
+    }
+
+    .calculator select {
+        width: 330px;
+    }
+
+    .calc-left {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
