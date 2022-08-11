@@ -2640,6 +2640,7 @@ span {
 
     .marketplaces .wrapper {
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .inst .wrapper {
@@ -2697,10 +2698,12 @@ span {
         font-size: 24px !important;
         line-height: 1.3 !important;
     }
+
     .burger-menu-inner .menu li a {
         font-size: 18px;
         line-height: 25px;
     }
+
     .category-item .category-title {
         font-size: 20px;
     }
@@ -2732,24 +2735,73 @@ span {
     .back-2-cart {
         margin-left: 163px;
     }
+
     .start-item .name {
         margin-top: 30px;
     }
+
     .marketplaces .wrapper img {
         margin-bottom: 30px;
     }
+
     .reviews {
         height: auto;
     }
+
     .footer-col {
         margin-bottom: 30px;
+    }
+
+    .contacts .title {
+        font-size: 21px;
+        line-height: 29px;
+    }
+
+    .contacts .desc {
+        font-size: 21px;
+        line-height: 29px;
+    }
+
+    .contact-item svg {
+        height: 80px;
+    }
+
+    .contact-form .form input {
+        margin-bottom: 0;
+    }
+    .send-btn {
+        margin-top: 20px;
+        display: block;
+    }
+    .form textarea {
+        margin-top: 20px;
     }
 }
 
 @media screen and (max-width: 780px) {
-    p {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
+    h1 {
+        font-size: 24px !important;
+        line-height: 1.3 !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+    }
+
+    .marketplaces .wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .burger-menu_bottom-title {
+        font-size: 30px;
+        line-height: 5px;
+    }
+
+    .inst img {
+        width: 100px;
+        height: 100px;
     }
 
     .premium-back {
@@ -2795,4 +2847,101 @@ span {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    /* blog */
+
+    .blog-intro .top-post {
+        width: auto;
+    }
+
+    .blog-intro .top-post .read {
+        left: 75%;
+    }
+
+    .blog .cat {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cat-center {
+        margin-top: 128px;
+        margin-bottom: 8px;
+    }
+
+    .blog .cat li {
+        margin-right: 13px;
+        margin-bottom: 7px;
+    }
+
+    .blog .joy-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog .cat li a {
+        font-size: 12px;
+    }
+
+
+    .blog .joy-article .article-item {
+        height: auto;
+        max-width: 330px;
+        width: auto;
+    }
+
+    .blog .joy-article .article-item .article-info .article-desc {
+        height: auto;
+    }
+
+    .joy-article .article-item span {
+        margin-top: 20px;
+    }
+
+    .blog .more-article {
+        margin-top: 40px;
+    }
+
+    .blog .joy-article .article-item .article-info .post-link {
+        font-size: 16px;
+    }
+
+    .joy-article .article-item .article-info .article-title {
+        font-size: 18px;
+    }
+
+    .blog .joy-article .article-item .article-info .article-desc {
+        font-size: 12px;
+    }
+
+    .contacts .contact-item {
+        margin-bottom: 20px;
+    }
+    .contacts .contact-item:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .shop-intro {
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+
+    .footer-col h3 {
+        font-size: 16px;
+    }
 }
+
+@media screen and (max-width: 490px) {
+    .blog-intro .top-post {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 17px;
+    }
+
+    .blog-intro .top-post .read {
+        left: 57%;
+    }
+}
+
+@media screen and (max-width: 360px) {}
