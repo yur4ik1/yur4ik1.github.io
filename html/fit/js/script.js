@@ -1,4 +1,22 @@
-// buger menu
+
+// Scroll header
+
+const header = document.querySelector("header");
+const sale = document.querySelector(".sale");
+const width = window.innerWidth
+
+window.onscroll = () => {
+    let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    if (posTop > 1) {
+        header.classList.add('active');
+        sale.classList.add('remove');
+    } else {
+        header.classList.remove('active');
+        sale.classList.remove('remove');
+    }
+}
+
+// burger menu
 
 const burgerBtn = document.querySelector('.burger');
 const burgerMenu = document.querySelector('.burger-menu');

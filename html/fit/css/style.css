@@ -17,18 +17,36 @@ body {
     line-height: 18px;
     text-align: center;
     color: #000000;
+    transition: 0.3s;
+}
+
+.sale.remove {
+    position: absolute;
+    top: -100px;
+    transition: 0.3s;
 }
 
 .header {
     background: #000;
     height: 93px;
     width: 100%;
+    position: fixed;
+    z-index: 9999999;
+    transition: 0.3s;
+}
+.header.active {
+    top: 0;
+    transition: 0.3s;
 }
 
 .header .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.intro {
+    margin-top: 93px;
 }
 
 .logo {
@@ -892,8 +910,6 @@ body {
     margin-top: 47px;
 }
 
-.start-item {}
-
 .start-item .name {
     font-weight: 700;
     font-size: 20px;
@@ -1113,6 +1129,7 @@ body {
     width: 100%;
     padding-top: 43px;
     padding-bottom: 90px
+    
 }
 
 .stores-intro h1 {
@@ -3314,5 +3331,3 @@ span {
 
     }
 }
-
-@media screen and (max-width: 360px) {}
