@@ -3,6 +3,7 @@
 
 const header = document.querySelector("header");
 const sale = document.querySelector(".sale");
+const body = document.querySelector("body");
 const width = window.innerWidth
 
 window.onscroll = () => {
@@ -10,9 +11,11 @@ window.onscroll = () => {
     if (posTop > 1) {
         header.classList.add('active');
         sale.classList.add('remove');
+        body.classList.add('active');
     } else {
         header.classList.remove('active');
         sale.classList.remove('remove');
+        body.classList.remove('active');
     }
 }
 

@@ -1,8 +1,11 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    padding-top: 133px;
 }
-
+body.active {
+   
+}
 .wrapper {
     max-width: 1126px;
     margin: 0 auto;
@@ -17,13 +20,13 @@ body {
     line-height: 18px;
     text-align: center;
     color: #000000;
-    transition: 0.3s;
+    position: absolute;
+    top: 0;
 }
 
 .sale.remove {
-    position: absolute;
-    top: -100px;
-    transition: 0.3s;
+    display: none;
+    transition: 0.1s;
 }
 
 .header {
@@ -32,11 +35,13 @@ body {
     width: 100%;
     position: fixed;
     z-index: 9999999;
-    transition: 0.3s;
+    transition: 0.1s;
+    top: 43px;
 }
+
 .header.active {
     top: 0;
-    transition: 0.3s;
+   
 }
 
 .header .wrapper {
@@ -45,9 +50,7 @@ body {
     justify-content: space-between;
 }
 
-.intro {
-    margin-top: 93px;
-}
+.intro {}
 
 .logo {
     text-align: center;
@@ -1129,7 +1132,6 @@ body {
     width: 100%;
     padding-top: 43px;
     padding-bottom: 90px
-    
 }
 
 .stores-intro h1 {
@@ -2938,9 +2940,11 @@ span {
         width: 100%;
         height: 100%;
     }
+
     .single-product .swiper-button-next {
         left: 93%;
     }
+
     .product-flex .right {
         width: 100%;
     }
@@ -2949,27 +2953,35 @@ span {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+
     .single-product .swiper-pagination {
         left: 0px !important;
     }
+
     .product-review .title {
         font-size: 16px;
     }
+
     .product-review .review-text {
         font-size: 12px;
     }
+
     .product-services {
         padding: 9px 0px;
     }
+
     .product-services .wrapper div {
         margin-bottom: 20px;
     }
+
     .product-services .wrapper div p {
         margin-top: 0;
     }
+
     .product-services svg {
-       transform: scale(0.6);
+        transform: scale(0.6);
     }
+
     .form textarea {
         margin-top: 20px;
     }
@@ -3290,6 +3302,7 @@ span {
         font-size: 20px;
         line-height: 33px;
     }
+
     .stores-img img {
         height: 65px;
         margin-bottom: 30px;
@@ -3298,12 +3311,15 @@ span {
     .index-calc_head .index-calc_head-desc {
         font-size: 12px;
     }
+
     .present h2 {
-        margin-top:70px;
+        margin-top: 70px;
     }
+
     .premium-item p {
         font-size: 14px;
     }
+
     .start-desc {
         font-size: 14px;
     }
