@@ -374,21 +374,27 @@ body {
 .head-col:nth-child(1) {
     width: 14%;
 }
+
 .head-col:nth-child(2) {
     width: 20%;
 }
+
 .head-col:nth-child(3) {
     width: 16.666667%;
 }
+
 .head-col:nth-child(4) {
     width: 16.666667%;
 }
+
 .head-col:nth-child(5) {
     width: 16.666667%;
 }
+
 .head-col:nth-child(6) {
     width: 16.666667%;
 }
+
 .head-col:nth-child(7) {
     width: 16.666667%;
 }
@@ -432,24 +438,29 @@ body {
 .otzyv-col:nth-child(1) {
     width: 14%;
 }
+
 .otzyv-col:nth-child(2) {
     width: 20%;
 }
+
 .otzyv-col:nth-child(3) {
-    width: 8.333333%;  
+    width: 8.333333%;
 }
+
 .otzyv-col:nth-child(4) {
     width: 16.666667%;
     margin-left: 20px;
     position: relative;
     left: -27px;
 }
+
 .otzyv-col:nth-child(5) {
     width: 16.666667%;
     width: 16.666667%;
     position: relative;
     left: -53px;
 }
+
 .otzyv-col:nth-child(6) {
     width: 8.333333%;
 }
@@ -470,6 +481,7 @@ body {
 .otzyv-col .company-name {
     color: #4b4b4b;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .otzyv-col .amount {
@@ -482,20 +494,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 .otzyv-col.site {
     display: inline-block;
-    font-size: 15px!important;
+    font-size: 15px !important;
     color: #444343;
 }
+
 .otzyv-col.site a {
     display: flex;
     align-items: flex-end;
     text-align: center;
     line-height: 1.7;
 }
+
 .otzyv-col.site a::after {
     content: url('https://finotzyvy.com/wp-content/themes/WhiteLab/whitelab/images/arrow.png');
     position: relative;
@@ -514,6 +528,342 @@ body {
     color: #656565;
     text-align: center;
     line-height: 1.4;
+}
+
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+.pagination .prev {
+    color: #707070;
+    font-size: 19px;
+    margin-right: 20px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    height: 40px;
+}
+
+.pagination .prev::after {
+    content: url(../img/prev.png);
+    position: absolute;
+    top: -2px;
+    left: -32px;
+}
+
+.pagination .next {
+    color: #707070;
+    font-size: 19px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 99;
+    height: 40px;
+
+}
+
+.pagination .next:before {
+    content: url(../img/next.png);
+    position: absolute;
+    top: -2px;
+    right: -34px;
+}
+
+
+.pagination .pag-item {
+
+    height: 37px;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+.pagination .pag-item a {
+    margin-right: 8px;
+    color: #bc3939;
+    position: relative;
+    display: flex;
+    width: 18px;
+    justify-content: center;
+}
+
+.pagination .pag-item.active>a {
+    color: #8d8d8d;
+    border-bottom: 2px solid #8d8d8d;
+}
+
+
+.cat-desc {
+    margin-top: 90px;
+}
+
+.cat-desc .wrapper p {
+    padding-bottom: 26px;
+    font-size: 14px;
+    color: #53666d;
+    line-height: 25px;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+/* Single */
+
+.intro-single {
+    background: url(https://finotzyvy.com/wp-content/uploads/2018/04/fon.jpg) no-repeat center top / cover;
+    height: 250px;
+    position: relative;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.intro-single .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.intro-single_left h1 {
+    font-family: 'Poppins';
+    font-size: 28px;
+    line-height: 46px;
+    color: #fff;
+    padding: 0;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.intro-single_left .breadcrumb {
+    display: flex;
+}
+
+.intro-single_left .breadcrumb a {
+    color: #f25f5c;
+}
+
+
+.intro-single_right {
+    display: flex;
+    margin-right: 120px;
+}
+
+.intro-single_right .site-link {
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: 600;
+    background: #70c1b3;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    height: 41px;
+    line-height: 41px;
+    display: inline-block;
+    padding: 0 23px;
+    white-space: nowrap;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.intro-single_right .add-review {
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #fff !important;
+    font-weight: 600;
+    background: #70c1b3;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    height: 41px;
+    line-height: 41px;
+    display: inline-block;
+    padding: 0 23px;
+    white-space: nowrap;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #ad3441;
+}
+
+
+.listing {
+    position: relative;
+    z-index: 2;
+    margin-top: -99px;
+}
+
+.listing .wrapper {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 3fr 1fr;
+}
+
+.listing-left {
+    background: #fff;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    padding-bottom: 30px;
+}
+
+.banner {}
+
+.rating {
+    margin-top: 26px;
+    margin-bottom: 20px;
+}
+
+.listing-img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.listing-content_text h2 {
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 400;
+    color: #555;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.4;
+
+}
+
+.listing-content_text h3 {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    line-height: 1.4;
+}
+
+.listing-content_text p {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #53666d;
+    line-height: 25px;
+    padding-bottom: 25px;
+}
+
+.listing-content_text ul li {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #53666d;
+    line-height: 25px;
+    padding-bottom: 25px;
+    list-style: circle;
+    margin-left: 20px;
+    padding: 0;
+}
+
+
+.listing-left-content {
+    padding: 0 31px;
+}
+
+
+.reviews-section {
+    background: #f1f5f8;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    padding: 0 31px;
+}
+
+.reviews-list {}
+
+.rev-title {
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 400;
+    color: #53666d;
+    padding: 30px 0;
+}
+
+.reviews-list {}
+
+.review-item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 20px;
+}
+
+.author-img img {
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 20px;
+    float: left;
+}
+
+.rev-header {
+    display: flex;
+
+}
+
+.rev-header h3 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    color: #53666d;
+}
+
+.rev-header .star {
+    margin-left: 20px;
+}
+
+.author-info {
+    margin-top: 8px;
+    display: flex;
+}
+
+.author-info .name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #50514f;
+    font-style: normal;
+}
+
+.author-info .date {
+    font-family: 'Open Sans';
+    font-size: 13px;
+    color: #909fa5;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+.rev-text {}
+
+.rev-text p {
+    padding-bottom: 26px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #53666d;
+    line-height: 25px;
+    margin-top: 18px;
+    margin-left: 73px;
+}
+
+.rev-text  .fidback {
+    color: #2698d7;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 20px;
+    font-style: inherit;
+    font-weight: 400;
+    margin-left: 71px;
+    margin-top: 10px;
+    display: block;
 }
 
 
