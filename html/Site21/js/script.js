@@ -1,9 +1,4 @@
-console.log('%cDeveloped by Djigit', 'color: #c434c4; font-size: 50px ');
 
-console.log(
-  '%cTG: @Djigit34',
-  'color: #c434c4; background: #eee; font-size: 30px '
-);
 
 
 // 
