@@ -5,6 +5,7 @@ body {
     font-style: normal;
     color: #000;
     background: #FBF9FF;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -67,6 +68,7 @@ body {
 
 .intro {
     padding-bottom: 195px;
+    overflow: hidden;
 }
 
 .intro .wrapper {
@@ -178,8 +180,14 @@ body {
 }
 
 
+
 .services {
     margin-top: 70px;
+    overflow: hidden;
+}
+
+.services .wrapper {
+    position: relative;
 }
 
 .services-item {
@@ -232,8 +240,20 @@ body {
 }
 
 
+.services__back-2 {
+    background: url(../img/process__back-2.png) no-repeat right top / cover;
+    width: 517px;
+    height: 700px;
+    position: absolute;
+    top: 421px;
+    right: -148px;
+    filter: blur(20px);
+}
+
+
 .works {
     padding-top: 104px;
+    overflow: hidden;
 }
 
 .works .wrapper {
@@ -439,6 +459,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    position: relative;
 }
 
 .started-title {
@@ -476,6 +497,16 @@ body {
     background: #D918FF;
     border-radius: 22px;
     margin-right: 40px;
+}
+
+.started-back {
+    background: url(../img/started-back.png) no-repeat left top / cover;
+    width: 455px;
+    height: 770px;
+    position: absolute;
+    left: -127px;
+    top: -353px;
+    filter: blur(20px);
 }
 
 
@@ -526,4 +557,46 @@ body {
     background: #D918FF;
     border-radius: 31px;
     margin-right: 18px;
+}
+
+@media screen and (max-width: 1320px) {
+    .wrapper {
+        max-width: 1160px;
+    }
+
+    .services__img {
+        width: 500px;
+        height: 435px;
+    }
+
+    .works__back {
+        display: none;
+    }
+    .works__items .wrapper {
+        justify-content: space-around;
+    }
+    .work__item {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .wrapper {
+        max-width: 1024px;
+    }
+    .intro__back {
+        background-size: 360px;
+    }
+    .review-item {
+        max-width: 470px;
+    }
+    .header__menu li {
+        margin-right: 26px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .wrapper {
+        max-width: 960px;
+    }
 }
