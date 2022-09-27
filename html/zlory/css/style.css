@@ -559,6 +559,11 @@ body {
     margin-right: 18px;
 }
 
+.burger,
+.mobile__menu {
+    display: none;
+}
+
 @media screen and (max-width: 1320px) {
     .wrapper {
         max-width: 1160px;
@@ -572,9 +577,11 @@ body {
     .works__back {
         display: none;
     }
+
     .works__items .wrapper {
         justify-content: space-around;
     }
+
     .work__item {
         margin-bottom: 40px;
     }
@@ -584,12 +591,15 @@ body {
     .wrapper {
         max-width: 1024px;
     }
+
     .intro__back {
         background-size: 360px;
     }
+
     .review-item {
         max-width: 470px;
     }
+
     .header__menu li {
         margin-right: 26px;
     }
@@ -599,4 +609,99 @@ body {
     .wrapper {
         max-width: 960px;
     }
+
+    .header__menu,
+    .header__menu-wrapper {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .mobile__menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        -webkit-transform: translate(150%);
+        -ms-transform: translate(150%);
+        transform: translate(150%);
+        height: 100%;
+        max-width: 694px;
+        width: 100%;
+        background-color: #D918FF;
+        padding: 40px;
+        z-index: 999999;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        display: block;
+    }
+
+    .mobile__menu.active {
+        -webkit-transform: translate(0%);
+        -ms-transform: translate(0%);
+        transform: translate(0%);
+    }
+
+    .header__menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__menu-item {
+        margin-bottom: 20px;
+    }
+
+    .header__menu-item a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        color: #000000;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .intro__back {
+        background-size: 300px;
+    }
+
+    .services__img {
+        width: 390px;
+        height: 260px;
+        margin-left: 40px;
+    }
+
+    .works__items .wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-item {
+        margin-bottom: 20px;
+    }
+    .started__nav {
+        justify-content: center;
+    }
+    .started__nav-btn {
+        margin-bottom: 20px;
+    }
+    .started__nav-btn:nth-child(5) {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 830px) { 
+
 }
