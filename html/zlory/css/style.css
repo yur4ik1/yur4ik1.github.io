@@ -257,7 +257,7 @@ body {
 
 .works {
     padding-top: 104px;
-    overflow: hidden;
+   
 }
 
 .works .wrapper {
@@ -574,6 +574,12 @@ body {
     display: none;
 }
 
+
+@media screen and (max-width: 1560px) {
+    .works {
+        overflow: hidden;
+    }
+}
 @media screen and (max-width: 1320px) {
     .wrapper {
         max-width: 1160px;
