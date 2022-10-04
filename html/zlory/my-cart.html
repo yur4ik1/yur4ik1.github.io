@@ -135,7 +135,54 @@
 
     <section class="mycart">
         <div class="wrapper">
+            <a class="mycart_back" href="#">
+                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 9C10.9342 9 4.5207 9 1.72128 9M1.72128 9L9.82299 1M1.72128 9L9.82299 17M1.72128 9C0.202274 9 1.5234 9 1.72128 9Z"
+                        stroke="#4E4E60" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                Back
+            </a>
             <h1>My cart</h1>
+
+            <div class="mycart__mobile">
+                <div class="mycart__mobile-header">
+                    <p>Name</p>
+                    <p>Price</p>
+                </div>
+                <div class="mycart__mobile-cart">
+                    <div class="mycart__mobile-cart-info">
+                        <a href="#" class="mycart__mobile-close">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="-0.5" x2="19.4088" y2="-0.5"
+                                    transform="matrix(0.721324 0.692598 -0.721324 0.692598 0 1)" stroke="#4E4E60" />
+                                <line y1="-0.5" x2="19.3754" y2="-0.5"
+                                    transform="matrix(-0.6913 0.722567 -0.749953 -0.661491 13.3945 0)"
+                                    stroke="#4E4E60" />
+                            </svg>
+                        </a>
+                        <img src="./img/cart-mob-nike.jpg" alt="">
+                        <div class="mycart__mobile-cart-package">
+                            <p class="title">Package: </p>
+                            <p class="desc">500 instagram followers</p>
+                        </div>
+                    </div>
+                    <div class="mycart__mobile-cart-price">
+                        <p>5.99$</p>
+                    </div>
+                </div>
+                <div class="mycart__mobile-total">
+                    <p class="title">Total:</p>
+                    <p class="items">1 items</p>
+                    <p class="price">5.99$</p>
+                    <div class="mycart__mobile-total-center">
+                        <a class="mycart__mobile-total-btn" href="#">Order</a>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="back-cart"></div>
             <div class="cart__header">
                 <a class="cart__header-btn" href="#">Name</a>

@@ -216,6 +216,10 @@
             <div class="cart">
                 <p class="cart__price">5,49$</p>
                 <a class="add_cart" href="#">Buy Now</a>
+                <div class="cart__price-mobile">
+                    <p class="cart__price">5,49$</p>
+                    <a class="add_cart" href="#">Buy Now</a>
+                </div>
                 <p class="cart_title">Are You Ready To Promote Your TikTok With Comments?
                 </p>
                 <p class="cart-desc">
@@ -386,6 +390,106 @@
                 <p class="inst__folowers-desc">The pleasure of customers is our main priority. And we take care of each
                     person who decided to promote a TikTok account via GeRenis. Here is what they say
                 </p>
+            </div>
+
+            <div class="reviews__sviper-mobile">
+                <div class="views__review-item">
+                    <div class="swiper viewsReviewsMoble">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="review__header">
+                                    <div class="review__info">
+                                        <h4 class="review__author">James</h4>
+                                        <p class="reviews__gmail">j*m*o*m*1*9*@gmail.com</p>
+                                    </div>
+                                    <div class="review__rating">
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star"></a>
+
+                                    </div>
+                                </div>
+                                <div class="views__review-text">
+
+                                    <p>
+                                        TikTok is the essential part of my web business!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="review__header">
+                                    <div class="review__info">
+                                        <h4 class="review__author">James</h4>
+                                        <p class="reviews__gmail">j*m*o*m*1*9*@gmail.com</p>
+                                    </div>
+                                    <div class="review__rating">
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star"></a>
+
+                                    </div>
+                                </div>
+                                <div class="views__review-text">
+
+                                    <p>
+                                        TikTok is the essential part of my web business!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="review__header">
+                                    <div class="review__info">
+                                        <h4 class="review__author">Rachel</h4>
+                                        <p class="reviews__gmail">r*c*e*l*s*t*1*0*@yahoo.com</p>
+                                    </div>
+                                    <div class="review__rating">
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star active"></a>
+                                        <a href="#" class="star"></a>
+
+                                    </div>
+                                </div>
+                                <div class="views__review-text">
+
+                                    <p>
+                                        I cannot express how thankful I am for the fast and high-quality comments
+                                        here. My video was recommended the day after I bought them, and now I have
+                                        more than 10k followers. And it is only a start!
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper1-button-next">
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.8"
+                                d="M14.752 22.096L12.192 19.536L20.384 10.576L12.64 3.024L15.136 0.4L24.864 9.808V11.28L14.752 22.096ZM3.168 22.096L0.608 19.536L8.8 10.576L1.056 3.024L3.552 0.4L13.216 9.808V11.28L3.168 22.096Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                    <div class="swiper1-button-prev">
+                        <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.8"
+                                d="M10.4 22.096L0.288 11.28V9.808L10.016 0.4L12.512 3.024L4.768 10.576L12.96 19.536L10.4 22.096ZM21.984 22.096L11.936 11.28V9.808L21.6 0.4L24.096 3.024L16.352 10.576L24.544 19.536L21.984 22.096Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                
+
+
             </div>
 
             <div class="views__reviews">
@@ -594,7 +698,7 @@
 
     <footer class="footer">
         <div class="wrapper">
-            <a class="footer__logo" href="#"><img src="./img/logo-white.svg" alt=""></a>
+            <a class="footer__logo" href="#"><img src="./img/logo.svg" alt=""></a>
             <div class="footer__nav">
                 <ul class="footer__menu-1">
                     <li class="footer__menu-item">
@@ -659,6 +763,14 @@
             navigation: {
                 nextEl: ".swiper3-button-next",
                 prevEl: ".swiper3-button-prev",
+            },
+        });
+
+        var swiper = new Swiper(".viewsReviewsMoble", {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper1-button-next",
+                prevEl: ".swiper1-button-prev",
             },
         });
     </script>
