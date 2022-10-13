@@ -22,3 +22,28 @@ if (dropdownHeader) {
         });
     }
 }
+
+
+let dropdownHeader2 = document.querySelectorAll(".faq__dropdown_block_header");
+let dropdownMain2 = document.querySelectorAll(".faq__dropdown_block_main");
+
+if (dropdownHeader2) {
+    for (let i = 0; i < dropdownHeader2.length; i++) {
+        dropdownHeader2[i].addEventListener('click', () => {
+            if (dropdownHeader2[i].classList.contains("faq__dropdown_block_header-active")) {
+                dropdownHeader2[i].classList.remove("faq__dropdown_block_header-active");
+                dropdownMain2[i].classList.remove("faq__dropdown_block_main-active");
+            } else {
+                dropdownHeader2[i].classList.add("faq__dropdown_block_header-active");
+                dropdownMain2[i].classList.add("faq__dropdown_block_main-active");
+                for (let b = 0; b < dropdownHeader2.length; b++) {
+                    if (b != i) {
+                        dropdownHeader2[b].classList.remove("faq__dropdown_block_header-active");
+                        dropdownMain2[b].classList.remove("faq__dropdown_block_main-active");
+                    }
+                }
+            }
+        });
+    }
+}
+
