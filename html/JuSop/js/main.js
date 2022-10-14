@@ -3,32 +3,23 @@ function forcedOriginalScale(wrapperId) {
     var App = document.getElementById(wrapperId);
     App.style.zoom = 1 / devicePixelRatio;
 }
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-        forcedOriginalScale('wrapper');
-    }
-);
 
+zoom = () => {
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            forcedOriginalScale('wrapper');
+        }
+    );
+}
 
 const width = window.innerWidth
 
-window.onscroll = () => {
-    
-    if (width > 1500) {
-        function forcedOriginalScale(wrapperId) {
-            var App = document.getElementById(wrapperId);
-            App.style.zoom = 1 / devicePixelRatio;
-        }
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-                forcedOriginalScale('wrapper');
-            }
-        );
-    }
-
+if (width > 1500) {
+    zoom();
+    console.log('>1500')
 }
+
 
 
 
