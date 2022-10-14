@@ -1,4 +1,40 @@
 
+function forcedOriginalScale(wrapperId) {
+    var App = document.getElementById(wrapperId);
+    App.style.zoom = 1 / devicePixelRatio;
+}
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+        forcedOriginalScale('wrapper');
+    }
+);
+
+
+const width = window.innerWidth
+
+window.onscroll = () => {
+    
+    if (width > 1500) {
+        function forcedOriginalScale(wrapperId) {
+            var App = document.getElementById(wrapperId);
+            App.style.zoom = 1 / devicePixelRatio;
+        }
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+                forcedOriginalScale('wrapper');
+            }
+        );
+    }
+
+}
+
+
+
+
+
+
 
 let dropdownHeader = document.querySelectorAll(".buy__dropdown_block_header");
 let dropdownMain = document.querySelectorAll(".buy__dropdown_block_main");
