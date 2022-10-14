@@ -1,5 +1,24 @@
 
+function forcedOriginalScale(wrapperId) {
+    var App = document.getElementById(wrapperId);
+    App.style.zoom = 1 / devicePixelRatio;
+}
 
+zoom = () => {
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            forcedOriginalScale('wrapper');
+        }
+    );
+}
+
+const width = window.innerWidth
+
+if (width > 1500) {
+    zoom();
+    console.log('>1500')
+}
 
 
 let dropdownHeader = document.querySelectorAll(".buy__dropdown_block_header");
