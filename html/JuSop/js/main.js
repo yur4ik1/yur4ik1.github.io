@@ -21,12 +21,6 @@ if (width > 1500) {
 }
 
 
-
-
-
-
-
-
 let dropdownHeader = document.querySelectorAll(".buy__dropdown_block_header");
 let dropdownMain = document.querySelectorAll(".buy__dropdown_block_main");
 
