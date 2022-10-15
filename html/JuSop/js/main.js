@@ -1,4 +1,6 @@
 
+//  Zoom
+
 function forcedOriginalScale(wrapperId) {
     var App = document.getElementById(wrapperId);
     App.style.zoom = 1 / devicePixelRatio;
@@ -20,6 +22,24 @@ if (width > 1000) {
     console.log('>1500')
 }
 
+//  Burger menu
+
+let burger = document.querySelector('.sidebar__right-burger');
+let burgerClose = document.querySelector('.burger__close')
+let mobileMenu = document.querySelector('.mobile__menu');
+let header = document.querySelector('.header');
+
+burger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    header.classList.add('active');
+});
+burgerClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    setTimeout(header.classList.remove('active'), 2000);
+});
+
+
+//  faq
 
 let dropdownHeader = document.querySelectorAll(".buy__dropdown_block_header");
 let dropdownMain = document.querySelectorAll(".buy__dropdown_block_main");
