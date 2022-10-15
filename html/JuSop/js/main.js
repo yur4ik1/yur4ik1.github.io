@@ -15,7 +15,7 @@ zoom = () => {
 
 const width = window.innerWidth
 
-if (width > 1500) {
+if (width > 1000) {
     zoom();
     console.log('>1500')
 }
