@@ -2345,6 +2345,13 @@ body {
     }
 }
 
+.implementation__list-desc.desctop {
+    display: none;
+}
+
+.intro__question-mob {
+    display: none;
+}
 
 
 @media screen and (max-width: 1500px) {
@@ -2449,109 +2456,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1190px) {
-    h2 {
-        font-size: 37px !important;
-    }
 
-    .container {
-        max-width: 100% !important;
-        padding: 0 30px;
-        padding-right: 100px;
-    }
-
-    .intro__inst-bg {
-        right: 153px;
-        width: 150px;
-        height: 219px;
-        top: 210px;
-    }
-
-    .sidebar__right {
-        width: 90px;
-    }
-
-    .footer .container {
-        max-width: 100% !important;
-    }
-
-    .header__menu-link {
-        font-size: 16px;
-    }
-
-    .header__menu {
-        width: 750px;
-    }
-
-    .intro__stone-right {
-        width: 202.38px;
-    }
-
-    .intro__title {
-        font-size: 40px;
-    }
-
-    .intro__desc {
-        font-size: 18px;
-    }
-
-    .intro__btns {
-        width: 750px;
-    }
-
-    .intro__btns-btn {
-        font-size: 13px;
-        width: 170px;
-        height: 60px;
-    }
-
-    .working__title {
-        font-size: 38px;
-    }
-
-    .working__info,
-    .implementation__list-desc,
-    .working__text,
-    .options__desc,
-    .stages__desc,
-    .implementation__desc,
-    .reviews__content-text {
-        font-size: 20px;
-        line-height: 37px;
-    }
-
-    .reviews__start-btn {
-        width: 530px;
-        height: 90px;
-        font-size: 26px;
-    }
-
-    .stages img {
-        height: 370px;
-    }
-
-    .options__form-right {
-        width: 500px;
-        height: 469px;
-    }
-
-    .options__form-input {
-        width: 420px;
-    }
-
-    .footer__menu-link {
-        font-size: 16px;
-    }
-
-    .footer__copyright {
-        font-size: 13px;
-    }
-
-    .intro__question svg {
-        width: 45px;
-        height: 45px;
-    }
-}
 
 @media screen and (max-width: 1025px) {
     .intro__title {
@@ -2589,7 +2494,7 @@ body {
     }
 
     .sidebar__right-burger {
-        margin-top: 44px;
+        margin-top: 30px;
     }
 
     .header .container {
@@ -2620,11 +2525,15 @@ body {
     .intro__btns {
         width: auto;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+       
     }
 
     .intro__btns-btn {
         margin-bottom: 7px;
+    }
+
+    .intro__btns {
+        max-width: 350px;
     }
 }
 
@@ -2703,7 +2612,7 @@ body {
     }
 
     .intro__desc {
-        max-width: 70%;
+        max-width: 58%;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
@@ -2718,15 +2627,14 @@ body {
         width: 74px;
         height: 109px;
         margin-right: 53px;
-        top: 66px;
+        top: 80px;
         right: 0;
         position: absolute;
     }
 
     .intro__btns {
         width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-top: 43px;
     }
 
@@ -2738,6 +2646,7 @@ body {
         font-size: 10px;
         line-height: 14px;
         margin-bottom: 7px;
+        margin-left: 20px;
     }
 
     .intro__question {
@@ -2858,7 +2767,7 @@ body {
 
     .options__form-img {
         width: 116px;
-        height: 116px;
+        height: auto;
     }
 
     .options__form-desc {
@@ -2869,9 +2778,33 @@ body {
         margin-top: 2px;
     }
 
+    .options__form-wrapper {
+        align-items: center;
+    }
+
+    .intro {
+        padding-bottom: 28px;
+    }
+
+    .intro__left {
+        position: relative;
+    }
+
+    .intro__question-mob {
+        display: block;
+        position: absolute;
+        left: 83%;
+        bottom: 20px;
+    }
+
+    .intro__question-mob svg {
+        width: 29px;
+        height: 29px;
+    }
 
     .stages {
         padding-top: 51px;
+        padding-bottom: 31px;
     }
 
     .stages .container {
@@ -2888,5 +2821,216 @@ body {
         letter-spacing: 0.01em;
     }
 
+    .stages img {
+        width: 172.3px;
+        height: 141px;
+        margin: 0 auto;
+        margin-top: 28px;
+    }
 
+    .stages__img-desc {
+        font-size: 7px;
+        line-height: 10px;
+        letter-spacing: 0.17em;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+    .stages__stages-item:nth-child(2) {
+        margin-top: 38px;
+    }
+
+    .implementation__info,
+    .implementation__list-item {
+        margin-left: 0;
+    }
+
+    .implementation__title {
+        margin-bottom: 20px;
+        text-align: center;
+        max-width: 216px;
+    }
+
+    .implementation__desc {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left: 32px;
+    }
+
+    .implementation__list-title {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 4px;
+    }
+
+    .implementation__title::after {
+        width: 123px;
+        left: 117px;
+    }
+
+    .implementation__list-desc {
+        font-size: 12px;
+        line-height: 163.4%;
+        margin-left: 0;
+        letter-spacing: 0.01em;
+    }
+
+    .implementation__list-item:nth-child(2)::before {
+        content: url(../images/likes-m.png);
+        width: 77px;
+        height: 98px;
+        margin-right: 125px;
+        position: relative;
+        top: 20px;
+    }
+
+    .implementation__list-desc.mobile {
+        display: none;
+    }
+
+    .implementation__list-desc.desctop {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .implementation__list {
+        padding-bottom: 22px;
+        padding-top: 19px;
+    }
+
+
+    .reviews {
+        padding-bottom: 50px;
+    }
+
+    .reviews__title {
+        margin-bottom: 42px;
+    }
+
+    .reviews__list {
+        flex-direction: column;
+    }
+
+    .reviews__author-img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .reviews__author-name {
+        font-size: 9px;
+        line-height: 160.9%;
+        margin-top: 7px;
+        margin-left: 3px;
+    }
+
+    .reviews__content-text {
+        font-size: 12px;
+        line-height: 160.9%;
+        order: 2;
+    }
+
+    .reviews__content-star {
+        width: 13px;
+        height: 13px;
+    }
+
+    .reviews__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reviews__content-rating {
+        order: 1;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .reviews__list-item {
+        margin-bottom: 18px;
+    }
+
+    .reviews__start {
+        margin-top: 43px;
+    }
+
+    .reviews__start-btn {
+        width: 268px;
+        height: 65px;
+        font-size: 17px;
+        line-height: 23px;
+        text-align: center;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__menu-item {
+        margin-bottom: 5px;
+    }
+
+    .footer__menu-link {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .footer__btns-btn {
+        font-size: 5px;
+        line-height: 7px;
+        padding: 6px 11px;
+        height: 19px;
+    }
+
+    .footer__copyright {
+        font-size: 5px;
+        line-height: 7px;
+    }
+
+    .footer__wrapper {
+        position: relative;
+    }
+
+    .footer__pay img {
+        width: 57px;
+    }
+
+    .footer__col:nth-child(3) {
+        display: none;
+    }
+
+    .footer__col:nth-child(1) {
+        display: none;
+    }
+
+    .footer__col:nth-child(5) {
+        position: absolute;
+        right: 0;
+    }
+
+    .footer__col:nth-child(6) {
+        position: absolute;
+        top: 116px;
+    }
+
+    .footer .container {
+        padding-right: 50px;
+    }
+
+    .footer {
+        padding-bottom: 81px;
+    }
+
+    .footer__copyright {
+        position: relative;
+        margin-top: 9px;
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width: 405px) {
+    .intro__question-mob {
+        display: none;
+    }
 }
