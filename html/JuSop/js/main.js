@@ -88,3 +88,16 @@ if (dropdownHeader2) {
     }
 }
 
+
+// Popup
+
+const popupOpen = document.querySelector('#popup-open');
+const popup = document.querySelector('.popup');
+const popupClose = document.querySelector('.popup-close');
+
+popupOpen.addEventListener('click', () => {
+    popup.classList.add('active');
+});
+popupClose.addEventListener('click', () => {
+    popup.classList.remove('active');
+});

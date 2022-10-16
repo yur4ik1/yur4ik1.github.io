@@ -115,7 +115,7 @@
 
         <main class="main">
             <section class="cart">
-                
+
                 <div class="cart__header-wrapper">
                     <a class="cart__back" href="#">Back</a>
                     <div class="cart__center">
@@ -149,7 +149,7 @@
                                     <p class="cart__total-items">1 items</p>
                                     <p class="cart__total-price">3.99$</p>
                                 </div>
-                                <a class="cart__total-order" href="#">Order</a>
+                                <a id="popup-open" class="cart__total-order" href="#">Order</a>
                             </div>
                         </div>
                     </div>
@@ -224,6 +224,45 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup ">
+            <div class="popup-inner">
+                <a class="popup-close" href="#">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="26" cy="25.7326" rx="26" ry="25.7326" fill="#99006E" />
+                        <line x1="15.3536" y1="13.6464" x2="36.3536" y2="34.6464" stroke="#FFCCF1" />
+                        <line x1="36.3536" y1="14.3536" x2="15.3536" y2="35.3536" stroke="#FFCCF1" />
+                    </svg>
+                </a>
+                <h2>Get Started</h2>
+                <div class="popup__content">
+                    <form class="popup__form" action="#">
+                        <input class="popup__form-input" type="text" placeholder="Your name instagram">
+                        <button class="popup__form-btn">Select account</button>
+                    </form>
+                    <div class="popup__reviews">
+                        <img src="./images/p-rev.jpg" alt="">
+                        <div>
+                            <div class="popup__reviews-info">
+                                <p class="popup__reviews-name">Andry</p>
+                                <div class="popup__reviews-rating">
+                                    <span class="popup__reviews-star"></span>
+                                    <span class="popup__reviews-star"></span>
+                                    <span class="popup__reviews-star"></span>
+                                    <span class="popup__reviews-star"></span>
+                                    <span class="popup__reviews-star"></span>
+                                </div>
+                            </div>
+                            <div class="popup__reviews-text">
+                                It's great! I have been using the service for the last few months and I am loving the
+                                results. My followers have increased and I have been noticing organic growth on my
+                                profiles as well. Amazing!!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/main.min.js"></script>
