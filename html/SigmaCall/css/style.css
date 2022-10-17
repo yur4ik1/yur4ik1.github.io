@@ -46,6 +46,11 @@ body {
     line-height: 27px;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.header__menu-item a:hover {
+    color: #4CD8F9;
 }
 
 .intro__content {
@@ -136,6 +141,11 @@ body {
     color: #FFFFFF;
     padding: 25px 72px;
     margin-right: 58px;
+    transition: 0.3s;
+}
+
+.intro__content-download:hover {
+    background: #00AFD8;
 }
 
 .intro__content-faqs {
@@ -144,6 +154,11 @@ body {
     line-height: 27px;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: 0.3s;
+}
+
+.intro__content-faqs:hover {
+    color: #4CD8F9;
 }
 
 .inrto__right-back {
@@ -324,6 +339,15 @@ body {
     padding-right: 47px;
     max-width: 467px;
     margin-bottom: 33px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.benefits-item:hover {
+    background: #4CD8F9;
+    box-shadow: inset 0px 4px 42px rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(22.5px);
+            backdrop-filter: blur(22.5px);
 }
 
 .benefits-item h3 {
@@ -351,6 +375,7 @@ body {
     height: 883px;
     z-index: 9999999;
 }
+
 .stages .wrapper {
     position: relative;
 }
@@ -381,6 +406,7 @@ body {
 }
 
 .stages-item {
+    transition: 0.3s;
     position: relative;
 }
 
@@ -415,6 +441,12 @@ body {
     position: absolute;
     top: -70px;
     left: 54px;
+    transition: 0.3s;
+}
+
+.stages-item:hover>.stages-stage {
+    z-index: 999999999;
+    transition: 0.3s;
 }
 
 .stages-item h3 {
@@ -448,6 +480,11 @@ body {
     line-height: 137.52%;
     color: #FFFFFF;
     display: block;
+    transition: 0.3s;
+}
+
+.stages-item a:hover {
+    background: #00AFD8;
 }
 
 .replenishment {
@@ -961,6 +998,12 @@ body {
     line-height: 27px;
     color: #FFFFFF;
     margin-top: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact-email:hover {
+    color: #4CD8F9;
 }
 
 .footer {
@@ -1002,7 +1045,27 @@ body {
 
 .app-list .app {
     margin-bottom: 20px;
+    transition: 0.3s;
 }
+
+.app-list .app.google-store {
+    background: url(../img/app-1.svg);
+    width: 188px;
+    height: 60px;
+}
+
+.app-list .app.google-store:hover {
+    background: url(../img/app-1-hover.svg);
+    width: 188px;
+    height: 60px;
+}
+
+.app-list .app.app-store {
+    background: url(../img/app-2.svg);
+    width: 188px;
+    height: 60px;
+}
+
 
 .footer-form {
     display: flex;
@@ -1099,9 +1162,16 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-    background: #4CD8F9;
+    background: transparent;
     border-radius: 4px;
     margin-right: 20px;
+    transition: 0.3s;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.custom-checkbox+label:hover::before {
+    background: #4CD8F9;
 }
 
 .custom-checkbox:checked+label::before {

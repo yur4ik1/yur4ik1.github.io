@@ -1,6 +1,7 @@
 
 //  Zoom
 
+/*
 function forcedOriginalScale(wrapperId) {
     var App = document.getElementById(wrapperId);
     App.style.zoom = 1 / devicePixelRatio;
@@ -21,6 +22,8 @@ if (width > 1000) {
     zoom();
     console.log('>1500')
 }
+
+*/
 
 // Tabs
 
