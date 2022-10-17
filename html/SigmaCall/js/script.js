@@ -1,7 +1,6 @@
 
 //  Zoom
 
-
 function forcedOriginalScale(wrapperId) {
     var App = document.getElementById(wrapperId);
     App.style.zoom = 1 / devicePixelRatio;

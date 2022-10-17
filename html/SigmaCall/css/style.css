@@ -262,6 +262,20 @@ body {
     padding-top: 280px;
 }
 
+.benefits .wrapper {
+    position: relative;
+    z-index: 999999999999;
+}
+
+.benefits-back {
+    background: url(../img/benefits-back.svg) no-repeat;
+    width: 215px;
+    height: 215px;
+    position: absolute;
+    top: 184px;
+    right: -56px;
+}
+
 .benefits .benefits-header {
     display: flex;
     flex-direction: column;
@@ -275,7 +289,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
+}
+
+.benefits-title-svg {
+    margin-bottom: 17px;
 }
 
 .benefits-desc {
@@ -325,8 +343,22 @@ body {
 }
 
 .stages {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 240px;
+    background: url(../img/stages-bg.png) no-repeat center top / cover;
+    width: 100%;
+    position: relative;
+    bottom: 57px;
+    height: 883px;
+    z-index: 9999999;
+}
+.stages .wrapper {
+    position: relative;
+}
+
+.stages__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .stages-title {
@@ -336,7 +368,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 140px;
+    margin-bottom: 5px;
+}
+
+.stages-title-svg {
+    margin-bottom: 145px;
 }
 
 .stages-list {
@@ -414,6 +450,18 @@ body {
     display: block;
 }
 
+.replenishment {
+    padding-top: 245px;
+    position: relative;
+}
+
+.replenishment-bag {
+    background: url(../img/replenishment-back.png) no-repeat center top / cover;
+    height: 1439px;
+    width: 100%;
+    position: absolute;
+    bottom: -380px;
+}
 
 .replenishment__first {
     width: 1438px;
@@ -599,6 +647,25 @@ body {
 
 .reviews {
     padding-top: 225px;
+    position: relative;
+}
+
+.reviews .wrapper {
+    position: relative;
+}
+
+.reviews-bg {
+    background: url(../img/rev-back.png) no-repeat center top / cover;
+    height: 1756px;
+    width: 100%;
+    position: absolute;
+    top: 395px;
+}
+
+.reviews-bg-w {
+    position: absolute;
+    top: -98px;
+    left: 100px;
 }
 
 .reviews h2 {
