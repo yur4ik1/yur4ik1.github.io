@@ -77,9 +77,11 @@ body {
         background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
     }
 }
+
 .intro .container {
     position: relative;
 }
+
 .intro {
     background: url(../img/intro-bg.webp) no-repeat center top / cover;
     width: 100%;
@@ -89,13 +91,14 @@ body {
         position: relative;
         z-index: 999999999999999;
     }
+
     &__left h1 {
         width: 31.469vw;
         font-weight: 700;
         font-size: 3.906vw;
         line-height: 120%;
         letter-spacing: -0.03em;
-        background: rgba(39, 39, 39, 1);
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -238,6 +241,39 @@ body {
 .solution .container {
     position: relative;
 }
-.solution {
 
+.solution {
+    padding-top: 8.073vw;
+
+    &__header {
+        display: flex;
+    }
+
+    &__header-desc {
+        font-weight: 700;
+        font-size: 3.906vw;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        margin-right: 2.083vw;
+        background: url(../img/leaders.png) no-repeat;
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: -20px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__header-title {
+        font-weight: 700;
+        font-size: 7.760vw;
+        line-height: 120%;
+        text-align: right;
+        letter-spacing: -0.03em;
+        background: url(../img/solution-bg.png) no-repeat;
+        background-size: cover;
+        background-position-x: 0px;
+        background-position-y: -184px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
