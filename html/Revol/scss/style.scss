@@ -1,0 +1,243 @@
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+body {
+    font-family: 'Muller', sans-serif;
+    font-style: normal;
+    overflow-x: hidden;
+    font-weight: 400;
+}
+
+.header {
+    width: 100%;
+    padding-top: 2.083vw;
+    padding-bottom: 5.781vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 6.146vw;
+        display: block;
+    }
+
+    &__logo img {
+        width: 6.771vw;
+        height: 2.448vw;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-item {
+        margin-right: 3.333vw;
+    }
+
+    &__menu-link {
+        font-size: 0.938vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+    }
+
+    &__lang {
+        display: flex;
+        align-items: center;
+    }
+
+    &__lang-text {
+        font-size: 0.938vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        margin-right: 1.198vw;
+    }
+
+    &__lang-btn {
+        width: 2.500vw;
+        height: 1.354vw;
+        border-radius: 17.8571vw;
+        border: 0.104vw solid #DBD6DD;
+        padding: 0.156vw;
+    }
+
+    &__lang-btn span {
+        display: block;
+        width: 0.833vw;
+        height: 0.833vw;
+        border-radius: 100%;
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+    }
+}
+.intro .container {
+    position: relative;
+}
+.intro {
+    background: url(../img/intro-bg.webp) no-repeat center top / cover;
+    width: 100%;
+    height: 47vw;
+
+    &__left {
+        position: relative;
+        z-index: 999999999999999;
+    }
+    &__left h1 {
+        width: 31.469vw;
+        font-weight: 700;
+        font-size: 3.906vw;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        background: rgba(39, 39, 39, 1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 2.135vw;
+    }
+
+    &__left h1 span {
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__desc {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.229vw;
+    }
+
+    &__desc-blob {
+        display: flex;
+        margin-right: 1.146vw;
+    }
+
+    &__desc-blob span {
+        width: 0.781vw;
+        height: 0.781vw;
+        border-radius: 100%;
+        border: 0.104vw solid #DBD6DD;
+        margin-right: 0.260vw;
+    }
+
+    &__desc-blob span.blob-active {
+        border: none;
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+    }
+
+    &__desc-text {
+        font-weight: 400;
+        font-size: 1.250vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        display: flex;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btns-btn {
+        width: 12.448vw;
+        height: 5.208vw;
+        background: #fff;
+        border-radius: 2.865vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.781vw;
+        position: relative;
+    }
+
+    &__btns-btn p {
+        font-size: 1.250vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__btns-btn::after {
+        position: absolute;
+        top: -0.052vw;
+        bottom: -0.052vw;
+        left: -0.062vw;
+        right: -0.052vw;
+        background: linear-gradient(276.18deg, #9733EE 0%, #DA22FF 100%);
+        content: '';
+        z-index: -1;
+        border-radius: 2.865vw;
+    }
+
+    &__btns-btn.active {
+        background: linear-gradient(276.18deg, #9733EE 0%, #DA22FF 100%);
+        border-radius: 2.865vw;
+        box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
+        -webkit-box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
+        -moz-box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
+    }
+
+    &__btns-btn.active {
+        width: 15.625vw;
+        color: #fff;
+        font-size: 1.250vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+    }
+
+    &__btns-btn.active::after {
+        display: none;
+    }
+
+    &__down {
+        margin-top: 1.042vw;
+        display: flex;
+        align-items: center;
+        margin-left: 7.240vw;
+    }
+
+    &__down svg {
+        width: 0.885vw;
+        height: 8.958vw;
+    }
+
+    &__down-btn {
+        font-size: 0.833vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        margin-left: 0.938vw;
+        margin-top: 0.521vw;
+    }
+
+    &__bg {
+        background: url(../img/abtract-intro.webp) no-repeat no-repeat left top / cover;
+        width: 35.449vw;
+        height: 55.304vw;
+        position: absolute;
+        top: -28.281vw;
+        left: -16.094vw;
+    }
+}
+
+.solution .container {
+    position: relative;
+}
+.solution {
+
+}
