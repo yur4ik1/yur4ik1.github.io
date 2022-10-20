@@ -191,9 +191,9 @@ body {
     &__btns-btn.active {
         background: linear-gradient(276.18deg, #9733EE 0%, #DA22FF 100%);
         border-radius: 2.865vw;
-        box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
-        -webkit-box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
-        -moz-box-shadow: -2px 10px 48px -9px rgba(151, 51, 238, 0.76);
+        box-shadow: -0.104vw 0.521vw 2.5vw -0.469vw rgba(151, 51, 238, 0.76);
+        -webkit-box-shadow: -0.104vw 0.521vw 2.5vw -0.469vw rgba(151, 51, 238, 0.76);
+        -moz-box-shadow: -0.104vw 0.521vw 2.5vw -0.469vw rgba(151, 51, 238, 0.76);
     }
 
     &__btns-btn.active {
@@ -232,7 +232,7 @@ body {
     &__bg {
         background: url(../img/abtract-intro.webp) no-repeat no-repeat left top / cover;
         width: 35.449vw;
-        height: 55.304vw;
+        height: 70.304vw;
         position: absolute;
         top: -28.281vw;
         left: -16.094vw;
@@ -256,7 +256,7 @@ body {
         line-height: 120%;
         letter-spacing: -0.03em;
         margin-right: 2.083vw;
-        background: url(../img/leaders.png) no-repeat;
+        background: url(../img/leaders.webp) no-repeat;
         background-size: cover;
         background-position-x: 0;
         background-position-y: -0px;
@@ -274,8 +274,64 @@ body {
         background: url(../img/solution-bg.webp) no-repeat;
         background-size: cover;
         background-position-x: 0px;
-        background-position-y: -184px;
+        background-position-y: -42.854vw;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.604vw;
+    }
+
+    &__list-item {
+        width: 22.841vw;
+        height: 31.25vw;
+        background: url(../img/solution-1.webp) no-repeat center top / cover;
+        border-radius: 1.302vw;
+        padding: 2.448vw 2.188vw;
+        padding-right: 1.563vw;
+    }
+
+    &__list-item .solution__list-title {
+        font-weight: 500;
+        font-size: 1.25vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #272727;
+        margin-bottom: 0.469vw;
+    }
+
+    &__list-item .solution__list-desc {
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+    }
+
+    &__list-item:nth-child(2) {
+        background: url(../img/solution-2.webp) no-repeat center top / cover;
+    }
+
+    &__list-item:nth-child(2)>h3 {
+        color: #fff;
+    }
+
+    &__list-item:nth-child(2)>p {
+        color: #fff;
+    }
+
+    &__list-item:nth-child(3) {
+        background: url(../img/solution-3.webp) no-repeat center top / cover;
+    }
+
+    &__list-item:nth-child(3)>h3 {
+        color: #fff;
+    }
+
+    &__list-item:nth-child(3)>p {
+        color: #fff;
+    }
+
 }
