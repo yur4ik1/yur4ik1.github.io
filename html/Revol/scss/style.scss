@@ -397,7 +397,7 @@ body {
 
     &__header-left {
         width: 43.021vw;
-        border-right: 2px solid #DBD6DD;
+        border-right: 0.104vw solid #DBD6DD;
     }
 
     &__content-title {
@@ -428,25 +428,47 @@ body {
         margin-top: 1.563vw;
     }
 
-    &__header-auhor {
+    &__header-author {
         display: flex;
         align-items: center;
+        position: relative;
+    }
+
+    &__author-bg {
+        margin-left: 5.167vw;
+        background: url(../img/solve-bg.png) no-repeat center / cover;
+        width: 7.604vw;
+        height: 7.604vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        animation: 5s linear 0s normal none infinite running rot;
+        -webkit-animation: 5s linear 0s normal none infinite running rot;
     }
 
     &__right-img {
-        margin-left: 6.250vw;
+        width: 4.688vw;
+        height: 4.688vw;
+        position: absolute;
+        left: 6.6vw;
+        top: 1.5vw;
+    }
+
+    &__right-img::before {
+        content: '';
     }
 
     &__right-name {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 0.938vw;
         line-height: 150%;
         letter-spacing: -0.03em;
         color: #7C7A7D;
     }
 
     &__right-info {
-        font-size: 14px;
+        font-size: 0.729vw;
         line-height: 150%;
         letter-spacing: -0.03em;
         color: #7C7A7D;
@@ -458,17 +480,210 @@ body {
         line-height: 150%;
         letter-spacing: -0.03em;
         color: #7C7A7D;
-        margin-left: 7.292vw;
+        margin-left: 6.292vw;
     }
 
     &__list {
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__list-item {
         width: 22.917vw;
-        height: 36.519vw;
-        background: linear-gradient(180deg, #FFFFFF 0%, #F3F0F4 100%);
-        border-radius: 25px;
+        height: 36.458vw;
+        position: relative;
+        cursor: pointer;
+        border-radius: 1.302vw;
+        margin-bottom: 2.083vw;
     }
+
+    &__list-item::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F3F0F4 100%);
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+
+    &__list-item:hover:after {
+        opacity: 0;
+    }
+
+    &__list-item:hover>.solve__list-bg:after {
+        opacity: 1;
+    }
+
+    &__list-bg {
+        padding-top: 4.063vw;
+        padding-left: 1.667vw;
+        transition: 0.3s;
+    }
+
+    &__list-bg::after {
+        z-index: -1;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.5s;
+        opacity: 0;
+        background: url(../img/solve-hover.png) no-repeat center top / cover;
+    }
+
+    &__list-item:nth-child(3)>.solve__list-bg {
+        padding-top: 37px;
+        padding-left: 75px;
+    }
+
+    &__list-item:nth-child(3)>.solve__list-bg img {
+        width: 29.531vw;
+        height: 20.469vw;
+    }
+
+    &__list-item:nth-child(4)>.solve__list-bg {
+        padding-top: 2.031vw;
+        padding-left: 2.552vw;
+    }
+
+    &__list-item:nth-child(4)>.solve__list-bg img {
+        width: 16.563vw;
+        height: 16.354vw;
+    }
+
+    &__list-item:nth-child(5)>.solve__list-bg {
+        padding-top: 1.458vw;
+        padding-left: 2.969vw;
+    }
+
+    &__list-item:nth-child(5)>.solve__list-bg img {
+        width: 14.531vw;
+        height: 17.552vw;
+    }
+
+    &__list-item:nth-child(6)>.solve__list-bg {
+        padding-top: 2.031vw;
+    }
+
+    &__list-info {
+        padding: 2.083vw 2.083vw;
+        padding-top: 1.771vw;
+        position: absolute;
+        top: 51%;
+    }
+
+    &__list-title {
+        max-width: 14.583vw;
+        font-weight: 700;
+        font-size: 2.083vw;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__list-desc {
+        max-width: 15.938vw;
+        font-weight: 400;
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        margin-top: 0.417vw;
+    }
+
+    &__list-btn {
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #FFFFFF;
+        width: 10.938vw;
+        height: 3.646vw;
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+        border-radius: 2.865vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.094vw;
+    }
+
+    &__info-list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4.427vw;
+    }
+
+    &__info-item {
+        width: 16.667vw;
+        height: 12.031vw;
+        background: #F4F4F4;
+        border-radius: 1.302vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    &__info-item:hover {
+        background: #B82BF6;
+        box-shadow: 0vw 2.865vw 3.385vw rgba(0, 0, 0, 0.08);
+        transform: translate3d(0px, -0.521vw, 0px);
+    }
+
+    &__info-title {
+        font-weight: 700;
+        font-size: 2.083vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__info-title span {
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+    }
+
+    &__info-desc {
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+    }
+
+    &__info-item:hover .solve__info-title {
+        color: #FFFFFF;
+        background: linear-gradient(95.33deg, #fff 6.24%, #fff 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &__info-item:hover .solve__info-desc {
+        color: #FFFFFF;
+    }
+}
+
+
+.feedback .container {
+    position: relative;
+}
+.feedback {
+    padding-top: 8.073vw;
 }
