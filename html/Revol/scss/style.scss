@@ -112,6 +112,7 @@ body {
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
+        display: inline-flex;
     }
 
     &__desc {
@@ -255,12 +256,13 @@ body {
         line-height: 120%;
         letter-spacing: -0.03em;
         margin-right: 2.083vw;
-        background: url(../img/leaders.webp) no-repeat;
+        background: url(../img/leaders.png) no-repeat;
         background-size: cover;
         background-position-x: 0;
-        background-position-y: -20px;
+        background-position-y: -0px;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        opacity: 0.4;
     }
 
     &__header-title {
