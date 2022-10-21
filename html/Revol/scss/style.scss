@@ -966,7 +966,7 @@ body {
     &__bg {
         background: url(../img/portfolio-bg.png) no-repeat center top / cover;
         width: 100%;
-        height: 8.333vw;
+        height: 8.833vw;
         position: absolute;
         left: 0;
         top: 0;
@@ -1121,6 +1121,49 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+    }
+
+    &__gallery2-item:nth-child(2)::after {
+        background: url(../img/mask1.png) no-repeat center top / cover;
+        filter: blur(0.651vw);
+        z-index: 1;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+        opacity: 1;
+        border-radius: 1.302vw;
+    }
+
+    &__gallery2-item:nth-child(3) {
+        background: linear-gradient(105.26deg, #D0AB80 0%, #B69269 60.71%);
+        border-radius: 1.302vw;
+    }
+
+    &__gallery2-item:nth-child(3) .portfolio__item-results .results {
+        background: #D7AF81;
+    }
+
+    &__gallery2-item:nth-child(3) .portfolio__item-desc {
+        color: #fff;
+    }
+
+    &__gallery2-item:nth-child(3) .portfolio__item-bottom p {
+        color: #fff;
+    }
+
+    &__gallery2-info {
+        z-index: 9999999;
+    }
+
+    &__gallery2-img {
+        z-index: 9999999;
     }
 
     &__item-title {
