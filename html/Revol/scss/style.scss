@@ -841,8 +841,8 @@ body {
         position: absolute;
         right: -24.354vw;
         top: 1.698vw;
-        animation: 30s linear 0s normal none infinite running rot;
-        -webkit-animation: 30s linear 0s normal none infinite running rot;
+        animation: 40s linear 0s normal none infinite running rot;
+        -webkit-animation: 40s linear 0s normal none infinite running rot;
     }
 
     &__title {
@@ -1306,8 +1306,8 @@ body {
         left: 0;
         z-index: -1;
         position: absolute;
-        left: 7%;
-        top: 7%;
+        left: 6.5%;
+        top: 6.5%;
         animation: 15s linear 0s normal none infinite running rot2;
         -webkit-animation: 15s linear 0s normal none infinite running rot2;
     }
@@ -1374,6 +1374,7 @@ body {
 
 .team {
     position: relative;
+    padding-bottom: 11.823vw;
 
     &__top {
         display: flex;
@@ -1400,5 +1401,52 @@ body {
         letter-spacing: -0.03em;
         color: #7C7A7D;
         margin-left: 2.604vw;
+    }
+
+    &__swiper .swiper-slide {
+        width: 22.917vw;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F3F0F4 100%);
+        border-radius: 1.302vw;
+        padding: 1.198vw;
+        padding-bottom: 2.865vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__swiper .swiper-slide .ibg {
+        width: 20.521vw;
+        height: 12.656vw;
+        border-radius: 1.302vw;
+        margin-bottom: 1.927vw;
+    }
+
+    &__swiper .swiper-slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide-info {
+        text-align: center;
+    }
+
+    &__slide-info h4 {
+        font-weight: 700;
+        font-size: 2.083vw;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__slide-info p {
+        font-weight: 400;
+        font-size: 0.885vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
     }
 }

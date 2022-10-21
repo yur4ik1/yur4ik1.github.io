@@ -1,5 +1,6 @@
 
 
+
 // feedback animation
 
 const bg = document.querySelector(".feedback__right-bg1");
