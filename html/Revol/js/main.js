@@ -30,3 +30,12 @@ document.addEventListener('DOMContentLoaded', function(e){ 'use strict';
         })
     })
 })
+
+/*
+var image = document.querySelector('.image');
+
+image.addEventListener('click', function() {
+  image.classList.toggle('show');
+});
+
+*/
