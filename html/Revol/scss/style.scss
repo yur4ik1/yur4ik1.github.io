@@ -961,7 +961,16 @@ body {
 .portfolio {
     padding-bottom: 8.177vw;
     position: relative;
-    background: linear-gradient(162.79deg, #FFFFFF 14.77%, rgba(229, 224, 232, 0.3) 79.83%);
+
+    &__fon {
+        width: 100%;
+        position: absolute;
+        top: 20.844vw;
+        z-index: -1;
+        left: 0;
+        height: 136.302vw;
+        background: linear-gradient(162.79deg, #FFFFFF 14.77%, rgba(229, 224, 232, 0.3) 79.83%);
+    }
 
     &__bg {
         background: url(../img/portfolio-bg.png) no-repeat center top / cover;
@@ -1019,7 +1028,7 @@ body {
         max-width: 72.917vw;
     }
 
-    &__gallery1 {
+    &__gallery1 .wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -1106,6 +1115,10 @@ body {
 
     &__gallery2 {
         flex-direction: column;
+    }
+
+    &__gallery2.act>.portfolio__fon {
+        height: 81.458vw;
     }
 
     &__gallery2-item {
@@ -1241,4 +1254,151 @@ body {
 #tabsWrap .tab.act {
     display: flex;
     transition: 0.3s;
+}
+
+.implement {
+    position: relative;
+    padding-bottom: 10.156vw;
+
+    &__bg {
+        background: url(../img/implement-bg.png) no-repeat left top / cover;
+        position: absolute;
+        width: 39.301vw;
+        height: 54.142vw;
+        left: -3.344vw;
+        top: -31.24vw;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        position: relative;
+    }
+
+    &__illustration {
+        background: url(../img/implement-anim.png) no-repeat left top / cover;
+        width: 29.219vw;
+        height: 26.927vw;
+        position: relative;
+        margin-left: 2.396vw;
+    }
+
+    &__group1 {
+        background: url(../img/group1.png) no-repeat left top / cover;
+        width: 29.323vw;
+        height: 29.323vw;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        position: absolute;
+        animation: 15s linear 0s normal none infinite running rot;
+        -webkit-animation: 15s linear 0s normal none infinite running rot;
+    }
+
+    &__group2 {
+        background: url(../img/group2.png) no-repeat left top / cover;
+        width: 25.573vw;
+        height: 25.885vw;
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        left: 7%;
+        top: 7%;
+        animation: 15s linear 0s normal none infinite running rot2;
+        -webkit-animation: 15s linear 0s normal none infinite running rot2;
+    }
+
+    &__right {
+        margin-left: 5.781vw;
+    }
+
+    &__right-title {
+        font-weight: 700;
+        font-size: 3.906vw;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        background-clip: text;
+        text-fill-color: rgba(0, 0, 0, 0);
+        margin-bottom: 1.771vw;
+    }
+
+    &__right-title span {
+        background: linear-gradient(315deg, #9733EE 0%, #DA22FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__right-desc {
+        width: 22.031vw;
+        height: 3.75vw;
+        font-weight: 400;
+        font-size: 1.25vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        margin-bottom: 2.604vw;
+    }
+
+    &__right-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #FFFFFF;
+        width: 15.625vw;
+        height: 5.208vw;
+        left: 51.042vw;
+        top: 541.719vw;
+        background: linear-gradient(276.18deg, #9733EE 0%, #DA22FF 100%);
+        border-radius: 2.865vw;
+        transition: 0.3s;
+    }
+
+    &__right-btn:hover {
+        box-shadow: -0.104vw 0.521vw 2.5vw -0.469vw rgb(151 51 238 / 76%);
+        -webkit-box-shadow: -0.104vw 0.521vw 2.5vw -0.469vw rgb(151 51 238 / 76%);
+        -moz-box-shadow: -0.104vw .521vw 2.5vw -0.469vw rgba(151, 51, 238, .76);
+    }
+}
+
+.team {
+    position: relative;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3.594vw;
+    }
+
+    &__top h2 {
+        font-weight: 700;
+        font-size: 3.906vw;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        background: linear-gradient(95.33deg, #272727 6.24%, #5A585B 65.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__top p {
+        width: 29.427vw;
+        font-size: 1.25vw;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #7C7A7D;
+        margin-left: 2.604vw;
+    }
 }
