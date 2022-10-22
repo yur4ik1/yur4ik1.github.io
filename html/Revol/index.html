@@ -77,15 +77,34 @@
             in any quantity
           </h1>
           <div class="intro__desc">
-            <div class="intro__desc-blob">
-              <span class="blob-active"></span>
-              <span></span>
-              <span></span>
+
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper intro__desc-wrap">
+                <div class="swiper-slide">
+                  <p class="intro__desc-text">
+                    With the help of modern customer <br>
+                    acquisition systems
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="intro__desc-text">
+                    Unique and comfortable design that <br>
+                    evokes a wow-effect
+                  </p>
+                </div>
+                <div class="swiper-slide">
+                  <p class="intro__desc-text">
+                    Quality advertising in google ads, <br>
+                    instagram, Facebook, tik-tok
+                  </p>
+                </div>
+
+              </div>
+              <div class="swiper-pagination intro__desc-blob"></div>
             </div>
-            <p class="intro__desc-text">
-              With the help of modern customer <br>
-              acquisition systems
-            </p>
+
+
+
           </div>
           <div class="intro__btns">
             <a class="intro__btns-btn active" href="#">
@@ -107,7 +126,7 @@
       </div>
     </section>
 
-    
+
     <section class="solution">
       <div class="container">
         <div class="solution__bg"></div>
@@ -700,13 +719,13 @@
         </div>
         <ul class="footer__menu">
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#solve">Services</a>
+            <a class="footer__menu-link" href="#solve">Company</a>
           </li>
           <li class="footer__menu-item">
-            <a class=footer__menu-link" href="#portfolio">Portfolio</a>
+            <a class="footer__menu-link" href="#portfolio">Services</a>
           </li>
           <li class="footer__menu-item">
-            <a class="footer__menu-link" href="#cooperation">Contact</a>
+            <a class="footer__menu-link" href="#cooperation">Portfolio</a>
           </li>
         </ul>
       </div>
@@ -789,6 +808,19 @@
   </div>
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2000,
+      },
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const width = window.innerWidth
