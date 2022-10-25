@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revol</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
@@ -21,13 +22,13 @@
                     <nav class="header__menu-wrapper">
                         <ul class="header__menu">
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Services</a>
+                                <a class="header__menu-link" href="./services.html">Services</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Portfolio</a>
+                                <a class="header__menu-link" href="./portfolio.html">Portfolio</a>
                             </li>
                             <li class="header__menu-item">
-                                <a class="header__menu-link" href="#">Contact</a>
+                                <a class="header__menu-link" href="./index.html#cooperation">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -37,7 +38,85 @@
                     <a class="header__lang-btn" href="#">
                         <span></span>
                     </a>
+
+                    <a class="burger__menu" onclick="burger()">
+                        <img src="./img/svg-gobbler.svg" alt="">
+                    </a>
                 </div>
+
+                <div class="mobile__menu">
+                    <div class="mobile__menu-top">
+                        <span class="burger__close">
+                            <img src="./img/svg-gobbler.svg" alt="">
+                        </span>
+                    </div>
+                    <ul class="header__menu-mob">
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="./services.html">Services</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="./portfolio.html">Portfolio</a>
+                        </li>
+                    </ul>
+
+                    <form class="popup__form" method="post" action="/send.php">
+                        <input class="popup__form-input" type="text" name="name" required id="" placeholder="Your name">
+                        <input class="popup__form-input" type="tel"
+                            onkeyup="this.value = this.value.replace(/[^\d]/g,'');" name="phone" required id=""
+                            placeholder="Your phone number">
+
+                        <div class="popup__social">
+                            <input type="checkbox" style="display: none;" name="whatsapp" id="whatsapp">
+                            <label for="whatsapp" class="popup__social-item popup__social-item2" onclick="socialBtn2()">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_917)">
+                                        <path
+                                            d="M15.0037 0H14.9963C6.72563 0 0 6.7275 0 15C0 18.2812 1.0575 21.3225 2.85562 23.7919L0.98625 29.3644L6.75187 27.5213C9.12375 29.0925 11.9531 30 15.0037 30C23.2744 30 30 23.2706 30 15C30 6.72938 23.2744 0 15.0037 0ZM23.7319 21.1819C23.37 22.2038 21.9338 23.0512 20.7881 23.2987C20.0044 23.4656 18.9806 23.5988 15.5344 22.17C11.1262 20.3438 8.2875 15.8644 8.06625 15.5737C7.85437 15.2831 6.285 13.2019 6.285 11.0494C6.285 8.89688 7.37813 7.84875 7.81875 7.39875C8.18062 7.02938 8.77875 6.86062 9.3525 6.86062C9.53813 6.86062 9.705 6.87 9.855 6.8775C10.2956 6.89625 10.5169 6.9225 10.8075 7.61813C11.1694 8.49 12.0506 10.6425 12.1556 10.8638C12.2625 11.085 12.3694 11.385 12.2194 11.6756C12.0788 11.9756 11.955 12.1087 11.7337 12.3637C11.5125 12.6187 11.3025 12.8138 11.0812 13.0875C10.8787 13.3256 10.65 13.5806 10.905 14.0213C11.16 14.4525 12.0413 15.8906 13.3387 17.0456C15.0131 18.5362 16.3706 19.0125 16.8562 19.215C17.2181 19.365 17.6494 19.3294 17.9137 19.0481C18.2494 18.6863 18.6637 18.0863 19.0856 17.4956C19.3856 17.0719 19.7644 17.0194 20.1619 17.1694C20.5669 17.31 22.71 18.3694 23.1506 18.5887C23.5912 18.81 23.8819 18.915 23.9887 19.1006C24.0938 19.2863 24.0938 20.1581 23.7319 21.1819Z"
+                                            fill="url(#paint0_linear_1_917)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_917" x1="30" y1="30" x2="0.000599933"
+                                            y2="-0.000599909" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C" stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_917">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+
+                            <input type="checkbox" style="display: none;" name="telegram" id="telegram">
+                            <label for="telegram" onclick="socialBtn()" class="popup__social-item popup__social-item1">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_911)">
+                                        <path
+                                            d="M30 2.95854L25.2551 26.8812C25.2551 26.8812 24.5918 28.54 22.7666 27.7437L11.768 19.3255C13.2463 17.9966 24.7148 7.68588 25.2164 7.2183C25.9916 6.49467 25.5105 6.06401 24.6094 6.61127L7.66933 17.3691L1.13378 15.1689C1.13378 15.1689 0.104873 14.8039 0.00584957 14.0076C-0.0937598 13.2113 1.16718 12.78 1.16718 12.78L27.8103 2.32807C27.8103 2.32807 30 1.36596 30 2.95854Z"
+                                            fill="url(#paint0_linear_1_911)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_911" x1="4.89816" y1="4.15595" x2="21.7644"
+                                            y2="27.2262" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C" stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_911">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+                            <p class="popup__social-text">
+                                - Where is it possible <br> to conact you?
+                            </p>
+                        </div>
+                        <button class="popup__form-btn">Make a request</button>
+                    </form>
+                </div>
+
             </div>
         </header>
 
@@ -67,6 +146,9 @@
                         <a class="header__lang-btn" href="#">
                             <span></span>
                         </a>
+                        <a class="burger__menu" onclick="burger()" href="#">
+                            <img src="./img/svg-gobbler.svg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="intro__left">
@@ -76,17 +158,18 @@
                         our company
                     </h1>
                     <div class="intro__desc">
-                       
+
                         <p class="intro__desc-text">
-                            We will contact you shorty. Discuss the details <br> of your project and form an offer for you
+                            We will contact you shorty. Discuss the details <br> of your project and form an offer for
+                            you
                         </p>
                     </div>
                     <div class="intro__btns">
                         <a class="intro__btns-btn active" href="/">
-                            Return to the site 
+                            Return to the site
                         </a>
                     </div>
-                
+
                 </div>
             </div>
         </section>
@@ -103,13 +186,13 @@
                 </div>
                 <ul class="footer__menu">
                     <li class="footer__menu-item">
-                        <a class="footer__menu-link" href="#">Company</a>
+                        <a class="footer__menu-link" href="/">Company</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a class="footer__menu-link" href="#">Services</a>
+                        <a class="footer__menu-link" href="./services.html">Services</a>
                     </li>
                     <li class="footer__menu-item">
-                        <a class="footer__menu-link" href="#">Portfolio</a>
+                        <a class="footer__menu-link" href="./portfolio.html">Portfolio</a>
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta name="description" content="Revol">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="portfolio-page portfolio-page-ru">
+    <div class="wrapper">
+        <header class="header header-hide">
+            <div class="container">
+                <div class="header__left">
+                    <a class="header__logo" href="./ru-index.html">
+                        <img src="./img/logo.svg" alt="logo">
+                    </a>
+                    <nav class="header__menu-wrapper">
+                        <ul class="header__menu">
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="./ru-services.html">Услуги</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="./ru-portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="./ru-index.html#cooperation">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__lang">
+                    <p class="header__lang-text">Eng / Rus</p>
+                    <a class="header__lang-btn" href="./portfolio.html">
+                        <span></span>
+                    </a>
+                    <span class="burger__menu" onclick="burger()">
+                        <img src="./img/svg-gobbler.svg" alt="">
+                    </span>
+                </div>
+
+                <div class="mobile__menu">
+                    <div class="mobile__menu-top">
+                        <span class="burger__close">
+                            <img src="./img/svg-gobbler.svg" alt="">
+                        </span>
+                    </div>
+                    <ul class="header__menu-mob">
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="./ru-services.html">Услуги</a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="./ru-portfolio.html">Портфолио</a>
+                        </li>
+
+                    </ul>
+                    <form class="popup__form" method="post" action="/send.php">
+                        <input class="popup__form-input" type="text" name="name" id=""
+                            placeholder="Ваше имя">
+                        <input class="popup__form-input" type="tel"
+                            onkeyup="this.value = this.value.replace(/[^\d]/g,'');" name="phone" required id=""
+                            placeholder="Ваш номер телефона">
+
+                        <div class="popup__social">
+                            <input type="checkbox" style="display: none;" name="whatsapp" id="whatsapp">
+                            <label for="whatsapp" class="popup__social-item popup__social-item2"
+                                onclick="socialBtn2()">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_917)">
+                                        <path
+                                            d="M15.0037 0H14.9963C6.72563 0 0 6.7275 0 15C0 18.2812 1.0575 21.3225 2.85562 23.7919L0.98625 29.3644L6.75187 27.5213C9.12375 29.0925 11.9531 30 15.0037 30C23.2744 30 30 23.2706 30 15C30 6.72938 23.2744 0 15.0037 0ZM23.7319 21.1819C23.37 22.2038 21.9338 23.0512 20.7881 23.2987C20.0044 23.4656 18.9806 23.5988 15.5344 22.17C11.1262 20.3438 8.2875 15.8644 8.06625 15.5737C7.85437 15.2831 6.285 13.2019 6.285 11.0494C6.285 8.89688 7.37813 7.84875 7.81875 7.39875C8.18062 7.02938 8.77875 6.86062 9.3525 6.86062C9.53813 6.86062 9.705 6.87 9.855 6.8775C10.2956 6.89625 10.5169 6.9225 10.8075 7.61813C11.1694 8.49 12.0506 10.6425 12.1556 10.8638C12.2625 11.085 12.3694 11.385 12.2194 11.6756C12.0788 11.9756 11.955 12.1087 11.7337 12.3637C11.5125 12.6187 11.3025 12.8138 11.0812 13.0875C10.8787 13.3256 10.65 13.5806 10.905 14.0213C11.16 14.4525 12.0413 15.8906 13.3387 17.0456C15.0131 18.5362 16.3706 19.0125 16.8562 19.215C17.2181 19.365 17.6494 19.3294 17.9137 19.0481C18.2494 18.6863 18.6637 18.0863 19.0856 17.4956C19.3856 17.0719 19.7644 17.0194 20.1619 17.1694C20.5669 17.31 22.71 18.3694 23.1506 18.5887C23.5912 18.81 23.8819 18.915 23.9887 19.1006C24.0938 19.2863 24.0938 20.1581 23.7319 21.1819Z"
+                                            fill="url(#paint0_linear_1_917)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_917" x1="30" y1="30" x2="0.000599933"
+                                            y2="-0.000599909" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C"
+                                                stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_917">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+
+                            <input type="checkbox" style="display: none;" name="telegram" id="telegram">
+                            <label for="telegram" onclick="socialBtn()"
+                                class="popup__social-item popup__social-item1">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_911)">
+                                        <path
+                                            d="M30 2.95854L25.2551 26.8812C25.2551 26.8812 24.5918 28.54 22.7666 27.7437L11.768 19.3255C13.2463 17.9966 24.7148 7.68588 25.2164 7.2183C25.9916 6.49467 25.5105 6.06401 24.6094 6.61127L7.66933 17.3691L1.13378 15.1689C1.13378 15.1689 0.104873 14.8039 0.00584957 14.0076C-0.0937598 13.2113 1.16718 12.78 1.16718 12.78L27.8103 2.32807C27.8103 2.32807 30 1.36596 30 2.95854Z"
+                                            fill="url(#paint0_linear_1_911)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_911" x1="4.89816" y1="4.15595"
+                                            x2="21.7644" y2="27.2262" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C"
+                                                stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_911">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </label>
+                            <p class="popup__social-text">
+                                - Где можно <br> связаться с вами?
+                            </p>
+                        </div>
+                        <button class="popup__form-btn">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="portfolio__content">
+                    <h2 class="portfolio__title">Портфолио</h2>
+                </div>
+                <nav id="tabNav">
+                    <ul class="portfolio__tab-list tabNavList">
+                        <li>
+                            <a onclick="return false" class="act" href="#tab1">Разработка сайтов</a>
+                        </li>
+                        <li>
+                            <a onclick="return false" href="#tab2">Продвижение</a>
+                        </li>
+                        <li>
+                            <a onclick="return false" href="#">Чат-боты и автоматизация</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="portfolio__tabsWrap" id="tabsWrap">
+                    <div class="portfolio__gallery1 tab act" id="tab1">
+                        <div class="portfolio__fon"></div>
+                        <div class="wrap">
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-1.webp">
+                                <img loading="lazy" src="./img/gallery-1.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-2.webp">
+                                <img loading="lazy" src="./img/gallery-2.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-3.webp">
+                                <img loading="lazy" src="./img/gallery-3.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-4.webp">
+                                <img loading="lazy" src="./img/gallery-4.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-5.webp">
+                                <img loading="lazy" src="./img/gallery-5.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-6.webp">
+                                <img loading="lazy" src="./img/gallery-6.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-7.webp">
+                                <img loading="lazy" src="./img/gallery-7.webp" alt="">
+                            </a>
+                            <a class="portfolio__gallery-item" data-fancybox href="./img/gallery-8.webp">
+                                <img loading="lazy" src="./img/gallery-8.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__gallery2 tab" id="tab2">
+                        <div class="portfolio__fon"></div>
+                        <div class="portfolio__gallery22">
+                            <div class="portfolio__gallery2-item">
+                                <div class="portfolio__gallery2-info">
+                                    <h4 class="portfolio__item-title">Пух-перо</h4>
+                                    <p class="portfolio__item-desc">Оптовая продажа пухо-перьевого сырья</p>
+                                    <div class="portfolio__item-results">
+                                        <p>Продолжительность проекта: 6 месяцев</p>
+                                        <p>Рекламный бюджет: 8,769 $</p>
+                                        <div class="results">
+                                            Итоговая прибыль проекта: $58 617
+                                        </div>
+                                    </div>
+                                    <div class="portfolio__item-bottom">
+                                        <p>Разработка квиз - сайта</p>
+                                        <p>Рекламное продвижение</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio__gallery2-img">
+                                    <img src="./img/gallery2-1.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio__gallery2-item">
+                                <div class="portfolio__gallery2-info">
+                                    <h4 class="portfolio__item-title">Построй а-фрейм дом</h4>
+                                    <p class="portfolio__item-desc">Авторский курс строительного блогера</p>
+                                    <div class="portfolio__item-results">
+                                        <p>Продолжительность проекта: 2 месяца</p>
+                                        <p>Рекламный бюджет: 7,200 $</p>
+                                        <div class="results">
+                                            Итоговая прибыль проекта: $89 348
+                                        </div>
+                                    </div>
+                                    <div class="portfolio__item-bottom">
+                                        <p>Разработка квиз - сайта</p>
+                                        <p>Рекламное продвижение</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio__gallery2-img">
+                                    <img src="./img/gallery2-2.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="portfolio__gallery2-item">
+                                <div class="portfolio__gallery2-info">
+                                    <h4 class="portfolio__item-title">Интуитивное материнство</h4>
+                                    <p class="portfolio__item-desc">Курс по воспитанию детей от 3-5 лет
+                                    </p>
+                                    <div class="portfolio__item-results">
+                                        <p>Продолжительность проекта: 4 месяца</p>
+                                        <p>Рекламный бюджет: 7 500 $</p>
+                                        <div class="results">
+                                            Итоговая прибыль проекта: $12 526
+                                        </div>
+                                    </div>
+                                    <div class="portfolio__item-bottom">
+                                        <p>Разработка квиз - сайта</p>
+                                        <p>Рекламное продвижение</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio__gallery2-img">
+                                    <img src="./img/gallery2-3.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__footer">
+                    <p>Данный раздел находится в разработке, чтобы увидеть больше наших работ, просто оставьте заявку
+                        нашему менеджеру</p>
+                    <a onclick="start()">Посмотреть больше работ</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback" id="feedback">
+            <div class="container">
+                <div class="feedback__left-bg"></div>
+                <div class="feedback__wrapper">
+                    <div class="feedback__left">
+                        <h2 class="feedback__left-title">
+                            <span>Давайте</span> обсудим <br> Ваш проект
+
+                        </h2>
+                        <svg width="33" height="33" viewBox="0 0 35 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="18.4224" y1="-5.01785e-08" x2="18.4224" y2="41" stroke="#DBD6DD"
+                                stroke-width="2" />
+                            <line x1="34.8447" y1="21" x2="7.62939e-06" y2="21" stroke="#DBD6DD" stroke-width="2" />
+                        </svg>
+                        <form class="feedback__left-form" method="post" action="/send.php">
+                            <input class="feedback__form-input" name="name" required type="text" placeholder="Ваше имя">
+                            <input class="feedback__form-input" name="phone" required type="tel"
+                                onkeyup="this.value = this.value.replace(/[^\d]/g,'');" placeholder="Ваш телефон">
+                            <input class="feedback__form-input" name="message" type="text"
+                                placeholder="Опишите Вашу задачу кратко">
+                            <label for="check">
+                                <input class="feedback__form-check" required type="checkbox" id="check">
+                                Даю согласие на обработку <a href="#">&nbsp; персональных данных</a>
+
+                            </label>
+                            <button type="submit" class="feedback__form-btn start">Оставить заявку</button>
+                        </form>
+                    </div>
+                    <div class="feedback__right">
+                        <div class="feedback__right-bg1"></div>
+                        <div class="feedback__right-bg2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__info">
+                    <a class="footer__logo" href="./ru-index.html">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <p class="footer__copyright">
+                        Revol web studio 2022 ©<br>Все права защищены.
+                    </p>
+                </div>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="./ru-index.html">Компания</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="./ru-services.html">Услуги</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a class="footer__menu-link" href="./ru-portfolio.html">Портфолио</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <div class="popup">
+            <div class="popup-inner">
+                <a class="popup__close" href="#">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.3428 3.65727C16.4655 -1.21909 8.53368 -1.21909 3.65639 3.65727C-1.2188 8.53364 -1.2188 16.4677 3.65639 21.3441C6.09503 23.7817 9.29756 25 12.5001 25C15.7027 25 18.9042 23.7817 21.3428 21.3441C26.2191 16.4677 26.2191 8.53364 21.3428 3.65727ZM17.6577 16.1853C18.0652 16.5928 18.0652 17.2514 17.6577 17.6589C17.4545 17.8621 17.1877 17.9643 16.9209 17.9643C16.6541 17.9643 16.3873 17.8621 16.1841 17.6589L12.5001 13.9738L8.81711 17.6578C8.61286 17.8611 8.34604 17.9632 8.08029 17.9632C7.81351 17.9632 7.54669 17.8611 7.34347 17.6578C6.936 17.2504 6.936 16.5907 7.34347 16.1842L11.0264 12.5001L7.34244 8.81605C6.93498 8.40857 6.93498 7.74888 7.34244 7.34243C7.74888 6.93495 8.40857 6.93495 8.81603 7.34243L12.5 11.0265L16.184 7.34243C16.5915 6.93495 17.2502 6.93495 17.6576 7.34243C18.0651 7.74888 18.0651 8.40857 17.6576 8.81605L13.9736 12.5001L17.6577 16.1853Z"
+                            fill="url(#paint0_linear_95_10)" />
+                        <defs>
+                            <linearGradient id="paint0_linear_95_10" x1="25" y1="25" x2="0.000499944" y2="-0.000499924"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9733EE" />
+                                <stop offset="1" stop-color="#DA22FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <div class="popup__content">
+                    <h4>Оставить заявку</h4>
+                    <p class="popup__content-desc">
+                        Мы свяжемся с вами в ближайшее время <br>и сформируем предложение в течении дня
+                    </p>
+                    <form class="popup__form" method="post" action="/send.php">
+                        <input class="popup__form-input" type="text" name="name" required id=""
+                            placeholder="Введите ваше Имя">
+                        <input class="popup__form-input" type="tel"
+                            onkeyup="this.value = this.value.replace(/[^\d]/g,'');" name="phone" required id=""
+                            placeholder="Введите ваш телефон">
+
+                        <div class="popup__social">
+                            <a class="popup__social-item" href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_917)">
+                                        <path
+                                            d="M15.0037 0H14.9963C6.72563 0 0 6.7275 0 15C0 18.2812 1.0575 21.3225 2.85562 23.7919L0.98625 29.3644L6.75187 27.5213C9.12375 29.0925 11.9531 30 15.0037 30C23.2744 30 30 23.2706 30 15C30 6.72938 23.2744 0 15.0037 0ZM23.7319 21.1819C23.37 22.2038 21.9338 23.0512 20.7881 23.2987C20.0044 23.4656 18.9806 23.5988 15.5344 22.17C11.1262 20.3438 8.2875 15.8644 8.06625 15.5737C7.85437 15.2831 6.285 13.2019 6.285 11.0494C6.285 8.89688 7.37813 7.84875 7.81875 7.39875C8.18062 7.02938 8.77875 6.86062 9.3525 6.86062C9.53813 6.86062 9.705 6.87 9.855 6.8775C10.2956 6.89625 10.5169 6.9225 10.8075 7.61813C11.1694 8.49 12.0506 10.6425 12.1556 10.8638C12.2625 11.085 12.3694 11.385 12.2194 11.6756C12.0788 11.9756 11.955 12.1087 11.7337 12.3637C11.5125 12.6187 11.3025 12.8138 11.0812 13.0875C10.8787 13.3256 10.65 13.5806 10.905 14.0213C11.16 14.4525 12.0413 15.8906 13.3387 17.0456C15.0131 18.5362 16.3706 19.0125 16.8562 19.215C17.2181 19.365 17.6494 19.3294 17.9137 19.0481C18.2494 18.6863 18.6637 18.0863 19.0856 17.4956C19.3856 17.0719 19.7644 17.0194 20.1619 17.1694C20.5669 17.31 22.71 18.3694 23.1506 18.5887C23.5912 18.81 23.8819 18.915 23.9887 19.1006C24.0938 19.2863 24.0938 20.1581 23.7319 21.1819Z"
+                                            fill="url(#paint0_linear_1_917)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_917" x1="30" y1="30" x2="0.000599933"
+                                            y2="-0.000599909" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C" stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_917">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a class="popup__social-item" href="#">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1_911)">
+                                        <path
+                                            d="M30 2.95854L25.2551 26.8812C25.2551 26.8812 24.5918 28.54 22.7666 27.7437L11.768 19.3255C13.2463 17.9966 24.7148 7.68588 25.2164 7.2183C25.9916 6.49467 25.5105 6.06401 24.6094 6.61127L7.66933 17.3691L1.13378 15.1689C1.13378 15.1689 0.104873 14.8039 0.00584957 14.0076C-0.0937598 13.2113 1.16718 12.78 1.16718 12.78L27.8103 2.32807C27.8103 2.32807 30 1.36596 30 2.95854Z"
+                                            fill="url(#paint0_linear_1_911)" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_911" x1="4.89816" y1="4.15595" x2="21.7644"
+                                            y2="27.2262" gradientUnits="userSpaceOnUse">
+                                            <stop class="hover1" stop-color="#C2C2C2" stop-opacity="0.5" />
+                                            <stop class="hover2" offset="1" stop-color="#8C8C8C" stop-opacity="0.5" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_1_911">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <p class="popup__social-text">
+                                -- Где удобнее <br> связаться с вами?
+                            </p>
+                        </div>
+                        <button class="popup__form-btn">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

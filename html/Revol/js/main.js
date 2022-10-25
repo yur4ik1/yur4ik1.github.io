@@ -26,6 +26,18 @@ window.onscroll = () => {
     }
 }
 
+//  Burger menu
+
+let mobileMenu = document.querySelector('.mobile__menu');
+let burgerClose = document.querySelector('.burger__close');
+
+const burger = () => {
+    mobileMenu.classList.add('active');
+};
+burgerClose.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
 // Tabs
 
 document.addEventListener('DOMContentLoaded', function (e) {
@@ -46,55 +58,50 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 // Popup
 
-const popupOpen = document.querySelector('.intro__btns-btn');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
 
-popupOpen.addEventListener('click', () => {
+const start = () => {
     popup.classList.add('active');
-});
+    console.log('clk')
+};
+
 popupClose.addEventListener('click', () => {
     popup.classList.remove('active');
 });
 
-// Mask
 
-window.addEventListener("DOMContentLoaded", function() {
-    [].forEach.call( document.querySelectorAll('.tel'), function(input) {
-    var keyCode;
-    function mask(event) {
-        event.keyCode && (keyCode = event.keyCode);
-        var pos = this.selectionStart;
-        if (pos < 3) event.preventDefault();
-        var matrix = "+7 (___) ___ ____",
-            i = 0,
-            def = matrix.replace(/\D/g, ""),
-            val = this.value.replace(/\D/g, ""),
-            new_value = matrix.replace(/[_\d]/g, function(a) {
-                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-            });
-        i = new_value.indexOf("_");
-        if (i != -1) {
-            i < 5 && (i = 3);
-            new_value = new_value.slice(0, i)
-        }
-        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-            function(a) {
-                return "\\d{1," + a.length + "}"
-            }).replace(/[+()]/g, "\\$&");
-        reg = new RegExp("^" + reg + "$");
-        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-        if (event.type == "blur" && this.value.length < 5)  this.value = ""
-    }
 
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false)
 
-  });
+let socialBtns = document.querySelector('.popup__social-item1');
 
-});
+const socialBtn = () => {
+    socialBtns.classList.toggle('active');
+};
+
+let socialBtns2 = document.querySelector('.popup__social-item2');
+
+const socialBtn2 = () => {
+    socialBtns2.classList.toggle('active');
+};
+
+
+
+
+
+let socialBtns3 = document.querySelector('.popup__social-item3');
+
+const socialBtn3 = () => {
+    socialBtns3.classList.toggle('active');
+};
+
+let socialBtns4 = document.querySelector('.popup__social-item4');
+
+const socialBtn4 = () => {
+    socialBtns4.classList.toggle('active');
+};
+
+
 
 // Scroll
 
