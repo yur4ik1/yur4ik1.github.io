@@ -11,6 +11,7 @@ body {
 .header .container {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .header {
@@ -39,6 +40,14 @@ body {
         line-height: 1.528vw;
         letter-spacing: -0.015em;
         color: #070707;
+    }
+
+    &__menu-mob {
+        display: none;
+    }
+
+    &__burger {
+        display: none;
     }
 }
 
@@ -507,16 +516,81 @@ body {
     .be__btns {
         margin-top: 4.167vw;
     }
+
     .be__btn {
         width: 28.417vw;
         height: 9.681vw;
         font-size: 2.75vw;
-        border-radius: 7.222vw;    
+        border-radius: 7.222vw;
     }
+
     .be__btn.active {
         width: 28.417vw;
         height: 9.681vw;
         border-radius: 7.222vw;
-    
+
     }
+
+    .header__burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 6.222vw;
+        top: 1.556vw;
+    }
+
+    .header__burger svg {
+        height: 6.917vw;
+        width: 6.917vw;
+    }
+
+    .header__menu-mob {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        -webkit-transform: translate(-150%);
+        -ms-transform: translate(-150%);
+        transform: translate(-150%);
+        height: 204.361vw;
+        max-width: 694px;
+        width: 100%;
+        background-color: #fff;
+        padding: 6.917vw;
+        z-index: 999999;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        display: block;
+        z-index: 9999999;
+    }
+
+    .header__menu-mob.active {
+        transform: translate(0%);
+    }
+
+    .header__burger-close {
+        position: relative;
+        left: 79.167vw;
+    }
+
+    .header__burger-close svg {
+        height: 6.917vw;
+        width: 6.917vw;
+    }
+    .mobile__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mobile__menu li {
+        margin-bottom: 3.944vw;
+    }
+    .mobile__menu li a {
+        font-size: 4.111vw;
+        line-height: 2.528vw;
+        letter-spacing: -0.015em;
+        color: #070707;
+    }
+
 }
