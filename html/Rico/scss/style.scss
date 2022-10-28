@@ -58,10 +58,23 @@ body {
         font-size: 3.819vw;
         line-height: 4.861vw;
         color: #011C3D;
+        position: relative;
     }
 
     &__title span {
-        font-weight: 800;
+        font-weight: 700;
+    }
+
+    &__title .border {
+        font-weight: 600;
+    }
+
+    &__title-border {
+        width: 24.911vw;
+        height: 1.964vw;
+        position: absolute;
+        left: 19.556vw;
+        top: 8.117vw;
     }
 
     &__btns {
@@ -99,7 +112,7 @@ body {
         height: 10.113vw;
         position: relative;
         left: 12.917vw;
-        top: 5.208vw;
+        top: 4.208vw;
     }
 
     &__bottom-desc {
@@ -143,13 +156,13 @@ body {
         font-size: 4.028vw;
         line-height: 5.139vw;
         color: #F2F4FA;
-        margin-bottom: 20px;
+        margin-bottom: 0.778vw;
     }
 
     &__arrow {
         position: absolute;
-        top: 18.486vw;
-        right: 7.931vw;
+        top: 17.486vw;
+        right: 7vw;
     }
 
     &__arrow svg {
@@ -229,11 +242,11 @@ body {
 
     &__section {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin-bottom: 9.722vw;
         z-index: 999;
     }
+
     &__section:nth-child(2) {
         margin-bottom: 0;
     }
@@ -244,8 +257,12 @@ body {
         border-radius: 2.083vw;
     }
 
+    &__section-text {
+        margin-left: 12.639vw;
+    }
+
     &__section-text h2 {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 4.028vw;
         line-height: 5.139vw;
         color: #000000;
@@ -254,7 +271,13 @@ body {
     &__section-text p {
         width: 34.583vw;
         margin-top: 0.069vw;
+        font-weight: 400;
+        font-size: 1.181vw;
+        line-height: 1.597vw;
+        color: #000000;
+
     }
+
     &__section-text p span {
         font-weight: 700;
     }
@@ -289,14 +312,211 @@ body {
         border: none;
     }
 
+    &__section.reverse {
+        justify-content: space-between;
+    }
 
     &__section.reverse img {
         order: 2;
     }
+
     &__section.reverse .be__section-text {
         order: 1;
+        margin-left: 0;
     }
+
     &__section.reverse p {
         width: 34.583vw;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        max-width: 194.445vw;
+        padding: 0 6.778vw;
+    }
+
+    .header__logo {
+        margin-right: 6.389vw;
+    }
+
+    .header__logo img {
+        width: 16.861vw;
+        height: 7.445vw;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .intro__title {
+        font-size: 7.2vw;
+        line-height: 9.722vw;
+    }
+
+    .intro__btn {
+        font-size: 2.75vw;
+        line-height: 2.639vw;
+        width: 31.833vw;
+        height: 11.361vw;
+        border-radius: 5.444vw;
+    }
+
+    .intro__btn.active {
+        width: 31.833vw;
+        height: 11.361vw;
+    }
+
+    .intro__arrow svg {
+        width: 25.178vw;
+        left: 28.917vw;
+        top: 5.208vw;
+    }
+
+    .intro__bottom-desc {
+        font-size: 4.444vw;
+        line-height: 6.111vw;
+    }
+
+    .intro__bg {
+        width: 41.736vw;
+        height: 57.264vw;
+        background-size: 38.222vw;
+        top: 50.478vw;
+    }
+
+    .intro {
+        padding-bottom: 11.528vw;
+        position: relative;
+    }
+
+    .intro .container {
+        position: initial;
+    }
+
+    .intro__title-border {
+        width: 48.911vw;
+        height: 1.964vw;
+        left: 36.556vw;
+        top: 17.117vw;
+    }
+
+    .walk {
+        height: auto;
+        padding-bottom: 9.264vw;
+    }
+
+    .walk .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .walk__arrow svg {
+        display: none;
+    }
+
+    .walk__left {
+        margin-top: 9.264vw;
+    }
+
+    .walk__subtitle {
+        margin-bottom: 3.556vw;
+        font-size: 6.028vw;
+        text-align: center;
+    }
+
+    .walk__right {
+        margin-top: 2.139vw;
+    }
+
+    .walk__title {
+        font-size: 4.472vw;
+        text-align: center;
+    }
+
+    .walk__text {
+        width: 85.278vw;
+        margin-top: 10px;
+        font-size: 3.281vw;
+        line-height: 4.597vw;
+    }
+
+    .walk__btns {
+        justify-content: center;
+    }
+
+    .walk__btn {
+        width: 28.417vw;
+        height: 9.681vw;
+        border-radius: 5.222vw;
+        font-size: 2.75vw;
+        line-height: 2.639vw;
+    }
+
+    .walk__btn.active {
+        width: 28.417vw;
+        height: 9.681vw;
+        border-radius: 5.222vw;
+    }
+
+    .walk__btns {
+        margin-top: 4.778vw;
+    }
+
+    .be__section {
+        flex-direction: column;
+    }
+
+    .be__section img {
+        width: auto;
+        height: auto;
+    }
+
+    .be__section img:nth-child(1) {
+        margin-bottom: 6.167vw;
+    }
+
+    .be__section-text h2 {
+        font-size: 9.028vw;
+        line-height: 7.139vw;
+    }
+
+    .be__section-text {
+        margin-left: 0;
+    }
+
+    .be__section-text p {
+        width: 100%;
+        margin-top: 2.778vw;
+        font-size: 4.181vw;
+        line-height: 5.597vw;
+    }
+
+    .be__section-text p br {
+        display: none;
+    }
+
+    .be__section.reverse p {
+        width: 100%;
+    }
+
+    .be__section.reverse .be__section-text {
+        order: 2;
+    }
+
+    .be__btns {
+        margin-top: 4.167vw;
+    }
+    .be__btn {
+        width: 28.417vw;
+        height: 9.681vw;
+        font-size: 2.75vw;
+        border-radius: 7.222vw;    
+    }
+    .be__btn.active {
+        width: 28.417vw;
+        height: 9.681vw;
+        border-radius: 7.222vw;
+    
     }
 }
