@@ -11,6 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -93,6 +94,7 @@
         </div>
       </div>
     </header>
+
     <section class="intro">
       <div class="container">
         <div class="intro__info">
@@ -205,9 +207,62 @@
         </div>
       </div>
     </section>
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">
+          What clients and business <br>
+          partners say about me:
+        </h2>
+        <div class="reviews__slider">
+          <div class="swiper reviewsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                “Ricardo is a passionate marketer who delivers results. His biggest strength is search engine
+                optimization. Together we had great results, both for our clients and for our own projects.”
+              </div>
+              <div class="swiper-slide">
+                “Ricardo is a passionate marketer who delivers results. His biggest strength is search engine
+                optimization. Together we had great results, both for our clients and for our own projects.”
+              </div>
+            </div>
+          </div>
+          <div class="swiper-flex">
+            <div class="swiper-pagin">
+              <div class="swiper-button swiper-button-next">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 17C1 25.8094 8.35978 33 17.5 33C26.6402 33 34 25.8094 34 17C34 8.19057 26.6402 1 17.5 1C8.35978 1 1 8.19057 1 17Z"
+                    stroke="black" stroke-width="2" />
+                  <path d="M15 10L23 17.3443L15 24" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="swiper-button swiper-button-prev">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M34 17C34 25.8094 26.6402 33 17.5 33C8.35978 33 1 25.8094 1 17C1 8.19057 8.35978 1 17.5 1C26.6402 1 34 8.19057 34 17Z"
+                    stroke="black" stroke-width="2" />
+                  <path d="M20 10L12 17.3443L20 24" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <script src="./js/main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".reviewsSwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
 </body>
 
