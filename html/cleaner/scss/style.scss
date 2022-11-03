@@ -189,8 +189,6 @@ body {
         margin-top: 4.688vw;
     }
 
-
-
     &__calc-btn {
         width: 37.708vw;
         height: 11.615vw;
@@ -364,6 +362,12 @@ body {
         height: 18.229vw;
         margin-left: 1vw;
         margin-top: 1.51vw;
+        transition: 0.3s;
+    }
+
+    &__content-bg:hover {
+        background-blend-mode: multiply;
+        background-color: rgba(182, 157, 121, 0.35);
     }
 
     &__bottom {
@@ -406,7 +410,8 @@ body {
     }
 
     &__info-two {
-        width: 49.90vw;;
+        width: 49.90vw;
+        ;
         height: 7.188vw;
         border: 0.052vw solid #BFBFBF;
         border-left: none;
@@ -460,6 +465,7 @@ body {
         padding-left: 2.604vw;
         height: 11.458vw;
     }
+
     &__item-info h3 {
         font-weight: 500;
         font-size: 1.458vw;
@@ -480,15 +486,35 @@ body {
     &__list-item img {
         width: 22.448vw;
         height: 14.948vw;
+        transition: 0.3s;
     }
+
+    &__list-item .ibg {
+        background-size: cover;
+        transition: 0.3s;
+        width: 22.448vw;
+        height: 14.948vw;
+    }
+
+    &__list-item .ibg img {
+        visibility: hidden;
+    }
+
+    &__list-item .ibg:hover {
+        background-blend-mode: multiply;
+        background-color: rgba(182, 157, 121, 0.35);
+    }
+
     &__item-img.one {
         margin-left: 2.604vw;
     }
+
     &__item-img.three {
         margin-right: 2.604vw;
-    } 
+    }
+
     &__item-img.two {
         width: 24.896vw;
-    } 
-  
+    }
+
 }

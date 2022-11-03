@@ -15,6 +15,18 @@ burgerClose.addEventListener('click', () => {
 });
 
 */
+function ibg(){
+
+    let ibg=document.querySelectorAll(".ibg");
+    for (var i = 0; i < ibg.length; i++) {
+    if(ibg[i].querySelector('img')){
+        ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+    }
+    }
+}
+    
+ibg();
+
 
 const priceBg = document.querySelector('.intro__price-bg');
 const iBtn = document.querySelector('.intro__right-i');
