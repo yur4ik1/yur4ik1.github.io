@@ -75,6 +75,12 @@ body {
         background: url(../img/intro-bg.png) no-repeat left top / cover;
         width: 37.3vw;
         height: 43.75vw;
+        transition: 0.3s;
+    }
+
+    &__bg:hover {
+        background-blend-mode: multiply;
+        background-color: rgba(182, 157, 121, 0.35);
     }
 
     &__info {
@@ -121,7 +127,18 @@ body {
         height: 15.365vw;
         position: absolute;
         top: 24vw;
-        right: 6.3vw;
+        right: 8vw;
+        z-index: 999;
+    }
+
+    &__right svg {
+        width: 15.365vw;
+        height: 15.365vw;
+        animation: 15s linear 0s normal none infinite running rot;
+        position: absolute;
+        top: 25vw;
+        right: 4.5vw;
+
     }
 
     &__bottom {
@@ -133,6 +150,8 @@ body {
         border-bottom: none;
         margin-top: 4.688vw;
     }
+
+
 
     &__calc-btn {
         width: 37.708vw;
@@ -148,11 +167,25 @@ body {
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #694C20;
+        transition: 0.3s;
     }
 
     &__calc-btn svg {
         width: 2.063vw;
         margin-left: 2.24vw;
+        transition: 0.3s;
+
+    }
+
+    &__calc-btn span {
+        transition: 0.3s;
+        position: relative;
+        top: 0;
+    }
+
+    &__calc-btn:hover span {
+        transform: translateX(3px);
+        top: -3px;
     }
 }
 
@@ -161,12 +194,14 @@ body {
     &__empty {
         display: flex;
     }
+
     &__block-one {
         width: 25vw;
         border: 0.052vw solid #BFBFBF;
         height: 12.5vw;
         border-top: none;
     }
+
     &__block-two {
         border: 0.052vw solid #BFBFBF;
         height: 12.5vw;
@@ -174,11 +209,52 @@ body {
         border-left: none;
         border-top: none;
     }
+
     &__block-three {
         height: 12.5vw;
         width: 62.5vw;
         border: 0.052vw solid #BFBFBF;
         border-left: none;
         border-top: none;
+    }
+
+    &__header {
+        display: flex;
+    }
+
+    &__logo {
+        width: 33.3vw;
+        height: 14.792vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo img {
+        width: 18.542vw;
+        height: 4.51vw;
+        display: block;
+    }
+
+    &__header-title {
+        padding-top: 2.76vw;
+        padding-bottom: 2.604vw;
+        padding-left: 2.604vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        margin-bottom: 100px;
+        height: 14.792vw;
+        width: 100%;
+    }
+
+    &__header-title h2 {
+        width: 56.406vw;
+        font-weight: 400;
+        font-size: 4.167vw;
+        line-height: 110.5%;
+        color: #000000;
     }
 }
