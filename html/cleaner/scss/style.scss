@@ -132,19 +132,20 @@ body {
         cursor: pointer;
         transition: 0.2s;
     }
+
     &__right-i .path-i {
         transition: 0.2s;
     }
 
-    &__right-i:hover > .path-i {
+    &__right-i:hover>.path-i {
         fill: #F2F2F2;
     }
 
-    &__right-i.active > .path-i {
+    &__right-i.active>.path-i {
         fill: #F2F2F2;
     }
 
-    &__right .star.active > .star-path {
+    &__right .star.active>.star-path {
         fill: #F2F2F2;
     }
 
@@ -260,7 +261,7 @@ body {
     }
 
     &__logo {
-        width: 33.3vw;
+        width: 25vw;
         height: 14.792vw;
         border: 0.052vw solid #BFBFBF;
         border-top: none;
@@ -282,9 +283,8 @@ body {
         border: 0.052vw solid #BFBFBF;
         border-top: none;
         border-left: none;
-        margin-bottom: 100px;
         height: 14.792vw;
-        width: 100%;
+        width: 75vw;
     }
 
     &__header-title h2 {
@@ -293,5 +293,76 @@ body {
         font-size: 4.167vw;
         line-height: 110.5%;
         color: #000000;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__content-left {
+        width: 25vw;
+        height: 33.49vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+    }
+
+    &__content-right {}
+
+    &__content-grid {
+        display: flex;
+    }
+
+    &__grid--block {
+        padding-left: 1.094vw;
+        padding-top: 3.021vw;
+        padding-bottom: 1.927vw;
+        width: auto;
+        height: 12.5vw;
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+    }
+
+    .about__grid--block:nth-child(1) {
+        width: 12.5vw;
+    }
+
+    .about__grid--block:nth-child(2) {
+        width: 15.625vw;
+    }
+
+    .about__grid--block:nth-child(3) {
+        width: 18.073vw;
+    }
+
+    .about__grid--block:nth-child(4) {
+        width: 12.24vw;
+    }
+
+    .about__grid--block:nth-child(5) {
+        width: 15.750vw;
+    }
+
+    &__grid--block h4 {
+        font-weight: 400;
+        font-size: 2.865vw;
+        line-height: 77%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #000000;
+    }
+
+    &__grid--block p {
+        font-size: 1.146vw;
+        line-height: 140.3%;
+        color: #000000;
+        margin-top: 2.135vw;
+    }
+
+    &__content-bg {
+        background: url(../img/about-bg.png) no-repeat center top / cover;
+        width: 72.292vw;
+        height: 18.229vw;
+        margin-left: 1vw;
+        margin-top: 1.51vw;
     }
 }
