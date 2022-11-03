@@ -15,3 +15,13 @@ burgerClose.addEventListener('click', () => {
 });
 
 */
+
+const priceBg = document.querySelector('.intro__price-bg');
+const iBtn = document.querySelector('.intro__right-i');
+const star = document.querySelector('.star');
+
+iBtn.addEventListener('click', () => {
+    priceBg.classList.toggle('active');
+    iBtn.classList.toggle('active');
+    star.classList.toggle('active');
+});

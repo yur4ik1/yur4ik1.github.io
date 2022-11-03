@@ -122,16 +122,53 @@ body {
         position: relative;
     }
 
-    &__right img {
-        width: 15.833vw;
-        height: 15.365vw;
+    &__right-i {
+        width: 3.594vw;
+        height: 3.594vw;
         position: absolute;
-        top: 24vw;
-        right: 8vw;
-        z-index: 999;
+        top: 25.094vw;
+        left: -6.208vw;
+        z-index: 999999;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    &__right-i .path-i {
+        transition: 0.2s;
     }
 
-    &__right svg {
+    &__right-i:hover > .path-i {
+        fill: #F2F2F2;
+    }
+
+    &__right-i.active > .path-i {
+        fill: #F2F2F2;
+    }
+
+    &__right .star.active > .star-path {
+        fill: #F2F2F2;
+    }
+
+    &__price-bg {
+        background: url(../img/price-bg.svg) no-repeat center top / cover;
+        width: 9.063vw;
+        height: 6.25vw;
+        position: absolute;
+        top: 29vw;
+        right: 7.5vw;
+        z-index: 999;
+        transition: 0.2s;
+    }
+
+
+    .intro__price-bg.active {
+        background: url(../img/price-bg-2.svg) no-repeat center top / cover;
+        width: 8.698vw;
+        height: 7.031vw;
+        right: 7.7vw;
+        top: 28.5vw;
+    }
+
+    &__right .star {
         width: 15.365vw;
         height: 15.365vw;
         animation: 15s linear 0s normal none infinite running rot;
