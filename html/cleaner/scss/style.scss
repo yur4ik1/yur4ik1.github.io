@@ -510,11 +510,11 @@ body {
     }
 
     &__item-img.one {
-        margin-left: 2.604vw;
+        float: right;
     }
 
     &__item-img.three {
-        margin-right: 2.604vw;
+        float: left;
     }
 
     &__item-img.two {
@@ -532,6 +532,7 @@ body {
 .swiper-slide {
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 
 .services__map .swiper-slide img {
@@ -541,7 +542,7 @@ body {
 }
 
 .services__map .swiper-wrapper {
-    width: 69.948vw!important;
+    width: 69.948vw !important;
     height: 33.281vw;
 }
 
@@ -551,21 +552,97 @@ body {
     width: 68.677vw;
 }
 
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
     display: none;
 }
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
     display: none;
 }
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
     opacity: 1;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     width: 3.229vw;
     height: 3.229vw;
 }
+
 .swiper-button svg {
     width: 3.229vw;
     height: 3.229vw;
+}
+
+.blob {
+    z-index: 9999;
+    cursor: pointer;
+    position: absolute;
+    width: 2.9vw;
+    height: 3.281vw;
+    background: #fff;
+    border-radius: 5.208vw;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.blob:hover {
+    width: 12.24vw;
+}
+
+.blob-1 {
+    top: 19.875vw;
+    left: 7.208vw;
+}
+
+.blob p {
+    font-weight: 400;
+    font-size: 0.938vw;
+    line-height: 140.3%;
+    color: #000000;
+    white-space: nowrap;
+    position: absolute;
+    transition: 0.3s;
+    left: 0vw;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    z-index: -1;
+}
+
+.blob:hover>p {
+    opacity: 1;
+    width: 0;
+    left: 3.294vw;
+}
+
+.blob .icon {
+    width: 2.708vw;
+    height: 2.708vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob svg {
+    width: 2.396vw;
+    height: 2.448vw;
+    position: relative;
+}
+
+.blob-2 {
+    top: 27.875vw;
+    left: 18.208vw;
+    width: 2.708vw;
+    height: 2.708vw;
+}
+
+.blob-2 svg {
+    width: 1.979vw;
+    height: 1.979vw;
 }
