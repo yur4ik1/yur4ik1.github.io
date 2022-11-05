@@ -1446,6 +1446,9 @@ body {
         text-transform: uppercase;
         color: #694C20;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__form .contacts__form-btn span {
@@ -1469,19 +1472,117 @@ body {
     }
 
     &__form-bottom-col-1 {
-        width: 56vw;
+        width: 57vw;
         height: 2.708vw;
         border: 0.052vw solid #bfbfbf;
         border-top: none;
         border-left: none;
+        font-weight: 300;
+        font-size: 0.938vw;
+        line-height: 140.3%;
+        color: #000000;
+        display: flex;
+        align-items: center;
+        padding-left: 2.708vw;
     }
 
     &__form-bottom-col-2 {
-        width: 18.021vw;
+        width: 17vw;
         height: 2.708vw;
         border: 0.052vw solid #bfbfbf;
         border-top: none;
         border-right: none;
         border-left: none;
+    }
+
+    &__form-bottom-col-1 a {
+        text-decoration: underline;
+        color: #000000;
+    }
+
+    &__info-wrapper {
+        display: flex;
+    }
+
+    &__info-item {
+        width: 35.885vw;
+        height: 17.5vw;
+        border: 0.052vw solid #bfbfbf;
+        border-left: none;
+        border-top: none;
+        padding-left: 2.604vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__info-item h3 {
+        font-weight: 500;
+        font-size: 1.458vw;
+        line-height: 114.5%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #000000;
+        margin-bottom: 1.563vw;
+    }
+
+    &__phone {
+        font-weight: 400;
+        font-size: 1.146vw;
+        line-height: 201.3%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #000000;
+        margin-bottom: 1.354vw;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+    }
+
+    &__social svg {
+        width: 1.354vw;
+        height: 1.354vw;
+        margin-right: 1.667vw;
+    }
+
+    &__email {
+        margin-top: 1.354vw;
+        font-weight: 400;
+        font-size: 1.146vw;
+        line-height: 201.3%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #000000;
+    }
+
+
+
+    &__info-right {
+        width: 38.063vw;
+        height: 45.99vw;
+        border: 0.052vw solid #bfbfbf;
+        border-right: none;
+        border-left: none;
+        border-top: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__info-img {
+        width: 35.885vw;
+        height: 42.76vw;
+        background-size: cover;
+        transition: 0.5s;
+    }
+
+    &__info-img img {
+        width: 35.885vw;
+        height: 42.76vw;
+        visibility: hidden;
+    }
+
+    &__info-img:hover {
+        background-blend-mode: multiply;
+        background-color: rgba(182, 157, 121, 0.35);
     }
 }
