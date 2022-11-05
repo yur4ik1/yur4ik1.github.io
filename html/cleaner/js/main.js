@@ -20,6 +20,10 @@ burgerOpen.addEventListener('click', () => {
     scrollMenu.classList.toggle('active');
 });
 
+burgerClose = () => {
+    burgerOpen.classList.remove('active');
+    scrollMenu.classList.remove('active');
+};
 
 //  Intro
 
