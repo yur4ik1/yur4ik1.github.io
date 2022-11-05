@@ -9,7 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .header .container {
     display: flex;
     align-items: center;
@@ -37,7 +36,6 @@ body {
         border: 0.052vw solid #BFBFBF;
         width: 12.5vw;
         height: 12.5vw;
-
         border-right: none;
     }
 
@@ -46,7 +44,6 @@ body {
         border: 0.052vw solid #BFBFBF;
         height: 12.5vw;
         border-right: none;
-
         font-weight: 500;
         font-size: 1.354vw;
         line-height: 140.3%;
@@ -63,10 +60,195 @@ body {
         justify-content: center;
     }
 
-    &__burger-btn img {
+    &__burger-btn {
+        transition: 0.3s;
+    }
+
+    &__burger-btn svg {
         width: 3.854vw;
         height: 3.854vw;
+        transition: 0.3s;
     }
+
+    &__burger-btn.active>svg {
+        transform: rotate(45deg);
+    }
+
+    &__burger-btn.active>svg path {
+        fill: #000;
+    }
+
+    &__scroll-menu {
+        width: 100%;
+        height: 43.75vw;
+        border: 0.052vw solid #BFBFBF;
+        border-right: none;
+        border-top: none;
+        position: absolute;
+        top: 12.5vw;
+        bottom: 0;
+        right: 0;
+        transform: translate(-150%);
+        z-index: 9999999;
+        transition: .3s;
+        display: flex;
+        background: #fff;
+    }
+
+    &__scroll-left {
+        width: 25vw;
+        height: 100%;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &__scroll-menu.active {
+        transform: translate(0%);
+    }
+
+    &__scroll-list {
+        width: 74.050vw;
+        display: flex;
+    }
+
+    &__scroll-col {
+        display: flex;
+        align-items: center;
+    }
+
+    &__scroll-col a {
+        font-weight: 400;
+        font-size: 2.865vw;
+        line-height: 110.5%;
+        color: #000000;
+    }
+
+    &__scroll-col-1 {
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+        width: 25.885vw;
+        height: 8.021vw;
+        padding-left: 12.292vw;
+    }
+
+    &__scroll-col-2 {
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+        width: 29.688vw;
+        height: 8.021vw;
+        padding-left: 3.542vw;
+    }
+
+    &__scroll-col-3 {
+        width: 19.427vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+    }
+
+    &__scroll-col-4 {
+        width: 31.25vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        padding-left: 12.292vw;
+    }
+
+    &__scroll-col-5 {
+        width: 17.135vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        padding-left: 2.969vw;
+    }
+
+    &__scroll-col-6 {
+        width: 26.615vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+    }
+
+    &__scroll-col-7 {
+        width: 34.219vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        padding-left: 12.292vw;
+    }
+
+    &__scroll-col-8 {
+        width: 40.781vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 2.083vw;
+    }
+
+    &__scroll-col-9 {
+        width: 40.781vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        padding-left: 12.292vw;
+    }
+
+    &__scroll-col-10 {
+        width: 14.948vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+    }
+
+    &__scroll-col-11 {
+        width: 22.604vw;
+        height: 8.021vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    &__scroll-bottom {
+        width: 73.8vw;
+        height: 11.563vw;
+        border: 0.052vw solid #BFBFBF;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    &__scroll-bottom-btn {
+        width: 37.708vw;
+        height: 11.615vw;
+        background: #EEB969;
+        font-weight: 500;
+        font-size: 1.354vw;
+        line-height: 140.3%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12.292vw;
+    }
+
 }
 
 .intro .container {
@@ -87,7 +269,7 @@ body {
     }
 
     &__info {
-        width: 49.8vw;
+        width: 49.9vw;
         border: 0.052vw solid #BFBFBF;
         border-top: none;
         border-left: none;
@@ -1519,6 +1701,7 @@ body {
     &__info-item:nth-child(2) {
         height: 15.104vw;
     }
+
     &__info-item:nth-child(3) {
         height: 13.385vw;
     }

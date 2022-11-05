@@ -1,24 +1,7 @@
-//  Burger menu
-
-/*
-
-let mobileMenu = document.querySelector('.header__menu-mob');
-let burgerClose = document.querySelector('.header__burger-close');
-let burgerOpen = document.querySelector('.header__burger');
-
-burgerOpen.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-});
-
-burgerClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-});
-
-*/
 function ibg(){
 
     let ibg=document.querySelectorAll(".ibg");
-    for (var i = 0; i < ibg.length; i++) {
+    for (let i = 0; i < ibg.length; i++) {
     if(ibg[i].querySelector('img')){
         ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
     }
@@ -27,6 +10,18 @@ function ibg(){
     
 ibg();
 
+//  Burger menu
+
+const scrollMenu = document.querySelector('.header__scroll-menu');
+const burgerOpen = document.querySelector('.header__burger-btn');
+
+burgerOpen.addEventListener('click', () => {
+    burgerOpen.classList.toggle('active');
+    scrollMenu.classList.toggle('active');
+});
+
+
+//  Intro
 
 const priceBg = document.querySelector('.intro__price-bg');
 const iBtn = document.querySelector('.intro__right-i');
@@ -38,6 +33,7 @@ iBtn.addEventListener('click', () => {
     star.classList.toggle('active');
 });
 
+// Hover slider
 
 const arrow1 = document.querySelector('.work__top-arrow-1');
 const arrow2 = document.querySelector('.work__top-arrow-2');
