@@ -1798,6 +1798,10 @@ body {
     display: none;
 }
 
+.work__item-pagination-2 {
+    display: none;
+}
+
 
 @media screen and (max-width: 900px) {
     .container {
@@ -1847,7 +1851,7 @@ body {
     }
 
     .header__block-mob {
-        border: 0.333vw solid #bfbfbf;
+        border: 0.052vw solid #bfbfbf;
         border-top: none;
         border-right: none;
         width: 35.667vw;
@@ -1866,7 +1870,7 @@ body {
         color: #000000;
         width: 71vw;
         height: 35.333vw;
-        border: 0.333vw solid #bfbfbf;
+        border: 0.052vw solid #bfbfbf;
         border-top: none;
         border-right: none;
     }
@@ -1876,7 +1880,7 @@ body {
         width: 100%;
         height: 200vw;
         top: 28vw;
-        border-bottom: 0.333vw solid #bfbfbf;
+        border-bottom: 0.052vw solid #bfbfbf;
     }
 
     .header__scroll-left {
@@ -1943,7 +1947,7 @@ body {
         line-height: 140.3%;
         margin: 0;
         width: 100%;
-        margin-bottom: 10.333vw;
+        margin-bottom: 10.052vw;
     }
 
     .intro__bottom {
@@ -1977,7 +1981,7 @@ body {
         order: 5;
         top: 17.333vw;
         left: 0;
-        border-top: 0.333vw solid #bfbfbf;
+        border-top: 0.052vw solid #bfbfbf;
     }
 
     .intro__right-i {
@@ -2153,7 +2157,7 @@ body {
         height: auto;
         padding-top: 7.333vw;
         padding-bottom: 0;
-        border-top: 0.333vw solid #bfbfbf;
+        border-top: 0.052vw solid #bfbfbf;
         border-bottom: none;
     }
 
@@ -2198,7 +2202,7 @@ body {
     .services__list-item-bottom--mob .col-1 {
         width: 83.333vw;
         height: 35.333vw;
-        border: 0.333vw solid #bfbfbf;
+        border: 0.052vw solid #bfbfbf;
         border-right: none;
         border-bottom: none;
     }
@@ -2206,7 +2210,7 @@ body {
     .services__list-item-bottom--mob .col-2 {
         width: 23.333vw;
         height: 35.333vw;
-        border: 0.333vw solid #bfbfbf;
+        border: 0.052vw solid #bfbfbf;
         border-right: none;
         border-bottom: none;
     }
@@ -2214,7 +2218,7 @@ body {
 
     .services__map {
         width: 100vw;
-        border: 0.333vw solid #bfbfbf;
+        border: 0.052vw solid #bfbfbf;
         padding-bottom: 5vw;
     }
 
@@ -2324,7 +2328,11 @@ body {
     .blob:hover {
         width: 12vw !important;
     }
-
+    .blob:hover>p {
+        opacity: 0;
+        width: 0;
+        left: 0vw;
+    }
 
     .services__bottom-wrapper {
         width: 100%;
@@ -2335,7 +2343,7 @@ body {
     }
 
     .services__bottom-text {
-        width: 80.333vw !important;
+        width: 80.052vw !important;
         width: 82.667vw;
         height: 35vw;
         font-size: 5.333vw;
@@ -2352,7 +2360,7 @@ body {
     .services__bottom-center {
         width: 100vw;
         height: 37.333vw;
-        border-bottom: 0.333vw solid #bfbfbf;
+        border-bottom: 0.052vw solid #bfbfbf;
         padding-top: 2.333vw;
     }
 
@@ -2386,7 +2394,7 @@ body {
 
     .about__header {
         flex-direction: column;
-        border-top: 0.333vw solid #bfbfbf;
+        border-top: 0.052vw solid #bfbfbf;
         position: relative;
     }
 
@@ -2415,7 +2423,7 @@ body {
 
     .leave__list-item {
         flex-direction: column;
-        border-top: 0.333vw solid #bfbfbf;
+        border-top: 0.052vw solid #bfbfbf;
         margin-bottom: 8.333vw;
     }
 
@@ -2450,7 +2458,7 @@ body {
     }
 
     .leave__bottom {
-        border-top: 0.333vw solid #bfbfbf;
+        border-top: 0.052vw solid #bfbfbf;
     }
 
     .leave__bottom-col-3,
@@ -2470,7 +2478,7 @@ body {
 
 
     .work__header-title {
-        height: 30.333vw;
+        height: 30.052vw;
         padding-top: 2.667vw;
     }
 
@@ -2680,8 +2688,12 @@ body {
         top: 271.333vw;
         z-index: 9999999;
         width: 100%;
-        display: none;
     }
+    .work__item-pagination-2 {
+        top: 183vw;
+    }
+
+
 
     .contacts .about__header {
         width: 99.667vw;
@@ -2716,6 +2728,8 @@ body {
         border-top: 0.052vw solid #bfbfbf;
         border-bottom: none;
         border-left: 0.052vw solid #bfbfbf;
+        border-bottom: 0.052vw solid #bfbfbf;
+        margin-bottom: 3.667vw;
     }
 
     .contacts__form .contacts__form-input::placeholder {
@@ -2728,10 +2742,86 @@ body {
         width: 95vw;
         height: 135.999px;
         font-size: 4.667vw;
-        margin-top: 4.667vw;
+        margin-top: 0;
     }
 
     .contacts__form .contacts__form-btn svg {
         display: none;
+    }
+
+    .contacts__form-bottom {
+        width: 99.667vw;
+    }
+
+    .contacts__form-bottom-col-1 {
+        width: 100%;
+        height: 24.667vw;
+        font-size: 14px;
+        display: block;
+        padding-top: 5.333vw;
+        padding-right: 23.333vw;
+        padding-left: 3.333vw;
+    }
+
+    .contacts__form-bottom-col-2 {
+        display: none;
+    }
+
+    .contacts__info-wrapper {
+        width: 100vw;
+    }
+
+    .contacts__info-item {
+        width: 100%;
+        height: 88.333vw;
+    }
+
+    .contacts__info-item:nth-child(2) {
+        width: 100%;
+        height: 55.667vw;
+    }
+    .contacts__info-item:nth-child(3) {
+        width: 100%;
+        height: 42.333vw;
+    }
+    .contacts__info-item h3 {
+        font-size: 8vw;
+        line-height: 114.5%;
+        margin-bottom: 8.333vw;
+    }
+
+    .contacts__phone {
+        font-size: 6vw;
+        line-height: 201.3%;
+        margin-bottom: 7vw;
+    }
+    .contacts__email {
+        font-size: 6vw;
+        margin-top: 3.333vw;
+    }
+    .contacts__social svg {
+        width: 7.333vw;
+        margin-right: 9vw;
+        height: 7.333vw;
+    }
+
+    .contacts__info-item:nth-child(3) .contacts__phone  {
+        margin-bottom: 0;
+     }
+ 
+    .contacts__info-wrapper {
+        flex-direction: column;
+    }
+
+    .contacts__info-right {
+        width: 100vw;
+        height: 273.667vw;
+        padding-top: 5.333vw;
+    }
+
+    .contacts__info-img {
+        width: 100%;
+        height: 273.667vw;
+        background-position-x: center;
     }
 }
