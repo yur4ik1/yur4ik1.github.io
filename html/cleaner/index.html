@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta name="description" content="">
+  <title>Rico</title>
+  <meta name="description" content="Setting up ads and creating websites">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/animate.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -19,881 +20,408 @@
     <header class="header">
       <div class="container">
         <a class="header__logo" href="#">
-          <img src="./img/logotype.svg" alt="">
+          <img src="./img/header-logo.svg" alt="">
         </a>
-        <div class="header__block"></div>
-        <div class="header__info">
-          Профессиональная уборка от лидеров отрасли
-        </div>
-        <div class="header__block"></div>
-        <div class="header__block header__burger">
-          <a class="header__burger-btn" href="#">
-            <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Home</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Consulting</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Cyprus</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">About</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <span class="header__burger">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
+            viewBox="0 0 384 384" style="enable-background:new 0 0 512 512" xml:space="preserve">
+            <g>
               <path
-                d="M11.5625 32.3753C10.9492 32.3753 10.361 32.1316 9.92732 31.6979C9.49364 31.2643 9.25 30.6761 9.25 30.0628V11.5674C9.25 10.9541 9.49364 10.3659 9.92732 9.9322C10.361 9.49852 10.9492 9.25488 11.5625 9.25488H30.0625C30.6758 9.25488 31.264 9.49852 31.6977 9.9322C32.1314 10.3659 32.375 10.9541 32.375 11.5674V30.0628C32.375 30.6761 32.1314 31.2643 31.6977 31.6979C31.264 32.1316 30.6758 32.3753 30.0625 32.3753H11.5625ZM43.9375 32.3753C43.3242 32.3753 42.736 32.1316 42.3023 31.6979C41.8686 31.2643 41.625 30.6761 41.625 30.0628V11.5674C41.625 10.9541 41.8686 10.3659 42.3023 9.9322C42.736 9.49852 43.3242 9.25488 43.9375 9.25488H62.4329C63.0462 9.25488 63.6344 9.49852 64.0681 9.9322C64.5017 10.3659 64.7454 10.9541 64.7454 11.5674V30.0628C64.7454 30.6761 64.5017 31.2643 64.0681 31.6979C63.6344 32.1316 63.0462 32.3753 62.4329 32.3753H43.9375ZM11.5625 64.7503C10.9492 64.7503 10.361 64.5066 9.92732 64.0729C9.49364 63.6393 9.25 63.0511 9.25 62.4378V43.9378C9.25 43.3244 9.49364 42.7362 9.92732 42.3026C10.361 41.8689 10.9492 41.6253 11.5625 41.6253H30.0625C30.6758 41.6253 31.264 41.8689 31.6977 42.3026C32.1314 42.7362 32.375 43.3244 32.375 43.9378V62.4378C32.375 63.0511 32.1314 63.6393 31.6977 64.0729C31.264 64.5066 30.6758 64.7503 30.0625 64.7503H11.5625ZM43.9375 64.7503C43.3242 64.7503 42.736 64.5066 42.3023 64.0729C41.8686 63.6393 41.625 63.0511 41.625 62.4378V43.9378C41.625 43.3244 41.8686 42.7362 42.3023 42.3026C42.736 41.8689 43.3242 41.6253 43.9375 41.6253H62.4329C63.0462 41.6253 63.6344 41.8689 64.0681 42.3026C64.5017 42.7362 64.7454 43.3244 64.7454 43.9378V62.4378C64.7454 63.0511 64.5017 63.6393 64.0681 64.0729C63.6344 64.5066 63.0462 64.7503 62.4329 64.7503H43.9375Z"
-                fill="#EEB969" />
+                d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                fill="#000000" data-original="#000000" />
+              <path
+                d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                fill="#000000" data-original="#000000" />
+              <path
+                d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                fill="#000000" data-original="#000000" />
+            </g>
+          </svg>
+        </span>
+        <div class="header__menu-mob">
+          <span class="header__burger-close">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
+              viewBox="0 0 384 384" style="enable-background:new 0 0 512 512" xml:space="preserve">
+              <g>
+                <path
+                  d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                  fill="#000000" data-original="#000000" />
+                <path
+                  d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                  fill="#000000" data-original="#000000" />
+                <path
+                  d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
+                  fill="#000000" data-original="#000000" />
+              </g>
             </svg>
-          </a>
-        </div>
-
-        <div class="header__scroll-menu">
-          <div class="header__scroll-left"></div>
-          <div>
-            <div class="header__scroll-list">
-              <div class="header__scroll-col header__scroll-col-1">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#services">
-                  Услуги
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-2">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#contacts">
-                  Контакты
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-3"></div>
-            </div>
-            <div class="header__scroll-list">
-              <div class="header__scroll-col header__scroll-col-4">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#leave">
-                  Почему мы
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-5">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#adress">
-                  Адрес
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-6"></div>
-            </div>
-            <div class="header__scroll-list">
-              <div class="header__scroll-col header__scroll-col-7">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#work">
-                  Где работаем
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-8">
-                <a href="#worktime" onclick="burgerClose()">
-                  График работы
-                </a>
-              </div>
-            </div>
-            <div class="header__scroll-list">
-              <div class="header__scroll-col header__scroll-col-9">
-                <a class="header__scroll-col-link" onclick="burgerClose()" href="#work__adress">
-                  С кем работаем
-                </a>
-              </div>
-              <div class="header__scroll-col header__scroll-col-10"></div>
-              <div class="header__scroll-col header__scroll-col-11"></div>
-            </div>
-            <div class="header__scroll-bottom">
-              <a class="header__scroll-bottom-btn" href="#contacts">получить коммерческое предложение</a>
-            </div>
-          </div>
+          </span>
+          <ul class="mobile__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Home</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Consulting</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Cyprus</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">About</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
 
     <section class="intro">
       <div class="container">
-        <div class="intro__bg"></div>
         <div class="intro__info">
           <h1 class="intro__title">
-            <span>Клининг</span>
-            для бизнеса
+            <span>Ricardo Gorski:</span><br>
+            YouTuber, Entrepreneur<br>
+            & Marketing Consultant
+            <svg class="intro__title-border" width="349" height="12" viewBox="0 0 349 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.4697 9.62893C13.4697 5.35431 24.0938 4.42497 32.7535 4.94591C37.5659 5.29663 42.1734 6.18655 46.1787 7.53891C51.5938 9.32746 57.009 11.116 63.7541 11.138C70.4992 11.16 83.1219 7.43089 92.802 5.72727C102.482 4.02366 113.297 8.20052 123.52 10.4118C133.743 12.623 144.691 11.5519 154.387 9.24852C164.082 6.94514 171.875 3.69298 181.165 4.68013C190.455 5.66727 192.003 7.95733 198.404 8.87079C204.101 9.51254 210.001 9.40316 215.437 8.55502C221.12 7.5936 226.932 6.78998 232.844 6.14824C238.691 5.74941 244.74 6.38474 249.823 7.93167C256.526 9.60302 262.912 11.1162 270.307 10.8547C277.702 10.5932 285.785 8.54878 293.837 7.70387C310.171 6.23491 327.287 7.14236 342.917 10.306C348.669 11.503 351.348 7.2202 345.596 6.02323C331.416 3.19144 316.101 2.02736 301.033 2.63604C293.418 3.05278 285.962 3.86915 278.806 5.06993C271.71 6.23928 265.912 6.84163 258.567 5.1539C251.222 3.46617 247.083 2.01025 240.671 1.54662C234.381 1.2519 228.096 1.65724 222.331 2.72929C216.526 3.63151 210.709 4.98355 204.61 4.82798C198.511 4.67242 192.798 1.97605 186.725 0.770893C180.653 -0.434261 165.836 1.13834 156.783 3.45809C147.73 5.77785 138.019 8.68101 127.158 6.30346C116.297 3.9259 106.774 -0.518102 93.2493 0.78738C88.0228 1.58423 83.0368 2.66542 78.3909 4.00937C73.8623 5.24422 69.005 6.77076 63.8688 6.63976C58.7326 6.50876 51.7391 3.62968 45.9915 2.28277C40.4427 1.03922 34.4268 0.373439 28.374 0.333039C16.4927 0.180043 4.86357 2.73418 1.19092 8.19196C-0.803995 10.8418 8.47477 12.2788 10.4697 9.62893V9.62893Z"
+                fill="#F6B643" />
+            </svg>
           </h1>
-          <p class="intro__desc">
-            Все виды услуг для офисов, жилых комплексов, гостиниц, ресторанов и бизнес-центров с персональным подходом к
-            каждому клиенту
+          <div class="intro__btns">
+            <a class="intro__btn active" href="#">CONTACT ME</a>
+            <a class="intro__btn" href="#">ABOUT ME</a>
+          </div>
+          <div class="intro__arrow">
+            <svg width="264" height="110" viewBox="0 0 264 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M262.126 73.7782C241.587 54.1619 209.063 18.251 175.926 29.6171C150.499 38.3381 151.905 70.6337 142.478 91.3134C116.662 147.941 41.8903 46.6528 21.987 27.7762C16.868 22.9213 -0.102236 -3.11047 2.14991 9.61703C4.18219 21.102 8.34999 59.9602 7.73518 28.6358C7.55924 19.6718 -0.553219 11.349 5.61104 2.70715C8.08421 -0.76006 45.001 11.9975 48.1088 15.1939"
+                stroke="#F6B643" stroke-width="3" stroke-linecap="round" />
+            </svg>
+          </div>
+          <p class="intro__bottom-desc">
+            Transition from Outbound <br>
+            to Inbound Marketing.
           </p>
-          <div class="intro__bottom">
-            <a class="intro__calc-btn" href="#contacts">Рассчитать стоимость
-              <span class="intro__rotate-arrow">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        </div>
+      </div>
+      <div class="intro__bg"></div>
+      <div class="intro__bg-mob"></div>
+    </section>
+
+    <section class="walk">
+      <div class="container">
+        <div class="walk__left">
+          <p class="walk__subtitle">LESS TALK,</p>
+          <p class="walk__subtitle">MORE <span> WALK.</span></p>
+
+          <div class="walk__arrow">
+            <svg width="1208" height="2043" viewBox="0 0 1208 2043" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M444.032 166.544C498.105 216.364 668.758 236.981 654.358 160.088C645.675 113.719 609.029 76.0284 560.584 70.1312C484.547 60.8752 528.253 223.633 628.36 278.165C728.468 332.697 818.952 351.791 875.134 372.862"
+                stroke="#B4B2B2" stroke-dasharray="10 10" />
+              <path
+                d="M870.221 370.871C995.252 412.155 1112.82 622.348 1124.56 683.954C1134.72 737.282 1132.97 913.746 1098.13 996.934C1006.04 1216.81 686.246 1171.31 489.701 1210.98C351.863 1238.8 247.422 1289.04 170.926 1387.29C87.6242 1494.28 78.1796 1611.95 126.881 1733.4C189.633 1889.9 340.754 1943.09 507.275 2015.81C529.587 2025.56 469.212 1999.35 469.212 1999.35"
+                stroke="#B4B2B2" stroke-dasharray="10 10" />
+            </svg>
+          </div>
+        </div>
+        <div class="walk__right">
+          <h2 class="walk__title">
+            Don’t get burned <br>
+            by traditional<br>
+            agencies.<br>
+          </h2>
+          <p class="walk__text">
+            Marketing campaigns <span> make or break</span> a business. Traditional agencies follow outdated guidelines
+            and rarely
+            deliver results. Ambitious marketing campaigns are created by <span> visionaries</span> and <span> lateral
+              thinkers</span> who don't
+            follow the rules. They are confident in their work, and that is how they create something
+            <span>extraordinary.</span>
+          </p>
+          <div class="walk__btns">
+            <a class="btn walk__btn active" href="#">CONTACT ME</a>
+            <a class="btn walk__btn" href="#">ABOUT ME</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="be">
+      <div class="container">
+        <div class="be__section">
+          <img src="./img/be.png" alt="">
+          <div class="be__section-text">
+            <h2>Be<br>
+              ambitious.
+            </h2>
+            <p>
+              Ambitious marketing campaigns are designed to increase <br> <span> brand awareness</span> and generate
+              highly relevant leads,<br>
+              <span>organically.</span>
+            </p>
+            <div class="be__btns">
+              <a class="btn be__btn active" href="#">CONTACT ME</a>
+              <a class="btn be__btn" href="#">ABOUT ME</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="be__section reverse">
+          <img src="./img/be.png" alt="">
+          <div class="be__section-text">
+            <h2>Become <br>
+              successful.
+            </h2>
+            <p>
+              This is your chance to enter a new dimension. Scale <br>
+              your business with a <span>bulletproof approach to success.</span>
+            </p>
+            <div class="be__btns">
+              <a class="btn be__btn active" href="#">CONTACT ME</a>
+              <a class="btn be__btn" href="#">ABOUT ME</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">
+          What clients and business <br>
+          partners say about me:
+          <svg width="201" height="13" viewBox="0 0 201 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.56781 11.0063C7.38733 6.71872 13.5334 5.73715 18.5163 6.21498C21.2842 6.54171 23.9226 7.40841 26.204 8.74035C29.2894 10.5013 32.3747 12.2622 36.264 12.2508C40.1533 12.2394 47.5106 8.44937 53.1285 6.69855C58.7464 4.94772 64.8958 9.0692 70.7447 11.2288C76.5936 13.3885 82.9299 12.2636 88.5692 9.9132C94.2085 7.5628 98.7702 4.27346 104.107 5.21416C109.444 6.15486 110.288 8.43625 113.961 9.31761C117.233 9.93085 120.637 9.7923 123.79 8.9176C127.087 7.92845 130.456 7.09639 133.878 6.42565C137.259 5.99803 140.734 6.60312 143.633 8.12419C147.463 9.76161 151.114 11.2425 155.384 10.9445C159.654 10.6465 164.358 8.5629 169.019 7.67847C178.469 6.12924 188.32 6.95152 197.268 10.0364C200.56 11.2044 202.194 6.91013 198.902 5.74218C190.784 2.98187 181.977 1.89415 173.275 2.57721C168.874 3.03149 164.558 3.88443 160.406 5.12014C156.289 6.32413 152.934 6.95493 148.733 5.30432C144.533 3.65371 142.177 2.21892 138.488 1.78726C134.868 1.52382 131.234 1.96012 127.887 3.06027C124.521 3.99084 121.138 5.3711 117.624 5.24582C114.11 5.12054 110.872 2.45364 107.395 1.27909C103.919 0.10454 95.3417 1.74984 90.0723 4.11343C84.8029 6.47703 79.1422 9.42702 72.9287 7.1043C66.7153 4.78158 61.3165 0.38669 53.4898 1.7586C50.4591 2.58099 47.5612 3.6864 44.8539 5.05278C42.2165 6.30952 39.3835 7.85946 36.4243 7.75396C33.4651 7.64846 29.4924 4.80527 26.2061 3.48742C23.0323 2.2719 19.577 1.63621 16.0874 1.62581C9.23891 1.53173 2.47923 4.14236 0.247058 9.61595C-0.958829 12.2745 4.36192 13.6649 5.56781 11.0063Z"
+              fill="white" />
+          </svg>
+        </h2>
+        <div class="reviews__slider">
+          <div class="swiper reviewsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                “Ricardo is a passionate marketer who delivers results. His biggest strength is search engine
+                optimization. Together we had great results, both for our clients and for our own projects.”
+              </div>
+              <div class="swiper-slide">
+                “Ricardo is a passionate marketer who delivers results. His biggest strength is search engine
+                optimization. Together we had great results, both for our clients and for our own projects.”
+              </div>
+            </div>
+          </div>
+          <div class="swiper-flex">
+            <div class="swiper-pagin">
+              <div class="swiper-button swiper-button-next">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M30 0.999999C30 0.447716 29.5523 1.03477e-06 29 -5.66806e-07L20 -1.11471e-06C19.4477 -1.0319e-07 19 0.447714 19 1C19 1.55229 19.4477 2 20 2L28 2L28 10C28 10.5523 28.4477 11 29 11C29.5523 11 30 10.5523 30 10L30 0.999999ZM1.70711 29.7071L29.7071 1.70711L28.2929 0.292893L0.292893 28.2929L1.70711 29.7071Z"
-                    fill="#694C20" />
+                    d="M1 17C1 25.8094 8.35978 33 17.5 33C26.6402 33 34 25.8094 34 17C34 8.19057 26.6402 1 17.5 1C8.35978 1 1 8.19057 1 17Z"
+                    stroke="black" stroke-width="2" />
+                  <path d="M15 10L23 17.3443L15 24" stroke="black" stroke-width="2" stroke-linecap="round" />
                 </svg>
-              </span>
+              </div>
+              <div class="swiper-button swiper-button-prev">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M34 17C34 25.8094 26.6402 33 17.5 33C8.35978 33 1 25.8094 1 17C1 8.19057 8.35978 1 17.5 1C26.6402 1 34 8.19057 34 17Z"
+                    stroke="black" stroke-width="2" />
+                  <path d="M20 10L12 17.3443L20 24" stroke="black" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients">
+      <div class="container">
+        <h2 class="clients__title">
+          More clients & <br>
+          business partners
+          <svg width="159" height="14" viewBox="0 0 159 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.88058 11.6592C6.34287 7.35886 11.1791 6.3306 15.0903 6.77022C17.2624 7.0757 19.3287 7.92201 21.111 9.23615C23.5215 10.973 25.9321 12.7099 28.9879 12.6688C32.0436 12.6276 37.8529 8.78243 42.2801 6.98916C46.7072 5.19588 51.507 9.26924 56.0858 11.3836C60.6645 13.498 65.6513 12.325 70.0999 9.93211C74.5484 7.53926 78.1575 4.21596 82.3432 5.11561C86.5289 6.01527 87.175 8.28959 90.0535 9.14264C92.6195 9.73072 95.2954 9.56619 97.7788 8.66764C100.377 7.65356 103.03 6.79598 105.724 6.09927C108.383 5.64593 111.109 6.22431 113.375 7.72281C116.372 9.33051 119.229 10.7831 122.586 10.4526C125.943 10.122 129.654 8.00302 133.323 7.08322C140.76 5.4622 148.493 6.20897 155.499 9.22464C158.076 10.3671 159.393 6.06158 156.816 4.91909C150.459 2.22157 143.548 1.20146 136.706 1.95082C133.245 2.4386 129.847 3.3243 126.576 4.5914C123.332 5.82652 120.691 6.48279 117.404 4.86473C114.116 3.24667 112.276 1.83028 109.381 1.42692C106.539 1.19122 103.681 1.65516 101.043 2.78059C98.3909 3.73664 95.7229 5.14237 92.963 5.04397C90.2031 4.94557 87.6793 2.30415 84.9569 1.15649C82.2344 0.00882549 75.4831 1.71922 71.3251 4.12244C67.167 6.52565 62.6971 9.5181 57.8332 7.24349C52.9693 4.96889 48.7612 0.616451 42.6017 2.04779C40.2143 2.89312 37.9291 4.02038 35.7916 5.40707C33.7099 6.68362 31.4723 8.25479 29.1482 8.17193C26.8241 8.08907 23.7246 5.27702 21.1527 3.98464C18.6685 2.79371 15.9587 2.18459 13.2171 2.20086C7.83722 2.15914 2.50646 4.82071 0.710901 10.3099C-0.256833 12.9769 3.91285 14.3263 4.88058 11.6592Z"
+              fill="#F6B643" />
+          </svg>
+        </h2>
+        <div class="clients__list">
+          <div class="clients__list-item">
+            <img src="./img/client-logo-1.png" alt="">
+          </div>
+          <div class="clients__list-item">
+            <img src="./img/client-logo-2.png" alt="">
+          </div>
+          <div class="clients__list-item">
+          </div>
+          <div class="clients__list-item">
+          </div>
+          <div class="clients__list-item">
+          </div>
+          <div class="clients__list-item">
+          </div>
+          <div class="clients__list-item">
+          </div>
+          <div class="clients__list-item">
+          </div>
+        </div>
+
+        <div class="clients__bottom">
+          <h2 class="clients__bottom-title">
+            Ambitious brands deserve <br>
+            ambitious marketing.
+            <svg width="305" height="14" viewBox="0 0 305 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.46762 11.8115C11.0656 7.50487 20.3433 6.46083 27.9126 6.88817C32.1194 7.18687 36.1501 8.02693 39.6571 9.3359C44.3984 11.0658 49.1397 12.7957 55.0334 12.7448C60.9271 12.6939 71.9359 8.82876 80.3846 7.02073C88.8334 5.21269 98.3059 9.27233 107.25 11.3729C116.194 13.4735 125.755 12.2842 134.214 9.87632C142.673 7.46841 149.464 4.13236 157.586 5.01905C165.709 5.90574 167.074 8.17887 172.672 9.02309C177.653 9.60323 182.808 9.43012 187.553 8.52334C192.513 7.50061 197.588 6.63426 202.749 5.92872C207.856 5.46675 213.145 6.03668 217.595 7.52855C223.461 9.12733 229.049 10.5714 235.509 10.23C241.968 9.88866 249.019 7.75709 256.05 6.82527C270.315 5.17998 285.274 5.90244 298.949 8.89697C303.981 10.0317 306.298 5.72032 301.266 4.5856C288.861 1.90727 275.473 0.908748 262.31 1.68016C255.659 2.17913 249.149 3.07598 242.903 4.35395C236.709 5.59987 231.647 6.26479 225.22 4.65657C218.793 3.04835 215.168 1.63727 209.563 1.24296C204.066 1.01621 198.576 1.48942 193.545 2.62366C188.478 3.58851 183.403 5.00326 178.073 4.9136C172.743 4.82395 167.736 2.18955 162.423 1.05011C157.111 -0.0893341 144.174 1.64319 136.276 4.06054C128.378 6.47789 119.909 9.4857 110.407 7.22569C100.904 4.96569 92.5585 0.624981 80.7484 2.07646C76.1861 2.9297 71.8355 4.06466 67.7834 5.45867C63.8333 6.74233 59.5975 8.32121 55.109 8.24571C50.6205 8.17021 44.4942 5.36695 39.4648 4.08226C34.6098 2.89877 29.3497 2.29804 24.0608 2.32304C13.6786 2.29841 3.53158 4.97795 0.3524 10.4749C-1.3762 13.146 6.73902 14.4826 8.46762 11.8115Z"
+                fill="#F6B643" />
+            </svg>
+          </h2>
+          <div class="clients__bottom-btns">
+            <a class="btn clients__bottom-btn active" href="#">CONTACT ME</a>
+            <a class="btn clients__bottom-btn" href="#">ABOUT ME</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__info">
+            <p class="footer__info-text">
+              Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.
+            </p>
+            <a class="footer__email" href="#">@Lorem</a>
+          </div>
+          <div class="footer__menu-container">
+            <h3>About us</h3>
+            <ul class="footer__menu">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Lorem</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Portfolio</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Careers</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contacts">
+            <h3>Contact us</h3>
+            <p class="footer__contacts-text">
+              Lorem Ipsum is simply dummy text of <br>
+              the printing and typesetting industry.
+            </p>
+            <a class="footer__contacts-phone" href="#">+908 89097 890</a>
+          </div>
+          <div class="footer__social">
+            <a class="footer__social-item" href="#">
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_131_134)">
+                  <path
+                    d="M9.11866 3.02215H10.2798V0.746766C10.0794 0.71576 9.39052 0.645996 8.58818 0.645996C6.9141 0.645996 5.7673 1.83079 5.7673 4.00838V6.01246H3.91992V8.55616H5.7673V14.9566H8.03228V8.55675H9.80493L10.0863 6.01305H8.03175V4.2606C8.03228 3.5254 8.20822 3.02215 9.11866 3.02215Z"
+                    fill="#011C3C" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_131_134">
+                    <rect width="12.7186" height="14.3106" fill="white" transform="translate(0.640625 0.645996)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a class="footer__social-item" href="#">
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_131_139)">
+                  <path
+                    d="M10.6835 0.453613H4.36448C2.30788 0.453613 0.634766 2.33614 0.634766 4.65016V11.7603C0.634766 14.0742 2.30788 15.9567 4.36448 15.9567H10.6836C12.7401 15.9567 14.4132 14.0742 14.4132 11.7603V4.65016C14.4132 2.33614 12.7401 0.453613 10.6835 0.453613V0.453613ZM13.6055 11.7603C13.6055 13.573 12.2947 15.0478 10.6835 15.0478H4.36448C2.75328 15.0478 1.44252 13.573 1.44252 11.7603V4.65016C1.44252 2.83729 2.75328 1.36247 4.36448 1.36247H10.6836C12.2947 1.36247 13.6055 2.83729 13.6055 4.65016V11.7603Z"
+                    fill="#021C3C" />
+                  <path
+                    d="M7.52331 3.96631C5.4459 3.96631 3.75586 5.86788 3.75586 8.20531C3.75586 10.5427 5.4459 12.4443 7.52331 12.4443C9.60072 12.4443 11.2908 10.5427 11.2908 8.20531C11.2908 5.86788 9.60072 3.96631 7.52331 3.96631ZM7.52331 11.5355C5.8914 11.5355 4.56361 10.0416 4.56361 8.20531C4.56361 6.36915 5.8914 4.87516 7.52331 4.87516C9.15532 4.87516 10.483 6.36915 10.483 8.20531C10.483 10.0416 9.15532 11.5355 7.52331 11.5355Z"
+                    fill="#011C3C" />
+                  <path
+                    d="M11.3808 2.46045C10.7669 2.46045 10.2676 3.02239 10.2676 3.71302C10.2676 4.40377 10.7669 4.96572 11.3808 4.96572C11.9947 4.96572 12.4942 4.40377 12.4942 3.71302C12.4942 3.02227 11.9947 2.46045 11.3808 2.46045ZM11.3808 4.05674C11.2124 4.05674 11.0753 3.90251 11.0753 3.71302C11.0753 3.52342 11.2124 3.36931 11.3808 3.36931C11.5493 3.36931 11.6864 3.52342 11.6864 3.71302C11.6864 3.90251 11.5493 4.05674 11.3808 4.05674Z"
+                    fill="#021C3C" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_131_139">
+                    <rect width="13.7785" height="15.5031" fill="white" transform="translate(0.634766 0.453613)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a class="footer__social-item" href="#">
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_131_134)">
+                  <path
+                    d="M9.11866 3.02215H10.2798V0.746766C10.0794 0.71576 9.39052 0.645996 8.58818 0.645996C6.9141 0.645996 5.7673 1.83079 5.7673 4.00838V6.01246H3.91992V8.55616H5.7673V14.9566H8.03228V8.55675H9.80493L10.0863 6.01305H8.03175V4.2606C8.03228 3.5254 8.20822 3.02215 9.11866 3.02215Z"
+                    fill="#011C3C" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_131_134">
+                    <rect width="12.7186" height="14.3106" fill="white" transform="translate(0.640625 0.645996)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <a class="footer__social-item" href="#">
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_131_134)">
+                  <path
+                    d="M9.11866 3.02215H10.2798V0.746766C10.0794 0.71576 9.39052 0.645996 8.58818 0.645996C6.9141 0.645996 5.7673 1.83079 5.7673 4.00838V6.01246H3.91992V8.55616H5.7673V14.9566H8.03228V8.55675H9.80493L10.0863 6.01305H8.03175V4.2606C8.03228 3.5254 8.20822 3.02215 9.11866 3.02215Z"
+                    fill="#011C3C" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_131_134">
+                    <rect width="12.7186" height="14.3106" fill="white" transform="translate(0.640625 0.645996)" />
+                  </clipPath>
+                </defs>
+              </svg>
             </a>
           </div>
         </div>
-        <div class="intro__right">
-          <svg class="intro__right-i" width="69" height="69" viewBox="0 0 69 69" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="path-i"
-              d="M5.12212 17.5387L34.5 0.57735L63.8779 17.5387V51.4613L34.5 68.4226L5.12212 51.4613V17.5387Z"
-              fill="white" stroke="#BFBFBF" />
-            <path
-              d="M36.6747 24C38.1487 24 38.8857 25.0032 38.8857 26.1527C38.8857 27.5882 37.6053 28.9159 35.9388 28.9159C34.5429 28.9159 33.7289 28.0909 33.7674 26.7269C33.7674 25.5796 34.7365 24 36.6747 24ZM32.1394 46C30.9756 46 30.1231 45.2828 30.9371 42.1236L32.2725 36.5224C32.5046 35.627 32.5431 35.2673 32.2725 35.2673C31.9238 35.2673 30.4146 35.8855 29.5203 36.496L28.9395 35.528C31.7687 33.1234 35.0236 31.7143 36.4206 31.7143C37.5833 31.7143 37.7769 33.1146 37.1961 35.2673L35.666 41.1545C35.3954 42.194 35.5109 42.5526 35.7826 42.5526C36.1313 42.5526 37.2753 42.1214 38.3995 41.2249L39.0595 42.1203C36.3073 44.922 33.301 46 32.1394 46Z"
-              fill="black" />
-          </svg>
-          <div class="intro__price-bg"></div>
-          <svg class="star" width="257" height="295" viewBox="0 0 257 295" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="star-path"
-              d="M1.26125 74.0387L128.5 0.57735L255.739 74.0387V220.961L128.5 294.423L1.26125 220.961V74.0387Z"
-              fill="white" stroke="#BFBFBF" />
-          </svg>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__copyright">Copyright ® 2021 Lorem All rights Rcerved</p>
         </div>
       </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about__empty">
-          <div class="about__block-one"></div>
-          <div class="about__block-two"></div>
-          <div class="about__block-three"></div>
-        </div>
-      </div>
-      <div class="about__header">
-        <div class="about__logo">
-          <img src="./img/logotype.svg" alt="">
-        </div>
-        <div class="about__header-title">
-          <h2>
-            Занимайтесь бизнесом,
-            а мы позаботимся о чистоте
-          </h2>
-        </div>
-      </div>
-      <div class="about__content">
-        <div class="about__content-left"></div>
-        <div class="about__content-right">
-          <div class="about__content-grid">
-            <div class="about__grid--block">
-              <h4 class="wow fadeInUp">24/7</h4>
-              <p class="wow fadeInUp">Уборка в удобное <br>
-                для вас время.</p>
-            </div>
-            <div class="about__grid--block">
-              <h4 class="wow fadeInUp" data-wow-delay="0.2s">100+</h4>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">Клиентов обслуживаем <br>
-                ежегодно.</p>
-            </div>
-            <div class="about__grid--block">
-              <h4 class="wow fadeInUp" data-wow-delay="0.3s">5 лет</h4>
-              <p class="wow fadeInUp" data-wow-delay="0.3s">На рынке промышленного <br>
-                клининга</p>
-            </div>
-            <div class="about__grid--block">
-              <h4 class="wow fadeInUp" data-wow-delay="0.4s">1 день</h4>
-              <p class="wow fadeInUp" data-wow-delay="0.4s">Расчёт в день <br>
-                обращения.</p>
-            </div>
-            <div class="about__grid--block">
-            </div>
-          </div>
-          <div class="about__content-bg"></div>
-        </div>
-      </div>
-      <div class="about__bottom">
-        <div class="about__bottom-one"></div>
-        <div class="about__bottom-two"></div>
-        <div class="about__bottom-three"></div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container">
-        <div class="about__header">
-          <div class="about__logo">
-            <img src="./img/logotype.svg" alt="">
-          </div>
-          <div class="about__header-title">
-            <h2>
-              Сделаем уборку любого
-              объёма и сложности
-            </h2>
-          </div>
-        </div>
-        <div class="services__info-bl">
-          <div class="services__info-one"></div>
-          <div class="services__info-two">
-            Мы проводим все виды уборки на любых площадях и учитываем все ваши
-            пожелания к скорости, объёму и сложности работ на объекте.
-          </div>
-          <div class="services__info-three"></div>
-        </div>
-
-        <div class="services__list-wrapper">
-          <div class="services__list-left"></div>
-          <div class="services__list-content">
-            <div class="services__list">
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Генеральная уборка</h3>
-                  <p>Отмоем любые загрязнения
-                    во всех помещениях и вернём им первозданный вид.</p>
-                </div>
-                <div class="services__item-img ibg one">
-                  <img src="./img/services-1.png" alt="">
-                </div>
-              </div>
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Ежедневная уборка</h3>
-                  <p>Проводим по графику, чтобы
-                    на ваших объектах всегда
-                    была чистота.</p>
-                </div>
-                <div class="services__item-img ibg two">
-                  <img src="./img/services-2.png" alt="">
-                </div>
-              </div>
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Уборка после ремонта</h3>
-                  <p>Вывезем мусор, избавимся
-                    от строительной пыли, отмоем пятна даже после клея, краски
-                    и раствора.
-                  </p>
-                </div>
-                <div class="services__item-img ibg three">
-                  <img src="./img/services-3.png" alt="">
-                </div>
-              </div>
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Уборка после ремонта</h3>
-                  <p>Вывезем мусор, избавимся
-                    от строительной пыли, отмоем пятна даже после клея, краски
-                    и раствора.
-                  </p>
-                </div>
-                <div class="services__item-img ibg one">
-                  <img src="./img/services-4.png" alt="">
-                </div>
-              </div>
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Уборка после ремонта</h3>
-                  <p>Вывезем мусор, избавимся
-                    от строительной пыли, отмоем пятна даже после клея, краски
-                    и раствора.
-                  </p>
-                </div>
-                <div class="services__item-img ibg two">
-                  <img src="./img/services-5.png" alt="">
-                </div>
-              </div>
-              <div class="services__list-item">
-                <div class="services__item-info">
-                  <h3>Уборка после ремонта</h3>
-                  <p>Вывезем мусор, избавимся
-                    от строительной пыли, отмоем пятна даже после клея, краски
-                    и раствора.
-                  </p>
-                </div>
-                <div class="services__item-img ibg three">
-                  <img src="./img/services-6.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="services__map">
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="./img/map-1.png" />
-                    <span class="blob blob-1">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Помоем фасады</p>
-                    </span>
-                    <span class="blob blob-2">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Очистим двор от <br> снега и наледи</p>
-                    </span>
-                    <span class="blob blob-3">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Соберём весь мусор</p>
-                    </span>
-                    <span class="blob blob-4">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Обрежем опасные ветки <br> деревьев и кустов</p>
-                    </span>
-                    <span class="blob blob-5">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Подстрижём и <br> польём газон</p>
-                    </span>
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="./img/map-2.png" />
-                    <span class="blob blob-6">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Помоем окна, зеркала <br>
-                        и стеклянные элементы</p>
-                    </span>
-                    <span class="blob blob-7">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Избавимся от пыли <br> и трудных загрязнений</p>
-                    </span>
-                    <span class="blob blob-8">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Механизированная <br> уборка полов</p>
-                    </span>
-                    <span class="blob blob-9">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Отмоем лифты, <br> лестницы, паркинги</p>
-                    </span>
-                    <span class="blob blob-10">
-                      <div class="icon">
-                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="19" cy="19" r="19" fill="#EEB969" />
-                          <line x1="19.5" y1="13" x2="19.5" y2="24" stroke="white" />
-                          <line x1="14" y1="18.5" x2="25" y2="18.5" stroke="white" />
-                        </svg>
-                      </div>
-                      <p>Продезинфицируем <br> все поверхности</p>
-                    </span>
-                  </div>
-                </div>
-                <div class="services__map-pagination">
-                  <div class="swiper-button swiper-button-next">
-                    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="62" height="62" fill="#EEB969" />
-                      <path
-                        d="M51.3051 31.7071C51.6956 31.3166 51.6956 30.6834 51.3051 30.2929L44.9411 23.9289C44.5506 23.5384 43.9174 23.5384 43.5269 23.9289C43.1364 24.3195 43.1364 24.9526 43.5269 25.3431L49.1838 31L43.5269 36.6569C43.1364 37.0474 43.1364 37.6805 43.5269 38.0711C43.9174 38.4616 44.5506 38.4616 44.9411 38.0711L51.3051 31.7071ZM11 32L50.598 32V30L11 30V32Z"
-                        fill="white" />
-                    </svg>
-                  </div>
-                  <div class="swiper-button swiper-button-prev">
-                    <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="62" height="62" fill="#EEB969" />
-                      <path
-                        d="M10.2926 30.2929C9.90205 30.6834 9.90205 31.3166 10.2926 31.7071L16.6565 38.0711C17.0471 38.4616 17.6802 38.4616 18.0707 38.0711C18.4613 37.6805 18.4613 37.0474 18.0707 36.6569L12.4139 31L18.0707 25.3431C18.4613 24.9526 18.4613 24.3195 18.0707 23.9289C17.6802 23.5384 17.0471 23.5384 16.6565 23.9289L10.2926 30.2929ZM50.5977 30L10.9997 30L10.9997 32L50.5977 32L50.5977 30Z"
-                        fill="white" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="services__bottom-wrapper">
-              <div class="services__bottom-text">
-                Нужна консультация специалиста? <br>
-                Оставьте заявку нашему менеджеру
-              </div>
-              <div class="services__bottom-center">
-                <a class="services__bottom-btn" href="#contacts">получить консультацию
-                  <span>
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M30 0.999999C30 0.447716 29.5523 1.03477e-06 29 -5.66806e-07L20 -1.11471e-06C19.4477 -1.0319e-07 19 0.447714 19 1C19 1.55229 19.4477 2 20 2L28 2L28 10C28 10.5523 28.4477 11 29 11C29.5523 11 30 10.5523 30 10L30 0.999999ZM1.70711 29.7071L29.7071 1.70711L28.2929 0.292893L0.292893 28.2929L1.70711 29.7071Z"
-                        fill="#694C20" />
-                    </svg>
-                  </span>
-                </a>
-              </div>
-              <div class="services__bottom-right"></div>
-              <div class="services__bottom-right services__bottom-right-2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="leave" id="leave">
-      <div class="container">
-        <div class="about__header">
-          <div class="about__logo">
-            <img src="./img/logotype.svg" alt="">
-          </div>
-          <div class="about__header-title leave__header-title">
-            <h2>
-              От нас <br>
-              не уходят
-            </h2>
-          </div>
-          <div class="leave__header-text">
-            <p>
-              Мы не только наводим порядок на объекте, но и выстраиваем
-              эффективную систему рабочих процессов.
-            </p>
-            <p>
-              И делаем это так качественно, что наши новые клиенты
-              становятся постоянными.
-            </p>
-          </div>
-        </div>
-        <div class="leave__list">
-          <div class="leave__list-item">
-            <div class="leave__item-col-1"></div>
-            <div class="leave__item-col-2">
-              <h4>Круглосуточный контроль
-                рабочих процессов </h4>
-              <p>
-                Проследим, чтобы все работы были выполнены качественно
-                и точно в срок.
-              </p>
-            </div>
-            <div class="leave__item-col-3">
-              <div class="leave__item-img ibg"><img src="./img/leave-1.png" alt=""></div>
-            </div>
-          </div>
-          <div class="leave__list-item">
-            <div class="leave__item-col-1"></div>
-            <div class="leave__item-col-2">
-              <h4>Администрирование <br>
-                под ключ </h4>
-              <p>
-                Предоставим вам консьержей, дворников и охранников, найдём людей, которые будут выгуливать
-                собак или ухаживать за цветами
-                во дворе.
-              </p>
-            </div>
-            <div class="leave__item-col-3">
-              <div class="leave__item-img ibg"><img src="./img/leave-2.png" alt=""></div>
-            </div>
-          </div>
-          <div class="leave__list-item">
-            <div class="leave__item-col-1"></div>
-            <div class="leave__item-col-2">
-              <h4>Профессиональное <br>
-                оборудование </h4>
-              <p>
-                Оборудование и средства для клининга мы подберём специально для вашего объекта, чтобы они идеально
-                подходили к типам поверхностей и материалам.
-              </p>
-            </div>
-            <div class="leave__item-col-3">
-              <div class="leave__item-img ibg"><img src="./img/leave-3.png" alt=""></div>
-            </div>
-          </div>
-          <div class="leave__list-item">
-            <div class="leave__item-col-1"></div>
-            <div class="leave__item-col-2">
-              <h4>Индивидуальные <br>
-                запросы</h4>
-              <p>
-                С каждым клиентом мы работаем индивидуально: учитываем все пожелания
-                к бюджету и к набору услуг.
-              </p>
-            </div>
-            <div class="leave__item-col-3">
-              <div class="leave__item-img ibg"><img src="./img/leave-4.png" alt=""></div>
-            </div>
-          </div>
-        </div>
-        <div class="leave__bottom">
-          <div class="leave__bottom-col-1"></div>
-          <div class="leave__bottom-col-2"></div>
-          <div class="leave__bottom-col-3"></div>
-          <div class="leave__bottom-col-4"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="work" id="work">
-      <div class="container">
-        <div class="about__header">
-          <div class="about__logo">
-            <img src="./img/logotype.svg" alt="">
-          </div>
-          <div class="about__header-title work__header-title">
-            <h2>
-              Где мы работаем
-            </h2>
-          </div>
-        </div>
-        <div class="work__info-wrapper">
-          <div class="work__info-col-1"></div>
-          <div class="work__info-col-2">
-            <p>
-              Мы обслуживаем любые коммерческие помещения и все виды жилых комплексов в Москве,
-              Санкт-Петербурге и Московской области. Если вы в другом регионе — обсудим сотрудничество
-              на индивидуальных условиях
-            </p>
-          </div>
-        </div>
-
-        <div class="work__list-wrapper">
-          <div class="work__list-left"></div>
-          <div>
-            <div class="work__list-content">
-              <div class="work__list">
-                <div class="work__list-item">
-                  <div class="work__item-top">
-                    <img class="work__top-icon" src="./img/work-ico-1.svg" alt="">
-                    <svg class="work__top-arrow work__top-arrow-1" width="41" height="16" viewBox="0 0 41 16"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M40.3051 8.70711C40.6956 8.31658 40.6956 7.68342 40.3051 7.29289L33.9411 0.928932C33.5506 0.538408 32.9174 0.538408 32.5269 0.928932C32.1364 1.31946 32.1364 1.95262 32.5269 2.34315L38.1838 8L32.5269 13.6569C32.1364 14.0474 32.1364 14.6805 32.5269 15.0711C32.9174 15.4616 33.5506 15.4616 33.9411 15.0711L40.3051 8.70711ZM0 9L39.598 9V7L0 7L0 9Z"
-                        fill="#C9C9C9" />
-                    </svg>
-                  </div>
-                  <div class="work__item-text">
-                    Жилые комплексы, торговые- и бизнес-центры
-                  </div>
-                </div>
-                <div class="work__list-item">
-                  <div class="work__item-top">
-                    <img class="work__top-icon" src="./img/work-ico-2.svg" alt="">
-                    <svg class="work__top-arrow work__top-arrow-2" width="41" height="16" viewBox="0 0 41 16"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M40.3051 8.70711C40.6956 8.31658 40.6956 7.68342 40.3051 7.29289L33.9411 0.928932C33.5506 0.538408 32.9174 0.538408 32.5269 0.928932C32.1364 1.31946 32.1364 1.95262 32.5269 2.34315L38.1838 8L32.5269 13.6569C32.1364 14.0474 32.1364 14.6805 32.5269 15.0711C32.9174 15.4616 33.5506 15.4616 33.9411 15.0711L40.3051 8.70711ZM0 9L39.598 9V7L0 7L0 9Z"
-                        fill="#C9C9C9" />
-                    </svg>
-                  </div>
-                  <div class="work__item-text">
-                    Офисы, магазины, банки, фитнес-залы
-                  </div>
-                </div>
-                <div class="work__list-item">
-                  <div class="work__item-top">
-                    <img class="work__top-icon" src="./img/work-ico-3.svg" alt="">
-                    <svg class="work__top-arrow work__top-arrow-3" width="41" height="16" viewBox="0 0 41 16"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M40.3051 8.70711C40.6956 8.31658 40.6956 7.68342 40.3051 7.29289L33.9411 0.928932C33.5506 0.538408 32.9174 0.538408 32.5269 0.928932C32.1364 1.31946 32.1364 1.95262 32.5269 2.34315L38.1838 8L32.5269 13.6569C32.1364 14.0474 32.1364 14.6805 32.5269 15.0711C32.9174 15.4616 33.5506 15.4616 33.9411 15.0711L40.3051 8.70711ZM0 9L39.598 9V7L0 7L0 9Z"
-                        fill="#C9C9C9" />
-                    </svg>
-                  </div>
-                  <div class="work__item-text">
-                    Кафе, рестораны, пекарни, столовые
-                  </div>
-                </div>
-                <div class="work__list-item">
-                  <div class="work__item-top">
-                    <img class="work__top-icon" src="./img/work-ico-4.svg" alt="">
-                    <svg class="work__top-arrow work__top-arrow-4 active" width="41" height="16" viewBox="0 0 41 16"
-                      fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M40.3051 8.70711C40.6956 8.31658 40.6956 7.68342 40.3051 7.29289L33.9411 0.928932C33.5506 0.538408 32.9174 0.538408 32.5269 0.928932C32.1364 1.31946 32.1364 1.95262 32.5269 2.34315L38.1838 8L32.5269 13.6569C32.1364 14.0474 32.1364 14.6805 32.5269 15.0711C32.9174 15.4616 33.5506 15.4616 33.9411 15.0711L40.3051 8.70711ZM0 9L39.598 9V7L0 7L0 9Z"
-                        fill="#C9C9C9" />
-                    </svg>
-                  </div>
-                  <div class="work__item-text">
-                    Склады, паркинги
-                    и производственные помещения
-                  </div>
-                </div>
-              </div>
-              <div class="work__right">
-                <div class="work__right-img work__right-img-1"></div>
-                <div class="work__right-img work__right-img-2"></div>
-                <div class="work__right-img work__right-img-3"></div>
-                <div class="work__right-img work__right-img-4 active"></div>
-              </div>
-            </div>
-            <div class="work__center-wrapper">
-              <div class="work__center-col-1"></div>
-              <div class="work__center-col-2"></div>
-              <div class="work__center-col-3"></div>
-            </div>
-            <div class="work__adress" id="work__adress">
-              <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>ЖК Резиденция на Всеволожском</h3>
-                      <p class="desc">Клубный дом delux-класса</p>
-                      <p class="text">
-                        Услуги: комплексная уборка придомовой территории,
-                        паркинга, мест общего пользования
-                      </p>
-                      <p class="adr">Площадь уборки: 5 400 кв.м</p>
-                      <p class="adr">Адрес: Москва, район Хамовники</p>
-                      <img src="./img/etalon.png" alt="">
-
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-1"></div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>ЖК Аалто</h3>
-                      <p class="desc">Многоуровневый жилой комплекс бизнес-класса</p>
-                      <p class="text">
-                        Услуги: комплексная уборка придомовой территории, паркинга, мест общего пользовани
-                      </p>
-                      <p class="adr">Площадь уборки: 10 139 кв.м</p>
-                      <p class="adr">Адрес: Москва, Савёловский район</p>
-                      <img src="./img/etalon-2.png" alt="">
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-2"></div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>ЖК Десятка</h3>
-                      <p class="desc">Многоуровневый жилой комплекс бизнес-класса</p>
-                      <p class="text">
-                        Услуги: комплексная уборка придомовой территории, паркинга, мест общего пользовани
-                      </p>
-                      <p class="adr">Площадь уборки: 29 434 кв.м
-                      </p>
-                      <p class="adr">Адрес: МО, Раменское</p>
-                      <img src="./img/etalon-2.png" alt="">
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-3"></div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>ЖК Северный квартал</h3>
-                      <p class="desc">Многоуровневый жилой комплекс комфорт-класса</p>
-                      <p class="text">
-                        Услуги: комплексная уборка придомовой территории, паркинга, мест общего пользовани
-                      </p>
-                      <p class="adr">Площадь уборки: 29 500 кв.м
-                      </p>
-                      <p class="adr">Адрес: МО, Электросталь</p>
-                      <img src="./img/etalon-2.png" alt="">
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-4"></div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>ЖК Променад</h3>
-                      <p class="desc">Многоуровневый жилой комплекс бизнес-класса</p>
-                      <p class="text">
-                        Услуги: комплексная уборка придомовой территории, паркинга, мест общего пользовани
-                      </p>
-                      <p class="adr">Площадь уборки: 25 700 кв.м
-                      </p>
-                      <p class="adr">Адрес: Санкт-Петербург, Фрунзенский район </p>
-                      <img src="./img/etalon-2.png" alt="">
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-5"></div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="work__adress-left">
-                      <h3>Бизнес-парк Водники</h3>
-                      <p class="desc">Бизнес-центр класса В+ (8 строений)</p>
-                      <p class="text">
-                        Услуги: комплексная уборка мест общего пользования
-                      </p>
-                      <p class="adr">Площадь уборки: 1 600 кв.м
-                      </p>
-                      <p class="adr">Адрес: Москва, район Покровское-Стрешнево</p>
-                      <img src="./img/etalon.png" style="visibility: hidden;" alt="">
-                      <div class="swiper-button2-prev">
-                        <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0.293056 7.2929C-0.0974655 7.68342 -0.0974655 8.31659 0.293057 8.70711L6.65702 15.0711C7.04754 15.4616 7.68071 15.4616 8.07123 15.0711C8.46176 14.6805 8.46176 14.0474 8.07123 13.6569L2.41438 8L8.07123 2.34315C8.46176 1.95262 8.46176 1.31946 8.07123 0.928935C7.68071 0.538411 7.04754 0.538411 6.65702 0.928935L0.293056 7.2929ZM40.5981 7L1.00016 7L1.00016 9L40.5981 9L40.5981 7Z"
-                            fill="black" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="work__adress-right">
-                      <div class="work__adress-right-img work__adress-right-img-6"></div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="work__slider-pagination">
-                  <div class="swiper-button2-next">
-                    <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M40.3051 8.70711C40.6956 8.31658 40.6956 7.68342 40.3051 7.29289L33.9411 0.928932C33.5506 0.538408 32.9174 0.538408 32.5269 0.928932C32.1364 1.31946 32.1364 1.95262 32.5269 2.34315L38.1838 8L32.5269 13.6569C32.1364 14.0474 32.1364 14.6805 32.5269 15.0711C32.9174 15.4616 33.5506 15.4616 33.9411 15.0711L40.3051 8.70711ZM0 9L39.598 9V7L0 7L0 9Z"
-                        fill="black" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="work__bottom-wrapper">
-              <div class="work__bottom-col-1"></div>
-              <div class="work__bottom-col-2"></div>
-              <div class="work__bottom-col-3"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contacts" id="contacts">
-      <div class="container">
-        <div class="about__header">
-          <div class="about__logo">
-            <img src="./img/logotype.svg" alt="">
-          </div>
-          <div class="about__header-title contacts__header-title">
-            <h2>
-              Оставьте заявку, и мы <br>
-              рассчитаем стоимость
-            </h2>
-          </div>
-        </div>
-        <div class="contacts__wrapper">
-          <div class="contacts__wrapper-left"></div>
-          <div class="contacts__content">
-            <form class="contacts__form" action="#">
-              <input class="contacts__form-input" type="text" placeholder="Имя:">
-              <input class="contacts__form-input" type="tel" placeholder="Номер телефона:">
-              <button class="contacts__form-btn">Рассчитать стоимость
-                <span>
-                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M30 0.999999C30 0.447716 29.5523 1.03477e-06 29 -5.66806e-07L20 -1.11471e-06C19.4477 -1.0319e-07 19 0.447714 19 1C19 1.55229 19.4477 2 20 2L28 2L28 10C28 10.5523 28.4477 11 29 11C29.5523 11 30 10.5523 30 10L30 0.999999ZM1.70711 29.7071L29.7071 1.70711L28.2929 0.292893L0.292893 28.2929L1.70711 29.7071Z"
-                      fill="#694C20" />
-                  </svg>
-                </span>
-              </button>
-            </form>
-            <div class="contacts__form-bottom">
-              <div class="contacts__form-bottom-col-1">
-                Оставляя заявку, я даю согласие на обработку &nbsp;<a href="#">персональных данных</a>
-              </div>
-              <div class="contacts__form-bottom-col-2"></div>
-            </div>
-            <div class="contacts__info-wrapper">
-              <div class="contacts__info">
-
-                <div class="contacts__info-item">
-                  <h3>Контакты:</h3>
-                  <a class="contacts__phone" href="tel:+74996535806">+74996535806</a>
-                  <div class="contacts__social">
-                    <a href="#">
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_104_1916)">
-                          <path
-                            d="M10.2019 16.4459L9.77186 22.4952C10.3872 22.4952 10.6537 22.2309 10.9733 21.9135L13.8582 19.1564L19.836 23.5341C20.9324 24.1451 21.7048 23.8234 22.0005 22.5255L25.9244 4.13921L25.9254 4.13812C26.2732 2.51745 25.3394 1.8837 24.2712 2.28129L1.20703 11.1115C-0.367057 11.7225 -0.343224 12.6 0.939443 12.9976L6.83603 14.8317L20.5326 6.26146C21.1772 5.83462 21.7633 6.07079 21.2812 6.49762L10.2019 16.4459Z"
-                            fill="black" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_104_1916">
-                            <rect width="26" height="26" fill="white" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                    <a href="#">
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_104_1919)">
-                          <path
-                            d="M13.0033 0H12.9967C5.82888 0 0 5.8305 0 13C0 15.8438 0.9165 18.4795 2.47487 20.6196L0.85475 25.4491L5.85162 23.8518C7.90725 25.2135 10.3594 26 13.0033 26C20.1711 26 26 20.1679 26 13C26 5.83213 20.1711 0 13.0033 0ZM20.5676 18.3576C20.254 19.2432 19.0093 19.9777 18.0164 20.1922C17.3371 20.3369 16.4499 20.4523 13.4631 19.214C9.64275 17.6313 7.1825 13.7491 6.99075 13.4972C6.80713 13.2454 5.447 11.4416 5.447 9.57613C5.447 7.71063 6.39438 6.80225 6.77625 6.41225C7.08988 6.09212 7.60825 5.94587 8.1055 5.94587C8.26637 5.94587 8.411 5.954 8.541 5.9605C8.92288 5.97675 9.11462 5.9995 9.3665 6.60238C9.68013 7.358 10.4439 9.2235 10.5349 9.41525C10.6275 9.607 10.7201 9.867 10.5901 10.1189C10.4683 10.3789 10.361 10.4942 10.1692 10.7153C9.9775 10.9362 9.7955 11.1053 9.60375 11.3425C9.42825 11.5489 9.23 11.7699 9.451 12.1518C9.672 12.5255 10.4358 13.7719 11.5602 14.7729C13.0114 16.0647 14.1879 16.4775 14.6087 16.653C14.9224 16.783 15.2961 16.7521 15.5252 16.5084C15.8161 16.1947 16.1752 15.6748 16.5409 15.1629C16.8009 14.7956 17.1291 14.7501 17.4736 14.8801C17.8246 15.002 19.682 15.9201 20.0639 16.1102C20.4457 16.302 20.6976 16.393 20.7902 16.5539C20.8813 16.7148 20.8812 17.4704 20.5676 18.3576Z"
-                            fill="black" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_104_1919">
-                            <rect width="26" height="26" fill="white" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                  </div>
-                  <a class="contacts__email" href="mailto:info@cleaner-agency.com">info@cleaner-agency.com</a>
-                </div>
-
-                <div class="contacts__info-item" id="adress">
-                  <h3>Адрес:</h3>
-                  <a class="contacts__phone">
-                    г. Москва, ул. Новая Басманная, <br>
-                    дом 19, стр 1, каб. 411
-                  </a>
-                </div>
-
-                <div class="contacts__info-item" id="worktime">
-                  <h3>График работы:</h3>
-                  <a class="contacts__phone">
-                    По будням с 10:00 до 19:00
-                  </a>
-                </div>
-
-              </div>
-              <div class="contacts__info-right">
-                <div class="contacts__info-img ibg">
-                  <img src="./img/contacts__info-img.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </footer>
 
   </div>
 
   <script src="./js/main.min.js"></script>
-  <script src="./js/wow.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
-    new WOW().init();
-  </script>
-  <script src="./js/swiper-bundle.min.js"></script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      effect: "fade",
+    var swiper = new Swiper(".reviewsSwiper", {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiper = new Swiper(".mySwiper2", {
-      spaceBetween: 30,
-      effect: "fade",
-      navigation: {
-        nextEl: ".swiper-button2-next",
-        prevEl: ".swiper-button2-prev",
       },
     });
   </script>
