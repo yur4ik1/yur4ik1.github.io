@@ -119,16 +119,18 @@ body {
         left: -17.403vw;
         top: 17.319vw;
     }
+
     &__bg-right svg {
         width: 16.806vw;
         height: 16.806vw;
     }
 
-    &__bg-left  {
+    &__bg-left {
         position: absolute;
         left: 72.597vw;
         top: 17.319vw;
     }
+
     &__bg-left svg {
         width: 15.903vw;
         height: 12.847vw;
@@ -227,5 +229,152 @@ body {
 }
 
 .contacts {
-    
+    padding-top: 4.167vw;
+
+    &__list {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    &__list-left {
+        position: relative;
+    }
+
+    &__list-left-title {
+        font-weight: 500;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #FFFFFF;
+    }
+
+    &__app img {
+        width: 10.694vw;
+        height: 10.694vw;
+        margin-top: 6.667vw;
+    }
+
+    &__list-left-title .n {
+        width: 0.972vw;
+        height: 2.014vw;
+        position: relative;
+        top: 0.413vw;
+    }
+
+    &__list-left-title .arrow-1 {
+        width: 15.584vw;
+        height: 8.749vw;
+        position: absolute;
+        left: 10vw;
+        top: 1.37vw;
+    }
+
+    &__list-left-title .light {
+        font-weight: 300;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #FFFFFF;
+    }
+
+    &__app {
+        display: flex;
+        justify-content: space-between;
+        width: 24.097vw;
+    }
+
+    &__app .app-svg {
+        width: 17.177vw;
+        height: 4.377vw;
+        position: absolute;
+        top: 8.417vw;
+    }
+
+    &__app .app__link .wing-svg {
+        width: 3.873vw;
+        height: 4.341vw;
+        position: absolute;
+        left: 3.9vw;
+    }
+
+    &__app .app__link .app__link-text {
+        font-weight: 600;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #C778DD;
+        margin-top: 5.347vw;
+    }
+
+    &__app .telegram-link .telegram-svg {
+        width: 2.958vw;
+        height: 4.931vw;
+        position: absolute;
+        left: 19.431vw;
+        top: 22.069vw;
+    }
+
+    &__app .telegram-link .telegram__link-text {
+        width: 19.097vw;
+        font-weight: 600;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #C778DD;
+        transform: rotate(18.71deg);
+        position: absolute;
+        top: 27.142vw;
+        left: 14.869vw;
+    }
+
+    &__list-right {
+        background: url(../img/batman.png) no-repeat right top / cover;
+        width: 40.278vw;
+        height: 31.24vw;
+        position: relative;
+    }
+
+    &__list-right .drive {
+        position: absolute;
+        top: 0;
+        font-weight: 600;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #333333;
+    }
+
+    &__list-right .drive .drive-1 {
+        position: absolute;
+        left: 4.681vw;
+        top: 2.347vw;
+        width: 17.778vw;
+    }
+
+    &__list-right .drive .drive-2 {
+        width: 19.097vw;
+        position: absolute;
+        top: 6.694vw;
+        left: 3.694vw;
+    }
+
+    &__list-right .drive .drive-3 {
+        position: absolute;
+        top: 8.3vw;
+        left: 6.5vw;
+    }
+
+    &__list-right .waths svg {
+        width: 3.873vw;
+        height: 4.341vw;
+        position: absolute;
+        top: 26.944vw;
+        left: 11.944vw;
+    }
+
+    &__list-right .waths p {
+        font-weight: 600;
+        font-size: 1.528vw;
+        line-height: 2.014vw;
+        color: #C778DD;
+        position: absolute;
+        top: 29.833vw;
+        left: 5vw;
+    }
 }
