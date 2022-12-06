@@ -234,7 +234,7 @@ body {
     &__list {
         display: flex;
         position: relative;
-        justify-content: space-between;
+
     }
 
     &__list-left {
@@ -327,8 +327,9 @@ body {
     &__list-right {
         background: url(../img/batman.png) no-repeat right top / cover;
         width: 40.278vw;
-        height: 31.24vw;
+        height: 28.125vw;
         position: relative;
+        margin-left: 4.333vw;
     }
 
     &__list-right .drive {
@@ -360,7 +361,7 @@ body {
         left: 6.5vw;
     }
 
-    &__list-right .waths svg {
+    &__list-right .waths .wats-arrow {
         width: 3.873vw;
         height: 4.341vw;
         position: absolute;
@@ -376,5 +377,44 @@ body {
         position: absolute;
         top: 29.833vw;
         left: 5vw;
+    }
+
+    &__list-right .waths .wiki-link {
+        font-weight: 600;
+        font-size: 0.833vw;
+        line-height: 1.111vw;
+        color: #F8F8F8;
+        position: absolute;
+        right: -0.486vw;
+        top: 4.7vw;
+    }
+
+    &__list-right .waths .whatsaap-link svg {
+        width: 12.708vw;
+        height: 13.194vw;
+        position: absolute;
+        top: 14.556vw;
+        left: 1.5vw;
+    }
+}
+
+.footer .container {
+    width: 100%;
+    height: 7.396vw;
+    border: 0.052vw solid #ABB2BF;
+}
+
+.footer {
+    margin-top: 4.927vw;
+
+    &__title {
+        font-family: 'Fira Code';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.25vw;
+        line-height: 1.615vw;
+        color: #009974;
+        margin-top: 1.25vw;
+        margin-left: 1.146vw;
     }
 }
