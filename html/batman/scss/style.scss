@@ -198,6 +198,10 @@ body {
         color: #FFFFFF;
     }
 
+    &__item-bottom h3 span {
+        font-size: 0.938vw;
+    }
+
     &__item-bottom p {
         font-weight: 500;
         font-size: 1.111vw;
@@ -488,7 +492,6 @@ $bgcolor: #111;
     -webkit-box-sizing: border-box;
 }
 
-#footer {}
 
 #footer__title {
     top: 0;
@@ -614,5 +617,114 @@ $bgcolor: #111;
 
     50% {
         @include opacity(1)
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .container {
+        max-width: 100%;
+        padding-right: 2.5vw;
+        padding-left: 2.5vw;
+        margin: 0 auto;
+    }
+
+    .header__logo img {
+        width: 27.25vw;
+        height: 9.25vw;
+    }
+
+    .header__lang a {
+        font-size: 2.5vw;
+    }
+
+    .header__lang svg {
+        width: 1vw;
+        height: 1vw;
+        top: 0.08vw;
+        left: 0.478vw;
+    }
+
+
+    .intro {
+        padding-top: 8.375vw;
+    }
+
+    .intro__title {
+        font-size: 5.222vw;
+    }
+
+    .intro__desc {
+        font-size: 2vw;
+        line-height: 3.125vw;
+    }
+
+    .intro__btn {
+        height: 9.875vw;
+        font-size: 3vw;
+        line-height: 3.875vw;
+        padding-top: 3vw;
+    }
+
+    .works {
+        padding-top: 8.375vw;
+    }
+
+    .works__title {
+        font-size: 2.75vw;
+        line-height: 3.625vw;
+    }
+
+    .works__desc {
+        font-size: 2vw;
+        line-height: 3.125vw;
+    }
+
+    .works__list {
+        justify-content: center;
+    }
+
+    .works__list-item {
+        width: 63.125vw;
+        height: 50.25vw;
+    }
+
+    .works__item-img {
+        width: 63.125vw;
+        height: 25.125vw;
+    }
+
+    .works__item-pretitle {
+        font-size: 2vw;
+        line-height: 0;
+        padding: 2.556vw;
+    }
+
+    .works__item-bottom {
+        padding: 2.111vw;
+        padding-top: 2.5vw;
+    }
+
+    .works__item-bottom h3 {
+        font-size: 4vw;
+    }
+
+    .works__item-bottom h3 span {
+        font-size: 2vw;
+    }
+
+    .works__item-bottom p {
+        font-size: 2vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .works__item-bottom a {
+        font-size: 2vw;
+        width: 19.597vw;
+        height: 4.569vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
