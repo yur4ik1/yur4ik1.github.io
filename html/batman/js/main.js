@@ -14,10 +14,10 @@ function drawLines(){
     }
   }
   
-  for(i = 0; i < getHeight()/10; i++){
+  for(i = 0; i < getHeight()/6; i++){
     const line = document.createElement("div");  
     line.className = `line line-${i}`;
-    line.style.top = `${i * 10}px`;
+    line.style.top = `${i * 100}px`;
     const time = Math.random() * 5;
     line.style.animation = `lines ${time}s infinite`;
     document.body.appendChild(line) ;
