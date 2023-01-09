@@ -260,3 +260,127 @@ body {
         color: #5859df;
     }
 }
+
+.works .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.works {
+    height: 56.406vw;
+    padding-top: 7.813vw;
+    padding-bottom: 7.813vw;
+
+    &__left h2 {
+        font-size: 3.516vw;
+        line-height: 4.688vw;
+        color: #1D1D1B;
+        font-weight: bold;
+    }
+
+    &__left p {
+        width: 32.422vw;
+        font-size: 1.719vw;
+        line-height: 2.344vw;
+        color: #868686;
+    }
+
+    &__left-btn {
+        background: #5859DF;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18.359vw;
+        height: 4.688vw;
+        border-radius: 2.344vw;
+        margin-top: 6.406vw;
+    }
+
+    &__left-btn p {
+        font-size: 1.406vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+    }
+    &__left-btn::after {
+        content: '';
+        background: url('../img/work-btn.svg') no-repeat center top / cover;
+        height: 6vw;
+        width: 6vw;
+        position: relative;
+        left: -2.275vw;
+        top: 0.134vw;
+    }
+
+    &__rigth-item {
+        width: 36.719vw;
+        height: 11.641vw;
+        margin-bottom: 1.406vw;
+        padding-right: 2.344vw;
+        position: relative;
+    }
+
+    &__rigth-items {
+        width: 36.719vw;
+        height: 11.641vw;
+        box-shadow: 0 0.469vw 3.125vw #f2f2f2;
+        border-radius: 1.563vw;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.406vw;
+        background: #fff;
+        padding-right: 2.344vw;
+        position: inherit;
+        z-index: 9999999;
+    }
+
+    &__rigth-item svg {
+       position: absolute;
+       width: 6.563vw;
+       height: 12.969vw;
+       height: -webkit-fill-available;
+       left: -4vw;
+    }
+
+
+    &__item-icon {
+        width: 18.203vw;
+        height: auto;
+        position: absolute;
+        left: -4.3vw;
+    }
+
+    &__rigth-item .works__item-icon2 {
+        width: 15.625vw;
+        height: 15.625vw;
+        left: -3.3vw;
+    }
+
+    &__rigth-item .works__item-icon3 {
+        width: 15.625vw;
+        height: 15.625vw;
+        left: -2.7vw;
+    }
+
+    &__item-info {
+        margin-left: 9.453vw;
+    }
+
+    &__item-info h4 {
+        font-size: 1.719vw;
+        line-height: 2.188vw;
+        font-weight: bold;
+        color: #202020;
+        margin-bottom: 0.625vw;
+    }
+
+    &__item-info p {
+        font-size: 1.094vw;
+        line-height: 1.641vw;
+        font-weight: 400;
+    }
+    
+}
