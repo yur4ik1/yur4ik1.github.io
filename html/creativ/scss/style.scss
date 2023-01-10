@@ -204,6 +204,7 @@ body {
     padding-top: 6.719vw;
     padding-bottom: 6.719vw;
     background: #F7F7F7;
+    overflow: hidden;
 
     &__bg {
         background: url(../img/our-bg.png) no-repeat right top / cover;
@@ -711,7 +712,6 @@ body {
 
 /* Contacts */
 
-
 .contacts .container {
     display: flex;
     justify-content: space-between;
@@ -840,5 +840,101 @@ body {
         width: 17.344vw;
         height: 4.297vw;
         margin-top: 2.344vw;
+    }
+}
+
+.header__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        max-width: 85.942vw;
+    }
+
+    .header {
+        height: 19.894vw;
+    }
+
+    .header .container {
+        display: block;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__mobile-logo {
+        margin-left: 35.008vw;
+    }
+
+    .header__mobile-logo img {
+        width: 16.446vw;
+        height: 19.894vw;
+    }
+
+    .header__mobile-burger {
+        margin-right: 1.305vw;
+    }
+
+    .header__mobile-burger svg {
+        width: 5.57vw;
+        height: 3.714vw;
+    }
+
+    .header__mobile-menu {
+        position: fixed;
+        top: 19.199vw;
+        bottom: 0;
+        right: 0;
+        -webkit-transform: translate(-150%);
+        -ms-transform: translate(-150%);
+        transform: translate(-150%);
+        height: 204.361vw;
+        max-width: 694px;
+        width: 100%;
+        background-color: #fff;
+        padding: 6.917vw;
+        z-index: 999999;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        display: block;
+        z-index: 999999999999999800000000000000000000000;
+    }
+
+    .header__mobile-menu.active {
+        transform: translate(0%);
+    }
+
+    .index {
+        z-index: 0 !important;
+    }
+
+    .header__mobile-menu ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__mobile-menu ul li {
+        list-style: none;
+        margin-bottom: 3.653vw;
+    }
+
+    .header__mobile-menu ul li a {
+        font-size: 4.25vw;
+        color: #5859df;
     }
 }

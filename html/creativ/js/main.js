@@ -1,3 +1,20 @@
+
+//  Burger menu
+
+const burger = document.querySelector('.header__mobile-burger');
+const mobileMenu = document.querySelector('.header__mobile-menu');
+const intro = document.querySelector('.intro');
+const video = document.querySelector('.video');
+
+burger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  intro.classList.toggle('index');
+  video.classList.toggle('index');
+  console.log('clk');
+});
+
+//  Slider
+
 const slides = document.querySelectorAll('.video__slide');
 const slideContainer = document.querySelector('.video__slides');
 let currentSlide = 0;
