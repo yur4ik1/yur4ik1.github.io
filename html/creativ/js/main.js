@@ -5,12 +5,24 @@ const burger = document.querySelector('.header__mobile-burger');
 const mobileMenu = document.querySelector('.header__mobile-menu');
 const intro = document.querySelector('.intro');
 const video = document.querySelector('.video');
+const our = document.querySelector('.our');
+const works = document.querySelector('.works');
+const menuLink = document.querySelector('.header__mobile-menu');
 
 burger.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
   intro.classList.toggle('index');
   video.classList.toggle('index');
-  console.log('clk');
+  our.classList.toggle('index');
+  works.classList.toggle('index');
+});
+
+menuLink.addEventListener('click', () => {
+  mobileMenu.classList.remove('active');
+  intro.classList.toggle('index');
+  video.classList.toggle('index');
+  our.classList.toggle('index');
+  works.classList.toggle('index');
 });
 
 //  Slider
@@ -26,7 +38,7 @@ function showSlide() {
     slide.style.display = 'none';
     const h3 = slide.querySelector('h3');
     if (h3) {
-        h3.style.opacity = '0';
+      h3.style.opacity = '0';
     }
   }
 
