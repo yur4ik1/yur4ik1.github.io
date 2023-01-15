@@ -387,11 +387,10 @@ h2 {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 7px;
         width: 100%;
-        height: 18.906vw;
     }
 
     &__first-start {
-        display: flex;
+        display: none;
         justify-content: space-between;
     }
 
@@ -437,6 +436,183 @@ h2 {
         width: 25.371vw;
         height: 18.906vw;
     }
+
+    &__first-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #663399;
+        border-radius: 0.547vw 0.547vw 0vw 0vw;
+        padding-top: 1.016vw;
+        padding-bottom: 0.859vw;
+        padding-left: 0.859vw;
+        padding-right: 0.859vw;
+    }
+
+    &__first-header--title {
+        display: flex;
+        align-items: center;
+    }
+
+    &__first-header--title svg {
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-right: 1.016vw;
+    }
+
+    &__first-header--title p {
+        font-weight: 700;
+        font-size: 1.563vw;
+        line-height: 2.109vw;
+        color: #FFFFFF;
+    }
+
+    &__first-header--close svg {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    &__first-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__first-content .compass__first-title {
+        width: 100%;
+    }
+
+    &__first-tabs {
+        display: flex;
+        align-items: center;
+    }
+
+    &__first-tab {
+        margin-right: 1.938vw;
+        font-size: 1.25vw;
+        line-height: 1.641vw;
+        color: #00008B;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0.391vw;
+    }
+
+    &__first-tab.active a {
+        color: #000000;
+    }
+
+    &__first-tab.active {
+        border-bottom: 0.313vw solid #663399;
+    }
+
+    &__first-tab::after {
+        content: url('../img/tab.svg');
+        width: 2.109vw;
+        height: 1.25vw;
+        position: relative;
+        left: 1.9vw;
+        display: block;
+    }
+
+    &__first-tab:nth-child(4)::after {
+        display: none;
+    }
+
+    &__first-subtitle {
+        margin-top: 1.719vw;
+        font-size: 1.25vw;
+        line-height: 1.641vw;
+        color: #000000;
+    }
+
+    &__first-text {
+        font-size: 0.938vw;
+        line-height: 1.25vw;
+        color: #708090;
+    }
+
+    &__first-filter--list {
+        display: flex;
+        margin-top: 1.719vw;
+    }
+
+    &__first-filter--item {
+        margin-right: 3.594vw;
+        width: max-content;
+    }
+
+    &__first-filter--item:nth-child(2) {
+        margin-right: 2.188vw;
+    }
+
+    &__first-filter--item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    &__first-filter--list label {
+        display: flex;
+        align-items: center;
+        font-size: 1.25vw;
+        line-height: 1.953vw;
+        color: #000000;
+        margin-bottom: 0.5vw;
+        cursor: pointer;
+    }
+
+    &__first-filter--list label input {
+        margin-right: 0.938vw;
+        width: 0.938vw;
+        height: 0.938vw;
+        cursor: pointer;
+    }
+
+    &__first-filter--bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.484vw;
+        margin-top: 0.581vw;
+    }
+
+    &__first-filter--bottom .btn svg {
+        width: 1.641vw;
+        height: 1.875vw;
+    }
+
+    &__first-bottom--btn {
+        font-size: 0.938vw;
+        line-height: 1.25vw;
+        color: #000000;
+        width: 10.078vw;
+        height: 2.344vw;
+        background: #F8E275;
+        border-radius: 0.391vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.938vw;
+        margin-right: 0.938vw;
+    }
+
+    &__first-start2 .compass__first-img {
+        background: url(../img/compass2.jpg) no-repeat center top / cover;
+        border-radius: 0vw 0vw 0.547vw 0vw;
+        width: 18.75vw;
+        height: 26.328vw;
+    }
+
+    &__first-start2 {
+        display: none;
+    }
+
+    &__first .compass__first-start.active {
+        display: flex;
+    }
+
+    &__first .compass__first-start2.active {
+        display: block;
+    }
+
+
 }
 
 .podcasts {
