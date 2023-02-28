@@ -815,14 +815,6 @@
     box-shadow: inset 0 0 0 60px #34a853;
 }
 
-
-.like-container .dislike:hover::before {
-    box-shadow: inset 0 0 0 60px #ee6960;
-}
-.like-container .lk:hover::before {
-    box-shadow: inset 0 0 0 60px #679df5;
-}
-
 .up_vote_count,
 .down_vote_count {
     color: #959ab5;
@@ -849,4 +841,60 @@
 
 .person-title a {
     color: #fa6342;
+}
+
+.games-tags {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5.008px;
+    margin-bottom: 20px;
+
+    .games-title {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0px;
+        margin-bottom: 15px;
+        text-align: left;
+        color: #515365;
+    }
+
+    .tags-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .tags-item {
+            margin-right: 10px;
+            margin-bottom: 25px;
+
+            a {
+                font-size: 13px;
+                color: #272727;
+                background: #fff;
+                border: 1px solid #e1e1e4;
+                padding: 5px 10px;
+                border-radius: 4px;
+                letter-spacing: .75px;
+            }
+
+            a:hover {
+                background: #fa6342;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.games-description {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5.008px;
+    margin-bottom: 20px;
+
+    .games-title {
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0px;
+        margin-bottom: 15px;
+        text-align: left;
+        color: #515365;
+    }
 }
