@@ -625,3 +625,228 @@
         width: 37px;
     }
 }
+
+/* category page */
+
+.category__desc {
+    background: #fff;
+    border-radius: 5.008px;
+    padding: 20px;
+    margin: 0 auto 30px;
+}
+
+.category__desc p {
+    font-family: "OpenSans", sans-serif;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.75;
+    font-weight: 500;
+    word-break: normal;
+    text-align: justify;
+    letter-spacing: 0.75px;
+}
+
+.category__desc a {
+    color: #666;
+}
+
+/* game page */
+
+.related-games-title h3 {
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 10px;
+}
+
+.game__content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5.008px;
+    margin-bottom: 20px;
+}
+
+.kidztype-game-holder {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.kidztype-game-holder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.games-admin {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5.008px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.games-admin .games-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 0 15px;
+    text-align: left;
+}
+
+.games-admin .games-title .games-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.games-admin .games-title .games-icons .like {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.games-admin .games-title .games-icons .like:last-child {
+    margin-right: 0px;
+}
+
+.like-container {
+    margin-right: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-49%, 40%);
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.chain-js:hover>.tooltip-text {
+    visibility: visible;
+}
+
+.like-cnt {
+    position: relative;
+    cursor: pointer;
+    background: #5eb973;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 75px;
+    z-index: 10;
+}
+
+.like-container.chain-js .like-cnt::before,
+.like-container.chain-js .like-cnt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+    border-radius: 30px;
+}
+
+.like-container.chain-js .like-cnt::before {
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 0 #34a853;
+}
+
+.like-container .material-icons {
+    position: absolute;
+    top: 19%;
+    left: 21%;
+    font-size: 25px;
+    font-family: 'Material Icons', sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+
+.chain-js .like-cnt .material-icons {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.admin-like .like-cnt {
+    background: #679df5;
+}
+
+.dislike .like-cnt {
+    background: #ee6960;
+}
+
+.dislike .like-cnt .material-icons {
+    transform: scaleX(-1) translate(36%, -46%);
+    top: 49%;
+    left: 42%;
+}
+
+.like-container .like-cnt:hover::before {
+    box-shadow: inset 0 0 0 60px #34a853;
+}
+
+
+.like-container .dislike:hover::before {
+    box-shadow: inset 0 0 0 60px #ee6960;
+}
+.like-container .lk:hover::before {
+    box-shadow: inset 0 0 0 60px #679df5;
+}
+
+.up_vote_count,
+.down_vote_count {
+    color: #959ab5;
+}
+
+.admin-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-person {
+    display: flex;
+    align-items: center;
+}
+
+.person-image {
+    width: 45px;
+}
+
+.admin-person h6 a {
+    color: #515365;
+}
+
+.person-title a {
+    color: #fa6342;
+}
