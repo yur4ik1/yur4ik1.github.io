@@ -62,11 +62,10 @@ if (document.querySelector('.games-type') !== null) {
 
 // iframe lazy load
 
-window.onload = function() {
-  var iframe = document.getElementById('iframeID');
-  var url = iframe.dataset.url;
-  iframe.src = url;
-}
+setTimeout(function() {
+  var dataUrl = document.getElementById('iframeID').getAttribute('data-url');
+  document.getElementById('iframeID').src = dataUrl;
+}, 3000);
 
 
 // like animations
