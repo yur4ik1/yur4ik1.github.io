@@ -60,6 +60,15 @@ if (document.querySelector('.games-type') !== null) {
 }
 
 
+// iframe lazy load
+
+window.onload = function() {
+  var iframe = document.getElementById('iframeID');
+  var url = iframe.dataset.url;
+  iframe.src = url;
+}
+
+
 // like animations
 
 if (document.querySelector('.games-admin') !== null) {
