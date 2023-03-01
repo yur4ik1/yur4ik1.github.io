@@ -1248,7 +1248,7 @@
     }
 
     .games-share {
-        display: block!important;
+        display: block !important;
     }
 
     .header__menu.mobile-menu .header__menu-content {
@@ -1278,9 +1278,11 @@
         text-align: center;
         font-size: 22px;
     }
+
     .kids h2 {
         font-size: 20px;
     }
+
     .games__content {
         flex-wrap: wrap;
         justify-content: center;
@@ -1307,17 +1309,34 @@
     .footer__top-menu {
         margin-bottom: 15px;
     }
+
+    .inner-typing .typing-content .typing-item {
+        margin-bottom: 20px;
+        padding-right: 10px;
+    }
+
+    .inner-typing .typing-content .typing-item .item-description span {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .inner-typing .typing-content .typing-item .item-description p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 567px) {
     .kids h1 {
         font-size: 18px;
     }
+
     .kids__inner-games .games-title .games-type {
         width: 70px;
         right: 15px;
         display: none;
     }
+
     .games {
         padding: 15px;
     }
@@ -1336,4 +1355,8 @@
         border: none;
         padding: 0;
     }
+    .inner-typing .typing-content .typing-item {
+        width: 100%;
+        margin-bottom: 15px;
+    } 
 }

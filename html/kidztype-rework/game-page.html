@@ -464,7 +464,17 @@
 	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 	<script src="js/main.min.js"></script>
 
-	<script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8cf10469a3004e" async="async"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+		 setTimeout(function() {
+		   var addthisScript = document.createElement("script");
+		   addthisScript.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8cf10469a3004e";
+		   addthisScript.defer = true;
+		   document.body.appendChild(addthisScript);
+		 }, 3000);
+	   };
+	   
+	   </script>
 </body>
 
 </html>
