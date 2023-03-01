@@ -59,6 +59,27 @@ if (document.querySelector('.games-type') !== null) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var iframe = document.getElementById('iframeID');
+  window.addEventListener('scroll', function() {
+    if (isElementInViewport(iframe)) {
+      iframe.onload = function() {
+        // Do something when iframe is loaded
+      }
+    }
+  });
+});
+
+function isElementInViewport (el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
 // like animations
 
 if (document.querySelector('.games-admin') !== null) {
