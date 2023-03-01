@@ -59,18 +59,18 @@ if (document.querySelector('.games-type') !== null) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var iframe = document.getElementById('iframeID');
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     if (isElementInViewport(iframe)) {
-      iframe.onload = function() {
+      iframe.onload = function () {
         // Do something when iframe is loaded
       }
     }
   });
 });
 
-function isElementInViewport (el) {
+function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
@@ -79,6 +79,30 @@ function isElementInViewport (el) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  if ("IntersectionObserver" in window) {
+    var iframesLazy = document.querySelectorAll("iframe.iframe-youtube-lazy-video");
+    var iframeObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && entry.target.src.length == 0) {
+          entry.target.src = entry.target.dataset.src;
+          iframeObserver.unobserve(entry.target);
+        }
+      });
+    });
+    iframesLazy.forEach(function (iframe) {
+      iframeObserver.observe(iframe);
+    });
+  } else {
+    var iframesLazy = document.querySelector('iframe.iframe-youtube-lazy-video');
+    for (var i = 0; i < iframesLazy.length; i++) {
+      if (lazyVids[i].getAttribute('data-src')) {
+        lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+      }
+    }
+  }
+});
 
 // like animations
 
