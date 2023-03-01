@@ -144,7 +144,7 @@
     &__inner-games .games-title .games-share {
         display: block;
         left: 20px;
-        width: 80%;
+        width: 90%;
         text-align: left;
         height: 40px;
     }
@@ -275,7 +275,6 @@
 .games {
     padding: 20px 10px;
     background: $color-white;
-    ;
     border-radius: 5.008px;
     margin: 0 auto 30px;
 
@@ -386,10 +385,11 @@
                     align-items: center;
                     max-width: 100%;
 
-                    .button {
+                    button {
                         color: #333;
+                        font-size: 14px;
 
-                        button img {
+                        img {
                             width: 20px;
                             margin-right: 5px;
                         }
@@ -399,6 +399,7 @@
         }
     }
 }
+
 
 .games.list {
     .games__content {
@@ -499,16 +500,15 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    max-width: 220px;
+                    max-width: 100%;
 
-                    .button {
+                    button {
                         color: #333;
+                        font-size: 14px;
 
-                        button {
-                            img {
-                                width: 20px;
-                                margin-right: 5px;
-                            }
+                        img {
+                            width: 20px;
+                            margin-right: 5px;
                         }
                     }
                 }
@@ -1088,16 +1088,245 @@
                 text-decoration: none;
                 background: #e74e84;
                 border: none;
-                
+
             }
 
             &:hover p {
                 color: $color-white;
             }
+
             &:hover img {
                 filter: brightness(100);
             }
-            
+
         }
+    }
+}
+
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1359px) and (max-width: 1440px) {
+    .container {
+        max-width: 1280px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1359px) {
+    .container {
+        max-width: 1230px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+    .container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 1199px) {
+    .games-share {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .header__menu-list .header__menu-item a {
+        padding: 22px 15px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header__top {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .header__burger.active span {
+        background: transparent;
+    }
+
+    .header__burger.active span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .header__burger.active span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .header__logo {
+        margin: 0 auto;
+        width: 150px;
+    }
+
+    .header__menu-content {
+        justify-content: flex-start;
+        width: 270px;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+        overflow: auto;
+        height: calc(100vh - 54px);
+        transform: translate(-100%, 0);
+        transition: 0.3s linear;
+    }
+
+    .header__menu-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header__menu-item {
+        width: 100%;
+    }
+
+    .header__menu-list .header__menu-item a {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        color: #272727;
+        overflow: hidden;
+    }
+
+    .header__menu-list .header__menu-item a:hover {
+        background: #fff;
+        color: #272727;
+    }
+
+    .header__menu-list .header__menu-item a::after {
+        display: none;
+    }
+
+    .header .header__menu .container {
+        padding: 0;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s linear;
+    }
+
+    .header__menu.mobile-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .games-share {
+        display: block!important;
+    }
+
+    .header__menu.mobile-menu .header__menu-content {
+        transform: translate(0, 0);
+    }
+
+    .kids__inner-games .page-description p {
+        font-size: 14px;
+    }
+
+    .kids__inner-content {
+        flex-direction: column;
+    }
+
+    .kids__inner-games {
+        margin-right: 0;
+    }
+
+    .kids__inner-sidebar {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .kids h2 {
+        font-size: 20px;
+    }
+    .games__content {
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .games__content .games-item {
+        width: calc(50% - 20px);
+    }
+
+    .welcome__title h2 {
+        font-size: 22px;
+    }
+
+    .kidsinfo__list .info-item {
+        width: 100%;
+    }
+
+    .footer__top-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .footer__top-menu {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .kids__inner-games .games-title .games-type {
+        width: 70px;
+        right: 15px;
+        display: none;
+    }
+    .games {
+        padding: 15px;
+    }
+
+    .games__content .games-item {
+        width: 100%;
+        margin: 20px 0 0;
+    }
+
+    .footer__top-menu {
+        flex-direction: column;
+    }
+
+    .footer__top-menu li {
+        margin: 0 0 15px;
+        border: none;
+        padding: 0;
     }
 }
