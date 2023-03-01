@@ -77,7 +77,7 @@
 
 						<section class="game__content">
 							<div class="kidztype-game-holder">
-								<iframe id="iframeID" class="iframe-youtube-lazy-video lazy" data-src="https://www.kidztype.com/html5/dmt/level1/" scrolling="auto" align="middle"
+								<iframe id="iframeID" src="https://www.kidztype.com/html5/dmt/level1/" scrolling="auto" align="middle"
 									frameborder="no">
 								</iframe>
 							</div>
@@ -460,8 +460,27 @@
 		</footer>
 	</div>
 
-	<script defer src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			setTimeout(function () {
+				var addthisScript = document.createElement("script");
+				addthisScript.src = "//cdn.jsdelivr.net/mojs/latest/mo.min.js";
+				addthisScript.defer = true;
+				document.body.appendChild(addthisScript);
+			}, 2000);
+		};
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			setTimeout(function () {
+				var addthisScript = document.createElement("script");
+				addthisScript.src = "//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js";
+				addthisScript.defer = true;
+				document.body.appendChild(addthisScript);
+			}, 2000);
+		};
+	</script>
+	
 	<script src="js/main.min.js"></script>
 
 	<script type="text/javascript">
@@ -473,7 +492,6 @@
 				document.body.appendChild(addthisScript);
 			}, 3000);
 		};
-
 	</script>
 </body>
 
