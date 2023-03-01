@@ -1,0 +1,124 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1;
+  color: #555;
+  letter-spacing: 1.75px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.game-name {
+  font-size: 30px !important;
+  line-height: 1;
+  color: #272727;
+  letter-spacing: 1.75px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: #272727;
+  padding: 5px 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+
+h4 {
+  font-size: 22px;
+  color: #515365;
+}
+
+h5 {
+  font-size: 20px;
+  color: #515365;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 16px;
+  color: #111;
+}
+
+h6:hover {
+  color: #fa6342;
+  text-decoration: underline;
+}
+
+h6:active {
+  opacity: 0.7;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: .75px;
+  font-weight: normal;
+  font-family: "OpenSans", sans-serif;
+  word-break: normal;
+  text-align: justify;
+
+}
+
+button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
