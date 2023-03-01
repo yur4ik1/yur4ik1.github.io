@@ -16,6 +16,8 @@
 
         img {
             width: 100%;
+            object-fit: cover;
+            height: 100%;
         }
     }
 
@@ -231,11 +233,14 @@
         margin-bottom: 0px;
     }
 
-    &__inner-sidebar .sidebar-menu h5 {
+    &__inner-sidebar .sidebar-menu h3 {
         color: $color-background;
         margin-left: -15px;
         padding-left: 15px;
         line-height: 1.8;
+        font-size: 20px;
+        color: #515365;
+        letter-spacing: 1px;
     }
 
 
@@ -345,7 +350,9 @@
                     background: #000;
 
                     img {
-                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         transition: 0.3s ease-in-out;
 
                         &:hover {
@@ -375,7 +382,7 @@
                 }
 
                 p {
-                    font-family: "Roboto",sans-serif;
+                    font-family: "Roboto", sans-serif;
                     margin-bottom: 15px;
                     font-size: 14px;
                     font-weight: 500;
@@ -394,7 +401,8 @@
                         font-size: 14px;
 
                         img {
-                            width: 20px;
+                            width: 100%;
+                            object-fit: cover;
                             margin-right: 5px;
                         }
                     }
@@ -427,7 +435,9 @@
                     background: #000;
 
                     img {
-                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         transition: 0.3s ease-in-out;
 
                         &:hover {
@@ -496,7 +506,7 @@
                 }
 
                 p {
-                    font-family: "Roboto",sans-serif;
+                    font-family: "Roboto", sans-serif;
                     margin-bottom: 15px;
                     font-size: 14px;
                     font-weight: 500;
@@ -1332,6 +1342,13 @@
     .inner-typing .typing-content .typing-item .item-description p {
         font-size: 16px;
     }
+
+    .games-admin .games-title {
+        flex-direction: column;
+    }
+    .games-admin .games-title h1 {
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 567px) {
@@ -1363,8 +1380,9 @@
         border: none;
         padding: 0;
     }
+
     .inner-typing .typing-content .typing-item {
         width: 100%;
         margin-bottom: 15px;
-    } 
+    }
 }
