@@ -68,4 +68,3 @@ setTimeout(function() {
   document.getElementById('iframeID').src = dataUrl;
   loader.style.display = 'none';
 }, 3000);
-
