@@ -460,29 +460,27 @@
 	<script src="js/main.min.js"></script>
 
 	<script type="text/javascript">
-		window.onload = function () {
-			setTimeout(function () {
-				let likeScript = document.createElement("script");
-				likeScript.src = "js/like.js";
-				likeScript.defer = true;
-				document.body.appendChild(likeScript);
+		setTimeout(function () {
+			let likeScript = document.createElement("script");
+			likeScript.src = "js/like.js";
+			likeScript.defer = true;
+			document.body.appendChild(likeScript);
 
-				let moScript = document.createElement("script");
-				moScript.src = "https://cdn.jsdelivr.net/mojs/latest/mo.min.js";
-				moScript.defer = true;
-				document.body.appendChild(moScript);
+			let moScript = document.createElement("script");
+			moScript.src = "https://cdn.jsdelivr.net/mojs/latest/mo.min.js";
+			moScript.defer = true;
+			document.body.appendChild(moScript);
 
-				let TweenMaxScript = document.createElement("script");
-				TweenMaxScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js";
-				TweenMaxScript.defer = true;
-				document.body.appendChild(TweenMaxScript);
+			let TweenMaxScript = document.createElement("script");
+			TweenMaxScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js";
+			TweenMaxScript.defer = true;
+			document.body.appendChild(TweenMaxScript);
 
-				let addthisScript = document.createElement("script");
-				addthisScript.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8cf10469a3004e";
-				addthisScript.defer = true;
-				document.body.appendChild(addthisScript);
-			}, 3000);
-		};
+			let addthisScript = document.createElement("script");
+			addthisScript.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a8cf10469a3004e";
+			addthisScript.defer = true;
+			document.body.appendChild(addthisScript);
+		}, 2000);
 	</script>
 
 </body>

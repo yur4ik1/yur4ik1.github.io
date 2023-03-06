@@ -65,5 +65,5 @@ if (document.querySelector('.games-type') !== null) {
 setTimeout(function() {
   var dataUrl = document.getElementById('iframeID').getAttribute('data-url');
   document.getElementById('iframeID').src = dataUrl;
-}, 3000);
+}, 1000);
 
