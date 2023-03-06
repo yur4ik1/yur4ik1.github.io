@@ -784,7 +784,6 @@
 .game__content {
     padding: 20px;
     background: $color-white;
-    ;
     border-radius: 5.008px;
     margin-bottom: 20px;
 }
@@ -795,6 +794,26 @@
     height: 0;
     overflow: hidden;
 
+    #skeleton {
+        margin: 0 auto;
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid rgb(103, 157, 245);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1.3s linear infinite;
+        margin-top: 21.25%;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 
     iframe {
         position: absolute;
@@ -803,12 +822,13 @@
         width: 100%;
         height: 100%;
     }
+
+
 }
 
 .games-admin {
     padding: 20px;
     background: $color-white;
-    ;
     border-radius: 5.008px;
     margin-bottom: 20px;
     margin-top: 25px;
@@ -1350,8 +1370,16 @@
     .games-admin .games-title {
         flex-direction: column;
     }
+
     .games-admin .games-title h1 {
         margin-bottom: 15px;
+    }
+
+    .kidztype-game-holder #skeleton {
+        border: 12px solid #f3f3f3;
+        border-top: 12px solid #679df5;
+        width: 90px;
+        height: 90px;
     }
 }
 
@@ -1388,5 +1416,11 @@
     .inner-typing .typing-content .typing-item {
         width: 100%;
         margin-bottom: 15px;
+    }
+    .kidztype-game-holder #skeleton {
+        border: 9px solid #f3f3f3;
+        border-top: 9px solid #679df5;
+        width: 60px;
+        height: 60px;
     }
 }
