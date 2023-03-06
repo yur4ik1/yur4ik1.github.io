@@ -62,3 +62,8 @@ if (document.querySelector('.games-type') !== null) {
 
 // iframe lazy load
 
+setTimeout(function() {
+  var dataUrl = document.getElementById('iframeID').getAttribute('data-url');
+  document.getElementById('iframeID').src = dataUrl;
+}, 2000);
+
