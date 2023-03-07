@@ -608,21 +608,18 @@
 
     /////////////////////////////////////////////////////
     // 14. Testimonial Slider 3
-    var testimonial_slider_3 = new Swiper(".testimonial__slider-3", {
+    /* var testimonial_slider_3 = new Swiper(".testimonial__slider-3", {
         spaceBetween: 0,
         loop: true,
         freemode: true,
         slidesPerView: 1,
         speed: 2000,
 
-        allowSlideNext: false,
-        allowSlidePrev: false,
-
         navigation: {
             nextEl: ".next-button",
             prevEl: ".prev-button",
         },
-    });
+    }); */
     /////////////////////////////////////////////////////
 
 
@@ -1167,10 +1164,6 @@
         stagger: 0.05
     });
     $('.end').css({
-        '-webkit-font-size': '180px',
-        'font-size': '180px',
-        '-webkit-line-height': '1',
-        'line-height': '1',
         '-webkit-transform-origin': 'center bottom',
         'transform-origin': 'center bottom',
         'text-align': 'center',
