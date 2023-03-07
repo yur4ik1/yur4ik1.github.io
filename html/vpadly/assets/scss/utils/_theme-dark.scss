@@ -1,0 +1,1656 @@
+/*----------------------------------------*/
+/*  06. THEME DARK CSS START
+/*----------------------------------------*/
+
+.dark {
+  background-color: var(--black-2);
+
+  .logo {
+    &-light {
+      display: block;
+    }
+
+    &-dark {
+      display: none;
+    }
+  }
+
+  .portfolio__page {
+    section {
+      margin-top: 0;
+    }
+
+    .wc-btn-dark {
+      &:hover {
+        color: var(--black-2);
+        background-color: var(--white);
+        border-color: var(--white);
+      }
+    }
+  }
+
+  .wc-btn-primary,
+  .wc-btn-secondary {
+    border-color: var(--secondary);
+    color: var(--gray-2);
+  }
+
+  .wc-btn-black {
+    &:hover {
+      border-color: var(--white);
+      color: var(--black-2);
+
+      span {
+        background-color: var(--white);
+      }
+    }
+  }
+
+  .line::before,
+  .line::after,
+  .line-3 {
+    background-color: var(--bg-line);
+  }
+
+  p {
+    color: var(--gray-2);
+  }
+
+  .sec-title,
+  .sec-title-2,
+  .sec-title-3,
+  .sec-sub-title {
+    color: var(--white);
+  }
+
+  .main-dropdown {
+    background-color: var(--white);
+
+    .sub-dropdown {
+      background-color: var(--white);
+    }
+
+    li a {
+      color: var(--black-2) !important;
+
+      .menu-text {
+        text-shadow: 0 16px 0 var(--black-2) !important;
+      }
+
+      &:hover {
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .mega-menu {
+    background-color: var(--white);
+
+    a:not([href]),
+    a:not([href]):hover {
+      color: var(--black-2) !important;
+    }
+
+    li a {
+      color: var(--black-2) !important;
+
+      .menu-text {
+        text-shadow: 0 16px 0 var(--black-2) !important;
+      }
+
+      &:hover {
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .header__area-3.sticky-3 {
+    background-color: var(--black-2);
+    border-color: var(--secondary);
+  }
+
+  .header__area-5.sticky-5 {
+    background-color: var(--black-2);
+    border-color: var(--secondary);
+  }
+
+  .hero {
+    &__area {
+      &-3 {
+        background-color: var(--d-black-2);
+
+        &::before {
+          filter: invert(0.9);
+        }
+
+        .sec-sub-title,
+        .sec-title,
+        .intro-title .video-title {
+          color: var(--white);
+        }
+
+        .scroll-down img {
+          filter: invert(1);
+        }
+
+        .sec-sub-title::after {
+          background-color: var(--white);
+        }
+      }
+
+      &-5 {
+        background-color: var(--black-2);
+
+        img {
+          filter: invert(0);
+        }
+      }
+    }
+
+    &__title-5,
+    &__content-5 p {
+      color: var(--white);
+    }
+
+    &-title {
+      color: var(--white);
+    }
+
+    &__inner-3 {
+      .video-intro-title {
+        color: var(--gray-2);
+
+        span {
+          color: var(--white);
+        }
+      }
+    }
+
+    &__about {
+      background-color: var(--d-black-2);
+      background-blend-mode: color-burn;
+
+      &-award {
+        &::before {
+          background-color: var(--secondary);
+        }
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  .about {
+    &__area {
+      background: var(--black-2);
+
+      .sec-title {
+        color: var(--white);
+      }
+
+      &-2 {
+        background-color: var(--d-black-2);
+      }
+    }
+
+    &__content {
+      p {
+        color: var(--gray-2);
+      }
+    }
+  }
+
+  .counter {
+    &__area {
+      background-color: var(--black-2);
+
+      &-3 {
+        @media (max-width: 1200px) {
+          background-color: var(--black-2);
+        }
+
+        .counter__number {
+          color: var(--white);
+        }
+      }
+    }
+
+    &__about {
+      background-color: var(--d-black-2);
+    }
+
+    &__number {
+      color: var(--white);
+    }
+
+    &__item {
+      border-color: var(--secondary);
+
+      &::before {
+        background-color: transparent;
+      }
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    &__img-3 img {
+      filter: contrast(0.5);
+    }
+  }
+
+  .workflow {
+    &__area {
+      background-color: var(--black-2);
+
+      .sec-title {
+        color: var(--white);
+      }
+
+      &-3 {
+        background-color: var(--black-2);
+      }
+
+      &-6 {
+        background-color: var(--d-black-2);
+      }
+    }
+
+    &__slide {
+      &::before {
+        background-color: var(--bg-line);
+      }
+
+      &::after {
+        border-color: var(--black-2);
+      }
+    }
+
+    &__wrapper-6 {
+      border-color: var(--secondary);
+    }
+
+    &__number {
+      color: var(--d-black-3);
+    }
+
+    &__title {
+      color: var(--white);
+
+      &-6 {
+        color: var(--white);
+      }
+    }
+
+    &__step {
+      color: var(--white);
+    }
+
+  }
+
+  .brand {
+    &__area {
+      background-color: var(--black-2);
+
+      .sec-title {
+        color: var(--white);
+      }
+    }
+
+    &__about {
+      background-color: var(--d-black-2);
+    }
+
+    &__title-3 {
+      color: var(--white);
+    }
+
+    &__list {
+      background-color: transparent;
+      border-color: var(--bg-line);
+    }
+
+    &__item {
+      border-color: var(--bg-line);
+    }
+  }
+
+
+  .service {
+    &__area {
+      background-color: var(--d-black-2);
+
+      &-2 {
+        background-color: var(--black-2);
+
+        &.service-v3 {
+          background-color: var(--d-black-2);
+        }
+
+        .sec-text p {
+          color: var(--white);
+        }
+      }
+
+      &-3 {
+        background-color: var(--d-black-2);
+
+        .sec-title-wrapper::after {
+          background-color: var(--secondary);
+        }
+
+        .sec-sub-title {
+          background-color: var(--d-black-2);
+        }
+
+        .sec-title {
+          background-color: var(--d-black-2);
+        }
+      }
+
+      &-6 {
+        background-color: var(--d-black-2);
+      }
+    }
+
+    &__item {
+      &-2 {
+        &::before {
+          background-color: var(--secondary);
+        }
+
+        p,
+        ul li {
+          color: var(--gray-2);
+        }
+      }
+
+      &-3,
+      &-3:first-child {
+        border-color: var(--secondary);
+      }
+    }
+
+    &__title {
+
+      &-3:hover,
+      &-2 {
+        color: var(--white);
+      }
+    }
+
+    &__content {
+      &-3 {
+        ul li {
+          color: var(--gray-2);
+        }
+
+        p {
+          color: var(--white);
+        }
+      }
+    }
+
+    &__detail {
+      background-color: var(--d-black-2);
+    }
+
+    &-v4.pb-150 {
+      padding-bottom: 150px;
+
+      @media #{$lg} {
+        padding-bottom: 100px;
+      }
+
+      @media #{$md} {
+        padding-bottom: 90px;
+      }
+
+      @media #{$sm} {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+
+  .portfolio {
+    &__area {
+      background-color: var(--d-black-2);
+
+      &-2 {
+        background-color: var(--black-2);
+
+        &::after {
+          background: var(--secondary);
+        }
+      }
+
+      &-5 {
+        background-color: var(--black-2);
+        border-color: var(--secondary);
+
+        &::before,
+        &::after,
+        .sec-line-1,
+        .sec-line-2 {
+          filter: invert(0);
+        }
+      }
+
+      &-6 {
+        background-color: var(--black-2);
+
+        .pb-140 {
+          padding-bottom: 0;
+        }
+
+        .sec-title-wrapper p::before {
+          background-color: var(--white);
+        }
+      }
+    }
+
+
+    &-v4 {
+      background-color: var(--d-black-2);
+    }
+
+    &__slider {
+      &-2 {
+        &::after {
+          background: var(--secondary);
+        }
+
+        &-pagination .swiper-pagination-bullet {
+          border-color: var(--secondary);
+
+          &::after {
+            background-color: var(--secondary);
+          }
+
+          &-active,
+          &:hover {
+            border-color: var(--white);
+
+            &::after {
+              background-color: var(--white);
+            }
+          }
+        }
+      }
+    }
+
+    &__slide {
+      &-2 {
+        background-color: var(--black-2);
+
+        .sec-title a {
+          color: var(--white);
+        }
+
+        .btn-common {
+          color: var(--gray);
+
+          &:hover {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    &__detail {
+      background-color: var(--black-2);
+
+      &-info ul li {
+        color: var(--gray-2);
+
+        a,
+        span {
+          color: var(--gray-2);
+        }
+      }
+
+      &-title {
+        color: var(--white);
+      }
+
+      &-text {
+
+        p,
+        li {
+          color: var(--gray-2);
+        }
+
+        .fonts {
+          img {
+            filter: invert(1);
+          }
+
+          ul .semibold,
+          ul .medium {
+            color: var(--gray-2);
+          }
+        }
+
+      }
+    }
+
+    &__title-6,
+    &__current {
+      color: var(--white);
+    }
+
+    &__date,
+    &__pagination-6 {
+      color: var(--gray-2);
+    }
+
+    &__project {
+      background-color: var(--black-2);
+
+      &::after {
+        filter: invert(1);
+      }
+
+      .pp-title,
+      .pp-slide-title,
+      .swipper-btn {
+        color: var(--white);
+      }
+
+      .pp-slide-thumb p {
+        color: var(--gray-2);
+      }
+
+      .pp-prev::after,
+      .pp-next::after {
+        background-color: var(--white);
+      }
+    }
+
+    &__footer {
+      // margin-top: 150px;
+      border-color: var(--secondary);
+    }
+
+    &__footer-area {
+      background-color: var(--black-2);
+      background-blend-mode: overlay;
+
+      &::before {
+        filter: invert(0.8);
+      }
+
+      &::after {
+        filter: invert(1);
+      }
+
+      .pf-title,
+      .pf-contact h3,
+      .pf-contact ul li a,
+      .pf-social ul li a {
+        color: var(--white);
+      }
+
+      .pf-social ul li a:hover {
+        color: var(--black-2);
+        background-color: var(--white);
+      }
+    }
+
+    &__service {
+      background-color: var(--d-black-2);
+      background-blend-mode: overlay;
+
+      .sec-text,
+      &-item {
+        filter: invert(1);
+      }
+
+      .ps-btn a {
+        color: var(--white);
+        border-color: var(--white);
+      }
+    }
+
+    &__hero {
+      .title {
+        color: var(--white);
+
+        &.text-stroke {
+          -webkit-text-stroke: 1px var(--white);
+        }
+
+        &.shape-circle::after {
+          filter: invert(1);
+        }
+      }
+
+      &-area {
+        background-color: var(--black-2);
+
+        &::after {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &__about {
+      background-color: var(--d-black-2);
+
+      &::after {
+        filter: invert(1);
+      }
+
+      .sec-text p {
+        color: var(--gray-2);
+      }
+
+      .sec-title span::before {
+        background-color: var(--white);
+      }
+
+      &-left img {
+        filter: invert(0.5);
+      }
+
+      .brand-title {
+        color: var(--gray-2);
+      }
+
+      .about-row,
+      .brand-title-wrap {
+        border-color: var(--secondary);
+      }
+    }
+  }
+
+  .wc-btn-dark {
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .testimonial {
+    &__area {
+      background-color: var(--black-2);
+
+      .sec-title {
+        color: var(--white);
+      }
+
+      &-2 {
+        background-color: var(--d-black-2);
+      }
+
+      &-3 {
+        background-color: var(--d-black-2);
+        background-image: none;
+
+        p::before {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &__pagination .next-button,
+    &__pagination .prev-button {
+      border-color: var(--secondary);
+
+      i {
+        color: var(--secondary);
+      }
+
+      &:hover {
+        border-color: var(--white);
+
+        i {
+          color: var(--white);
+        }
+      }
+    }
+
+    &__title,
+    &__title-2,
+    &__author {
+      color: var(--white);
+    }
+
+    &__img.b-right::after {
+      border-color: var(--secondary);
+      z-index: 0;
+    }
+
+    &__img.b-left::before {
+      border-color: var(--bg-line);
+      z-index: 1;
+    }
+
+    &__role {
+      color: var(--gray-2);
+    }
+
+    &__slide-3 p {
+      color: var(--white);
+    }
+
+    &__inner-2 {
+      background-color: var(--d-black-2);
+    }
+
+    &__slider-3 .swipper-btn:hover {
+      transition: all 0.3s;
+      border-color: var(--white);
+    }
+
+  }
+
+  .client__name-3 {
+    color: var(--white);
+  }
+
+  .client__role-3 {
+    color: var(--gray-2);
+  }
+
+
+  .blog {
+    &__area {
+      background-color: var(--black-2);
+
+      &.no-pb {
+        margin-bottom: -150px;
+
+        @media #{$lg} {
+          margin-bottom: -90px;
+        }
+
+        @media #{$md} {
+          margin-bottom: 0;
+        }
+
+        @media #{$sm} {
+          margin-bottom: 0;
+        }
+
+      }
+
+      .pb-140 {
+        @media #{$lg} {
+          padding-bottom: 80px;
+        }
+
+        @media #{$md} {
+          padding-bottom: 0;
+        }
+
+        @media #{$sm} {
+          padding-bottom: 0;
+        }
+      }
+
+      &-2,
+      &-6 {
+        background-color: var(--d-black-2);
+      }
+
+      .sec-title {
+        color: var(--white);
+      }
+
+      &-3 {
+        background-color: var(--d-black-2);
+
+        .sec-sub-title,
+        .sec-title {
+          background-color: var(--d-black-2);
+        }
+
+        .sec-title-wrapper::after {
+          background-color: var(--secondary);
+        }
+      }
+    }
+
+    &__info-3 {
+      background-color: var(--d-black-2);
+    }
+
+    &__title {
+      color: var(--white);
+      border-color: var(--secondary);
+
+      &:hover {
+        color: var(--gray-2);
+      }
+    }
+
+    &__btn {
+      color: var(--gray-2);
+
+      &:hover {
+        color: var(--white);
+      }
+    }
+
+    &__meta {
+      color: var(--gray-2);
+
+      a {
+        color: var(--gray-2);
+
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+
+    &__detail {
+      background-color: var(--d-black-2);
+
+      &-title,
+      &-date {
+        color: var(--white);
+      }
+
+      &-date span,
+      ul li {
+        color: var(--gray-2);
+      }
+
+      &-tags p {
+        color: var(--white);
+
+        a {
+          color: var(--gray-2);
+        }
+      }
+
+      &-content {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: var(--white);
+        }
+      }
+
+      &-meta p span {
+        color: var(--gray-2);
+      }
+    }
+
+    &__related {
+      background-color: var(--d-black-2);
+    }
+  }
+
+  .team {
+    &__area {
+      background-color: var(--d-black-2);
+
+      &-6 {
+        background-color: var(--black-2);
+        background-blend-mode: color-burn;
+      }
+    }
+
+    &__about {
+      background-color: var(--black-2);
+    }
+
+    &__btm {
+      background-color: var(--black-2);
+    }
+
+    &__join-btn {
+      background-color: var(--d-black-2);
+    }
+
+    &__member {
+      &-name {
+
+        &-6,
+        &-7 {
+          color: var(--white);
+        }
+      }
+
+      &-role {
+
+        &-6,
+        &-7 {
+          color: var(--gray-2);
+        }
+
+        &-7 {
+          span {
+            color: var(--white);
+          }
+
+          &::after {
+            background-color: var(--white);
+          }
+        }
+      }
+
+      &-work {
+
+        li a {
+          color: var(--white);
+
+          &:hover {
+            color: var(--black-2);
+            background-color: var(--white);
+          }
+        }
+      }
+
+      &-social li a:hover {
+        color: var(--white);
+      }
+    }
+
+    &__detail {
+      background-color: var(--black-2);
+
+      &.pb-140 {
+        padding-bottom: 60px;
+      }
+
+      &-page {
+
+        .line-1,
+        .line-2,
+        .line-3 {
+          background: var(--bg-line);
+        }
+      }
+
+      .work-title {
+        color: var(--white);
+      }
+    }
+  }
+
+  .cta {
+    &__area {
+      background-color: var(--black-2);
+
+      .line {
+        padding-top: 150px;
+
+        @media #{$lg} {
+          padding-top: 100px;
+        }
+
+        @media #{$md} {
+          padding-top: 90px;
+        }
+
+        @media #{$sm} {
+          padding-top: 60px;
+        }
+
+        &.no-p {
+          padding-top: 100px;
+
+          @media #{$md} {
+            padding-top: 90px;
+          }
+
+          @media #{$sm} {
+            padding-top: 60px;
+          }
+        }
+      }
+
+      .dark-p {
+        padding-top: 150px;
+
+        @media #{$lg} {
+          padding-top: 100px;
+        }
+
+        @media #{$md} {
+          padding-top: 90px;
+        }
+
+        @media #{$sm} {
+          padding-top: 60px;
+        }
+      }
+
+      &-2 {
+        background-color: var(--black-2);
+
+        .wc-btn-pink {
+          color: var(--gray-2);
+        }
+      }
+
+      &-3 {
+        background-color: var(--d-black-2);
+      }
+
+      &-5 {
+        background-color: var(--black-2);
+        filter: invert(0);
+        margin: 0;
+      }
+    }
+
+    &__title {
+      color: var(--white);
+
+      &-2 {
+        color: var(--white);
+      }
+    }
+
+    &__sub-title {
+      color: var(--white);
+    }
+
+    &__content {
+      @media #{$sm} {
+        padding-top: 0px;
+      }
+    }
+  }
+
+
+  .footer {
+    &__area {
+      background-color: var(--black-2);
+
+      &-2 {
+        background-color: var(--black-2);
+        background-blend-mode: multiply;
+        background-position: 100% 1px;
+      }
+
+      &-5 {
+        background-color: var(--black-2);
+      }
+    }
+
+    &__inner {
+      background-color: var(--d-black-2);
+    }
+
+    &__middle {
+      &-2 {
+        border-color: var(--secondary);
+      }
+    }
+
+    &__subscribe {
+      &-2 {
+        &::before {
+          background-color: var(--secondary);
+        }
+
+        input {
+          color: var(--white);
+          border-color: var(--white);
+          background-color: transparent;
+
+          &::placeholder {
+            color: var(--white);
+          }
+        }
+
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &-menu {
+      li {
+        a {
+          color: var(--white);
+
+          .menu-text {
+            text-shadow: 0 16px 0 var(--white);
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      &-2 {
+        p a {
+          color: var(--white);
+        }
+      }
+
+      &-4 a {
+        color: var(--white);
+      }
+    }
+
+    &-line {
+      &::after {
+        background: var(--bg-line);
+      }
+    }
+
+    &__location-2 .location h3 {
+      color: var(--white);
+    }
+  }
+
+  .feature {
+    &__area {
+      &-2 {
+        background-color: var(--d-black-2);
+      }
+    }
+
+    &__top {
+      border-color: var(--secondary);
+    }
+
+    &__item {
+      border-color: var(--secondary);
+
+      &:nth-child(odd) {
+        border-color: var(--secondary);
+      }
+
+      img {
+        filter: invert(1);
+      }
+
+      p {
+        color: var(--gray-2);
+      }
+    }
+
+    &__title {
+      color: var(--white);
+    }
+
+    &__text p {
+      color: var(--white);
+    }
+  }
+
+
+  .award {
+    &__area {
+      background-color: var(--d-black-2);
+    }
+  }
+
+  .main-menu {
+    &-3 {
+      li a {
+        color: var(--white);
+      }
+    }
+
+
+    .mega-menu li a {
+      color: var(--black-2);
+    }
+  }
+
+  .header__nav-icon-3 {
+    button {
+      color: var(--white);
+    }
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .choose {
+    &-title {
+      color: var(--white);
+    }
+  }
+
+  .research {
+    &__area {
+      background-color: var(--d-black-2);
+      background-blend-mode: exclusion;
+
+      @media (max-width: 1200px) {
+        background-color: var(--black-2);
+        padding-bottom: 0;
+      }
+
+      .sec-sub-title,
+      .sec-title-wrapper p {
+        color: var(--white);
+      }
+    }
+
+    &__list {
+      @media #{$sm} {
+        padding-bottom: 0;
+      }
+    }
+
+    &__item p,
+    &__number span,
+    &__title {
+      color: var(--white);
+    }
+
+    &__tools li a {
+      color: var(--white);
+      border-color: var(--white);
+
+      &:hover {
+        color: var(--black-2);
+        background-color: var(--white);
+      }
+    }
+  }
+
+  .price {
+    &__area {
+      background-color: var(--black-2);
+    }
+
+    &__item:first-child {
+      background-color: var(--d-black-2);
+    }
+  }
+
+  .story {
+    &__area {
+      background-color: var(--d-black-2);
+
+      .line {
+        padding-bottom: 120px;
+
+        @media #{$lg} {
+          padding-bottom: 100px;
+        }
+
+        @media #{$md} {
+          padding-bottom: 90px;
+        }
+      }
+    }
+
+    &__text p {
+      color: var(--gray-2);
+    }
+  }
+
+  .error {
+    &__page {
+      background-color: var(--d-black-2);
+    }
+
+    &__content {
+      h2 {
+        color: var(--white);
+      }
+
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .career {
+    &__top {
+      background-color: var(--black-2);
+    }
+
+    &__gallery {
+      background-color: var(--black-2);
+
+      ul li {
+        color: var(--white);
+
+        &::after {
+          background-color: var(--white);
+        }
+      }
+
+      p {
+        color: var(--gray-2);
+      }
+    }
+
+    &__benefits {
+      background-color: var(--black-2);
+
+      &-list li {
+        color: var(--white);
+        border-color: var(--bg-line);
+      }
+    }
+  }
+
+  .contact {
+    &__area-6 {
+      background-color: var(--black-2);
+    }
+
+    &__form {
+
+      textarea,
+      input,
+      input::placeholder,
+      textarea::placeholder {
+        color: var(--white);
+        border-color: var(--bg-line);
+      }
+
+
+      textarea:focus,
+      input:focus {
+        border-color: var(--white);
+      }
+    }
+
+    &__info {
+
+      h3,
+      ul li span,
+      ul li a {
+        color: var(--white);
+      }
+    }
+  }
+
+
+  .faq {
+    &__area {
+      background-color: var(--d-black-2);
+
+      &-6 {
+        background-color: var(--black-2);
+      }
+    }
+
+    &__btm {
+      background-color: var(--black-2);
+    }
+
+    &__list .accordion-button,
+    &__list-6 .accordion-button {
+      color: var(--white);
+    }
+
+    &__title {
+      color: var(--white);
+    }
+
+    &__list {
+      .accordion-item {
+        background-color: transparent;
+      }
+
+      &-3 {
+        .accordion-item {
+          border-color: var(--bg-line);
+
+          &:first-child {
+            border-color: var(--bg-line);
+          }
+        }
+      }
+    }
+  }
+
+  .accordion-item {
+    background-color: var(--black-2);
+    border-color: var(--bg-line);
+  }
+
+  .service__faq {
+    .accordion-item {
+      background-color: var(--d-black-2);
+    }
+  }
+
+  .job__detail {
+    background-color: var(--black-2);
+
+    &-top {
+      background-color: var(--d-black-2);
+    }
+
+    &-content {
+      border-color: var(--bg-line);
+
+      ul li {
+        color: var(--gray-2);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--white);
+      }
+    }
+
+    &-meta li {
+      color: var(--gray-2);
+    }
+
+    &-sidebar {
+      background-color: var(--d-black-2);
+
+      ul li {
+        color: var(--gray-2);
+      }
+    }
+  }
+
+  .development {
+    &__area {
+      background-color: var(--d-black-2);
+    }
+
+    &__wrapper ul li {
+      color: var(--gray-2);
+    }
+
+    &__content {
+      border-color: var(--secondary);
+    }
+  }
+
+  .solution {
+    &__area {
+      background-color: var(--black-2);
+    }
+
+    &__title {
+      color: var(--white);
+    }
+
+    &__mid {
+      p {
+        color: var(--gray-2);
+
+        &::before {
+          background-color: var(--white);
+        }
+      }
+    }
+
+    &__btm {
+      li {
+        color: var(--white);
+      }
+    }
+
+    &__img {
+
+      &-1::after,
+      &-2::after,
+      &-3::after {
+        border-color: var(--secondary);
+        z-index: 0;
+      }
+    }
+
+    &__shape {
+      .shape-5 {
+        z-index: 0;
+      }
+
+      .shape-2 {
+        filter: invert(1);
+      }
+
+      .shape-4 {
+        @media #{$md} {
+          top: 55%;
+        }
+      }
+    }
+  }
+
+
+  .modal__apply {
+    background-color: var(--d-black-2);
+
+    .input-apply p,
+    .form-top p {
+      color: var(--white);
+    }
+
+    .input-apply-2 {
+
+      p,
+      input[type="file"] {
+        color: var(--white);
+      }
+    }
+
+    .form-top img {
+      filter: invert(1);
+    }
+  }
+
+  .modal .close_btn-2 {
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  .modal__close-2:hover {
+    color: var(--white);
+  }
+
+  .menu-text-5 {
+    color: var(--white);
+  }
+
+  .circle-pagination {
+    button.swiper-pagination-bullet {
+      border-color: var(--white);
+
+      span {
+        background-color: var(--white);
+      }
+    }
+
+    .circle-origin {
+      stroke: var(--white);
+    }
+
+    &-2 {
+      .swiper-pagination-bullet {
+        border-color: var(--white);
+
+        &::after {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  .bg-white {
+    background-color: var(--black-2) !important;
+  }
+
+  .main-menu-3 li a .menu-text {
+    text-shadow: 0 16px 0 var(--white);
+  }
+
+  .header__nav-icon-5 img {
+    filter: invert(1);
+  }
+
+  .menu-text-pp {
+    color: var(--white);
+  }
+
+  .job__area {
+    background-color: var(--d-black-2);
+  }
+
+  .portfolio__area-5 .sec-line {
+    background-color: #D3D3D3;
+  }
+
+  .modal__apply .input-apply textarea,
+  .modal__apply .input-apply-2 input {
+    color: var(--white);
+    background-color: var(--d-black-2);
+    border-color: var(--black-3);
+
+    &:focus {
+      border-color: var(--white);
+    }
+  }
+
+  .error__content::before {
+    filter: invert(1);
+  }
+
+  .sticky-2 .header__nav-icon-5 {
+    filter: invert(0);
+  }
+
+  .footer__menu-5 li a .menu-text {
+    text-shadow: 0 16px 0 var(--white);
+  }
+
+  .hero__area-3::after {
+    filter: invert(1);
+  }
+
+  .service__hero {
+    &-2 {
+      background-color: var(--black-2);
+      background-image: none;
+
+      .shape-1 {
+        filter: invert(1);
+      }
+    }
+
+    &-right-2 .title {
+      color: var(--white);
+    }
+
+    &-right-2 .scroll {
+      filter: invert(1);
+    }
+  }
+
+}

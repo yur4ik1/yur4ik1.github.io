@@ -1,0 +1,271 @@
+/*----------------------------------------*/
+/*  25. CTA CSS START
+/*----------------------------------------*/
+
+
+.cta {
+
+  &__area {
+    overflow: hidden;
+
+    &-2 {
+      .pb-120 {
+        @media #{$lg} {
+          padding-bottom: 126px;
+        }
+
+        @media #{$md} {
+          padding-bottom: 115px;
+        }
+
+        @media #{$sm} {
+          padding-bottom: 70px;
+        }
+      }
+
+      .wc-btn-pink {
+        color: var(--black-3);
+
+        &:hover {
+          color: var(--black-2);
+        }
+      }
+    }
+
+    &-3 {
+      background-color: var(--pink-5);
+
+      @media #{$xxxl} {
+        padding-top: 60px;
+      }
+
+      @media #{$xxl} {
+        padding-top: 20px;
+      }
+
+      @media #{$xl} {
+        .pt-150 {
+          padding-top: 125px;
+        }
+      }
+
+      @media #{$lg} {
+        background-color: var(--white);
+      }
+
+      @media #{$md} {
+        background-color: var(--white);
+        padding-bottom: 10px;
+      }
+
+      @media #{$sm} {
+        background-color: var(--white);
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    @media #{$lg} {
+      width: 80%;
+    }
+
+    @media #{$md} {
+      width: 100%;
+    }
+
+    @media #{$sm} {
+      width: 100%;
+    }
+
+    #btn_wrapper,
+    .btn_wrapper {
+      margin: 0 auto;
+    }
+
+    &-2 {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      @media #{$md} {
+        width: 100%;
+      }
+
+      @media #{$sm} {
+        width: 100%;
+      }
+
+      #btn_wrapper,
+      .btn_wrapper {
+        @include zi(1);
+        width: 350px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$xl} {
+          width: 260px;
+          height: 260px;
+        }
+
+        @media (max-width: 1200px) {
+          width: 200px;
+          height: 200px;
+        }
+
+        .btn-item {
+          top: 25px;
+
+          @media #{$sm} {
+            top: 0;
+          }
+        }
+      }
+
+      a {
+        width: 300px;
+        height: 300px;
+        font-size: 24px;
+
+        @media #{$xl} {
+          width: 220px;
+          height: 220px;
+        }
+
+        @media #{$lg} {
+          width: 200px;
+          height: 200px;
+        }
+
+        @media #{$md} {
+          width: 200px;
+          height: 200px;
+        }
+
+        @media #{$sm} {
+          width: 200px;
+          height: 200px;
+          font-size: 20px;
+        }
+
+        &:hover {
+          span {
+            width: 800px;
+            height: 800px;
+          }
+        }
+
+        i {
+          font-size: 30px;
+          transform: rotate(0);
+          padding-left: 20px;
+        }
+      }
+    }
+
+    &-3 {
+      @extend .cta__content-2;
+
+      @media #{$xxl} {
+        a {
+          width: 220px;
+          height: 220px;
+        }
+      }
+
+      #btn_wrapper .btn-item,
+      .btn_wrapper .btn-item {
+        @media #{$lg} {
+          top: 0;
+        }
+
+        @media #{$md} {
+          top: 0;
+        }
+      }
+
+      a {
+        border-color: var(--black-2);
+      }
+    }
+  }
+
+  &__sub-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--black-3);
+    border: 1px solid var(--gray);
+    display: inline-block;
+    padding: 5px 17px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+
+    &-2 {
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.3;
+      color: var(--black-2);
+      padding-bottom: 25px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1;
+    color: var(--black-2);
+
+    @media #{$xl} {
+      padding-bottom: 40px;
+    }
+
+    @media #{$lg} {
+      padding-bottom: 40px;
+    }
+
+    @media #{$md} {
+      padding-bottom: 40px;
+    }
+
+    @media #{$sm} {
+      font-size: 36px;
+      padding-bottom: 40px;
+    }
+
+    &-2 {
+      font-weight: 300;
+      font-size: 100px;
+      line-height: 1;
+      color: var(--black-2);
+      padding-bottom: 60px;
+
+      @media #{$xl} {
+        font-size: 75px;
+        padding-bottom: 30px;
+      }
+
+      @media #{$lg} {
+        font-size: 70px;
+        padding-bottom: 40px;
+      }
+
+      @media #{$md} {
+        font-size: 60px;
+        padding-bottom: 40px;
+      }
+
+      @media #{$sm} {
+        font-size: 48px;
+      }
+    }
+  }
+}

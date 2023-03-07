@@ -1,0 +1,109 @@
+/*----------------------------------------*/
+/*  04. ANIMATION CSS START
+/*----------------------------------------*/
+
+
+
+@keyframes wcRotate {
+  0% {
+    transform: rotate(0deg) scale(1.1);
+  }
+
+  50% {
+    transform: rotate(5deg) scale(1.17);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1.1);
+  }
+}
+
+
+// Bubble
+@keyframes wcBubble {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.5;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+
+// Zoom
+@keyframes wcZoom {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0.5;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+
+// Slide 
+@keyframes wcSlideBottom {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+// 
+@keyframes reveal {
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+// Fade Up
+@keyframes wcfadeUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+// Spinner
+@keyframes wcSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

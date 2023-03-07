@@ -1,0 +1,164 @@
+/*----------------------------------------*/
+/*  02. MIXIN CSS START
+/*----------------------------------------*/
+
+
+
+// Z Index
+@mixin zi($n) {
+  position: relative;
+  z-index: $n;
+}
+
+
+// Footer Text
+@mixin footer_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray-2);
+}
+
+
+// Border
+@mixin border_hover {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    background-color: var(--white);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    &::after {
+      width: 0%;
+    }
+  }
+}
+
+// Border Line
+@mixin borderLine($color, $left ) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: $left;
+    top: 0;
+    background: $color;
+  }
+}
+
+// Paragraph
+@mixin paragraph($fz, $color) {
+  font-weight: 400;
+  font-size: $fz;
+  line-height: 1.5;
+  color: $color;
+}
+
+// Feature list
+@mixin feature($color) {
+  display: grid;
+  grid-template-columns: 240px auto;
+
+  @media #{$md} {
+    grid-template-columns: 1fr;
+  }
+
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+    padding-bottom: 20px;
+  }
+
+  li {
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $color;
+
+    @media #{$xl} {
+      font-size: 16px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+
+// Align Middle
+@mixin align_middle {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+// Align Middle 2
+@mixin align_middle_2 {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Image Animation
+@mixin img_anim($width, $height, $height2 ) {
+  overflow: hidden;
+  position: relative;
+  width: $width;
+  height: $height;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: $height2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+// Menu Animation
+@mixin menu_anim($shadow_color) {
+  .menu-text {
+    display: flex;
+    overflow: hidden;
+    text-shadow: 0 16px 0 $shadow_color;
+
+    span {
+      display: block;
+      backface-visibility: hidden;
+      font-style: normal;
+      transition: transform .4s ease;
+      transform: translateY(var(--m)) translateZ(0);
+      $i: 1;
+
+      @while $i < 50 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i / 20 + s;
+        }
+
+        $i: $i + 1;
+      }
+    }
+  }
+
+  &:hover {
+    --y: -4px;
+
+    span {
+      --m: calc(16px * -1);
+    }
+  }
+}

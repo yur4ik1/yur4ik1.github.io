@@ -1,0 +1,3033 @@
+//
+// RTL Support
+// --------------------------------
+
+
+.dir-rtl {
+  direction: rtl;
+
+  li {
+    text-align: right;
+  }
+
+  .scroll-top {
+    right: unset;
+    left: 20px;
+  }
+
+  .wc-btn-primary,
+  .wc-btn-black,
+  .wc-btn-light,
+  .wc-btn-pink,
+  .wc-btn-secondary {
+    i {
+      transform: rotate(-130deg);
+    }
+  }
+
+  .shape {
+    left: 0;
+    right: -90px;
+
+    .primary {
+      margin-left: 0;
+      margin-right: 24px;
+    }
+  }
+
+  .btn-view i {
+    transform: rotate(180deg);
+  }
+
+  .sec-title-4 span {
+    padding-left: 0;
+    padding-right: 298px;
+
+
+    @media #{$sm} {
+      padding-right: 0;
+    }
+  }
+
+  .sec-title-5 {
+    padding-left: 0;
+    padding-right: 98px;
+
+    @media #{$sm} {
+      padding-right: 0;
+    }
+  }
+
+  .menu-text-pp {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .circle-pagination-2 {
+    left: unset !important;
+    right: 20px !important;
+
+    @media (max-width: 1919px) {
+      right: 0 !important;
+    }
+  }
+
+  .menu-text-5 {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .btn-together i {
+    transform: rotate(-180deg);
+  }
+
+
+  // Header CSS
+  .header {
+    &__area {
+      right: 0;
+      left: unset;
+      border: none;
+      border-left: 1px solid rgba(240, 240, 240, 0.07);
+    }
+
+    &__search {
+      right: unset;
+      left: 60px;
+    }
+
+    &__nav {
+      &-2 {
+        text-align: left;
+      }
+
+      &-icon-7 .menu-icon-2::after {
+        left: -60px;
+        right: unset;
+
+        @media #{$sm} {}
+      }
+    }
+  }
+
+
+  // 
+  // Offcanvas CSS
+  // 
+  .offcanvas {
+    &__close {
+      right: unset;
+      left: 40px;
+
+      @media #{$sm} {
+        left: 15px;
+      }
+    }
+
+    &__logo {
+      padding: 55px 50px 55px 0;
+    }
+
+    &__social {
+      padding-left: 0;
+      padding-right: 50px;
+    }
+
+    &__links {
+      padding-left: unset;
+      padding-right: 50px;
+    }
+
+    &__left {
+      border: none;
+      border-left: 1px solid var(--black-4);
+    }
+
+    &__search button {
+      right: unset;
+      left: 0;
+    }
+
+
+
+    // Mean Menu
+    &__menu-wrapper.mean-container {
+
+      .mean-nav ul {
+
+        li {
+          a {
+            box-sizing: border-box;
+            padding: 20px 100px 20px 0;
+
+
+            @media #{$xxl} {
+              padding-right: 60px;
+            }
+
+            @media #{$xl} {
+              padding-right: 50px;
+            }
+
+            @media #{$lg} {
+              padding-right: 30px;
+            }
+
+            @media #{$md} {
+              padding-right: 20px;
+            }
+
+            @media #{$sm} {
+              padding-right: 20px;
+            }
+
+            &.mean-expand {
+              left: 0;
+              right: unset;
+              height: 120px;
+              width: 84px;
+
+              @media #{$xxl} {
+                height: 100px;
+              }
+
+              @media #{$xl} {
+                height: 88px;
+              }
+
+              @media #{$lg} {
+                width: 70px;
+                height: 80px;
+              }
+
+              @media #{$md} {
+                width: 60px;
+                height: 70px;
+              }
+
+              @media #{$sm} {
+                width: 60px;
+                height: 60px;
+              }
+            }
+          }
+
+          li {
+            a {
+              padding: 20px 150px 20px 0;
+
+              @media #{$xxl} {
+                padding-right: 90px;
+              }
+
+              @media #{$xl} {
+                padding-right: 80px;
+              }
+
+              @media #{$lg} {
+                padding-right: 60px;
+              }
+
+              @media #{$md} {
+                padding-right: 40px;
+              }
+
+              @media #{$sm} {
+                padding-right: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .offcanvas__menu-wrapper.mean-container .mean-nav ul li li a.mean-expand {
+    height: 63px;
+
+    @media #{$md} {
+      height: 59px;
+    }
+
+    @media #{$sm} {
+      height: 57px;
+    }
+  }
+
+  // Offcanvas end
+
+
+  // Hero CSS
+  .hero {
+    &__area {
+      &-3 {
+        &::after {
+          right: unset;
+          left: 50px;
+        }
+
+        &::before {
+          transform: rotateY(180deg);
+        }
+
+        .hero3-img {
+          right: unset;
+          left: 0;
+        }
+
+        .video-info {
+          left: unset;
+          right: 500px;
+
+          @media #{$lg} {
+            right: 330px;
+          }
+        }
+
+        .intro-title {
+          left: 0;
+        }
+
+        .title-right {
+          right: unset;
+          left: 0;
+        }
+
+        .sec-sub-title {
+          padding-right: 0;
+          padding-left: 30px;
+
+          &::after {
+            left: unset;
+            right: 100%;
+          }
+        }
+      }
+
+      &-2 {
+        .hero2-shape {
+          max-width: 38%;
+
+          @media #{$xxl} {
+            max-width: 35%;
+          }
+
+          @media (max-width: 1400px) {
+            max-width: 30%;
+          }
+
+          @media #{$sm} {
+            max-width: 90%;
+          }
+        }
+
+        .sec-title-3:last-child {
+          text-align: left;
+          padding-top: 110px;
+          padding-right: 0;
+          margin-top: 30px;
+
+          @media #{$xxl} {
+            padding-top: 90px;
+          }
+
+          @media #{$xl} {
+            padding-top: 90px;
+          }
+
+          @media #{$lg} {
+            padding-top: 50px;
+          }
+
+          @media #{$md} {
+            padding-top: 50px;
+          }
+
+          @media #{$sm} {
+            padding-top: 0;
+          }
+        }
+      }
+
+      &-7 .shape-1 {
+        right: unset;
+        left: 100px;
+      }
+
+      &-10 .hero10_activition {
+        .swiper-pagination {
+          &-total {
+            width: 30px;
+            margin-right: 10px;
+
+            &::before {
+              left: 20px;
+            }
+          }
+
+          &-current {
+            width: 30px;
+
+            @media #{$sm} {
+              margin-left: 0;
+            }
+
+            &::before {
+              left: 20px;
+            }
+          }
+        }
+
+        .swiper-button-next.hero_next {
+          left: 0;
+          right: unset;
+
+          img {
+            transform: rotate(180deg);
+          }
+        }
+
+      }
+
+      &-15 .swiper-container {
+        float: right;
+      }
+    }
+
+    &__sub-title {
+      left: 60px;
+      right: unset;
+    }
+
+    &__text-2 {
+      padding-left: 0;
+      padding-right: 32%;
+      background-position: 35% 58%;
+
+      @media #{$xxl} {
+        padding-right: 30%;
+      }
+
+      @media #{$xl} {
+        padding-right: 20%;
+      }
+
+      @media #{$lg} {
+        padding-right: 15%;
+      }
+
+      @media #{$md} {
+        padding-right: 5%;
+      }
+
+      @media #{$sm} {
+        padding-right: 0%;
+      }
+    }
+
+    &__content {
+      .experience {
+        right: unset;
+        left: 30px;
+      }
+
+      a {
+        &:hover {
+          i {
+            transform: translate(-18px, -18px) rotate(-135deg);
+          }
+
+          span::after {
+            transform: translate(20px, -20px) rotate(-135deg);
+          }
+        }
+
+        span {
+          right: unset;
+          left: 0;
+
+          i {
+            transform: translate(0, 0) rotate(-135deg);
+          }
+
+          &::after {
+            left: -20px;
+            transform: translate(45px, 5px) rotate(-135deg);
+          }
+        }
+      }
+
+      &-8 .scroll-down {
+        padding-left: unset;
+        padding-right: 140px;
+
+        @media #{$lg} {
+          padding-right: 160px;
+        }
+
+        @media #{$md} {
+          padding-right: 160px;
+        }
+      }
+    }
+
+    &__title::after {
+      right: unset;
+      left: -80px;
+
+      @media #{$md} {
+        left: -30px;
+      }
+    }
+
+    &__arrow-icon {
+      right: 95%;
+
+      @media #{$sm} {
+        right: 70%;
+      }
+    }
+
+    &__about {
+      &-text p {
+        padding-left: 0;
+        padding-right: 80px;
+
+        @media #{$md} {
+          padding-right: 0;
+        }
+
+        @media #{$sm} {
+          padding-right: 0;
+        }
+      }
+
+      &-award::before {
+        left: unset;
+        right: 75px;
+
+        @media #{$xl} {
+          right: 30px;
+        }
+
+        @media #{$lg} {
+          right: 20px;
+        }
+      }
+
+      &-row {
+        position: inherit;
+        margin-right: initial;
+        margin-left: -310px;
+
+        @media #{$xl} {
+          margin-left: -150px;
+        }
+
+        @media #{$lg} {
+          margin-left: -120px;
+        }
+
+        @media #{$md} {
+          margin-left: 0;
+        }
+
+        @media #{$sm} {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__text-7 {
+      margin-left: 0;
+      margin-right: 210px;
+
+      @media #{$md} {
+        margin-right: 60px;
+        grid-gap: 60px;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+
+      .about::after {
+        left: 40px;
+
+        @media #{$md} {
+          left: 0;
+        }
+
+        @media #{$sm} {
+          left: 54%;
+        }
+      }
+    }
+
+  }
+
+  .hero__area-10 .swiper-button-prev.hero_prev img {
+    transform: rotate(180deg);
+  }
+
+
+  // Header CSS
+  .header__nav-icon-3 {
+    .search-icon {
+      padding-left: 50px;
+
+
+      &::after {
+        right: unset;
+        left: 25px;
+      }
+    }
+  }
+
+
+  .story__area .from-text {
+    right: unset;
+    left: -220px;
+
+    @media #{$xxl} {
+      left: -50px;
+    }
+
+    @media #{$xl} {
+      left: -100px;
+    }
+
+    @media #{$lg} {
+      left: -10px;
+    }
+
+    @media #{$md} {
+      left: -10px;
+    }
+  }
+
+
+  // Feature CSS
+  .feature {
+    &__content {
+      &-right {
+        padding: 143px 110px 0px 60px;
+
+        @media #{$md} {
+          padding: 60px 20px;
+        }
+
+        @media #{$sm} {
+          padding: 20px;
+        }
+
+        p {
+          padding-right: 0;
+          padding-left: 242px;
+
+          @media #{$xxl} {
+            padding-left: 225px;
+          }
+
+          @media #{$xl} {
+            padding-left: 145px;
+          }
+
+          @media #{$lg} {
+            padding-left: 60px;
+          }
+
+          @media #{$md} {
+            padding-left: 0;
+          }
+
+          @media #{$sm} {
+            padding-left: 0;
+          }
+        }
+      }
+
+      &-btm {
+        margin-left: 0;
+        margin-right: 110px;
+
+        @media #{$lg} {
+          margin-right: 20px;
+        }
+
+        @media #{$md} {
+          margin-right: 0;
+        }
+
+        @media #{$sm} {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__text {
+      padding-left: 0;
+      padding-right: 85px;
+
+      @media #{$xl} {
+        padding-right: 70px;
+      }
+
+      @media #{$lg} {
+        padding-right: 30px;
+      }
+
+      @media #{$md} {
+        padding-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+    &__title-6 {
+      padding-left: 0;
+      padding-right: 60px;
+
+      &::before {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &__img {
+      &-1 {
+        right: unset;
+        left: 10%;
+      }
+
+      &-3 {
+        right: unset;
+        left: 6%;
+      }
+    }
+
+    &__item {
+      @media #{$md} {
+        border-right: 1px solid var(--black-2);
+
+        &:nth-child(odd) {
+          border-right: 0;
+        }
+      }
+
+      &:first-child {
+        border-right: none;
+      }
+
+      &:last-child {
+        padding: 145px 30px;
+        border-right: 1px solid var(--black-2);
+
+        @media #{$xl} {
+          padding: 90px 20px;
+        }
+
+        @media #{$lg} {
+          padding: 90px 10px;
+        }
+
+        @media #{$md} {
+          padding: 50px 30px;
+        }
+
+        @media #{$sm} {
+          padding: 0;
+          border: 0;
+          padding-bottom: 40px;
+        }
+      }
+    }
+
+  }
+
+
+  // About CSS
+  .about {
+    &__area {
+      &-3 {
+        &::after {
+          left: 40%;
+
+          @media #{$lg} {
+            left: 45%;
+          }
+
+          @media #{$md} {
+            left: 50%;
+          }
+        }
+
+        .sec-text-wrapper {
+          padding-right: 210px;
+          padding-left: 0;
+
+          @media #{$xxl} {
+            padding-right: 160px;
+          }
+
+          @media #{$xl} {
+            padding-right: 160px;
+          }
+
+          @media #{$lg} {
+            padding-right: 65px;
+          }
+
+          @media #{$md} {
+            padding-right: 0;
+          }
+
+          @media #{$sm} {
+            padding-right: 0;
+          }
+        }
+      }
+
+      &-2 {
+        .sec-text-wrapper {
+          justify-content: left;
+        }
+      }
+
+      &-8 .about-sub-right {
+        text-align: left !important;
+      }
+
+    }
+
+    &__title-wrapper {
+      padding-left: 0;
+      padding-right: 190px;
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+    &__img-right {
+      right: unset;
+      left: 0;
+    }
+
+    &__mid-7 {
+      padding-left: 0;
+      padding-right: 80px;
+
+      @media #{$xl} {
+        padding-right: 30px;
+      }
+
+      @media #{$lg} {
+        padding-right: 10px;
+      }
+
+      @media (max-width: 1023px) {
+        padding-right: 0;
+      }
+
+      .image-1 {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    &8__content {
+      float: left;
+    }
+  }
+
+  .work {
+    &__area-8 .about-sub-right {
+      text-align: left !important;
+    }
+
+    &8__title {
+      margin-left: 0;
+      margin-right: 440px;
+
+      @media #{$sm} {
+        margin-right: 20px;
+      }
+    }
+
+
+  }
+
+
+  // Seervice CSS
+  .service {
+    &__area {
+      &-3 {
+        .sec-title-wrapper {
+          padding-left: 0;
+          padding-right: 330px;
+
+          @media #{$lg} {
+            padding-right: 200px;
+          }
+
+          @media #{$md} {
+            padding-right: 100px;
+          }
+
+          @media #{$sm} {
+            padding-right: 0;
+          }
+
+          &::after {
+            left: 62%;
+          }
+
+          p {
+            margin-left: 0;
+            margin-right: 220px;
+
+            @media #{$lg} {
+              margin-right: 120px;
+            }
+
+            @media #{$md} {
+              margin-right: 120px;
+            }
+
+            @media #{$sm} {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+
+      &-6 {
+        padding-left: 0;
+
+        .inherit-row {
+          margin-right: -180px;
+          margin-left: 0;
+
+          @media (max-width: 1919px) {
+            margin-right: calc(-0.5 * var(--bs-gutter-x));
+          }
+        }
+
+        .right-content {
+          padding-left: 0;
+          padding-right: 80px;
+
+          @media #{$xxl} {
+            padding-right: 40px;
+          }
+
+          @media (max-width: 1400px) {
+            padding-right: 0;
+          }
+        }
+      }
+
+      &-7 {
+        &::before {
+          left: 42%;
+
+          @media #{$xxl} {
+            left: 39%;
+          }
+
+          @media #{$xl} {
+            left: 38%;
+          }
+
+          @media #{$lg} {
+            left: 34%;
+          }
+
+          @media #{$md} {
+            left: 36%;
+          }
+        }
+
+        &::after {
+          left: 64%;
+
+          @media #{$xxl} {
+            left: 69%;
+          }
+
+          @media #{$xl} {
+            left: 65%;
+          }
+
+          @media #{$md} {
+            left: 66%;
+          }
+        }
+      }
+    }
+
+    &__top-btn #btn_wrapper,
+    &__top-btn .btn_wrapper {
+      margin-left: -40px;
+      margin-right: auto;
+
+      @media #{$md} {
+        margin-left: -20px;
+      }
+
+      @media #{$sm} {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      text-align: left;
+
+      p {
+        &::after {
+          transform: translate(80px, 34px) rotate(-135deg);
+        }
+      }
+
+      i {
+        transform: translate(0, 0) rotate(-135deg);
+      }
+    }
+
+    &__item {
+      &-icon i {
+        font-size: 23px;
+        color: var(--black-2);
+        transform: rotate(180deg);
+      }
+
+      &:hover .service__link {
+        p::after {
+          transform: translate(30px, -20px) rotate(-135deg);
+        }
+
+        i {
+          transform: translate(-38px, -40px) rotate(-135deg);
+        }
+      }
+
+      &-2 {
+        &::before {
+          left: -30px;
+
+          @media #{$md} {
+            left: 0;
+          }
+        }
+
+        &:nth-child(3n+1)::before {
+          position: absolute;
+        }
+
+        &:last-child::before {
+          position: unset;
+        }
+
+        &:nth-child(3)::before {
+          position: unset;
+        }
+      }
+
+      &-4:hover .service__item-icon {
+        transform: rotate(45deg);
+      }
+
+    }
+
+    &__img {
+      transform: rotate(0deg) translateX(100px);
+
+      &.active {
+        transform: rotate(-15deg) translateX(-60px) translateY(30px);
+      }
+
+      &-wrapper {
+        span {
+          left: unset;
+          right: 0;
+          transform: rotate(26deg) translate(-100%, -100%);
+
+          &.current {
+            transform: rotate(26deg) translate(170px, -100%);
+          }
+        }
+      }
+    }
+
+    &__right-4 p {
+      padding-right: 0;
+      padding-left: 195px;
+
+      @media #{$lg} {
+        padding-left: 30px;
+      }
+
+      @media #{$md} {
+        padding-left: 15px;
+      }
+
+      @media #{$sm} {
+        padding-left: 0;
+      }
+    }
+
+    &__hero-2 .shape-1 {
+      right: unset;
+      left: 165px;
+
+      @media #{$md} {
+        left: 10px;
+      }
+
+      @media #{$sm} {
+        left: 5px;
+      }
+    }
+
+    &__hero-left-2 {
+
+      .image {
+
+        &-1,
+        &-3 {
+          transform: translateX(100px);
+
+          @media #{$xxl} {
+            transform: translateX(40px);
+          }
+
+          @media #{$lg} {
+            transform: translateX(30px);
+          }
+
+          @media #{$md} {
+            transform: translateX(25px);
+          }
+
+          @media #{$sm} {
+            transform: translateX(0);
+          }
+        }
+
+        &-2 {
+          transform: translateX(-50px);
+
+          @media #{$sm} {
+            transform: translateX(0);
+          }
+        }
+
+        &-4 {
+          right: 318px;
+
+          @media #{$xl} {
+            right: 300px;
+          }
+
+          @media #{$lg} {
+            right: 268px;
+          }
+
+          @media #{$md} {
+            right: 215px;
+          }
+        }
+
+      }
+    }
+
+    &__hero-right-2 {
+      p {
+        margin-left: 0;
+        margin-right: 350px;
+
+        @media #{$lg} {
+          margin-right: 300px;
+        }
+
+        @media #{$md} {
+          margin-right: 220px;
+        }
+
+        @media #{$sm} {
+          margin-right: 30px;
+        }
+      }
+
+      .title span {
+        padding-left: 0;
+        padding-right: 170px;
+
+        @media #{$md} {
+          padding-right: 80px;
+        }
+
+        @media #{$sm} {
+          padding-right: 40px;
+        }
+      }
+
+      .scroll {
+        margin-left: 0;
+        margin-right: 350px;
+
+        @media #{$sm} {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    &__title-7 {
+      &:hover {
+        span {
+          padding-right: 0;
+        }
+      }
+
+      span {
+        padding-left: 0;
+        padding-right: 50px;
+
+        &::before {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    &__detail-circle span::after {
+      left: unset;
+      right: 50%;
+    }
+
+  }
+
+
+
+
+  // FAQs CSS
+  .accordion-button {
+    text-align: right;
+  }
+
+  .faq {
+    &__list-4 {
+      .accordion-button.collapsed::after {
+        left: unset;
+        right: 0;
+      }
+
+      .accordion-button:not(.collapsed)::after {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &__img6-2 {
+      left: unset;
+      right: 51px;
+    }
+
+    &__img {
+      padding-right: 0;
+      padding-left: 85px;
+
+      @media #{$lg} {
+        padding-left: 0;
+      }
+
+      @media #{$md} {
+        padding-left: 0;
+      }
+
+      @media #{$sm} {
+        padding-left: 0;
+      }
+    }
+
+
+
+  }
+
+
+
+  // Award CSS
+  .award {
+    &__right>p {
+      margin-left: 0;
+      margin-right: 100px;
+
+      @media #{$lg} {
+        margin-right: 60px;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+    }
+
+    &__text-8 {
+      right: unset;
+      left: 50px;
+
+      @media #{$sm} {
+        left: 10px;
+      }
+
+      a {
+        &:hover {
+          i {
+            transform: translate(-20px, -20px) rotate(-135deg);
+          }
+
+          span::after {
+            transform: translate(20px, -20px) rotate(-135deg);
+          }
+        }
+
+        span {
+          right: unset;
+          left: 0;
+
+          i {
+            transform: translate(0, 0) rotate(-135deg);
+          }
+
+          &::after {
+            transform: translate(40px, 0) rotate(-135deg);
+          }
+        }
+      }
+    }
+
+    &__item p:last-child {
+      text-align: left;
+    }
+
+    &__mid-7 p {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+
+    &__area-7 .inherit_row {
+      margin-left: 0;
+      margin-right: -350px;
+    }
+
+    &__counter {
+      right: unset;
+      left: 0;
+    }
+
+    &__btm-7 {
+      padding-left: 0;
+      padding-right: 110px;
+
+      @media #{$xl} {
+        padding-right: 90px;
+      }
+
+      @media #{$lg} {
+        padding-right: 60px;
+      }
+
+      @media #{$md} {
+        padding-right: 30px;
+      }
+
+      @media #{$sm} {
+        padding-right: 30px;
+      }
+
+      &::after {
+        left: unset;
+        right: 99%;
+      }
+
+      &::before {
+        right: unset;
+        left: 100%;
+      }
+    }
+
+  }
+
+  .awards__area-8 .about-sub-right {
+    text-align: left !important;
+  }
+
+  // Team CSS
+  .team {
+
+    &__area {
+      @media #{$xxl} {
+        padding-left: 0;
+        padding-right: 62px;
+      }
+
+      @media #{$xl} {
+        padding-left: 0;
+        padding-right: 62px;
+      }
+
+      &-6 {
+        @media #{$xxl} {
+          padding-left: 0;
+          padding-right: 62px;
+        }
+
+        @media #{$xl} {
+          padding-left: 0;
+          padding-right: 62px;
+        }
+      }
+    }
+
+    &__area-7 .sec-text {
+      padding-left: 0;
+      padding-right: 60%;
+
+      @media #{$sm} {
+        padding-right: 60px;
+      }
+    }
+
+    &__item-7 {
+      &:hover {
+        .tm-name {
+          padding-left: 0;
+          padding-right: 90px;
+        }
+
+        .tm-link i {
+          transform: rotate(215deg);
+        }
+      }
+
+      .tm-serial {
+        left: unset;
+        right: 0;
+      }
+
+      .tm-name::after {
+        left: unset;
+        right: 25px;
+      }
+
+      .tm-link i {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__hover-7 {
+      left: -60%;
+    }
+
+    &__join-btn a i {
+      right: unset;
+      left: 130px;
+
+      @media #{$sm} {
+        left: 50px;
+      }
+    }
+
+    &__member {
+      &-img {
+        left: unset;
+        right: -192px;
+
+        @media #{$xxl} {
+          right: -150px;
+        }
+
+        @media #{$xl} {
+          right: -228px;
+        }
+
+        @media #{$md} {
+          right: 50%;
+          transform: translateX(25%);
+        }
+
+        @media #{$sm} {
+          right: 0;
+        }
+      }
+
+      &-role-7::after {
+        left: unset;
+        right: 0;
+
+        @media #{$md} {
+          right: calc(50% - 75px);
+        }
+
+        @media #{$sm} {
+          right: calc(50% - 75px);
+        }
+      }
+    }
+
+
+  }
+
+
+  // CTA CSS 
+  .cta__area-3 {
+    .wc-btn-black {
+      flex-direction: row-reverse;
+
+      i {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+
+  .circle-pagination.right {
+    left: unset;
+    right: calc(100% - 135px) !important;
+
+    @media #{$lg} {
+      right: calc(100% - 90px) !important;
+    }
+
+    @media #{$md} {
+      right: calc(100% - 75px) !important;
+    }
+  }
+
+  // Portfolio CSS
+  .portfolio {
+    &__area {
+      &-2 {
+        &::after {
+          left: 15.3%;
+        }
+
+        .line::before {
+          @media #{$md} {
+            left: unset;
+            right: 0;
+          }
+        }
+
+        .sec-title-3 {
+          padding-right: 0;
+          padding-left: 320px;
+          background-position: 25% 25px;
+
+          @media #{$sm} {
+            padding-left: 0;
+          }
+
+          span {
+            padding-left: 0;
+            padding-right: 450px;
+
+            @media #{$lg} {
+              padding-right: 300px;
+            }
+
+            @media #{$md} {
+              padding-right: 150px;
+            }
+
+            @media #{$sm} {
+              padding-right: 0;
+            }
+          }
+        }
+
+        .sec-title-wrapper .sec-text {
+          text-align: right;
+        }
+      }
+
+      &-3 .swiper-pagination {
+        @media #{$sm} {
+          left: 10px;
+        }
+      }
+
+      &-6 .sec-title-wrapper p {
+        padding-left: 0;
+        padding-right: 110px;
+
+        @media #{$sm} {
+          padding-right: 70px;
+        }
+
+        &::before {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      &-12 {
+        .sec-title-wrapper {
+          .sub-title::after {
+            margin-left: unset;
+            margin-right: 10px;
+
+
+          }
+
+          p {
+            margin-left: 0;
+            margin-right: 500px;
+
+            @media #{$md} {
+              margin-right: 200px;
+            }
+
+            @media #{$sm} {
+              margin-right: 20px;
+            }
+          }
+        }
+
+      }
+    }
+
+    &__slide {
+      &-3 {
+        text-align: left;
+        padding-right: 0;
+        padding-left: 110px;
+
+        @media #{$lg} {
+          padding-left: 0;
+        }
+
+        @media #{$md} {
+          padding-left: 0;
+        }
+
+        @media #{$sm} {
+          padding-left: 0;
+        }
+      }
+
+      &-2 {
+        .sec-title span {
+          padding-left: 0;
+          padding-right: 60px;
+
+          &::before {
+            left: unset;
+            right: -10px;
+
+            @media #{$md} {
+              right: 0;
+              width: 40px;
+            }
+          }
+        }
+
+        .slide-img {
+          padding-right: 0;
+          padding-left: 15px;
+
+          @media #{$sm} {
+            padding-left: 0;
+          }
+        }
+
+        .slide-content {
+          padding-left: 0;
+          padding-right: 100px;
+
+          @media #{$lg} {
+            padding-right: 60px;
+          }
+
+          @media #{$md} {
+            padding-right: 0;
+          }
+
+          @media #{$sm} {
+            padding-right: 40px;
+          }
+        }
+
+        .btn-common i {
+          transform: rotate(180deg);
+        }
+      }
+
+
+    }
+
+    &__title {
+      &-3 {
+        text-align: right;
+
+        span {
+          padding-left: 0;
+          padding-right: 200px;
+
+          @media #{$md} {
+            padding-right: 100px;
+          }
+
+          @media #{$sm} {
+            padding-right: 60px;
+          }
+        }
+      }
+    }
+
+    &__hero-area::after {
+      left: unset;
+    }
+
+    &__about {
+      .sec-title span {
+        padding-left: 0;
+        padding-right: 120px;
+
+        @media #{$sm} {
+          display: inline-block;
+          padding-right: 0;
+        }
+
+        &::before {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      .brand-title-wrap {
+        border: none;
+        border-left: 1px solid var(--purple-2);
+
+        @media #{$sm} {
+          border: none;
+        }
+      }
+
+      .brand-list {
+        padding-left: 0;
+        padding-right: 80px;
+
+        @media (max-width: 1023px) {
+          padding-right: 0;
+        }
+      }
+
+      &-left img {
+        right: unset;
+        left: 100px;
+
+        @media #{$md} {
+          display: none;
+        }
+      }
+    }
+
+    &__page .swiper-slide-active .portfolio__about-left img {
+      transform: rotateY(180deg) !important;
+    }
+
+    &__project {
+      &::after {
+        top: 100px;
+      }
+
+      .pp-prev {
+        @media #{$xxl} {
+          right: 40px;
+        }
+
+        @media #{$lg} {
+          right: 60px;
+        }
+      }
+
+      .pp-slider-wrapper {
+        padding-left: 100px;
+        padding-right: 150px;
+
+        @media #{$lg} {
+          padding-left: 140px;
+        }
+
+        @media #{$md} {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+
+        @media #{$sm} {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      .pp-slide-thumb {
+        margin-left: unset;
+        margin-right: auto;
+
+        @media #{$xxl} {
+          margin-right: 20px;
+        }
+
+        @media #{$xl} {
+          margin-right: 20px;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+
+      .pp-slide-img img {
+        transform: rotate(15deg);
+      }
+
+      .pp-slide-title {
+        text-align: left;
+      }
+
+      &-thumbs {
+        margin-right: 0;
+        margin-left: -150px;
+
+        @media #{$lg} {
+          margin-left: 0;
+        }
+
+        @media #{$md} {
+          margin-left: 0;
+        }
+
+        @media #{$sm} {
+          margin-left: 0;
+        }
+      }
+
+      .pp-slide {
+        padding: 80px 80px 80px 0px;
+
+        @media #{$lg} {
+          padding: 60px;
+        }
+
+        @media #{$md} {
+          padding: 50px;
+        }
+
+        @media #{$sm} {
+          padding: 60px;
+        }
+      }
+
+
+    }
+
+    &__hero .title.shape-circle::after {
+      left: -50px;
+      right: unset;
+
+      @media #{$lg} {
+        left: -10px;
+      }
+
+      @media (max-width: 1023px) {
+        left: 0;
+      }
+    }
+
+    &__service .sec-text {
+      background-image: url(../imgs/shape/25.png);
+      background-position: right 80px;
+
+      @media (max-width: 1400px) {
+        background-position: right 0;
+      }
+    }
+
+    &__footer-area {
+      &::after {
+        left: unset;
+        right: 50px;
+
+        @media #{$xl} {
+          right: 20px;
+        }
+      }
+
+      .pf-social h3::after {
+        right: unset;
+        left: -60px;
+      }
+    }
+
+    &__icon-link {
+      transform: rotate(180deg);
+    }
+
+    &__item {
+      &-4:hover .portfolio__icon-link {
+        transform: rotate(215deg);
+      }
+
+      &-12 p {
+        justify-content: flex-end;
+
+        @media #{$sm} {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    &__detail .block-img-text p {
+      padding-left: 0;
+      padding-right: 60px;
+
+      @media #{$lg} {
+        padding-right: 0;
+      }
+    }
+
+    &__wrapper-6 {
+      padding-left: 0;
+      padding-right: 100px;
+
+      @media #{$md} {
+        padding-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  // Testimonial CSS
+  .testimonial {
+
+    &__item.item-3 {
+      text-align: left;
+    }
+
+    &__slide {
+      margin-left: -1px;
+
+      &-4 {
+        text-align: right;
+      }
+    }
+
+    &__img.b-left::before {
+      left: 30px;
+
+      @media #{$md} {
+        left: 20px;
+      }
+    }
+
+    &__title-2 {
+      padding: 100px 0px 20px 100px;
+
+      @media #{$sm} {
+        padding: 20px 0;
+      }
+    }
+
+    &__text-2 {
+      padding-right: 0;
+      padding-left: 40px;
+
+      @media #{$md} {
+        padding-left: 0;
+      }
+
+      @media #{$sm} {
+        padding-left: 0;
+      }
+    }
+
+    &__info-4 {
+      p {
+        text-align: right;
+      }
+    }
+
+    &__btn-4 i {
+      transform: rotate(180deg);
+    }
+
+    &__video {
+      margin-right: 0;
+      margin-left: -112px;
+
+      @media #{$sm} {
+        margin-left: 0;
+      }
+    }
+
+    &__pagination {
+      left: 0;
+      right: unset;
+      transform: translate(-100%, -50%);
+
+      @media #{$xxl} {
+        transform: translate(-60%, -50%);
+      }
+
+      @media #{$lg} {
+        transform: translate(-48%, -50%);
+      }
+
+      @media #{$md} {
+        transform: translate(-40%, -50%);
+      }
+    }
+
+    &__inner-2 {
+      background-position: 89% 80px;
+
+      @media #{$sm} {
+        background-position: 50% 10px;
+      }
+    }
+
+    &__img.b-right::after {
+      left: unset;
+      right: 30px;
+
+      @media #{$lg} {
+        right: 20px;
+      }
+    }
+
+  }
+
+
+  // Price CSS
+  .price {
+    &__icon span i {
+      transform: rotateY(180deg);
+    }
+
+    &__amount {
+      @media #{$sm} {
+        right: unset;
+        left: 30px;
+      }
+    }
+  }
+
+  .solution {
+    &__area {
+      padding-left: 0;
+      padding-right: 100px;
+
+      @media #{$md} {
+        padding-right: 10px;
+      }
+
+      @media #{$sm} {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    &__shape .shape-3 {
+      left: 20%;
+      top: 20%;
+
+      @media #{$md} {
+        left: 5%;
+        top: 15%;
+      }
+    }
+
+    &__list {
+      li {
+        padding-left: 0;
+        padding-right: 15px;
+
+        &::after {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    &__mid p {
+      padding-left: 0;
+      padding-right: 190px;
+
+      @media #{$xl} {
+        padding-right: 80px;
+      }
+
+      @media #{$lg} {
+        padding-right: 50px;
+      }
+
+      @media #{$md} {
+        padding-right: 50px;
+      }
+
+      @media #{$sm} {
+        padding-right: 80px;
+      }
+
+      &::before {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &__img-1::after {
+      left: unset;
+      right: 40px;
+    }
+
+    &__img-3 {
+      transform: rotate(180deg);
+
+      @media #{$md} {
+        float: left;
+        transform: rotate(180deg) translateY(60px);
+      }
+
+      @media #{$sm} {
+        float: left;
+        transform: rotate(180deg) translateY(60px);
+      }
+    }
+
+    &__btm ul {
+      text-align: left;
+    }
+
+
+  }
+
+  .brand__list {
+    &-1 {
+      border-left: 1px solid var(--white-3);
+    }
+
+    &-2,
+    &-3 {
+      border: none;
+    }
+  }
+
+
+  // Research CSS
+  .research {
+    &__area {
+      background-position: calc(100% - 300px) calc(100% - 220px);
+
+      @media #{$xxl} {
+        background-position: calc(100% - 140px) calc(100% - 220px);
+      }
+
+      @media #{$xl} {
+        background-position: calc(100% - 100px) calc(100% - 140px);
+      }
+
+      @media #{$lg} {
+        background-position: calc(100% - 100px) calc(100% - 140px);
+      }
+
+      @media #{$md} {
+        background-position: 98% 250px;
+      }
+
+      .row {
+        flex-direction: row-reverse;
+      }
+
+      .sec-title-wrapper {
+        text-align: right;
+      }
+    }
+
+    &__item {
+      flex-direction: row-reverse;
+
+      &:nth-child(odd) {
+        padding-left: 0;
+        padding-right: 100px;
+
+        @media #{$sm} {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &__info {
+      text-align: right;
+    }
+
+    &__tools {
+      padding-left: 0;
+      text-align: right;
+      padding-right: 200px;
+
+      @media #{$xl} {
+        padding-right: 108px;
+      }
+
+      @media #{$lg} {
+        padding-right: 90px;
+      }
+
+      @media #{$md} {
+        padding-right: 80px;
+      }
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  // Research end
+
+
+  // Research CSS
+  .counter {
+    &__area {
+      &-3 {
+        .sec-title-wrapper {
+          text-align: right;
+        }
+      }
+    }
+
+    &__wrapper-3 {
+      padding-right: 30px;
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+    &__item-3 {
+      text-align: right;
+    }
+
+    &__item {
+      margin-left: 0;
+      margin-right: -67px;
+
+      @media #{$xl} {
+        margin-right: -60px;
+      }
+
+      @media #{$lg} {
+        margin-right: -25px;
+      }
+
+      @media #{$md} {
+        margin-right: -27px;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+
+
+  // FAQ CSS
+  .faq {
+    &__list {
+
+      .accordion-button:not(.collapsed)::after,
+      .accordion-button.collapsed::after {
+        right: unset;
+        left: 0;
+      }
+
+      &-3 {
+        padding-right: 0;
+        padding-left: 80px;
+
+        @media #{$lg} {
+          padding-left: 20px;
+        }
+
+        @media #{$md} {
+          padding-left: 0;
+        }
+
+        @media #{$sm} {
+          padding-left: 0;
+        }
+
+        .accordion-button:not(.collapsed)::after,
+        .accordion-button.collapsed::after {
+          right: unset;
+          left: 0;
+        }
+      }
+
+      &-6 {
+
+        .accordion-button:not(.collapsed)::after,
+        .accordion-button.collapsed::after {
+          right: unset;
+          left: 0;
+        }
+      }
+
+    }
+  }
+
+  // FAQ end
+
+
+  // Blog CSS
+  .blog {
+    &__area {
+      &-2 {
+
+        #btn_wrapper,
+        .btn_wrapper {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+
+      &-3 {
+        .sec-title-wrapper {
+          padding-left: 0;
+          padding-right: 330px;
+
+          @media #{$md} {
+            padding-right: 180px;
+          }
+
+          @media #{$sm} {
+            padding-right: 0;
+          }
+
+          &::after {
+            left: 62%;
+          }
+
+          p {
+            margin-left: 0;
+            margin-right: 220px;
+
+            @media #{$lg} {
+              margin-right: 100px;
+            }
+
+            @media #{$md} {
+              margin-right: 100px;
+            }
+
+            @media #{$sm} {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      &-4 {
+        .sec-title-wrapper p {
+          padding-right: 0;
+          padding-left: 80px;
+
+          @media #{$lg} {
+            padding-left: 30px;
+          }
+
+          @media #{$md} {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    &__detail-content {
+
+      ul,
+      ol {
+        li {
+          padding-left: 0;
+          padding-right: 25px;
+        }
+      }
+    }
+
+    &__info-3 {
+      width: 63%;
+      left: 0;
+      right: unset;
+      margin-left: 0px;
+      margin-right: -50px;
+
+      @media #{$lg} {
+        width: 80%;
+      }
+
+      @media #{$sm} {
+        width: 90%;
+      }
+    }
+
+    &__btn span {
+      left: -28px;
+      right: unset;
+      transform: rotate(-90deg);
+    }
+
+    &__detail {
+      &-content {
+
+        ul li::before,
+        ol li::before {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      &-date {
+        span {
+          padding-left: 0;
+          padding-right: 25px;
+
+          &::before {
+            left: 0;
+            right: 8px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .btn-started i,
+  .blog__btn-4 i {
+    transform: rotate(180deg);
+  }
+
+  .cta {
+    &__list-left {
+      padding-left: 0;
+      padding-right: 15px;
+
+      li::before {
+        left: unset;
+        right: -15px;
+      }
+    }
+
+    &__area-5::before {
+      left: 43%;
+    }
+
+  }
+
+  // Footer CSS
+  .footer {
+
+    &__area-2 {
+      background-image: unset;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 508px;
+        width: 500px;
+        left: 0px;
+        top: 0;
+        background-image: url(../imgs/shape/4.png);
+        background-repeat: no-repeat;
+        transform: rotateY(180deg);
+      }
+    }
+
+    &__widget-3 {
+      @media #{$md} {
+        padding: 50px 30px 0 0;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+    }
+
+    &__contact-3 {
+      text-align: left;
+
+      @media #{$sm} {
+        text-align: center;
+      }
+    }
+
+    &__subscribe {
+      margin-right: 0;
+      margin-left: -60px;
+      padding-right: 0;
+      padding-left: 30px;
+
+      @media #{$md} {
+        margin-left: -15px;
+      }
+
+      @media #{$sm} {
+        margin-left: -30px;
+      }
+
+      input {
+        padding: 21px 15px 21px 50px;
+      }
+
+      .subs-btn {
+        right: unset;
+        left: 20px;
+
+        i {
+          transform: rotate(-90deg);
+        }
+      }
+
+      &-2 {
+        padding-left: 0;
+        padding-right: 90px;
+
+        @media #{$lg} {
+          padding-right: 40px;
+        }
+
+        @media #{$md} {
+          padding-right: 0;
+        }
+
+        @media #{$sm} {
+          padding-right: 0;
+        }
+
+        &::before {
+          right: -20px;
+
+          @media #{$md} {
+            right: -80px;
+          }
+        }
+
+        input {
+          padding: 20px 0 20px 80px;
+        }
+
+        .submit {
+          left: 0;
+          right: unset;
+
+          img {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &-line::after {
+      right: 0;
+      left: unset;
+    }
+
+    &__inner {
+      padding-left: 0;
+      padding-right: 350px;
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+    &__top {
+      text-align: left;
+    }
+
+    &__row {
+      margin-left: 0;
+      margin-right: -500px;
+
+      @media #{$xxl} {
+        margin-right: -305px;
+      }
+
+      @media #{$xl} {
+        margin-right: -330px;
+      }
+
+      @media #{$lg} {
+        margin-right: -340px;
+      }
+
+      @media #{$md} {
+        margin-right: -375px;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+    }
+
+    &__copyright {
+      margin-left: 0;
+      margin-right: -67px;
+      padding: 35px 66px 35px 0;
+    }
+
+    &__newsletter-6 {
+      button {
+        right: unset;
+        left: 20px;
+
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      input {
+        padding: 16px 20px 16px 50px;
+      }
+    }
+
+    &__widget {
+      &-4 {
+        margin-left: 0;
+        margin-right: 60px;
+
+        @media #{$md} {
+          margin-right: 0;
+        }
+
+        @media #{$sm} {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &-menu li,
+    &-menu-2 li {
+      padding-left: 0;
+      padding-right: 80px;
+
+      @media #{$lg} {
+        padding-right: 20px;
+      }
+
+      @media #{$md} {
+        padding-right: 20px;
+      }
+
+      @media #{$sm} {
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+
+  .section_wrapper::before {
+    left: unset;
+    right: 60px;
+
+    @media #{$sm} {
+      right: 48px;
+    }
+  }
+
+  .hover_img {
+    left: unset;
+    right: 100%;
+  }
+
+  .awards {
+    &__items .date {
+      text-align: left;
+    }
+
+    &__content p {
+      margin-left: 0;
+      margin-right: 170px;
+
+      @media #{$lg} {
+        margin-right: 60px;
+      }
+
+      @media #{$md} {
+        margin-right: 30px;
+      }
+
+      @media #{$sm} {
+        margin-right: 0;
+      }
+    }
+  }
+
+
+  .client__area-8 .about-sub-right {
+    text-align: left !important;
+  }
+
+  .hero10:hover {
+    .hero10__content i {
+      transform: translateY(-50px) rotate(-135deg);
+    }
+  }
+
+  .hero10__content {
+    left: unset;
+    right: 40px;
+
+    i {
+      transform: rotate(180deg);
+
+      @media (max-width: 1365px) {
+        transform: rotate(215deg);
+      }
+    }
+  }
+
+  .scroll-top-2 {
+    right: unset;
+    left: 100px;
+
+    @media #{$md} {
+      left: 20px;
+    }
+
+    @media #{$sm} {
+      left: 20px;
+    }
+  }
+
+  .dis_port_4 {
+    margin-left: 0;
+    margin-right: 100px;
+
+    @media #{$lg} {
+      margin-right: 60px;
+    }
+
+    @media #{$md} {
+      margin-right: 30px;
+    }
+
+    @media #{$sm} {
+      margin-right: 20px;
+    }
+  }
+
+  .section_title_wrapper .title_right__inner__left {
+    margin-right: 0;
+    margin-left: 60px;
+
+    span::before {
+      right: unset;
+      left: 80px;
+    }
+  }
+
+  .gallary12__content img {
+    transform: rotate(-90deg);
+  }
+
+  .showcase {
+    &__top-16 {
+      .title-right {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    &__info-16 {
+      left: unset;
+      right: 50px;
+    }
+
+    &__title-16 span::before {
+      left: unset;
+      right: 0;
+    }
+
+    &__sub-title-16 {
+      padding-left: unset;
+      padding-right: 100px;
+
+      @media #{$sm} {
+        padding-right: 30px;
+      }
+    }
+
+
+  }
+
+  .mixtup_btn .wc-btn span {
+    transform: rotate(-135deg);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .team__slider {
+      margin-left: 0;
+      margin-right: 100px;
+    }
+  }
+
+  .job {
+    &__detail {
+      &-wrapper {
+        padding-right: 0;
+        padding-left: 120px;
+
+        @media #{$xl} {
+          padding-left: 30px;
+        }
+
+        @media #{$lg} {
+          padding-left: 0;
+        }
+
+        @media #{$md} {
+          padding-left: 0;
+        }
+
+        @media #{$sm} {
+          padding-left: 0;
+        }
+      }
+
+      &-meta li {
+        padding-right: 0;
+        padding-left: 70px;
+      }
+
+      &-content ul,
+      &-content ol {
+        padding-left: 0;
+        padding-right: 30px;
+
+        li::before {
+          left: unset;
+          right: -18px;
+        }
+      }
+
+
+    }
+
+    &__link {
+      text-align: left;
+
+      span {
+        &::after {
+          right: unset;
+          left: 45px;
+          transform: translate(0, 0) rotate(215deg);
+        }
+      }
+
+      i,
+      span {
+        transform: rotate(215deg);
+      }
+    }
+
+    &__item {
+      &:hover {
+
+        .job__link {
+          i {
+            transform: rotate(215deg) translate(60px, 2px);
+          }
+
+          span::after {
+            right: unset;
+            left: 0;
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+
+  .modal {
+    &__apply .form-btn button {
+      margin-left: inherit;
+      margin-right: auto;
+    }
+
+    &__close-2 {
+      right: unset;
+      left: 30px;
+    }
+  }
+
+
+  .career__thumb .inherit {
+    margin-right: 0;
+    margin-left: -320px;
+
+    @media #{$sm} {
+      margin-left: calc(-0.5 * var(--bs-gutter-x));
+    }
+  }
+
+  .career__benefits-list li {
+    text-align: center;
+
+    @media #{$sm} {
+      margin-left: 0;
+      margin-right: -10px;
+
+      &:nth-child(2n+1) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      @media #{$md} {
+        margin-left: -30px;
+      }
+    }
+  }
+
+
+  @media #{$sm} {
+
+    .about__area-2 #btn_wrapper,
+    .about__area-2 .btn_wrapper {
+      margin-right: 0;
+    }
+
+    .section_title_wrapper .title_right {
+      margin-right: auto;
+    }
+
+  }
+
+  @media #{$lg} {
+    .career__benefits-list li:nth-child(2n+1) {
+      margin-left: -20px;
+    }
+  }
+
+  .faq__content {
+    padding-left: 0;
+    padding-right: 85px;
+
+    @media #{$lg} {
+      padding-right: 0;
+    }
+
+    @media #{$md} {
+      padding-right: 0;
+    }
+
+    @media #{$sm} {
+      padding-right: 0;
+    }
+  }
+
+  .img-box img {
+    left: unset;
+    right: 0;
+  }
+
+  .hero_layer_9 {
+    direction: ltr;
+  }
+
+  .part.showed {
+    direction: rtl;
+
+    p {
+      padding-left: 0;
+      padding-right: 120px;
+
+      @media #{$lg} {
+        padding-right: 70px;
+      }
+
+      @media #{$md} {
+        padding-right: 70px;
+      }
+
+      @media #{$sm} {
+        padding-right: 45px;
+      }
+    }
+
+    h2 span {
+      padding-left: 0;
+      padding-right: 90px;
+
+      @media #{$lg} {
+        padding-right: 60px;
+      }
+
+      @media #{$md} {
+        padding-right: 50px;
+      }
+
+      @media #{$sm} {
+        padding-right: 35px;
+      }
+
+      &::before {
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+
+  .roll__area-2 {
+    direction: ltr;
+  }
+
+  .switcher__icon,
+  .switcher__items {
+    z-index: 9999;
+  }
+
+}
+
+.dark.dir-rtl {
+  .portfolio__about .brand-title-wrap {
+    border-left: 1px solid var(--secondary);
+  }
+}

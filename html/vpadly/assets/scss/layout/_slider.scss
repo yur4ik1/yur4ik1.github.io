@@ -1,0 +1,205 @@
+/*----------------------------------------*/
+/*  15. SLIDER CSS START
+/*----------------------------------------*/
+
+
+
+
+// Roll Slider
+.roll {
+
+  &__area {
+    background-color: var(--primary);
+    padding: 31px 10px;
+
+    &-2 {
+      padding: 31px 10px;
+      background-color: var(--black-2);
+
+      .roll__slide h2 {
+        color: var(--white);
+      }
+    }
+
+    &-3 {
+      padding: 31px 10px;
+      background-color: var(--pink-2);
+
+      .roll__slide h2 {
+        color: var(--black-2);
+      }
+    }
+  }
+
+  &__wrapper {
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
+  &__slide {
+    text-align: center;
+
+    h2 {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+  }
+}
+
+.contact_wrap {
+  position: relative;
+
+  @media #{$md} {
+    margin-top: 60px;
+  }
+
+  &:hover {
+    .link {
+      opacity: 1;
+      visibility: visible;
+
+    }
+  }
+
+  .link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: var(--black-2);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-transform: capitalize;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    @media (max-width: 1365px) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  @media (max-width: 1365px) {
+    .link {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+// Pagination
+.rollslide {
+  &_wrap {
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: -10px;
+  }
+
+  &_title {
+    color: var(--black-2);
+    font-size: 250px;
+    line-height: 1;
+    transition: all 0.3s;
+    text-transform: uppercase;
+
+    &-1 {
+      color: var(--black-2);
+      font-size: 245px;
+      line-height: 0.75;
+      text-transform: uppercase;
+
+      span {
+        font-family: $font_newyork;
+      }
+
+      @media #{$xl} {
+        font-size: 160px;
+      }
+
+      @media #{$lg} {
+        font-size: 120px;
+      }
+
+      @media #{$xxl-1} {
+        font-size: 150px;
+      }
+
+      @media #{$md} {
+        font-size: 90px;
+      }
+
+      @media #{$sm} {
+        font-size: 48px;
+      }
+    }
+
+    &:hover {
+      color: var(--black-3);
+    }
+
+    span {
+      font-weight: 400;
+      font-family: $font_newyork;
+    }
+
+    @media #{$sm} {
+      font-size: 48px;
+    }
+
+    @media #{$md} {
+      font-size: 100px;
+    }
+
+    @media #{$lg} {
+      font-size: 120px;
+    }
+
+    @media #{$xxl-1} {
+      font-size: 180px;
+    }
+  }
+}
+
+@media #{$sm} {
+  footer {
+    .contact_wrap {
+      margin-top: 40px;
+    }
+  }
+}
+
+
+
+// Dark Version
+.dark {
+  .rollslide_title-1 {
+    color: var(--white);
+  }
+
+  .contact_wrap {
+    &:hover {
+      .link {
+        color: var(--black-2);
+        background-color: var(--white);
+      }
+    }
+
+    @media (max-width: 1365px) {
+      .link {
+        color: var(--black-2);
+        background-color: var(--white);
+      }
+    }
+  }
+}

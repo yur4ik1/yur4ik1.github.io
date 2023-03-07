@@ -1,0 +1,124 @@
+.switcher {
+  &__area {
+    position: relative;
+    direction: ltr;
+
+    @media #{$sm} {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 999;
+    transition: all 0.3s;
+    mix-blend-mode: exclusion;
+
+    button {
+      font-size: 24px;
+      color: var(--black-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s;
+
+      &:hover {
+        color: var(--gray-2);
+      }
+
+      &#switcher_open {
+        animation: wcSpinner 5s infinite linear;
+      }
+    }
+  }
+
+  &__items {
+    width: 280px;
+    padding: 50px 30px;
+    background: var(--black-2);
+    position: fixed;
+    right: -280px;
+    top: 40%;
+    z-index: 99;
+    transform: translateY(-50%);
+    font-family: $font_primary;
+    transition: all 0.3s;
+
+    .wc-col-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--white);
+    text-transform: capitalize;
+    padding-bottom: 10px;
+  }
+
+  &__btn {
+    button {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--gray-2);
+      background: #2B2B2F;
+      border-radius: 4px;
+      padding: 10px 15px;
+      text-transform: capitalize;
+
+      &:hover,
+      &.active {
+        color: var(--white);
+      }
+    }
+
+    select {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--gray-2);
+      width: 100%;
+      border: none;
+      padding: 9px 10px;
+      border-radius: 4px;
+      background: #2B2B2F;
+      text-transform: capitalize;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+
+
+}
+
+#switcher_close {
+  display: none;
+}

@@ -1,0 +1,128 @@
+.client {
+    &__area {
+        &-8 {
+            background-color: var(--black-2);
+            background-image: url("../imgs/essential-img/bg-axtra.png");
+            padding-top: 150px;
+            padding-bottom: 140px;
+
+            @media #{$lg} {
+                padding-top: 110px;
+                padding-bottom: 110px;
+            }
+
+            @media #{$md} {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+
+            @media #{$sm} {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .section_wrapper::before {
+                background-color: #313131;
+            }
+
+            .about-sub-right {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: var(--white);
+                padding-bottom: 10px;
+            }
+
+            .react_border {
+                border-color: #313131;
+
+                span {
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: var(--white);
+                    display: inline-block;
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+    }
+
+    &__section {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 110px;
+        justify-content: space-between;
+
+        @media #{$sm} {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        &__title {
+            color: var(--white);
+            font-size: 80px;
+            line-height: 1;
+            text-transform: uppercase;
+
+            @media #{$xl} {
+                font-size: 60px;
+            }
+
+            @media #{$lg} {
+                font-size: 48px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 40px;
+            }
+
+            & span {
+                font-family: $font_newyork;
+            }
+        }
+
+        &__dis {
+            max-width: 240px;
+            color: var(--gray-2);
+            font-size: 18px;
+            line-height: 1.5;
+
+            @media #{$sm} {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__logo {
+        display: grid;
+        grid-gap: 120px 60px;
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+
+        @media #{$lg} {
+            grid-gap: 80px 40px;
+        }
+
+        @media #{$md} {
+            grid-gap: 60px 40px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media #{$sm} {
+            grid-gap: 50px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

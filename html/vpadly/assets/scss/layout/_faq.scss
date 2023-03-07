@@ -1,0 +1,284 @@
+/*----------------------------------------*/
+/*  31. FAQ CSS START
+/*----------------------------------------*/
+
+
+.faq {
+  &__area {
+    overflow: hidden;
+
+    &-6 {
+      overflow: hidden;
+
+      .line {
+        @media #{$lg} {
+          padding-top: 150px;
+        }
+
+        @media #{$md} {
+          padding-top: 130px;
+        }
+
+        @media #{$sm} {
+          padding-top: 120px;
+        }
+
+      }
+
+      .sec-title-wrapper {
+        padding-bottom: 60px;
+
+        @media #{$sm} {
+          padding-bottom: 40px;
+        }
+
+        p {
+          padding-left: 60px;
+          font-size: 18px;
+          padding-top: 20px;
+          line-height: 1.4;
+
+          @media #{$sm} {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    padding-right: 85px;
+    @include img_anim(calc(100% - 85px), 630px, 120%);
+    z-index: 1;
+
+    @media #{$xl} {
+      padding-right: 30px;
+    }
+
+    @media #{$lg} {
+      padding-right: 0;
+      @include img_anim(calc(100% - 30px), auto, auto);
+
+      img {
+        position: unset;
+      }
+    }
+
+    @media #{$md} {
+      @include img_anim(100%, auto, auto);
+      padding-right: 0;
+
+      img {
+        position: unset;
+      }
+    }
+
+    @media #{$sm} {
+      @include img_anim(100%, auto, auto);
+      padding-right: 0;
+
+      img {
+        position: unset;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding-left: 85px;
+    padding-top: 60px;
+
+    @media #{$xl} {
+      padding-left: 30px;
+      padding-top: 30px;
+    }
+
+    @media #{$lg} {
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    @media #{$md} {
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    @media #{$sm} {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--black-2);
+    max-width: 315px;
+    margin-bottom: 25px;
+
+    @media #{$lg} {
+      font-size: 30px;
+    }
+
+    @media #{$sm} {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    padding-right: 1px;
+
+    .accordion {
+
+      &-body {
+        padding-left: 0;
+        min-height: 160px;
+      }
+
+      &-item {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+      }
+
+      &-button {
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--black-2);
+        padding-left: 0;
+        padding-right: 10px;
+        border-radius: 0;
+
+        &.collapsed::after {
+          background-image: none;
+          content: "+";
+          font-weight: 300;
+          font-size: 30px;
+          top: 6px;
+          position: absolute;
+          right: 0;
+          transform: rotate(0);
+        }
+
+
+        &:not(.collapsed) {
+          box-shadow: none;
+          background: transparent;
+
+          &::after {
+            background-image: none;
+            content: "-";
+            font-weight: 300;
+            font-size: 30px;
+            top: 6px;
+            position: absolute;
+            right: 0;
+            transform: rotate(0);
+          }
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &-3 {
+      @extend .faq__list;
+      padding-right: 80px;
+
+      @media #{$lg} {
+        padding-right: 30px;
+      }
+
+      @media #{$md} {
+        padding-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+
+      .accordion-item {
+        background-color: transparent;
+        border-bottom: 1px solid var(--black-2);
+
+        &:first-child {
+          border-top: 1px solid var(--black-2);
+        }
+      }
+    }
+
+    &-6 {
+      @extend .faq__list;
+      padding-left: 1px;
+
+      .accordion-button {
+        font-size: 20px;
+
+        &.collapsed::after,
+        &:not(.collapsed)::after {
+          font-size: 50px;
+          top: -10px;
+        }
+      }
+
+      .accordion-body {
+        p {
+          font-size: 18px;
+          line-height: 1.4;
+        }
+      }
+
+      @media #{$lg} {
+        .accordion-header {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+
+  &__btm {
+    text-align: center;
+
+    .pb-130 {
+      @media #{$lg} {
+        padding-bottom: 120px;
+      }
+
+      @media #{$md} {
+        padding-bottom: 120px;
+      }
+    }
+
+    p {
+      padding-top: 15px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    a {
+      margin: 0 auto;
+      margin-top: 60px;
+
+      @media #{$sm} {
+        margin-top: 0;
+      }
+    }
+
+    #btn_wrapper,
+    .btn_wrapper {
+      margin: 0 auto;
+
+      @media #{$sm} {
+        margin-top: 40px;
+      }
+    }
+  }
+}

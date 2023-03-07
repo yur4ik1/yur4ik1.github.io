@@ -1,0 +1,702 @@
+/*----------------------------------------*/
+/*  32. CAREER CSS START
+/*----------------------------------------*/
+
+
+.career {
+
+  &__top {
+
+    .sec-title-wrapper {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      background-color: var(--black-2);
+      padding-bottom: 500px;
+
+      @media #{$lg} {
+        padding-bottom: 470px;
+      }
+
+      @media #{$md} {
+        padding-bottom: 470px;
+        padding-top: 100px;
+      }
+
+      @media #{$sm} {
+        padding-bottom: 30px;
+        padding-top: 80px;
+      }
+
+      .btn-item {
+        width: 200px;
+        height: 200px;
+
+        @media #{$md} {
+          width: 170px;
+          height: 170px;
+        }
+
+        @media #{$sm} {
+          width: 170px;
+          height: 170px;
+        }
+      }
+    }
+
+    .sec-title-2 {
+      color: var(--white);
+
+      @media #{$sm} {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-img {
+      height: 800px;
+
+      @media #{$xxl} {
+        height: 700px;
+      }
+
+      @media #{$xl} {
+        height: 560px;
+      }
+
+      @media #{$lg} {
+        height: 500px;
+      }
+
+      @media #{$md} {
+        height: 480px;
+      }
+
+      @media #{$sm} {
+        height: auto;
+      }
+
+      iframe,
+      video {
+        width: 100%;
+      }
+    }
+  }
+
+  &__thumb {
+    margin-top: -500px;
+    overflow: hidden;
+
+    @media #{$md} {
+      margin-top: -480px;
+    }
+
+    @media #{$sm} {
+      margin-top: -50px;
+    }
+
+    .inherit {
+      margin-right: -320px;
+
+      @media #{$xxl} {
+        margin-right: -80px;
+      }
+
+      @media #{$xl} {
+        margin-right: -130px;
+      }
+
+      @media #{$lg} {
+        margin-right: -50px;
+      }
+
+      @media #{$md} {
+        margin-right: -40px;
+      }
+
+      @media #{$sm} {
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+      }
+    }
+
+  }
+
+  &__gallery {
+    overflow: hidden;
+
+    ul {
+      text-align: center;
+      margin-bottom: 20px;
+
+      li {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1;
+        color: var(--black-2);
+        position: relative;
+        padding-right: 20px;
+        margin-right: 20px;
+
+        @media #{$sm} {
+          font-size: 24px;
+          padding-right: 10px;
+          margin-right: 10px;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 3px;
+          height: 3px;
+          right: 0;
+          bottom: 10px;
+          background-color: var(--black-2);
+        }
+
+        &:last-child::after {
+          position: unset;
+        }
+      }
+    }
+
+    &-img {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      justify-content: center;
+      height: 700px;
+
+      @media #{$xxl} {
+        height: 650px;
+      }
+
+      @media #{$xl} {
+        height: 580px;
+      }
+
+      @media (max-width: 1200px) {
+        height: 100%;
+      }
+
+      &:last-child {
+        display: flex;
+        gap: 30px;
+
+        @media #{$sm} {
+          gap: 0;
+        }
+      }
+
+      img {
+        max-width: 100%;
+
+        @media #{$sm} {
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    p {
+      max-width: 850px;
+      margin: 0 auto;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.3;
+      color: var(--black-3);
+      text-align: center;
+      padding-bottom: 60px;
+      @include zi(3);
+
+      @media #{$md} {
+        font-size: 20px;
+      }
+
+      @media #{$sm} {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__benefits {
+    overflow: hidden;
+
+    .sec-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      p {
+        font-size: 18px;
+        line-height: 1.4;
+        padding-right: 10px;
+        padding-top: 40px;
+
+        @media #{$sm} {
+          padding-right: 0;
+          padding-top: 30px;
+        }
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media #{$md} {
+        margin-bottom: 70px;
+        padding-top: 40px;
+      }
+
+      @media #{$sm} {
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 240px;
+        text-align: center;
+        border: 1px solid #C8C7C7;
+        border-radius: 100%;
+        margin-left: -30px;
+        margin-top: -30px;
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--black-2);
+
+        @media #{$xxxl} {
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+        }
+
+        @media #{$xxl} {
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+        }
+
+        @media #{$xl} {
+          width: 210px;
+          height: 210px;
+          margin-left: -20px;
+          margin-top: -20px;
+          padding: 20px;
+
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+        }
+
+        @media #{$lg} {
+          width: 240px;
+          height: 240px;
+          margin-left: -20px;
+          margin-top: -20px;
+          padding: 20px;
+
+          &:nth-child(2n+1) {
+            margin-left: 0;
+          }
+        }
+
+        @media #{$md} {
+          width: 260px;
+          height: 260px;
+
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+        }
+
+        @media #{$sm} {
+          width: 175px;
+          height: 175px;
+          margin-left: -10px;
+          margin-top: -10px;
+          padding: 20px;
+          font-size: 16px;
+
+          &:nth-child(2n+1) {
+            margin-left: 0;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+
+
+// Job 
+.job {
+  &__area {
+    background-color: var(--black-2);
+    overflow: hidden;
+
+    .sec-title {
+      color: var(--white);
+    }
+  }
+
+  &__apply {
+    margin-top: -20px;
+
+    @media (max-width: 1400px) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    padding-top: 60px;
+
+    a:first-child .job__item {
+      border-top: 1px solid var(--secondary);
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary);
+    padding: 35px 0;
+
+    @media #{$sm} {
+      grid-template-columns: 1fr;
+      padding: 35px 0 20px;
+    }
+
+    &:hover {
+
+      .job__title {
+        color: var(--white);
+      }
+
+      .job__link {
+        i {
+          transform: rotate(-45deg) translate(60px, 2px);
+          color: var(--white);
+        }
+
+        span::after {
+          right: 0;
+          bottom: 0;
+          opacity: 1;
+          visibility: visible;
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  &__no,
+  &__open {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--gray-3);
+
+    @media #{$md} {
+      font-size: 20px;
+    }
+
+    @media #{$sm} {
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.5;
+    color: var(--gray-3);
+    transition: all 0.3s;
+
+    @media #{$lg} {
+      font-size: 30px;
+    }
+
+    @media #{$md} {
+      font-size: 24px;
+    }
+
+    @media #{$sm} {
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    text-align: right;
+    overflow: hidden;
+    position: relative;
+
+    span {
+      &::after {
+        position: absolute;
+        content: "\f061";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        right: 45px;
+        bottom: -35px;
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+      }
+    }
+
+    i,
+    span {
+      font-size: 30px;
+      color: var(--gray-3);
+      transform: rotate(-45deg);
+      transition: all 0.3s;
+    }
+  }
+
+
+  // Job Details
+
+  &__detail {
+    overflow: hidden;
+
+    &-top {
+      @include img_anim(100%, 690px, 120%);
+
+      @media #{$xxxl} {
+        padding-left: 100px;
+      }
+
+      @media #{$xl} {
+        padding-left: 0;
+        @include img_anim(100%, 500px, 120%);
+      }
+
+      @media #{$lg} {
+        @include img_anim(100%, auto, auto);
+        position: unset;
+      }
+
+      @media #{$md} {
+        @include img_anim(100%, auto, auto);
+        position: unset;
+      }
+
+      @media #{$sm} {
+        @include img_anim(100%, auto, auto);
+        position: unset;
+        padding-top: 73px;
+      }
+
+      img {
+        width: 100%;
+
+        @media #{$lg} {
+          position: unset;
+        }
+
+        @media #{$md} {
+          position: unset;
+        }
+
+        @media #{$sm} {
+          position: unset;
+        }
+      }
+    }
+
+    &-wrapper {
+      padding-top: 60px;
+      padding-right: 120px;
+
+      @media #{$xl} {
+        padding-right: 30px;
+      }
+
+      @media #{$lg} {
+        padding-right: 0;
+      }
+
+      @media #{$md} {
+        padding-right: 0;
+      }
+
+      @media #{$sm} {
+        padding-right: 0;
+      }
+    }
+
+    &-meta {
+      padding-top: 35px;
+      padding-bottom: 35px;
+
+      @media #{$md} {
+        padding-bottom: 20px;
+      }
+
+      @media #{$sm} {
+        padding-bottom: 20px;
+      }
+
+      li {
+        display: inline-block;
+        padding-right: 70px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--black-3);
+
+        @media #{$md} {
+          display: block;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        @media #{$sm} {
+          display: block;
+          padding-right: 0;
+          padding-bottom: 20px;
+        }
+
+        span {
+          color: var(--gray-8);
+          font-size: 14px;
+          font-weight: 400;
+          display: block;
+        }
+      }
+    }
+
+    &-content {
+      border-top: 1px solid var(--white-4);
+      padding-top: 35px;
+
+      p {
+        font-size: 18px;
+        line-height: 1.4;
+        padding-bottom: 40px;
+      }
+
+      h1,
+      h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1;
+        color: var(--black-2);
+        padding-bottom: 20px;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1;
+        color: var(--black-2);
+        padding-bottom: 20px;
+      }
+
+      h4 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        color: var(--black-2);
+        padding-bottom: 20px;
+      }
+
+      h5,
+      h6 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        color: var(--black-2);
+        padding-bottom: 20px;
+      }
+
+      ul,
+      ol {
+        padding-bottom: 35px;
+        padding-left: 30px;
+
+        @media #{$sm} {
+          padding-left: 20px;
+          padding-bottom: 30px;
+        }
+
+        li {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.5;
+          color: var(--black-3);
+          padding-bottom: 5px;
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 5px;
+            left: -18px;
+            top: 12px;
+            background-color: var(--black-3);
+            border-radius: 30px;
+          }
+        }
+      }
+    }
+
+    &-sidebar {
+      margin-top: 70px;
+      background: #F9F9F9;
+      padding: 40px 30px;
+      position: sticky;
+      top: 70px;
+
+      @media #{$md} {
+        padding: 30px 20px;
+      }
+
+      ul {
+        li {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 1.5;
+          color: var(--black-3);
+          padding-bottom: 20px;
+
+          @media #{$md} {
+            font-size: 14px;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          span {
+            color: var(--gray-8);
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+
+}

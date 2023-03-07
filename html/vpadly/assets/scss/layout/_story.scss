@@ -1,0 +1,100 @@
+/*----------------------------------------*/
+/*  26. STORY CSS START
+/*----------------------------------------*/
+
+
+.story {
+
+  &__area {
+    overflow: hidden;
+
+    .sec-title-wrapper {
+      padding-bottom: 40px;
+    }
+
+    .from-text {
+      position: absolute;
+      top: -140px;
+      right: -220px;
+      width: 160px;
+      height: 90px;
+      background-color: var(--primary);
+      padding: 20px 30px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.1;
+      color: var(--black-2);
+
+      @media #{$xl} {
+        right: 0;
+      }
+
+      @media #{$lg} {
+        right: 0;
+        top: -89px;
+      }
+
+      @media #{$md} {
+        right: -20px;
+        top: -80px;
+      }
+
+      @media #{$sm} {
+        width: 120px;
+        right: 0;
+        top: -60px;
+      }
+
+      span {
+        display: block;
+        font-size: 36px;
+        font-weight: 500;
+
+        @media #{$sm} {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    p {
+      @include paragraph(18px, var(--black-3));
+      padding-bottom: 20px;
+
+      @media (max-height: 1365px) {
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 700px;
+
+    @media #{$xxl} {
+      height: 650px;
+    }
+
+    @media #{$xl} {
+      height: 580px;
+    }
+
+    @media (max-width: 1200px) {
+      height: 100%;
+    }
+
+    img {
+      width: fit-content;
+      margin-bottom: 30px;
+      max-width: 100%;
+
+      @media #{$sm} {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

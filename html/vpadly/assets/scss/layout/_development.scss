@@ -1,0 +1,101 @@
+/*----------------------------------------*/
+/*  29. DEVELOPMENT CSS START
+/*----------------------------------------*/
+
+
+
+.development {
+  &__area {
+    overflow: hidden;
+
+    .pt-130 {
+      @media #{$md} {
+        padding-top: 150px;
+      }
+
+      @media #{$sm} {
+        padding-top: 120px;
+      }
+    }
+
+    .pb-150 {
+      @media #{$sm} {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    padding-bottom: 35px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--black-3);
+    @include zi(1);
+
+    @media #{$xl} {
+      grid-gap: 40px;
+    }
+
+    @media #{$lg} {
+      grid-gap: 30px;
+    }
+
+    @media #{$md} {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+
+    @media #{$sm} {
+      padding-top: 30px;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: 55px;
+
+    @media #{$sm} {
+      padding-bottom: 15px;
+    }
+
+    ul {
+      @include feature(var(--black-2));
+      grid-template-columns: 310px auto;
+    }
+  }
+
+  &__img {
+    @include img_anim(100%, 400px, 150%);
+    z-index: 9;
+
+    @media #{$md} {
+      padding-bottom: 15px;
+      @include img_anim(100%, auto, auto);
+
+      img {
+        position: unset;
+      }
+    }
+
+    @media #{$sm} {
+      padding-bottom: 15px;
+      @include img_anim(100%, auto, auto);
+
+      img {
+        position: unset;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

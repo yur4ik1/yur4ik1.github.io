@@ -1,0 +1,230 @@
+/*----------------------------------------*/
+/*  05. THEME CSS START
+/*----------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font_primary;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include zi(1);
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  @include zi(1);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+  @include zi(1);
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black-3);
+  @include zi(1);
+}
+
+video,
+iframe,
+img {
+  margin: 0;
+  padding: 0;
+  @include zi(1);
+}
+
+
+
+
+//  Line CSS
+.line {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--white-4);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    left: calc(50% - 1px);
+    top: 0;
+    background: var(--white-4);
+  }
+
+  &-3 {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: var(--white-4);
+  }
+}
+
+
+// Shape
+.shape {
+  position: absolute;
+  left: -90px;
+  bottom: -350px;
+
+  @media #{$md} {
+    left: 200%;
+    bottom: 0;
+  }
+
+  @media #{$sm} {
+    left: 70%;
+    bottom: 0;
+  }
+
+  .primary {
+    width: 54px;
+    height: 56px;
+    background-color: var(--primary);
+    margin-top: -37px;
+    margin-left: 24px;
+  }
+
+  .secondary {
+    width: 53px;
+    height: 56px;
+    background-color: var(--secondary);
+  }
+}
+
+// position inherit
+.pos-inherit {
+  position: inherit;
+}
+
+@media #{$sm} {
+  .g-0 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.sec-title-wrapper {
+  @include zi(9);
+}
+
+.footer-line {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 500px;
+    left: 0;
+    bottom: -400px;
+    background: var(--white-4);
+
+    @media (max-width: 1023px) {
+      height: 0;
+    }
+  }
+}
+
+
+// Scroll Top
+.scroll-top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9991;
+  border-radius: 100px;
+  color: var(--white);
+  background: var(--white);
+  transition: all 0.3s;
+  display: none;
+  mix-blend-mode: exclusion;
+
+  i {
+    font-size: 18px;
+    color: var(--black-2);
+  }
+
+  &:hover {
+    color: var(--gray-2);
+  }
+
+  @media #{$lg} {
+    bottom: 80px;
+  }
+
+  @media #{$md} {
+    right: 10px;
+    bottom: 60px;
+  }
+
+  @media #{$sm} {
+    right: 5px;
+    bottom: 55px;
+  }
+}
+
+.logo {
+  &-light {
+    display: none;
+  }
+
+  &-dark {
+    display: block;
+  }
+}
+
+.font-20 {
+  font-size: 20px !important;
+}

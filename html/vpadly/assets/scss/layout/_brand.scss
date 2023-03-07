@@ -1,0 +1,139 @@
+/*----------------------------------------*/
+/*  20. BRAND CSS START
+/*----------------------------------------*/
+
+
+.brand {
+  &__area {
+    overflow: hidden;
+
+    .pb-100 {
+      padding-bottom: 50px;
+
+      @media #{$md} {
+        padding-bottom: 0;
+      }
+
+      @media #{$sm} {
+        padding-bottom: 0;
+      }
+    }
+
+    .sec-title-wrapper {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--white-3);
+    position: relative;
+    z-index: 1;
+    margin-left: 1px;
+
+    @media #{$lg} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media #{$md} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$sm} {
+      grid-template-columns: repeat(2, 1fr);
+      margin-left: 0;
+    }
+
+    &-2 {
+      @extend .brand__list;
+      gap: 40px;
+      background-color: transparent;
+      border-bottom: none;
+      margin-left: 0;
+    }
+
+    &-3 {
+      @extend .brand__list;
+      background-color: transparent;
+      border-bottom: none;
+      margin-left: 0;
+
+      @media #{$lg} {
+        gap: 50px;
+      }
+
+      @media #{$md} {
+        gap: 50px;
+      }
+
+      @media #{$sm} {
+        gap: 50px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid var(--white-3);
+    border-right: 1px solid var(--white-3);
+
+    @media #{$xl} {
+      padding: 35px;
+    }
+
+    @media #{$md} {
+      padding: 30px 25px;
+    }
+
+    @media #{$sm} {
+      padding: 30px 0;
+      border-left: 1px solid var(--white-3);
+
+      &:nth-child(even) {
+        border-left: none;
+      }
+    }
+
+    &-2 {
+      text-align: center;
+
+      @media #{$md} {
+        padding-bottom: 20px;
+      }
+
+      @media #{$sm} {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    &-2 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.5;
+      color: var(--white);
+      padding-bottom: 50px;
+      text-align: center;
+    }
+
+    &-3 {
+      font-size: 18px;
+      line-height: 1.4;
+      color: var(--black-2);
+      text-align: center;
+      padding-bottom: 65px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.brand-gap {
+  gap: 50px 0;
+  border: none;
+  background-color: transparent;
+}
