@@ -1106,7 +1106,7 @@
         delay: 0.5,
         scrollTrigger: {
             trigger: '.end',
-          // start: 'bottom 90%-=50px'
+            //start: 'bottom 100%-=50px'
         }
     });
     gsap.set('.end', {
@@ -1118,7 +1118,7 @@
         ease: 'power2.out',
         scrollTrigger: {
             trigger: '.end',
-            // start: 'bottom 90%-=50px',
+            // start: 'bottom 100%-=50px',
             once: true
         }
     });
@@ -1132,7 +1132,8 @@
         scaleY: 0.6,
         ease: "power3.out",
         stagger: 0.04,
-        transformOrigin: 'center bottom'
+        transformOrigin: 'center bottom',
+        '-webkit-transform-origin': 'center bottom'
     });
     endTl.to(chars, {
         yPercent: -20,
@@ -1164,6 +1165,17 @@
         color: '#c9f31d',
         duration: 1.4,
         stagger: 0.05
+    });
+    $('.end').css({
+        '-webkit-font-size': '180px',
+        'font-size': '180px',
+        '-webkit-line-height': '1',
+        'line-height': '1',
+        '-webkit-transform-origin': 'center bottom',
+        'transform-origin': 'center bottom',
+        'text-align': 'center',
+        'text-transform': 'uppercase',
+        'color': 'var(--white)'
     });
     /////////////////////////////////////////////////////
 
