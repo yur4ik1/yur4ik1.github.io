@@ -12,7 +12,7 @@
 	<meta name="description"
 		content="Choose any English Typing Test to earn our free Professional Certificate by TypeDojo. Take Our 1/3/5 minutes typing test to Improve typing Speed &amp; Accuracy." />
 	<link href="./css/foundation.css" type="text/css" rel="stylesheet" media="screen,projection" />
-	<link href="./css/app.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<link href="./css/app.css" type="text/css" rel="stylesheet" media="screen,projection"  />
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
 	<link
 		href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
@@ -22,11 +22,11 @@
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
 		rel="stylesheet">
-	<link rel="stylesheet" href="./css/materialdesignicons.css">
-	<link rel="stylesheet" href="./css/tippy.min.css" />
-
+	<link rel="stylesheet" href="./css/materialdesignicons.css" disabled>
+	<link rel="stylesheet" href="./css/tippy.min.css" disabled />
+	<link href="./css/jquery.toast.min.css" rel="stylesheet" type="text/css" disabled>
 	<link href="./css/myStyle.css" type="text/css" rel="stylesheet" />
-
+	<script type="text/javascript" src="./js/moment.min.js" disabled></script>
 
 </head>
 
@@ -280,7 +280,175 @@ font-size: 18px;font-weight: 600;font-family: Open Sans;">TypeDojo.com is listed
 		</div>
 	</div>
 
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" disabled></script>
+	<script src="./js/keyboard.js" disabled></script>
+	<script src="./js/jquery.countdownTimer.min.js" disabled></script>
+	<script src="./js/js.cookie.min.js" disabled></script>
+	<script src="./js/jquery.toast.min.js" disabled></script>
+	<script src="./js/howler.js" disabled></script>
+
+	<script type="text/javascript">
+		var base_url = "https://www.typedojo.com";
+		$(document).ready(function () {
+			SetView();
+			setHand();
+			$(document).keyup(function (event) {
+				if (event.which === 32) {
+					event.preventDefault();
+				}
+			});
+			$('#yes-no').on('click', function () {
+				$('.keyboard-container').toggleClass("main");
+				if ($('.keyboard-container').hasClass("main")) {
+					Cookies.set('keyboard', '1');
+				}
+				else {
+
+					Cookies.remove('keyboard');
+				}
+				$('.keyboard-container').toggle();
+
+			});
+			$('.hand-block #hand').on('click', function () {
+				$('.keyboard-container .left-hand-block').toggleClass("main");
+				$('.keyboard-container .right-hand-block').toggleClass("main");
+				if ($('.keyboard-container .left-hand-block').hasClass("main") &&
+					$('.keyboard-container .right-hand-block').hasClass("main")) {
+					Cookies.set('hand', '1');
+				}
+				else {
+					Cookies.remove('hand');
+				}
+				$('.keyboard-container .left-hand-block').toggle();
+				$('.keyboard-container .right-hand-block').toggle();
+			});
+		});
+		function SetView() {
+			if (Cookies.get('keyboard') == 1) {
+				$("#yes-no").prop("checked", false);
+				$('.keyboard-container').hide();
+
+				$('.keyboard-container').addClass("main");
+			}
+			else {
+				$('.keyboard-container').show();
+				Cookies.remove('keyboard');
+			}
+		}
+		function setHand() {
+			if (Cookies.get('hand') == 1) {
+				$(".hand-block #hand").prop("checked", false);
+				$('.keyboard-container .left-hand-block').hide();
+				$('.keyboard-container .right-hand-block').hide();
+				$('.keyboard-container .left-hand-block').addClass("main");
+				$('.keyboard-container .right-hand-block').addClass("main");
+			}
+			else {
+				$('.keyboard-container .left-hand-block').show();
+				$('.keyboard-container .right-hand-block').show();
+				Cookies.remove('hand');
+			}
+		}
+
+	</script>
+
+
+	<script type="text/javascript">
+
+		var snd = new Howl({
+			src: ['./sound/typing.ogg']
+		});
+		var wrongtype = new Howl({
+			src: ['./sound/wrongtype.ogg']
+		});
+		setSound();
+		$('#soundcheck').on('click', function () {
+			// var $checkbox = $(this).find(':checkbox');
+			//$checkbox.prop("checked", !$checkbox.prop("checked"));
+			if ($('#soundcheck').is(":checked")) {
+
+				Cookies.remove('sound');
+			}
+			else {
+
+				Cookies.set('sound', '1');
+			}
+
+		});
+		$(document).keypress(function (e) {
+
+			var keyboardval = e.key;
+			var val = $('.typing-text-line').find('.goingnew').text();
+			var val = val.replace('\xa0', ' ');
+			var valnew = $('.typing-text-line').find('.goingnewnew').text();
+			var valnew = valnew.replace('\xa0', ' ');
+
+			var asciival = val.charCodeAt(0);
+			var asciivalnew = valnew.charCodeAt(0);
+
+			if ($('#soundcheck').is(":checked")) {
+
+				if ((keyboardval == val) || (keyboardval == valnew)) {
+					snd.play();
+				}
+				else {
+					wrongtype.play();
+				}
+			}
+			else {
+				snd.pause();
+				wrongtype.pause();
+			}
+
+
+			var time = jQuery('#timer').html();
+			if (time == '') {
+
+				snd.pause();
+				wrongtype.pause();
+
+			}
+
+
+
+		});
+		function setSound() {
+			if (Cookies.get('sound') == 1) {
+				snd.pause();
+				wrongtype.pause();
+			}
+			else {
+				Cookies.remove('sound');
+			}
+
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(document).keypress(function (event) {
+
+			if (event.originalEvent.getModifierState("CapsLock")) {
+
+				$.toast({
+					heading: 'Warning',
+					text: 'Your Caps Lock is on.',
+					position: 'bottom-center',
+					stack: false,
+					showHideTransition: 'slide',
+					icon: 'warning',
+					loader: false,
+
+				})
+			}
+
+
+		});
+	</script>
+	<script>
+
+		window['gtag_enable_tcf_support'] = true;
+
+	</script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102669130-1"></script>
@@ -291,15 +459,14 @@ font-size: 18px;font-weight: 600;font-family: Open Sans;">TypeDojo.com is listed
 
 		gtag('config', 'UA-102669130-1');
 	</script>
+	
 	<script type="text/javascript">
-
 		setTimeout(function () {
 			var addthisScript = document.createElement("script");
 			addthisScript.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e4927c35ba1fb17";
 			addthisScript.defer = true;
 			document.body.appendChild(addthisScript);
-		}, 3000);
-
+		}, 3500);
 	</script>
 </body>
 
