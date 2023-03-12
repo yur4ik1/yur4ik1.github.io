@@ -19,9 +19,7 @@
 	<!--  <link
 		href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,900"
 		rel="stylesheet"> -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i"
 		rel="stylesheet"> -->
 	<!-- <link rel="stylesheet" href="./css/materialdesignicons.css" async> -->
@@ -281,175 +279,16 @@ font-size: 18px;font-weight: 600;font-family: Open Sans;">TypeDojo.com is listed
 		</div>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" defer></script>
-	<script src="./js/keyboard.js" defer></script>
-	<script src="./js/jquery.countdownTimer.min.js" defer></script>
-	<script src="./js/js.cookie.min.js" defer></script>
-	<script src="./js/jquery.toast.min.js" defer></script>
-	<script src="./js/howler.js" defer></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" defer></script> -->
 
-	<script type="text/javascript">
-		var base_url = "https://www.typedojo.com";
-		$(document).ready(function () {
-			SetView();
-			setHand();
-			$(document).keyup(function (event) {
-				if (event.which === 32) {
-					event.preventDefault();
-				}
-			});
-			$('#yes-no').on('click', function () {
-				$('.keyboard-container').toggleClass("main");
-				if ($('.keyboard-container').hasClass("main")) {
-					Cookies.set('keyboard', '1');
-				}
-				else {
+	<!-- <script src="./js/keyboard.js" defer></script>-->
+	<!--<script src="./js/jquery.countdownTimer.min.js" defer></script> -->
 
-					Cookies.remove('keyboard');
-				}
-				$('.keyboard-container').toggle();
+	<!--<script src="./js/js.cookie.min.js" defer></script>-->
 
-			});
-			$('.hand-block #hand').on('click', function () {
-				$('.keyboard-container .left-hand-block').toggleClass("main");
-				$('.keyboard-container .right-hand-block').toggleClass("main");
-				if ($('.keyboard-container .left-hand-block').hasClass("main") &&
-					$('.keyboard-container .right-hand-block').hasClass("main")) {
-					Cookies.set('hand', '1');
-				}
-				else {
-					Cookies.remove('hand');
-				}
-				$('.keyboard-container .left-hand-block').toggle();
-				$('.keyboard-container .right-hand-block').toggle();
-			});
-		});
-		function SetView() {
-			if (Cookies.get('keyboard') == 1) {
-				$("#yes-no").prop("checked", false);
-				$('.keyboard-container').hide();
+	<!--<script src="./js/jquery.toast.min.js" defer></script>-->
 
-				$('.keyboard-container').addClass("main");
-			}
-			else {
-				$('.keyboard-container').show();
-				Cookies.remove('keyboard');
-			}
-		}
-		function setHand() {
-			if (Cookies.get('hand') == 1) {
-				$(".hand-block #hand").prop("checked", false);
-				$('.keyboard-container .left-hand-block').hide();
-				$('.keyboard-container .right-hand-block').hide();
-				$('.keyboard-container .left-hand-block').addClass("main");
-				$('.keyboard-container .right-hand-block').addClass("main");
-			}
-			else {
-				$('.keyboard-container .left-hand-block').show();
-				$('.keyboard-container .right-hand-block').show();
-				Cookies.remove('hand');
-			}
-		}
-
-	</script>
-
-
-	<script type="text/javascript">
-
-		var snd = new Howl({
-			src: ['./sound/typing.ogg']
-		});
-		var wrongtype = new Howl({
-			src: ['./sound/wrongtype.ogg']
-		});
-		setSound();
-		$('#soundcheck').on('click', function () {
-			// var $checkbox = $(this).find(':checkbox');
-			//$checkbox.prop("checked", !$checkbox.prop("checked"));
-			if ($('#soundcheck').is(":checked")) {
-
-				Cookies.remove('sound');
-			}
-			else {
-
-				Cookies.set('sound', '1');
-			}
-
-		});
-		$(document).keypress(function (e) {
-
-			var keyboardval = e.key;
-			var val = $('.typing-text-line').find('.goingnew').text();
-			var val = val.replace('\xa0', ' ');
-			var valnew = $('.typing-text-line').find('.goingnewnew').text();
-			var valnew = valnew.replace('\xa0', ' ');
-
-			var asciival = val.charCodeAt(0);
-			var asciivalnew = valnew.charCodeAt(0);
-
-			if ($('#soundcheck').is(":checked")) {
-
-				if ((keyboardval == val) || (keyboardval == valnew)) {
-					snd.play();
-				}
-				else {
-					wrongtype.play();
-				}
-			}
-			else {
-				snd.pause();
-				wrongtype.pause();
-			}
-
-
-			var time = jQuery('#timer').html();
-			if (time == '') {
-
-				snd.pause();
-				wrongtype.pause();
-
-			}
-
-
-
-		});
-		function setSound() {
-			if (Cookies.get('sound') == 1) {
-				snd.pause();
-				wrongtype.pause();
-			}
-			else {
-				Cookies.remove('sound');
-			}
-
-		}
-	</script>
-
-	<script type="text/javascript">
-		$(document).keypress(function (event) {
-
-			if (event.originalEvent.getModifierState("CapsLock")) {
-
-				$.toast({
-					heading: 'Warning',
-					text: 'Your Caps Lock is on.',
-					position: 'bottom-center',
-					stack: false,
-					showHideTransition: 'slide',
-					icon: 'warning',
-					loader: false,
-
-				})
-			}
-
-
-		});
-	</script>
-	<script>
-
-		window['gtag_enable_tcf_support'] = true;
-
-	</script>
+	<!-- <script src="./js/howler.js" defer></script> -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102669130-1"></script>
