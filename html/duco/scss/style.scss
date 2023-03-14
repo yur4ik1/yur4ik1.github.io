@@ -1,0 +1,490 @@
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+body {
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    padding: 1.389vw 0vw;
+    height: 6.519vw;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(0.347vw);
+    z-index: 99999;
+    position: absolute;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo img {
+        width: 13.611vw;
+        height: 3.741vw;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0vw;
+        width: 44.167vw;
+
+        li {
+            margin-right: 4.444vw;
+
+            a {
+                font-size: 1.111vw;
+                line-height: 1.319vw;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: 1.111vw;
+        line-height: 1.319vw;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0.833vw 2.778vw;
+        gap: 0.694vw;
+        width: 13.611vw;
+        height: 2.986vw;
+        background: linear-gradient(92.28deg, #00CBFF 0.63%, #0078FA 99.96%);
+        border-radius: 2.222vw;
+    }
+
+}
+
+.offer {
+    background: url(../img/offer.jpg) no-repeat center top / cover;
+    width: 100%;
+    padding-top: 18vw;
+    padding-bottom: 14.083vw;
+
+    &__content h1,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 5.987vw;
+        line-height: 7.153vw;
+        color: #323232;
+    }
+
+    &__content .blue {
+        color: #0078FA;
+    }
+
+    &__content .green {
+        color: #00CBFF;
+    }
+
+    &__content .offer__desc {
+        width: 44.167vw;
+        font-weight: 500;
+        font-size: 1.597vw;
+        line-height: 2.222vw;
+        color: rgba(50, 50, 50, 0.8);
+        margin-top: 1.389vw;
+        margin-bottom: 2.778vw;
+    }
+
+    &__content .offer__btns {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content .offer__btns a {
+        font-weight: 600;
+        font-size: 1.667vw;
+        line-height: 2.014vw;
+        gap: 0.694vw;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 1.111vw 2.639vw;
+        width: 14.514vw;
+        height: 4.236vw;
+        background: linear-gradient(265.27deg, #00CBFF 0%, #0078FA 100%);
+        border-radius: 3.264vw;
+        margin-right: 0.972vw;
+    }
+}
+
+.about {
+    background: url(../img/about-bg.jpg) no-repeat center top / cover;
+    width: 100%;
+    height: 62.5vw;
+    position: relative;
+
+    &__content {
+        width: 46.181vw;
+        height: 62.5vw;
+        padding-top: 18.333vw;
+        padding-bottom: 17.431vw;
+        padding-left: 4.653vw;
+        padding-right: 5vw;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(0.59vw);
+        position: absolute;
+        right: 0;
+    }
+
+    &__title,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 4.444vw;
+        line-height: 5.347vw;
+        color: #FFFFFF;
+    }
+
+    &__title span {
+        color: #0078FA;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 1.25vw;
+        line-height: 2.222vw;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 2.083vw;
+        margin-bottom: 2.083vw;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1.111vw 2.639vw;
+        gap: 0.694vw;
+        width: 21.667vw;
+        height: 3.889vw;
+        background: linear-gradient(265.27deg, #00CBFF 0%, #0078FA 100%);
+        border-radius: 3.264vw;
+        font-weight: 600;
+        font-size: 1.389vw;
+        line-height: 1.667vw;
+        color: #FFFFFF;
+    }
+}
+
+
+.info {
+    width: 100%;
+    height: 25.278vw;
+    position: relative;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__elipse1 {
+        position: absolute;
+        left: 0;
+        top: 13.472vw;
+
+        svg {
+            width: 11.736vw;
+            height: 11.736vw;
+        }
+    }
+
+    &__elipse2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        svg {
+            width: 14.167vw;
+            height: 14.167vw;
+        }
+    }
+
+    &__content {
+        width: 65.694vw;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 6.181vw;
+    }
+
+    &__item:nth-child(1)>img {
+        width: 28.264vw;
+        height: 11.667vw;
+    }
+
+    &__item:nth-child(2)>img {
+        width: 23.819vw;
+        height: 11.667vw;
+    }
+}
+
+.practice {
+    padding-top: 4.097vw;
+    position: relative;
+    height: 58.917vw;
+
+    h2,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-weight: 900;
+        font-size: 4.444vw;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #0078FA;
+
+        span {
+            color: #323232;
+        }
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 1.25vw;
+        line-height: 130%;
+        text-align: center;
+        color: #2D2D2D;
+        margin-top: 1.389vw;
+        margin-bottom: 4.167vw;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 2.778vw 2.083vw;
+        width: 28.889vw;
+        height: 21.875vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #0078FA;
+        box-shadow: 2.42vw 2.057vw 3.357vw rgba(51, 102, 255, 0.05);
+        border-radius: 1.389vw;
+    }
+
+    &__item h4 {
+        font-family: 'Museo Sans Rounded';
+        font-weight: 900;
+        font-size: 1.944vw;
+        line-height: 150%;
+        text-align: center;
+        color: #323232;
+        margin-bottom: 1.667vw;
+    }
+
+    &__item ul {
+        padding: 0;
+    }
+
+    &__item li {
+        font-family: 'Mulish';
+        font-weight: 700;
+        font-size: 1.111vw;
+        line-height: 130%;
+        color: #2D2D2D;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.181vw;
+        position: relative;
+    }
+
+    &__item li svg {
+        width: 1.389vw;
+        height: 1.389vw;
+        margin-right: 1.042vw;
+    }
+
+    &__elips1 {
+        position: absolute;
+        top: 38.667vw;
+        left: 0;
+    }
+
+    &__elips1 svg {
+        width: 22.916vw;
+        height: 22.916vw;
+    }
+
+    &__elips2 {
+        position: absolute;
+        right: 0;
+        top: 44.667vw;
+    }
+
+    &__elips2 svg {
+        width: 16.111vw;
+        height: 16.111vw;
+    }
+}
+
+.reviews {
+    padding-bottom: 6.319vw;
+
+    h2,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-weight: 900;
+        font-size: 4.444vw;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin-bottom: 1.389vw;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 1.25vw;
+        line-height: 130%;
+        text-align: center;
+        color: #2D2D2D;
+        margin-bottom: 4.167vw;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.778vw 2.083vw;
+        width: 28.611vw;
+        height: 36.736vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #0078FA;
+        box-shadow: 2.42vw 2.057vw 3.357vw rgba(51, 102, 255, 0.05);
+        border-radius: 1.389vw;
+    }
+
+    &__item-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.083vw;
+    }
+
+    &__item-header img {
+        width: 3.889vw;
+        height: 3.889vw;
+        margin-bottom: 1.111vw;
+    }
+
+    &__item-header h4 {
+        font-family: 'Museo Sans Rounded';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.667vw;
+        line-height: 130%;
+        text-align: center;
+        color: #111827;
+    }
+
+    &__item-header p {
+        font-weight: 400;
+        font-size: 0.972vw;
+        line-height: 160%;
+        text-align: center;
+        color: #374151;
+        margin-top: 0.417vw;
+    }
+
+    &__item-desc {
+        width: 21.528vw;
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        text-align: center;
+        color: #2D2D2D;
+    }
+}
+
+.contacts {
+    background: url(../img/contacts.jpg) no-repeat center top / cover;
+    width: 100%;
+    height: 56.944vw;
+    padding-top: 10.347vw;
+    padding-bottom: 10.556vw;
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 4.167vw;
+        width: 74.514vw;
+        height: 36.111vw;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(0.59vw);
+        border-radius: 1.389vw;
+    }
+
+    &__info {
+        padding-top: 6.806vw;
+    }
+
+    &__info h2,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-weight: 900;
+        font-size: 3.333vw;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    &__info p {
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-top: 0.694vw;
+    }
+
+    &__list {
+        margin-top: 2.778vw;
+    }
+
+    &__list a {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        color: #FFFFFF;
+        margin-top: 1.389vw;
+    }
+
+    &__list a svg {
+        width: 1.667vw;
+        height: 1.667vw;
+        margin-right: 0.833vw;
+    }
+}
