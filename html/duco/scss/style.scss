@@ -71,7 +71,7 @@ body {
     background: url(../img/offer.jpg) no-repeat center top / cover;
     width: 100%;
     padding-top: 18vw;
-    padding-bottom: 14.083vw;
+    padding-bottom: 16.083vw;
 
     &__content h1,
     span {
@@ -437,7 +437,7 @@ body {
         right: 0;
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        justify-content: space-between;
         padding: 4.167vw;
         width: 74.514vw;
         height: 36.111vw;
@@ -470,6 +470,7 @@ body {
 
     &__list {
         margin-top: 2.778vw;
+        width: 32.292vw;
     }
 
     &__list a {
@@ -486,5 +487,85 @@ body {
         width: 1.667vw;
         height: 1.667vw;
         margin-right: 0.833vw;
+    }
+
+    &__form {
+        width: 29.722vw;
+    }
+
+    &__form input {
+        padding: 0.556vw 1.389vw;
+        width: 29.722vw;
+        height: 4.167vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #D8D8D8;
+        border-radius: 1.389vw;
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        color: #2D2D2D;
+        margin-bottom: 0.694vw;
+    }
+
+    &__form textarea {
+        padding: 0.556vw 1.389vw;
+        width: 29.722vw;
+        height: 12.5vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #D8D8D8;
+        border-radius: 1.389vw;
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        color: #2D2D2D;
+    }
+
+    &__form .form-btn {
+        font-weight: 600;
+        font-size: 1.389vw;
+        line-height: 1.667vw;
+        text-align: center;
+        font-feature-settings: 'liga' off;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1.111vw 3.472vw;
+        gap: 0.556vw;
+        width: 11.736vw;
+        height: 4.167vw;
+        background: linear-gradient(98.1deg, #0078FA 0%, #00CBFF 100%);
+        border-radius: 3.681vw;
+        border: none;
+        margin-top: 1.389vw;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 1.667vw 4.167vw;
+    background: #2D2D2D;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__copyright {
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.972vw;
+        line-height: 160%;
+        color: #FFFFFF;
+    }
+
+    &__social svg {
+        width: 2.222vw;
+        height: 2.222vw;
     }
 }
