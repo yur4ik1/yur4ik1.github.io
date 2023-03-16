@@ -5,6 +5,7 @@
 body {
     font-family: 'Inter';
     font-style: normal;
+    overflow-x: hidden;
 }
 
 .header {
@@ -567,5 +568,274 @@ body {
     &__social svg {
         width: 2.222vw;
         height: 2.222vw;
+    }
+}
+
+
+/* employers.html */
+
+.offer-emt {
+    background: url(../img/offeremt.jpg) no-repeat center top/cover;
+    width: 100%;
+    height: 62.361vw;
+    padding-top: 18.681vw;
+    padding-bottom: 12.014vw;
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        position: absolute;
+        right: 0;
+
+        h1,
+        span {
+            font-family: 'Museo Sans Rounded';
+            font-weight: 900;
+            font-size: 5.987vw;
+            line-height: 7.153vw;
+            color: #323232;
+            margin-bottom: 1.389vw;
+        }
+
+        p {
+            width: 44.167vw;
+            margin-bottom: 2.778vw;
+            font-weight: 500;
+            font-size: 1.597vw;
+            line-height: 2.222vw;
+            color: rgba(50, 50, 50, 0.8);
+        }
+
+        a {
+            font-weight: 600;
+            font-size: 1.667vw;
+            line-height: 2.014vw;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.111vw 2.639vw;
+            gap: 0.694vw;
+            width: 39.931vw;
+            height: 4.236vw;
+            background: linear-gradient(95.31deg, #00CBFF 0%, #0078FA 100%);
+            border-radius: 3.264vw;
+        }
+    }
+}
+
+.services {
+    padding-top: 9.583vw;
+    padding-bottom: 15.139vw;
+    position: relative;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2,
+        span {
+            font-family: 'Museo Sans Rounded';
+            font-weight: 900;
+            font-size: 4.444vw;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #000000;
+        }
+
+        .services__desc {
+            max-width: 74.722vw;
+            font-weight: 500;
+            font-size: 1.25vw;
+            line-height: 130%;
+            text-align: center;
+            color: #2D2D2D;
+            margin-bottom: 4.167vw;
+        }
+    }
+
+    &__list {
+        position: relative;
+        height: 94.861vw;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0vw;
+        width: 82.361vw;
+        height: 30.139vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #0078FA;
+        border-radius: 1.389vw;
+        margin-bottom: 2.083vw;
+    }
+
+    &__item.right {
+        float: right;
+    }
+
+    &__item.left {
+        flex-direction: row-reverse;
+    }
+
+    &__item .left {
+        width: 41.806vw;
+        padding-left: 4.167vw;
+        padding-right: 4.167vw;
+    }
+
+    &__item .left h3 {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 2.778vw;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #2D2D2D;
+        margin-bottom: 1.389vw;
+    }
+
+    &__item .left p {
+        font-family: 'Mulish';
+        font-weight: 400;
+        font-size: 1.111vw;
+        line-height: 150%;
+        color: #2D2D2D;
+        margin-bottom: 2.778vw;
+    }
+
+    &__item .left a {
+        font-weight: 600;
+        font-size: 1.111vw;
+        line-height: 1.319vw;
+        text-align: center;
+        color: #FFFFFF;
+        width: 11.389vw;
+        height: 3.542vw;
+        background: linear-gradient(265.27deg, #00CBFF 0%, #0078FA 100%);
+        border-radius: 3.264vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.778vw;
+    }
+
+    &__item .right img {
+        width: 46.458vw;
+        height: 30vw;
+        -webkit-border-top-right-radius: 1.389vw;
+        -webkit-border-bottom-right-radius: 1.389vw;
+        -moz-border-radius-topright: 1.389vw;
+        -moz-border-radius-bottomright: 1.389vw;
+        border-top-right-radius: 1.389vw;
+        border-bottom-right-radius: 1.389vw;
+    }
+
+    &__elipse1 svg {
+        position: absolute;
+        width: 14.653vw;
+        height: 14.653vw;
+        left: 87.658vw;
+        top: 5.889vw;
+    }
+
+    &__elipse2 svg {
+        position: absolute;
+        width: 20.208vw;
+        height: 20.208vw;
+        left: -5.139vw;
+        top: 35.583vw;
+    }
+
+    &__elipse3 svg {
+        position: absolute;
+        width: 12.431vw;
+        height: 12.431vw;
+        left: 89vw;
+        top: 78.306vw;
+    }
+
+    &__elipse4 svg {
+        position: absolute;
+        width: 15.833vw;
+        height: 15.833vw;
+        left: -2.861vw;
+        top: 120.486vw;
+    }
+}
+
+.testimonials {
+    padding-bottom: 11.875vw;
+    position: relative;
+
+    h2,
+    span {
+        font-family: 'Museo Sans Rounded';
+        font-weight: 900;
+        font-size: 4.444vw;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 1.25vw;
+        line-height: 130%;
+        text-align: center;
+        color: #2D2D2D;
+        margin-bottom: 4.167vw;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.778vw 2.083vw;
+        width: 21.25vw;
+        height: 23.125vw;
+        background: #FFFFFF;
+        border: 0.069vw solid #0078FA;
+        box-shadow: 2.42vw 2.057vw 3.357vw rgba(51, 102, 255, 0.05);
+        border-radius: 1.389vw;
+
+        h4 {
+            font-family: 'Museo Sans Rounded';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 1.667vw;
+            line-height: 130%;
+            text-align: center;
+            color: #111827;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.111vw;
+            line-height: 150%;
+            text-align: center;
+            color: #2D2D2D;
+            margin-top: 2.083vw;
+        }
+    }
+
+    &__elipse svg {
+        position: absolute;
+        width: 15.625vw;
+        height: 15.625vw;
+        left: 88.917vw;
+        top: 36.639vw;
+        z-index: -1;
     }
 }
