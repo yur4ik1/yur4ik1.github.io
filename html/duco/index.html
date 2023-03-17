@@ -399,11 +399,12 @@
             </div>
           </div>
           <div class="contacts__form">
-            <form action="#">
-              <input type="text" placeholder="Full Name">
-              <input type="text" placeholder="Email">
-              <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <form id="contact-form" method="post" action="send-email.php">
+              <input type="text" id="name" name="name" placeholder="Full Name">
+              <input type="text" id="email" name="email" placeholder="Email">
+              <textarea id="message" name="message" cols="30" rows="10" placeholder="Message"></textarea>
               <input class="form-btn" type="submit" value="Submit">
+              <p style="margin-top: 6px;" id="form-feedback"></p>
             </form>
           </div>
         </div>
