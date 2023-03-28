@@ -13,9 +13,9 @@ body {
     padding-left: 3.125vw;
     padding-right: 3.125vw;
     padding-top: 1.042vw;
-    position: absolute;
+    position: fixed;
     top: 0;
-    z-index: 999999;
+    z-index: 9999999999999999999999;
 
     .container {
         display: flex;
@@ -46,6 +46,7 @@ body {
             display: inline-flex;
             margin-right: 4.167vw;
         }
+
         li::before {
             display: none;
         }
@@ -74,6 +75,19 @@ body {
         }
     }
 }
+
+.header.active {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(144.8%, rgba(255, 255, 255, 0.06)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.06) 144.8%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.06) 144.8%);
+    -webkit-backdrop-filter: blur(0.391vw);
+    backdrop-filter: blur(0.391vw);
+
+    .container {
+        border-bottom: none;
+    }
+}
+
 
 .offer {
     background: url('../img/offer.png') no-repeat center top / cover;
@@ -125,7 +139,6 @@ body {
     padding-bottom: 5.469vw;
 
     .container {
-        z-index: 9999999999;
         position: relative;
     }
 
@@ -178,7 +191,7 @@ body {
         width: 12.24vw;
         height: 7.292vw;
         background: linear-gradient(73.83deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-        border: 0.104vw solid #FFFFFF;
+        border: 0.130vw solid #fff;
         border-radius: 0.521vw;
         margin-bottom: 0.781vw;
         position: relative;
@@ -196,8 +209,8 @@ body {
         width: 1.927vw;
         height: 1.927vw;
         position: absolute;
-        top: -1px;
-        right: -1px;
+        top: -0.09vw;
+        right: -0.1vw;
     }
 
     &__item .solutions__name {
@@ -299,7 +312,7 @@ body {
             width: 20.833vw;
             margin-top: 0.521vw;
             display: flex;
-            border-bottom: 1px solid #9C066D;
+            border-bottom: 0.052vw solid #9C066D;
             padding-bottom: 1.563vw;
         }
 
@@ -353,7 +366,115 @@ body {
         transition: 0.3s;
     }
 
-    &__btn:hover > svg {
-       margin-left: 0.725vw;
+    &__btn:hover>svg {
+        margin-left: 0.725vw;
     }
+}
+
+
+.carriers {
+    background: url('../img/carriers.png') no-repeat center top / cover;
+    width: 100%;
+    height: 55.208vw;
+    padding-top: 13.021vw;
+
+    &__content {
+        .subtitle {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-bottom: 0.26vw;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 140%;
+            background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .icons {
+            width: 20.833vw;
+            margin-top: 0.521vw;
+            display: flex;
+            border-bottom: 0.052vw solid #9C066D;
+            padding-bottom: 1.563vw;
+        }
+
+        .icons svg {
+            width: 1.563vw;
+            height: 1.563vw;
+            margin-right: 1.042vw;
+        }
+    }
+
+    &__desc {
+        width: 28.125vw;
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-top: 1.042vw;
+        margin-bottom: 0.781vw;
+    }
+
+    &__desc a {
+        color: #9C066D;
+    }
+
+
+    &__btn {
+        font-family: 'Oxanium';
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        margin-top: 1.302vw;
+    }
+
+    &__btn svg {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-left: 0.521vw;
+        transition: 0.3s;
+    }
+
+    &__btn:hover>svg {
+        margin-left: 0.725vw;
+    }
+
+
+    &__items {
+        display: flex;
+        margin-top: 2.604vw;
+    }
+
+    &__item {
+        padding-left: 1.563vw;
+        padding-right: 1.458vw;
+        width: 13.542vw;
+        height: 7.292vw;
+        background: linear-gradient(73.83deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        border: 0.134vw solid #FFFFFF;
+        border-radius: 0.521vw;
+        position: relative;
+
+        .triangle {
+            width: 1.927vw;
+            height: 1.927vw;
+            position: absolute;
+            top: -0.09vw;
+            right: -0.2vw;
+        }
+    }
+
 }
