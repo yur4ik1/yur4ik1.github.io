@@ -15,6 +15,7 @@ body {
     padding-top: 1.042vw;
     position: absolute;
     top: 0;
+    z-index: 999999;
 
     .container {
         display: flex;
@@ -33,6 +34,10 @@ body {
         }
     }
 
+    &__logo {
+        margin-left: 3.646vw;
+    }
+
     &__menu {
         display: flex;
         align-items: center;
@@ -40,6 +45,13 @@ body {
         li {
             display: inline-flex;
             margin-right: 4.167vw;
+        }
+        li::before {
+            display: none;
+        }
+
+        li:last-child {
+            margin-right: 3.646vw;
         }
 
         li.active>a {
@@ -66,8 +78,9 @@ body {
 .offer {
     background: url('../img/offer.png') no-repeat center top / cover;
     width: 100%;
-    height: 53.542vw;
+    z-index: 9999;
     padding-top: 14.948vw;
+    padding-bottom: 18.177vw;
 
     &__title {
         width: 42.708vw;
@@ -89,6 +102,258 @@ body {
     }
 }
 
+
+.solutions__bg {
+    width: 100%;
+    height: 26.745vw;
+    position: absolute;
+    right: 0;
+    top: 34.948vw;
+}
+
+.solutions__bg svg {
+    width: 100%;
+    height: 66.745vw;
+}
+
 .solutions {
-    
+    background: url('../img/solutions.png') no-repeat center top / cover;
+    width: 100%;
+    height: 48.802vw;
+
+    padding-top: 8.333vw;
+    padding-bottom: 5.469vw;
+
+    .container {
+        z-index: 9999999999;
+        position: relative;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 140%;
+        background: linear-gradient(86.87deg, #460B9D 0.75%, #D4034E 94.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-bottom: 0.781vw;
+    }
+
+    &__list li {
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-bottom: 0.781vw;
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__text {
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-top: 2.344vw;
+        margin-bottom: 1.042vw;
+    }
+
+
+    &__items {
+        width: 38.229vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 12.24vw;
+        height: 7.292vw;
+        background: linear-gradient(73.83deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        border: 0.104vw solid #FFFFFF;
+        border-radius: 0.521vw;
+        margin-bottom: 0.781vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1.563vw;
+        padding-right: 1.563vw;
+        cursor: pointer;
+        transition: 0.3s;
+
+    }
+
+    &__item .triangle {
+        width: 1.927vw;
+        height: 1.927vw;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+    }
+
+    &__item .solutions__name {
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        color: #434343;
+    }
+
+    &__item .solutions__arrow {
+        transition: 0.3s;
+        padding: 0.417vw;
+    }
+
+    &__item .solutions__arrow svg {
+        width: 1.563vw;
+        height: 1.563vw;
+        display: block;
+        transition: 0.3s;
+    }
+
+    &__item.active>.solutions__name {
+        color: #9C066D;
+    }
+
+    &__item.active>.solutions__arrow {
+        padding: 0.417vw;
+        background: #FFFFFF;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item.active>.solutions__arrow svg {
+        transform: rotate(45deg);
+    }
+
+    &__item.active>.solutions__arrow svg path {
+        fill: #9C066D;
+    }
+
+
+    &__item:hover>.solutions__name {
+        color: #9C066D;
+    }
+
+    &__item:hover>.solutions__arrow {
+        padding: 0.396vw;
+        background: #FFFFFF;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item:hover>.solutions__arrow svg {
+        transform: rotate(45deg);
+    }
+
+    &__item:hover>.solutions__arrow svg path {
+        fill: #9C066D;
+    }
+}
+
+.institutions {
+    background: url('../img/institutions.png') no-repeat center top / cover;
+    width: 100%;
+    height: 53.229vw;
+    padding-top: 12.24vw;
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        position: absolute;
+        right: 0;
+
+        .subtitle {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-bottom: 0.26vw;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 140%;
+            background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .icons {
+            width: 20.833vw;
+            margin-top: 0.521vw;
+            display: flex;
+            border-bottom: 1px solid #9C066D;
+            padding-bottom: 1.563vw;
+        }
+
+        .icons svg {
+            width: 1.563vw;
+            height: 1.563vw;
+            margin-right: 1.042vw;
+        }
+
+    }
+
+    &__desc {
+        width: 29.167vw;
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-top: 1.042vw;
+        margin-bottom: 0.781vw;
+    }
+
+    &__list {
+        width: 32.969vw;
+    }
+
+    &__list li {
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-bottom: 0.781vw;
+    }
+
+    &__btn {
+        font-family: 'Oxanium';
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        margin-top: 1.302vw;
+    }
+
+    &__btn svg {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-left: 0.521vw;
+        transition: 0.3s;
+    }
+
+    &__btn:hover > svg {
+       margin-left: 0.725vw;
+    }
 }
