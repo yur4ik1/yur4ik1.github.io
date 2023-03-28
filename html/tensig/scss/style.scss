@@ -467,6 +467,11 @@ body {
         border: 0.134vw solid #FFFFFF;
         border-radius: 0.521vw;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 1.042vw;
+        cursor: pointer;
 
         .triangle {
             width: 1.927vw;
@@ -475,6 +480,112 @@ body {
             top: -0.09vw;
             right: -0.2vw;
         }
+    }
+
+    &__item:nth-child(2) {
+        width: 15.625vw;
+    }
+
+    &__item-name {
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        color: #434343;
+    }
+
+    &__item-icon {
+        width: 2.604vw;
+        height: 2.604vw;
+    }
+}
+
+.forwarders {
+    background: url('../img/forwarders.png') no-repeat center top / cover;
+    width: 100%;
+    height: 53.802vw;
+    padding-top: 9.375vw;
+
+    .container {
+        position: relative;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        text-align: right;
+
+        .subtitle {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-bottom: 0.26vw;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 140%;
+            background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .icons {
+            margin-top: 0.521vw;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 0.052vw solid #9C066D;
+            padding-bottom: 1.563vw;
+            width: 20.833vw;
+        }
+
+        .icons svg {
+            width: 1.563vw;
+            height: 1.563vw;
+            margin-right: 1.042vw;
+        }
+    }
+
+    &__desc {
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-top: 1.042vw;
+        margin-bottom: 0.781vw;
+        width: 20.833vw;
+    }
+
+    &__desc a {
+        color: #9C066D;
+    }
+
+
+    &__btn {
+        font-family: 'Oxanium';
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 1.302vw;
+    }
+
+    &__btn svg {
+        width: 1.25vw;
+        height: 1.25vw;
+        margin-left: 0.521vw;
+        transition: 0.3s;
     }
 
 }
