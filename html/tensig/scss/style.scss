@@ -1203,6 +1203,7 @@ body {
 
 .contact.contact-page {
     padding-top: 0;
+
     .container {
         position: relative;
     }
@@ -1282,5 +1283,86 @@ body {
         line-height: 150%;
         text-align: right;
         color: #434343;
+    }
+}
+
+.customs-page {
+    background: url('../img/customs-sec-1.png') no-repeat center top / cover;
+    width: 100%;
+    height: auto;
+    padding-top: 12.135vw;
+    padding-bottom: 19.833vw;
+
+    .customs__title {
+        width: 10.417vw;
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 140%;
+        color: #460A9C;
+        -webkit-text-fill-color: unset;
+    }
+
+    .icons img {
+        width: auto;
+        height: 1.563vw;
+    }
+
+    .customs__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.563vw;
+        margin-bottom: 4.167vw;
+    }
+
+    .customs__img img {
+        width: 78.125vw;
+        height: 35vw;
+    }
+
+    .customs__info {
+        width: 50vw;
+
+        .customs__info-desc {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+        }
+
+        .customs__info-text {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-top: 0.781vw;
+            margin-bottom: 1.042vw;
+            width: 35.417vw;
+        }
+
+        .movie {
+            width: 13.542vw;
+            height: 7.292vw;
+            background: linear-gradient(73.83deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            border: 0.104vw solid #FFFFFF;
+            border-radius: 0.521vw;
+            padding: 1.563vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-top: 1.563vw;
+
+            p {
+                font-weight: 600;
+                font-size: 1.042vw;
+                line-height: 140%;
+                color: #434343;
+            }
+
+            svg {
+                width: 2.604vw;
+                height: 2.604vw;
+            }
+
+        }
     }
 }
