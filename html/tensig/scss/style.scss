@@ -1193,6 +1193,7 @@ body {
 
 .contact.reverse {
     background: url('../img/contact-reverse.png') no-repeat center top / cover;
+
     .contact__content {
         position: absolute;
         right: 0;
@@ -1201,7 +1202,7 @@ body {
 }
 
 .contact.contact-page {
-
+    padding-top: 0;
     .container {
         position: relative;
     }
@@ -1251,5 +1252,35 @@ body {
             text-align: right;
             color: #434343;
         }
+    }
+}
+
+.info-section.forwarders {
+    background: url('../img/forwarders-page.png') no-repeat center top / cover;
+    width: 100%;
+    height: 69.844vw;
+    margin-top: 6.927vw;
+    padding-top: 4.531vw;
+    padding-bottom: 0;
+
+    .carriers__desc {
+        width: 36.406vw;
+    }
+
+    .carriers__right-text {
+        width: 35.646vw;
+        position: absolute;
+        right: 0;
+        top: 16.875vw;
+        border-right: 0.104vw solid #434343;
+        padding-right: 0.521vw;
+    }
+
+    .carriers__right-text p {
+        font-weight: 400;
+        font-size: 1.042vw;
+        line-height: 150%;
+        text-align: right;
+        color: #434343;
     }
 }
