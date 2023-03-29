@@ -768,15 +768,15 @@ body {
                 color: #000;
                 margin-bottom: 1.042vw;
                 padding-bottom: 0.417vw;
+            }
 
-                ::placeholder {
-                    color: #434343;
-                }
+            input::placeholder {
+                color: #434343;
             }
 
             textarea {
                 width: 28.125vw;
-                height: 4.083vw;
+                height: 6.083vw;
                 opacity: 0.4;
                 border: none;
                 background: transparent;
@@ -787,10 +787,10 @@ body {
                 margin-bottom: 1.042vw;
                 padding-bottom: 0.417vw;
                 resize: none;
+            }
 
-                ::placeholder {
-                    color: #434343;
-                }
+            textarea::placeholder {
+                color: #434343;
             }
 
             button {
@@ -804,7 +804,15 @@ body {
                 justify-content: center;
                 width: 7.813vw;
                 height: 2.083vw;
-                background: radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
+                width: 9.375vw;
+                height: 2.083vw;
+
+                background: radial-gradient(100% 372.91% at 0% 100%, #8322FE 0%, #451DB7 100%)
+                    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                    , radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%)
+                    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                ;
+                border-radius: 1.563vw;
                 border-radius: 1.563vw;
                 border: none;
                 cursor: pointer;
@@ -921,13 +929,13 @@ body {
                     padding-bottom: 0.417vw;
                     border-bottom: 0.104vw solid #FFFFFF;
                     display: block;
+                }
 
-                    ::placeholder {
-                        font-size: 1.042vw;
-                        line-height: 150%;
-                        color: #FFFFFF !important;
-                        opacity: 1;
-                    }
+                input::placeholder {
+                    font-size: 1.042vw;
+                    line-height: 150%;
+                    color: #FFFFFF !important;
+                    opacity: 1;
                 }
 
                 button {
@@ -950,5 +958,93 @@ body {
 
     &__right {
         width: 35.573vw;
+
+        .footer__right-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .item {
+                font-size: 0.833vw;
+                line-height: 1.5vw;
+                color: #FFFFFF;
+            }
+        }
+
+        .footer__subscribe {
+            margin-top: 4.219vw;
+
+            .title {
+                font-weight: 600;
+                font-size: 1.042vw;
+                line-height: 150%;
+                color: #FFFFFF;
+            }
+
+            .desc {
+                font-size: 0.833vw;
+                line-height: 150%;
+                color: #FFFFFF;
+                opacity: 0.5;
+                margin-top: 0.781vw;
+                margin-bottom: 1.042vw;
+            }
+
+            .footer__subscribe-form {
+                display: flex;
+
+                input {
+                    width: 23.073vw;
+                    height: 1.979vw;
+                    padding-bottom: 0.417vw;
+                    border: none;
+                    border-bottom: 0.104vw solid #fff;
+                    background: transparent;
+                    font-size: 1.042vw;
+                    line-height: 150%;
+                    color: #FFFFFF;
+                }
+
+                input::placeholder {
+                    font-size: 1.042vw;
+                    line-height: 150%;
+                    color: #FFFFFF;
+                }
+
+                button {
+                    font-weight: 700;
+                    font-size: 0.938vw;
+                    line-height: 150%;
+                    text-align: center;
+                    color: #9C066D;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 7.813vw;
+                    height: 2.083vw;
+                    background: #FFFFFF;
+                    border-radius: 1.563vw;
+                    border: none;
+                    margin-left: 2.604vw;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+            font-weight: 700;
+            font-size: 0.833vw;
+            line-height: 150%;
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 0.26vw;
+        }
     }
 }
