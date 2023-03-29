@@ -1140,3 +1140,116 @@ body {
         transform: scale(.95) translateY(1em)
     }
 }
+
+/* institutions */
+
+.info-section {
+    background: url('../img/institutions-page.png') no-repeat center top / cover;
+    width: 100%;
+    height: auto;
+    padding-bottom: 7.708vw;
+
+
+    .carriers__title {
+        width: 25.104vw;
+        background: linear-gradient(0deg, #460A9C, #460A9C), linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    .desc {
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 150%;
+        color: #434343;
+        margin-top: 1.042vw;
+    }
+
+    .carriers__desc span {
+        color: #9C066D;
+        font-weight: 600;
+    }
+
+    .carriers__btn {
+
+        svg {
+            margin-left: 0;
+            margin-right: 0.321vw;
+        }
+    }
+
+    .carriers__btn:hover>svg {
+        margin-left: 0;
+    }
+
+    .icons img {
+        width: auto;
+        height: 1.563vw;
+    }
+}
+
+
+.contact.reverse {
+    background: url('../img/contact-reverse.png') no-repeat center top / cover;
+    .contact__content {
+        position: absolute;
+        right: 0;
+    }
+
+}
+
+.contact.contact-page {
+
+    .container {
+        position: relative;
+    }
+
+    h2 {
+        width: 30.26vw;
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 140%;
+        background: linear-gradient(0deg, #460A9C, #460A9C), linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+
+
+.info-section.carriers {
+    background: url('../img/carriers-page.png') no-repeat center top / cover;
+    width: 100%;
+    height: 73.375vw;
+    padding-bottom: 0;
+    background-position-x: 4vw;
+
+    .container {
+        position: relative;
+    }
+
+    .carriers__desc {
+        width: 39.698vw;
+    }
+
+    .carriers__right-text {
+        position: absolute;
+        right: 0;
+        top: 34.208vw;
+        width: 21.875vw;
+        border-right: 0.104vw solid #434343;
+        padding-right: 0.521vw;
+
+        p {
+            font-weight: 400;
+            font-size: 1.042vw;
+            line-height: 150%;
+            text-align: right;
+            color: #434343;
+        }
+    }
+}
