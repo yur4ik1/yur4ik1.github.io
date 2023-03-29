@@ -1048,3 +1048,95 @@ body {
         }
     }
 }
+
+.popup {
+    z-index: 9999999999999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(51, 51, 51, .58);
+    backdrop-filter: blur(0.2vw);
+    display: none;
+
+    &__inner {
+        width: 57.292vw;
+        height: 16.979vw;
+        background: #FFFFFF;
+        border-radius: 1.563vw;
+        padding: 2.604vw;
+        position: relative;
+        animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
+    }
+
+    &__inner h4 {
+        font-weight: 700;
+        font-size: 1.667vw;
+        line-height: 140%;
+        color: #9C066D;
+    }
+
+    &__inner p {
+        font-size: 1.25vw;
+        line-height: 150%;
+        color: #434343;
+        margin-bottom: 1.198vw;
+    }
+
+    &__inner .back {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0vw;
+        width: 4.115vw;
+        font-weight: 600;
+        font-size: 1.042vw;
+        line-height: 140%;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        cursor: pointer;
+
+        svg {
+            width: 1.25vw;
+            height: 1.25vw;
+            margin-right: 0.26vw;
+        }
+    }
+
+    &__inner .close {
+        position: absolute;
+        top: 1.563vw;
+        right: 1.563vw;
+        cursor: pointer;
+
+        svg {
+            width: 1.302vw;
+            height: 1.302vw;
+        }
+    }
+
+}
+
+.popup.active {
+    display: flex;
+}
+
+@keyframes SearchResultsAnonRestricted-module_message-fade-in-4XVrS {
+    0% {
+        opacity: 0;
+        transform: scale(.95) translateY(1em)
+    }
+}
