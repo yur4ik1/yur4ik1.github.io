@@ -6,6 +6,7 @@ body {
     font-family: 'Proxima Nova', sans-serif;
     font-style: normal;
     overflow-x: hidden;
+    background: #F5F5F5;
 }
 
 .header {
@@ -143,6 +144,7 @@ body {
     }
 
     &__title {
+        width: 35.417vw;
         font-weight: 700;
         font-size: 2.5vw;
         line-height: 140%;
@@ -298,6 +300,7 @@ body {
         }
 
         h2 {
+            width: 25.104vw;
             font-weight: 700;
             font-size: 2.5vw;
             line-height: 140%;
@@ -387,6 +390,7 @@ body {
         }
 
         h2 {
+            width: 9.427vw;
             font-weight: 700;
             font-size: 2.5vw;
             line-height: 140%;
@@ -439,6 +443,7 @@ body {
         display: flex;
         align-items: center;
         margin-top: 1.302vw;
+        width: 6.823vw;
     }
 
     &__btn svg {
@@ -446,6 +451,11 @@ body {
         height: 1.25vw;
         margin-left: 0.521vw;
         transition: 0.3s;
+        position: relative;
+    }
+
+    &__btn:hover {
+        width: 7.823vw;
     }
 
     &__btn:hover>svg {
@@ -525,6 +535,7 @@ body {
         }
 
         h2 {
+            width: 22.865vw;
             font-weight: 700;
             font-size: 2.5vw;
             line-height: 140%;
@@ -588,4 +599,356 @@ body {
         transition: 0.3s;
     }
 
+}
+
+
+.customs {
+    background: url('../img/customs.png') no-repeat center top / cover;
+    width: 100%;
+    height: 60.208vw;
+    padding-top: 11.823vw;
+
+    .carriers__title {
+        width: 10.417vw;
+    }
+
+    .carriers__desc {
+        width: 38.698vw;
+    }
+}
+
+
+.ready {
+    background: url('../img/ready.png') no-repeat center top / cover;
+    width: 100%;
+    padding-top: 17.448vw;
+    padding-bottom: 19.688vw;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.5vw;
+        line-height: 140%;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        width: 31.25vw;
+    }
+
+    p {
+        width: 42.708vw;
+        font-size: 1.25vw;
+        line-height: 150%;
+        text-align: center;
+        color: #434343;
+        margin-bottom: 2.604vw;
+
+        a {
+            color: #9C066D;
+        }
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 1.25vw;
+        line-height: 150%;
+        text-align: center;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 13.385vw;
+        height: 3.125vw;
+        background: radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
+        border-radius: 1.563vw;
+    }
+
+}
+
+
+.about {
+    background: url('../img/about.png') no-repeat center top / cover;
+    width: 100%;
+    height: 55.313vw;
+    padding-top: 13.073vw;
+    margin-top: 5.156vw;
+
+    .container {
+        position: relative;
+    }
+
+
+    &__content {
+        width: 39.063vw;
+        position: absolute;
+        right: 0;
+
+        h2 {
+            width: 10.781vw;
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 140%;
+            background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-bottom: 1.302vw;
+        }
+    }
+}
+
+
+.contact {
+    background: url('../img/contact.png') no-repeat center top / cover;
+    width: 100%;
+    height: 59.167vw;
+    padding-top: 9.167vw;
+    padding-bottom: 8.333vw;
+
+    &__content {
+        width: 32.835vw;
+
+        h2 {
+            width: 9.323vw;
+            font-weight: 700;
+            font-size: 2.5vw;
+            line-height: 140%;
+            background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .contact__desc {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #434343;
+            margin-bottom: 0.781vw;
+        }
+
+        .contact__phone {
+            font-weight: 700;
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #9C066D;
+            margin-top: 1.042vw;
+            display: block;
+            margin-bottom: 2.083vw;
+        }
+
+        .contact__form {
+            input {
+                width: 28.125vw;
+                height: 2.083vw;
+                opacity: 0.4;
+                border: none;
+                background: transparent;
+                border-bottom: 0.104vw solid #434343;
+                font-size: 1.042vw;
+                line-height: 150%;
+                color: #000;
+                margin-bottom: 1.042vw;
+                padding-bottom: 0.417vw;
+
+                ::placeholder {
+                    color: #434343;
+                }
+            }
+
+            textarea {
+                width: 28.125vw;
+                height: 4.083vw;
+                opacity: 0.4;
+                border: none;
+                background: transparent;
+                border-bottom: 0.104vw solid #434343;
+                font-size: 1.042vw;
+                line-height: 150%;
+                color: #000;
+                margin-bottom: 1.042vw;
+                padding-bottom: 0.417vw;
+                resize: none;
+
+                ::placeholder {
+                    color: #434343;
+                }
+            }
+
+            button {
+                font-weight: 700;
+                font-size: 0.938vw;
+                line-height: 150%;
+                text-align: center;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 7.813vw;
+                height: 2.083vw;
+                background: radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
+                border-radius: 1.563vw;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .contact__download {
+            display: flex;
+            margin-top: 6.198vw;
+        }
+
+        .contact__download-item {
+            width: 13.542vw;
+            height: 7.292vw;
+            background: linear-gradient(73.83deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+            border: 0.104vw solid #FFFFFF;
+            border-radius: 0.521vw;
+            margin-right: 1.042vw;
+            padding-left: 1.563vw;
+            padding-right: 1.042vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-weight: 600;
+                font-size: 1.042vw;
+                line-height: 140%;
+                color: #434343;
+            }
+
+            svg {
+                width: 2.604vw;
+                height: 2.604vw;
+            }
+        }
+    }
+}
+
+.footer {
+    background: url('../img/footer.png') no-repeat center top / cover;
+    width: 100%;
+    height: 28.385vw;
+    padding-top: 4.167vw;
+    padding-bottom: 1.042vw;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 4.531vw;
+    }
+
+    &__left {
+        width: 32.167vw;
+
+        .footer__logo img {
+            width: 8.125vw;
+            height: 2.604vw;
+        }
+
+        .footer__left-menu {
+            display: flex;
+            margin-top: 0.781vw;
+        }
+
+        .footer__left-menu li {
+            margin-right: 2.604vw;
+        }
+
+        .footer__left-menu li::before {
+            display: none;
+        }
+
+        .footer__left-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .footer__left-menu li a {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
+
+        .footer__form {
+            p {
+                font-weight: 700;
+                font-size: 1.042vw;
+                line-height: 150%;
+                color: #FFFFFF;
+                margin-top: 1.823vw;
+            }
+
+            h4 {
+                font-weight: 700;
+                font-size: 2.5vw;
+                line-height: 140%;
+                color: #FFFFFF;
+                margin-top: 0.521vw;
+                margin-bottom: 1.563vw;
+            }
+
+            form {
+                position: relative;
+
+                input {
+                    width: 29.167vw;
+                    height: 2.083vw;
+                    background: transparent;
+                    font-size: 1.042vw;
+                    line-height: 150%;
+                    color: #FFFFFF !important;
+                    border: none;
+                    padding-bottom: 0.417vw;
+                    border-bottom: 0.104vw solid #FFFFFF;
+                    display: block;
+
+                    ::placeholder {
+                        font-size: 1.042vw;
+                        line-height: 150%;
+                        color: #FFFFFF !important;
+                        opacity: 1;
+                    }
+                }
+
+                button {
+                    display: block;
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0vw;
+                    right: 2.458vw;
+
+                    svg {
+                        width: 1.563vw;
+                        height: 1.563vw;
+                    }
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 35.573vw;
+    }
 }
