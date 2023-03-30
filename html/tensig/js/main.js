@@ -72,19 +72,10 @@ for (let anchor of anchors) {
 }
 
 
-
-
-
-
-
 //  Burger menu
 
 let mobileMenu = document.querySelector('.mobile__menu');
-let burgerClose = document.querySelector('.burger__close');
 
 const burger = () => {
-    mobileMenu.classList.add('active');
+    mobileMenu.classList.toggle('active');
 };
-burgerClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-});
