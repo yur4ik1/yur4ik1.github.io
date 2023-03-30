@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -90,7 +92,9 @@
                 </div>
 
                 <div class="customs__img">
-                    <img src="./img/customs-img.jpg" alt="">
+                    <a href="./img/customs-img.jpg" data-fancybox="gallery">
+                        <img src="./img/customs-img.jpg" alt="">
+                    </a>
                 </div>
 
                 <div class="customs__info">
@@ -163,9 +167,9 @@
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="text" name="email" placeholder="Your Email" required>
                         <textarea name="message" id="message" cols="30" rows="10"
-                          placeholder="Briefly describe your task"></textarea>
+                            placeholder="Briefly describe your task"></textarea>
                         <button type="submit">Make a request</button>
-                      </form>
+                    </form>
 
                     <div class="contact__download">
                         <a class="contact__download-item wow fadeInUp" data-wow-delay="0.2s" href="#">
@@ -308,7 +312,11 @@
         </div>
 
     </div>
-
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // Your custom options
+        });
+    </script>
     <script src="./js/wow.js"></script>
     <script>
         new WOW().init();
