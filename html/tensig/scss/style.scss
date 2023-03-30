@@ -1619,6 +1619,7 @@ body {
     .carriers__content .subtitle {
         font-size: 4.042vw;
         margin-bottom: 1.46vw;
+    
     }
 
     .carriers__content .icons {
@@ -1644,9 +1645,11 @@ body {
         margin-top: 6.302vw;
         width: 40%;
     }
-
+    .carriers__btn:hover {
+        width: auto;
+    }
     .carriers__btn:hover > svg {
-        margin: 0;
+        margin-left: 0.521vw!important;
     }
 
     .carriers__btn svg {
@@ -1839,7 +1842,6 @@ body {
         padding: 5.604vw;
     }
 
-    .popup__inner .close {}
 
     .popup__inner h4 {
         font-size: 5.667vw;
@@ -1988,5 +1990,114 @@ body {
 
     .footer__copyright p {
         font-size: 2.833vw;
+    }
+
+
+    .info-section {
+        height: auto;
+        padding-top: 27.021vw;
+    }
+
+    .contact.reverse .contact__content {
+        position: initial;
+    }
+
+    .contact__content .contact__desc {
+        margin-bottom: 4.781vw;
+    }
+
+    .info-section .desc {
+        font-size: 2.833vw;
+        margin-top: 5.042vw;
+    }
+
+    .info-section .icons img {
+        height: 100%;
+    }
+
+    .info-section.carriers {
+        height: auto;
+        padding-bottom: 15vw;
+    }
+
+    .info-section.carriers .carriers__desc {
+        width: 100%;
+    }
+    .info-section.carriers .carriers__right-text {
+        position: initial;
+        width: 100%;
+        padding-right: 3.521vw;
+        margin-top: 8.208vw;
+    }
+    .info-section.carriers .carriers__right-text p {
+        font-size: 3.334vw;
+    }
+
+    .info-section.forwarders .carriers__desc {
+        width: 100%;
+    }
+
+    .info-section.forwarders {
+        height: auto;
+        padding-top: 19.531vw;
+        padding-bottom: 10vw;
+    }
+    .info-section.forwarders .carriers__right-text {
+        position: initial;
+        width: 100%;
+        padding-right: 3.521vw;
+        margin-top: 8.208vw;
+    }
+    .info-section.forwarders .carriers__right-text p {
+        font-size: 3.334vw;
+    }
+
+    .carriers__content {
+        padding: 0 6.778vw;
+        backdrop-filter: blur(15.391vw);
+        padding: 4.521vw;
+     
+    }
+    .forwarders .container {
+        padding: 0;
+    }
+
+    .customs-page {
+        padding-top: 19.135vw;
+    }
+    .customs-page .icons img {
+       height: 6.563vw;
+    }
+    .customs-page .customs__info {
+        width: 100%;
+    }
+    .customs-page .customs__info .customs__info-desc {
+        font-size: 3.334vw;
+        width: 100%;
+    }
+    .customs-page .customs__info .customs__info-text {
+        font-size: 3.334vw;
+        width: 100%;
+        margin-top: 2.781vw;
+        margin-bottom: 2.042vw;
+    }
+
+    .customs-page .customs__img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .customs-page .customs__info .movie {
+        width: 37.542vw;
+        height: 20.292vw;
+        padding: 5.563vw;
+        margin-top: 6.563vw;
+    }
+    .customs-page .customs__info .movie p {
+        font-size: 3.042vw;
+    }
+    .customs-page .customs__info .movie svg {
+        width: 5.604vw;
+        height: 5.604vw;
     }
 }
