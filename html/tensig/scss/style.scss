@@ -1071,7 +1071,7 @@ body {
 
     &__inner {
         width: 57.292vw;
-        height: 16.979vw;
+        height: auto;
         background: #FFFFFF;
         border-radius: 1.563vw;
         padding: 2.604vw;
@@ -1364,5 +1364,629 @@ body {
             }
 
         }
+    }
+}
+
+.header__burger {
+    display: none;
+}
+
+.mobile__menu {
+    display: none;
+}
+
+@media screen and (max-width: 920px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 2.135vw;
+        line-height: 120% !important;
+    }
+
+    h2 {
+        font-size: 9.417vw !important;
+        width: 100% !important;
+    }
+
+
+    .container {
+        max-width: 194.445vw;
+        padding: 0 6.778vw;
+    }
+
+    .header {
+        padding-top: 4.583vw;
+    }
+
+    .header.active {
+        backdrop-filter: blur(2.391vw);
+    }
+
+    .header .container {
+        padding-bottom: 2.042vw;
+    }
+
+    .header__logo {
+        margin-left: 0;
+    }
+
+    .header .container a img {
+        width: 22.125vw;
+        height: 7.604vw;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+
+        svg {
+            display: block;
+            width: 5.917vw;
+            height: 5.917vw;
+            cursor: pointer;
+        }
+    }
+
+    .mobile__menu {
+        position: fixed;
+        top: 13.865vw;
+        bottom: 0;
+        right: 0;
+        -webkit-transform: translate(-150%);
+        -ms-transform: translate(-150%);
+        transform: translate(-150%);
+        height: 100%;
+        max-width: 694px;
+        width: 100%;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(144.8%, rgba(255, 255, 255, 0.06)));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.06) 144.8%);
+        -webkit-backdrop-filter: blur(0.391vw);
+        backdrop-filter: blur(1.391vw);
+        padding: 14.917vw;
+        z-index: 999999;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        display: block;
+        z-index: 999999999999999800000000000000000000000;
+    }
+
+    .mobile__menu.active {
+        transform: translate(0%);
+    }
+    .mobile__menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .mobile__menu li {
+       margin-bottom: 6.083vw;
+    }
+    .mobile__menu li::before {
+        display: none;
+    }
+    .mobile__menu li.active > a {
+        font-weight: bold;
+        color: #480b9b;
+    }
+    .mobile__menu li a {
+        color: #303030;
+    }
+
+    .offer {
+        padding-top: 24.948vw;
+        padding-bottom: 38.177vw;
+    }
+
+    .offer__title {
+        width: auto;
+        font-size: 10.3vw;
+    }
+
+    .offer__desc {
+        font-size: 3.334vw;
+        width: auto
+    }
+
+
+    .solutions {
+        padding-top: 0;
+    }
+
+    .solutions__bg {
+        display: none;
+    }
+
+    .solutions__title {
+        font-size: 9.417vw;
+        width: auto;
+        text-align: center;
+    }
+
+    .solutions__desc {
+        font-size: 3.334vw;
+        margin-bottom: 2.781vw;
+    }
+
+    .solutions__list li {
+        font-size: 3.334vw;
+        margin-bottom: 2.781vw;
+    }
+
+    li::before {
+        width: 1.417vw;
+        height: 1.417vw;
+        margin-right: 1.521vw;
+    }
+
+
+    .solutions {
+        height: 166.802vw;
+    }
+
+    .solutions__text {
+        font-size: 3.334vw;
+        margin-bottom: 4.042vw;
+    }
+
+    .solutions__items {
+        width: 100%;
+    }
+
+    .solutions__item .solutions__name {
+        font-size: 3.042vw;
+    }
+
+    .solutions__item .solutions__arrow svg {
+        width: 3.563vw;
+        height: 6.563vw;
+    }
+
+    .solutions__item {
+        width: 41.24vw;
+        height: 23.292vw;
+        margin-bottom: 4.781vw;
+    }
+
+
+    .institutions {
+        height: auto;
+        background-position-x: 25vw;
+        padding-bottom: 12.24vw;
+    }
+
+    .institutions__content {
+        position: initial;
+    }
+
+    .institutions__content .subtitle {
+        font-size: 4.042vw;
+        margin-bottom: 1.46vw;
+    }
+
+    .institutions__content .icons {
+        width: 100%;
+        padding-bottom: 2.563vw;
+    }
+
+    .institutions__content .icons svg {
+        width: 5.563vw;
+        height: 5.563vw;
+        margin-right: 4.042vw;
+    }
+
+    .institutions__desc {
+        font-size: 3.334vw;
+        width: 100%;
+        margin-top: 2.042vw;
+        margin-bottom: 1.781vw;
+    }
+
+    .institutions__list {
+        width: 100%;
+    }
+
+    .institutions__list li {
+        font-size: 3.334vw;
+        margin-bottom: 3.781vw;
+    }
+
+    .institutions__btn {
+        font-size: 3.334vw;
+        margin-top: 6.302vw;
+    }
+
+    .institutions__btn svg {
+        width: 4.25vw;
+        height: 3.25vw;
+    }
+
+
+    .carriers {
+        height: auto;
+        background-position-x: 10.208vw;
+        padding-bottom: 12.24vw;
+    }
+
+    .carriers__content .subtitle {
+        font-size: 4.042vw;
+        margin-bottom: 1.46vw;
+    }
+
+    .carriers__content .icons {
+        width: 100%;
+        padding-bottom: 2.563vw;
+    }
+
+    .carriers__content .icons svg {
+        width: 5.563vw;
+        height: 5.563vw;
+        margin-right: 4.042vw;
+    }
+
+    .carriers__desc {
+        font-size: 3.334vw;
+        width: 100%;
+        margin-top: 2.042vw;
+        margin-bottom: 1.781vw;
+    }
+
+    .carriers__btn {
+        font-size: 3.334vw;
+        margin-top: 6.302vw;
+        width: 40%;
+    }
+
+    .carriers__btn:hover > svg {
+        margin: 0;
+    }
+
+    .carriers__btn svg {
+        width: 4.25vw;
+        height: 3.25vw;
+    }
+
+    .carriers__items {
+        margin-top: 3.604vw;
+        justify-content: space-between;
+    }
+
+    .carriers__item {
+        width: 47%;
+        height: 20.292vw;
+        padding-left: 6.563vw;
+        padding-right: 6.458vw;
+    }
+
+    .carriers__item:nth-child(2) {
+        width: 47%;
+    }
+
+    .carriers__item-name {
+        font-size: 3.042vw;
+    }
+
+    .carriers__item-icon {
+        width: 5.604vw;
+        height: 5.604vw;
+    }
+
+    .forwarders {
+        height: auto;
+        padding-bottom: 12.24vw;
+        padding-top: 13.021vw;
+        background-position-x: -122.813vw;
+    }
+
+    .forwarders__content .subtitle {
+        font-size: 4.042vw;
+        margin-bottom: 1.46vw;
+    }
+
+    .forwarders__content .icons {
+        width: 100%;
+        padding-bottom: 2.563vw;
+    }
+
+    .forwarders__content .icons svg {
+        width: 5.563vw;
+        height: 5.563vw;
+        margin-right: 4.042vw;
+    }
+
+    .forwarders__desc {
+        font-size: 3.334vw;
+        width: 100%;
+        margin-top: 2.042vw;
+        margin-bottom: 1.781vw;
+    }
+
+    .forwarders__btn {
+        font-size: 3.334vw;
+        margin-top: 6.302vw;
+        width: auto;
+    }
+
+    .forwarders__btn svg {
+        width: 4.25vw;
+        height: 3.25vw;
+    }
+
+    .forwarders__content {
+        position: initial;
+    }
+
+    .customs {
+        height: auto;
+        padding-top: 13.021vw;
+        padding-bottom: 12.24vw;
+    }
+
+    .customs .carriers__desc {
+        width: 100%;
+    }
+
+    .ready {
+        padding-top: 17.448vw;
+        padding-bottom: 9.688vw;
+    }
+
+    .ready p {
+        font-size: 3.334vw;
+        width: 100%;
+        margin-bottom: 4.604vw;
+    }
+
+    .ready__btn {
+        width: 37.385vw;
+        height: 10.125vw;
+        border-radius: 6.563vw;
+        font-size: 3.25vw;
+    }
+
+    .about {
+        height: auto;
+        padding-bottom: 12.24vw;
+        background-position-x: 100%;
+    }
+
+    .about__content {
+        width: 100%;
+        position: initial;
+    }
+
+    .about__content p {
+        font-size: 3.334vw;
+    }
+
+    .contact {
+        height: auto;
+        padding-top: 12.24vw;
+        padding-bottom: 10.333vw;
+    }
+
+    .contact__content {
+        width: 100%;
+    }
+
+    .contact__content .contact__desc {
+        font-size: 3.334vw;
+    }
+
+    .contact__content .contact__phone {
+        font-size: 3.334vw;
+        margin-top: 3.042vw;
+        margin-bottom: 7.083vw;
+    }
+
+    .contact__content .contact__form input {
+        width: 100%;
+        height: 8.083vw;
+        font-size: 3.042vw;
+        margin-bottom: 4.042vw;
+        padding-bottom: 3.417vw;
+    }
+
+    .contact__content .contact__form textarea {
+        width: 100%;
+        height: 23.083vw;
+        font-size: 3.042vw;
+        margin-bottom: 4.042vw;
+        padding-bottom: 3.417vw;
+    }
+
+    .contact__content .contact__form button {
+        width: 48.375vw;
+        height: 11.083vw;
+        border-radius: 8.563vw;
+        font-size: 3.938vw;
+    }
+
+    .contact__content .contact__download {
+        margin-top: 9.198vw;
+        justify-content: space-between;
+    }
+
+    .contact__content .contact__download-item {
+        width: 47%;
+        height: 20.292vw;
+        padding-left: 5.563vw;
+        padding-right: 5.042vw;
+    }
+
+    .contact__content .contact__download-item p {
+        font-size: 3.042vw;
+    }
+
+    .contact__content .contact__download-item svg {
+        width: 5.604vw;
+        height: 5.604vw;
+    }
+
+
+    .popup__inner {
+        width: 90%;
+        height: auto;
+        border-radius: 3.563vw;
+        padding: 5.604vw;
+    }
+
+    .popup__inner .close {}
+
+    .popup__inner h4 {
+        font-size: 5.667vw;
+    }
+
+    .popup__inner p {
+        font-size: 3.25vw;
+        margin-bottom: 2.198vw;
+    }
+
+    .popup__inner .back {
+        width: auto;
+        font-size: 3.042vw;
+        align-items: center;
+    }
+
+    .popup__inner .back svg {
+        width: 3.25vw;
+        height: 3.25vw;
+        margin-right: 1.26vw;
+    }
+
+    .popup__inner .close svg {
+        display: flex;
+        width: 3.302vw;
+        height: 3.302vw;
+    }
+
+    .popup__inner .close {
+        top: 2.563vw;
+        right: 2.563vw;
+    }
+
+    .footer {
+        height: auto;
+        padding-top: 10.167vw;
+        padding-bottom: 2.342vw;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        padding-bottom: 7.531vw;
+    }
+
+    .footer__left .footer__logo img {
+        width: 22.125vw;
+        height: 7.604vw;
+    }
+
+    .footer__left {
+        width: 100%;
+    }
+
+    .footer__left .footer__left-menu {
+        margin-top: 2.781vw;
+        width: 100%;
+    }
+
+    .footer__left .footer__left-menu li {
+        margin-right: 6.604vw;
+    }
+
+    .footer__left .footer__left-menu li a {
+        font-size: 3.042vw;
+    }
+
+    .footer__left .footer__form p {
+        font-size: 3.042vw;
+        margin-top: 4.823vw;
+    }
+
+    .footer__left .footer__form h4 {
+        font-size: 5.5vw;
+        margin-top: 2.521vw;
+        margin-bottom: 4.563vw;
+    }
+
+    .footer__left .footer__form form input {
+        width: 100%;
+        height: 6.083vw;
+        background: rgba(0, 0, 0, 0);
+        font-size: 3.042vw;
+        padding-bottom: 2.417vw;
+    }
+
+    .footer__left .footer__form form input::placeholder {
+        font-size: 3.042vw;
+    }
+
+    .footer__left .footer__form form button {
+        right: -0.542vw;
+    }
+
+    .footer__left .footer__form form button svg {
+        width: 4.563vw;
+        height: 4.563vw;
+        display: flex;
+    }
+
+    .footer__right {
+        width: 100%;
+    }
+
+    .footer__right .footer__right-info {
+        margin-top: 5.208vw;
+    }
+
+    .footer__right .footer__right-info .item {
+        font-size: 2.833vw;
+        line-height: 4.5vw;
+    }
+
+    .footer__right .footer__subscribe {
+        margin-top: 9.219vw;
+    }
+
+    .footer__right .footer__subscribe .title {
+        font-size: 4.042vw;
+    }
+
+    .footer__right .footer__subscribe .desc {
+        font-size: 3.042vw;
+        margin-top: 1.781vw;
+        margin-bottom: 3.042vw;
+    }
+
+    .footer__right .footer__subscribe .footer__subscribe-form input {
+        width: 100%;
+        height: 6.083vw;
+        background: rgba(0, 0, 0, 0);
+        font-size: 3.042vw;
+        padding-bottom: 2.417vw;
+    }
+
+    .footer__right .footer__subscribe .footer__subscribe-form input::placeholder {
+        font-size: 3.042vw;
+    }
+
+    .footer__right .footer__subscribe .footer__subscribe-form button {
+        font-size: 3.238vw;
+        width: 34.813vw;
+        height: 7.083vw;
+        border-radius: 4.563vw;
+        margin-left: 4.604vw;
+    }
+
+    .footer__copyright p {
+        font-size: 2.833vw;
     }
 }
