@@ -21,15 +21,38 @@ window.onscroll = () => {
     }
 }
 
-// Popup
 
-const popup = document.querySelector('.popup');
-const openPopup = () => {
-    popup.classList.add('active');
-};
-const popupClose = () => {
-    popup.classList.remove('active');
-};
+const categories = document.querySelectorAll('.solutions__item');
+const popupClose = document.querySelector('.close');
+const popupBack = document.querySelector('.popupClose');
+
+categories.forEach(category => {
+
+  category.addEventListener('click', () => {
+  
+    const categoryTitle = category.dataset.title;
+    const categoryText = category.dataset.text;
+  
+    const popup = document.querySelector('.popup');
+    popup.style.display = 'flex';
+    
+    const popupTitle = document.querySelector('.popup__title');
+    popupTitle.textContent = categoryTitle;
+
+    const popupText = document.querySelector('.popup__text');
+    popupText.textContent = categoryText;
+  });
+
+  popupClose.addEventListener('click', () => {
+    const popup = document.querySelector('.popup');
+    popup.style.display = 'none';
+  });
+  popupBack.addEventListener('click', () => {
+    const popup = document.querySelector('.popup');
+    popup.style.display = 'none';
+  });
+});
+
 
 // Scroll
 
