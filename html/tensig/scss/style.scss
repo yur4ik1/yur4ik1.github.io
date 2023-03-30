@@ -1367,6 +1367,10 @@ body {
     }
 }
 
+.error {
+    margin-top: 0.781vw;
+}
+
 .header__burger {
     display: none;
 }
@@ -1996,6 +2000,7 @@ body {
     .info-section {
         height: auto;
         padding-top: 27.021vw;
+        background-position-x: -73.792vw;
     }
 
     .contact.reverse .contact__content {
@@ -2052,9 +2057,9 @@ body {
         font-size: 3.334vw;
     }
 
-    .customs-page .carriers__content {
+    .info-section.forwarders .carriers__content {
         padding: 0 6.778vw;
-        backdrop-filter: blur(15.391vw);
+        backdrop-filter: blur(17.391vw);
         padding: 4.521vw;
      
     }
