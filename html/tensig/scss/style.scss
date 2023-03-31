@@ -1023,6 +1023,7 @@ body {
 
             .footer__subscribe-form {
                 display: flex;
+                position: relative;
 
                 input {
                     width: 23.073vw;
@@ -1058,6 +1059,12 @@ body {
                     border: none;
                     margin-left: 2.604vw;
                     cursor: pointer;
+                }
+
+                .error {
+                    position: absolute;
+                    top: 1.963vw;
+                    color: #fff;
                 }
             }
         }
@@ -1431,8 +1438,8 @@ body {
         width: 100% !important;
     }
 
-    .dropdown  {
-        display: none!important;
+    .dropdown {
+        display: none !important;
     }
 
 
@@ -1527,6 +1534,22 @@ body {
 
     .mobile__menu li a {
         color: #303030;
+    }
+
+    .mobile__menu li.droplink {
+        flex-direction: column !important;
+    }
+
+    .dropdown-mob {
+        margin-top: 4.521vw;
+    }
+
+    .dropdown-mob-content li a {
+        font-size: 3.677vw !important;
+    }
+
+    .dropdown-mob-content li.active>a {
+        color: #480b9b;
     }
 
     .offer {

@@ -29,24 +29,25 @@
                     <li class="header__menu-item droplink">
                         <a class="header__menu-link" href="#solutions">Solutions</a>
                         <div class="dropdown">
-                          <ul class="dropdown-content">
-                            <li>
-                              <a href="#institutions">Financial Institutions</a>
-                            </li>
-                            <li>
-                              <a href="#carriers">Carriers</a>
-                            </li>
-                            <li>
-                              <a href="#forwarders">Freight Forwarders</a>
-                            </li>
-                            <li>
-                              <a href="#customs">Customs</a>
-                            </li>
-                          </ul>
+                            <ul class="dropdown-content">
+                                <li>
+                                    <a href="institutions.html">Financial Institutions</a>
+                                </li>
+                                <li>
+                                    <a href="carriers.html">Carriers</a>
+                                </li>
+                                <li>
+                                    <a href="forwarders.html">Freight Forwarders</a>
+                                </li>
+                                <li class="active">
+                                    <a href="customs.html">Customs</a>
+                                </li>
+                            </ul>
                         </div>
-                      </li>
+                    </li>
+
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#institutions">Services</a>
+                        <a class="header__menu-link" href="#">Services</a>
                     </li>
                     <li class="header__menu-item">
                         <a class="header__menu-link" href="#about">About Us</a>
@@ -73,7 +74,6 @@
                         </g>
                     </svg>
                 </div>
-
             </div>
         </header>
 
@@ -82,8 +82,24 @@
                 <li class="header__menu-item">
                     <a class="header__menu-link" href="index.html">Home</a>
                 </li>
-                <li class="header__menu-item">
+                <li class="header__menu-item droplink">
                     <a class="header__menu-link" href="#solutions">Solutions</a>
+                    <div class="dropdown-mob">
+                        <ul class="dropdown-mob-content">
+                            <li>
+                                <a href="institutions.html">Financial Institutions</a>
+                            </li>
+                            <li>
+                                <a href="carriers.html">Carriers</a>
+                            </li>
+                            <li>
+                                <a href="forwarders.html">Freight Forwarders</a>
+                            </li>
+                            <li class="active">
+                                <a href="customs.html">Customs</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="header__menu-item">
                     <a class="header__menu-link" href="#institutions">Services</a>
@@ -239,8 +255,8 @@
                         <div class="footer__form">
                             <p class="desc">State of the art compliance solutions</p>
                             <h4>Start using Tensiq today</h4>
-                            <form class="form" action="#">
-                                <input type="text" placeholder="Your Email">
+                            <form class="form" action="#" id="start">
+                                <input type="text" name="email" placeholder="Your Email" required>
                                 <button type="submit">
                                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -279,8 +295,8 @@
                         <div class="footer__subscribe">
                             <p class="title">Not Quite Ready for Tensig?</p>
                             <p class="desc">Join our online no-code community for free. No spam. Ever.</p>
-                            <form class="footer__subscribe-form" action="#">
-                                <input type="text" placeholder="Enter Your Email">
+                            <form class="footer__subscribe-form" id="subscribe" action="#">
+                                <input type="text" name="email" placeholder="Enter Your Email" required>
                                 <button type="submit">Subscribe</button>
                             </form>
                         </div>
@@ -292,7 +308,6 @@
                 </div>
             </div>
         </footer>
-
 
         <div class="popup">
             <div class="popup__inner">
