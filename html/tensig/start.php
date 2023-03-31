@@ -1,11 +1,9 @@
 <?php
-if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
-    $name = $_POST['name'];
+if (isset($_POST['email']) ) {
     $email = $_POST['email'];
-    $message = $_POST['message'];
     $to = 'yura.kachan27@gmail.com';
-    $subject = 'New Contact Request';
-    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    $subject = 'Not Quite Ready for Tensig?';
+    $body = "nEmail: $email";
     $headers = "From: $email";
 
     if (mail($to, $subject, $body, $headers)) {

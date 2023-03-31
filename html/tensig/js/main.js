@@ -80,26 +80,36 @@ for (let anchor of anchors) {
 }
 
 
-var form = document.getElementById('contact__form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    var xhr = new XMLHttpRequest();
-    var formData = new FormData(form);
-    xhr.open('POST', '../contact-form.php', true);
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            form.reset();
-            var response = xhr.responseText;
-            var successMessage = document.createElement('p');
-            successMessage.classList.add('success');
-            successMessage.textContent = response;
-            form.appendChild(successMessage);
-        } else {
-            var errorMessage = document.createElement('p');
-            errorMessage.classList.add('error');
-            errorMessage.textContent = 'Sorry, there was a problem sending your message.';
-            form.appendChild(errorMessage);
-        }
-    };
-    xhr.send(formData);
-});
+function sendData(form, phpFile) {
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var xhr = new XMLHttpRequest();
+      var formData = new FormData(form);
+      xhr.open('POST', phpFile, true);
+      xhr.onload = function() {
+          if (xhr.status === 200) {
+              form.reset();
+              var response = xhr.responseText;
+              var successMessage = document.createElement('p');
+              successMessage.classList.add('success');
+              successMessage.textContent = response;
+              form.appendChild(successMessage);
+          } else {
+              var errorMessage = document.createElement('p');
+              errorMessage.classList.add('error');
+              errorMessage.textContent = 'Sorry, there was a problem sending your message.';
+              form.appendChild(errorMessage);
+          }
+      };
+      xhr.send(formData);
+  });
+}
+
+var contactForm = document.getElementById('contact__form');
+sendData(contactForm, '../contact-form.php');
+
+var subscribeForm = document.getElementById('subscribe');
+sendData(subscribeForm, '../subscribe.php');
+
+var startForm = document.getElementById('start');
+sendData(startForm, '../start.php');
