@@ -46,6 +46,7 @@ body {
         li {
             display: inline-flex;
             margin-right: 4.167vw;
+            position: relative;
         }
 
         li::before {
@@ -74,6 +75,39 @@ body {
                 color: #303030;
             }
         }
+    }
+
+    .dropdown {
+        position: absolute;
+        cursor: pointer;
+        height: auto;
+        z-index: 9999999999999999999999999999;
+        visibility: hidden;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .dropdown-content {
+        position: relative;
+        border-radius: 0.500vw;
+        top: 8.1vw;
+        background: #fff;
+        min-width: 16.333vw;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.06) 144.8%);
+        -webkit-backdrop-filter: blur(0.391vw);
+        backdrop-filter: blur(0.391vw);
+
+
+        li {
+            padding: 0.625vw 0.833vw;
+        }
+    }
+
+    .droplink:hover .dropdown {
+        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -319,10 +353,9 @@ body {
             padding-bottom: 1.563vw;
         }
 
-        .icons svg {
-            width: 1.563vw;
+        .icons img {
+            width: auto;
             height: 1.563vw;
-            margin-right: 1.042vw;
         }
 
     }
@@ -409,10 +442,9 @@ body {
             padding-bottom: 1.563vw;
         }
 
-        .icons svg {
-            width: 1.563vw;
+        .icons img {
+            width: auto;
             height: 1.563vw;
-            margin-right: 1.042vw;
         }
     }
 
@@ -555,10 +587,9 @@ body {
             width: 20.833vw;
         }
 
-        .icons svg {
-            width: 1.563vw;
+        .icons img {
+            width: auto;
             height: 1.563vw;
-            margin-right: 1.042vw;
         }
     }
 
@@ -679,7 +710,7 @@ body {
     background: url('../img/about.png') no-repeat center top / cover;
     width: 100%;
     height: 55.313vw;
-    padding-top: 13.073vw;
+    padding-top: 6.073vw;
     margin-top: 5.156vw;
 
     .container {
@@ -1370,9 +1401,11 @@ body {
 .error {
     margin-top: 0.781vw;
 }
+
 .fancybox__container {
     z-index: 9999999999999999999999999999999;
 }
+
 .header__burger {
     display: none;
 }
@@ -1396,6 +1429,10 @@ body {
     h2 {
         font-size: 9.417vw !important;
         width: 100% !important;
+    }
+
+    .dropdown  {
+        display: none!important;
     }
 
 
@@ -1467,22 +1504,27 @@ body {
     .mobile__menu.active {
         transform: translate(0%);
     }
+
     .mobile__menu ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 0;
     }
+
     .mobile__menu li {
-       margin-bottom: 6.083vw;
+        margin-bottom: 6.083vw;
     }
+
     .mobile__menu li::before {
         display: none;
     }
-    .mobile__menu li.active > a {
+
+    .mobile__menu li.active>a {
         font-weight: bold;
         color: #480b9b;
     }
+
     .mobile__menu li a {
         color: #303030;
     }
@@ -1625,7 +1667,7 @@ body {
     .carriers__content .subtitle {
         font-size: 4.042vw;
         margin-bottom: 1.46vw;
-    
+
     }
 
     .carriers__content .icons {
@@ -1651,11 +1693,13 @@ body {
         margin-top: 6.302vw;
         width: 40%;
     }
+
     .carriers__btn:hover {
         width: auto;
     }
-    .carriers__btn:hover > svg {
-        margin-left: 0.521vw!important;
+
+    .carriers__btn:hover>svg {
+        margin-left: 0.521vw !important;
     }
 
     .carriers__btn svg {
@@ -2030,12 +2074,14 @@ body {
     .info-section.carriers .carriers__desc {
         width: 100%;
     }
+
     .info-section.carriers .carriers__right-text {
         position: initial;
         width: 100%;
         padding-right: 3.521vw;
         margin-top: 8.208vw;
     }
+
     .info-section.carriers .carriers__right-text p {
         font-size: 3.334vw;
     }
@@ -2049,12 +2095,14 @@ body {
         padding-top: 19.531vw;
         padding-bottom: 10vw;
     }
+
     .info-section.forwarders .carriers__right-text {
         position: initial;
         width: 100%;
         padding-right: 3.521vw;
         margin-top: 8.208vw;
     }
+
     .info-section.forwarders .carriers__right-text p {
         font-size: 3.334vw;
     }
@@ -2063,8 +2111,9 @@ body {
         padding: 0 6.778vw;
         backdrop-filter: blur(17.391vw);
         padding: 4.521vw;
-     
+
     }
+
     .info-section.forwarders .container {
         padding: 0;
     }
@@ -2072,16 +2121,20 @@ body {
     .customs-page {
         padding-top: 19.135vw;
     }
+
     .customs-page .icons img {
-       height: 6.563vw;
+        height: 6.563vw;
     }
+
     .customs-page .customs__info {
         width: 100%;
     }
+
     .customs-page .customs__info .customs__info-desc {
         font-size: 3.334vw;
         width: 100%;
     }
+
     .customs-page .customs__info .customs__info-text {
         font-size: 3.334vw;
         width: 100%;
@@ -2100,11 +2153,17 @@ body {
         padding: 5.563vw;
         margin-top: 6.563vw;
     }
+
     .customs-page .customs__info .movie p {
         font-size: 3.042vw;
     }
+
     .customs-page .customs__info .movie svg {
         width: 5.604vw;
         height: 5.604vw;
+    }
+
+    .icons img {
+        height: 5.563vw !important;
     }
 }
