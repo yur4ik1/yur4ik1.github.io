@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['email']) ) {
     $email = $_POST['email'];
-    $to = 'yura.kachan27@gmail.com';
+    $to = 'website@tensig.eu';
     $subject = 'Not Quite Ready for Tensig?';
     $body = "nEmail: $email";
     $headers = "From: $email";

@@ -29,6 +29,7 @@ window.onscroll = () => {
     }
 }
 
+// Popup info
 
 const categories = document.querySelectorAll('.solutions__item');
 const popupClose = document.querySelector('.close');
@@ -41,7 +42,7 @@ categories.forEach(category => {
     const categoryTitle = category.dataset.title;
     const categoryText = category.dataset.text;
   
-    const popup = document.querySelector('.popup');
+    const popup = document.querySelector('.popup__info');
     popup.style.display = 'flex';
     
     const popupTitle = document.querySelector('.popup__title');
@@ -52,13 +53,42 @@ categories.forEach(category => {
   });
 
   popupClose.addEventListener('click', () => {
-    const popup = document.querySelector('.popup');
+    const popup = document.querySelector('.popup__info');
     popup.style.display = 'none';
+    popupVideo.style.display = 'none';
+    
   });
   popupBack.addEventListener('click', () => {
-    const popup = document.querySelector('.popup');
+    const popup = document.querySelector('.popup__info');
     popup.style.display = 'none';
+    popupVideo.style.display = 'none';
   });
+});
+
+
+// Popup video
+
+let buttons = document.querySelectorAll('.popup-button');
+let popupVideo = document.querySelector('.popup__video');
+let video = popupVideo.querySelector('iframe');
+
+const videoClose = document.querySelector('.videoclose');
+const videoBack = document.querySelector('.videoBack');
+
+buttons.forEach(function(button) {
+  button.addEventListener('click', function() {
+
+    let videoUrl = button.getAttribute('data-url');
+    video.setAttribute('src', videoUrl);
+    popupVideo.style.display = 'flex';
+  });
+});
+
+videoClose.addEventListener('click', () => {
+  popupVideo.style.display = 'none';
+});
+videoBack.addEventListener('click', () => {
+  popupVideo.style.display = 'none';
 });
 
 
@@ -83,19 +113,19 @@ for (let anchor of anchors) {
 function sendData(form, phpFile) {
   form.addEventListener('submit', function(event) {
       event.preventDefault();
-      var xhr = new XMLHttpRequest();
-      var formData = new FormData(form);
+      let xhr = new XMLHttpRequest();
+      let formData = new FormData(form);
       xhr.open('POST', phpFile, true);
       xhr.onload = function() {
           if (xhr.status === 200) {
               form.reset();
-              var response = xhr.responseText;
-              var successMessage = document.createElement('p');
+              let response = xhr.responseText;
+              let successMessage = document.createElement('p');
               successMessage.classList.add('success');
               successMessage.textContent = response;
               form.appendChild(successMessage);
           } else {
-              var errorMessage = document.createElement('p');
+              let errorMessage = document.createElement('p');
               errorMessage.classList.add('error');
               errorMessage.textContent = 'Sorry, there was a problem sending your message.';
               form.appendChild(errorMessage);
@@ -105,11 +135,11 @@ function sendData(form, phpFile) {
   });
 }
 
-var contactForm = document.getElementById('contact__form');
+let contactForm = document.getElementById('contact__form');
 sendData(contactForm, '../contact-form.php');
 
-var subscribeForm = document.getElementById('subscribe');
+let subscribeForm = document.getElementById('subscribe');
 sendData(subscribeForm, '../subscribe.php');
 
-var startForm = document.getElementById('start');
+let startForm = document.getElementById('start');
 sendData(startForm, '../start.php');

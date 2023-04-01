@@ -3,7 +3,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    $to = 'yura.kachan27@gmail.com';
+    $to = 'website@tensig.eu';
     $subject = 'New Contact Request';
     $body = "Name: $name\nEmail: $email\nMessage:\n$message";
     $headers = "From: $email";

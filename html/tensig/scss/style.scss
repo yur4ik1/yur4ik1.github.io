@@ -742,6 +742,15 @@ body {
             line-height: 150%;
             color: #434343;
             margin-bottom: 1.302vw;
+
+            span {
+                color: #480b9b;
+                font-weight: bold;
+            }
+        }
+
+        p.mission {
+            margin-top: 2.604vw;
         }
     }
 }
@@ -1165,7 +1174,13 @@ body {
             height: 1.302vw;
         }
     }
+}
 
+.popup__video {
+
+    iframe {
+        height: 29.625vw;
+    }
 }
 
 .popup.active {
@@ -1190,10 +1205,9 @@ body {
 
     .carriers__title {
         width: 25.104vw;
-        background: linear-gradient(0deg, #460A9C, #460A9C), linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
         text-fill-color: transparent;
     }
 
@@ -1322,6 +1336,11 @@ body {
         text-align: right;
         color: #434343;
     }
+
+    .carriers__items {
+        float: right;
+        margin-top: 5.304vw;
+    }
 }
 
 .customs-page {
@@ -1336,8 +1355,11 @@ body {
         font-weight: 700;
         font-size: 2.5vw;
         line-height: 140%;
-        color: #460A9C;
-        -webkit-text-fill-color: unset;
+        background: linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        background-clip: text;
+        text-fill-color: rgba(0, 0, 0, 0);
     }
 
     .icons img {
@@ -1800,6 +1822,13 @@ body {
         position: initial;
     }
 
+    .forwarders .carriers__items {
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
     .customs {
         height: auto;
         padding-top: 13.021vw;
@@ -1842,6 +1871,11 @@ body {
     .about__content p {
         font-size: 3.334vw;
     }
+
+    .about__content p.mission {
+        margin-top: 6.604vw;
+    }
+
 
     .contact {
         height: auto;
@@ -2134,7 +2168,11 @@ body {
         padding: 0 6.778vw;
         backdrop-filter: blur(17.391vw);
         padding: 4.521vw;
+        height: 125.958vw;
+    }
 
+    .info-section.forwarders .carriers__items {
+        float: none;
     }
 
     .info-section.forwarders .container {
@@ -2188,5 +2226,12 @@ body {
 
     .icons img {
         height: 5.563vw !important;
+    }
+
+    .popup__video {
+
+        iframe {
+            height: 43.625vw;
+        }
     }
 }
