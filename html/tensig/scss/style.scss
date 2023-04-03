@@ -1176,8 +1176,12 @@ body {
     }
 }
 
-.popup__video {
 
+
+.popup__video {
+    .back {
+        margin-top: 1.800vw;
+    }
     iframe {
         height: 29.625vw;
     }
@@ -1265,11 +1269,11 @@ body {
         font-weight: 700;
         font-size: 2.5vw;
         line-height: 140%;
-        background: linear-gradient(0deg, #460A9C, #460A9C), linear-gradient(89.53deg, #460B9D 0.12%, #D4034E 69.81%);
+        background: linear-gradient(86.87deg, #460B9D 0.75%, #D4034E 94.81%);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: rgba(0,0,0,0);
         background-clip: text;
-        text-fill-color: transparent;
+        text-fill-color: rgba(0,0,0,0);
     }
 }
 
