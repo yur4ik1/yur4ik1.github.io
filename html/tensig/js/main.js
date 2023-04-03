@@ -85,12 +85,13 @@ buttons.forEach(function(button) {
 });
 
 videoClose.addEventListener('click', () => {
+  video.setAttribute('src', '');
   popupVideo.style.display = 'none';
 });
 videoBack.addEventListener('click', () => {
+  video.setAttribute('src', '');
   popupVideo.style.display = 'none';
 });
-
 
 // Scroll
 
