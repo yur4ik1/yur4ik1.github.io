@@ -74,36 +74,37 @@
                     </div>
                 </div>
                 <div class="contact__right">
-                    <form action="#">
+                    <form id="contact-form" action="#">
                         <div class="input-list">
                             <div class="input-field">
                                 <p>First Name</p>
-                                <input type="text" placeholder="Name">
+                                <input id="name" name="name" type="text" placeholder="Name">
                             </div>
                             <div class="input-field">
                                 <p>Last Name</p>
-                                <input type="text" placeholder="Doe">
+                                <input id="last" name="last" type="text" placeholder="Doe">
                             </div>
                         </div>
                         <div class="input-list">
                             <div class="input-field">
                                 <p>Email</p>
-                                <input type="text" placeholder="">
+                                <input id="email" name="email" type="text" placeholder="">
                             </div>
                             <div class="input-field">
                                 <p>Phone Number</p>
-                                <input type="text" placeholder="+1 012 3456 789">
+                                <input id="phone" name="phone" type="text" placeholder="+1 012 3456 789">
                             </div>
                         </div>
                         <div class="input-field">
                             <p>Message</p>
-                            <textarea name="message" id="" cols="30" rows="10"
+                            <textarea id="message" name="message" id="" cols="30" rows="10"
                                 placeholder="Write your message.."></textarea>
                         </div>
 
                         <div class="button-container">
                             <button type="submit">Send Message</button>
                         </div>
+                        <p style="margin-top: 6px;" id="form-feedback"></p>
                     </form>
                 </div>
             </div>
