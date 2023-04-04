@@ -127,22 +127,36 @@ body {
 }
 
 .about {
-    background: url(../img/about-bg.jpg) no-repeat center top / cover;
     width: 100%;
     height: 62.5vw;
     position: relative;
 
+    &__bg {
+        background: url(../img/about-bg.svg) no-repeat center top / cover;
+        width: 93.788vw;
+        height: 50.625vw;
+        position: absolute;
+        left: 2.5vw;
+        margin-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__content {
-        width: 46.181vw;
-        height: 62.5vw;
-        padding-top: 18.333vw;
-        padding-bottom: 17.431vw;
-        padding-left: 4.653vw;
-        padding-right: 5vw;
+        width: 67.153vw;
+        height: 36.944vw;
+        padding-top: 7.292vw;
+        padding-left: 9.028vw;
+        padding-right: 9.028vw;
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(0.59vw);
-        position: absolute;
-        right: 0;
+        border-radius: 2.778vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__title,
@@ -423,7 +437,7 @@ body {
 }
 
 .contacts {
-    background: url(../img/contacts.jpg) no-repeat center top / cover;
+    background: url(../img/contacts.svg) no-repeat center top / cover;
     width: 100%;
     height: 56.944vw;
     padding-top: 10.347vw;
@@ -431,11 +445,12 @@ body {
 
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__content {
-        position: absolute;
-        right: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -995,7 +1010,7 @@ body {
     }
 
     .about {
-        height: 216.533vw;
+        height: 198.533vw;
     }
 
     .about__content {
@@ -1005,6 +1020,10 @@ body {
         padding-top: 8.533vw;
         padding-left: 2.667vw;
         padding-right: 2.667vw;
+        padding-bottom: 10.778vw;
+        position: relative;
+        top: 102.556vw;
+        z-index: 99999;
     }
 
     .about__title,
