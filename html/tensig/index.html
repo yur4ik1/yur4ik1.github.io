@@ -44,7 +44,7 @@
             </div>
           </li>
 
-         
+
           <li class="header__menu-item">
             <a class="header__menu-link" href="#about">About Us</a>
           </li>
@@ -97,7 +97,7 @@
             </ul>
           </div>
         </li>
-      
+
         <li class="header__menu-item">
           <a class="header__menu-link" href="#about">About Us</a>
         </li>
@@ -419,14 +419,14 @@
           </div>
 
           <p class="forwarders__desc wow fadeInUp" data-wow-delay="0.2s">
-            Tensig offers a comprehensive compliance solution for forwarders that helps them comply with regulatory
-            requirements and mitigate risk in their supply chain operations.
+            Freight Forwarders are facing a lot of challenges in a world that is changing fast and constantly. Change is
+            the normal situation. Be it systems from customs authorities, compliance regulations, certificates to
+            uphold. The list is infinite.
           </p>
           <p class="forwarders__desc wow fadeInUp" data-wow-delay="0.2s">
-            Our solution is designed to meet the needs of forwarders across a range of industries, including logistics,
-            transportation, and freight. , including transaction-based checks of air waybills (AWBs), export controls,
-            and dual use items. These automated checks help reduce delays in the supply chain and make it more
-            predictable and efficient.
+            Our specialized solution is designed to meet the needs of forwarders across a range of industries, including
+            logistics, transportation, and freight. , including transaction-based checks of air waybills (AWBs), export
+            controls, and dual use items.
           </p>
 
           <a class="forwarders__btn wow fadeInUp" data-wow-delay="0.2s" href="forwarders.html">read more
@@ -490,20 +490,16 @@
           </div>
 
           <p class="carriers__desc wow fadeInUp" data-wow-delay="0.2s">
-            Freight Forwarders are facing a lot of challenges in a world that is changing fast and constantly. Change is
-            the normal situation. Be it systems from customs authorities, compliance regulations, certificates to
-            uphold. The list is infinite.
+            The ITTS Platform solution will support both import and export declarations, cargo declarations and
+            manifests for all transport modalities (air, sea, rail, road) and the end-to-end process as illustrated
+            above.
           </p>
+
           <p class="carriers__desc wow fadeInUp" data-wow-delay="0.2s">
-            Our specialized solution is designed to meet the needs of forwarders across a range of industries, including
-            logistics, transportation, and freight. , including transaction-based checks of air waybills (AWBs), export
-            controls, and dual use items.
+            The ITTS Platform solution can be integrated in Customs’ existing business processes and IT-infrastructure
+            including declaration systems, existing risk engines, container scanners etc.
           </p>
-          <p class="carriers__desc wow fadeInUp" data-wow-delay="0.2s">
-            These automated checks help reduce delays in the supply chain and make it more predictable and efficient.By
-            automating the compliance checks, the Tensig ITTS solution decreases delays and eliminates the need to
-            repeat work, resulting in increased data quality, efficiency, and predictability in the supply chain.
-          </p>
+
 
           <a class="carriers__btn wow fadeInUp" data-wow-delay="0.2s" href="customs.html">read more
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -646,11 +642,14 @@
           <form class="contact__form" id="contact__form" action="#">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="text" name="email" placeholder="Your Email" required>
+            <input type="text" name="company" placeholder="Company name" required>
+            <input type="text" name="role" placeholder="Role" required>
+            <input type="text" name="phone" placeholder="Phone number" required>
             <textarea name="message" id="message" cols="30" rows="10"
-              placeholder="Briefly describe your task"></textarea>
+              placeholder="briefly describe your task - change into : briefly describe your inquiry"></textarea>
             <button type="submit">Make a request</button>
           </form>
-
+          <div class="g-recaptcha" data-sitekey="6Lfgsl8lAAAAAPe6HoFOYp80o39f7_LNBY6HN1Oq"></div>
 
           <div class="contact__download">
             <a class="contact__download-item wow fadeInUp" data-wow-delay="0.2s" href="#">
@@ -738,14 +737,14 @@
                 CoC 77467353
               </div>
             </div>
-            <div class="footer__subscribe">
+            <!-- <div class="footer__subscribe">
               <p class="title">Not Quite Ready for Tensig?</p>
               <p class="desc">Join our online no-code community for free. No spam. Ever.</p>
               <form class="footer__subscribe-form" id="subscribe" action="#">
                 <input type="text" name="email" placeholder="Enter Your Email" required>
                 <button type="submit">Subscribe</button>
               </form>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="footer__copyright">
@@ -814,6 +813,14 @@
     </div>
 
   </div>
+
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lfgsl8lAAAAAPe6HoFOYp80o39f7_LNBY6HN1Oq"></script>
+  <script>
+    grecaptcha.enterprise.ready(function () {
+      grecaptcha.enterprise.execute('6Lfgsl8lAAAAAPe6HoFOYp80o39f7_LNBY6HN1Oq', { action: 'login' }).then(function (token) {
+      });
+    });
+  </script>
 
   <script src="./js/wow.js"></script>
   <script>

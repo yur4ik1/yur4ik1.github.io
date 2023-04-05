@@ -2,7 +2,7 @@
 
 let mobileMenu = document.querySelector('.mobile__menu');
 const burger = () => {
-    mobileMenu.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
 };
 
 
@@ -12,21 +12,21 @@ const width = window.innerWidth
 const header = document.querySelector(".header");
 
 window.onscroll = () => {
-    let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
-    if (posTop > 10) {
-        header.classList.add('active');
+  if (posTop > 10) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+
+  if (width < 1023) {
+    if (posTop > 0) {
+      header.classList.add('active');
     } else {
-        header.classList.remove('active');
+      header.classList.remove('active');
     }
-
-    if (width < 1023) {
-        if (posTop > 0) {
-            header.classList.add('active');
-        } else {
-            header.classList.remove('active');
-        }
-    }
+  }
 }
 
 // Popup info
@@ -38,13 +38,13 @@ const popupBack = document.querySelector('.popupClose');
 categories.forEach(category => {
 
   category.addEventListener('click', () => {
-  
+
     const categoryTitle = category.dataset.title;
     const categoryText = category.dataset.text;
-  
+
     const popup = document.querySelector('.popup__info');
     popup.style.display = 'flex';
-    
+
     const popupTitle = document.querySelector('.popup__title');
     popupTitle.textContent = categoryTitle;
 
@@ -56,7 +56,7 @@ categories.forEach(category => {
     const popup = document.querySelector('.popup__info');
     popup.style.display = 'none';
     popupVideo.style.display = 'none';
-    
+
   });
   popupBack.addEventListener('click', () => {
     const popup = document.querySelector('.popup__info');
@@ -75,8 +75,8 @@ let video = popupVideo.querySelector('iframe');
 const videoClose = document.querySelector('.videoclose');
 const videoBack = document.querySelector('.videoBack');
 
-buttons.forEach(function(button) {
-  button.addEventListener('click', function() {
+buttons.forEach(function (button) {
+  button.addEventListener('click', function () {
 
     let videoUrl = button.getAttribute('data-url');
     video.setAttribute('src', videoUrl);
@@ -94,28 +94,41 @@ videoBack.addEventListener('click', () => {
 });
 
 
+// Contact forms
+
 function sendData(form, phpFile) {
-  form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      let xhr = new XMLHttpRequest();
-      let formData = new FormData(form);
-      xhr.open('POST', phpFile, true);
-      xhr.onload = function() {
-          if (xhr.status === 200) {
-              form.reset();
-              let response = xhr.responseText;
-              let successMessage = document.createElement('p');
-              successMessage.classList.add('success');
-              successMessage.textContent = response;
-              form.appendChild(successMessage);
-          } else {
-              let errorMessage = document.createElement('p');
-              errorMessage.classList.add('error');
-              errorMessage.textContent = 'Sorry, there was a problem sending your message.';
-              form.appendChild(errorMessage);
-          }
-      };
-      xhr.send(formData);
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    /* let captcha = grecaptcha.getResponse();
+    if (!captcha) {
+      alert('Please confirm that you are not a robot.');
+      return false;
+    } */
+    let xhr = new XMLHttpRequest();
+    let formData = new FormData(form);
+    let company = form.querySelector('input[name="company"]').value;
+    let role = form.querySelector('input[name="role"]').value;
+    let phone = form.querySelector('input[name="phone"]').value;
+    formData.append('company', company);
+    formData.append('role', role);
+    formData.append('phone', phone);
+    xhr.open('POST', phpFile, true);
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        form.reset();
+        let response = xhr.responseText;
+        let successMessage = document.createElement('p');
+        successMessage.classList.add('success');
+        successMessage.textContent = response;
+        form.appendChild(successMessage);
+      } else {
+        let errorMessage = document.createElement('p');
+        errorMessage.classList.add('error');
+        errorMessage.textContent = 'Sorry, there was a problem sending your message.';
+        form.appendChild(errorMessage);
+      }
+    };
+    xhr.send(formData);
   });
 }
 
