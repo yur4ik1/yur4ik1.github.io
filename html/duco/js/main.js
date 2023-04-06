@@ -1,3 +1,11 @@
+
+let mobileMenu = document.querySelector('.mobile__menu');
+const burger = () => {
+  mobileMenu.classList.toggle('active');
+};
+
+
+
 function sendForm() {
   // get form elements
   var form = document.getElementById("contact-form");
@@ -77,9 +85,3 @@ form.addEventListener("submit", function(event) {
   event.preventDefault();
   sendForm();
 });
-
-
-let mobileMenu = document.querySelector('.mobile__menu');
-const burger = () => {
-  mobileMenu.classList.toggle('active');
-};
