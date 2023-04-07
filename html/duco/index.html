@@ -10,6 +10,7 @@
   <meta name="description" content="">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -38,7 +39,7 @@
           </li>
         </ul>
         <a class="header__btn" style="cursor: pointer;"
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Meet with us</a>
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">Meet with us</a>
         <div class="header__burger" onclick="burger();">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
@@ -83,15 +84,15 @@
     <section class="offer">
       <div class="container">
         <div class="offer__content">
-          <h1>
+          <h1 class="wow fadeInUp" data-wow-delay="0.2s">
             Hire <span class="blue">Smarter</span><br>
             Scale <span class="green">Faster</span>
           </h1>
-          <p class="offer__desc">
+          <p class="offer__desc wow fadeInUp" data-wow-delay="0.4s">
             We connect the most exceptional go-to-market talent <br>
             with some of the most innovative companies in the world.
           </p>
-          <div class="offer__btns">
+          <div class="offer__btns wow fadeInUp" data-wow-delay="0.5s">
             <a href="employers.html">Employers</a>
             <a href="candidates.html">Candidates</a>
           </div>
@@ -103,13 +104,13 @@
       <div class="container">
         <div class="about__bg">
           <div class="about__content">
-            <h2 class="about__title">Why <span>Duco</span>?</h2>
-            <p class="about__desc">
+            <h2 class="about__title wow fadeInUp" data-wow-delay="0.2s">Why <span>Duco</span>?</h2>
+            <p class="about__desc wow fadeInUp" data-wow-delay="0.4s">
               The team at Duco is highly experienced, engaged and collaborative. We are professionals who have held role
               in organizations from startup to Fortune 500 as employees, hiring managers and C-level leaders. We are
               experts in our various fields and believe that every hire has the potential to change the world.
             </p>
-            <a class="about__btn" style="cursor: pointer;"
+            <a class="about__btn wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer;"
               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Schedule a
               Consultation</a>
           </div>
@@ -159,10 +160,10 @@
           </svg>
         </div>
         <div class="info__content">
-          <div class="info__item">
+          <div class="info__item wow fadeInLeft" data-wow-delay="0.2s">
             <img src="./img/info-1.svg" alt="">
           </div>
-          <div class="info__item">
+          <div class="info__item wow fadeInRight" data-wow-delay="0.2s">
             <img src="./img/info-2.svg" alt="">
           </div>
         </div>
@@ -178,7 +179,7 @@
           as Accounting, Sales, Marketing, Manufacturing, Consumer Goods and more!
         </p>
         <div class="practice__list">
-          <div class="practice__item">
+          <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>DATA & TECHNOLOGY</h4>
             <ul>
               <li>
@@ -218,7 +219,7 @@
               </li>
             </ul>
           </div>
-          <div class="practice__item">
+          <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>MENTAL HEALTH</h4>
             <ul>
               <li>
@@ -258,7 +259,7 @@
               </li>
             </ul>
           </div>
-          <div class="practice__item">
+          <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>EXCECUTIVE SEARCH</h4>
             <ul>
               <li>
@@ -350,7 +351,7 @@
           consequat.
         </p>
         <div class="reviews__list">
-          <div class="reviews__item">
+          <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
             <div class="reviews__item-header">
               <img src="./img/author-1.webp" alt="">
               <h4>John McGrath</h4>
@@ -368,7 +369,7 @@
               for the role. Great work!
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
             <div class="reviews__item-header">
               <img src="./img/author-2.webp" alt="">
               <h4>Janet Brady</h4>
@@ -382,7 +383,7 @@
               build other teams within our organization.
             </div>
           </div>
-          <div class="reviews__item">
+          <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
             <div class="reviews__item-header">
               <img src="./img/author-3.webp" alt="">
               <h4>Asif Haroon</h4>
@@ -404,7 +405,7 @@
     <section class="contacts">
       <div class="container">
         <div class="contacts__content">
-          <div class="contacts__info">
+          <div class="contacts__info wow fadeInLeft" data-wow-delay="0.2s">
             <h2>Let’s get in <span class="blue">touch!</span></h2>
             <p>Contact us for quick and friendly support.</p>
 
@@ -439,7 +440,7 @@
               </a>
             </div>
           </div>
-          <div class="contacts__form">
+          <div class="contacts__form wow fadeInRight" data-wow-delay="0.2s">
             <form id="contact-form" method="post" action="send-email.php">
               <input type="text" id="name" name="name" placeholder="Full Name">
               <input type="text" id="email" name="email" placeholder="Email">
@@ -479,10 +480,14 @@
       </div>
     </footer>
 
-
   </div>
 
   <script src="./js/main.min.js"></script>
+
+  <script src="./js/wow.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
 </body>
 

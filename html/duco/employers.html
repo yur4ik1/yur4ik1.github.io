@@ -10,6 +10,7 @@
   <meta name="description" content="">
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -38,7 +39,7 @@
           </li>
         </ul>
         <a class="header__btn" style="cursor: pointer;"
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Meet with us</a>
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">Meet with us</a>
         <div class="header__burger" onclick="burger();">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
@@ -82,156 +83,166 @@
     <section class="offer-emt">
       <div class="container">
         <div class="offer-emt__content">
-          <h1>Your <span class="blue">Best</span> <span class="blue">Hire</span><br>
+          <h1 class="wow fadeInUp" data-wow-delay="0.2s">Your <span class="blue">Best</span> <span class="blue">Hire</span><br>
             Is Waiting
           </h1>
-          <p>
+          <p class="wow fadeInUp" data-wow-delay="0.4s">
             Duco offer’s an individualized approach to every search, ensure that each hire is not only a fit for skills
             but also a fit for culture while maintaining a network of over 18,000 candidates.
           </p>
-          <a style="cursor: pointer;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">SCHEDULE A 30 MINUTES CONSULTATION</a>
+          <a class="wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">SCHEDULE A 30 MINUTES CONSULTATION</a>
         </div>
       </div>
     </section>
 
     <section class="services">
       <div class="container">
-        <div class="services__top">
-          <h2>Our <span class="blue">Services</span></h2>
-          <p class="services__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo
-            consequat.
-          </p>
-        </div>
-        <div class="services__list">
-          <div class="services__item right">
-            <div class="left">
-              <h3>RETAINED SEARCH</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+          <div class="services__top">
+              <h2>Our <span class="blue">Services</span></h2>
+              <p class="services__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et
+                  dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                  ex ea
+                  commodo
+                  consequat.
               </p>
-              <a href="#">Learn more</a>
-            </div>
-            <div class="right">
-              <img src="./img/services-item-1.webp" alt="">
-            </div>
           </div>
-          <div class="services__item left">
-            <div class="left">
-              <h3>CONTINGENCY SEARCH</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-              </p>
-              <a href="#">Learn more</a>
-            </div>
-            <div class="right">
-              <img src="./img/services-item-2.webp" alt="">
-            </div>
+          <div class="services__list">
+              <div class="services__item right wow fadeInRight" data-wow-delay="0.2s">
+                  <div class="left">
+                      <h3>RETAINED SEARCH</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                          nisi ut aliquip
+                          ex ea commodo consequat.
+                      </p>
+                      <a href="#">Learn more</a>
+                  </div>
+                  <div class="right">
+                      <img src="./img/services-item-1.webp" alt="">
+                  </div>
+              </div>
+              <div class="services__item left wow fadeInLeft data-wow-delay="0.2s"">
+                  <div class="left">
+                      <h3>CONTINGENCY SEARCH</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                          nisi ut aliquip
+                          ex ea commodo consequat.
+                      </p>
+                      <a href="#">Learn more</a>
+                  </div>
+                  <div class="right">
+                      <img src="./img/services-item-2.webp" alt="">
+                  </div>
+              </div>
+              <div class="services__item right wow fadeInRight" data-wow-delay="0.2s"">
+                  <div class="left">
+                      <h3>CONTINGENCY SEARCH</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                          incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                          nisi ut aliquip
+                          ex ea commodo consequat.
+                      </p>
+                      <a href="#">Learn more</a>
+                  </div>
+                  <div class="right">
+                      <img src="./img/services-item-3.webp" alt="">
+                  </div>
+              </div>
           </div>
-          <div class="services__item right">
-            <div class="left">
-              <h3>CONTINGENCY SEARCH</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-              </p>
-              <a href="#">Learn more</a>
-            </div>
-            <div class="right">
-              <img src="./img/services-item-3.webp" alt="">
-            </div>
+          <div class="services__elipse1">
+              <svg width="87" height="211" viewBox="0 0 87 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="105.5" cy="105.5" r="81.5" stroke="url(#paint0_linear_16_1536)" stroke-width="48" />
+                  <path
+                      d="M138.5 106.5C138.5 125.373 123.407 140.5 105 140.5C86.593 140.5 71.5 125.373 71.5 106.5C71.5 87.6272 86.593 72.5 105 72.5C123.407 72.5 138.5 87.6272 138.5 106.5Z"
+                      stroke="url(#paint1_linear_16_1536)" stroke-width="17" />
+                  <defs>
+                      <linearGradient id="paint0_linear_16_1536" x1="196.642" y1="60.5533" x2="1.06612e-05"
+                          y2="152.944" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_16_1536" x1="141.284" y1="88.3935" x2="62.6675"
+                          y2="124.896" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                  </defs>
+              </svg>
           </div>
-        </div>
-        <div class="services__elipse1">
-          <svg width="87" height="211" viewBox="0 0 87 211" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="105.5" cy="105.5" r="81.5" stroke="url(#paint0_linear_16_1536)" stroke-width="48" />
-            <path
-              d="M138.5 106.5C138.5 125.373 123.407 140.5 105 140.5C86.593 140.5 71.5 125.373 71.5 106.5C71.5 87.6272 86.593 72.5 105 72.5C123.407 72.5 138.5 87.6272 138.5 106.5Z"
-              stroke="url(#paint1_linear_16_1536)" stroke-width="17" />
-            <defs>
-              <linearGradient id="paint0_linear_16_1536" x1="196.642" y1="60.5533" x2="1.06612e-05" y2="152.944"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_16_1536" x1="141.284" y1="88.3935" x2="62.6675" y2="124.896"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="services__elipse2">
-          <svg width="145" height="291" viewBox="0 0 145 291" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="-0.500289" cy="145.5" r="98.5134" transform="rotate(60 -0.500289 145.5)"
-              stroke="url(#paint0_linear_16_1537)" stroke-width="16" />
-            <path
-              d="M41 146C41 169.514 22.3282 188 0 188C-22.3282 188 -41 169.514 -41 146C-41 122.486 -22.3282 104 0 104C22.3282 104 41 122.486 41 146Z"
-              stroke="url(#paint1_linear_16_1537)" stroke-width="42" />
-            <defs>
-              <linearGradient id="paint0_linear_16_1537" x1="91.5172" y1="100.122" x2="-107.014" y2="193.4"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_16_1537" x1="53.5621" y1="119.16" x2="-62.6619" y2="172.9"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="services__elipse3">
-          <svg width="72" height="179" viewBox="0 0 72 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="89.5" cy="89.5" r="72.5" stroke="url(#paint0_linear_16_1538)" stroke-width="34" />
-            <path
-              d="M123.5 89.5C123.5 108.373 108.407 123.5 90 123.5C71.593 123.5 56.5 108.373 56.5 89.5C56.5 70.6272 71.593 55.5 90 55.5C108.407 55.5 123.5 70.6272 123.5 89.5Z"
-              stroke="url(#paint1_linear_16_1538)" stroke-width="17" />
-            <defs>
-              <linearGradient id="paint0_linear_16_1538" x1="166.82" y1="51.3698" x2="9.04434e-06" y2="129.749"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_16_1538" x1="126.284" y1="71.3935" x2="47.6675" y2="107.896"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="services__elipse4">
-          <svg width="158" height="228" viewBox="0 0 158 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="44.0007" cy="114" r="61.9538" transform="rotate(60 44.0007 114)"
-              stroke="url(#paint0_linear_16_1539)" stroke-width="43" />
-            <circle cx="44.002" cy="114.003" r="15.5" stroke="url(#paint1_linear_16_1539)" stroke-width="17" />
-            <defs>
-              <linearGradient id="paint0_linear_16_1539" x1="116.097" y1="78.4457" x2="-39.4531" y2="151.53"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-              <linearGradient id="paint1_linear_16_1539" x1="64.7357" y1="103.778" x2="20.002" y2="124.796"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0078FA" />
-                <stop offset="1" stop-color="#00CBFF" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+          <div class="services__elipse2">
+              <svg width="145" height="291" viewBox="0 0 145 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="-0.500289" cy="145.5" r="98.5134" transform="rotate(60 -0.500289 145.5)"
+                      stroke="url(#paint0_linear_16_1537)" stroke-width="16" />
+                  <path
+                      d="M41 146C41 169.514 22.3282 188 0 188C-22.3282 188 -41 169.514 -41 146C-41 122.486 -22.3282 104 0 104C22.3282 104 41 122.486 41 146Z"
+                      stroke="url(#paint1_linear_16_1537)" stroke-width="42" />
+                  <defs>
+                      <linearGradient id="paint0_linear_16_1537" x1="91.5172" y1="100.122" x2="-107.014"
+                          y2="193.4" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_16_1537" x1="53.5621" y1="119.16" x2="-62.6619" y2="172.9"
+                          gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                  </defs>
+              </svg>
+          </div>
+          <div class="services__elipse3">
+              <svg width="72" height="179" viewBox="0 0 72 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="89.5" cy="89.5" r="72.5" stroke="url(#paint0_linear_16_1538)" stroke-width="34" />
+                  <path
+                      d="M123.5 89.5C123.5 108.373 108.407 123.5 90 123.5C71.593 123.5 56.5 108.373 56.5 89.5C56.5 70.6272 71.593 55.5 90 55.5C108.407 55.5 123.5 70.6272 123.5 89.5Z"
+                      stroke="url(#paint1_linear_16_1538)" stroke-width="17" />
+                  <defs>
+                      <linearGradient id="paint0_linear_16_1538" x1="166.82" y1="51.3698" x2="9.04434e-06"
+                          y2="129.749" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_16_1538" x1="126.284" y1="71.3935" x2="47.6675"
+                          y2="107.896" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                  </defs>
+              </svg>
+          </div>
+          <div class="services__elipse4">
+              <svg width="158" height="228" viewBox="0 0 158 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="44.0007" cy="114" r="61.9538" transform="rotate(60 44.0007 114)"
+                      stroke="url(#paint0_linear_16_1539)" stroke-width="43" />
+                  <circle cx="44.002" cy="114.003" r="15.5" stroke="url(#paint1_linear_16_1539)"
+                      stroke-width="17" />
+                  <defs>
+                      <linearGradient id="paint0_linear_16_1539" x1="116.097" y1="78.4457" x2="-39.4531"
+                          y2="151.53" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                      <linearGradient id="paint1_linear_16_1539" x1="64.7357" y1="103.778" x2="20.002"
+                          y2="124.796" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#0078FA" />
+                          <stop offset="1" stop-color="#00CBFF" />
+                      </linearGradient>
+                  </defs>
+              </svg>
+          </div>
       </div>
-    </section>
+  </section>
+
 
     <section class="testimonials">
       <div class="container">
@@ -242,7 +253,7 @@
           Marketing and more.
         </p>
         <div class="testimonials__list">
-          <div class="testimonials__item">
+          <div class="testimonials__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>Executive Search</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -250,7 +261,7 @@
               ea commodo consequat.
             </p>
           </div>
-          <div class="testimonials__item">
+          <div class="testimonials__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>Salesforce</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -258,7 +269,7 @@
               ea commodo consequat.
             </p>
           </div>
-          <div class="testimonials__item">
+          <div class="testimonials__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>Web Development</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -266,7 +277,7 @@
               ea commodo consequat.
             </p>
           </div>
-          <div class="testimonials__item">
+          <div class="testimonials__item wow fadeInUp" data-wow-delay="0.2s">
             <h4>Data & BI</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -301,7 +312,7 @@
     <section class="contacts">
       <div class="container">
         <div class="contacts__content">
-          <div class="contacts__info">
+          <div class="contacts__info wow fadeInLeft" data-wow-delay="0.2s">
             <h2>Let’s get in <span class="blue">touch!</span></h2>
             <p>Contact us for quick and friendly support.</p>
 
@@ -336,7 +347,7 @@
               </a>
             </div>
           </div>
-          <div class="contacts__form">
+          <div class="contacts__form wow fadeInRight" data-wow-delay="0.2s">
             <form id="contact-form" method="post" action="send-email.php">
               <input type="text" id="name" name="name" placeholder="Full Name">
               <input type="text" id="email" name="email" placeholder="Email">
@@ -380,6 +391,10 @@
   </div>
 
   <script src="./js/main.min.js"></script>
+  <script src="./js/wow.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 
 </body>
 

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -39,7 +39,7 @@
                     </li>
                 </ul>
                 <a class="header__btn" style="cursor: pointer;"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Meet
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">Meet
                     with us</a>
 
 
@@ -86,8 +86,8 @@
         <section class="offer-emt сandidates">
             <div class="container">
                 <div class="offer-emt__content">
-                    <h1>Candidates</h1>
-                    <p>
+                    <h1 class="wow fadeInUp" data-wow-delay="0.2s">Candidates</h1>
+                    <p class="wow fadeInUp" data-wow-delay="0.4s"">
                         We value our candidates and work closely with each one to ensure that their experience with us
                         is top notch. Transparency is a part of our DNA and we pride ourselves on open communication
                         during all stages of the recruitment process. Our consultative approach means that we truly get
@@ -95,8 +95,8 @@
                         thrive and grow. Our in-depth knowledge of the industries in which we recruit gives us an inside
                         advantage for helping candidates advance in their careers
                     </p>
-                    <a style="cursor: pointer;"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">SCHEDULE
+                    <a class="wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer;"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">SCHEDULE
                         A 30 MINUTES CONSULTATION</a>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                     as Accounting, Sales, Marketing, Manufacturing, Consumer Goods and more!
                 </p>
                 <div class="practice__list">
-                    <div class="practice__item">
+                    <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
                         <h4>DATA & TECHNOLOGY</h4>
                         <ul>
                             <li>
@@ -158,7 +158,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="practice__item">
+                    <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
                         <h4>MENTAL HEALTH</h4>
                         <ul>
                             <li>
@@ -203,7 +203,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="practice__item">
+                    <div class="practice__item wow fadeInUp" data-wow-delay="0.2s">
                         <h4>EXCECUTIVE SEARCH</h4>
                         <ul>
                             <li>
@@ -292,7 +292,7 @@
 
         <section class="сandidates__text">
             <div class="container">
-                <p>
+                <p class="wow fadeInUp" data-wow-delay="0.2s">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -325,7 +325,7 @@
                 <div class="newsletter__top">
                     <h5>Submit your resume</h5>
                     <a style="cursor: pointer;"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Attach
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">Attach
                         resume</a>
                 </div>
                 <div class="newsletter__bottom">
@@ -374,7 +374,10 @@
     </div>
 
     <script src="./js/main.min.js"></script>
-
+    <script src="./js/wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 
 </html>

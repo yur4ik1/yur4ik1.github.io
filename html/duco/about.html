@@ -9,6 +9,7 @@
     <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -37,7 +38,7 @@
                     </li>
                 </ul>
                 <a class="header__btn" style="cursor: pointer;"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">Meet
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">Meet
                     with us</a>
                 <div class="header__burger" onclick="burger();">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -104,16 +105,16 @@
                     </defs>
                 </svg>
 
-                <h2>Lorem <span class="blue">ipsum </span> dolor</h2>
-                <p>
+                <h2 class="wow fadeInUp" data-wow-delay="0.2s">Lorem <span class="blue">ipsum </span> dolor</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.4s">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <a style="cursor: pointer;"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin'}); return false;">SCHEDULE
+                <a class="wow fadeInUp" data-wow-delay="0.5s" style="cursor: pointer;"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jarrettrubin/meet?embed_domain=localhost%3A3000&embed_type=PopupText&back=1&month=2023-04'});return false;">SCHEDULE
                     A 30 MINUTES CONSULTATION</a>
                 <svg class="elipse-2" width="145" height="291" viewBox="0 0 145 291" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +151,7 @@
                     consequat.
                 </p>
                 <div class="reviews__list">
-                    <div class="reviews__item">
+                    <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="reviews__item-header">
                             <img src="./img/author-1.webp" alt="">
                             <h4>John McGrath</h4>
@@ -168,7 +169,7 @@
                             for the role. Great work!
                         </div>
                     </div>
-                    <div class="reviews__item">
+                    <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="reviews__item-header">
                             <img src="./img/author-2.webp" alt="">
                             <h4>Janet Brady</h4>
@@ -182,7 +183,7 @@
                             build other teams within our organization.
                         </div>
                     </div>
-                    <div class="reviews__item">
+                    <div class="reviews__item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="reviews__item-header">
                             <img src="./img/author-3.webp" alt="">
                             <h4>Asif Haroon</h4>
@@ -216,7 +217,7 @@
                     </p>
                 </div>
                 <div class="services__list">
-                    <div class="services__item right">
+                    <div class="services__item right wow fadeInRight" data-wow-delay="0.2s"">
                         <div class="left">
                             <h3>RETAINED SEARCH</h3>
                             <p>
@@ -232,7 +233,7 @@
                             <img src="./img/services-item-1.webp" alt="">
                         </div>
                     </div>
-                    <div class="services__item left">
+                    <div class="services__item left wow fadeInLeft data-wow-delay="0.2s"">
                         <div class="left">
                             <h3>CONTINGENCY SEARCH</h3>
                             <p>
@@ -248,7 +249,7 @@
                             <img src="./img/services-item-2.webp" alt="">
                         </div>
                     </div>
-                    <div class="services__item right">
+                    <div class="services__item right wow fadeInRight" data-wow-delay="0.2s"">
                         <div class="left">
                             <h3>CONTINGENCY SEARCH</h3>
                             <p>
@@ -381,7 +382,10 @@
     </div>
 
     <script src="./js/main.min.js"></script>
-
+    <script src="./js/wow.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 </body>
 
 </html>
