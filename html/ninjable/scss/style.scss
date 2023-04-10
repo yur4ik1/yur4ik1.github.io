@@ -1,8 +1,11 @@
 @import 'reset';
 @import 'global';
 
+* {
+    font-family: 'Rubik';
+}
+
 body {
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     overflow-x: hidden;
     background: url(../img/content-bg.png) no-repeat center top / cover;
@@ -28,7 +31,7 @@ body {
     }
 
     &__logo {
-        width: 14.7vw;
+        width: 14.85vw;
         height: 5.892vw;
         border-right: 0.052vw solid #D7DEE6;
         display: flex;
@@ -74,18 +77,18 @@ body {
     }
 }
 
-.ninj__wrapper {
+.another__wrapper {
     display: grid;
     grid-template-columns: 1fr 100%;
 
 
-    .sidemenu {
-        width: 18.56vw;
-        height: 57.873vw;
+    .sidebar {
+        width: 18.7vw;
+        height: 100%;
         border-right: 0.052vw solid #D7DEE6;
         background: #fff;
 
-        ul {
+        .sidemenu {
             padding: 0;
 
             .sidemenu__item {
@@ -99,7 +102,7 @@ body {
                     font-size: 0.782vw;
                     line-height: 0vw;
                     letter-spacing: 0.01vw;
-                    color: #1B2438;
+                    color: #8D919B;
                     display: flex;
                     align-items: center;
                     padding-left: 4.275vw;
@@ -191,6 +194,10 @@ body {
                     height: 0.261vw;
                     margin-left: 0.521vw;
                 }
+
+                .sidemenu__item-link {
+                    color: #1B2438;
+                }
             }
         }
     }
@@ -201,15 +208,21 @@ body {
         background: #FFFFFF;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
-        margin-top: 5.214vw;
-        margin-left: 5.683vw;
-        padding-top: 3.076vw;
-        padding-bottom: 5.683vw;
-        padding-left: 4.119vw;
-        padding-right: 3.962vw;
+        margin: 5.214vw 0 0 5.683vw;
+        padding: 3.076vw 3.962vw 5.683vw 4.119vw;
         position: relative;
 
+        .leaves {
+            background: url(../img/lavelas.png) no-repeat center top / cover;
+            width: 100%;
+            height: 30.657vw;
+            position: absolute;
+            left: 0;
+            top: 4.10vw;
+        }
+
         h2 {
+            height: 4.067vw;
             text-align: center;
             font-weight: 500;
             font-size: 1.303vw;
@@ -220,6 +233,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 3.18vw;
         }
 
         h2::after {
@@ -230,14 +244,195 @@ body {
             position: absolute;
             top: 3.858vw;
         }
-    }
 
-    .lavelas {
-        background: url(../img/lavelas.png) no-repeat center top / cover;
-        width: 100%;
-        height: 30.657vw;
-        position: absolute;
-        left: 0;
-        top: 4.10vw;
+        .account-setting {
+            z-index: 999;
+            position: relative;
+
+            label {
+                font-family: 'Rubik';
+                display: flex;
+                flex-direction: column;
+                font-size: 0.834vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.011vw;
+                color: #869DC8;
+            }
+
+            .account-owner {
+                display: flex;
+
+                .custom-select {
+                    position: relative;
+                    display: inline-block;
+                    width: 26.799vw;
+                }
+
+                .select-selected {
+                    background-color: #f2f2f2;
+                    padding-top: 0.938vw;
+                    padding-bottom: 0.938vw;
+                    padding-left: 2.086vw;
+                    padding-right: 1.199vw;
+                    cursor: pointer;
+                    font-weight: 300;
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                    width: 26.799vw;
+                    background: #FFFFFF;
+                    border: 0.052vw solid #D7DEE6;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    border-radius: 0.417vw;
+                }
+
+                .select-selected:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 1.199vw;
+                    transform: translateY(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 0.261vw solid transparent;
+                    border-right: 0.261vw solid transparent;
+                    border-top: 0.261vw solid #555;
+                }
+
+                .select-selected.select-arrow-active {
+                    border-bottom: none;
+
+                    border-bottom-right-radius: 0vw;
+                    border-bottom-left-radius: 0vw;
+                }
+
+                .select-selected.select-arrow-active:after {
+                    transform: translateY(-50%) rotate(-180deg);
+                }
+
+                .select-items {
+                    border-top: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    z-index: 99;
+                    -webkit-border-bottom-right-radius: 0.417vw;
+                    -webkit-border-bottom-left-radius: 0.417vw;
+                    -moz-border-radius-bottomright: 0.417vw;
+                    -moz-border-radius-bottomleft: 0.417vw;
+                    border-bottom-right-radius: 0.417vw;
+                    border-bottom-left-radius: 0.417vw;
+                    overflow: hidden;
+                    border: 0.052vw solid #D7DEE6;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                }
+
+                .select-selected.select-arrow-active .select-items {
+                    border-top: 0vw;
+                }
+
+                .select-hide {
+                    display: none;
+                }
+
+                .select-option {
+                    width: 100%;
+                    height: 2.242vw;
+                    background: #fff;
+                    mix-blend-mode: normal;
+                    width: 26.694vw;
+                    height: 2.242vw;
+                    padding: 0.678vw 2.033vw;
+                    cursor: pointer;
+                    font-weight: 300;
+                    font-size: 0.782vw;
+                    line-height: 0.834vw;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.01vw;
+                    position: relative;
+                    color: #8D919B;
+                }
+
+                .select-option::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    z-index: -1;
+                    mix-blend-mode: normal;
+                }
+
+                .select-option:hover {
+                    color: #869DC8;
+                }
+
+                .select-option:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(83.66deg, #D6DDE6 4.45%, rgba(232, 241, 238, 0.93) 95.55%, rgba(255, 255, 255, 0.19) 110.55%);
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                    z-index: 999;
+                }
+
+
+                button {
+                    font-size: 0.782vw;
+                    line-height: 0.782vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 0.007vw;
+                    color: rgba(27, 36, 56, 0.4);
+                    width: 6.257vw;
+                    height: 2.555vw;
+                    background: #FAFCFB;
+                    box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                    border-radius: 0.417vw;
+                    border: none;
+                    cursor: pointer;
+                    margin-left: 2.398vw;
+                    margin-top: 2.5vw;
+                }
+            }
+
+            .company-info {
+                margin-top: 5.683vw;
+
+                input {
+                    width: 26.799vw;
+                    height: 2.555vw;
+                    background: #FFFFFF;
+                    border: 0.052vw solid #D7DEE6;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    border-radius: 0.417vw;
+                    padding-top: 0.886vw;
+                    padding-bottom: 0.886vw;
+                    padding-left: 2.086vw;
+                    padding-right: 2.086vw;
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #1b2438;
+                }
+                
+                input::placeholder {
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+            }
+        }
     }
 }

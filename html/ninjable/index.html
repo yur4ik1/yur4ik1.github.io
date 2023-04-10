@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -31,42 +31,28 @@
       </div>
     </header>
 
-    <section class="ninj__wrapper">
-      <section class="sidemenu">
-        <ul class="menu">
+    <section class="another__wrapper">
+      <section class="sidebar">
+        <ul class="sidemenu">
           <li class="sidemenu__item active">
             <a class="sidemenu__item-link" href="#">Company</a>
             <ul class="submenu">
-              <li class="active">
-                <a href="#">Account Settings</a>
+              <li class="submenu__item active">
+                <a class="submenu__item-link active" href="#">Account Settings</a>
               </li>
-              <li>
-                <a href="#">Branding</a>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Branding</a>
               </li>
-              <li>
-                <a href="#">Subscription</a>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Subscription</a>
               </li>
-              <li>
-                <a href="#">Billing</a>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="#">Billing</a>
               </li>
             </ul>
           </li>
           <li class="sidemenu__item">
             <a class="sidemenu__item-link" href="#">Directory</a>
-            <!-- <ul class="submenu">
-              <li>
-                <a href="#">Account Settings</a>
-              </li>
-              <li>
-                <a href="#">Branding</a>
-              </li>
-              <li>
-                <a href="#">Subscription</a>
-              </li>
-              <li>
-                <a href="#">Billing</a>
-              </li> 
-            </ul> -->
           </li>
           <li class="sidemenu__item">
             <a class="sidemenu__item-link" href="#">Rewards</a>
@@ -76,12 +62,35 @@
           </li>
         </ul>
       </section>
-      <section class="content">
-        <div class="lavelas"></div>
-        <h2>ACCOUNT SETTING</h2>
-        <div class="">
 
-        </div>
+      <section class="content">
+        <div class="leaves"></div>
+        <h2>ACCOUNT SETTING</h2>
+
+        <form class="account-setting" id="account-setting" action="#">
+          <div class="account-owner">
+            <label>* Account Owner
+              <div class="custom-select">
+                <div class="select-selected">Please Select...</div>
+                <div class="select-items select-hide">
+                  <div class="select-option">Ivan Ivanov</div>
+                  <div class="select-option">Marina Ivanova</div>
+                </div>
+              </div>
+            </label>
+            <button type="submit">Change</button>
+          </div>
+          <div class="company-info">
+            <label>* Company Name
+              <input type="text" placeholder="Company">
+            </label>
+          </div>
+          <div class="country">
+            <label>* Country
+              <input type="text" placeholder="Company">
+            </label>
+          </div>
+        </form>
 
       </section>
     </section>
