@@ -2,21 +2,47 @@
 
 /* select */
 
-var selectElements = document.getElementsByClassName("custom-select");
-for (var i = 0; i < selectElements.length; i++) {
-  var selectElement = selectElements[i];
-  var selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
-  var selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
-  var selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
+let selectElements = document.getElementsByClassName("custom-select");
+for (let i = 0; i < selectElements.length; i++) {
+  let selectElement = selectElements[i];
+  let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
+  let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
+  let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
   selectSelectedElement.addEventListener("click", function() {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
   });
-  for (var j = 0; j < selectOptionElements.length; j++) {
+  for (let j = 0; j < selectOptionElements.length; j++) {
     selectOptionElements[j].addEventListener("click", function() {
-      var selectOptionValue = this.innerHTML;
+      let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
       selectItemsElement.classList.add("select-hide");
     });
   }
 }
+
+/* contry select */
+
+const countrySelect = document.querySelector(".country-select");
+const countryTrigger = document.querySelector(".country-select__trigger");
+const countryOptionsContainer = document.querySelector(".country-options");
+const countryOptionsList = document.querySelectorAll(".country-option");
+
+countryTrigger.addEventListener("click", () => {
+  countrySelect.classList.toggle("open");
+});
+
+countryOptionsList.forEach((o) => {
+  o.addEventListener("click", () => {
+    countryTrigger.querySelector("span").textContent = o.textContent;
+    countrySelect.classList.remove("open");
+  });
+});
+
+countryOptionsContainer.addEventListener("scroll", () => {
+  countryOptionsContainer.classList.add("scrolling");
+  clearTimeout(countryOptionsContainer.dataset.scrollTimeout);
+  countryOptionsContainer.dataset.scrollTimeout = setTimeout(() => {
+    countryOptionsContainer.classList.remove("scrolling");
+  }, 250);
+});
