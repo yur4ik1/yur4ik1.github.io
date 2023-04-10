@@ -204,13 +204,14 @@ body {
 
     .content {
         width: 64.129vw;
-        height: 69.552vw;
         background: #FFFFFF;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
         margin: 5.214vw 0 0 5.683vw;
         padding: 3.076vw 3.962vw 5.683vw 4.119vw;
+        padding-bottom: 5.735vw;
         position: relative;
+        margin-bottom: 12.409vw;
 
         .leaves {
             background: url(../img/lavelas.png) no-repeat center top / cover;
@@ -302,7 +303,6 @@ body {
 
                 .select-selected.select-arrow-active {
                     border-bottom: none;
-
                     border-bottom-right-radius: 0vw;
                     border-bottom-left-radius: 0vw;
                 }
@@ -312,7 +312,6 @@ body {
                 }
 
                 .select-items {
-                    border-top: none;
                     position: absolute;
                     top: 100%;
                     left: 0;
@@ -326,7 +325,8 @@ body {
                     border-bottom-left-radius: 0.417vw;
                     overflow: hidden;
                     border: 0.052vw solid #D7DEE6;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    box-shadow: 0vw 0.1vw 0.126vw 0.032vw #D7DEE6;
+                    border-top: none;
                 }
 
                 .select-selected.select-arrow-active .select-items {
@@ -426,6 +426,34 @@ body {
                     color: #1b2438;
                 }
 
+                input::-webkit-input-placeholder {
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+
+                input::-moz-placeholder {
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+
+                input:-ms-input-placeholder {
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+
+                input::-ms-input-placeholder {
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+
                 input::placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
@@ -436,9 +464,14 @@ body {
 
             .country {
                 margin-top: 2.972vw;
+                display: flex;
+                justify-content: space-between;
 
                 .country-select-wrapper {
                     position: relative;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
                     user-select: none;
                     width: 26.799vw;
                 }
@@ -474,8 +507,6 @@ body {
                     position: absolute;
                     top: 50%;
                     right: 1.199vw;
-                    -webkit-transform: translateY(-50%);
-                    -ms-transform: translateY(-50%);
                     transform: translateY(-50%);
                     width: 0;
                     height: 0;
@@ -483,8 +514,6 @@ body {
                     border-right: 0.261vw solid rgba(0, 0, 0, 0);
                     border-top: 0.261vw solid #555;
                 }
-
-
 
                 .country-select.open .arrow {
                     transform: rotate(-180deg);
@@ -511,21 +540,17 @@ body {
 
                 .country-options::-webkit-scrollbar {
                     width: 0.313vw;
-                    position: fixed;
-                    right: 20px;
+                    padding-right: 0.521vw;
                 }
 
                 .country-options::-webkit-scrollbar-track {
                     background: linear-gradient(0deg, #f7f7f7, #e0e3e8), #1F1F23;
-                    position: relative;
-            
+
                 }
-               
 
                 .country-options::-webkit-scrollbar-thumb {
-                    background: #869DC8;
+                    background: #afbeda;
                     mix-blend-mode: normal;
-                    opacity: 0.6;
                     border-radius: 0.561vw;
                 }
 
@@ -547,6 +572,7 @@ body {
                     align-items: center;
                     position: relative;
                 }
+
                 .country-option::before {
                     content: '';
                     position: absolute;
@@ -558,6 +584,7 @@ body {
                     z-index: -1;
                     mix-blend-mode: normal;
                 }
+
                 .country-option:hover::before {
                     content: '';
                     position: absolute;
@@ -571,9 +598,56 @@ body {
                     z-index: 999;
                 }
 
+                .country-select.open .country-select__trigger {
+                    border-bottom: 0;
+                    border-bottom-right-radius: 0vw;
+                    border-bottom-left-radius: 0vw;
+                }
+
                 .country-select.open .country-options {
                     display: block;
+                    box-shadow: 0vw 0.1vw 0.126vw 0.032vw #D7DEE6;
+                    border-top: none;
+                    border-top-right-radius: 0vw;
+                    border-top-left-radius: 0vw;
                 }
+            }
+
+            .company-info {
+                margin-top: 0;
+
+                label {
+                    margin-bottom: 2.242vw;
+                }
+            }
+        }
+
+        .address {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 9.645vw !important;
+        }
+
+        .save-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 3.754vw;
+
+            button {
+                font-size: 0.834vw;
+                line-height: 0.938vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.02vw;
+                color: #FFFFFF;
+                border: none;
+                cursor: pointer;
+                width: 8.238vw;
+                height: 2.503vw;
+                background: #869DC8;
+                box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+                border-radius: 0.521vw;
             }
         }
     }

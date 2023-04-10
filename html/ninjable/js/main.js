@@ -1,27 +1,21 @@
-
-
-/* select */
-
 let selectElements = document.getElementsByClassName("custom-select");
 for (let i = 0; i < selectElements.length; i++) {
   let selectElement = selectElements[i];
   let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
   let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
   let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
-  selectSelectedElement.addEventListener("click", function() {
+  selectSelectedElement.addEventListener("click", function () {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
   });
   for (let j = 0; j < selectOptionElements.length; j++) {
-    selectOptionElements[j].addEventListener("click", function() {
+    selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
       selectItemsElement.classList.add("select-hide");
     });
   }
 }
-
-/* contry select */
 
 const countrySelect = document.querySelector(".country-select");
 const countryTrigger = document.querySelector(".country-select__trigger");
@@ -34,7 +28,8 @@ countryTrigger.addEventListener("click", () => {
 
 countryOptionsList.forEach((o) => {
   o.addEventListener("click", () => {
-    countryTrigger.querySelector("span").textContent = o.textContent;
+    const countryOptionValue = o.getAttribute("data-value");
+    countryTrigger.textContent = o.textContent;
     countrySelect.classList.remove("open");
   });
 });
