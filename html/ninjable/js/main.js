@@ -46,7 +46,7 @@ function updateScroll() {
   const containerHeight = countryOptionsContainer.clientHeight;
   const containerScrollHeight = countryOptionsContainer.scrollHeight;
   const scrollbarHeight = customScrollbar.clientHeight;
-  const thumbHeight = Math.max((containerHeight / containerScrollHeight) * scrollbarHeight, 100);
+  const thumbHeight = Math.max((containerHeight / containerScrollHeight) * scrollbarHeight, 20);
   const maxThumbTop = scrollbarHeight - thumbHeight;
   const thumbTop = (containerScrollTop / (containerScrollHeight - containerHeight)) * maxThumbTop;
   customScrollbarThumb.style.height = `${thumbHeight}px`;
