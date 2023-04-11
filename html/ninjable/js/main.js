@@ -27,6 +27,23 @@ if (brandingIco && brandingPopup) {
 }
 
 
+/* Subscription branding */
+
+const subscriptionBtn = document.querySelector('.upgrade__btn');
+const subscriptionPopup = document.querySelector('.subscription__popup');
+const subscriptionClose = document.querySelector('.subscription__popup-close');
+
+if (subscriptionBtn && subscriptionPopup) {
+  subscriptionBtn.addEventListener('click', () => {
+    subscriptionPopup.classList.toggle('active');
+  });
+
+  subscriptionClose.addEventListener('click', () => {
+    subscriptionPopup.classList.remove('active');
+  });
+}
+
+
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");

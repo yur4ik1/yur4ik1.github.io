@@ -1152,6 +1152,7 @@ body.subscription-page {
 .content.subscription {
     .content__section {
         margin-bottom: 0;
+
         .content__block {
             padding: 0;
             padding-top: 2.346vw;
@@ -1198,7 +1199,7 @@ body.subscription-page {
                         background: #869DC8;
                         box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
                         border-radius: 0.521vw;
-
+                        cursor: pointer;
                     }
                 }
             }
@@ -1241,4 +1242,73 @@ body.subscription-page {
             }
         }
     }
+}
+
+.subscription__popup {
+    z-index: 10000000000000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(6, 8, 13, 0.15);
+    -webkit-backdrop-filter: blur(0.1vw);
+    backdrop-filter: blur(0.1vw);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+
+    .subscription__popup-inner {
+        width: 64.181vw;
+        height: 44.317vw;
+        background: #FFFFFF;
+        box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+        border-radius: 1.356vw;
+        position: relative;
+
+        .subscription__popup-header {
+            width: 64.181vw;
+            height: 8.498vw;
+            background: #FFFFFF;
+            border: 0.104vw solid #E4E8EE;
+            box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+            border-radius: 1.356vw 1.356vw 0vw 0vw;
+            position: relative;
+
+            .subscription__popup-close {
+                width: 2.033vw;
+                height: 1.981vw;
+                background: #FAFCFB;
+                box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                border-radius: 0.417vw;
+                position: absolute;
+                right: 2.45vw;
+                top: 2.555vw;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 0.886vw;
+                    height: 0.834vw;
+                }
+            }
+
+        }
+    }
+}
+
+.subscription__popup.active {
+    visibility: visible;
+    opacity: 1;
 }
