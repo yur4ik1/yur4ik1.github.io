@@ -1,5 +1,5 @@
 
-/* prifile popup */
+/* profile popup */
 
 const profileBtn = document.querySelector('.header__avatar');
 const profilePopup = document.querySelector('.header__profile-popup');
@@ -29,6 +29,8 @@ for (let i = 0; i < selectElements.length; i++) {
     });
   }
 }
+
+/* custom select country */
 
 const countrySelect = document.querySelector(".country-select");
 const countryTrigger = document.querySelector(".country-select__trigger");

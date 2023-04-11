@@ -91,7 +91,9 @@ body {
         right: 0vw;
         padding: 1.564vw 3.337vw;
         padding-right: 4.692vw;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
 
         p {
             font-size: 0.834vw;
@@ -124,7 +126,8 @@ body {
        
     }
     &__profile-popup.active {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }
 
