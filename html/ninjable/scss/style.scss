@@ -276,7 +276,7 @@ body {
             }
 
             li.active {
-                background: #f3f5f7;
+                background: #f7f8fa;
 
                 .sidemenu__item-link::after {
                     content: '';
@@ -658,7 +658,7 @@ body {
 
                 .country-select-container {
                     position: relative;
-                    height: 150px;
+                    height: 7.821vw;
                     overflow: auto;
                 }
 
@@ -667,11 +667,11 @@ body {
                 }
 
                 .country-option {
-                    padding: 10px;
                     cursor: pointer;
                 }
 
                 .custom-scrollbar {
+                    overflow: hidden;
                     position: absolute;
                     top: 3.521vw;
                     right: 1.33vw;
@@ -792,3 +792,7 @@ body {
         }
     }
 }
+
+/* Branding page */
+
+
