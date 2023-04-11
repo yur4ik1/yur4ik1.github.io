@@ -27,7 +27,6 @@ if (brandingIco && brandingPopup) {
 }
 
 
-
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");
