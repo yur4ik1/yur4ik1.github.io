@@ -106,6 +106,7 @@ body {
                     display: flex;
                     align-items: center;
                     padding-left: 4.275vw;
+
                 }
 
                 .sidemenu__item-link::before {
@@ -125,13 +126,18 @@ body {
                 }
 
                 .submenu {
+                    background: #f7f8fa;
+                    mix-blend-mode: normal;
+                    margin-top: 0.313vw;
+
                     li {
                         width: 100%;
                         height: 2.972vw;
-                        background: #fff;
+                        background: transparent;
                         mix-blend-mode: normal;
                         display: flex;
                         align-items: center;
+                        position: relative;
 
                         a {
                             font-size: 0.782vw;
@@ -145,13 +151,40 @@ body {
                         }
                     }
 
+                    li::before {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: transparent;
+                        mix-blend-mode: normal;
+                        opacity: 1;
+                    }
+
                     li.active {
                         background: #f7f9f9;
 
                         a {
                             opacity: 1;
+                            z-index: 99999;
+
                         }
                     }
+
+                    li.active::before {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(83.66deg, #D6DDE6 4.45%, rgba(232, 241, 238, 0.93) 95.55%, rgba(255, 255, 255, 0.19) 110.55%);
+                        mix-blend-mode: normal;
+                        opacity: 0.3;
+                    }
+
                 }
             }
 
@@ -197,6 +230,7 @@ body {
 
                 .sidemenu__item-link {
                     color: #1B2438;
+                    background: #edf0f4
                 }
             }
         }
@@ -209,7 +243,7 @@ body {
         border-radius: 1.356vw;
         margin: 5.214vw 0 0 5.683vw;
         padding: 3.076vw 3.962vw 5.683vw 4.119vw;
-        padding-bottom: 5.735vw;
+        padding-bottom: 10.949vw;
         position: relative;
         margin-bottom: 12.409vw;
 
@@ -262,6 +296,7 @@ body {
 
             .account-owner {
                 display: flex;
+                margin-bottom: 5.683vw;
 
                 .custom-select {
                     position: relative;
@@ -407,7 +442,9 @@ body {
             }
 
             .company-info {
-                margin-top: 5.683vw;
+                margin-top: 5.19vw !important;
+                display: flex;
+                justify-content: space-between;
 
                 h4 {
                     font-family: 'Karla';
@@ -417,7 +454,6 @@ body {
                     line-height: 2.503vw;
                     letter-spacing: 0.014vw;
                     color: #1B2438;
-                    margin-top: 2.19vw;
                 }
 
                 input {
@@ -471,12 +507,13 @@ body {
                     letter-spacing: 0.01vw;
                     color: #B9BABE;
                 }
+
+                .right {
+                    margin-top: 2.5vw;
+                }
             }
 
             .country {
-                margin-top: 2.972vw;
-                display: flex;
-                justify-content: space-between;
 
                 .country-select-wrapper {
                     position: relative;
@@ -625,7 +662,7 @@ body {
             }
 
             .company-info {
-                margin-top: 0;
+                margin-top: 0 !important;
 
                 label {
                     margin-bottom: 2.242vw;
