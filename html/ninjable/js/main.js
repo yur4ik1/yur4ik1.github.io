@@ -1,3 +1,16 @@
+
+/* prifile popup */
+
+const profileBtn = document.querySelector('.header__avatar');
+const profilePopup = document.querySelector('.header__profile-popup');
+
+profileBtn.addEventListener('click', () => {
+  profilePopup.classList.toggle('active');
+});
+
+
+/* custom select */
+
 let selectElements = document.getElementsByClassName("custom-select");
 for (let i = 0; i < selectElements.length; i++) {
   let selectElement = selectElements[i];
@@ -41,3 +54,6 @@ countryOptionsContainer.addEventListener("scroll", () => {
     countryOptionsContainer.classList.remove("scrolling");
   }, 250);
 });
+
+
+

@@ -31,7 +31,7 @@ body {
     }
 
     &__logo {
-        width: 14.85vw;
+        width: 14.92vw;
         height: 5.892vw;
         border-right: 0.052vw solid #D7DEE6;
         display: flex;
@@ -75,6 +75,57 @@ body {
         position: absolute;
         left: 4.8vw;
     }
+
+    &__profile {
+        position: relative;
+    }
+
+    &__profile-popup {
+        width: 16.163vw;
+        height: 19.395vw;
+        background: #FFFFFF;
+        box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+        border-radius: 1.043vw;
+        position: absolute;
+        top: 7vw;
+        right: 0vw;
+        padding: 1.564vw 3.337vw;
+        padding-right: 4.692vw;
+        display: none;
+
+        p {
+            font-size: 0.834vw;
+            line-height: 1.981vw;
+            letter-spacing: 0.011vw;
+            color: #1B2438;
+        }
+
+        li {
+            display: grid;
+            a {
+                font-size: 0.834vw;
+                line-height: 1.981vw;
+                letter-spacing: 0.011vw;
+                color: #8D919B;
+            }
+        }
+        li:last-child {
+            margin-top: 25%;
+        }
+    }
+    &__profile-popup::before {
+        content: '';
+        background: url(../img/profile-line.svg) no-repeat center top / cover;
+        width: 100%;
+        height: 0.104vw;
+        position: absolute;
+        top: 14.5vw;
+        left: 0;
+       
+    }
+    &__profile-popup.active {
+        display: block;
+    }
 }
 
 .another__wrapper {
@@ -83,7 +134,7 @@ body {
 
 
     .sidebar {
-        width: 18.7vw;
+        width: 18.8vw;
         height: 100%;
         border-right: 0.052vw solid #D7DEE6;
         background: #fff;
@@ -253,7 +304,7 @@ body {
             height: 30.657vw;
             position: absolute;
             left: 0;
-            top: 4.10vw;
+            top: 3.1vw;
         }
 
         h2 {
