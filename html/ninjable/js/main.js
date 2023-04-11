@@ -36,10 +36,28 @@ const countrySelect = document.querySelector(".country-select");
 const countryTrigger = document.querySelector(".country-select__trigger");
 const countryOptionsContainer = document.querySelector(".country-options");
 const countryOptionsList = document.querySelectorAll(".country-option");
+const customScrollbar = document.querySelector(".custom-scrollbar");
+const customScrollbarThumb = document.createElement("div");
+customScrollbarThumb.classList.add("custom-scrollbar-thumb");
+customScrollbar.appendChild(customScrollbarThumb);
+
+function updateScroll() {
+  const containerScrollTop = countryOptionsContainer.scrollTop;
+  const containerHeight = countryOptionsContainer.clientHeight;
+  const containerScrollHeight = countryOptionsContainer.scrollHeight;
+  const scrollbarHeight = customScrollbar.clientHeight;
+  const thumbHeight = Math.max((containerHeight / containerScrollHeight) * scrollbarHeight, 100);
+  const maxThumbTop = scrollbarHeight - thumbHeight;
+  const thumbTop = (containerScrollTop / (containerScrollHeight - containerHeight)) * maxThumbTop;
+  customScrollbarThumb.style.height = `${thumbHeight}px`;
+  customScrollbarThumb.style.top = `${thumbTop}px`;
+}
 
 countryTrigger.addEventListener("click", () => {
   countrySelect.classList.toggle("open");
 });
+
+countryOptionsContainer.addEventListener("scroll", updateScroll);
 
 countryOptionsList.forEach((o) => {
   o.addEventListener("click", () => {
@@ -49,13 +67,33 @@ countryOptionsList.forEach((o) => {
   });
 });
 
-countryOptionsContainer.addEventListener("scroll", () => {
-  countryOptionsContainer.classList.add("scrolling");
-  clearTimeout(countryOptionsContainer.dataset.scrollTimeout);
-  countryOptionsContainer.dataset.scrollTimeout = setTimeout(() => {
-    countryOptionsContainer.classList.remove("scrolling");
-  }, 250);
+customScrollbarThumb.addEventListener("mousedown", (e) => {
+  const thumbStartPosition = e.clientY - customScrollbarThumb.getBoundingClientRect().top;
+  const scrollbarHeight = customScrollbar.clientHeight;
+  const thumbHeight = customScrollbarThumb.clientHeight;
+  const maxThumbTop = scrollbarHeight - thumbHeight;
+
+  function onMouseMove(e) {
+    const thumbTop = e.clientY - customScrollbar.getBoundingClientRect().top - thumbStartPosition;
+    if (thumbTop < 0) {
+      customScrollbarThumb.style.top = "0";
+      countryOptionsContainer.scrollTop = 0;
+    } else if (thumbTop > maxThumbTop) {
+      customScrollbarThumb.style.top = maxThumbTop + "px";
+      countryOptionsContainer.scrollTop = countryOptionsContainer.scrollHeight;
+    } else {
+      customScrollbarThumb.style.top = thumbTop + "px";
+      countryOptionsContainer.scrollTop = thumbTop / maxThumbTop * (countryOptionsContainer.scrollHeight - countryOptionsContainer.clientHeight);
+    }
+  }
+
+  function onMouseUp() {
+    window.removeEventListener("mousemove", onMouseMove);
+    window.removeEventListener("mouseup", onMouseUp);
+  }
+
+  window.addEventListener("mousemove", onMouseMove);
+  window.addEventListener("mouseup", onMouseUp);
 });
 
-
-
+updateScroll();
