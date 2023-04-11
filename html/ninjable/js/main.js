@@ -9,6 +9,25 @@ profileBtn.addEventListener('click', () => {
 });
 
 
+/* Custom branding */
+
+const brandingIco = document.querySelector('.content__section-title.icon');
+const brandingPopup = document.querySelector('.branding__popup');
+
+if (brandingIco && brandingPopup) {
+  brandingIco.addEventListener('click', () => {
+    brandingPopup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.branding__popup') && !event.target.closest('.content__section-title.icon')) {
+      brandingPopup.classList.remove('active');
+    }
+  });
+}
+
+
+
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");

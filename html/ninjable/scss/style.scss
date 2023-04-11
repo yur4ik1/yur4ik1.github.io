@@ -806,11 +806,12 @@ body.branding {
 .another__wrapper {
     .content {
         h2 {
-            margin-bottom: 7.143vw;
+            margin-bottom: 3.233vw;
         }
 
         .content__section {
             margin-bottom: 2.711vw;
+            position: relative;
 
             .content__section-title {
                 font-family: 'Karla';
@@ -825,6 +826,7 @@ body.branding {
             .content__section-title.icon {
                 display: flex;
                 align-items: center;
+                width: fit-content;
             }
 
             .content__section-title.icon::after {
@@ -833,6 +835,64 @@ body.branding {
                 width: 0.834vw;
                 height: 0.834vw;
                 margin-left: 0.678vw;
+                cursor: pointer;
+            }
+
+            .branding__popup {
+                width: 13.139vw;
+                height: auto;
+                background: #FFFFFF;
+                box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+                border-radius: 1.043vw;
+                position: absolute;
+                top: 2.352vw;
+                left: 10.052vw;
+                z-index: 9999;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 1.668vw;
+                padding-left: 2.138vw;
+                padding-right: 1.616vw;
+                padding-bottom: 2.294vw;
+                visibility: hidden;
+                opacity: 0;
+
+                .title {
+                    font-size: 0.834vw;
+                    line-height: 1.668vw;
+                    letter-spacing: 0.011vw;
+                    color: #1B2438;
+                    margin-bottom: 0.938vw;
+                }
+
+                .desc {
+                    font-size: 0.782vw;
+                    line-height: 1.251vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                    margin-bottom: 2.346vw;
+                }
+
+                a {
+                    font-size: 0.834vw;
+                    line-height: 0.938vw;
+                    letter-spacing: 0.02vw;
+                    color: #FFFFFF;
+                    width: 6.778vw;
+                    height: 2.242vw;
+                    background: #869DC8;
+                    box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+                    border-radius: 0.521vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .branding__popup.active {
+                visibility: visible;
+                opacity: 1;
             }
 
             .content__block {
@@ -975,7 +1035,7 @@ body.branding {
                         li:last-child {
                             margin-bottom: 0;
                         }
-                        
+
 
                         li::before {
                             content: '';
