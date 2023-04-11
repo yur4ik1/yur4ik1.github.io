@@ -10,8 +10,10 @@ body {
     overflow-x: hidden;
     background: url(../img/content-bg.png) no-repeat center top / cover;
 }
+
 body.branding {
     background: url(../img/content-branding.png) no-repeat center top / cover;
+    height: 223.842vw;
 }
 
 
@@ -305,7 +307,7 @@ body.branding {
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
         margin: 5.214vw 0 0 5.683vw;
-        padding: 3.076vw 3.962vw 5.683vw 4.119vw;
+        padding: 3.076vw 3.962vw 3.683vw 4.119vw;
         position: relative;
         margin-bottom: 12.409vw;
 
@@ -800,9 +802,9 @@ body.branding {
 /* Branding page */
 
 
+
 .another__wrapper {
     .content {
-        margin-bottom: 33.003vw;
         h2 {
             margin-bottom: 7.143vw;
         }
@@ -873,6 +875,7 @@ body.branding {
                     display: flex;
                     align-items: center;
                     margin-bottom: 4.223vw;
+                    margin-top: 1.564vw;
 
                     .logo {
                         width: 16.788vw;
@@ -955,6 +958,7 @@ body.branding {
                         line-height: 1.668vw;
                         letter-spacing: 0.01vw;
                         color: #1B2438;
+                        margin-bottom: 1.303vw;
                     }
 
                     .upload__info-list {
@@ -965,7 +969,13 @@ body.branding {
                             align-items: center;
                             letter-spacing: 0.01vw;
                             color: #B9BABE;
+                            margin-bottom: 0.417vw;
                         }
+
+                        li:last-child {
+                            margin-bottom: 0;
+                        }
+                        
 
                         li::before {
                             content: '';
@@ -981,6 +991,8 @@ body.branding {
                         line-height: 1.668vw;
                         letter-spacing: 0.01vw;
                         color: #B9BABE;
+                        margin-top: 1.303vw;
+                        margin-bottom: 3.65vw;
                     }
 
                     .illustration-info {
