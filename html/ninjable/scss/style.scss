@@ -1312,6 +1312,44 @@ body.subscription-page {
 
 .content.billing {
     .content__section {
+        .content__section-title.invoices {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .invoices-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                margin-bottom: 1.356vw;
+
+                img {
+                    width: 1.877vw;
+                    height: 1.877vw;
+                }
+            }
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                margin-bottom: 1.356vw;
+
+                img {
+                    width: 3.962vw;
+                    height: 3.962vw;
+                    position: relative;
+                    left: 0.865vw;
+                }
+            }
+        }
+
         .content__block.subdomain {
             a {
                 margin-bottom: 0;
@@ -1450,6 +1488,26 @@ body.subscription-page {
                     .invoices__list-item.colored {
                         background: rgba(233, 237, 242, 0.45);
                     }
+                }
+            }
+        }
+
+        .content__block {
+            .payment__method-table {
+                .payment__method-header {
+                    height: 4.901vw;
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        font-family: 'Karla';
+                        font-weight: 700;
+                        font-size: 0.834vw;
+                        line-height: 2.503vw;
+                        letter-spacing: 0.011vw;
+                        color: #869DC8;
+                    }
+
                 }
             }
         }
