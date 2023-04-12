@@ -1531,6 +1531,7 @@ body.billing-page {
                 .payment__method-item {
                     position: relative;
                     transition: 0.2s;
+                    cursor: pointer;
 
                     td {
                         z-index: 999999;
@@ -1705,6 +1706,13 @@ body.billing-page {
                 line-height: 4.015vw;
                 letter-spacing: 0.02vw;
                 color: #8D919B;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .cancel.active {
+                visibility: visible;
+                opacity: 1;
             }
         }
     }

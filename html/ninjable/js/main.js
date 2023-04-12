@@ -32,6 +32,24 @@ if (deleteBtn && deletePopup) {
   });
 }
 
+/* active cart */
+
+const paymentCarts = document.querySelectorAll('.payment__method-item');
+const cancelBtn = document.querySelector('.cancel');
+
+paymentCarts.forEach(paymentCart => {
+  paymentCart.addEventListener('click', () => {
+
+    paymentCarts.forEach(cart => {
+      if (cart !== paymentCart) {
+        cart.classList.remove('active');
+      }
+    });
+    
+    paymentCart.classList.add('active');
+    cancelBtn.classList.add('active');
+  });
+});
 /* Custom branding */
 
 const brandingIco = document.querySelector('.content__section-title.icon');
