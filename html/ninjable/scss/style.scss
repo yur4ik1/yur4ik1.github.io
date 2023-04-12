@@ -8,7 +8,12 @@
 body {
     font-style: normal;
     overflow-x: hidden;
+    padding-bottom: 10.063vw;
+}
+
+body.account-settings {
     background: url(../img/content-bg.png) no-repeat center top / cover;
+    height: 90.853vw;
 }
 
 body.branding {
@@ -21,6 +26,10 @@ body.subscription-page {
     height: 74.069vw;
 }
 
+body.billing-page {
+    background: url(../img/content-billing.png) no-repeat center top / cover;
+    height: 114.661vw;
+}
 
 .header {
     z-index: 99999;
@@ -313,7 +322,6 @@ body.subscription-page {
         margin: 5.214vw 0 0 5.683vw;
         padding: 3.076vw 3.962vw 3.683vw 4.119vw;
         position: relative;
-        margin-bottom: 12.409vw;
 
         .leaves {
             background: url(../img/lavelas.png) no-repeat center top / cover;
@@ -1318,7 +1326,7 @@ body.subscription-page {
             justify-content: space-between;
         }
 
-        .invoices-title{
+        .invoices-title {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1492,23 +1500,211 @@ body.subscription-page {
             }
         }
 
-        .content__block {
-            .payment__method-table {
-                .payment__method-header {
-                    height: 4.901vw;
-                    display: flex;
-                    align-items: center;
+        .content__block.payment-table {
+            padding: 0;
+            position: relative;
 
-                    p {
-                        font-family: 'Karla';
-                        font-weight: 700;
-                        font-size: 0.834vw;
-                        line-height: 2.503vw;
-                        letter-spacing: 0.011vw;
-                        color: #869DC8;
+            .payment__method-table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                height: auto;
+
+                .payment__method-header {
+                    font-family: 'Karla';
+                    font-weight: 700;
+                    font-size: 0.834vw;
+                    line-height: 2.503vw;
+                    letter-spacing: 0.011vw;
+                    color: #869DC8;
+                    height: 4.692vw;
+
+                    td:nth-child(1) {
+                        padding-left: 2.555vw;
                     }
 
+                    td:last-child {
+                        padding-right: 2.555vw;
+                    }
                 }
+
+                .payment__method-item {
+                    position: relative;
+                    transition: 0.2s;
+
+                    td {
+                        z-index: 999999;
+                        position: relative;
+                    }
+
+                    td:nth-child(1) {
+                        padding-left: 2.555vw;
+                    }
+
+                    td:last-child {
+                        padding-right: 2.555vw;
+                    }
+
+                    .payment-cart {
+                        width: 6.674vw;
+                    }
+
+                    .payment-number {
+                        width: 16.84vw;
+                    }
+
+                    .payment-expires {
+                        width: 11.157vw;
+                    }
+
+                    .payment-active {
+                        width: 12.878vw;
+                    }
+
+                    .payment-delete {
+                        width: 1.441vw;
+                    }
+
+                    .payment-icon {
+                        width: 2.972vw;
+                        height: 2.294vw;
+                        margin-top: 1.721vw;
+                        margin-bottom: 1.721vw;
+                    }
+
+                    .title {
+                        font-size: 0.834vw;
+                        line-height: 1.512vw;
+                        letter-spacing: 0.011vw;
+                        color: #1B2438;
+                    }
+
+                    .desc {
+                        font-size: 0.782vw;
+                        line-height: 1.512vw;
+                        letter-spacing: 0.01vw;
+                        color: #B9BABE;
+                    }
+
+                    .sub {
+                        font-size: 0.782vw;
+                        line-height: 1.147vw;
+                        letter-spacing: 0.01vw;
+                        color: #8D919B;
+                    }
+
+                    .delete-icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 1.303vw;
+                        height: 1.564vw;
+                        margin-left: auto;
+                    }
+
+                    .delete-icon::before {
+                        content: '';
+                        background: url(../img/delete-icon.svg) no-repeat center top / cover;
+                        width: 1.303vw;
+                        height: 1.564vw;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                .payment__method-item.active {
+                    background: rgba(233, 237, 242, 0.7);
+                }
+
+                .payment__method-item:hover {
+                    background: rgba(233, 237, 242, 0.7);
+                }
+
+            }
+
+            .alert-popup {
+                width: 13.399vw;
+                height: 9.228vw;
+                background: #FFFFFF;
+                box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+                border-radius: 1.043vw;
+                position: absolute;
+                top: 8.921vw;
+                right: 4.9vw;
+                z-index: 999999999;
+                padding: 1.668vw 2.19vw;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.2s;
+
+                p {
+                    font-size: 0.834vw;
+                    line-height: 1.668vw;
+                    letter-spacing: 0.011vw;
+                    color: #1B2438;
+                    text-align: center;
+                }
+
+                .btns {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.356vw;
+
+                    button {
+                        font-size: 0.834vw;
+                        line-height: 0.938vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        letter-spacing: 0.02vw;
+                        color: #FFFFFF;
+                        width: 3.91vw;
+                        height: 2.242vw;
+                        background: #869DC8;
+                        box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+                        border-radius: 0.521vw;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .alert-popup.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .payment__method-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btn {
+                font-weight: 400;
+                font-size: 0.834vw;
+                line-height: 0.938vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.02vw;
+                color: #FFFFFF;
+                width: 11.157vw;
+                height: 2.503vw;
+                background: #869DC8;
+                box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+                border-radius: 0.521vw;
+                margin-right: 2.138vw;
+            }
+
+            .cancel {
+                font-size: 0.782vw;
+                line-height: 4.015vw;
+                letter-spacing: 0.02vw;
+                color: #8D919B;
             }
         }
     }

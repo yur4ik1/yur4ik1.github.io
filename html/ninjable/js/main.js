@@ -4,10 +4,33 @@
 const profileBtn = document.querySelector('.header__avatar');
 const profilePopup = document.querySelector('.header__profile-popup');
 
-profileBtn.addEventListener('click', () => {
-  profilePopup.classList.toggle('active');
-});
+if (profileBtn && profilePopup) {
+  profileBtn.addEventListener('click', () => {
+    profilePopup.classList.toggle('active');
+  });
+}
 
+/* delete popup */
+
+const deleteBtn = document.querySelector('.delete-icon');
+const deletePopup = document.querySelector('.alert-popup');
+const closeDeletePopup = document.querySelector('.false');
+
+if (deleteBtn && deletePopup) {
+  deleteBtn.addEventListener('click', () => {
+    deletePopup.classList.toggle('active');
+  });
+
+  closeDeletePopup.addEventListener('click', () => {
+    deletePopup.classList.remove('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.alert-popup') && !event.target.closest('.delete-icon')) {
+      deletePopup.classList.remove('active');
+    }
+  });
+}
 
 /* Custom branding */
 

@@ -160,21 +160,88 @@
                         </a>
                     </div>
 
-                    <div class="content__block">
-                        <div class="payment__method-table">
-                            <div class="payment__method-header">
-                                <p>Card</p>
-                                <p>Number</p>
-
-                                <p>Expires</p>
-                                <p>Active</p>
-                                <p>Actions</p>
-
-                            </div>
-                            <div class="payment__method-item">
-
+                    <div class="content__block payment-table">
+                        <table class="payment__method-table">
+                            <thead class="payment__method-header">
+                                <tr>
+                                    <td>Card</td>
+                                    <td>Number</td>
+                                    <td>Expires</td>
+                                    <td>Active</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="payment__method-item active">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-1.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 0587</p>
+                                        <p class="desc">added 3 years ago</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">12/22</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc"> August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="payment__method-item">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-2.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 0211</p>
+                                        <p class="desc">added 1 year ago</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">10/23</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc">August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="payment__method-item">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-3.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 5899</p>
+                                        <p class="desc">added 2 months ag</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">09/21</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc"> August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="alert-popup">
+                            <p>Are you sure?</p>
+                            <div class="btns">
+                                <button class="true">Yes</button>
+                                <button class="false">No</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="payment__method-bottom">
+                        <a class="btn" href="#">Switch active card</a>
+                        <a class="cancel" href="#">Cancel</a>
                     </div>
                 </div>
             </section>
