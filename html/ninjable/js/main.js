@@ -19,20 +19,41 @@ const closeDeletePopup = document.querySelector('.false');
 if (deleteBtn && deletePopup) {
   deleteBtn.addEventListener('click', () => {
     deletePopup.classList.toggle('active');
+    deleteBtn.classList.toggle('active');
   });
 
   closeDeletePopup.addEventListener('click', () => {
     deletePopup.classList.remove('active');
+    deleteBtn.classList.remove('active');
   });
 
   document.addEventListener('click', (event) => {
     if (!event.target.closest('.alert-popup') && !event.target.closest('.delete-icon')) {
       deletePopup.classList.remove('active');
+      deleteBtn.classList.remove('active');
     }
   });
 }
 
-/* active cart */
+/* custom period popup */
+
+const periodPopup = document.querySelector('.custom__period-popup');
+const invoicesBtn = document.querySelector('.invoices-btn');
+const invoicesCloseBtn = document.querySelector('.custom__period-close');
+
+if (invoicesBtn && periodPopup) {
+  invoicesBtn.addEventListener('click', () => {
+    periodPopup.classList.add('active');
+  });
+  if (invoicesCloseBtn) {
+    invoicesCloseBtn.addEventListener('click', () => {
+      periodPopup.classList.remove('active');
+    });
+  }
+}
+
+
+/* payment method */
 
 const paymentCarts = document.querySelectorAll('.payment__method-item');
 const cancelBtn = document.querySelector('.cancel');
@@ -45,11 +66,13 @@ paymentCarts.forEach(paymentCart => {
         cart.classList.remove('active');
       }
     });
-    
+
     paymentCart.classList.add('active');
     cancelBtn.classList.add('active');
   });
 });
+
+
 /* Custom branding */
 
 const brandingIco = document.querySelector('.content__section-title.icon');

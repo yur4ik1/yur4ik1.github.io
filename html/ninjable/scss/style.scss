@@ -1333,6 +1333,7 @@ body.billing-page {
 
             a {
                 margin-bottom: 1.356vw;
+                cursor: pointer;
 
                 img {
                     width: 1.877vw;
@@ -1605,6 +1606,10 @@ body.billing-page {
                         margin-left: auto;
                     }
 
+                    .delete-icon.active {
+                        opacity: 0.4;
+                    }
+
                     .delete-icon::before {
                         content: '';
                         background: url(../img/delete-icon.svg) no-repeat center top / cover;
@@ -1716,4 +1721,97 @@ body.billing-page {
             }
         }
     }
+
+    .custom__period-popup {
+        z-index: 10000000000000000;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background: rgba(6, 8, 13, .15);
+        -webkit-backdrop-filter: blur(0.1vw);
+        backdrop-filter: blur(0.1vw);
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: .2s;
+        -o-transition: .2s;
+        transition: .2s;
+
+        .custom__period-inner {
+            width: 43.535vw;
+            height: 46.298vw;
+            background: #FFFFFF;
+            box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+            border-radius: 1.356vw;
+
+            .custom__period-header {
+                position: relative;
+                padding-top: 1.981vw;
+                padding-left: 4.119vw;
+                padding-bottom: 2.086vw;
+                border-bottom: 0.104vw solid #E4E8EE;
+
+                h4 {
+                    font-family: 'Karla';
+                    font-weight: 700;
+                    font-size: 1.303vw;
+                    line-height: 2.503vw;
+                    letter-spacing: 0.021vw;
+                    color: #1B2438;
+                }
+
+                p {
+                    font-family: 'Karla';
+                    font-weight: 700;
+                    font-size: 0.834vw;
+                    line-height: 1.043vw;
+                    letter-spacing: 0.021vw;
+                    color: #B9BABE;
+                }
+
+                .custom__period-close {
+                    width: 2.033vw;
+                    height: 1.981vw;
+                    background: #fafcfb;
+                    -webkit-box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, .25);
+                    box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, .25);
+                    border-radius: 0.417vw;
+                    position: absolute;
+                    right: 2.45vw;
+                    top: 2.555vw;
+                    cursor: pointer;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+
+                    img {
+                        width: 0.886vw;
+                        height: 0.834vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .custom__period-popup.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
 }
