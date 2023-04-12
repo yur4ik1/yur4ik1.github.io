@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINJABLE - Subscription</title>
+    <title>NINJABLE - Billing</title>
     <meta name="robots" content="index,follow">
     <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
-    <meta name="description" content="NINJABLE - Subscription">
+    <meta name="description" content="NINJABLE - Billing">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="subscription-page">
+<body class="billing-page">
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -88,44 +88,67 @@
                 </ul>
             </section>
 
-            <section class="content subscription">
-                <h2>SUBSCRIPION</h2>
+            <section class="content billing">
+                <h2>BILLING</h2>
                 <div class="content__section">
-                    <h3 class="content__section-title">Subscription Summary</h3>
-                    <div class="content__block">
-                        <div class="summary">
-                            <p class="number">95</p>
-                            <p class="text">Licensed Users</p>
-                        </div>
+                    <h3 class="content__section-title">Your Subscription</h3>
+                    <div class="content__block subdomain">
+                        <p>You are currently on the Core Monthly plan (monthly payments). </p>
+                        <a target="__blank" href="#">Upgrade</a>
                     </div>
-                    <div class="content__block pro">
-                        <div class="summary">
-                            <p class="number">PRO</p>
-                            <p class="text">Current Plan</p>
-                            <div class="summary__btns">
-                                <a class="downgrade__btn" href="#">Downgrade</a>
-                                <a class="upgrade__btn" >Upgrade</a>
+                    <div class="content__block">
+                        <div class="subscription__info">
+                            <div class="subscription__info-item">
+                                <p class="info-title">Users:</p>
+                                <p class="info-number">95 Users - $3 per month</p>
+                            </div>
+                            <div class="subscription__info-item">
+                                <p class="info-title">Monthly cost:</p>
+                                <p class="info-number">$ 276.00</p>
+                            </div>
+                            <div class="subscription__info-item">
+                                <p class="info-title">Next payment due:</p>
+                                <p class="info-number">22 - Sep - 2021</p>
                             </div>
                         </div>
                     </div>
-                    <div class="subscription__content-bottom">
-                        <p class="zone">Danger Zone</p>
-                        <a class="zone__btn" href="#">Cancel Subscription</a>
+                </div>
+                <div class="content__section">
+                    <h3 class="content__section-title">Invoices</h3>
+                    <div class="content__block invoices">
+                        <div class="invoices__table">
+                            <div class="invoices__table-header">
+                                <p>Invoice</p>
+                                <p>Date</p>
+                                <p>Amount</p>
+                                <p>Download</p>
+                            </div>
+                            <div class="invoices__list">
+                                <div class="invoices__list-item">
+                                    <p>#120587</p>
+                                    <p>22/08/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                                <div class="invoices__list-item">
+                                    <p>#520211</p>
+                                    <p>22/07/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                                <div class="invoices__list-item">
+                                    <p>#355899</p>
+                                    <p>22/06/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </section>
 
-        <div class="subscription__popup">
-            <div class="subscription__popup-inner">
-                <div class="subscription__popup-header">
-                    <span class="subscription__popup-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="./js/main.min.js"></script>

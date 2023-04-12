@@ -828,6 +828,8 @@ body.subscription-page {
             .content__section-title.icon {
                 display: flex;
                 align-items: center;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
                 width: fit-content;
             }
 
@@ -1148,7 +1150,6 @@ body.subscription-page {
 
 /* Subscription page */
 
-
 .content.subscription {
     .content__section {
         margin-bottom: 0;
@@ -1251,14 +1252,8 @@ body.subscription-page {
     height: 100%;
     left: 0;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     background: rgba(6, 8, 13, 0.15);
     -webkit-backdrop-filter: blur(0.1vw);
@@ -1303,7 +1298,6 @@ body.subscription-page {
                     height: 0.834vw;
                 }
             }
-
         }
     }
 }
@@ -1311,4 +1305,153 @@ body.subscription-page {
 .subscription__popup.active {
     visibility: visible;
     opacity: 1;
+}
+
+
+/* Billing page */
+
+.content.billing {
+    .content__section {
+        .content__block.subdomain {
+            a {
+                margin-bottom: 0;
+            }
+        }
+
+        .content__block {
+            margin-bottom: 1.721vw;
+
+            .subscription__info {
+                display: flex;
+                flex-direction: column;
+
+                .subscription__info-item {
+                    width: 26.694vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 0.782vw;
+
+                    .info-title {
+                        font-size: 0.782vw;
+                        line-height: 2.242vw;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.01vw;
+                        color: #1B2438;
+                        width: 10.385vw;
+                    }
+
+                    .info-number {
+                        width: 10.385vw;
+                        font-size: 0.782vw;
+                        line-height: 2.086vw;
+                        letter-spacing: 0.01vw;
+                        color: #B9BABE;
+                        display: block;
+                    }
+                }
+
+                .subscription__info-item:last-child {
+                    margin-bottom: 0;
+                }
+
+                .subscription__info-item:nth-child(1) .info-title::before {
+                    content: '';
+                    background: url(../img/billing-info-icon-1.svg) no-repeat center top / cover;
+                    width: 1.303vw;
+                    height: 1.251vw;
+                    display: block;
+                    margin-right: 0.938vw;
+                }
+
+                .subscription__info-item:nth-child(2) .info-title::before {
+                    content: '';
+                    background: url(../img/billing-info-icon-2.svg) no-repeat center top / cover;
+                    width: 1.303vw;
+                    height: 1.285vw;
+                    display: block;
+                    margin-right: 0.938vw;
+                }
+
+                .subscription__info-item:nth-child(3) .info-title::before {
+                    content: '';
+                    background: url(../img/billing-info-icon-3.svg) no-repeat center top / cover;
+                    width: 1.303vw;
+                    height: 1.251vw;
+                    display: block;
+                    margin-right: 0.938vw;
+                }
+            }
+        }
+
+        .content__block.invoices {
+            padding: 0;
+
+            .invoices__table {
+
+                .invoices__table-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 4.692vw;
+                    padding-left: 6.1vw;
+                    padding-right: 6.1vw;
+
+                    p {
+                        font-family: 'Karla';
+                        font-weight: 700;
+                        font-size: 0.834vw;
+                        line-height: 2.503vw;
+                        letter-spacing: 0.011vw;
+                        color: #869DC8;
+
+                    }
+                }
+
+                .invoices__list {
+                    .invoices__list-item {
+                        height: 3.806vw;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-left: 6.1vw;
+                        padding-right: 6.1vw;
+
+                        p {
+                            font-size: 0.782vw;
+                            line-height: 1.512vw;
+                            letter-spacing: 0.01vw;
+                            color: #B9BABE;
+                            width: 10vw;
+                        }
+
+                        a {
+                            font-size: 0.782vw;
+                            line-height: 2.503vw;
+                            letter-spacing: 0.01vw;
+                            color: #1B2438;
+                            display: flex;
+                            align-items: center;
+
+                        }
+
+                        a::before {
+                            content: '';
+                            background: url('../img/invoices-download-icon.svg') no-repeat center top / cover;
+                            width: 0.938vw;
+                            height: 0.938vw;
+                            display: block;
+                            margin-right: 0.521vw;
+                        }
+                    }
+
+                    .invoices__list-item.colored {
+                        background: rgba(233, 237, 242, 0.45);
+                    }
+                }
+            }
+        }
+    }
 }

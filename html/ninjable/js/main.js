@@ -43,6 +43,12 @@ if (subscriptionBtn && subscriptionPopup) {
   });
 }
 
+/* invoices table colored  */
+
+const invoices = document.querySelectorAll(".invoices__list-item");
+for (let i = 0; i < invoices.length; i += 2) {
+  invoices[i].classList.add("colored");
+}
 
 /* custom select */
 
@@ -132,3 +138,4 @@ customScrollbarThumb.addEventListener("mousedown", (e) => {
 });
 
 updateScroll();
+
