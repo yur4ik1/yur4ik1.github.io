@@ -114,6 +114,29 @@ for (let i = 0; i < invoices.length; i += 2) {
   invoices[i].classList.add("colored");
 }
 
+/* Calendar  */
+
+const calendarFrom = document.querySelectorAll('.calendar-from td');
+if (calendarFrom) {
+  calendarFrom.forEach(td => {
+    td.addEventListener('click', function () {
+      calendarFrom.forEach(td => td.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
+
+const calendarTo = document.querySelectorAll('.calendar-to td');
+if (calendarTo) {
+  calendarTo.forEach(td => {
+    td.addEventListener('click', function () {
+      calendarTo.forEach(td => td.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
+
+
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");
@@ -135,9 +158,16 @@ for (let i = 0; i < selectElements.length; i++) {
   }
 }
 
-/* custom select new__custom */
-
+/* custom select new */
 const new__customSelects = document.querySelectorAll(".new__custom-select");
+
+function closeAllSelectsExcept(selectedSelect) {
+  new__customSelects.forEach((select) => {
+    if (select !== selectedSelect && select.classList.contains("open")) {
+      select.classList.remove("open");
+    }
+  });
+}
 
 new__customSelects.forEach((new__customSelect) => {
   const new__customTrigger = new__customSelect.querySelector(".new__custom-select__trigger");
@@ -161,7 +191,12 @@ new__customSelects.forEach((new__customSelect) => {
   }
 
   new__customTrigger.addEventListener("click", () => {
-    new__customSelect.classList.toggle("open");
+    if (new__customSelect.classList.contains("open")) {
+      new__customSelect.classList.remove("open");
+    } else {
+      closeAllSelectsExcept(new__customSelect);
+      new__customSelect.classList.add("open");
+    }
   });
 
   new__customOptionsContainer.addEventListener("scroll", updateScroll);
@@ -205,5 +240,3 @@ new__customSelects.forEach((new__customSelect) => {
 
   updateScroll();
 });
-
-

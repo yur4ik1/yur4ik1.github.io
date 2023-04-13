@@ -1874,6 +1874,10 @@ body.billing-page {
                             margin-bottom: 0.938vw;
                         }
 
+                        .date__select-wrapper {
+                            position: relative;
+                        }
+
                         .new__custom-select-wrapper.date-select {
                             position: relative;
                             -webkit-user-select: none;
@@ -1882,6 +1886,7 @@ body.billing-page {
                             user-select: none;
                             width: 100%;
                             display: flex;
+                            position: absolute;
                         }
 
                         .new__custom-select.month {
@@ -2016,7 +2021,7 @@ body.billing-page {
                         }
 
                         .new__custom-option {
-                            width: 23.931vw;
+                            width: 83%;
                             padding-left: 2.033vw;
                             font-size: 0.782vw;
                             line-height: 0.834vw;
@@ -2071,7 +2076,7 @@ body.billing-page {
 
 
                         .datepicker__calendar {
-                            margin-top: 2.19vw;
+                            margin-top: 6vw;
                             width: 16.475vw;
                             height: 14.39vw;
                             background: #FFFFFF;
@@ -2085,8 +2090,7 @@ body.billing-page {
 
                             table {
                                 width: 100%;
-                                border-collapse: collapse;
-                                border-spacing: 0;
+                                border-spacing: 0.617vw 0.617vw;
                                 height: auto;
 
                                 .datepicker__calendar-header {
@@ -2128,11 +2132,31 @@ body.billing-page {
                                     width: 1.147vw;
                                     height: 1.147vw;
                                     text-align: center;
-                                    line-height: 1.59vw;
+
                                 }
                             }
                         }
                     }
+                }
+            }
+
+            .custom__period-footer {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    font-size: 0.834vw;
+                    line-height: 0.938vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 0.02vw;
+                    color: #FFFFFF;
+                    width: 8.238vw;
+                    height: 2.503vw;
+                    background: #869DC8;
+                    box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+                    border-radius: 0.521vw;
                 }
             }
         }

@@ -244,7 +244,7 @@
                         <a class="cancel" href="#">Cancel</a>
                     </div>
 
-                    <div class="custom__period-popup ">
+                    <div class="custom__period-popup active">
                         <div class="custom__period-inner">
                             <div class="custom__period-header">
                                 <span class="custom__period-close">
@@ -265,48 +265,47 @@
                                 <div class="date__list">
                                     <div class="date__list-item">
                                         <h4>From</h4>
-                                        <div class="new__custom-select-wrapper date-select">
-                                            <div class="new__custom-select">
-                                                <div class="new__custom-select__trigger month">Month
-                                                    <div class="arrow"></div>
+                                        <div class="date__select-wrapper">
+                                            <div class="new__custom-select-wrapper date-select">
+                                                <div class="new__custom-select">
+                                                    <div class="new__custom-select__trigger month">Month
+                                                        <div class="arrow"></div>
+                                                    </div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">January</div>
+                                                        <div class="new__custom-option" data-value="us">February</div>
+                                                        <div class="new__custom-option" data-value="ca">March</div>
+                                                        <div class="new__custom-option" data-value="mx">April</div>
+                                                        <div class="new__custom-option" data-value="br">May</div>
+                                                        <div class="new__custom-option" data-value="ua">June</div>
+                                                        <div class="new__custom-option" data-value="us">July</div>
+                                                        <div class="new__custom-option" data-value="ca">August</div>
+                                                        <div class="new__custom-option" data-value="mx">September</div>
+                                                        <div class="new__custom-option" data-value="br">October</div>
+                                                        <div class="new__custom-option" data-value="br">November</div>
+                                                        <div class="new__custom-option" data-value="br">December</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
                                                 </div>
-                                                <div class="new__custom-options">
-                                                    <div class="new__custom-option" data-value="ua">November</div>
-                                                    <div class="new__custom-option" data-value="us">November</div>
-                                                    <div class="new__custom-option" data-value="ca">November</div>
-                                                    <div class="new__custom-option" data-value="mx">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="ua">November</div>
-                                                    <div class="new__custom-option" data-value="us">November</div>
-                                                    <div class="new__custom-option" data-value="ca">November</div>
-                                                    <div class="new__custom-option" data-value="mx">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
+
+                                                <div class="new__custom-select years">
+                                                    <div class="new__custom-select__trigger years">Year
+                                                        <div class="arrow"></div>
+                                                    </div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">2023</div>
+                                                        <div class="new__custom-option" data-value="us">2024</div>
+                                                        <div class="new__custom-option" data-value="ca">2025</div>
+                                                        <div class="new__custom-option" data-value="us">2026</div>
+                                                        <div class="new__custom-option" data-value="ca">2027</div>
+                                                        <div class="new__custom-option" data-value="us">2028</div>
+                                                        <div class="new__custom-option" data-value="ca">2029</div>
+                                                        <div class="new__custom-option" data-value="ca">2030</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
                                                 </div>
-                                                <div class="custom-scrollbar"></div>
                                             </div>
 
-                                            <div class="new__custom-select years">
-                                                <div class="new__custom-select__trigger years">Year
-                                                    <div class="arrow"></div>
-                                                </div>
-                                                <div class="new__custom-options">
-                                                    <div class="new__custom-option" data-value="ua">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                </div>
-                                                <div class="custom-scrollbar"></div>
-                                            </div>
                                         </div>
 
                                         <div class="datepicker__calendar">
@@ -322,7 +321,7 @@
                                                         <td>Sa</td>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="datepicker__calendar-content">
+                                                <tbody class="datepicker__calendar-content calendar-from">
                                                     <tr>
                                                         <td></td>
                                                         <td></td>
@@ -334,8 +333,8 @@
                                                     </tr>
                                                     <tr>
                                                         <td>4</td>
-                                                        <td>5</td>
-                                                        <td class="active">6</td>
+                                                        <td class="active">5</td>
+                                                        <td>6</td>
                                                         <td>7</td>
                                                         <td>8</td>
                                                         <td>9</td>
@@ -375,47 +374,45 @@
 
                                     <div class="date__list-item">
                                         <h4>To</h4>
-                                        <div class="new__custom-select-wrapper date-select">
-                                            <div class="new__custom-select">
-                                                <div class="new__custom-select__trigger month">Month
-                                                    <div class="arrow"></div>
+                                        <div class="date__select-wrapper">
+                                            <div class="new__custom-select-wrapper date-select">
+                                                <div class="new__custom-select">
+                                                    <div class="new__custom-select__trigger month">Month
+                                                        <div class="arrow"></div>
+                                                    </div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">January</div>
+                                                        <div class="new__custom-option" data-value="us">February</div>
+                                                        <div class="new__custom-option" data-value="ca">March</div>
+                                                        <div class="new__custom-option" data-value="mx">April</div>
+                                                        <div class="new__custom-option" data-value="br">May</div>
+                                                        <div class="new__custom-option" data-value="ua">June</div>
+                                                        <div class="new__custom-option" data-value="us">July</div>
+                                                        <div class="new__custom-option" data-value="ca">August</div>
+                                                        <div class="new__custom-option" data-value="mx">September</div>
+                                                        <div class="new__custom-option" data-value="br">October</div>
+                                                        <div class="new__custom-option" data-value="br">November</div>
+                                                        <div class="new__custom-option" data-value="br">December</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
                                                 </div>
-                                                <div class="new__custom-options">
-                                                    <div class="new__custom-option" data-value="ua">November</div>
-                                                    <div class="new__custom-option" data-value="us">November</div>
-                                                    <div class="new__custom-option" data-value="ca">November</div>
-                                                    <div class="new__custom-option" data-value="mx">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="ua">November</div>
-                                                    <div class="new__custom-option" data-value="us">November</div>
-                                                    <div class="new__custom-option" data-value="ca">November</div>
-                                                    <div class="new__custom-option" data-value="mx">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                    <div class="new__custom-option" data-value="br">November</div>
-                                                </div>
-                                                <div class="custom-scrollbar"></div>
-                                            </div>
 
-                                            <div class="new__custom-select years">
-                                                <div class="new__custom-select__trigger years">Year
-                                                    <div class="arrow"></div>
+                                                <div class="new__custom-select years">
+                                                    <div class="new__custom-select__trigger years">Year
+                                                        <div class="arrow"></div>
+                                                    </div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">2023</div>
+                                                        <div class="new__custom-option" data-value="us">2024</div>
+                                                        <div class="new__custom-option" data-value="ca">2025</div>
+                                                        <div class="new__custom-option" data-value="us">2026</div>
+                                                        <div class="new__custom-option" data-value="ca">2027</div>
+                                                        <div class="new__custom-option" data-value="us">2028</div>
+                                                        <div class="new__custom-option" data-value="ca">2029</div>
+                                                        <div class="new__custom-option" data-value="ca">2030</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
                                                 </div>
-                                                <div class="new__custom-options">
-                                                    <div class="new__custom-option" data-value="ua">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                    <div class="new__custom-option" data-value="us">2017</div>
-                                                    <div class="new__custom-option" data-value="ca">2017</div>
-                                                </div>
-                                                <div class="custom-scrollbar"></div>
                                             </div>
                                         </div>
 
@@ -432,7 +429,7 @@
                                                         <td>Sa</td>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="datepicker__calendar-content">
+                                                <tbody class="datepicker__calendar-content calendar-to">
                                                     <tr>
                                                         <td></td>
                                                         <td></td>
@@ -445,7 +442,7 @@
                                                     <tr>
                                                         <td>4</td>
                                                         <td>5</td>
-                                                        <td class="active">6</td>
+                                                        <td>6</td>
                                                         <td>7</td>
                                                         <td>8</td>
                                                         <td>9</td>
@@ -483,6 +480,9 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="custom__period-footer">
+                                <a href="#">Select</a>
                             </div>
                         </div>
                     </div>
