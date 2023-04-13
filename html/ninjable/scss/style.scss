@@ -207,6 +207,9 @@ body.billing-page {
                     background: #f7f8fa;
                     mix-blend-mode: normal;
                     margin-top: 0.313vw;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: .3s;
 
                     li {
                         width: 100%;
@@ -264,6 +267,10 @@ body.billing-page {
                     }
 
                 }
+            }
+
+            .sidemenu__item.active .submenu {
+                max-height: 900px;
             }
 
             .sidemenu__item:nth-child(2)>.sidemenu__item-link::before {
@@ -2168,3 +2175,5 @@ body.billing-page {
     }
 
 }
+
+/* Users page */

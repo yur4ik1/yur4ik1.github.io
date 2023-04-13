@@ -1,4 +1,18 @@
 
+/* sidebar menu */
+
+const sidemenuItem = document.querySelectorAll('.sidemenu__item');
+
+if (sidemenuItem) {
+  sidemenuItem.forEach(menu => {
+    menu.addEventListener('click', function () {
+      sidemenuItem.forEach(menu => menu.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+}
+
+
 /* profile popup */
 
 const profileBtn = document.querySelector('.header__avatar');
