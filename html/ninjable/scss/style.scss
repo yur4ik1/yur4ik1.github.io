@@ -523,7 +523,7 @@ body.billing-page {
                 justify-content: space-between;
 
                 h4 {
-                    font-family: 'Karla';
+
                     font-style: normal;
                     font-weight: 500;
                     font-size: 1.043vw;
@@ -593,7 +593,7 @@ body.billing-page {
                 margin-bottom: 2.542vw;
                 display: flex;
 
-                .country-select-wrapper {
+                .new__custom-select-wrapper {
                     position: relative;
                     -webkit-user-select: none;
                     -moz-user-select: none;
@@ -602,12 +602,12 @@ body.billing-page {
                     width: 26.799vw;
                 }
 
-                .country-select {
+                .new__custom-select {
                     position: absolute;
                     width: 100%;
                 }
 
-                .country-select__trigger {
+                .new__custom-select__trigger {
                     position: relative;
                     display: flex;
                     justify-content: space-between;
@@ -642,15 +642,15 @@ body.billing-page {
                     border-top: 0.261vw solid #555;
                 }
 
-                .country-select.open .arrow {
+                .new__custom-select.open .arrow {
                     transform: rotate(-180deg);
                 }
 
-                .country-select.open {
+                .new__custom-select.open {
                     height: 15.641vw;
                 }
 
-                .country-options {
+                .new__custom-options {
                     position: absolute;
                     display: none;
                     top: 2.607vw;
@@ -670,21 +670,21 @@ body.billing-page {
                     scrollbar-width: none;
                 }
 
-                .country-options::-webkit-scrollbar {
+                .new__custom-options::-webkit-scrollbar {
                     display: none !important;
                 }
 
-                .country-select-container {
+                .new__custom-select-container {
                     position: relative;
                     height: 7.821vw;
                     overflow: auto;
                 }
 
-                .country-options {
+                .new__custom-options {
                     width: 100%;
                 }
 
-                .country-option {
+                .new__custom-option {
                     cursor: pointer;
                 }
 
@@ -702,7 +702,7 @@ body.billing-page {
                     border-radius: 1.043vw;
                 }
 
-                .country-select.open .custom-scrollbar {
+                .new__custom-select.open .custom-scrollbar {
                     display: block;
                 }
 
@@ -716,7 +716,7 @@ body.billing-page {
                     opacity: 0.6;
                 }
 
-                .country-option {
+                .new__custom-option {
                     width: 23.931vw;
                     padding-left: 2.033vw;
                     font-size: 0.782vw;
@@ -731,7 +731,7 @@ body.billing-page {
                     position: relative;
                 }
 
-                .country-option::before {
+                .new__custom-option::before {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -743,7 +743,7 @@ body.billing-page {
                     mix-blend-mode: normal;
                 }
 
-                .country-option:hover::before {
+                .new__custom-option:hover::before {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -756,19 +756,20 @@ body.billing-page {
                     z-index: 999;
                 }
 
-                .country-select.open .country-select__trigger {
+                .new__custom-select.open .new__custom-select__trigger {
                     border-bottom: 0;
                     border-bottom-right-radius: 0vw;
                     border-bottom-left-radius: 0vw;
                 }
 
-                .country-select.open .country-options {
+                .new__custom-select.open .new__custom-options {
                     display: block;
                     box-shadow: 0vw 0.1vw 0.126vw 0.032vw #D7DEE6;
                     border-top: none;
                     border-top-right-radius: 0vw;
                     border-top-left-radius: 0vw;
                 }
+
             }
 
             .company-info {
@@ -824,7 +825,7 @@ body.billing-page {
             position: relative;
 
             .content__section-title {
-                font-family: 'Karla';
+
                 font-weight: 500;
                 font-size: 1.043vw;
                 line-height: 2.503vw;
@@ -1226,7 +1227,7 @@ body.billing-page {
             margin-top: 3.441vw;
 
             .zone {
-                font-family: 'Karla';
+
                 font-size: 1.043vw;
                 line-height: 0.991vw;
                 letter-spacing: 0.035vw;
@@ -1446,7 +1447,7 @@ body.billing-page {
                     padding-right: 6.1vw;
 
                     p {
-                        font-family: 'Karla';
+
                         font-weight: 700;
                         font-size: 0.834vw;
                         line-height: 2.503vw;
@@ -1512,7 +1513,7 @@ body.billing-page {
                 height: auto;
 
                 .payment__method-header {
-                    font-family: 'Karla';
+
                     font-weight: 700;
                     font-size: 0.834vw;
                     line-height: 2.503vw;
@@ -1762,7 +1763,7 @@ body.billing-page {
                 border-bottom: 0.104vw solid #E4E8EE;
 
                 h4 {
-                    font-family: 'Karla';
+
                     font-weight: 700;
                     font-size: 1.303vw;
                     line-height: 2.503vw;
@@ -1771,7 +1772,7 @@ body.billing-page {
                 }
 
                 p {
-                    font-family: 'Karla';
+
                     font-weight: 700;
                     font-size: 0.834vw;
                     line-height: 1.043vw;
@@ -1803,6 +1804,334 @@ body.billing-page {
                     img {
                         width: 0.886vw;
                         height: 0.834vw;
+                    }
+                }
+            }
+
+            .custom__period-content {
+
+                padding: 2.711vw 3.962vw;
+
+                .date {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 13.243vw;
+                    height: 2.555vw;
+                    background: #FFFFFF;
+                    border: 0.052vw solid #D7DEE6;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    border-radius: 0.417vw;
+                    padding-left: 0.417vw;
+                    padding-right: 0.417vw;
+                    margin-bottom: 2.398vw;
+
+                    .date-btn {
+                        width: 5.214vw;
+                        height: 1.721vw;
+                        background: #fff;
+                        border-radius: 0.261vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.782vw;
+                        line-height: 2.503vw;
+                        letter-spacing: 0.01vw;
+                        color: #869DC8;
+                        cursor: pointer;
+                        position: relative;
+                    }
+
+                    .date-btn.active {
+                        background: #869DC8;
+                        color: #FFFFFF;
+                    }
+
+                    .date-btn:nth-child(1):after {
+                        content: '';
+                        background: url(../img/date-btn-arrow.svg) no-repeat center top / cover;
+                        width: 1.043vw;
+                        height: 0.73vw;
+                        display: block;
+                        position: absolute;
+                        left: 5.6vw;
+                    }
+                }
+
+                .date__list {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .date__list-item {
+                        width: 16.475vw;
+
+                        h4 {
+                            font-weight: 500;
+                            font-size: 1.043vw;
+                            line-height: 2.19vw;
+                            letter-spacing: 0.016vw;
+                            color: #1B2438;
+                            margin-bottom: 0.938vw;
+                        }
+
+                        .new__custom-select-wrapper.date-select {
+                            position: relative;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            width: 100%;
+                            display: flex;
+                        }
+
+                        .new__custom-select.month {
+                            width: 9.541vw;
+                        }
+
+                        .new__custom-select {
+                            width: 100%;
+                            position: relative;
+
+
+                            .new__custom-select__trigger {
+                                position: relative;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-top: 0.938vw;
+                                padding-bottom: 0.938vw;
+                                padding-left: 2.086vw;
+                                padding-right: 1.199vw;
+                                font-weight: 300;
+                                font-size: 0.782vw;
+                                line-height: 0.73vw;
+                                letter-spacing: 0.01vw;
+                                color: #B9BABE;
+                                background: #FFFFFF;
+                                border: 0.052vw solid #D7DEE6;
+                                box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                                cursor: pointer;
+                            }
+
+                            .new__custom-select__trigger.month {
+                                width: 9.593vw;
+                                border-top-left-radius: 8px;
+                                border-bottom-left-radius: 8px;
+                                border-right: 0;
+                            }
+
+                            .new__custom-select__trigger.years {
+                                width: 6.934vw;
+                                border-top-right-radius: 8px;
+                                border-bottom-right-radius: 8px;
+                            }
+                        }
+
+
+                        .arrow {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            right: 1.199vw;
+                            transform: translateY(-50%);
+                            width: 0;
+                            height: 0;
+                            border-left: 0.261vw solid rgba(0, 0, 0, 0);
+                            border-right: 0.261vw solid rgba(0, 0, 0, 0);
+                            border-top: 0.261vw solid #555;
+                        }
+
+                        .new__custom-select.open .arrow {
+                            transform: rotate(-180deg);
+                        }
+
+                        .new__custom-select.open {
+                            height: 15.641vw;
+                        }
+
+                        .new__custom-options {
+                            position: absolute;
+                            display: none;
+                            top: 2.607vw;
+                            left: 0;
+                            right: 0;
+                            z-index: 999;
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                            background-color: #1c87c9;
+                            overflow-y: scroll;
+                            max-height: 15.641vw;
+                            background: #FFFFFF;
+                            border: 0.052vw solid #D7DEE6;
+                            box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                            border-radius: 0.417vw;
+                            scrollbar-width: none;
+                        }
+
+                        .new__custom-options::-webkit-scrollbar {
+                            display: none !important;
+                        }
+
+                        .new__custom-select-container {
+                            position: relative;
+                            height: 7.821vw;
+                            overflow: auto;
+                        }
+
+                        .new__custom-options {
+                            width: 100%;
+                        }
+
+                        .new__custom-option {
+                            cursor: pointer;
+                        }
+
+                        .custom-scrollbar {
+                            overflow: hidden;
+                            position: absolute;
+                            top: 3.521vw;
+                            right: 1.33vw;
+                            width: 0.313vw;
+                            height: 84%;
+                            background: linear-gradient(0deg, #eeeff3, #e0e4ec), #1F1F23;
+                            mix-blend-mode: normal;
+                            z-index: 99999;
+                            display: none;
+                            border-radius: 1.043vw;
+                        }
+
+                        .new__custom-select.open .custom-scrollbar {
+                            display: block;
+                        }
+
+                        .custom-scrollbar-thumb {
+                            position: absolute;
+                            top: 0;
+                            width: 0.313vw;
+                            border-radius: 1.043vw;
+                            background: #869DC8;
+                            mix-blend-mode: normal;
+                            opacity: 0.6;
+                        }
+
+                        .new__custom-option {
+                            width: 23.931vw;
+                            padding-left: 2.033vw;
+                            font-size: 0.782vw;
+                            line-height: 0.834vw;
+                            letter-spacing: 0.01vw;
+                            color: #869DC8;
+                            background-color: #fff;
+                            cursor: pointer;
+                            height: 2.121vw;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                        }
+
+                        .new__custom-option::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: #fff;
+                            z-index: -1;
+                            mix-blend-mode: normal;
+                        }
+
+                        .new__custom-option:hover::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: linear-gradient(83.66deg, #D6DDE6 4.45%, rgba(232, 241, 238, 0.93) 95.55%, rgba(255, 255, 255, 0.19) 110.55%);
+                            mix-blend-mode: normal;
+                            opacity: 0.3;
+                            z-index: 999;
+                        }
+
+                        .new__custom-select.open .new__custom-select__trigger {
+                            border-bottom: 0;
+                            border-bottom-right-radius: 0vw;
+                            border-bottom-left-radius: 0vw;
+                        }
+
+                        .new__custom-select.open .new__custom-options {
+                            display: block;
+                            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #D7DEE6;
+                            border-top: none;
+                            border-top-right-radius: 0vw;
+                            border-top-left-radius: 0vw;
+                        }
+
+
+                        .datepicker__calendar {
+                            margin-top: 2.19vw;
+                            width: 16.475vw;
+                            height: 14.39vw;
+                            background: #FFFFFF;
+                            border: 0.104vw solid #E4E8EE;
+                            box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+                            border-radius: 1.095vw;
+                            padding-top: 1.46vw;
+                            padding-bottom: 1.773vw;
+                            padding-left: 2.086vw;
+                            padding-right: 2.086vw;
+
+                            table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                border-spacing: 0;
+                                height: auto;
+
+                                .datepicker__calendar-header {
+                                    td {
+                                        font-size: 0.782vw;
+
+                                        letter-spacing: -0.012vw;
+                                        color: #869DC8;
+
+                                    }
+                                }
+
+                                .datepicker__calendar-content {
+                                    td {
+                                        font-size: 0.782vw;
+
+                                        letter-spacing: 0.012vw;
+                                        color: #1B2438;
+                                        cursor: pointer;
+                                        transition: 0.2s;
+                                    }
+
+                                    td.active {
+                                        background: #869DC8;
+                                        border-radius: 0.209vw;
+                                        color: #FFFFFF;
+                                    }
+
+                                    td:hover {
+                                        background: #869DC8;
+                                        border-radius: 0.209vw;
+                                        color: #FFFFFF;
+                                    }
+                                }
+
+                                td,
+                                th {
+
+                                    width: 1.147vw;
+                                    height: 1.147vw;
+                                    text-align: center;
+                                    line-height: 1.59vw;
+                                }
+                            }
+                        }
                     }
                 }
             }
