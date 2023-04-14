@@ -270,7 +270,7 @@ body.billing-page {
             }
 
             .sidemenu__item.active .submenu {
-                max-height: 900px;
+                max-height: 46.924vw;
             }
 
             .sidemenu__item:nth-child(2)>.sidemenu__item-link::before {
@@ -1797,6 +1797,7 @@ body.billing-page {
             .select-selected {
                 padding-left: 1.086vw;
             }
+
             .select-option {
                 padding: 0.678vw 1.033vw;
             }
@@ -1816,14 +1817,171 @@ body.billing-page {
         .select-selected {
             width: 13.712vw;
         }
+    }
 
-        .users__list-header {
+    .table {
+        display: table;
+        border-collapse: separate;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+        border-radius: 1.095vw;
+        border: none;
+        border: 0.104vw solid #E4E8EE;
+    }
 
+    .row {
+        display: table-row;
+    }
+
+    .cell {
+        display: table-cell;
+    }
+
+    .row-header {
+        .cell {
+            font-family: 'Karla';
+            font-weight: 700;
+            font-size: 0.834vw;
+            line-height: 1.043vw;
+            letter-spacing: 0.011vw;
+            color: #869DC8;
+            padding-top: 2.398vw;
+            padding-bottom: 1.564vw;
         }
 
-        .users__list {
-        
+        .cell:nth-child(1) {
+            padding-left: 2.086vw;
         }
 
+        .cell:last-child {
+            padding-right: 2.086vw;
+            text-align: right;
+        }
+
+        .cell.id {
+            display: flex;
+            align-items: center;
+        }
+
+        .cell.id::after {
+            content: '';
+            background: url(../img/cell-arrow.svg) no-repeat center top / cover;
+            width: 0.417vw;
+            height: 0.834vw;
+            display: block;
+            margin-left: 0.261vw;
+        }
+    }
+
+    .row-item {
+        .cell {
+            padding: 1.564vw 0;
+            font-size: 0.782vw;
+            line-height: 1.147vw;
+            letter-spacing: 0.01vw;
+            color: #B9BABE;
+        }
+
+        .name {
+            color: #1B2438;
+        }
+
+        .cell:nth-child(1) {
+            padding-left: 2.346vw;
+            font-size: 0.782vw;
+            line-height: 1.512vw;
+            letter-spacing: 0.01vw;
+            color: #BBBBBB;
+        }
+
+        .cell:last-child {
+            padding-right: 2.086vw;
+            text-align: right;
+        }
+
+        .cell.actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+
+            .edit {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .edit::after {
+                content: '';
+                background: url(../img/edit-icon.svg) no-repeat center top / cover;
+                width: 1.512vw;
+                height: 1.512vw;
+                display: block;
+            }
+
+            .archive {
+                position: relative;
+                cursor: pointer;
+                margin-left: 1.46vw;
+            }
+
+            .archive::after {
+                content: '';
+                background: url(../img/archive-icon.svg) no-repeat center top / cover;
+                width: 1.408vw;
+                height: 1.408vw;
+                display: block;
+            }
+        }
+
+    }
+
+    .row-item.colored {
+        background: rgba(233, 237, 242, 0.45);
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        margin-top: 1.877vw;
+
+        span {
+            width: 2.086vw;
+            height: 2.086vw;
+            background: #FAFCFB;
+            box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.3);
+            border-radius: 1.277vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.938vw;
+            position: relative;
+            cursor: pointer;
+            font-size: 0.938vw;
+            line-height: 1.512vw;
+            letter-spacing: 0.01vw;
+            color: #B9BABE;
+        }
+
+        span.active {
+            color: #1B2438;
+        }
+
+        span.prev::after {
+            content: '';
+            background: url(../img/prev-icon.svg) no-repeat center top / cover;
+            width: 0.365vw;
+            height: 0.678vw;
+            display: block;
+        }
+
+        span.next::after {
+            content: '';
+            background: url(../img/next-icon.svg) no-repeat center top / cover;
+            width: 0.365vw;
+            height: 0.678vw;
+            display: block;
+        }
     }
 }

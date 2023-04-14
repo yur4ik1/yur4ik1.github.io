@@ -128,6 +128,13 @@ for (let i = 0; i < invoices.length; i += 2) {
   invoices[i].classList.add("colored");
 }
 
+/* table colored  */
+
+const rowItem = document.querySelectorAll(".row-item");
+for (let i = 0; i < rowItem.length; i += 2) {
+  rowItem[i].classList.add("colored");
+}
+
 /* Calendar  */
 
 const calendarFrom = document.querySelectorAll('.calendar-from td');
