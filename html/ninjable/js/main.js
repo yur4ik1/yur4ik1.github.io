@@ -339,19 +339,15 @@ addButton.addEventListener('click', function () {
   });
 });
 
-// Отримуємо елементи з DOM
+
 var select = document.querySelector(".filter-select");
 var selectSelected = select.querySelector(".select-selected");
 var selectItems = select.querySelector(".select-items");
 
-// Додаємо обробник подій на клік для selectSelected
 selectSelected.addEventListener("click", function() {
-  // Перевіряємо, чи містить selectItems клас select-hide
   if (selectItems.classList.contains("select-hide")) {
-    // Якщо так, видаляємо його
     selectItems.classList.remove("select-hide");
   } else {
-    // Інакше, додаємо клас select-hide
     selectItems.classList.add("select-hide");
   }
 });
