@@ -374,6 +374,71 @@ tr {
   border-top-left-radius: 0vw;
 }
 
+.filter-select {
+  position: relative;
+
+  .select-selected {
+    padding-left: 1.7vw;
+  }
+
+  .select-option {
+    padding: 0.678vw 1.2vw;
+  }
+
+  /* Сховати оригінальний checkbox */
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Стилізувати контейнер для checkbox */
+  .select-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    z-index: 99999999;
+    cursor: pointer;
+  }
+
+  /* Стилізувати checkbox */
+  .select-option input[type="checkbox"]+label:before {
+    content: "";
+    display: inline-block;
+    width: 0.782vw;
+    height: 0.782vw;
+    background: url(../img/filter-nocheked.svg) no-repeat center top / cover;
+    margin-right: 0.574vw;
+  }
+
+  /* Стилізувати checkbox, коли він відмічений */
+  .select-option input[type="checkbox"]:checked+label:before {
+    content: "";
+    width: 0.782vw;
+    height: 0.782vw;
+    background: url(../img/filter-cheked.svg) no-repeat center top / cover;
+
+  }
+
+  /* Стилізувати текст для checkbox */
+  .select-option label {
+    font-weight: 300;
+    font-size: 0.782vw;
+    line-height: 0.834vw;
+    letter-spacing: 0.01vw;
+    color: #869DC8;
+  }
+}
+
+
+
+
+
 .alert-popup {
   width: 13.399vw;
   height: 9.228vw;
@@ -390,34 +455,34 @@ tr {
   transition: 0.2s;
 
   p {
-      font-size: 0.834vw;
-      line-height: 1.668vw;
-      letter-spacing: 0.011vw;
-      color: #1B2438;
-      text-align: center;
+    font-size: 0.834vw;
+    line-height: 1.668vw;
+    letter-spacing: 0.011vw;
+    color: #1B2438;
+    text-align: center;
   }
 
   .btns {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1.356vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.356vw;
 
-      button {
-          font-size: 0.834vw;
-          line-height: 0.938vw;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          letter-spacing: 0.02vw;
-          color: #FFFFFF;
-          width: 3.91vw;
-          height: 2.242vw;
-          background: #869DC8;
-          box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-          border-radius: 0.521vw;
-          border: none;
-          cursor: pointer;
-      }
+    button {
+      font-size: 0.834vw;
+      line-height: 0.938vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.02vw;
+      color: #FFFFFF;
+      width: 3.91vw;
+      height: 2.242vw;
+      background: #869DC8;
+      box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+      border-radius: 0.521vw;
+      border: none;
+      cursor: pointer;
+    }
   }
 }
 

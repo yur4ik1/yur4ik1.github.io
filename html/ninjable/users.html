@@ -116,16 +116,27 @@
                     </div>
                     <div class="search__wrapper">
                         <span class="search-icon">
-                            <input type="text" placeholder="Joe Doe">
+                            <input class="search-input" type="text" placeholder="Joe Doe">
                         </span>
-                        <div class="custom-select">
-                            <div class="select-selected">All</div>
+                        <div class="filter-select">
+                            <div class="select-selected">Select...</div>
                             <span class="line"></span>
                             <div class="select-items select-hide">
-                                <div class="select-option">All</div>
-                                <div class="select-option">All</div>
+                              <div class="select-option">
+                                <input type="checkbox" id="all">
+                                <label for="all">All</label>
+                              </div>
+                              <div class="select-option">
+                                <input type="checkbox" id="active">
+                                <label for="active">Active</label>
+                              </div>
+                              <div class="select-option">
+                                <input type="checkbox" id="archied">
+                                <label for="archied">Archied</label>
+                              </div>
                             </div>
-                        </div>
+                          </div>
+                          
                     </div>
                     <div class="table">
                         <div class="row row-header">
