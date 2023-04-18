@@ -12,8 +12,21 @@ if (sidemenuItem) {
   });
 }
 
+/* popup users */
 
-/* profile popup */
+const popupUsers = document.querySelector('.popup__users');
+const addUserBtn = document.querySelector('.add-user-btn');
+const userPopupClose = document.querySelector('.users__popup-close');
+
+if (popupUsers && addUserBtn) {
+  addUserBtn.addEventListener('click', () => {
+    popupUsers.classList.add('active');
+  });
+  userPopupClose.addEventListener('click', () => {
+    popupUsers.classList.remove('active');
+  });
+}
+
 
 const profileBtn = document.querySelector('.header__avatar');
 const profilePopup = document.querySelector('.header__profile-popup');
@@ -23,6 +36,7 @@ if (profileBtn && profilePopup) {
     profilePopup.classList.toggle('active');
   });
 }
+
 
 /* delete popup */
 
@@ -261,3 +275,18 @@ new__customSelects.forEach((new__customSelect) => {
 
   updateScroll();
 });
+
+
+/* passwordInput */
+
+const passwordInput = document.getElementById("password");
+const passwordIcon = document.querySelector(".password-icon");
+
+passwordIcon.addEventListener("click", function () {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+});
+
