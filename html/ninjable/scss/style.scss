@@ -1342,57 +1342,7 @@ body.billing-page {
 
             }
 
-            .alert-popup {
-                width: 13.399vw;
-                height: 9.228vw;
-                background: #FFFFFF;
-                box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
-                border-radius: 1.043vw;
-                position: absolute;
-                top: 8.921vw;
-                right: 4.9vw;
-                z-index: 999999999;
-                padding: 1.668vw 2.19vw;
-                visibility: hidden;
-                opacity: 0;
-                transition: 0.2s;
 
-                p {
-                    font-size: 0.834vw;
-                    line-height: 1.668vw;
-                    letter-spacing: 0.011vw;
-                    color: #1B2438;
-                    text-align: center;
-                }
-
-                .btns {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 1.356vw;
-
-                    button {
-                        font-size: 0.834vw;
-                        line-height: 0.938vw;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        letter-spacing: 0.02vw;
-                        color: #FFFFFF;
-                        width: 3.91vw;
-                        height: 2.242vw;
-                        background: #869DC8;
-                        box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-                        border-radius: 0.521vw;
-                        border: none;
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .alert-popup.active {
-                visibility: visible;
-                opacity: 1;
-            }
         }
 
         .payment__method-bottom {
@@ -1944,6 +1894,11 @@ body.billing-page {
         background: rgba(233, 237, 242, 0.45);
     }
 
+    .alert-popup {
+        top: 24.921vw;
+        right: 1.9vw;
+    }
+
     .navigation {
         display: flex;
         align-items: center;
@@ -2085,7 +2040,7 @@ body.billing-page {
                         letter-spacing: 0.011vw;
                         color: #869DC8;
                         margin-bottom: 2.346vw;
-
+                        position: relative;
 
                         input {
                             width: 100%;
@@ -2111,6 +2066,18 @@ body.billing-page {
                             letter-spacing: 0.01vw;
                             color: #B9BABE;
                         }
+
+                        .let-know {
+                            position: absolute;
+                            top: 4.92vw;
+                            left: 0;
+                            display: none;
+                        }
+
+                        .let-know.active {
+                            display: block;
+                        }
+
 
                         .department-select {
                             width: 100%;

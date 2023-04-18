@@ -14,7 +14,7 @@ if (sidemenuItem) {
 
 /* popup users */
 
-const popupUsers = document.querySelector('.popup__users');
+const popupUsers = document.querySelector('.add-users');
 const addUserBtn = document.querySelector('.add-user-btn');
 const userPopupClose = document.querySelector('.users__popup-close');
 
@@ -27,6 +27,24 @@ if (popupUsers && addUserBtn) {
   });
 }
 
+const popupEditUsers = document.querySelector('.edit-users');
+const addEditUserBtns = document.querySelectorAll('.edit');
+const EdituserPopupClose = document.querySelector('.edit-close');
+
+if (popupEditUsers && addEditUserBtns) {
+  addEditUserBtns.forEach(addEditUserBtn => {
+    addEditUserBtn.addEventListener('click', () => {
+      popupEditUsers.classList.add('active');
+    });
+  });
+  
+  EdituserPopupClose.addEventListener('click', () => {
+    popupEditUsers.classList.remove('active');
+  });
+}
+
+
+/* header avatar */
 
 const profileBtn = document.querySelector('.header__avatar');
 const profilePopup = document.querySelector('.header__profile-popup');
@@ -38,30 +56,33 @@ if (profileBtn && profilePopup) {
 }
 
 
-/* delete popup */
+/* alert popup */
 
-const deleteBtn = document.querySelector('.delete-icon');
-const deletePopup = document.querySelector('.alert-popup');
-const closeDeletePopup = document.querySelector('.false');
+document.addEventListener("DOMContentLoaded", function() {
+  const deleteBtn = document.querySelector('.delete-icon, .archive-alert');
+  const deletePopup = document.querySelector('.alert-popup');
+  const closeDeletePopup = document.querySelector('.false');
 
-if (deleteBtn && deletePopup) {
-  deleteBtn.addEventListener('click', () => {
-    deletePopup.classList.toggle('active');
-    deleteBtn.classList.toggle('active');
-  });
+  if (deleteBtn && deletePopup) {
+    deleteBtn.addEventListener('click', () => {
+      deletePopup.classList.toggle('active');
+      deleteBtn.classList.toggle('active');
+    });
 
-  closeDeletePopup.addEventListener('click', () => {
-    deletePopup.classList.remove('active');
-    deleteBtn.classList.remove('active');
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.alert-popup') && !event.target.closest('.delete-icon')) {
+    closeDeletePopup.addEventListener('click', () => {
       deletePopup.classList.remove('active');
       deleteBtn.classList.remove('active');
-    }
-  });
-}
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.closest('.alert-popup') && !event.target.closest('.delete-icon, .archive')) {
+        deletePopup.classList.remove('active');
+        deleteBtn.classList.remove('active');
+      }
+    });
+  }
+});
+
 
 /* custom period popup */
 
@@ -288,5 +309,33 @@ passwordIcon.addEventListener("click", function () {
   } else {
     passwordInput.type = "password";
   }
+});
+
+
+/* let-know */
+
+const addButton = document.querySelector('.user-add');
+const inputFields = document.querySelectorAll('.popup__users-col input[type="text"], .popup__users-col input[type="password"]');
+const selectFields = document.querySelectorAll('.popup__users-col .new__custom-select, .popup__users-col .custom-select');
+
+addButton.addEventListener('click', function () {
+  inputFields.forEach(function (field) {
+    if (field.value.trim() === '') {
+      field.parentElement.querySelector('.let-know').classList.add('active');
+    } else {
+      field.parentElement.querySelector('.let-know').classList.remove('active');
+    }
+  });
+
+  selectFields.forEach(function (field) {
+    const selectedOption = field.querySelector('.select-selected, .new__custom-select__trigger');
+    const options = field.querySelectorAll('.select-option, .new__custom-option');
+
+    if (selectedOption.textContent === 'Please Select...' || selectedOption.textContent === 'Type here to search for Clan...') {
+      selectedOption.parentElement.querySelector('.let-know').classList.add('active');
+    } else {
+      selectedOption.parentElement.querySelector('.let-know').classList.remove('active');
+    }
+  });
 });
 

@@ -374,3 +374,54 @@ tr {
   border-top-left-radius: 0vw;
 }
 
+.alert-popup {
+  width: 13.399vw;
+  height: 9.228vw;
+  background: #FFFFFF;
+  box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+  border-radius: 1.043vw;
+  position: absolute;
+  top: 8.921vw;
+  right: 4.9vw;
+  z-index: 999999999;
+  padding: 1.668vw 2.19vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+
+  p {
+      font-size: 0.834vw;
+      line-height: 1.668vw;
+      letter-spacing: 0.011vw;
+      color: #1B2438;
+      text-align: center;
+  }
+
+  .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.356vw;
+
+      button {
+          font-size: 0.834vw;
+          line-height: 0.938vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          letter-spacing: 0.02vw;
+          color: #FFFFFF;
+          width: 3.91vw;
+          height: 2.242vw;
+          background: #869DC8;
+          box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+          border-radius: 0.521vw;
+          border: none;
+          cursor: pointer;
+      }
+  }
+}
+
+.alert-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
