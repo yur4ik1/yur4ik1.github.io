@@ -174,6 +174,37 @@ if (positionsPopup && addDepartment) {
   }
 }
 
+const addJobPopup = document.querySelector('.positions__popup.add-job');
+const addJobBtn = document.querySelector('.add-job-btn');
+const addJobClose = document.querySelector('.add-job-close');
+
+if (addJobPopup && addJobBtn) {
+  addJobBtn.addEventListener('click', () => {
+    addJobPopup.classList.add('active');
+  });
+  if (addJobClose) {
+    addJobClose.addEventListener('click', () => {
+      addJobPopup.classList.remove('active');
+    });
+  }
+}
+
+const editJobPopup = document.querySelector('.positions__popup.edit-job');
+const editJobBtn = Array.from(document.querySelectorAll('.edit-job-btn'));
+const editJobClose = document.querySelector('.edit-job-close');
+
+if (editJobPopup && editJobBtn) {
+  for (let i = 0; i < editJobBtn.length; i++) {
+    editJobBtn[i].addEventListener('click', () => {
+      editJobPopup.classList.add('active');
+    });
+  }
+  if (editJobClose) {
+    editJobClose.addEventListener('click', () => {
+      editJobPopup.classList.remove('active');
+    });
+  }
+}
 
 /* Subscription branding */
 
