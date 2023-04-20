@@ -503,20 +503,8 @@ body.billing-page {
             margin-top: 1.754vw;
 
             button {
-                font-size: 0.834vw;
-                line-height: 0.938vw;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                letter-spacing: 0.02vw;
-                color: #FFFFFF;
-                border: none;
-                cursor: pointer;
                 width: 8.238vw;
                 height: 2.503vw;
-                background: #869DC8;
-                box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-                border-radius: 0.521vw;
             }
         }
     }
@@ -907,19 +895,8 @@ body.billing-page {
                     justify-content: space-between;
 
                     a {
-                        font-size: 0.834vw;
-                        line-height: 0.938vw;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        letter-spacing: 0.02vw;
-                        color: #FFFFFF;
                         width: 8.238vw;
                         height: 2.503vw;
-                        background: #869DC8;
-                        box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-                        border-radius: 0.521vw;
-                        cursor: pointer;
                     }
                 }
             }
@@ -976,7 +953,7 @@ body.billing-page {
     align-items: center;
     background: rgba(6, 8, 13, 0.15);
     -webkit-backdrop-filter: blur(0.1vw);
-    backdrop-filter: blur(0.1vw);
+
     visibility: hidden;
     opacity: 0;
     transition: 0.2s;
@@ -1339,10 +1316,7 @@ body.billing-page {
                 .payment__method-item:hover {
                     background: rgba(233, 237, 242, 0.7);
                 }
-
             }
-
-
         }
 
         .payment__method-bottom {
@@ -1350,20 +1324,9 @@ body.billing-page {
             align-items: center;
             justify-content: center;
 
-            .btn {
-                font-weight: 400;
-                font-size: 0.834vw;
-                line-height: 0.938vw;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                letter-spacing: 0.02vw;
-                color: #FFFFFF;
+            .payment-btn {
                 width: 11.157vw;
                 height: 2.503vw;
-                background: #869DC8;
-                box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-                border-radius: 0.521vw;
                 margin-right: 2.138vw;
             }
 
@@ -1401,7 +1364,7 @@ body.billing-page {
         align-items: center;
         background: rgba(6, 8, 13, .15);
         -webkit-backdrop-filter: blur(0.1vw);
-        backdrop-filter: blur(0.1vw);
+
         visibility: hidden;
         opacity: 0;
         -webkit-transition: .2s;
@@ -1410,10 +1373,12 @@ body.billing-page {
 
         .custom__period-inner {
             width: 43.535vw;
-            height: 46.298vw;
-            background: #FFFFFF;
-            box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+            height: 45.098vw;
+            background: rgb(255, 255, 255);
+            box-shadow: rgb(142, 161, 186) 0vw 0.209vw 1.303vw -0.209vw;
             border-radius: 1.356vw;
+            position: relative;
+            left: 7%;
 
             .custom__period-header {
                 position: relative;
@@ -1675,20 +1640,9 @@ body.billing-page {
         justify-content: flex-end;
         margin-bottom: 2.294vw;
 
-        a {
-            font-size: 0.834vw;
-            line-height: 0.938vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            letter-spacing: 0.02vw;
-            color: #FFFFFF;
+        .add-user-btn {
             width: 7.404vw;
             height: 2.45vw;
-            background: #869DC8;
-            box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
-            border-radius: 0.521vw;
-            cursor: pointer;
         }
     }
 
@@ -1957,7 +1911,7 @@ body.billing-page {
     justify-content: center;
     align-items: center;
     background: rgba(6, 8, 13, .15);
-    backdrop-filter: blur(0.1vw);
+
     visibility: hidden;
     opacity: 0;
     transition: .2s;
@@ -1972,6 +1926,8 @@ body.billing-page {
         padding-bottom: 2.763vw;
         padding-left: 4.171vw;
         padding-right: 4.171vw;
+        position: relative;
+        left: 7.3%;
 
         .popup__users-header {
             height: 5.422vw;
@@ -2041,6 +1997,7 @@ body.billing-page {
                         color: #869DC8;
                         margin-bottom: 2.346vw;
                         position: relative;
+                        margin-left: 0.156vw;
 
                         input {
                             width: 100%;
@@ -2084,6 +2041,8 @@ body.billing-page {
                             margin-bottom: 2.346vw;
 
                             .new__custom-select {
+                                transition: 0.3s;
+
                                 .new__custom-select__trigger {
                                     box-shadow: none;
 
@@ -2101,7 +2060,29 @@ body.billing-page {
                                     }
                                 }
 
+                                .new__custom-option {
+                                    font-weight: 300;
+                                    font-size: 0.782vw;
+                                    line-height: 0.834vw;
+                                    letter-spacing: 0.01vw;
+                                    color: #8D919B;
+                                }
+
+                                .new__custom-option:hover {
+
+                                    font-size: 0.782vw;
+                                    line-height: 0.834vw;
+                                    letter-spacing: 0.01vw;
+                                    color: #869DC8;
+                                }
                             }
+
+                            .new__custom-select:hover {
+                                box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+                                border-radius: 0.417vw;
+                            }
+
+
 
                             .new__custom-select.open {
                                 .new__custom-select__trigger {
@@ -2114,8 +2095,11 @@ body.billing-page {
                             }
                         }
 
+
+
                         .custom-select {
                             width: 100%;
+                            transition: 0.3s;
 
                             .select-selected {
                                 width: 100%;
@@ -2141,6 +2125,13 @@ body.billing-page {
                             }
                         }
 
+                        .custom-select:hover {
+                            box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+                            border-radius: 0.417vw;
+
+                        }
+
+
                         .password-icon {
                             display: flex;
                             position: relative;
@@ -2163,7 +2154,7 @@ body.billing-page {
 
                 .popup__users-col:last-child {
                     margin-left: 5.214vw;
-                    margin-top: 7.323vw;
+                    margin-top: 14.623vw;
                 }
             }
 
@@ -2206,7 +2197,7 @@ body.billing-page {
             background: #869DC8;
             box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
             border-radius: 0.521vw;
-            margin-top: 4.1vw;
+            margin-top: 1.1vw;
         }
 
     }
@@ -2215,4 +2206,35 @@ body.billing-page {
 .popup__users.active {
     visibility: visible;
     opacity: 1;
+}
+
+/* Positions page */
+
+.content.positions {
+    .add-department {
+        display: flex;
+        justify-content: space-between;
+
+        .add-department-btn {
+            width: 9.854vw;
+            height: 2.45vw;
+        }
+
+        .filter-select {
+            .select-selected {
+                width: 15.85vw;
+            }
+        }
+
+        .line {
+            position: absolute;
+            width: 2.7vw;
+            height: 0.052vw;
+            background: #E4E8EE;
+            transform: rotate(-90deg);
+            top: 1.4vw;
+            left: 11.8vw;
+            display: block;
+        }
+    }
 }

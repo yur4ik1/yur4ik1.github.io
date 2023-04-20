@@ -37,7 +37,7 @@ if (popupEditUsers && addEditUserBtns) {
       popupEditUsers.classList.add('active');
     });
   });
-  
+
   EdituserPopupClose.addEventListener('click', () => {
     popupEditUsers.classList.remove('active');
   });
@@ -58,7 +58,7 @@ if (profileBtn && profilePopup) {
 
 /* alert popup */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const deleteBtn = document.querySelector('.delete-icon, .archive-alert');
   const deletePopup = document.querySelector('.alert-popup');
   const closeDeletePopup = document.querySelector('.false');
@@ -193,6 +193,23 @@ if (calendarTo) {
 }
 
 
+/* filter select */
+
+let select = document.querySelector(".filter-select");
+let selectSelected = select ? select.querySelector(".select-selected") : null;
+let selectItems = select ? select.querySelector(".select-items") : null;
+
+if (selectSelected) {
+  selectSelected.addEventListener("click", function () {
+    if (selectItems && selectItems.classList.contains("select-hide")) {
+      selectItems.classList.remove("select-hide");
+    } else if (selectItems) {
+      selectItems.classList.add("select-hide");
+    }
+  })
+};
+
+
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");
@@ -262,8 +279,12 @@ new__customSelects.forEach((new__customSelect) => {
       const new__customOptionValue = o.getAttribute("data-value");
       new__customTrigger.textContent = o.textContent;
       new__customSelect.classList.remove("open");
+      if (new__customSelect.classList.contains("filter-select-scroll")) {
+        return false;
+      }
     });
   });
+
 
   customScrollbarThumb.addEventListener("mousedown", (e) => {
     const thumbStartPosition = e.clientY - customScrollbarThumb.getBoundingClientRect().top;
@@ -303,13 +324,15 @@ new__customSelects.forEach((new__customSelect) => {
 const passwordInput = document.getElementById("password");
 const passwordIcon = document.querySelector(".password-icon");
 
-passwordIcon.addEventListener("click", function () {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-  } else {
-    passwordInput.type = "password";
-  }
-});
+if (passwordInput && passwordIcon) {
+  passwordIcon.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  })
+};
 
 
 /* let-know */
@@ -318,36 +341,26 @@ const addButton = document.querySelector('.user-add');
 const inputFields = document.querySelectorAll('.popup__users-col input[type="text"], .popup__users-col input[type="password"]');
 const selectFields = document.querySelectorAll('.popup__users-col .new__custom-select, .popup__users-col .custom-select');
 
-addButton.addEventListener('click', function () {
-  inputFields.forEach(function (field) {
-    if (field.value.trim() === '') {
-      field.parentElement.querySelector('.let-know').classList.add('active');
-    } else {
-      field.parentElement.querySelector('.let-know').classList.remove('active');
-    }
-  });
+if (addButton && inputFields) {
+  addButton.addEventListener('click', function () {
+    inputFields.forEach(function (field) {
+      if (field.value.trim() === '') {
+        field.parentElement.querySelector('.let-know').classList.add('active');
+      } else {
+        field.parentElement.querySelector('.let-know').classList.remove('active');
+      }
+    });
 
-  selectFields.forEach(function (field) {
-    const selectedOption = field.querySelector('.select-selected, .new__custom-select__trigger');
-    const options = field.querySelectorAll('.select-option, .new__custom-option');
+    selectFields.forEach(function (field) {
+      const selectedOption = field.querySelector('.select-selected, .new__custom-select__trigger');
+      const options = field.querySelectorAll('.select-option, .new__custom-option');
 
-    if (selectedOption.textContent === 'Please Select...' || selectedOption.textContent === 'Type here to search for Clan...') {
-      selectedOption.parentElement.querySelector('.let-know').classList.add('active');
-    } else {
-      selectedOption.parentElement.querySelector('.let-know').classList.remove('active');
-    }
-  });
-});
+      if (selectedOption.textContent === 'Please Select...' || selectedOption.textContent === 'Type here to search for Clan...') {
+        selectedOption.parentElement.querySelector('.let-know').classList.add('active');
+      } else {
+        selectedOption.parentElement.querySelector('.let-know').classList.remove('active');
+      }
+    });
+  })
+};
 
-
-var select = document.querySelector(".filter-select");
-var selectSelected = select.querySelector(".select-selected");
-var selectItems = select.querySelector(".select-items");
-
-selectSelected.addEventListener("click", function() {
-  if (selectItems.classList.contains("select-hide")) {
-    selectItems.classList.remove("select-hide");
-  } else {
-    selectItems.classList.add("select-hide");
-  }
-});

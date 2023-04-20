@@ -70,6 +70,21 @@ tr {
   padding: 0;
 }
 
+.btn {
+  border: none;
+  font-size: 0.834vw;
+  line-height: 0.938vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02vw;
+  color: #FFFFFF;
+  background: #869DC8;
+  box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+  border-radius: 0.521vw;
+  cursor: pointer;
+}
+
 
 /* custom select */
 
@@ -196,6 +211,7 @@ tr {
 }
 
 
+/* custom select 2 */
 
 .new__custom-select-wrapper {
   position: relative;
@@ -374,6 +390,8 @@ tr {
   border-top-left-radius: 0vw;
 }
 
+/* filter select */
+
 .filter-select {
   position: relative;
 
@@ -385,14 +403,12 @@ tr {
     padding: 0.678vw 1.2vw;
   }
 
-  /* Сховати оригінальний checkbox */
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
     pointer-events: none;
   }
 
-  /* Стилізувати контейнер для checkbox */
   .select-option {
     display: flex;
     align-items: center;
@@ -406,7 +422,6 @@ tr {
     cursor: pointer;
   }
 
-  /* Стилізувати checkbox */
   .select-option input[type="checkbox"]+label:before {
     content: "";
     display: inline-block;
@@ -416,7 +431,6 @@ tr {
     margin-right: 0.574vw;
   }
 
-  /* Стилізувати checkbox, коли він відмічений */
   .select-option input[type="checkbox"]:checked+label:before {
     content: "";
     width: 0.782vw;
@@ -425,7 +439,6 @@ tr {
 
   }
 
-  /* Стилізувати текст для checkbox */
   .select-option label {
     font-weight: 300;
     font-size: 0.782vw;
@@ -435,9 +448,7 @@ tr {
   }
 }
 
-
-
-
+/* alert popup */
 
 .alert-popup {
   width: 13.399vw;

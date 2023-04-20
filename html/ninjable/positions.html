@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINJABLE - Subscription</title>
+    <title>NINJABLE - Positions</title>
     <meta name="robots" content="index,follow">
     <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
-    <meta name="description" content="NINJABLE - Subscription">
+    <meta name="description" content="NINJABLE - Positions">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="subscription-page">
+<body class="positions-page">
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -59,7 +59,7 @@
         <section class="another__wrapper">
             <section class="sidebar">
                 <ul class="sidemenu">
-                    <li class="sidemenu__item active">
+                    <li class="sidemenu__item">
                         <a class="sidemenu__item-link" href="#">Company</a>
                         <ul class="submenu">
                             <li class="submenu__item">
@@ -68,22 +68,22 @@
                             <li class="submenu__item">
                                 <a class="submenu__item-link" href="branding.html">Branding</a>
                             </li>
-                            <li class="submenu__item active">
-                                <a class="submenu__item-link active" href="subscription.html">Subscription</a>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
                             </li>
                             <li class="submenu__item">
                                 <a class="submenu__item-link" href="billing.html">Billing</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="sidemenu__item">
+                    <li class="sidemenu__item active">
                         <a class="sidemenu__item-link" href="#">Directory</a>
                         <ul class="submenu">
                             <li class="submenu__item">
                                 <a class="submenu__item-link" href="users.html">Users</a>
                             </li>
-                            <li class="submenu__item">
-                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="positions.html">Positions</a>
                             </li>
                             <li class="submenu__item">
                                 <a class="submenu__item-link" href="levels.html">Levels</a>
@@ -108,44 +108,45 @@
                 </ul>
             </section>
 
-            <section class="content subscription">
-                <h2>SUBSCRIPION</h2>
-                <div class="content__section">
-                    <h3 class="content__section-title">Subscription Summary</h3>
-                    <div class="content__block">
-                        <div class="summary">
-                            <p class="number">95</p>
-                            <p class="text">Licensed Users</p>
-                        </div>
-                    </div>
-                    <div class="content__block pro">
-                        <div class="summary">
-                            <p class="number">PRO</p>
-                            <p class="text">Current Plan</p>
-                            <div class="summary__btns">
-                                <a class="downgrade__btn btn" href="#">Downgrade</a>
-                                <a class="upgrade__btn btn">Upgrade</a>
+            <section class="content positions">
+                <h2>POSITIONS</h2>
+                <div class="add-department">
+                    <a class="add-department-btn btn" href="#">Add Department</a>
+
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="new__custom-select__trigger filter-select-scroll">Type here to search for Clan...
+                                <span class="line"></span>
+                                <div class="arrow"></div>
                             </div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all2">
+                                    <label for="all2">All</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all3">
+                                    <label for="all3">All</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
                         </div>
                     </div>
-                    <div class="subscription__content-bottom">
-                        <p class="zone">Danger Zone</p>
-                        <a class="zone__btn" href="#">Cancel Subscription</a>
-                    </div>
+
                 </div>
+
+                <div class="content__section">
+
+                </div>
+
             </section>
         </section>
 
-        <div class="subscription__popup">
-            <div class="subscription__popup-inner">
-                <div class="subscription__popup-header">
-                    <span class="subscription__popup-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
-
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="./js/main.min.js"></script>
