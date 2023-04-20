@@ -35,7 +35,7 @@ body.billing-page {
 
 body.positions-page {
     background: url(../img/content-branding.png) no-repeat center top / cover;
-    height: 114.661vw;
+    height: 165.706vw;
 }
 
 
@@ -2099,6 +2099,16 @@ body.positions-page {
                 border-radius: 0.417vw;
                 margin-right: 1.251vw;
             }
+
+            button.active {
+                color: #1B2438;
+                border: none;
+                box-shadow: none;
+            }
+
+            .edit.disable {
+                opacity: 0.3;
+            }
         }
 
         .add-job {
@@ -2109,4 +2119,37 @@ body.positions-page {
         }
     }
 
+    .content__section {
+        .table {
+            .cell.name {
+                color: #1b2438;
+            }
+
+            .cell.tags {
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 11vw;
+
+                    a {
+                        font-size: 0.782vw;
+                        line-height: 0.782vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        letter-spacing: 0.007vw;
+                        color: #B9BABE;
+                        width: auto;
+                        height: 1.512vw;
+                        background: #FAFCFB;
+                        box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, 0.25);
+                        border-radius: 0.417vw;
+                        padding: 0vw 0.574vw;
+                        margin-bottom: 0.834vw;
+                        margin-right: 0.782vw;
+                    }
+                }
+            }
+        }
+    }
 }
