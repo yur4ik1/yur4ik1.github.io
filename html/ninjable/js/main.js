@@ -274,17 +274,20 @@ new__customSelects.forEach((new__customSelect) => {
 
   new__customOptionsContainer.addEventListener("scroll", updateScroll);
 
-  new__customOptionsList.forEach((o) => {
-    o.addEventListener("click", () => {
-      const new__customOptionValue = o.getAttribute("data-value");
-      new__customTrigger.textContent = o.textContent;
-      new__customSelect.classList.remove("open");
-      if (new__customSelect.classList.contains("filter-select-scroll")) {
-        return false;
+  new__customOptionsList.forEach((option) => {
+    option.addEventListener('click', (event) => {
+      const new__customOptionValue = option.getAttribute('data-value');
+      const new__customTrigger = new__customSelect.querySelector('.new__custom-select__trigger');
+      new__customTrigger.textContent = option.textContent;
+      new__customSelect.classList.remove('open');
+      if (new__customSelect.classList.contains('filter-select-scroll')) {
+        new__customSelect.classList.add('open');
+        new__customTrigger.textContent = "Type here to search for Clan..."
       }
     });
   });
-
+  
+  
 
   customScrollbarThumb.addEventListener("mousedown", (e) => {
     const thumbStartPosition = e.clientY - customScrollbarThumb.getBoundingClientRect().top;
