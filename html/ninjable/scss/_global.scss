@@ -182,6 +182,7 @@ tr {
   border: 0.052vw solid #D7DEE6;
   box-shadow: 0vw 0.1vw 0.126vw 0.032vw #D7DEE6;
   border-top: none;
+  z-index: 99999999999;
 }
 
 .select-selected.select-arrow-active .select-items {
@@ -240,6 +241,23 @@ tr {
   z-index: 999;
 }
 
+.filter-select {
+  .line {
+    position: absolute;
+    width: 2.7vw;
+    height: 0.052vw;
+    background: #e4e8ee;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 1.4vw;
+    left: 9.7vw;
+    display: block;
+    z-index: 99999999;
+  }
+}
+
+
 
 /* custom select + scroll */
 
@@ -279,17 +297,36 @@ tr {
 }
 
 
-.arrow {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 1.199vw;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 0.261vw solid rgba(0, 0, 0, 0);
-  border-right: 0.261vw solid rgba(0, 0, 0, 0);
-  border-top: 0.261vw solid #555;
+
+.new__custom-select-wrapper {
+
+  .arrow {
+    content: "";
+    position: absolute;
+    top: 1.4vw;
+    right: 1.199vw;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 0.261vw solid rgba(0, 0, 0, 0);
+    border-right: 0.261vw solid rgba(0, 0, 0, 0);
+    border-top: 0.261vw solid #555;
+    z-index: 999999;
+  }
+
+  .line {
+    position: absolute;
+    width: 2.7vw;
+    height: 0.052vw;
+    background: #e4e8ee;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 1.4vw;
+    left: 18.5vw;
+    display: block;
+    z-index: 99999999;
+  }
 }
 
 .new__custom-select.open .arrow {
@@ -298,6 +335,10 @@ tr {
 
 .new__custom-select.open {
   height: 15.641vw;
+}
+
+.new__custom-select.open .line {
+  display: none!important;
 }
 
 .new__custom-options {
@@ -318,6 +359,7 @@ tr {
   box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
   border-radius: 0.417vw;
   scrollbar-width: none;
+  z-index: 999999999999;
 }
 
 .new__custom-options::-webkit-scrollbar {
@@ -418,7 +460,10 @@ tr {
   border-top: none;
   border-top-right-radius: 0vw;
   border-top-left-radius: 0vw;
+  z-index: 999999999999;
 }
+
+
 
 /* custom fileter select + scroll */
 

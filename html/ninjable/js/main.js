@@ -156,16 +156,68 @@ if (infoTitle && infoPopup) {
   });
 }
 
+/* Departments edit field */
+
+document.addEventListener("DOMContentLoaded", function () {
+  var departmentBlocks = document.querySelectorAll(".department");
+
+  departmentBlocks.forEach(function (departmentBlock) {
+    var editLink = departmentBlock.querySelector(".edit");
+
+    editLink.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      var editElements = departmentBlock.querySelectorAll(".edit");
+      var departmentFieldElements = departmentBlock.querySelectorAll(".department-field");
+
+      if (editLink.classList.contains("active")) {
+        editElements.forEach(function (editElement) {
+          editElement.classList.remove("active");
+        });
+
+        departmentFieldElements.forEach(function (departmentFieldElement) {
+          departmentFieldElement.classList.remove("active");
+        });
+      } else {
+        editElements.forEach(function (editElement) {
+          editElement.classList.add("active");
+        });
+
+        departmentFieldElements.forEach(function (departmentFieldElement) {
+          departmentFieldElement.classList.add("active");
+        });
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!departmentBlock.contains(event.target)) {
+        var editElements = departmentBlock.querySelectorAll(".edit");
+        var departmentFieldElements = departmentBlock.querySelectorAll(".department-field");
+
+        editElements.forEach(function (editElement) {
+          editElement.classList.remove("active");
+        });
+
+        departmentFieldElements.forEach(function (departmentFieldElement) {
+          departmentFieldElement.classList.remove("active");
+        });
+      }
+    });
+  });
+});
+
 
 /* custom period popup */
 
 const positionsPopup = document.querySelector('.positions__popup.add-department');
-const addDepartment = document.querySelector('.add-department-btn');
+const addDepartmentBtns = Array.from(document.querySelectorAll('.add-department-btn'));
 const positionsClose = document.querySelector('.edit-close');
 
-if (positionsPopup && addDepartment) {
-  addDepartment.addEventListener('click', () => {
-    positionsPopup.classList.add('active');
+if (positionsPopup && addDepartmentBtns.length > 0) {
+  addDepartmentBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      positionsPopup.classList.add('active');
+    });
   });
   if (positionsClose) {
     positionsClose.addEventListener('click', () => {
@@ -175,12 +227,14 @@ if (positionsPopup && addDepartment) {
 }
 
 const addJobPopup = document.querySelector('.positions__popup.add-job');
-const addJobBtn = document.querySelector('.add-job-btn');
+const addJobBtns = Array.from(document.querySelectorAll('.add-job-btn'));
 const addJobClose = document.querySelector('.add-job-close');
 
-if (addJobPopup && addJobBtn) {
-  addJobBtn.addEventListener('click', () => {
-    addJobPopup.classList.add('active');
+if (addJobPopup && addJobBtns.length > 0) {
+  addJobBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      addJobPopup.classList.add('active');
+    });
   });
   if (addJobClose) {
     addJobClose.addEventListener('click', () => {
@@ -190,21 +244,22 @@ if (addJobPopup && addJobBtn) {
 }
 
 const editJobPopup = document.querySelector('.positions__popup.edit-job');
-const editJobBtn = Array.from(document.querySelectorAll('.edit-job-btn'));
+const editJobBtns = Array.from(document.querySelectorAll('.edit-job-btn'));
 const editJobClose = document.querySelector('.edit-job-close');
 
-if (editJobPopup && editJobBtn) {
-  for (let i = 0; i < editJobBtn.length; i++) {
-    editJobBtn[i].addEventListener('click', () => {
+if (editJobPopup && editJobBtns.length > 0) {
+  editJobBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       editJobPopup.classList.add('active');
     });
-  }
+  });
   if (editJobClose) {
     editJobClose.addEventListener('click', () => {
       editJobPopup.classList.remove('active');
     });
   }
 }
+
 
 /* Subscription branding */
 

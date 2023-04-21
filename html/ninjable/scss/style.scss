@@ -34,8 +34,8 @@ body.billing-page {
 }
 
 body.positions-page {
-    background: url(../img/content-branding.png) no-repeat center top / cover;
-    height: 165.706vw;
+    background: url(../img/content-positions.png) no-repeat center top / cover;
+    height: 141.706vw;
 }
 
 
@@ -1321,6 +1321,11 @@ body.positions-page {
                 .payment__method-item:hover {
                     background: rgba(233, 237, 242, 0.7);
                 }
+                
+            }
+            .alert-popup {
+                top: 8.921vw;
+                right: 3.9vw;
             }
         }
 
@@ -2062,6 +2067,7 @@ body.positions-page {
             }
         }
 
+
         .line {
             position: absolute;
             width: 2.7vw;
@@ -2071,42 +2077,59 @@ body.positions-page {
             top: 1.4vw;
             left: 11.8vw;
             display: block;
+            z-index: 99999999;
+        }
+
+        .arrow {
+            z-index: 99999999;
+            top: 1.4vw;
         }
     }
 
-    .engineering__wrapper {
+    .department__wrapper {
         display: flex;
         justify-content: space-between;
         margin-top: 3.754vw;
         margin-bottom: 1.721vw;
 
-        .engineering {
+        .department {
             display: flex;
             align-items: center;
 
-            button {
+            input {
+                width: 8.446vw;
+                height: 2.555vw;
+                color: #1B2438;
+                border: none;
+                box-shadow: none;
                 font-family: 'Karla';
                 font-weight: 500;
                 font-size: 1.043vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.014vw;
-                color: #B9BABE;
-                width: 8.446vw;
-                height: 2.555vw;
+                color: #1B2438;
+                padding-left: 1.199vw;
+                pointer-events: none;
+            }
+
+            input::placeholder {
+                color: #1B2438;
+            }
+
+            input.active {
                 background: #FFFFFF;
                 border: 0.052vw solid #D7DEE6;
                 box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
                 border-radius: 0.417vw;
                 margin-right: 1.251vw;
+                pointer-events: auto;
             }
 
-            button.active {
-                color: #1B2438;
-                border: none;
-                box-shadow: none;
+            input.active::placeholder {
+                color: #B9BABE;
             }
 
-            .edit.disable {
+            .edit.active {
                 opacity: 0.3;
             }
         }
@@ -2151,6 +2174,9 @@ body.positions-page {
                 }
             }
         }
+       .alert-popup {
+        top: 22.4vw;
+       } 
     }
 }
 
