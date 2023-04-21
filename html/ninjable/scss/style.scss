@@ -1258,6 +1258,11 @@ body.positions-page {
 
                     .payment-delete {
                         width: 1.441vw;
+                        .delete-icon {
+                            position: absolute;
+                            top: 35%;
+                            left: 30%;
+                        }
                     }
 
                     .payment-icon {
@@ -1321,11 +1326,7 @@ body.positions-page {
                 .payment__method-item:hover {
                     background: rgba(233, 237, 242, 0.7);
                 }
-                
-            }
-            .alert-popup {
-                top: 8.921vw;
-                right: 3.9vw;
+
             }
         }
 
@@ -1653,6 +1654,17 @@ body.positions-page {
         .add-user-btn {
             width: 7.404vw;
             height: 2.45vw;
+        }
+    }
+
+    .table {
+        .row-item {
+            position: relative;
+
+            .cell.actions {
+                position: absolute;
+                left: 89%;
+            }
         }
     }
 
@@ -2173,10 +2185,11 @@ body.positions-page {
                     }
                 }
             }
+
+            .cell.actions {
+                position: absolute;
+            }
         }
-       .alert-popup {
-        top: 22.4vw;
-       } 
     }
 }
 

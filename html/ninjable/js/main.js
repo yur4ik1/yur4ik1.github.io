@@ -55,34 +55,35 @@ if (profileBtn && profilePopup) {
   });
 }
 
-
 /* alert popup */
 
-document.addEventListener("DOMContentLoaded", function () {
-  const deleteBtn = document.querySelector('.delete-icon, .archive-alert');
-  const deletePopup = document.querySelector('.alert-popup');
-  const closeDeletePopup = document.querySelector('.false');
+const archiveDeleteBtns = document.querySelectorAll('.delete-icon, .archive');
 
-  if (deleteBtn && deletePopup) {
-    deleteBtn.addEventListener('click', () => {
-      deletePopup.classList.toggle('active');
-      deleteBtn.classList.toggle('active');
+archiveDeleteBtns.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const row = btn.closest('.row-item');
+    const popup = document.createElement('div');
+    popup.classList.add('alert-popup');
+    popup.innerHTML = `
+      <p>Are you sure?</p>
+      <div class="btns">
+        <button class="true">Yes</button>
+        <button class="false">No</button>
+      </div>
+    `;
+    row.appendChild(popup);
+    const trueBtn = popup.querySelector('.true');
+    const falseBtn = popup.querySelector('.false');
+    trueBtn.addEventListener('click', () => {
+      row.remove();
+      popup.remove();
     });
-
-    closeDeletePopup.addEventListener('click', () => {
-      deletePopup.classList.remove('active');
-      deleteBtn.classList.remove('active');
+    falseBtn.addEventListener('click', () => {
+      popup.remove();
     });
-
-    document.addEventListener('click', (event) => {
-      if (!event.target.closest('.alert-popup') && !event.target.closest('.delete-icon, .archive')) {
-        deletePopup.classList.remove('active');
-        deleteBtn.classList.remove('active');
-      }
-    });
-  }
+  });
 });
-
 
 /* custom period popup */
 

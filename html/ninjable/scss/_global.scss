@@ -594,14 +594,12 @@ tr {
   background: #FFFFFF;
   box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
   border-radius: 1.043vw;
-  position: absolute;
-  top: 8.921vw;
-  right: 4.9vw;
   z-index: 999999999;
   padding: 1.668vw 2.19vw;
-  visibility: hidden;
-  opacity: 0;
   transition: 0.2s;
+  position: absolute;
+  right: 3.043vw;
+  top: 4vw;
 
   p {
     font-size: 0.834vw;
@@ -633,11 +631,6 @@ tr {
       cursor: pointer;
     }
   }
-}
-
-.alert-popup.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 
@@ -700,6 +693,7 @@ tr {
 }
 
 .row-item {
+  position: relative;
   .cell {
     padding: 1.564vw 0;
     font-size: 0.782vw;
@@ -737,10 +731,7 @@ tr {
   background: rgba(233, 237, 242, 0.45);
 }
 
-.alert-popup {
-  top: 24.921vw;
-  right: 1.9vw;
-}
+
 
 .navigation {
   display: flex;
