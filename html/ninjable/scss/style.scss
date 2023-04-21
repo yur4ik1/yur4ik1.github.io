@@ -1,40 +1,47 @@
 @import 'reset';
+@import 'vars';
 @import 'global';
 
 * {
-    font-family: 'Rubik';
+    font-family: Rubik;
 }
 
 body {
     font-style: normal;
     overflow-x: hidden;
     padding-bottom: 10.063vw;
-    background: url(../img/content-bg.png) no-repeat center top / cover;
-    height: 90.853vw;
+}
+
+body.account-settings,
+body.branding,
+body.subscription-page,
+body.billing-page,
+body.positions-page {
+    background: center top / cover no-repeat;
 }
 
 body.account-settings {
-    background: url(../img/content-bg.png) no-repeat center top / cover;
+    background-image: url(../img/content-bg.png);
     height: 90.853vw;
 }
 
 body.branding {
-    background: url(../img/content-branding.png) no-repeat center top / cover;
+    background-image: url(../img/content-branding.png);
     height: 223.842vw;
 }
 
 body.subscription-page {
-    background: url(../img/content-subscription.png) no-repeat center top / cover;
+    background-image: url(../img/content-subscription.png);
     height: 74.069vw;
 }
 
 body.billing-page {
-    background: url(../img/content-billing.png) no-repeat center top / cover;
+    background-image: url(../img/content-billing.png);
     height: 114.661vw;
 }
 
 body.positions-page {
-    background: url(../img/content-positions.png) no-repeat center top / cover;
+    background-image: url(../img/content-positions.png);
     height: 141.706vw;
 }
 
@@ -45,8 +52,8 @@ body.positions-page {
     height: 5.892vw;
     display: flex;
     align-items: center;
-    background: #FFFFFF;
-    box-shadow: 0vw 0.209vw 0.521vw 0.156vw rgba(142, 161, 186, 0.25);
+    background: $background-color;
+    box-shadow: 0vw 0.209vw 0.521vw 0.156vw $shadow-color;
 
     .container {
         width: 100%;
@@ -61,7 +68,7 @@ body.positions-page {
     &__logo {
         width: 14.92vw;
         height: 5.892vw;
-        border-right: 0.052vw solid #D7DEE6;
+        border-right: 0.052vw solid $border-color;
         display: flex;
         align-items: center;
 
@@ -81,7 +88,7 @@ body.positions-page {
         .avatar-img {
             width: 3.65vw;
             height: 3.65vw;
-            background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+            background: linear-gradient(0deg, #FFFFFF, #FFFFFF), $background-color;
             box-shadow: 0vw 0vw 0.563vw rgba(142, 161, 186, 0.61);
             display: flex;
             align-items: center;
@@ -111,7 +118,7 @@ body.positions-page {
     &__profile-popup {
         width: 16.163vw;
         height: 19.395vw;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.043vw;
         position: absolute;
@@ -127,7 +134,7 @@ body.positions-page {
             font-size: 0.834vw;
             line-height: 1.981vw;
             letter-spacing: 0.011vw;
-            color: #1B2438;
+            color: $primary-color;
         }
 
         li {
@@ -137,7 +144,7 @@ body.positions-page {
                 font-size: 0.834vw;
                 line-height: 1.981vw;
                 letter-spacing: 0.011vw;
-                color: #8D919B;
+                color: $secondary-color;
             }
         }
 
@@ -171,7 +178,7 @@ body.positions-page {
     .sidebar {
         width: 18.8vw;
         height: 100%;
-        border-right: 0.052vw solid #D7DEE6;
+        border-right: 0.052vw solid $border-color;
         background: #fff;
 
         .sidemenu {
@@ -188,7 +195,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 0vw;
                     letter-spacing: 0.01vw;
-                    color: #8D919B;
+                    color: $secondary-color;
                     display: flex;
                     align-items: center;
                     padding-left: 4.275vw;
@@ -234,7 +241,7 @@ body.positions-page {
                             display: flex;
                             align-items: center;
                             letter-spacing: 0.01vw;
-                            color: #1B2438;
+                            color: $primary-color;
                             padding-left: 4.275vw;
                             opacity: 0.3;
                         }
@@ -322,7 +329,7 @@ body.positions-page {
                 }
 
                 .sidemenu__item-link {
-                    color: #1B2438;
+                    color: $primary-color;
                     background: #edf0f4
                 }
             }
@@ -331,7 +338,7 @@ body.positions-page {
 
     .content {
         width: 64.129vw;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
         margin: 5.214vw 0 0 5.683vw;
@@ -354,7 +361,7 @@ body.positions-page {
             font-size: 1.303vw;
             line-height: 1.147vw;
             letter-spacing: 0.278vw;
-            color: #1B2438;
+            color: $primary-color;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -376,13 +383,12 @@ body.positions-page {
             position: relative;
 
             label {
-                font-family: 'Rubik';
                 display: flex;
                 flex-direction: column;
                 font-size: 0.834vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.011vw;
-                color: #869DC8;
+                color: $tertiary-color;
             }
 
             .account-owner {
@@ -400,7 +406,7 @@ body.positions-page {
                     width: 6.257vw;
                     height: 2.555vw;
                     background: #FAFCFB;
-                    box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                    box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                     border-radius: 0.417vw;
                     border: none;
                     cursor: pointer;
@@ -421,15 +427,15 @@ body.positions-page {
                     font-size: 1.043vw;
                     line-height: 2.503vw;
                     letter-spacing: 0.014vw;
-                    color: #1B2438;
+                    color: $primary-color;
                 }
 
                 input {
                     width: 26.799vw;
                     height: 2.555vw;
-                    background: #FFFFFF;
-                    border: 0.052vw solid #D7DEE6;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    background: $background-color;
+                    border: 0.052vw solid $border-color;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                     border-radius: 0.417vw;
                     padding-top: 0.886vw;
                     padding-bottom: 0.886vw;
@@ -438,42 +444,42 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #1b2438;
+                    color: $primary-color;
                 }
 
                 input::-webkit-input-placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 input::-moz-placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 input:-ms-input-placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 input::-ms-input-placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 input::placeholder {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 .right {
@@ -533,7 +539,7 @@ body.positions-page {
                 font-size: 1.043vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.014vw;
-                color: #1B2438;
+                color: $primary-color;
                 margin-bottom: 1.356vw;
             }
 
@@ -557,7 +563,7 @@ body.positions-page {
             .branding__popup {
                 width: 13.139vw;
                 height: auto;
-                background: #FFFFFF;
+                background: $background-color;
                 box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
                 border-radius: 1.043vw;
                 position: absolute;
@@ -579,7 +585,7 @@ body.positions-page {
                     font-size: 0.834vw;
                     line-height: 1.668vw;
                     letter-spacing: 0.011vw;
-                    color: #1B2438;
+                    color: $primary-color;
                     margin-bottom: 0.938vw;
                 }
 
@@ -587,7 +593,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 1.251vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                     margin-bottom: 2.346vw;
                 }
 
@@ -595,10 +601,10 @@ body.positions-page {
                     font-size: 0.834vw;
                     line-height: 0.938vw;
                     letter-spacing: 0.02vw;
-                    color: #FFFFFF;
+                    color: $background-color;
                     width: 6.778vw;
                     height: 2.242vw;
-                    background: #869DC8;
+                    background: $tertiary-color;
                     box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
                     border-radius: 0.521vw;
                     display: flex;
@@ -615,7 +621,7 @@ body.positions-page {
             .content__block {
                 width: 100%;
                 height: auto;
-                background: #FFFFFF;
+                background: $background-color;
                 border: 0.104vw solid #E4E8EE;
                 box-shadow: 0vw 0vw 0.261vw #E5E5E6;
                 border-radius: 1.095vw;
@@ -634,7 +640,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 2.503vw;
                     letter-spacing: 0.01vw;
-                    color: #869DC8;
+                    color: $tertiary-color;
                     margin-bottom: 1vw;
                     display: block;
                 }
@@ -643,7 +649,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 1.251vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
             }
 
@@ -670,7 +676,7 @@ body.positions-page {
                         width: 5.527vw;
                         height: 2.086vw;
                         background: #FAFCFB;
-                        box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                        box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                         border-radius: 0.417vw;
                         margin-left: 2.92vw;
                     }
@@ -683,7 +689,7 @@ body.positions-page {
                         font-size: 1.043vw;
                         line-height: 2.086vw;
                         letter-spacing: 0.014vw;
-                        color: #1B2438;
+                        color: $primary-color;
                         margin-bottom: 1.46vw;
                     }
 
@@ -706,7 +712,7 @@ body.positions-page {
                             width: 8.081vw;
                             height: 2.086vw;
                             background: #FAFCFB;
-                            box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                            box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                             border-radius: 0.417vw;
                             cursor: pointer;
                         }
@@ -734,7 +740,7 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 1.668vw;
                         letter-spacing: 0.01vw;
-                        color: #1B2438;
+                        color: $primary-color;
                         margin-bottom: 1.303vw;
                     }
 
@@ -745,7 +751,7 @@ body.positions-page {
                             display: flex;
                             align-items: center;
                             letter-spacing: 0.01vw;
-                            color: #B9BABE;
+                            color: $placeholder-color;
                             margin-bottom: 0.417vw;
                         }
 
@@ -767,7 +773,7 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 1.668vw;
                         letter-spacing: 0.01vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                         margin-top: 1.303vw;
                         margin-bottom: 3.65vw;
                     }
@@ -776,7 +782,7 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 2.503vw;
                         letter-spacing: 0.01vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                         display: flex;
                         margin-left: 7.664vw;
                         margin-top: 0.782vw;
@@ -808,14 +814,14 @@ body.positions-page {
                             font-size: 0.782vw;
                             line-height: 2.086vw;
                             letter-spacing: 0.01vw;
-                            color: #1B2438;
+                            color: $primary-color;
                         }
 
                         .desc {
                             font-size: 0.782vw;
                             line-height: 1.251vw;
                             letter-spacing: 0.01vw;
-                            color: #B9BABE;
+                            color: $placeholder-color;
                         }
 
                         .color-content {
@@ -849,7 +855,7 @@ body.positions-page {
                                 font-size: 0.782vw;
                                 line-height: 2.763vw;
                                 letter-spacing: 0.01vw;
-                                color: #B9BABE;
+                                color: $placeholder-color;
                                 margin-left: 0.991vw;
                             }
                         }
@@ -881,7 +887,7 @@ body.positions-page {
                     font-size: 1.356vw;
                     line-height: 0.938vw;
                     letter-spacing: 0.017vw;
-                    color: #869DC8;
+                    color: $tertiary-color;
                     margin-bottom: 1.043vw;
                     text-transform: uppercase;
                 }
@@ -890,7 +896,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 0.626vw;
                     letter-spacing: 0.01vw;
-                    color: #1B2438;
+                    color: $primary-color;
                 }
 
                 .summary__btns {
@@ -939,7 +945,7 @@ body.positions-page {
                 width: 11.783vw;
                 height: 2.086vw;
                 background: #FAFCFB;
-                box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                 border-radius: 0.417vw;
             }
         }
@@ -966,7 +972,7 @@ body.positions-page {
     .subscription__popup-inner {
         width: 64.181vw;
         height: 44.317vw;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
         position: relative;
@@ -974,7 +980,7 @@ body.positions-page {
         .subscription__popup-header {
             width: 64.181vw;
             height: 8.498vw;
-            background: #FFFFFF;
+            background: $background-color;
             border: 0.104vw solid #E4E8EE;
             box-shadow: 0vw 0vw 0.261vw #E5E5E6;
             border-radius: 1.356vw 1.356vw 0vw 0vw;
@@ -984,7 +990,7 @@ body.positions-page {
                 width: 2.033vw;
                 height: 1.981vw;
                 background: #FAFCFB;
-                box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                 border-radius: 0.417vw;
                 position: absolute;
                 right: 2.45vw;
@@ -1078,7 +1084,7 @@ body.positions-page {
                         display: flex;
                         align-items: center;
                         letter-spacing: 0.01vw;
-                        color: #1B2438;
+                        color: $primary-color;
                         width: 10.385vw;
                     }
 
@@ -1087,7 +1093,7 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 2.086vw;
                         letter-spacing: 0.01vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                         display: block;
                     }
                 }
@@ -1144,7 +1150,7 @@ body.positions-page {
                         font-size: 0.834vw;
                         line-height: 2.503vw;
                         letter-spacing: 0.011vw;
-                        color: #869DC8;
+                        color: $tertiary-color;
 
                     }
                 }
@@ -1163,7 +1169,7 @@ body.positions-page {
                             font-size: 0.782vw;
                             line-height: 1.512vw;
                             letter-spacing: 0.01vw;
-                            color: #B9BABE;
+                            color: $placeholder-color;
                             width: 10vw;
                         }
 
@@ -1171,7 +1177,7 @@ body.positions-page {
                             font-size: 0.782vw;
                             line-height: 2.503vw;
                             letter-spacing: 0.01vw;
-                            color: #1B2438;
+                            color: $primary-color;
                             display: flex;
                             align-items: center;
 
@@ -1210,7 +1216,7 @@ body.positions-page {
                     font-size: 0.834vw;
                     line-height: 2.503vw;
                     letter-spacing: 0.011vw;
-                    color: #869DC8;
+                    color: $tertiary-color;
                     height: 4.692vw;
 
                     td:nth-child(1) {
@@ -1258,6 +1264,7 @@ body.positions-page {
 
                     .payment-delete {
                         width: 1.441vw;
+
                         .delete-icon {
                             position: absolute;
                             top: 35%;
@@ -1276,21 +1283,21 @@ body.positions-page {
                         font-size: 0.834vw;
                         line-height: 1.512vw;
                         letter-spacing: 0.011vw;
-                        color: #1B2438;
+                        color: $primary-color;
                     }
 
                     .desc {
                         font-size: 0.782vw;
                         line-height: 1.512vw;
                         letter-spacing: 0.01vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                     }
 
                     .sub {
                         font-size: 0.782vw;
                         line-height: 1.147vw;
                         letter-spacing: 0.01vw;
-                        color: #8D919B;
+                        color: $secondary-color;
                     }
 
                     .delete-icon {
@@ -1345,7 +1352,7 @@ body.positions-page {
                 font-size: 0.782vw;
                 line-height: 4.015vw;
                 letter-spacing: 0.02vw;
-                color: #8D919B;
+                color: $secondary-color;
                 visibility: hidden;
                 opacity: 0;
             }
@@ -1404,7 +1411,7 @@ body.positions-page {
                     font-size: 1.303vw;
                     line-height: 2.503vw;
                     letter-spacing: 0.021vw;
-                    color: #1B2438;
+                    color: $primary-color;
                 }
 
                 p {
@@ -1413,7 +1420,7 @@ body.positions-page {
                     font-size: 0.834vw;
                     line-height: 1.043vw;
                     letter-spacing: 0.021vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 .custom__period-close {
@@ -1454,9 +1461,9 @@ body.positions-page {
                     justify-content: space-between;
                     width: 13.243vw;
                     height: 2.555vw;
-                    background: #FFFFFF;
-                    border: 0.052vw solid #D7DEE6;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    background: $background-color;
+                    border: 0.052vw solid $border-color;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                     border-radius: 0.417vw;
                     padding-left: 0.417vw;
                     padding-right: 0.417vw;
@@ -1473,14 +1480,14 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 2.503vw;
                         letter-spacing: 0.01vw;
-                        color: #869DC8;
+                        color: $tertiary-color;
                         cursor: pointer;
                         position: relative;
                     }
 
                     .date-btn.active {
-                        background: #869DC8;
-                        color: #FFFFFF;
+                        background: $tertiary-color;
+                        color: $background-color;
                     }
 
                     .date-btn:nth-child(1):after {
@@ -1506,7 +1513,7 @@ body.positions-page {
                             font-size: 1.043vw;
                             line-height: 2.19vw;
                             letter-spacing: 0.016vw;
-                            color: #1B2438;
+                            color: $primary-color;
                             margin-bottom: 0.938vw;
                         }
 
@@ -1553,7 +1560,7 @@ body.positions-page {
                             margin-top: 6vw;
                             width: 16.475vw;
                             height: 14.39vw;
-                            background: #FFFFFF;
+                            background: $background-color;
                             border: 0.104vw solid #E4E8EE;
                             box-shadow: 0vw 0vw 0.261vw #E5E5E6;
                             border-radius: 1.095vw;
@@ -1572,7 +1579,7 @@ body.positions-page {
                                         font-size: 0.782vw;
 
                                         letter-spacing: -0.012vw;
-                                        color: #869DC8;
+                                        color: $tertiary-color;
 
                                     }
                                 }
@@ -1582,21 +1589,21 @@ body.positions-page {
                                         font-size: 0.782vw;
 
                                         letter-spacing: 0.012vw;
-                                        color: #1B2438;
+                                        color: $primary-color;
                                         cursor: pointer;
                                         transition: 0.2s;
                                     }
 
                                     td.active {
-                                        background: #869DC8;
+                                        background: $tertiary-color;
                                         border-radius: 0.209vw;
-                                        color: #FFFFFF;
+                                        color: $background-color;
                                     }
 
                                     td:hover {
-                                        background: #869DC8;
+                                        background: $tertiary-color;
                                         border-radius: 0.209vw;
-                                        color: #FFFFFF;
+                                        color: $background-color;
                                     }
                                 }
 
@@ -1625,10 +1632,10 @@ body.positions-page {
                     align-items: center;
                     justify-content: center;
                     letter-spacing: 0.02vw;
-                    color: #FFFFFF;
+                    color: $background-color;
                     width: 8.238vw;
                     height: 2.503vw;
-                    background: #869DC8;
+                    background: $tertiary-color;
                     box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
                     border-radius: 0.521vw;
                 }
@@ -1677,14 +1684,14 @@ body.positions-page {
         .search-input {
             width: 39.885vw;
             height: 2.555vw;
-            background: #FFFFFF;
-            border: 0.052vw solid #D7DEE6;
-            box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+            background: $background-color;
+            border: 0.052vw solid $border-color;
+            box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
             border-radius: 0.417vw;
             font-size: 0.782vw;
             line-height: 1.408vw;
             letter-spacing: 0.01vw;
-            color: #1B2438;
+            color: $primary-color;
             position: relative;
             padding-left: 3.91vw;
             padding-right: 3.91vw;
@@ -1698,7 +1705,7 @@ body.positions-page {
             font-size: 0.782vw;
             line-height: 1.408vw;
             letter-spacing: 0.01vw;
-            color: #B9BABE;
+            color: $placeholder-color;
         }
 
         .search-icon {
@@ -1770,7 +1777,7 @@ body.positions-page {
     .popup__users-inner {
         width: 64.129vw;
         height: auto;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.356vw;
         padding-top: 1.564vw;
@@ -1794,7 +1801,7 @@ body.positions-page {
                 width: 2.033vw;
                 height: 1.981vw;
                 background: #FAFCFB;
-                box-shadow: 0vw 0vw 0.313vw 0.156vw rgba(142, 161, 186, 0.25);
+                box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
                 border-radius: 0.417vw;
                 position: absolute;
                 right: -2.256vw;
@@ -1813,7 +1820,7 @@ body.positions-page {
                 font-size: 1.303vw;
                 line-height: 1.147vw;
                 letter-spacing: 0.278vw;
-                color: #1B2438;
+                color: $primary-color;
                 text-align: center;
             }
         }
@@ -1845,7 +1852,7 @@ body.positions-page {
                         font-size: 0.834vw;
                         line-height: 2.503vw;
                         letter-spacing: 0.011vw;
-                        color: #869DC8;
+                        color: $tertiary-color;
                         margin-bottom: 2.346vw;
                         position: relative;
                         margin-left: 0.156vw;
@@ -1853,26 +1860,26 @@ body.positions-page {
                         input {
                             width: 100%;
                             height: 2.555vw;
-                            background: #FFFFFF;
+                            background: $background-color;
                             border: 0.052vw solid rgba(192, 200, 209, 0.8);
                             border-radius: 0.417vw;
                             font-size: 0.782vw;
                             line-height: 0.73vw;
                             letter-spacing: 0.01vw;
-                            color: #1B2438;
+                            color: $primary-color;
                             padding-left: 2.086vw;
                             position: relative;
                         }
 
                         input:focus {
-                            box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+                            box-shadow: 0vw 0vw 0.156vw 0.052vw $tertiary-color;
                         }
 
                         input::placeholder {
                             font-size: 0.782vw;
                             line-height: 0.73vw;
                             letter-spacing: 0.01vw;
-                            color: #B9BABE;
+                            color: $placeholder-color;
                         }
 
                         .let-know {
@@ -1916,7 +1923,7 @@ body.positions-page {
                                     font-size: 0.782vw;
                                     line-height: 0.834vw;
                                     letter-spacing: 0.01vw;
-                                    color: #8D919B;
+                                    color: $secondary-color;
                                 }
 
                                 .new__custom-option:hover {
@@ -1924,12 +1931,12 @@ body.positions-page {
                                     font-size: 0.782vw;
                                     line-height: 0.834vw;
                                     letter-spacing: 0.01vw;
-                                    color: #869DC8;
+                                    color: $tertiary-color;
                                 }
                             }
 
                             .new__custom-select:hover {
-                                box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+                                box-shadow: 0vw 0vw 0.156vw 0.052vw $tertiary-color;
                                 border-radius: 0.417vw;
                             }
 
@@ -1977,7 +1984,7 @@ body.positions-page {
                         }
 
                         .custom-select:hover {
-                            box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+                            box-shadow: 0vw 0vw 0.156vw 0.052vw $tertiary-color;
                             border-radius: 0.417vw;
 
                         }
@@ -2042,10 +2049,10 @@ body.positions-page {
             align-items: center;
             justify-content: center;
             letter-spacing: 0.02vw;
-            color: #FFFFFF;
+            color: $background-color;
             width: 8.238vw;
             height: 2.503vw;
-            background: #869DC8;
+            background: $tertiary-color;
             box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
             border-radius: 0.521vw;
             margin-top: 1.1vw;
@@ -2111,7 +2118,7 @@ body.positions-page {
             input {
                 width: 8.446vw;
                 height: 2.555vw;
-                color: #1B2438;
+                color: $primary-color;
                 border: none;
                 box-shadow: none;
                 font-family: 'Karla';
@@ -2119,26 +2126,26 @@ body.positions-page {
                 font-size: 1.043vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.014vw;
-                color: #1B2438;
+                color: $primary-color;
                 padding-left: 1.199vw;
                 pointer-events: none;
             }
 
             input::placeholder {
-                color: #1B2438;
+                color: $primary-color;
             }
 
             input.active {
-                background: #FFFFFF;
-                border: 0.052vw solid #D7DEE6;
-                box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                background: $background-color;
+                border: 0.052vw solid $border-color;
+                box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                 border-radius: 0.417vw;
                 margin-right: 1.251vw;
                 pointer-events: auto;
             }
 
             input.active::placeholder {
-                color: #B9BABE;
+                color: $placeholder-color;
             }
 
             .edit.active {
@@ -2157,7 +2164,7 @@ body.positions-page {
     .content__section {
         .table {
             .cell.name {
-                color: #1b2438;
+                color: $primary-color;
             }
 
             .cell.tags {
@@ -2173,11 +2180,11 @@ body.positions-page {
                         align-items: center;
                         justify-content: center;
                         letter-spacing: 0.007vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                         width: auto;
                         height: 1.512vw;
                         background: #FAFCFB;
-                        box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, 0.25);
+                        box-shadow: 0vw 0vw 0.052vw 0.052vw $shadow-color;
                         border-radius: 0.417vw;
                         padding: 0vw 0.574vw;
                         margin-bottom: 0.834vw;
@@ -2256,7 +2263,7 @@ body.positions-page {
                 font-size: 1.303vw;
                 line-height: 1.147vw;
                 letter-spacing: .278vw;
-                color: #1b2438;
+                color: $primary-color;
                 text-align: center;
             }
 
@@ -2303,7 +2310,7 @@ body.positions-page {
                 font-size: 0.834vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.011vw;
-                color: #8D919B;
+                color: $secondary-color;
                 margin-bottom: 2.19vw;
                 position: relative;
 
@@ -2316,10 +2323,10 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 0.73vw;
                         letter-spacing: 0.01vw;
-                        color: #1b2438;
+                        color: $primary-color;
                         width: 50.626vw;
                         height: 2.555vw;
-                        background: #FFFFFF;
+                        background: $background-color;
                         border: 0.052vw solid rgba(192, 200, 209, 0.8);
                         border-radius: 0.417vw;
                         padding: 0.886vw 2.086vw;
@@ -2329,12 +2336,12 @@ body.positions-page {
                         font-size: 0.782vw;
                         line-height: 0.73vw;
                         letter-spacing: 0.01vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                     }
 
                     input:focus {
-                        border: 0.052vw solid #D7DEE6;
-                        box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                        border: 0.052vw solid $border-color;
+                        box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                     }
 
                     button {
@@ -2363,7 +2370,7 @@ body.positions-page {
                 display: flex;
                 align-items: center;
                 letter-spacing: 0.014vw;
-                color: #1B2438;
+                color: $primary-color;
                 margin-top: 3.18vw;
                 margin-bottom: 1.408vw;
             }
@@ -2401,7 +2408,7 @@ body.positions-page {
                     font-size: 0.834vw;
                     line-height: 1.668vw;
                     letter-spacing: 0.011vw;
-                    color: #1B2438;
+                    color: $primary-color;
                     margin-bottom: 0.938vw;
                 }
 
@@ -2409,7 +2416,7 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 1.251vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
             }
 
@@ -2469,7 +2476,7 @@ body.positions-page {
             font-size: 0.834vw;
             line-height: 2.503vw;
             letter-spacing: 0.011vw;
-            color: #8D919B;
+            color: $secondary-color;
             margin-bottom: 2.19vw;
             position: relative;
 
@@ -2481,13 +2488,13 @@ body.positions-page {
                 textarea {
                     width: 100%;
                     height: 10.845vw;
-                    background: #FFFFFF;
+                    background: $background-color;
                     border: 0.052vw solid rgba(192, 200, 209, 0.8);
                     border-radius: 0.417vw;
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #1b2438;
+                    color: $primary-color;
                     padding: 0.886vw 2.086vw;
                     resize: none;
                 }
@@ -2496,12 +2503,12 @@ body.positions-page {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 textarea:focus {
-                    border: 0.052vw solid #D7DEE6;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+                    border: 0.052vw solid $border-color;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                 }
             }
 
@@ -2511,7 +2518,7 @@ body.positions-page {
                 padding: 1.564vw 2.086vw;
                 width: 100%;
                 height: auto;
-                background: #FFFFFF;
+                background: $background-color;
                 border: 0.052vw solid rgba(192, 200, 209, 0.8);
                 border-radius: 0.417vw;
 
@@ -2519,7 +2526,7 @@ body.positions-page {
                     width: auto;
                     padding: 0.365vw 0.574vw;
                     background: #FAFCFB;
-                    box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, 0.25);
+                    box-shadow: 0vw 0vw 0.052vw 0.052vw $shadow-color;
                     border-radius: 0.417vw;
                     font-size: 0.782vw;
                     line-height: 0.782vw;
@@ -2527,7 +2534,7 @@ body.positions-page {
                     align-items: center;
                     justify-content: center;
                     letter-spacing: 0.007vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                     border: none;
                     margin-bottom: 1.043vw;
                     margin-right: 1.043vw;
@@ -2560,4 +2567,36 @@ body.positions-page {
 .positions__popup.active {
     visibility: visible;
     opacity: 1;
+}
+
+/* levels page */
+
+
+.content.levels {
+    .content__section {
+        .table {
+            .row-item {
+                .cell.color {
+                    div {
+                        width: 9.124vw;
+
+                        span {
+                            font-size: 0.782vw;
+                            line-height: 0.782vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            letter-spacing: 0.007vw;
+                            width: fit-content;
+                            height: 1.512vw;
+                            background: #FAFCFB;
+                            box-shadow: 0vw 0vw 0.052vw 0.052vw $shadow-color;
+                            border-radius: 0.417vw;
+                            padding: 0.365vw 0.73vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

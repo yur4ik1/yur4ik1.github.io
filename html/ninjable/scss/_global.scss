@@ -87,7 +87,6 @@ tr {
   cursor: pointer;
 }
 
-
 .edit {
   position: relative;
   cursor: pointer;
@@ -115,6 +114,31 @@ tr {
   display: block;
 }
 
+/* colors */
+
+.white {
+  color: #B9BABE;
+}
+
+.yellow {
+  color: #ECC081;
+}
+
+.green {
+  color: #8ACEC0;
+}
+
+.red {
+  color: #FF9A9A;
+}
+
+.purple {
+  color: #A3A3E3;
+}
+
+.black {
+  color: #70757E;
+}
 
 /* custom select */
 
@@ -257,8 +281,6 @@ tr {
   }
 }
 
-
-
 /* custom select + scroll */
 
 .new__custom-select-wrapper {
@@ -338,7 +360,7 @@ tr {
 }
 
 .new__custom-select.open .line {
-  display: none!important;
+  display: none !important;
 }
 
 .new__custom-options {
@@ -694,6 +716,7 @@ tr {
 
 .row-item {
   position: relative;
+
   .cell {
     padding: 1.564vw 0;
     font-size: 0.782vw;
