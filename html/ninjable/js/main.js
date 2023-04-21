@@ -16,7 +16,7 @@ if (sidemenuItem) {
 
 const popupUsers = document.querySelector('.add-users');
 const addUserBtn = document.querySelector('.add-user-btn');
-const userPopupClose = document.querySelector('.users__popup-close');
+const userPopupClose = document.querySelector('.ninjable__popup-close');
 
 if (popupUsers && addUserBtn) {
   addUserBtn.addEventListener('click', () => {
@@ -266,7 +266,7 @@ if (editJobPopup && editJobBtns.length > 0) {
 
 const subscriptionBtn = document.querySelector('.upgrade__btn');
 const subscriptionPopup = document.querySelector('.subscription__popup');
-const subscriptionClose = document.querySelector('.subscription__popup-close');
+const subscriptionClose = document.querySelector('.ninjable__popup-close');
 
 if (subscriptionBtn && subscriptionPopup) {
   subscriptionBtn.addEventListener('click', () => {
@@ -489,3 +489,32 @@ if (addButton && inputFields) {
   })
 };
 
+
+// Levels popup
+
+const levelsPopup = document.querySelector('.level__popup');
+const openLevelsPopup = document.querySelector('.add-level');
+const levelPopupClose = document.querySelector('.level-close');
+
+if (levelsPopup && openLevelsPopup) {
+  openLevelsPopup.addEventListener('click', () => {
+    levelsPopup.classList.add('active');
+  });
+  levelPopupClose.addEventListener('click', () => {
+    levelsPopup.classList.remove('active');
+  });
+}
+
+
+// Levels buttons 
+
+const buttons = document.querySelectorAll('.level__popup-form button');
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('active')) {
+      button.classList.remove('active');
+    } else {
+      button.classList.add('active');
+    }
+  });
+});
