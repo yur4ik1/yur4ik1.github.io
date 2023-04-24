@@ -2453,6 +2453,7 @@ body.positions-page {
                     box-shadow: 0vw 0vw 0.052vw 0.052vw #D7E7DD;
                     color: #B1CCBC;
                 }
+
                 button.active::after {
                     content: '';
                     background: url(../img/tick-green.svg) no-repeat center top / cover;
@@ -2465,5 +2466,22 @@ body.positions-page {
                 }
             }
         }
+    }
+}
+
+.delete-level-popup {
+    z-index: 9999999999999;
+    width: 14.025vw;
+    height: 8.759vw;
+    background: #FFFFFF;
+    box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+    border-radius: 1.043vw;
+    padding: 1.825vw 2.086vw;
+
+    p {
+        font-size: 0.782vw;
+        line-height: 1.251vw;
+        letter-spacing: 0.01vw;
+        color: #B9BABE;
     }
 }

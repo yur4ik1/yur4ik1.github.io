@@ -76,7 +76,25 @@ archiveDeleteBtns.forEach((btn) => {
     const trueBtn = popup.querySelector('.true');
     const falseBtn = popup.querySelector('.false');
     trueBtn.addEventListener('click', () => {
-      row.remove();
+      if (document.body.classList.contains('levels-page')) {
+        const deleteLevelPopup = document.createElement('div');
+        deleteLevelPopup.classList.add('delete-level-popup');
+        deleteLevelPopup.innerHTML = `
+          <p>
+            Level can't be deactivated until you have at least one active user with this level.
+          </p>
+        `;
+        const rowRect = row.getBoundingClientRect();
+        const popupHeight = deleteLevelPopup.getBoundingClientRect().height;
+        const topOffset = rowRect.top - popupHeight;
+        deleteLevelPopup.style.position = 'absolute';
+        deleteLevelPopup.style.top = `1vw`;
+        deleteLevelPopup.style.left = `33vw`;
+        row.parentNode.appendChild(deleteLevelPopup); // Append to the parent of the table row
+      } else {
+        row.remove();
+      }
+      
       popup.remove();
     });
     falseBtn.addEventListener('click', () => {
@@ -84,6 +102,8 @@ archiveDeleteBtns.forEach((btn) => {
     });
   });
 });
+
+
 
 /* custom period popup */
 
@@ -509,12 +529,37 @@ if (levelsPopup && openLevelsPopup) {
 // Levels buttons 
 
 const buttons = document.querySelectorAll('.level__popup-form button');
+
 buttons.forEach(button => {
+  let clickCount = 0;
+  let popup = null;
+
   button.addEventListener('click', () => {
-    if (button.classList.contains('active')) {
-      button.classList.remove('active');
+    clickCount++;
+    if (clickCount === 2 && button.classList.contains('active')) {
+      popup = document.createElement('div');
+      popup.classList.add('delete-level-popup');
+      popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
+      
+      popup.style.position = 'absolute';
+      popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
+      popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
+
+      button.parentNode.insertBefore(popup, button.nextSibling);
+      clickCount = 0;
     } else {
-      button.classList.add('active');
+      if (button.classList.contains('active')) {
+        button.classList.remove('active');
+      } else {
+        button.classList.add('active');
+      }
+    }
+  });
+  
+  document.addEventListener('click', (event) => {
+    if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
+      popup.remove();
+      popup = null;
     }
   });
 });
