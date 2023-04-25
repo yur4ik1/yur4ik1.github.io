@@ -2372,22 +2372,28 @@ body.skills-page {
         .cell {
             position: relative;
         }
+
         .cell.name {
             width: 8.692vw;
             color: #1B2438;
         }
 
         .cell.desc {
-            width: 14.556vw;
+            width: 15.556vw;
         }
 
         .cell.attribute {
-            width: 9.29vw;
+            padding-right: 6.076vw;
+            .flex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             img {
                 position: absolute;
                 width: 3.65vw;
                 height: 3.65vw;
-                left: 1vw;
             }
 
             p {
@@ -2398,13 +2404,11 @@ body.skills-page {
                 color: #B9BABE;
                 margin-top: 1.043vw;
                 position: absolute;
-                top: 5.607vw;
-                left: 1.626vw;
+                top: 6.607vw;
             }
         }
 
         .cell.coins {
-            width: 7.432vw;
             font-size: 0.782vw;
             line-height: 1.251vw;
             display: flex;
@@ -2413,12 +2417,18 @@ body.skills-page {
             color: #B9BABE;
             white-space: nowrap;
         }
+
         .cell.coins::before {
             content: '';
             background: url(../img/coins.svg) no-repeat center top / cover;
             width: 1.043vw;
             height: 1.043vw;
             margin-right: 0.678vw;
+        }
+
+        .cell.actions {
+            position: absolute;
+            left: 89%;
         }
     }
 }
