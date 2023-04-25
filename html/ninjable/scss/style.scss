@@ -39,6 +39,11 @@ body.positions-page {
     height: 141.706vw;
 }
 
+body.skills-page {
+    background: url(../img/content-skills.png) no-repeat center top / cover;
+    height: 145.199vw;
+}
+
 
 
 .header {
@@ -1614,86 +1619,6 @@ body.positions-page {
             }
         }
     }
-
-    .search__wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 2.033vw;
-
-        .search-input {
-            width: 39.885vw;
-            height: 2.555vw;
-            background: $background-color;
-            border: 0.052vw solid $border-color;
-            box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
-            border-radius: 0.417vw;
-            font-size: 0.782vw;
-            line-height: 1.408vw;
-            letter-spacing: 0.01vw;
-            color: $primary-color;
-            position: relative;
-            padding-left: 3.91vw;
-            padding-right: 3.91vw;
-            padding-top: 0.626vw;
-            padding-bottom: 0.521vw;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-input::placeholder {
-            font-size: 0.782vw;
-            line-height: 1.408vw;
-            letter-spacing: 0.01vw;
-            color: $placeholder-color;
-        }
-
-        .search-icon {
-            display: flex;
-            position: relative;
-        }
-
-        .search-icon::before {
-            content: '';
-            background: url(../img/search-icon.svg) no-repeat center top / cover;
-            display: flex;
-            width: 0.678vw;
-            height: 0.678vw;
-            position: absolute;
-            top: 0.921vw;
-            left: 2.621vw;
-            z-index: 99999;
-        }
-
-
-        .custom-select {
-            width: 13.712vw;
-            position: relative;
-
-            .select-selected {
-                padding-left: 1.086vw;
-            }
-
-            .select-option {
-                padding: 0.678vw 1.033vw;
-            }
-
-            .line {
-                position: absolute;
-                width: 2.7vw;
-                height: 0.052vw;
-                background: #E4E8EE;
-                transform: rotate(-90deg);
-                top: 1.4vw;
-                left: 9.8vw;
-                display: block;
-            }
-        }
-
-        .select-selected {
-            width: 13.712vw;
-        }
-    }
 }
 
 .popup__users {
@@ -1960,62 +1885,6 @@ body.positions-page {
         .arrow {
             z-index: 99999999;
             top: 1.4vw;
-        }
-    }
-
-    .department__wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 3.754vw;
-        margin-bottom: 1.721vw;
-
-        .department {
-            display: flex;
-            align-items: center;
-
-            input {
-                width: 8.446vw;
-                height: 2.555vw;
-                color: $primary-color;
-                border: none;
-                box-shadow: none;
-                font-family: 'Karla';
-                font-weight: 500;
-                font-size: 1.043vw;
-                line-height: 2.503vw;
-                letter-spacing: 0.014vw;
-                color: $primary-color;
-                padding-left: 1.199vw;
-                pointer-events: none;
-            }
-
-            input::placeholder {
-                color: $primary-color;
-            }
-
-            input.active {
-                background: $background-color;
-                border: 0.052vw solid $border-color;
-                box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
-                border-radius: 0.417vw;
-                margin-right: 1.251vw;
-                pointer-events: auto;
-            }
-
-            input.active::placeholder {
-                color: $placeholder-color;
-            }
-
-            .edit.active {
-                opacity: 0.3;
-            }
-        }
-
-        .add-job {
-            button {
-                width: 7.404vw;
-                height: 2.45vw;
-            }
         }
     }
 
@@ -2483,5 +2352,73 @@ body.positions-page {
         line-height: 1.251vw;
         letter-spacing: 0.01vw;
         color: #B9BABE;
+    }
+}
+
+
+/* skills page */
+
+.content.skills {
+    .add-skill {
+        margin-bottom: 2.086vw;
+
+        .add-skill-btn {
+            width: 7.404vw;
+            height: 2.45vw;
+        }
+    }
+
+    .table {
+        .cell {
+            position: relative;
+        }
+        .cell.name {
+            width: 8.692vw;
+            color: #1B2438;
+        }
+
+        .cell.desc {
+            width: 14.556vw;
+        }
+
+        .cell.attribute {
+            width: 9.29vw;
+            img {
+                position: absolute;
+                width: 3.65vw;
+                height: 3.65vw;
+                left: 1vw;
+            }
+
+            p {
+                font-size: 0.782vw;
+                line-height: 1.251vw;
+                letter-spacing: 0.01vw;
+                text-align: center;
+                color: #B9BABE;
+                margin-top: 1.043vw;
+                position: absolute;
+                top: 5.607vw;
+                left: 1.626vw;
+            }
+        }
+
+        .cell.coins {
+            width: 7.432vw;
+            font-size: 0.782vw;
+            line-height: 1.251vw;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01vw;
+            color: #B9BABE;
+            white-space: nowrap;
+        }
+        .cell.coins::before {
+            content: '';
+            background: url(../img/coins.svg) no-repeat center top / cover;
+            width: 1.043vw;
+            height: 1.043vw;
+            margin-right: 0.678vw;
+        }
     }
 }

@@ -563,3 +563,19 @@ buttons.forEach(button => {
     }
   });
 });
+
+
+// auto entry of the extended department
+
+const inputs = document.querySelectorAll('.department-field');
+const placeholderWidth = inputs[0].placeholder.length + 7.5;
+
+inputs.forEach((input) => {
+  let width = placeholderWidth;
+  input.style.width = (width * 0.5) + 'vw';
+
+  input.addEventListener('input', () => {
+    width = Math.max(placeholderWidth, input.value.length + 7);
+    input.style.width = (width * 0.5) + 'vw';
+  });
+});
