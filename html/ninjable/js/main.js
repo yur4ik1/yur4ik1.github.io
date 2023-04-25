@@ -44,6 +44,34 @@ if (popupEditUsers && addEditUserBtns) {
 }
 
 
+/* popup skills */
+
+const popupSkills  = document.querySelector('.add-skillss-level');
+const addSkillsBtn = document.querySelector('.add-skills');
+const skillsPopupClose = document.querySelector('.ninjable__popup-close');
+
+if (popupSkills && addSkillsBtn) {
+  addSkillsBtn.addEventListener('click', () => {
+    popupSkills.classList.add('active');
+  });
+  skillsPopupClose.addEventListener('click', () => {
+    popupSkills.classList.remove('active');
+  });
+}
+
+/* info popup skills */
+
+
+const skillsIco = document.querySelector('.skills-info');
+const skillsInfoPopup = document.querySelector('.info-popup');
+
+if (skillsIco && skillsInfoPopup) {
+  skillsIco.addEventListener('click', () => {
+    skillsInfoPopup.classList.add('active');
+  });
+}
+
+
 /* header avatar */
 
 const profileBtn = document.querySelector('.header__avatar');
@@ -159,6 +187,7 @@ if (brandingIco && brandingPopup) {
     }
   });
 }
+
 
 /* Departments info popup */
 

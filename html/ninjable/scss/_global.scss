@@ -105,9 +105,10 @@ tr {
   cursor: pointer;
   margin-left: 1.46vw;
 }
+
 .archive.deactivate {
   opacity: 0.3;
-} 
+}
 
 .archive::after {
   content: '';
@@ -166,8 +167,12 @@ tr {
   width: 26.799vw;
   background: #FFFFFF;
   border: 0.052vw solid #D7DEE6;
-  box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
+  transition: 0.3s;
   border-radius: 0.417vw;
+}
+
+.select-selected:hover {
+  box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
 }
 
 .select-selected:after {
@@ -615,7 +620,7 @@ tr {
 
 .alert-popup {
   width: 13.399vw;
-  height: 9.228vw;
+  height: auto;
   background: #FFFFFF;
   box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
   border-radius: 1.043vw;
@@ -883,6 +888,30 @@ tr {
         left: 0;
         display: block;
       }
+    }
+
+    .popup__users-content {
+      overflow: auto;
+      height: 32vw;
+      position: relative;
+    }
+
+    .popup__users-content::-webkit-scrollbar {
+      width: 0.469vw;
+    }
+
+    .popup__users-content::-webkit-scrollbar-track {
+      background: linear-gradient(0deg, rgb(238, 239, 243), rgb(224, 228, 236)), rgb(31, 31, 35);
+      mix-blend-mode: normal;
+      border-radius: 0.521vw;
+    }
+
+    .popup__users-content::-webkit-scrollbar-thumb {
+      width: 0.469vw;
+      background: #b0bfde;
+      mix-blend-mode: normal;
+      opacity: .6;
+      border-radius: 0.521vw;
     }
   }
 }

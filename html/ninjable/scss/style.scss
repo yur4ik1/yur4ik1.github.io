@@ -2384,6 +2384,7 @@ body.skills-page {
 
         .cell.attribute {
             padding-right: 6.076vw;
+
             .flex {
                 display: flex;
                 flex-direction: column;
@@ -2429,6 +2430,162 @@ body.skills-page {
         .cell.actions {
             position: absolute;
             left: 89%;
+        }
+    }
+}
+
+.skillss__level-popup {
+    .skillss__popup-form {
+        width: 97%;
+
+        label {
+            font-size: 0.834vw;
+            line-height: 2.503vw;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.011vw;
+            color: #869DC8;
+            margin-bottom: 2.138vw;
+
+            .skills-info {
+                display: flex;
+                align-items: center;
+            }
+
+            .skills-info::after {
+                content: '';
+                background: url(../img/info-icon.svg) no-repeat center top / cover;
+                width: 0.886vw;
+                height: 0.886vw;
+                display: block;
+                margin-left: 0.782vw;
+                cursor: pointer;
+            }
+
+            .custom-select {
+                width: 100%;
+
+                .select-selected {
+                    width: 100%;
+
+                }
+
+                .select-option {
+                    width: 100%;
+                }
+
+                .line {
+                    position: absolute;
+                    width: 2.7vw;
+                    height: 0.052vw;
+                    background: #E4E8EE;
+                    transform: rotate(-90deg);
+                    top: 1.4vw;
+                    left: 51.6vw;
+                    display: block;
+                }
+            }
+
+            textarea {
+                height: 10.845vw;
+                background: #FFFFFF;
+                border: 0.052vw solid rgba(192, 200, 209, 0.8);
+                border-radius: 0.417vw;
+                resize: none;
+                font-size: 0.782vw;
+                line-height: 0.73vw;
+                letter-spacing: 0.01vw;
+                color: #1B2438;
+                padding: 0.938vw 2.086vw;
+            }
+
+            textarea::placeholder {
+                color: #B9BABE;
+            }
+
+            input {
+                height: 2.555vw;
+                background: #FFFFFF;
+                border: 0.052vw solid rgba(192, 200, 209, 0.8);
+                border-radius: 0.417vw;
+                color: #1B2438;
+                padding: 0.938vw 2.086vw;
+            }
+
+            input::placeholder {
+                color: #B9BABE;
+            }
+
+            input.file {
+                display: none;
+            }
+
+            .upload__icon-input {
+                display: flex;
+                align-items: center;
+
+                label {
+                    margin: 0;
+                    font-size: 0.782vw;
+                    line-height: 0.73vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                }
+
+                img {
+                    width: 2.555vw;
+                    height: auto;
+                    margin-right: 1.095vw;
+                }
+            }
+
+            .info-popup {
+                right: 33.3vw;
+                top: 24vw;
+                width: 13.139vw;
+                height: auto;
+                background: #fff;
+                box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8ea1ba;
+                border-radius: 1.043vw;
+                position: absolute;
+                z-index: 9999;
+                padding-top: 1.668vw;
+                padding-left: 2.138vw;
+                padding-right: 1.616vw;
+                padding-bottom: 2.294vw;
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s;
+
+                .title {
+                    color: #1B2438;
+                    text-align: left;
+                    margin-bottom: 0.521vw;
+                }
+
+                .text {
+                    font-size: 0.782vw;
+                    line-height: 1.251vw;
+                    letter-spacing: 0.01vw;
+                    color: #B9BABE;
+                    text-align: left;
+                }
+            }
+            .info-popup.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .add__btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 3.086vw;
+
+            button {
+                width: 8.238vw;
+                height: 2.503vw;
+            }
         }
     }
 }
