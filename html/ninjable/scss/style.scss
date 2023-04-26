@@ -43,6 +43,7 @@ body.skills-page {
     background: url(../img/content-skills.png) no-repeat center top / cover;
     height: 145.199vw;
 }
+
 body.acievements-page {
     background: url(../img/content-acievements.png) no-repeat center top / cover;
     height: 93.199vw;
@@ -2479,10 +2480,88 @@ body.acievements-page {
 
             .new__custom-select-wrapper {
                 width: 100%;
-                margin-bottom: 2.738vw;
 
                 .line {
                     left: 51.6vw;
+                }
+            }
+
+
+            .skills-filter-select {
+                .new__custom-select {
+                    position: relative;
+                }
+
+                .new__custom-select.active {
+                    .line {
+                        top: 5.4vw;
+                    }
+
+                    .arrow {
+                        top: 5.4vw;
+                    }
+
+                    .custom-scrollbar {
+                        top: 7.521vw;
+                    }
+                }
+
+                .skills-tags-list {
+                    border: 0.052vw solid #d7dee6;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw #d7dee6;
+                    border-radius: 0.417vw;
+                    display: flex;
+                    flex-wrap: wrap;
+                    display: none;
+                    padding: 0.782vw;
+
+                    .tag-item {
+                        width: fit-content;
+                        height: 1.512vw;
+                        background: #FAFCFB;
+                        box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, 0.25);
+                        border-radius: 0.417vw;
+                        font-size: 0.782vw;
+                        line-height: 0.782vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        letter-spacing: 0.007vw;
+                        color: #B9BABE;
+                        padding-left: 0.73vw;
+                        margin-right: 0.782vw;
+                        margin-bottom: 0.782vw;
+                        margin-left: 0.104vw;
+
+                        button {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            border: none;
+                            background: #FAFCFB;
+                            border-left: 0.052vw solid #E3E8EE;
+                            cursor: pointer;
+                            margin-left: 0.678vw;
+                        }
+
+                        button::after {
+                            content: '';
+                            background: url(../img/tag-remove-icon.svg) no-repeat center top / cover;
+                            width: 0.574vw;
+                            height: 0.574vw;
+                            display: block;
+                        }
+                    }
+                }
+
+                .skills-tags-list.active {
+                    display: flex;
+                }
+
+                .new__custom-options.active {
+                    top: 5.907vw;
                 }
             }
 
@@ -2595,6 +2674,7 @@ body.acievements-page {
 
 .content.acievements {
     padding: 3.076vw 3.962vw 0vw 4.119vw;
+
     .add-badge {
         margin-bottom: 2.294vw;
         display: flex;
@@ -2610,6 +2690,7 @@ body.acievements-page {
         .cell.acievements-icon {
             position: relative;
             width: 7.713vw;
+
             .acievements-bg {
                 width: 6.413vw;
                 height: 4.38vw;
@@ -2650,6 +2731,11 @@ body.acievements-page {
             height: 1.147vw;
             margin-right: 0.678vw;
             display: block;
+        }
+
+        .cell.actions {
+            position: absolute;
+            left: 88.5%;
         }
     }
 }

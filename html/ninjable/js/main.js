@@ -164,7 +164,7 @@ archiveDeleteBtns.forEach((btn) => {
       } else {
         row.remove();
       }
-      
+
       popup.remove();
     });
     falseBtn.addEventListener('click', () => {
@@ -439,7 +439,7 @@ for (let i = 0; i < selectElements.length; i++) {
     selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
-      selectSelectedElement.classList.remove("select-arrow-active"); 
+      selectSelectedElement.classList.remove("select-arrow-active");
       selectItemsElement.classList.add("select-hide");
     });
   }
@@ -447,29 +447,41 @@ for (let i = 0; i < selectElements.length; i++) {
 
 
 /* custom select new */
-const new__customSelects = document.querySelectorAll(".new__custom-select");
+
+const newCustomSelects = document.querySelectorAll('.new__custom-select');
 
 function closeAllSelectsExcept(selectedSelect) {
-  new__customSelects.forEach((select) => {
-    if (select !== selectedSelect && select.classList.contains("open")) {
-      select.classList.remove("open");
+  newCustomSelects.forEach((select) => {
+    if (select !== selectedSelect && select.classList.contains('open')) {
+      select.classList.remove('open');
     }
   });
 }
 
-new__customSelects.forEach((new__customSelect) => {
-  const new__customTrigger = new__customSelect.querySelector(".new__custom-select__trigger");
-  const new__customOptionsContainer = new__customSelect.querySelector(".new__custom-options");
-  const new__customOptionsList = new__customSelect.querySelectorAll(".new__custom-option");
-  const customScrollbar = new__customSelect.querySelector(".custom-scrollbar");
-  const customScrollbarThumb = document.createElement("div");
-  customScrollbarThumb.classList.add("custom-scrollbar-thumb");
+function addRemoveButtonListener(removeButton) {
+  removeButton.addEventListener('click', () => {
+    const tagItem = removeButton.closest('.tag-item');
+    const newCustomSelect = tagItem.closest('.new__custom-select');
+    const optionValue = tagItem.querySelector('.new__custom-option').getAttribute('data-value');
+    const option = newCustomSelect.querySelector(`.new__custom-option[data-value="${optionValue}"]`);
+    option.classList.remove('selected');
+    tagItem.remove();
+  });
+}
+
+newCustomSelects.forEach((newCustomSelect) => {
+  const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+  const newCustomOptionsContainer = newCustomSelect.querySelector('.new__custom-options');
+  const newCustomOptionsList = newCustomSelect.querySelectorAll('.new__custom-option');
+  const customScrollbar = newCustomSelect.querySelector('.custom-scrollbar');
+  const customScrollbarThumb = document.createElement('div');
+  customScrollbarThumb.classList.add('custom-scrollbar-thumb');
   customScrollbar.appendChild(customScrollbarThumb);
 
   function updateScroll() {
-    const containerScrollTop = new__customOptionsContainer.scrollTop;
-    const containerHeight = new__customOptionsContainer.clientHeight;
-    const containerScrollHeight = new__customOptionsContainer.scrollHeight;
+    const containerScrollTop = newCustomOptionsContainer.scrollTop;
+    const containerHeight = newCustomOptionsContainer.clientHeight;
+    const containerScrollHeight = newCustomOptionsContainer.scrollHeight;
     const scrollbarHeight = customScrollbar.clientHeight;
     const thumbHeight = Math.max((containerHeight / containerScrollHeight) * scrollbarHeight, 20);
     const maxThumbTop = scrollbarHeight - thumbHeight;
@@ -478,30 +490,59 @@ new__customSelects.forEach((new__customSelect) => {
     customScrollbarThumb.style.top = `${thumbTop}px`;
   }
 
-  new__customTrigger.addEventListener("click", () => {
-    if (new__customSelect.classList.contains("open")) {
-      new__customSelect.classList.remove("open");
+  newCustomTrigger.addEventListener('click', () => {
+    if (newCustomSelect.classList.contains('open')) {
+      newCustomSelect.classList.remove('open');
     } else {
-      closeAllSelectsExcept(new__customSelect);
-      new__customSelect.classList.add("open");
+      closeAllSelectsExcept(newCustomSelect);
+      newCustomSelect.classList.add('open');
     }
   });
 
-  new__customOptionsContainer.addEventListener("scroll", updateScroll);
+  newCustomOptionsContainer.addEventListener('scroll', updateScroll);
 
-  new__customOptionsList.forEach((option) => {
+  newCustomOptionsList.forEach((option) => {
     option.addEventListener('click', (event) => {
-      const new__customOptionValue = option.getAttribute('data-value');
-      const new__customTrigger = new__customSelect.querySelector('.new__custom-select__trigger');
-      new__customTrigger.textContent = option.textContent;
-      new__customSelect.classList.remove('open');
-      if (new__customSelect.classList.contains('filter-select-scroll')) {
-        new__customSelect.classList.add('open');
-        new__customTrigger.textContent = "Type here to search for Clan..."
+      if (newCustomSelect.closest('.skills-filter-select')) {
+        const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
+        const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
+        const newCustomOptionValue = option.getAttribute('data-value');
+        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+        const skillsTagsList = newCustomSelect.querySelector('.skills-tags-list');
+
+        if (selectedOptionValues.includes(newCustomOptionValue)) {
+          return;
+        }
+
+        const tagItem = document.createElement('div');
+        tagItem.classList.add('tag-item');
+
+        const tagItemText = document.createElement('p');
+        tagItemText.textContent = option.textContent;
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove');
+        tagItem.appendChild(tagItemText);
+        tagItem.appendChild(removeButton);
+        skillsTagsList.appendChild(tagItem);
+        addRemoveButtonListener(removeButton);
+
+        option.classList.add('selected');
+        newCustomTrigger.textContent = 'Type here to search for Clan...';
+
+      } else {
+        const newCustomOptionValue = option.getAttribute('data-value');
+        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+        newCustomTrigger.textContent = option.textContent;
+        newCustomSelect.classList.remove('open'); і
+        if (newCustomSelect.classList.contains('filter-select-scroll')) {
+          newCustomSelect.classList.add('open');
+          newCustomTrigger.textContent = 'Type here to search for Clan...';
+        }
       }
     });
-  });
 
+  });
 
 
   customScrollbarThumb.addEventListener("mousedown", (e) => {
@@ -514,13 +555,13 @@ new__customSelects.forEach((new__customSelect) => {
       const thumbTop = e.clientY - customScrollbar.getBoundingClientRect().top - thumbStartPosition;
       if (thumbTop < 0) {
         customScrollbarThumb.style.top = "0";
-        new__customOptionsContainer.scrollTop = 0;
+        newCustomOptionsContainer.scrollTop = 0;
       } else if (thumbTop > maxThumbTop) {
         customScrollbarThumb.style.top = maxThumbTop + "px";
-        new__customOptionsContainer.scrollTop = new__customOptionsContainer.scrollHeight;
+        newCustomOptionsContainer.scrollTop = newCustomOptionsContainer.scrollHeight;
       } else {
         customScrollbarThumb.style.top = thumbTop + "px";
-        new__customOptionsContainer.scrollTop = thumbTop / maxThumbTop * (new__customOptionsContainer.scrollHeight - new__customOptionsContainer.clientHeight);
+        newCustomOptionsContainer.scrollTop = thumbTop / maxThumbTop * (newCustomOptionsContainer.scrollHeight - newCustomOptionsContainer.clientHeight);
       }
     }
 
@@ -531,10 +572,29 @@ new__customSelects.forEach((new__customSelect) => {
 
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mouseup", onMouseUp);
-  });
 
+  });
   updateScroll();
 });
+
+const skillsTagsList = document.querySelector('.skills-tags-list');
+const skillsSelect = document.querySelector('.new__custom-select');
+const skillsOptions = document.querySelector('.new__custom-options');
+const observer = new MutationObserver(() => {
+  if (skillsTagsList.querySelectorAll('.tag-item').length > 0) {
+    skillsTagsList.classList.add('active');
+    skillsOptions.classList.add('active');
+    skillsSelect.classList.add('active');
+  } else {
+    skillsTagsList.classList.remove('active');
+    skillsOptions.classList.remove('active');
+    skillsSelect.classList.remove('active');
+  }
+});
+
+const config = { childList: true };
+observer.observe(skillsTagsList, config);
+
 
 
 /* passwordInput */
@@ -598,7 +658,7 @@ buttons.forEach(button => {
       popup = document.createElement('div');
       popup.classList.add('delete-level-popup');
       popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
-      
+
       popup.style.position = 'absolute';
       popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
       popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
@@ -613,7 +673,7 @@ buttons.forEach(button => {
       }
     }
   });
-  
+
   document.addEventListener('click', (event) => {
     if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
       popup.remove();
