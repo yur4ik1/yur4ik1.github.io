@@ -257,7 +257,7 @@
                         <a class="archive" href="#"></a>
                     </div>
                     <div class="add-job">
-                        <button class="add-job-btn btn">Add Skill’s Level</button>
+                        <button class="add-skills btn">Add Skill’s Level</button>
                     </div>
                 </div>
                 <div class="section__tags">
@@ -323,10 +323,8 @@
                     </span>
                     <h3>ADD SKILL’S LEVEL</h3>
                 </div>
-
                 <div class="popup__users-content">
                     <div class="skillss__popup-form">
-
                         <label>* Level
                             <div class="custom-select">
                                 <div class="select-selected">Please Select...
@@ -342,15 +340,12 @@
                                 </div>
                             </div>
                         </label>
-
                         <label>* Description
                             <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
                         </label>
-
                         <label>
                             <p class="skills-info">* Receipt Condition</p>
                             <input type="text" placeholder="30 Coins">
-
                             <div class="info-popup">
                                 <p class="title">Receipt Condition</p>
                                 <p class="text">
@@ -359,7 +354,6 @@
                                 </p>
                             </div>
                         </label>
-
                         <label>* Attribute
                             <div class="custom-select">
                                 <div class="select-selected">Please Select...
@@ -373,7 +367,6 @@
                                 </div>
                             </div>
                         </label>
-
                         <label>Icon
                             <div class="upload__icon-input">
                                 <input class="file" type="file" id="upload__file">
@@ -381,6 +374,143 @@
                                     <img src="./img/icon.png" alt="">
                                 </div>
                                 <label for="upload__file">Tanzonite Sword</label>
+                            </div>
+                        </label>
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected">Please Select...
+                                    <span class="line"></span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Active</div>
+                                    <div class="select-option">Archied</div>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="add__btn-wrapper">
+                            <button class="btn" type="submit">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ninjable__popup skillss__level-popup edit-skillss-level">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close edit-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>EDIT SKILL’S LEVEL </h3>
+                </div>
+                <div class="popup__users-content">
+                    <div class="skillss__popup-form">
+                        <label>* Level
+                            <div class="custom-select">
+                                <div class="select-selected">Please Select...
+                                    <span class="line"></span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Junior</div>
+                                    <div class="select-option">Middle</div>
+                                    <div class="select-option">Senior</div>
+                                    <div class="select-option">Lead</div>
+                                    <div class="select-option">Manager</div>
+                                    <div class="select-option">C-level / Chef</div>
+                                </div>
+                            </div>
+                        </label>
+                        <label>* Description
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                        </label>
+                        <label>
+                            <p class="skills-info">* Receipt Condition</p>
+                            <input type="text" placeholder="30 Coins">
+                            <div class="info-popup">
+                                <p class="title">Receipt Condition</p>
+                                <p class="text">
+                                    Please select how many coins will be taken from the participant for upgrading the
+                                    skill.
+                                </p>
+                            </div>
+                        </label>
+                        <label>* Attribute
+                            <div class="custom-select">
+                                <div class="select-selected">Please Select...
+                                    <span class="line"></span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Magic</div>
+                                    <div class="select-option">Protection</div>
+                                    <div class="select-option">Power</div>
+                                    <div class="select-option">Speed</div>
+                                </div>
+                            </div>
+                        </label>
+                        <label>Icon
+                            <div class="upload__icon-input">
+                                <input class="file" type="file" id="upload__file">
+                                <div class="icon">
+                                    <img src="./img/icon.png" alt="">
+                                </div>
+                                <label for="upload__file">Tanzonite Sword</label>
+                            </div>
+                        </label>
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected">Please Select...
+                                    <span class="line"></span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Active</div>
+                                    <div class="select-option">Archied</div>
+                                </div>
+                            </div>
+                        </label>
+                        <div class="add__btn-wrapper">
+                            <button class="btn" type="submit">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ninjable__popup skillss__level-popup add-skillss-popup">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close add-skill-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>ADD SKILL</h3>
+                </div>
+                <div class="popup__users-content">
+                    <div class="skillss__popup-form">
+                        <label>* Title
+                            <input type="text" placeholder="Adobe Photoshop">
+                        </label>
+                        <label>Tag
+                            <input type="text" placeholder="PS">
+                        </label>
+                        <label>* Department (Clan)
+                            <div class="new__custom-select-wrapper department-select">
+                                <div class="new__custom-select">
+                                    <span class="line"></span>
+                                    <div class="arrow"></div>
+                                    <div class="new__custom-select__trigger">Type here to search for Clan...
+                                    </div>
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option" data-value="ua">C</div>
+                                        <div class="new__custom-option" data-value="ua">C Department</div>
+                                        <div class="new__custom-option" data-value="ua">C Department</div>
+                                        <div class="new__custom-option" data-value="ua">C Department</div>
+                                        <div class="new__custom-option" data-value="ua">F Department</div>
+                                        <div class="new__custom-option" data-value="ua">C</div>
+                                        <div class="new__custom-option" data-value="ua">C</div>
+                                        <div class="new__custom-option" data-value="ua">C</div>
+                                    </div>
+                                    <div class="custom-scrollbar"></div>
+                                </div>
                             </div>
                         </label>
 
@@ -395,7 +525,6 @@
                                 </div>
                             </div>
                         </label>
-
                         <div class="add__btn-wrapper">
                             <button class="btn" type="submit">Add</button>
                         </div>

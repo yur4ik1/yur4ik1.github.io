@@ -1717,7 +1717,6 @@ body.skills-page {
                                 }
 
                                 .new__custom-option:hover {
-
                                     font-size: 0.782vw;
                                     line-height: 0.834vw;
                                     letter-spacing: 0.01vw;
@@ -1729,8 +1728,6 @@ body.skills-page {
                                 box-shadow: 0vw 0vw 0.156vw 0.052vw $tertiary-color;
                                 border-radius: 0.417vw;
                             }
-
-
 
                             .new__custom-select.open {
                                 .new__custom-select__trigger {
@@ -2486,6 +2483,14 @@ body.skills-page {
                 }
             }
 
+            .new__custom-select-wrapper {
+                width: 100%;
+                margin-bottom: 2.738vw;
+                .line {
+                    left: 51.6vw;
+                }
+            }
+
             textarea {
                 height: 10.845vw;
                 background: #FFFFFF;
@@ -2571,6 +2576,7 @@ body.skills-page {
                     text-align: left;
                 }
             }
+
             .info-popup.active {
                 visibility: visible;
                 opacity: 1;

@@ -44,33 +44,75 @@ if (popupEditUsers && addEditUserBtns) {
 }
 
 
-/* popup skills */
+/* popup add level skills */
 
-const popupSkills  = document.querySelector('.add-skillss-level');
-const addSkillsBtn = document.querySelector('.add-skills');
+const popupSkillsLevel = document.querySelector('.add-skillss-level');
+const addSkillsBtns = document.querySelectorAll('.add-skills');
 const skillsPopupClose = document.querySelector('.ninjable__popup-close');
 
-if (popupSkills && addSkillsBtn) {
-  addSkillsBtn.addEventListener('click', () => {
-    popupSkills.classList.add('active');
+if (popupSkillsLevel && addSkillsBtns.length > 0) {
+  addSkillsBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      popupSkillsLevel.classList.add('active');
+    });
   });
   skillsPopupClose.addEventListener('click', () => {
-    popupSkills.classList.remove('active');
+    popupSkillsLevel.classList.remove('active');
   });
 }
+
+/* popup edit level skills */
+
+const editLevelPopup = document.querySelector('.edit-skillss-level');
+const editLevelBtn = document.querySelectorAll('.edit-job-btn');
+const skillsAddClose = document.querySelector('.edit-close');
+
+if (editLevelPopup && editLevelBtn.length > 0) {
+  editLevelBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      editLevelPopup.classList.add('active');
+    });
+  });
+  skillsAddClose.addEventListener('click', () => {
+    editLevelPopup.classList.remove('active');
+  });
+}
+
+/* popup add skills */
+
+const addSkillPopup = document.querySelector('.add-skillss-popup');
+const addSkillBtn = document.querySelectorAll('.add-skill-btn');
+const closeAddSkill = document.querySelector('.add-skill-close');
+
+if (addSkillPopup && addSkillBtn.length > 0) {
+  addSkillBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      addSkillPopup.classList.add('active');
+    });
+  });
+  closeAddSkill.addEventListener('click', () => {
+    addSkillPopup.classList.remove('active');
+  });
+}
+
 
 /* info popup skills */
 
+const skillsIcos = document.querySelectorAll('.skills-info');
+const skillsInfoPopups = document.querySelectorAll('.info-popup');
 
-const skillsIco = document.querySelector('.skills-info');
-const skillsInfoPopup = document.querySelector('.info-popup');
+if (skillsIcos.length > 0 && skillsInfoPopups.length > 0) {
+  skillsIcos.forEach((skillsIco, index) => {
+    const skillsInfoPopup = skillsInfoPopups[index];
 
-if (skillsIco && skillsInfoPopup) {
-  skillsIco.addEventListener('click', () => {
-    skillsInfoPopup.classList.add('active');
+    skillsIco.addEventListener('click', () => {
+      skillsInfoPopup.classList.add('active');
+      setTimeout(() => {
+        skillsInfoPopup.classList.remove('active');
+      }, 3000);
+    });
   });
 }
-
 
 /* header avatar */
 
