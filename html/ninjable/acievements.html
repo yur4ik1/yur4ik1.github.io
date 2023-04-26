@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Users</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Users">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="acievements-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Integrations</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content acievements">
+                <h2>ACHIEVEMENTS</h2>
+                <div class="content__section">
+                    <div class="add-badge">
+                        <a class="add-badge-btn btn">Add Badge</a>
+                    </div>
+                    <div class="search__wrapper">
+                        <span class="search-icon">
+                            <input class="search-input" type="text" placeholder="Super Hero">
+                        </span>
+                        <div class="filter-select">
+                            <div class="select-selected">Select...</div>
+                            <span class="line"></span>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="active">
+                                    <label for="active">Active</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="archied">
+                                    <label for="archied">Archied</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="row row-header">
+                            <div class="cell id">ID</div>
+                            <div class="cell">Icon</div>
+                            <div class="cell">Name</div>
+                            <div class="cell">Condition</div>
+                            <div class="cell">Reward</div>
+                            <div class="cell">Status</div>
+                            <div class="cell">Actions</div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">1</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 10 <br>
+                                <span>Period:</span> Weekly <br>
+                                <span>Badges Amount:</span> 5 <br>
+                            </div>
+                            <div class="cell coins">30 Coins</div>
+                            <div class="cell status">Archived</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 200 <br>
+                                <span>Period:</span> Monthly <br>
+                                <span>Badges Amount:</span> 4 <br>
+                            </div>
+                            <div class="cell coins">10 Coins</div>
+                            <div class="cell status">Active</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 200 <br>
+                                <span>Period:</span> Monthly <br>
+                                <span>Badges Amount:</span> 4 <br>
+                            </div>
+                            <div class="cell coins">10 Coins</div>
+                            <div class="cell status">Active</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 200 <br>
+                                <span>Period:</span> Monthly <br>
+                                <span>Badges Amount:</span> 4 <br>
+                            </div>
+                            <div class="cell coins">10 Coins</div>
+                            <div class="cell status">Active</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 200 <br>
+                                <span>Period:</span> Monthly <br>
+                                <span>Badges Amount:</span> 4 <br>
+                            </div>
+                            <div class="cell coins">10 Coins</div>
+                            <div class="cell status">Active</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell acievements-icon">
+                                <div class="acievements-bg">
+                                    <img src="./img/acievements-img-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
+                            <div class="cell condition">
+                                <span>Tasks:</span> 200 <br>
+                                <span>Period:</span> Monthly <br>
+                                <span>Badges Amount:</span> 4 <br>
+                            </div>
+                            <div class="cell coins">10 Coins</div>
+                            <div class="cell status">Active</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="navigation">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                </div>
+
+            </section>
+        </section>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
