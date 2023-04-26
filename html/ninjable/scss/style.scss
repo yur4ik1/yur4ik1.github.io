@@ -1672,17 +1672,6 @@ body.skills-page {
                             color: $placeholder-color;
                         }
 
-                        .let-know {
-                            position: absolute;
-                            top: 4.92vw;
-                            left: 0;
-                            display: none;
-                        }
-
-                        .let-know.active {
-                            display: block;
-                        }
-
 
                         .department-select {
                             width: 100%;
@@ -2443,6 +2432,7 @@ body.skills-page {
             letter-spacing: 0.011vw;
             color: #869DC8;
             margin-bottom: 2.138vw;
+            position: relative;
 
             .skills-info {
                 display: flex;

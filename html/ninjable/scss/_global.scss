@@ -934,7 +934,6 @@ tr {
     height: 2.555vw;
     background: $background-color;
     border: 0.052vw solid $border-color;
-    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
     border-radius: 0.417vw;
     font-size: 0.782vw;
     line-height: 1.408vw;
@@ -947,6 +946,7 @@ tr {
     padding-bottom: 0.521vw;
     display: flex;
     align-items: center;
+    transition: 0.3s;
   }
 
   .search-input::placeholder {
@@ -955,6 +955,11 @@ tr {
     letter-spacing: 0.01vw;
     color: $placeholder-color;
   }
+
+  .search-input:focus {
+    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
+  }
+
 
   .search-icon {
     display: flex;
@@ -1028,7 +1033,6 @@ tr {
       line-height: 2.503vw;
       letter-spacing: 0.014vw;
       color: $primary-color;
-      padding-left: 1.199vw;
       padding-right: 1.199vw;
       pointer-events: none;
 
@@ -1045,6 +1049,7 @@ tr {
       border-radius: 0.417vw;
       margin-right: 1.251vw;
       pointer-events: auto;
+      padding-left: 1.199vw;
     }
 
     input.active::placeholder {
@@ -1088,4 +1093,14 @@ tr {
     margin-right: 0.782vw;
     margin-bottom: 0.73vw;
   }
+}
+
+/* let-know */ 
+
+.let-know {
+  display: none;
+}
+
+.let-know.active {
+  display: block;
 }

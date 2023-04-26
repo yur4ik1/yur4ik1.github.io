@@ -439,10 +439,12 @@ for (let i = 0; i < selectElements.length; i++) {
     selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
+      selectSelectedElement.classList.remove("select-arrow-active"); 
       selectItemsElement.classList.add("select-hide");
     });
   }
 }
+
 
 /* custom select new */
 const new__customSelects = document.querySelectorAll(".new__custom-select");
@@ -551,34 +553,20 @@ if (passwordInput && passwordIcon) {
 };
 
 
-/* let-know */
+/* let know */
 
-const addButton = document.querySelector('.user-add');
-const inputFields = document.querySelectorAll('.popup__users-col input[type="text"], .popup__users-col input[type="password"]');
-const selectFields = document.querySelectorAll('.popup__users-col .new__custom-select, .popup__users-col .custom-select');
+const addBtns = document.querySelectorAll('.user-add');
 
-if (addButton && inputFields) {
-  addButton.addEventListener('click', function () {
-    inputFields.forEach(function (field) {
-      if (field.value.trim() === '') {
-        field.parentElement.querySelector('.let-know').classList.add('active');
-      } else {
-        field.parentElement.querySelector('.let-know').classList.remove('active');
-      }
+addBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const letKnowElems = document.querySelectorAll('.let-know');
+    letKnowElems.forEach(elem => {
+      elem.classList.add('active');
     });
+  });
+});
 
-    selectFields.forEach(function (field) {
-      const selectedOption = field.querySelector('.select-selected, .new__custom-select__trigger');
-      const options = field.querySelectorAll('.select-option, .new__custom-option');
 
-      if (selectedOption.textContent === 'Please Select...' || selectedOption.textContent === 'Type here to search for Clan...') {
-        selectedOption.parentElement.querySelector('.let-know').classList.add('active');
-      } else {
-        selectedOption.parentElement.querySelector('.let-know').classList.remove('active');
-      }
-    });
-  })
-};
 
 
 // Levels popup
