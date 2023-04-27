@@ -95,6 +95,23 @@ if (addSkillPopup && addSkillBtn.length > 0) {
   });
 }
 
+/* popup edit skills */
+
+const editSkillPopup = document.querySelector('.edit-skillss-popup');
+const editSkillBtn = document.querySelectorAll('.edit-skill-btn');
+const closeEditSkill = document.querySelector('.edit-skill-close');
+
+if (editSkillPopup && editSkillBtn.length > 0) {
+  editSkillBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      editSkillPopup.classList.add('active');
+    });
+  });
+  closeEditSkill.addEventListener('click', () => {
+    editSkillPopup.classList.remove('active');
+  });
+}
+
 
 /* info popup skills */
 

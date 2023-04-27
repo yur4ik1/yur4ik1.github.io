@@ -2496,11 +2496,6 @@ body.acievements-page {
                     display: none;
                 }
 
-                .new__custom-options {
-                    position: relative;
-                    top: 0;
-                }
-
                 .new__custom-select.active {
                     .line {
                         top: 5.4vw;
@@ -2574,6 +2569,7 @@ body.acievements-page {
                     width: 2.607vw;
                     height: 2.555vw;
                     background: #FFFEFE;
+                    border: none;
                     border: 0.052vw solid #CCD3DA;
                     border-radius: 0vw 0.417vw 0vw 0.521vw;
                     display: flex;
@@ -2594,10 +2590,12 @@ body.acievements-page {
                     display: flex;
                     border-bottom: none;
                 }
-
                 .new__custom-options.active {
                     top: 5.907vw;
 
+                }
+                .new__custom-option {
+                    width: 98%;
                 }
             }
 

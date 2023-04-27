@@ -140,7 +140,7 @@
                 <div class="department__wrapper">
                     <div class="department">
                         <input class="department-field" type="text" placeholder="Adobe Photoshop">
-                        <a class="edit" href="#"></a>
+                        <a class="edit edit-skill-btn" href="#"></a>
                         <a class="archive" href="#"></a>
                     </div>
                     <div class="add-job">
@@ -486,13 +486,79 @@
         </div>
 
 
-        <div class="ninjable__popup skillss__level-popup add-skillss-popup active">
+        <div class="ninjable__popup skillss__level-popup add-skillss-popup">
             <div class="ninjable__popup-inner">
                 <div class="ninjable__popup-header">
                     <span class="ninjable__popup-close add-skill-close">
                         <img src="./img/subscription__popup-close.svg" alt="">
                     </span>
                     <h3>ADD SKILL</h3>
+                </div>
+                <div class="popup__users-content">
+                    <div class="skillss__popup-form">
+                        <label>* Title
+                            <input type="text" placeholder="Adobe Photoshop">
+                            <span class="let-know">Please let us know the title</span>
+                        </label>
+                        <label>Tag
+                            <input type="text" placeholder="PS">
+                        </label>
+                        <label>* Department (Clan)
+
+                            <div class="new__custom-select-wrapper skills-filter-select">
+                                <div class="skills-tags-list"></div>
+                                <button class="select-open-btn">
+                                    <div class="arrow"></div>
+                                </button>
+                                <div class="new__custom-select">
+                                    <span class="line"></span>
+                              
+                                    <div class="new__custom-select__trigger">Type here to search for Clan...</div>
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option" data-value="1">C</div>
+                                        <div class="new__custom-option" data-value="2">C Department</div>
+                                        <div class="new__custom-option" data-value="3">C Department</div>
+                                        <div class="new__custom-option" data-value="4">C Department</div>
+                                        <div class="new__custom-option" data-value="5">F Department</div>
+                                        <div class="new__custom-option" data-value="6">C</div>
+                                        <div class="new__custom-option" data-value="8">C</div>
+                                        <div class="new__custom-option" data-value="7">C</div>
+                                    </div>
+                                    <div class="custom-scrollbar"></div>
+                                </div>
+                            </div>
+
+                            <span class="let-know">Please let us know the clan</span>
+                        </label>
+
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected">Please Select...
+                                    <span class="line"></span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Active</div>
+                                    <div class="select-option">Archied</div>
+                                </div>
+                            </div>
+                            <span class="let-know">Please let us know the status</span>
+                        </label>
+                        <div class="add__btn-wrapper">
+                            <button class="btn user-add" type="submit">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ninjable__popup skillss__level-popup edit-skillss-popup ">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close edit-skill-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>EDIT SKILL</h3>
                 </div>
                 <div class="popup__users-content">
                     <div class="skillss__popup-form">
