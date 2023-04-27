@@ -2492,6 +2492,15 @@ body.acievements-page {
                     position: relative;
                 }
 
+                .new__custom-select.hide {
+                    display: none;
+                }
+
+                .new__custom-options {
+                    position: relative;
+                    top: 0;
+                }
+
                 .new__custom-select.active {
                     .line {
                         top: 5.4vw;
@@ -2504,6 +2513,7 @@ body.acievements-page {
                     .custom-scrollbar {
                         top: 7.521vw;
                     }
+
                 }
 
                 .skills-tags-list {
@@ -2514,6 +2524,7 @@ body.acievements-page {
                     flex-wrap: wrap;
                     display: none;
                     padding: 0.782vw;
+                    padding-right: 4.5vw;
 
                     .tag-item {
                         width: fit-content;
@@ -2556,12 +2567,37 @@ body.acievements-page {
                     }
                 }
 
+                .select-open-btn {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 2.607vw;
+                    height: 2.555vw;
+                    background: #FFFEFE;
+                    border: 0.052vw solid #CCD3DA;
+                    border-radius: 0vw 0.417vw 0vw 0.521vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    margin-left: 5.214vw;
+
+                    .arrow {
+                        position: relative;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+
                 .skills-tags-list.active {
                     display: flex;
+                    border-bottom: none;
                 }
 
                 .new__custom-options.active {
                     top: 5.907vw;
+
                 }
             }
 
