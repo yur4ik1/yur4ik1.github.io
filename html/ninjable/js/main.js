@@ -1,4 +1,77 @@
 
+
+// Levels popup
+
+const levelsPopup = document.querySelector('.level__popup');
+const openLevelsPopup = document.querySelector('.add-level');
+const levelPopupClose = document.querySelector('.level-close');
+
+if (levelsPopup && openLevelsPopup) {
+  openLevelsPopup.addEventListener('click', () => {
+    levelsPopup.classList.add('active');
+  });
+  levelPopupClose.addEventListener('click', () => {
+    levelsPopup.classList.remove('active');
+  });
+}
+
+
+// Levels buttons 
+
+const buttons = document.querySelectorAll('.level__popup-form button');
+
+buttons.forEach(button => {
+  let clickCount = 0;
+  let popup = null;
+
+  button.addEventListener('click', () => {
+    clickCount++;
+    if (clickCount === 2 && button.classList.contains('active')) {
+      popup = document.createElement('div');
+      popup.classList.add('delete-level-popup');
+      popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
+
+      popup.style.position = 'absolute';
+      popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
+      popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
+
+      button.parentNode.insertBefore(popup, button.nextSibling);
+      clickCount = 0;
+    } else {
+      if (button.classList.contains('active')) {
+        button.classList.remove('active');
+      } else {
+        button.classList.add('active');
+      }
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
+      popup.remove();
+      popup = null;
+    }
+  });
+});
+
+
+// auto entry of the extended department
+
+const inputs = document.querySelectorAll('.department-field');
+if (inputs.length > 0) {
+  const placeholderWidth = inputs[0].placeholder.length + 7.5;
+  inputs.forEach((input) => {
+    let width = placeholderWidth;
+    input.style.width = (width * 0.5) + 'vw';
+    input.addEventListener('input', () => {
+      width = Math.max(placeholderWidth, input.value.length + 7);
+      input.style.width = (width * 0.5) + 'vw';
+    });
+  });
+}
+
+
+
 /* sidebar menu */
 
 const sidemenuItem = document.querySelectorAll('.sidemenu__item');
@@ -638,7 +711,6 @@ if (passwordInput && passwordIcon) {
   })
 };
 
-
 /* let know */
 
 const addBtns = document.querySelectorAll('.user-add');
@@ -651,75 +723,3 @@ addBtns.forEach(btn => {
     });
   });
 });
-
-
-
-// Levels popup
-
-const levelsPopup = document.querySelector('.level__popup');
-const openLevelsPopup = document.querySelector('.add-level');
-const levelPopupClose = document.querySelector('.level-close');
-
-if (levelsPopup && openLevelsPopup) {
-  openLevelsPopup.addEventListener('click', () => {
-    levelsPopup.classList.add('active');
-  });
-  levelPopupClose.addEventListener('click', () => {
-    levelsPopup.classList.remove('active');
-  });
-}
-
-
-// Levels buttons 
-
-const buttons = document.querySelectorAll('.level__popup-form button');
-
-buttons.forEach(button => {
-  let clickCount = 0;
-  let popup = null;
-
-  button.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount === 2 && button.classList.contains('active')) {
-      popup = document.createElement('div');
-      popup.classList.add('delete-level-popup');
-      popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
-
-      popup.style.position = 'absolute';
-      popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
-      popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
-
-      button.parentNode.insertBefore(popup, button.nextSibling);
-      clickCount = 0;
-    } else {
-      if (button.classList.contains('active')) {
-        button.classList.remove('active');
-      } else {
-        button.classList.add('active');
-      }
-    }
-  });
-
-  document.addEventListener('click', (event) => {
-    if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
-      popup.remove();
-      popup = null;
-    }
-  });
-});
-
-
-// auto entry of the extended department
-
-const inputs = document.querySelectorAll('.department-field');
-if (inputs.length > 0) {
-  const placeholderWidth = inputs[0].placeholder.length + 7.5;
-  inputs.forEach((input) => {
-    let width = placeholderWidth;
-    input.style.width = (width * 0.5) + 'vw';
-    input.addEventListener('input', () => {
-      width = Math.max(placeholderWidth, input.value.length + 7);
-      input.style.width = (width * 0.5) + 'vw';
-    });
-  });
-}
