@@ -1632,8 +1632,6 @@ body.acievements-page {
         height: auto;
 
         .popup__users-content {
-            overflow: auto;
-            height: 32vw;
 
             .popup__users-form {
                 display: flex;
@@ -1794,26 +1792,6 @@ body.acievements-page {
                     margin-top: 14.623vw;
                 }
             }
-
-
-        }
-
-        .popup__users-content::-webkit-scrollbar {
-            width: 0.469vw;
-        }
-
-        .popup__users-content::-webkit-scrollbar-track {
-            background: linear-gradient(0deg, rgb(238, 239, 243), rgb(224, 228, 236)), rgb(31, 31, 35);
-            mix-blend-mode: normal;
-            border-radius: 0.521vw;
-        }
-
-        .popup__users-content::-webkit-scrollbar-thumb {
-            width: 0.469vw;
-            background: #b0bfde;
-            mix-blend-mode: normal;
-            opacity: .6;
-            border-radius: 0.521vw;
         }
     }
 
@@ -2712,6 +2690,51 @@ body.acievements-page {
 .content.acievements {
     padding: 3.076vw 3.962vw 0vw 4.119vw;
 
+    h2 {
+        span {
+            display: block;
+            position: absolute;
+            right: 19.94vw;
+            cursor: pointer;
+        }
+
+        span::after {
+            content: '';
+            background: url(../img/info-icon.svg) no-repeat center top / cover;
+            width: 0.991vw;
+            height: 0.991vw;
+            display: block;
+        }
+    }
+
+    .info-popup {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        width: fit-content;
+        height: auto;
+        padding: 1.721vw 2.346vw;
+        background: #FFFFFF;
+        box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+        border-radius: 1.043vw;
+        font-size: 0.782vw;
+        line-height: 1.251vw;
+        letter-spacing: 0.01vw;
+        color: #B9BABE;
+        position: absolute;
+    }
+
+    .info-popup.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .acievements-title {
+        top: 5.521vw;
+        left: 30.521vw;
+    }
+
+
     .add-badge {
         margin-bottom: 2.294vw;
         display: flex;
@@ -2784,6 +2807,89 @@ body.acievements-page {
         .cell.actions {
             position: absolute;
             left: 88.5%;
+        }
+    }
+}
+
+.add-badge-popup {
+    .badge-popup-form {
+        width: 97%;
+    }
+
+    label {
+        font-size: 0.834vw;
+        line-height: 2.503vw;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0.011vw;
+        color: #869DC8;
+        margin-bottom: 2.138vw;
+
+        input {
+            width: 100%;
+            height: 2.555vw;
+            background: #FFFFFF;
+            border: 0.052vw solid rgba(192, 200, 209, 0.8);
+            border-radius: 0.417vw;
+            transition: 0.3s;
+            font-size: 0.782vw;
+            line-height: 0.73vw;
+            letter-spacing: 0.01vw;
+            color: #1B2438;
+            padding: 0.938vw 2.086vw;
+        }
+
+        input::placeholder {
+            color: #B9BABE;
+        }
+
+        input:focus {
+            box-shadow: 0px 0px 3px 1px #869DC8;
+        }
+
+
+        .acievements-select {
+            width: 100%;
+            margin-bottom: 2.138vw;
+
+            .line {
+                left: 52vw;
+            }
+
+            .new__custom-option {
+                width: auto;
+                height: auto;
+                margin-top: 1.46vw;
+            }
+
+            .acievements-bg {
+                width: 8.627vw;
+                height: 5.892vw;
+                background: rgba(27, 36, 56, 0.9);
+                border-radius: 0.886vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.53vw;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+
+            .new__custom-option:hover::before {
+                content: '';
+                background: none;
+                opacity: 0;
+            }
+
+
+            .new__custom-select.open .new__custom-options {
+                display: flex;
+                flex-wrap: wrap;
+                padding-bottom: 1.721vw;
+            }
         }
     }
 }

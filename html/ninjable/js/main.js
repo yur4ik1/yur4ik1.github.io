@@ -204,6 +204,48 @@ if (skillsIcos.length > 0 && skillsInfoPopups.length > 0) {
   });
 }
 
+
+
+
+/* add badge popup */
+
+const addBadgePopup = document.querySelector('.add-badge-popup');
+const addBadgeBtn = document.querySelectorAll('.add-badge-btn');
+const addBadgeClose = document.querySelector('.add-badge-close');
+
+if (addBadgePopup && addBadgeBtn.length > 0) {
+  addBadgeBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      addBadgePopup.classList.add('active');
+    });
+  });
+  addBadgeClose.addEventListener('click', () => {
+    addBadgePopup.classList.remove('active');
+  });
+}
+
+/* acievements title popup */
+
+const acievementsTitleIco = document.querySelector('.acievements-info');
+const acievementsTitlePopup = document.querySelector('.acievements-title');
+
+if (acievementsTitleIco && acievementsTitlePopup) {
+  acievementsTitleIco.addEventListener('click', () => {
+    acievementsTitlePopup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.acievements-title') && !event.target.closest('.acievements-info')) {
+      acievementsTitlePopup.classList.remove('active');
+    }
+  });
+}
+
+
+
+
+
+
 /* header avatar */
 
 const profileBtn = document.querySelector('.header__avatar');

@@ -1104,3 +1104,30 @@ tr {
 .let-know.active {
   display: block;
 }
+
+
+/* popup users content */ 
+
+.popup__users-content {
+  overflow: auto;
+  height: 32vw;
+}
+
+
+.popup__users-content::-webkit-scrollbar {
+  width: 0.469vw;
+}
+
+.popup__users-content::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, rgb(238, 239, 243), rgb(224, 228, 236)), rgb(31, 31, 35);
+  mix-blend-mode: normal;
+  border-radius: 0.521vw;
+}
+
+.popup__users-content::-webkit-scrollbar-thumb {
+  width: 0.469vw;
+  background: #b0bfde;
+  mix-blend-mode: normal;
+  opacity: .6;
+  border-radius: 0.521vw;
+}
