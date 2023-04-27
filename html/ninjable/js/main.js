@@ -625,38 +625,39 @@ newCustomSelects.forEach((newCustomSelect) => {
   newCustomOptionsList.forEach((option) => {
     option.addEventListener('click', (event) => {
       if (newCustomSelect.closest('.skills-filter-select')) {
-        const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
-        const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
-        const newCustomOptionValue = option.getAttribute('data-value');
-        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-        const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
-
-        if (selectedOptionValues.includes(newCustomOptionValue)) {
-          return;
-        }
-
-        const tagItem = document.createElement('div');
-        tagItem.classList.add('tag-item');
-
-        const tagItemText = document.createElement('p');
-        tagItemText.textContent = option.textContent;
-
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('remove');
-        tagItem.appendChild(tagItemText);
-        tagItem.appendChild(removeButton);
-        skillsTagsList.appendChild(tagItem);
-        addRemoveButtonListener(removeButton);
-
-        
-
-        option.classList.add('selected');
-        newCustomTrigger.textContent = 'Type here to search for Clan...';
-
+          const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
+          const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
+          const newCustomOptionValue = option.getAttribute('data-value');
+          const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+          const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
+  
+          if (selectedOptionValues.includes(newCustomOptionValue)) {
+            return;
+          }
+  
+          const tagItem = document.createElement('div');
+          tagItem.classList.add('tag-item');
+  
+          const tagItemText = document.createElement('p');
+          tagItemText.textContent = option.textContent;
+  
+          const removeButton = document.createElement('button');
+          removeButton.classList.add('remove');
+          tagItem.appendChild(tagItemText);
+          tagItem.appendChild(removeButton);
+          skillsTagsList.appendChild(tagItem);
+          addRemoveButtonListener(removeButton);
+  
+          option.classList.add('selected');
+          newCustomTrigger.textContent = 'Type here to search for Clan...';
       } else {
         const newCustomOptionValue = option.getAttribute('data-value');
         const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-        newCustomTrigger.textContent = option.textContent;
+        if (newCustomSelect.closest('.acievements-select')) {
+          newCustomTrigger.textContent = 'icon';
+        } else {
+          newCustomTrigger.textContent = option.textContent;
+        }
         newCustomSelect.classList.remove('open');
         if (newCustomSelect.classList.contains('filter-select-scroll')) {
           newCustomSelect.classList.add('open');
