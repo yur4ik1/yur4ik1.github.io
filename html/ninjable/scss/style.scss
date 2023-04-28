@@ -438,53 +438,6 @@ body.acievements-page {
                 input {
                     width: 26.799vw;
                     height: 2.555vw;
-                    background: $background-color;
-                    border: 0.052vw solid $border-color;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
-                    border-radius: 0.417vw;
-                    padding-top: 0.886vw;
-                    padding-bottom: 0.886vw;
-                    padding-left: 2.086vw;
-                    padding-right: 2.086vw;
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $primary-color;
-                }
-
-                input::-webkit-input-placeholder {
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $placeholder-color;
-                }
-
-                input::-moz-placeholder {
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $placeholder-color;
-                }
-
-                input:-ms-input-placeholder {
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $placeholder-color;
-                }
-
-                input::-ms-input-placeholder {
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $placeholder-color;
-                }
-
-                input::placeholder {
-                    font-size: 0.782vw;
-                    line-height: 0.73vw;
-                    letter-spacing: 0.01vw;
-                    color: $placeholder-color;
                 }
 
                 .right {
@@ -1650,31 +1603,6 @@ body.acievements-page {
                         position: relative;
                         margin-left: 0.156vw;
 
-                        input {
-                            width: 100%;
-                            height: 2.555vw;
-                            background: $background-color;
-                            border: 0.052vw solid rgba(192, 200, 209, 0.8);
-                            border-radius: 0.417vw;
-                            font-size: 0.782vw;
-                            line-height: 0.73vw;
-                            letter-spacing: 0.01vw;
-                            color: $primary-color;
-                            padding-left: 2.086vw;
-                            position: relative;
-                        }
-
-                        input:focus {
-                            box-shadow: 0vw 0vw 0.156vw 0.052vw $tertiary-color;
-                        }
-
-                        input::placeholder {
-                            font-size: 0.782vw;
-                            line-height: 0.73vw;
-                            letter-spacing: 0.01vw;
-                            color: $placeholder-color;
-                        }
-
 
                         .department-select {
                             width: 100%;
@@ -1942,28 +1870,8 @@ body.acievements-page {
                     justify-content: space-between;
 
                     input {
-                        font-size: 0.782vw;
-                        line-height: 0.73vw;
-                        letter-spacing: 0.01vw;
-                        color: $primary-color;
                         width: 50.626vw;
                         height: 2.555vw;
-                        background: $background-color;
-                        border: 0.052vw solid rgba(192, 200, 209, 0.8);
-                        border-radius: 0.417vw;
-                        padding: 0.886vw 2.086vw;
-                    }
-
-                    input::placeholder {
-                        font-size: 0.782vw;
-                        line-height: 0.73vw;
-                        letter-spacing: 0.01vw;
-                        color: $placeholder-color;
-                    }
-
-                    input:focus {
-                        border: 0.052vw solid $border-color;
-                        box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                     }
 
                     button {
@@ -2105,34 +2013,8 @@ body.acievements-page {
                     position: relative;
 
                     .field {
-                        input {
-                            width: 100%;
-                        }
-
                         textarea {
-                            width: 100%;
                             height: 10.845vw;
-                            background: $background-color;
-                            border: 0.052vw solid rgba(192, 200, 209, 0.8);
-                            border-radius: 0.417vw;
-                            font-size: 0.782vw;
-                            line-height: 0.73vw;
-                            letter-spacing: 0.01vw;
-                            color: $primary-color;
-                            padding: 0.886vw 2.086vw;
-                            resize: none;
-                        }
-
-                        textarea::placeholder {
-                            font-size: 0.782vw;
-                            line-height: 0.73vw;
-                            letter-spacing: 0.01vw;
-                            color: $placeholder-color;
-                        }
-
-                        textarea:focus {
-                            border: 0.052vw solid $border-color;
-                            box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                         }
                     }
 
@@ -2582,32 +2464,13 @@ body.acievements-page {
 
             textarea {
                 height: 10.845vw;
-                background: #FFFFFF;
-                border: 0.052vw solid rgba(192, 200, 209, 0.8);
-                border-radius: 0.417vw;
-                resize: none;
-                font-size: 0.782vw;
-                line-height: 0.73vw;
-                letter-spacing: 0.01vw;
-                color: #1B2438;
                 padding: 0.938vw 2.086vw;
             }
 
-            textarea::placeholder {
-                color: #B9BABE;
-            }
 
             input {
                 height: 2.555vw;
-                background: #FFFFFF;
-                border: 0.052vw solid rgba(192, 200, 209, 0.8);
-                border-radius: 0.417vw;
-                color: #1B2438;
                 padding: 0.938vw 2.086vw;
-            }
-
-            input::placeholder {
-                color: #B9BABE;
             }
 
             input.file {
@@ -2812,7 +2675,7 @@ body.acievements-page {
 }
 
 .add-badge-popup {
-    .badge-popup-form {
+    .badge__popup-form {
         width: 97%;
     }
 
@@ -2824,29 +2687,6 @@ body.acievements-page {
         letter-spacing: 0.011vw;
         color: #869DC8;
         margin-bottom: 2.138vw;
-
-        input {
-            width: 100%;
-            height: 2.555vw;
-            background: #FFFFFF;
-            border: 0.052vw solid rgba(192, 200, 209, 0.8);
-            border-radius: 0.417vw;
-            transition: 0.3s;
-            font-size: 0.782vw;
-            line-height: 0.73vw;
-            letter-spacing: 0.01vw;
-            color: #1B2438;
-            padding: 0.938vw 2.086vw;
-        }
-
-        input::placeholder {
-            color: #B9BABE;
-        }
-
-        input:focus {
-            box-shadow: 0px 0px 3px 1px #869DC8;
-        }
-
 
         .acievements-select {
             width: 100%;
@@ -2890,6 +2730,15 @@ body.acievements-page {
                 flex-wrap: wrap;
                 padding-bottom: 1.721vw;
             }
+        }
+    }
+
+    .badge__form-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .badge__form-col {
+            width: 26.903vw;
+            position: relative;
         }
     }
 }
