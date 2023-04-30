@@ -911,9 +911,102 @@ body.acievements-page {
 }
 
 .subscription__popup {
-    .subscription__popup-inner {
-        width: 64.181vw;
-        height: 44.317vw;
+    .ninjable__popup-inner {
+        width: 84.567vw;
+        height: 44vw;
+        padding: 0;
+        left: 1.3%;
+    }
+
+    .ninjable__popup-header {
+        border-bottom: 0.104vw solid #E4E8EE;
+        box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+        border-radius: 1.356vw 1.356vw 0vw 0vw;
+        display: flex;
+        align-items: center;
+        padding-top: 2.86vw !important;
+
+        .ninjable__popup-close {
+            right: 1.46vw !important;
+            top: 1.668vw !important;
+        }
+    }
+
+    .popup__users-content {
+        margin-right: 1.981vw;
+    }
+
+    .subscription__header-list {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 24.3vw;
+
+        div {
+            width: 12.736vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-family: 'Karla';
+                font-weight: 700;
+                font-size: 1.303vw;
+                line-height: 2.086vw;
+                letter-spacing: 0.052vw;
+                color: #1B2438;
+                mix-blend-mode: normal;
+            }
+        }
+    }
+
+    .subscription__list-content {
+        padding-left: 5.266vw;
+        padding-right: 6.569vw;
+
+        .subscription__list-row {
+            display: flex;
+            align-items: center;
+
+            .cell {
+                width: 13.452vw;
+                font-size: 1.043vw;
+                line-height: 2.086vw;
+                letter-spacing: 0.014vw;
+                color: #1B2438;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 2.607vw;
+
+                .tick {
+                    background: url('../img/tick-icon.svg') no-repeat center top / cover;
+                    width: 1.095vw;
+                    height: 0.73vw;
+                    display: block;
+                }
+            }
+
+            .cell {
+                .infinity {
+                    background: url('../img/infinity.svg') no-repeat center top / cover;
+                    width: 1.095vw;
+                    height: 0.678vw;
+                    display: block;
+                }
+            }
+
+
+            .cell.subscription-name {
+                width: 19.447vw;
+                font-family: 'Karla';
+                font-weight: 500;
+                font-size: 1.043vw;
+                line-height: 1.46vw;
+                letter-spacing: 0.013vw;
+                color: #1B2438;
+                align-items: flex-start !important;
+            }
+        }
     }
 }
 
@@ -2941,7 +3034,7 @@ body.acievements-page {
         visibility: visible;
         opacity: 1;
     }
-    
+
     .badge__info-popup.badges {
         left: 9.242vw;
     }
