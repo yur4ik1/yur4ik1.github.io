@@ -59,12 +59,12 @@ buttons.forEach(button => {
 
 const inputs = document.querySelectorAll('.department-field');
 if (inputs.length > 0) {
-  const placeholderWidth = inputs[0].placeholder.length + 7.5;
+  const placeholderWidth = inputs[0].placeholder.length + 9;
   inputs.forEach((input) => {
     let width = placeholderWidth;
     input.style.width = (width * 0.5) + 'vw';
     input.addEventListener('input', () => {
-      width = Math.max(placeholderWidth, input.value.length + 7);
+      width = Math.max(placeholderWidth, input.value.length + 9);
       input.style.width = (width * 0.5) + 'vw';
     });
   });
@@ -305,6 +305,36 @@ archiveDeleteBtns.forEach((btn) => {
   });
 });
 
+
+const skillsArchive = document.querySelector('.skills-archive');
+const skillsArchivePopup = document.querySelector('.skills__archive-popup');
+const skillsAlertPopup = document.querySelector('.skills__alert-popup');
+const alertFalse = document.querySelector('.false');
+const alertTrue = document.querySelector('.true');
+
+if (skillsArchive && skillsArchivePopup && skillsAlertPopup && alertFalse && alertTrue) {
+  skillsArchive.addEventListener('click', (event) => {
+    event.preventDefault();
+    skillsAlertPopup.classList.add('active');
+
+    setTimeout(() => {
+      if (skillsArchivePopup) {
+        skillsArchivePopup.classList.remove('active');
+      }
+    }, 3000);
+  });
+
+  alertTrue.addEventListener('click', () => {
+    skillsAlertPopup.classList.remove('active');
+    if (skillsArchivePopup) {
+      skillsArchivePopup.classList.add('active');
+    }
+  });
+
+  alertFalse.addEventListener('click', () => {
+    skillsAlertPopup.classList.remove('active');
+  });
+}
 
 
 /* custom period popup */

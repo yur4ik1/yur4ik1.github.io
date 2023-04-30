@@ -169,6 +169,26 @@ textarea:focus {
   display: block;
 }
 
+
+.skills-archive {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1.46vw;
+}
+
+.skills-archive.deactivate {
+  opacity: 0.3;
+}
+
+.skills-archive::after {
+  content: '';
+  background: url(../img/archive-icon.svg) no-repeat center top / cover;
+  width: 1.408vw;
+  height: 1.408vw;
+  display: block;
+}
+
+
 /* colors */
 
 .white {

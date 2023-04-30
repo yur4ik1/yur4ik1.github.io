@@ -2214,6 +2214,12 @@ body.acievements-page {
         }
     }
 
+    .department__wrapper {
+        .department {
+            position: relative;
+        }
+    }
+
     .table {
         .cell {
             position: relative;
@@ -2542,6 +2548,89 @@ body.acievements-page {
         }
     }
 }
+
+.skills__archive-popup {
+    z-index: 9999999999999;
+    width: 14.025vw;
+    height: 8.759vw;
+    background: #fff;
+    box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8ea1ba;
+    border-radius: 1.043vw;
+    padding: 1.825vw 2.086vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 25.052vw;
+    left: 17.052vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+
+    p {
+        font-size: .782vw;
+        line-height: 1.251vw;
+        letter-spacing: .01vw;
+        color: #b9babe;
+    }
+}
+
+.skills__archive-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.skills__alert-popup {
+    width: 13.399vw;
+    height: auto;
+    background: #fff;
+    box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8ea1ba;
+    border-radius: 1.043vw;
+    z-index: 999999999;
+    padding: 1.668vw 2.19vw;
+    transition: .2s;
+    position: absolute;
+    right: 33.043vw;
+    top: 24.5vw;
+    visibility: hidden;
+    opacity: 0;
+
+    p {
+        font-size: .834vw;
+        line-height: 1.668vw;
+        letter-spacing: .011vw;
+        color: #1b2438;
+        text-align: center;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.356vw;
+
+        button {
+            font-size: .834vw;
+            line-height: .938vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: .02vw;
+            color: #fff;
+            width: 3.91vw;
+            height: 2.242vw;
+            background: #869dc8;
+            box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, .6);
+            border-radius: 0.521vw;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.skills__alert-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* acievements page */
 
