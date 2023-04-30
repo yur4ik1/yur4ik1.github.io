@@ -548,8 +548,10 @@ if (selectSelected) {
   selectSelected.addEventListener("click", function () {
     if (selectItems && selectItems.classList.contains("select-hide")) {
       selectItems.classList.remove("select-hide");
+      select.classList.add('active');
     } else if (selectItems) {
       selectItems.classList.add("select-hide");
+      select.classList.remove('active');
     }
   })
 };
@@ -625,31 +627,31 @@ newCustomSelects.forEach((newCustomSelect) => {
   newCustomOptionsList.forEach((option) => {
     option.addEventListener('click', (event) => {
       if (newCustomSelect.closest('.skills-filter-select')) {
-          const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
-          const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
-          const newCustomOptionValue = option.getAttribute('data-value');
-          const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-          const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
-  
-          if (selectedOptionValues.includes(newCustomOptionValue)) {
-            return;
-          }
-  
-          const tagItem = document.createElement('div');
-          tagItem.classList.add('tag-item');
-  
-          const tagItemText = document.createElement('p');
-          tagItemText.textContent = option.textContent;
-  
-          const removeButton = document.createElement('button');
-          removeButton.classList.add('remove');
-          tagItem.appendChild(tagItemText);
-          tagItem.appendChild(removeButton);
-          skillsTagsList.appendChild(tagItem);
-          addRemoveButtonListener(removeButton);
-  
-          option.classList.add('selected');
-          newCustomTrigger.textContent = 'Type here to search for Clan...';
+        const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
+        const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
+        const newCustomOptionValue = option.getAttribute('data-value');
+        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+        const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
+
+        if (selectedOptionValues.includes(newCustomOptionValue)) {
+          return;
+        }
+
+        const tagItem = document.createElement('div');
+        tagItem.classList.add('tag-item');
+
+        const tagItemText = document.createElement('p');
+        tagItemText.textContent = option.textContent;
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove');
+        tagItem.appendChild(tagItemText);
+        tagItem.appendChild(removeButton);
+        skillsTagsList.appendChild(tagItem);
+        addRemoveButtonListener(removeButton);
+
+        option.classList.add('selected');
+        newCustomTrigger.textContent = 'Type here to search for Clan...';
       } else {
         const newCustomOptionValue = option.getAttribute('data-value');
         const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
@@ -732,9 +734,9 @@ skillsTagsList.addEventListener('click', () => {
 
 const selectOpenBtn = document.querySelector('.select-open-btn');
 selectOpenBtn.addEventListener('click', () => {
-    console.log('clk')
-    newCustomSelect.classList.add('open');
-    newCustomSelect.classList.remove('hide');
+  console.log('clk')
+  newCustomSelect.classList.add('open');
+  newCustomSelect.classList.remove('hide');
 });
 
 

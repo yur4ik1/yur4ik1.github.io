@@ -2186,25 +2186,20 @@ body.acievements-page {
                 }
             }
         }
+
+        .level__popup-bottom {
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: 8.238vw;
+                height: 2.503vw;
+            }
+
+        }
     }
 }
 
-.delete-level-popup {
-    z-index: 9999999999999;
-    width: 14.025vw;
-    height: 8.759vw;
-    background: #FFFFFF;
-    box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
-    border-radius: 1.043vw;
-    padding: 1.825vw 2.086vw;
-
-    p {
-        font-size: 0.782vw;
-        line-height: 1.251vw;
-        letter-spacing: 0.01vw;
-        color: #B9BABE;
-    }
-}
 
 
 /* skills page */
@@ -2736,6 +2731,7 @@ body.acievements-page {
     .badge__form-wrapper {
         display: flex;
         justify-content: space-between;
+
         .badge__form-col {
             width: 26.903vw;
             position: relative;
