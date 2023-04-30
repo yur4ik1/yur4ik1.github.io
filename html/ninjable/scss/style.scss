@@ -2763,6 +2763,14 @@ body.acievements-page {
         width: 97%;
     }
 
+    h4 {
+        font-weight: 500;
+        font-size: 1.043vw;
+        line-height: 2.503vw;
+        letter-spacing: 0.014vw;
+        color: #1B2438;
+    }
+
     label {
         font-size: 0.834vw;
         line-height: 2.503vw;
@@ -2817,6 +2825,15 @@ body.acievements-page {
         }
     }
 
+    .custom-select {
+        width: 100%;
+
+        .select-selected {
+            width: 100%;
+            padding-bottom: 0.798vw;
+        }
+    }
+
     .badge__form-wrapper {
         display: flex;
         justify-content: space-between;
@@ -2824,6 +2841,17 @@ body.acievements-page {
         .badge__form-col {
             width: 26.903vw;
             position: relative;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.972vw;
+
+        button {
+            width: 8.238vw;
+            height: 2.503vw;
         }
     }
 }
