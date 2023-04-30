@@ -239,6 +239,17 @@ if (addBadgePopup && addBadgeBtn.length > 0) {
 
 /* badge info popups */
 
+const labels = document.querySelectorAll('.info');
+
+labels.forEach(label => {
+  label.addEventListener('click', () => {
+    const badge = label.querySelector('.badge__info-popup');
+    badge.classList.add('active');
+    setTimeout(() => {
+      badge.classList.remove('active');
+    }, 3000);
+  });
+});
 
 
 /* acievements title popup */
