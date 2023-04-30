@@ -1,4 +1,17 @@
+/* let know */
 
+const addBtns = document.querySelectorAll('.user-add');
+
+if (addBtns) {
+  addBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const letKnowElems = document.querySelectorAll('.let-know');
+      letKnowElems.forEach(elem => {
+        elem.classList.add('active');
+      });
+    });
+  });
+}
 
 // Levels popup
 
@@ -206,7 +219,6 @@ if (skillsIcos.length > 0 && skillsInfoPopups.length > 0) {
 
 
 
-
 /* add badge popup */
 
 const addBadgePopup = document.querySelector('.add-badge-popup');
@@ -223,6 +235,11 @@ if (addBadgePopup && addBadgeBtn.length > 0) {
     addBadgePopup.classList.remove('active');
   });
 }
+
+
+/* badge info popups */
+
+
 
 /* acievements title popup */
 
@@ -785,16 +802,3 @@ if (passwordInput && passwordIcon) {
     }
   })
 };
-
-/* let know */
-
-const addBtns = document.querySelectorAll('.user-add');
-
-addBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const letKnowElems = document.querySelectorAll('.let-know');
-    letKnowElems.forEach(elem => {
-      elem.classList.add('active');
-    });
-  });
-});

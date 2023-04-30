@@ -305,7 +305,7 @@
             </section>
         </section>
 
-        <div class="ninjable__popup add-badge-popup ">
+        <div class="ninjable__popup add-badge-popup active">
             <div class="ninjable__popup-inner">
                 <div class="ninjable__popup-header">
                     <span class="ninjable__popup-close add-badge-close">
@@ -340,7 +340,7 @@
                                         </div>
                                         <div class="new__custom-option" data-value="icon-1">
                                             <div class="acievements-bg">
-                                                <img src="./img/acievements-img-4.png" alt="">
+
                                             </div>
                                         </div>
                                         <div class="new__custom-option" data-value="icon-1">
@@ -377,55 +377,109 @@
                         <h4>Condition</h4>
                         <div class="badge__form-wrapper">
                             <div class="badge__form-col">
-                                <label>* Type
-                                    <div class="custom-select">
-                                        <div class="select-selected">Please Select...
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Coins</div>
-                                            <div class="select-option">Skill</div>
-                                            <div class="select-option">Task</div>
-                                        </div>
+                                <label class="info">* Type
+                                    <div class="badge__info-popup type">
+                                        <p class="title">Type</p>
+                                        <p class="desc">
+                                            Please select what type of task the <br> employees should perform.
+                                        </p>
+                                        <p class="desc">
+                                            <span>Examples:</span> <br>
+                                            - Upgrade skill <br>
+                                            - Complete tasks <br>
+                                            - Earn coins <br>
+                                        </p>
                                     </div>
-                                    <span class="let-know">Please let us know type</span>
                                 </label>
-                                <label>* Period
-                                    <div class="custom-select">
-                                        <div class="select-selected">Please Select...
-                                            <span class="line"></span>
-                                        </div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Monthly</div>
-                                            <div class="select-option">Weekly</div>
-                                        </div>
+
+                                <div class="custom-select">
+                                    <div class="select-selected">Please Select...
+                                        <span class="line"></span>
                                     </div>
-                                    <span class="let-know">Please let us know period</span>
+                                    <div class="select-items select-hide">
+                                        <div class="select-option">Coins</div>
+                                        <div class="select-option">Skill</div>
+                                        <div class="select-option">Task</div>
+                                    </div>
+                                </div>
+                                <span class="let-know">Please let us know type</span>
+
+                                <label class="info">* Period
+                                    <div class="badge__info-popup period">
+                                        <p class="title">Period</p>
+                                        <p class="desc">
+                                            Please choose how long this <br> challenge will last.
+                                        </p>
+                                    </div>
                                 </label>
+                                <div class="custom-select">
+                                    <div class="select-selected">Please Select...
+                                        <span class="line"></span>
+                                    </div>
+                                    <div class="select-items select-hide">
+                                        <div class="select-option">Monthly</div>
+                                        <div class="select-option">Weekly</div>
+                                    </div>
+                                </div>
+                                <span class="let-know">Please let us know period</span>
+
                             </div>
                             <div class="badge__form-col">
-                                <label>* Amount
-                                    <input type="text" placeholder="10">
-                                    <span class="let-know">Please let us know amount</span>
+                                <label class="info">* Amount
+                                    <div class="badge__info-popup amount">
+                                        <p class="title">Amount</p>
+                                        <p class="desc">
+                                            Please select the conditions for <br> receiving the award.
+                                        </p>
+                                        <p class="desc">
+                                            <span>Examples:</span><br>
+                                            - Upgrade 1 skill<br>
+                                            - Complete 10 tasks<br>
+                                            - Earn 300 coins<br>
+                                        </p>
+                                    </div>
                                 </label>
-                                <label>* Badges Amount
-                                    <input type="text" placeholder="1">
-                                    <span class="let-know">Please let us know badges amount</span>
+                                <input type="text" placeholder="10">
+                                <span class="let-know">Please let us know amount</span>
+
+                                <label class="info">* Badges Amount
+                                    <div class="badge__info-popup badges">
+                                        <p class="title">Badges Amount</p>
+                                        <p class="desc">
+                                            Please select how many employees <br> will receive badges.
+                                        </p>
+                                        <p class="desc">
+                                            <span>Examples:</span><br>
+                                            - 1 employee who will be the first to fulfill the conditions<br>
+                                            - A certain number of employees: 2 or more<br>
+                                            - All employees who meet the conditions<br>
+                                            - Department
+                                        </p>
+                                    </div>
                                 </label>
+                                <input type="text" placeholder="1">
+                                <span class="let-know">Please let us know badges amount</span>
                             </div>
                         </div>
 
-                        <label>* Reward
-                            <input type="text" placeholder="30 Coins">
-                            <span class="let-know">Please let us know reward</span>
+                        <label class="info">* Reward
+                            <div class="badge__info-popup reward">
+                                <p class="title">Reward</p>
+                                <p class="desc">
+                                    In addition to the badge, the employee will receive coins.
+                                </p>
+                                <p class="desc">
+                                    All employees listed in "Badges Amount" will receive the amount you enter here.
+                                </p>
+                            </div>
                         </label>
-
+                        <input type="text" placeholder="30 Coins">
+                        <span class="let-know">Please let us know reward</span>
                         <h4>Reward</h4>
 
                         <label>* Status
                             <div class="custom-select">
                                 <div class="select-selected">Please Select...
-                                    <span class="line"></span>
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Active</div>
@@ -436,7 +490,7 @@
                         </label>
 
                         <div class="bottom">
-                            <button class="btn" type="submit">Add</button>
+                            <button class="btn user-add" type="submit">Add</button>
                         </div>
 
                     </div>

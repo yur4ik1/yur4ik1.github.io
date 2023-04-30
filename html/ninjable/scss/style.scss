@@ -1446,7 +1446,6 @@ body.acievements-page {
                                 border-bottom-left-radius: 0.417vw;
                                 border-top-right-radius: 0;
                                 border-bottom-right-radius: 0;
-                                border-right: 0;
                             }
 
                             .new__custom-select__trigger.years {
@@ -2761,6 +2760,8 @@ body.acievements-page {
 .add-badge-popup {
     .badge__popup-form {
         width: 97%;
+        position: relative;
+        left: 0.417vw;
     }
 
     h4 {
@@ -2769,6 +2770,7 @@ body.acievements-page {
         line-height: 2.503vw;
         letter-spacing: 0.014vw;
         color: #1B2438;
+        margin-top: 1.929vw;
     }
 
     label {
@@ -2779,13 +2781,14 @@ body.acievements-page {
         letter-spacing: 0.011vw;
         color: #869DC8;
         margin-bottom: 2.138vw;
+        position: relative;
 
         .acievements-select {
             width: 100%;
             margin-bottom: 2.138vw;
 
             .line {
-                left: 52vw;
+                left: 51.5vw;
             }
 
             .new__custom-option {
@@ -2825,12 +2828,51 @@ body.acievements-page {
         }
     }
 
+
+    label.info {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0.138vw;
+        margin-top: 2.138vw;
+    }
+
+    label.info:nth-child(1) {
+        margin-top: 0;
+    }
+
+    label.info::after {
+        content: '';
+        background: url(../img/info-icon.svg) no-repeat center top / cover;
+        width: 0.834vw;
+        height: 0.834vw;
+        display: block;
+        cursor: pointer;
+        margin-left: 0.73vw;
+        margin-bottom: 0.204vw;
+    }
+
     .custom-select {
         width: 100%;
 
         .select-selected {
             width: 100%;
             padding-bottom: 0.798vw;
+
+            .line {
+                position: absolute;
+                width: 2.7vw;
+                height: 0.052vw;
+                background: #e4e8ee;
+                transform: rotate(-90deg);
+                top: 1.4vw;
+                left: 22.7vw;
+                display: block;
+                z-index: 99999999;
+            }
+        }
+
+        .select-option {
+            width: 100%;
         }
     }
 
@@ -2853,5 +2895,54 @@ body.acievements-page {
             width: 8.238vw;
             height: 2.503vw;
         }
+    }
+
+    .badge__info-popup {
+        width: auto;
+        height: auto;
+        background: #FFFFFF;
+        box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
+        border-radius: 1.043vw;
+        padding: 1.668vw 2.086vw;
+        position: absolute;
+        top: 0.981vw;
+        left: 5.242vw;
+        z-index: 99999999999999;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        .title {
+            font-size: 0.834vw;
+            line-height: 1.668vw;
+            letter-spacing: 0.011vw;
+            color: #1B2438;
+            margin-bottom: 0.938vw;
+        }
+
+        .desc {
+            font-size: 0.782vw;
+            line-height: 1.251vw;
+            letter-spacing: 0.01vw;
+            color: #B9BABE;
+            margin-bottom: 0.678vw;
+            width: 13.191vw;
+
+            span {
+                font-size: 0.834vw;
+                line-height: 1.668vw;
+                letter-spacing: 0.011vw;
+                color: #1B2438;
+            }
+        }
+    }
+
+    .badge__info-popup.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .badge__info-popup.badges {
+        left: 9.242vw;
     }
 }

@@ -91,7 +91,7 @@ input::placeholder {
 }
 
 input:focus {
-  box-shadow: 0px 0px 3px 1px #869DC8;
+  box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
 }
 
 textarea {
@@ -246,6 +246,8 @@ textarea:focus {
   box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
 }
 
+
+
 .select-selected:after {
   content: "";
   position: absolute;
@@ -266,7 +268,7 @@ textarea:focus {
 }
 
 .select-selected.select-arrow-active .line {
-  display: none!important;
+  display: none !important;
 }
 
 .select-selected.select-arrow-active:after {
@@ -407,6 +409,7 @@ textarea:focus {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .new__custom-select__trigger:hover {
   box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
 }
@@ -1183,6 +1186,12 @@ textarea:focus {
 
 .let-know {
   display: none;
+  font-weight: 400;
+  font-size: 0.678vw;
+  line-height: 0.73vw;
+  letter-spacing: 0.01vw;
+  color: #869DC8;
+  margin-top: 0.782vw;
 }
 
 .let-know.active {
@@ -1228,9 +1237,9 @@ textarea:focus {
   align-items: center;
 
   p {
-      font-size: 0.782vw;
-      line-height: 1.251vw;
-      letter-spacing: 0.01vw;
-      color: #B9BABE;
+    font-size: 0.782vw;
+    line-height: 1.251vw;
+    letter-spacing: 0.01vw;
+    color: #B9BABE;
   }
 }
