@@ -637,55 +637,6 @@ body.rewards-page {
 
                 .upload__icon-wrapper {
                     margin-bottom: 3.128vw;
-
-                    .title {
-                        font-size: 1.043vw;
-                        line-height: 2.086vw;
-                        letter-spacing: 0.014vw;
-                        color: $primary-color;
-                        margin-bottom: 1.46vw;
-                    }
-
-                    .upload__icon-input {
-                        display: flex;
-                        align-items: center;
-
-                        input {
-                            display: none;
-                        }
-
-                        label {
-                            font-size: 0.782vw;
-                            line-height: 0.782vw;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            letter-spacing: 0.007vw;
-                            color: rgba(27, 36, 56, 0.4);
-                            width: 8.081vw;
-                            height: 2.086vw;
-                            background: #FAFCFB;
-                            box-shadow: 0vw 0vw 0.313vw 0.156vw $shadow-color;
-                            border-radius: 0.417vw;
-                            cursor: pointer;
-                        }
-
-                        label::before {
-                            content: '';
-                            background: url(../img/upload-icon.svg) no-repeat center top / cover;
-                            width: 0.626vw;
-                            height: 0.782vw;
-                            margin-right: 0.365vw;
-                        }
-
-                        p {
-                            font-size: 0.782vw;
-                            line-height: 0.73vw;
-                            letter-spacing: 0.01vw;
-                            color: #D46A76;
-                            margin-left: 1.408vw;
-                        }
-                    }
                 }
 
                 .upload__info {
@@ -2008,9 +1959,12 @@ body.rewards-page {
         }
 
         .positions__popup-form {
+            margin-left: 0.782vw;
+
             label {
                 margin-bottom: 2.19vw;
                 position: relative;
+
 
                 .field {
                     display: flex;
@@ -2859,6 +2813,11 @@ body.rewards-page {
         }
 
         .cell.condition {
+            p {
+                width: 10.845vw;
+            }
+
+
             span {
                 font-size: 0.782vw;
                 line-height: 1.303vw;
@@ -3042,6 +3001,7 @@ body.rewards-page {
         visibility: hidden;
         opacity: 0;
         transition: 0.2s;
+        z-index: 9999999999999;
 
         .title {
             font-size: 0.834vw;
@@ -3098,7 +3058,8 @@ body.rewards-page {
 
 .reward-popup {
     .reward__popup-form {
-        margin-right: 1.043vw;
+        margin-left: 0.521vw;
+        width: 97%;
     }
 
     label {
@@ -3114,6 +3075,38 @@ body.rewards-page {
 
         .select-option {
             width: 100%;
+        }
+    }
+
+    .upload__icon-input {
+        label {
+            margin-bottom: 0;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            color: #B9BABE;
+        }
+
+        p::after {
+            content: '';
+            background: url(../img/revard-tick.svg) no-repeat center top / cover;
+            width: 0.469vw;
+            height: 0.417vw;
+            display: block;
+            margin-left: 0.417vw;
+        }   
+    }
+
+    .add__btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.972vw;
+
+        button {
+            width: 8.238vw;
+            height: 2.503vw;
         }
     }
 }

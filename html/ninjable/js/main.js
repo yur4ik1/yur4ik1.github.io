@@ -560,11 +560,16 @@ if (editJobPopup && editJobBtns.length > 0) {
 /* Subscription branding */
 
 const subscriptionBtn = document.querySelector('.upgrade__btn');
+const downgradeBtn = document.querySelector('.downgrade__btn');
 const subscriptionPopup = document.querySelector('.subscription__popup');
 const subscriptionClose = document.querySelector('.ninjable__popup-close');
 
-if (subscriptionBtn && subscriptionPopup) {
+if (subscriptionBtn && subscriptionPopup && downgradeBtn) {
   subscriptionBtn.addEventListener('click', () => {
+    subscriptionPopup.classList.toggle('active');
+  });
+
+  downgradeBtn.addEventListener('click', () => {
     subscriptionPopup.classList.toggle('active');
   });
 
