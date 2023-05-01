@@ -270,8 +270,22 @@ if (acievementsTitleIco && acievementsTitlePopup) {
 }
 
 
+/* add reward popup */
 
+const addRewardPopup = document.querySelector('.add-reward-popup');
+const addRewardBtn = document.querySelectorAll('.add-revard-btn');
+const addRewardClose = document.querySelector('.add-revard-close');
 
+if (addRewardPopup && addRewardBtn.length > 0) {
+  addRewardBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      addRewardPopup.classList.add('active');
+    });
+  });
+  addRewardClose.addEventListener('click', () => {
+    addRewardPopup.classList.remove('active');
+  });
+}
 
 
 /* header avatar */

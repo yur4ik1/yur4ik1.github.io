@@ -48,6 +48,7 @@ body.acievements-page {
     background: url(../img/content-acievements.png) no-repeat center top / cover;
     height: 93.199vw;
 }
+
 body.rewards-page {
     background: url(../img/content-rewards.png) no-repeat center top / cover;
     height: 132.199vw;
@@ -389,15 +390,6 @@ body.rewards-page {
         .account-setting {
             z-index: 999;
             position: relative;
-
-            label {
-                display: flex;
-                flex-direction: column;
-                font-size: 0.834vw;
-                line-height: 2.503vw;
-                letter-spacing: 0.011vw;
-                color: $tertiary-color;
-            }
 
             .account-owner {
                 display: flex;
@@ -1761,12 +1753,6 @@ body.rewards-page {
                     width: 22.68vw;
 
                     label {
-                        display: flex;
-                        flex-direction: column;
-                        font-size: 0.834vw;
-                        line-height: 2.503vw;
-                        letter-spacing: 0.011vw;
-                        color: $tertiary-color;
                         margin-bottom: 2.346vw;
                         position: relative;
                         margin-left: 0.156vw;
@@ -2023,12 +2009,6 @@ body.rewards-page {
 
         .positions__popup-form {
             label {
-                display: flex;
-                flex-direction: column;
-                font-size: 0.834vw;
-                line-height: 2.503vw;
-                letter-spacing: 0.011vw;
-                color: $secondary-color;
                 margin-bottom: 2.19vw;
                 position: relative;
 
@@ -2171,12 +2151,6 @@ body.rewards-page {
         .positions__popup-content {
             .positions__popup-form {
                 label {
-                    display: flex;
-                    flex-direction: column;
-                    font-size: 0.834vw;
-                    line-height: 2.503vw;
-                    letter-spacing: 0.011vw;
-                    color: $secondary-color;
                     margin-bottom: 2.19vw;
                     position: relative;
 
@@ -2460,12 +2434,6 @@ body.rewards-page {
         width: 97%;
 
         label {
-            font-size: 0.834vw;
-            line-height: 2.503vw;
-            display: flex;
-            flex-direction: column;
-            letter-spacing: 0.011vw;
-            color: #869DC8;
             margin-bottom: 2.138vw;
             position: relative;
 
@@ -2943,12 +2911,6 @@ body.rewards-page {
     }
 
     label {
-        font-size: 0.834vw;
-        line-height: 2.503vw;
-        display: flex;
-        flex-direction: column;
-        letter-spacing: 0.011vw;
-        color: #869DC8;
         margin-bottom: 2.138vw;
         position: relative;
 
@@ -3119,11 +3081,39 @@ body.rewards-page {
 /* rewards page */
 
 .content.rewards {
+    .add-revard-btn {
+        width: 7.404vw;
+        height: 2.45vw;
+    }
+
     .table .cell.acievements-icon .acievements-bg {
         padding: 0vw;
         background: #fff;
+
         img {
             border-radius: 0.886vw;
+        }
+    }
+}
+
+.reward-popup {
+    .reward__popup-form {
+        margin-right: 1.043vw;
+    }
+
+    label {
+        margin-bottom: 2.138vw;
+    }
+
+    .custom-select {
+        width: 100%;
+
+        .select-selected {
+            width: 100%;
+        }
+
+        .select-option {
+            width: 100%;
         }
     }
 }
