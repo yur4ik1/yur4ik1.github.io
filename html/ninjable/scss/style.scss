@@ -48,7 +48,10 @@ body.acievements-page {
     background: url(../img/content-acievements.png) no-repeat center top / cover;
     height: 93.199vw;
 }
-
+body.rewards-page {
+    background: url(../img/content-rewards.png) no-repeat center top / cover;
+    height: 132.199vw;
+}
 
 
 .header {
@@ -1073,7 +1076,7 @@ body.acievements-page {
 
     .light-bg {
         width: 13.452vw;
-        height: 81.595vw;
+        height: 44vw;
         background: linear-gradient(360deg, #869DC8 15.82%, rgba(217, 217, 217, 0) 207.15%);
         opacity: 0.15;
         transform: rotate(-180deg);
@@ -3110,5 +3113,17 @@ body.acievements-page {
 
     .badge__info-popup.badges {
         left: 9.242vw;
+    }
+}
+
+/* rewards page */
+
+.content.rewards {
+    .table .cell.acievements-icon .acievements-bg {
+        padding: 0vw;
+        background: #fff;
+        img {
+            border-radius: 0.886vw;
+        }
     }
 }
