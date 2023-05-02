@@ -614,6 +614,50 @@ if (calendarTo) {
   });
 }
 
+/* upload images */
+
+const fileInput = document.getElementById("upload__file");
+const popup = document.querySelector(".resize__img-popup");
+const popupClose = document.querySelector(".resize__img-close");
+
+if (fileInput && popup) {
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length > 0) {
+      popup.classList.add("active");
+    } else {
+      popup.classList.remove("active");
+    }
+  });
+  popupClose.addEventListener('click', () => {
+    popup.classList.remove("active");
+  })
+};
+
+
+/* resize images */
+
+const imageContainer = document.querySelector('.image-container');
+const overlay = document.querySelector('.overlay');
+const cropArea = document.querySelector('.crop-area');
+
+if (imageContainer && overlay && cropArea) {
+  function updateOverlay() {
+    const imageRect = imageContainer.getBoundingClientRect();
+    const cropAreaRect = cropArea.getBoundingClientRect();
+
+    const top = cropAreaRect.top - imageRect.top;
+    const left = cropAreaRect.left - imageRect.left;
+    const right = imageRect.right - cropAreaRect.right;
+    const bottom = imageRect.bottom - cropAreaRect.bottom;
+
+    overlay.style.boxShadow = `inset -1.1vw -4vw 0vw 6.989vw rgba(139,139,139,.7)`;
+  }
+
+  updateOverlay();
+
+  window.addEventListener('resize', updateOverlay);
+}
+
 
 /* filter select */
 
@@ -832,3 +876,4 @@ if (passwordInput && passwordIcon) {
     }
   })
 };
+

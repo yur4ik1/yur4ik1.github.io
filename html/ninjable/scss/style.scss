@@ -2417,17 +2417,6 @@ body.rewards-page {
                 .select-option {
                     width: 100%;
                 }
-
-                .line {
-                    position: absolute;
-                    width: 2.7vw;
-                    height: 0.052vw;
-                    background: #E4E8EE;
-                    transform: rotate(-90deg);
-                    top: 1.4vw;
-                    left: 51.6vw;
-                    display: block;
-                }
             }
 
             .new__custom-select-wrapper {
@@ -3046,6 +3035,10 @@ body.rewards-page {
         height: 2.45vw;
     }
 
+    .table .row-item .cell {
+        height: 8.551vw;
+    }
+
     .table .cell.acievements-icon .acievements-bg {
         padding: 0vw;
         background: #fff;
@@ -3096,7 +3089,7 @@ body.rewards-page {
             height: 0.417vw;
             display: block;
             margin-left: 0.417vw;
-        }   
+        }
     }
 
     .add__btn-wrapper {
@@ -3107,6 +3100,137 @@ body.rewards-page {
         button {
             width: 8.238vw;
             height: 2.503vw;
+        }
+    }
+}
+
+.resize__img-popup {
+    .ninjable__popup-inner {
+        width: 43.535vw;
+        height: 40.861vw;
+        padding: 0;
+
+        .ninjable__popup-header {
+            height: 8.759vw;
+            background: #FFFFFF;
+            border: 0.104vw solid #E4E8EE;
+            box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+            border-radius: 1.356vw 1.356vw 0vw 0vw;
+            padding-top: 1.981vw;
+            padding-left: 4.119vw;
+            padding-right: 1.825vw;
+
+            h3 {
+                text-align: left;
+                font-family: 'Karla';
+                font-weight: 700;
+                font-size: 1.303vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.021vw;
+                color: #1B2438;
+            }
+
+            .subtitle {
+                font-size: 0.834vw;
+                line-height: 1.147vw;
+                letter-spacing: 0.014vw;
+                color: #B9BABE;
+
+                span {
+                    color: #8D919B;
+                }
+            }
+
+            .resize__img-close {
+                right: 2.251vw;
+                top: 2.251vw;
+            }
+        }
+
+        .popup__users-content {
+            padding: 0.991vw;
+            position: relative;
+            overflow: auto;
+            height: 28vw;
+            padding-right: 1.043vw;
+            margin-right: 0.521vw;
+
+            .image-container {
+                position: relative;
+                width: 100%;
+                height: 33.42vw;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                // box-shadow: rgba(139,139,139,.7) -1.1vw -4vw 0vw 6.989vw inset;
+                z-index: 1;
+            }
+
+            .crop-area {
+                position: absolute;
+                top: 3.033vw;
+                left: 5.996vw;
+                width: 65.3%;
+                height: 58%;
+                box-sizing: border-box;
+                z-index: 2;
+            }
+
+            .resize-handle {
+                position: absolute;
+                width: 0.521vw;
+                height: 0.521vw;
+                background: #ffffff;
+                border-radius: 0.104vw;
+            }
+
+            .top-left {
+                top: -0.261vw;
+                left: -0.261vw;
+                cursor: nwse-resize;
+            }
+
+            .top-right {
+                top: -0.261vw;
+                right: -0.261vw;
+                cursor: nesw-resize;
+            }
+
+            .bottom-left {
+                bottom: -0.261vw;
+                left: -0.261vw;
+                cursor: nesw-resize;
+            }
+
+            .bottom-right {
+                bottom: -0.261vw;
+                right: -0.261vw;
+                cursor: nwse-resize;
+            }
+
+            .bottom {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1.877vw;
+
+                button {
+                    width: 8.238vw;
+                    height: 2.503vw;
+                    margin-right: 1.564vw;
+                }
+                a {
+                    font-size: 0.782vw;
+                    line-height: 4.015vw;
+                    letter-spacing: 0.007vw;
+                    color: #8D919B;
+                }
+            }
         }
     }
 }

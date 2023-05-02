@@ -317,6 +317,17 @@ textarea:focus {
   border: 0.052vw solid #D7DEE6;
   transition: 0.3s;
   border-radius: 0.417vw;
+
+  .line {
+    position: absolute;
+    width: 2.7vw;
+    height: 0.052vw;
+    background: #e4e8ee;
+    transform: rotate(-90deg);
+    top: 1.4vw;
+    left: 51.6vw;
+    display: block;
+  }
 }
 
 .select-selected:hover {
@@ -1052,30 +1063,6 @@ textarea:focus {
         left: 0;
         display: block;
       }
-    }
-
-    .popup__users-content {
-      overflow: auto;
-      height: 32vw;
-      position: relative;
-    }
-
-    .popup__users-content::-webkit-scrollbar {
-      width: 0.469vw;
-    }
-
-    .popup__users-content::-webkit-scrollbar-track {
-      background: linear-gradient(0deg, rgb(238, 239, 243), rgb(224, 228, 236)), rgb(31, 31, 35);
-      mix-blend-mode: normal;
-      border-radius: 0.521vw;
-    }
-
-    .popup__users-content::-webkit-scrollbar-thumb {
-      width: 0.469vw;
-      background: #b0bfde;
-      mix-blend-mode: normal;
-      opacity: .6;
-      border-radius: 0.521vw;
     }
   }
 }
