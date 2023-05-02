@@ -1435,6 +1435,61 @@ body {
     }
 }
 
+.request__popup {
+    .popup__inner {
+        width: 44.292vw;
+        height: auto;
+        background: #fff;
+        border-radius: 1.563vw;
+        padding: 2.604vw;
+        position: relative;
+        -webkit-animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
+        animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
+        .contact__form {
+ display: flex;
+        }
+        .contact__form input {
+            width: 28.125vw;
+            height: 2.083vw;
+            opacity: .4;
+            border: none;
+            background: rgba(0, 0, 0, 0);
+            border-bottom: 0.104vw solid #434343;
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #000;
+            margin-bottom: 1.042vw;
+            padding-bottom: 0.417vw;
+        }
+        .contact__form button {
+            font-weight: 700;
+            font-size: .938vw;
+            line-height: 150%;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7.813vw;
+            height: 2.083vw;
+            width: 9.375vw;
+            height: 2.083vw;
+            background: -o-radial-gradient(0% 100%, 100% 372.91%, #8322FE 0%, #451DB7 100%),-o-radial-gradient(0% 100%, 100% 372.91%, #D822FE 0%, #9933EF 100%);
+            background: radial-gradient(100% 372.91% at 0% 100%, #8322FE 0%, #451DB7 100%),radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
+            border-radius: 1.563vw;
+            border-radius: 1.563vw;
+            border: none;
+            cursor: pointer;
+            margin-left: 1.243vw;
+        }
+    }
+}
+
+
+
+
+
+
 .error {
     margin-top: 0.781vw;
 }
@@ -2180,8 +2235,8 @@ body {
         height: auto;
 
         .carriers__desc {
-            width: 100%!important;
-            margin-top: 8vw!important;
+            width: 100% !important;
+            margin-top: 8vw !important;
         }
     }
 
@@ -2248,9 +2303,11 @@ body {
             height: 43.625vw;
         }
     }
+
     .footer__right .footer__right-menu li {
         margin-right: 8.604vw;
     }
+
     .footer__right .footer__right-menu li a {
         font-size: 3.042vw;
     }

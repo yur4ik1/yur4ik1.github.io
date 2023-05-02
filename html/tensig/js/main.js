@@ -94,6 +94,25 @@ videoBack.addEventListener('click', () => {
 });
 
 
+// request popup 
+
+let requestPopup = document.querySelector('.request__popup');
+let requestBtns = document.querySelectorAll('.contact__download-item');
+let requestPopupClose = requestPopup.querySelector('.requestclose');
+
+requestBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    requestPopup.classList.add('active');
+  });
+});
+
+requestPopupClose.addEventListener('click', () => {
+  requestPopup.classList.remove('active');
+});
+
+
+
+
 // Contact forms
 
 function sendData(form, phpFile) {
