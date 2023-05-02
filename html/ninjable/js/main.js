@@ -287,6 +287,23 @@ if (addRewardPopup && addRewardBtn.length > 0) {
   });
 }
 
+/* edit reward popup */
+
+const editRewardPopup = document.querySelector('.edit-reward-popup');
+const editRewardBtn = document.querySelectorAll('.edit');
+const editRewardClose = document.querySelector('.edit-revard-close');
+
+if (editRewardPopup && editRewardBtn.length > 0) {
+  editRewardBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      editRewardPopup.classList.add('active');
+    });
+  });
+  editRewardClose.addEventListener('click', () => {
+    editRewardPopup.classList.remove('active');
+  });
+}
+
 
 /* header avatar */
 
