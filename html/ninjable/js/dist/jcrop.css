@@ -4,7 +4,9 @@
     width: 0.521vw;
     height: 0.521vw;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.8)
+    background: #fff!important;
+    border-radius: 0.104vw;
+    opacity: 1!important;
 }
 
 .jcrop-widget .jcrop-handle.nw {
@@ -82,9 +84,6 @@
 .jcrop-widget:focus {
     transition: opacity 0.5s;
     opacity: 1;
-    outline-style: auto;
-    outline-width: 0.156vw;
-    outline-color: rgba(141, 141, 141, 0.3)
 }
 
 .jcrop-shade {
