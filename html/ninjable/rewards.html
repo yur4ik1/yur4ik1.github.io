@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./js/dist/jcrop.css" />
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -499,7 +500,7 @@
             </div>
         </div>
 
-        <div class="ninjable__popup resize__img-popup ">
+        <div class="ninjable__popup resize__img-popup active">
             <div class="ninjable__popup-inner">
                 <div class="ninjable__popup-header">
                     <span class="ninjable__popup-close resize__img-close">
@@ -513,15 +514,9 @@
                 </div>
                 <div class="popup__users-content">
                     <div class="image-container">
-                        <div class="overlay"></div>
-                        <img src="./img/resize-img.jpg" alt="image">
-                        <div class="crop-area">
-                            <div class="resize-handle top-left"></div>
-                            <div class="resize-handle top-right"></div>
-                            <div class="resize-handle bottom-left"></div>
-                            <div class="resize-handle bottom-right"></div>
-                        </div>
+                        <img id="target" src="./img/resize-img.jpg" alt="image">
                     </div>
+
                     <div class="bottom">
                         <button class="btn">Add</button>
                         <a href="#">Сhoose another photo</a>
@@ -531,6 +526,38 @@
         </div>
 
     </div>
+    <script src="./js/dist/jcrop.js"></script>
+    <script>
+        var jcp;
+        Jcrop.load('target').then(img => {
+            jcp = Jcrop.attach(img, { multi: true });
+            const rect = Jcrop.Rect.sizeOf(jcp.el);
+            jcp.newWidget(rect.scale(.7, .5).center(rect.w, rect.h));
+            jcp.focus();
+        });
+
+        function setImage(tag) {
+            document.getElementById('target').src =
+                'https://d3o1694hluedf9.cloudfront.net/' + tag;
+        }
+
+        function rcoord() {
+            const w = jcp.el.offsetWidth;
+            const h = jcp.el.offsetHeight;
+            return [Math.round(Math.random() * w), Math.round(Math.random() * h)];
+        }
+
+        function rrect() {
+            return Jcrop.Rect.fromCoords(rcoord(), rcoord());
+        }
+
+        function anim() {
+            if (!jcp.active) return false;
+            const animtype = document.getElementById('animtype').value;
+            jcp.active.animate(rrect(), null, animtype);
+            jcp.focus();
+        }
+    </script>
 
     <script src="./js/main.min.js"></script>
 

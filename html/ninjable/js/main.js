@@ -653,27 +653,6 @@ if (fileInput && popup) {
 
 /* resize images */
 
-const imageContainer = document.querySelector('.image-container');
-const overlay = document.querySelector('.overlay');
-const cropArea = document.querySelector('.crop-area');
-
-if (imageContainer && overlay && cropArea) {
-  function updateOverlay() {
-    const imageRect = imageContainer.getBoundingClientRect();
-    const cropAreaRect = cropArea.getBoundingClientRect();
-
-    const top = cropAreaRect.top - imageRect.top;
-    const left = cropAreaRect.left - imageRect.left;
-    const right = imageRect.right - cropAreaRect.right;
-    const bottom = imageRect.bottom - cropAreaRect.bottom;
-
-    overlay.style.boxShadow = `inset -1.1vw -4vw 0vw 6.989vw rgba(139,139,139,.7)`;
-  }
-
-  updateOverlay();
-
-  window.addEventListener('resize', updateOverlay);
-}
 
 
 /* filter select */

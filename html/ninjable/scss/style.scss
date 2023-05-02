@@ -53,6 +53,7 @@ body.rewards-page {
     background: url(../img/content-rewards.png) no-repeat center top / cover;
     height: 132.199vw;
 }
+
 body.integrations-page {
     background: url(../img/content-integrations.png) no-repeat center top / cover;
     height: 127.199vw;
@@ -903,7 +904,7 @@ body.integrations-page {
                 font-size: 1.303vw;
                 line-height: 2.086vw;
                 letter-spacing: 0.052vw;
-                color: #1B2438;
+                color: $primary-color;
                 mix-blend-mode: normal;
             }
         }
@@ -922,7 +923,7 @@ body.integrations-page {
                 font-size: 1.043vw;
                 line-height: 2.086vw;
                 letter-spacing: 0.014vw;
-                color: #1B2438;
+                color: $primary-color;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -953,7 +954,7 @@ body.integrations-page {
                 font-size: 1.043vw;
                 line-height: 1.46vw;
                 letter-spacing: 0.013vw;
-                color: #1B2438;
+                color: $primary-color;
                 align-items: flex-start !important;
             }
         }
@@ -996,7 +997,7 @@ body.integrations-page {
             line-height: 1.356vw;
             text-align: center;
             letter-spacing: 0.014vw;
-            color: #B9BABE;
+            color: $placeholder-color;
 
             span {
                 font-family: 'Karla';
@@ -2250,7 +2251,7 @@ body.integrations-page {
                 font-size: 1.043vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.014vw;
-                color: #1B2438;
+                color: $primary-color;
                 margin-bottom: 1.773vw;
             }
 
@@ -2263,14 +2264,14 @@ body.integrations-page {
                     width: 26.486vw;
                     height: 2.555vw;
                     background: #FAFCFB;
-                    box-shadow: 0vw 0vw 0.104vw 0.104vw rgba(142, 161, 186, 0.25);
+                    box-shadow: 0vw 0vw 0.104vw 0.104vw $shadow-color;
                     border-radius: 0.417vw;
                     margin-bottom: 2.972vw;
                     border: none;
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                     text-align: left;
                     padding: 0.886vw 2.086vw;
                     display: inline-block;
@@ -2337,7 +2338,7 @@ body.integrations-page {
 
         .cell.name {
             width: 8.692vw;
-            color: #1B2438;
+            color: $primary-color;
         }
 
         .cell.desc {
@@ -2364,7 +2365,7 @@ body.integrations-page {
                 line-height: 1.251vw;
                 letter-spacing: 0.01vw;
                 text-align: center;
-                color: #B9BABE;
+                color: $placeholder-color;
                 margin-top: 1.043vw;
                 position: absolute;
                 top: 6.607vw;
@@ -2377,7 +2378,7 @@ body.integrations-page {
             display: flex;
             align-items: center;
             letter-spacing: 0.01vw;
-            color: #B9BABE;
+            color: $placeholder-color;
             white-space: nowrap;
             top: 0.270vw;
         }
@@ -2467,8 +2468,8 @@ body.integrations-page {
                 }
 
                 .skills-tags-list {
-                    border: 0.052vw solid #d7dee6;
-                    box-shadow: 0vw 0vw 0.156vw 0.052vw #d7dee6;
+                    border: 0.052vw solid $border-color;
+                    box-shadow: 0vw 0vw 0.156vw 0.052vw $border-color;
                     border-radius: 0.417vw;
                     display: flex;
                     flex-wrap: wrap;
@@ -2480,7 +2481,7 @@ body.integrations-page {
                         width: fit-content;
                         height: 1.512vw;
                         background: #FAFCFB;
-                        box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, 0.25);
+                        box-shadow: 0vw 0vw 0.052vw 0.052vw $shadow-color;
                         border-radius: 0.417vw;
                         font-size: 0.782vw;
                         line-height: 0.782vw;
@@ -2488,7 +2489,7 @@ body.integrations-page {
                         align-items: center;
                         justify-content: space-between;
                         letter-spacing: 0.007vw;
-                        color: #B9BABE;
+                        color: $placeholder-color;
                         padding-left: 0.73vw;
                         margin-right: 0.782vw;
                         margin-bottom: 0.782vw;
@@ -2580,7 +2581,7 @@ body.integrations-page {
                     font-size: 0.782vw;
                     line-height: 0.73vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                 }
 
                 img {
@@ -2609,7 +2610,7 @@ body.integrations-page {
                 transition: .2s;
 
                 .title {
-                    color: #1B2438;
+                    color: $primary-color;
                     text-align: left;
                     margin-bottom: 0.521vw;
                 }
@@ -2618,7 +2619,7 @@ body.integrations-page {
                     font-size: 0.782vw;
                     line-height: 1.251vw;
                     letter-spacing: 0.01vw;
-                    color: #B9BABE;
+                    color: $placeholder-color;
                     text-align: left;
                 }
             }
@@ -2663,7 +2664,7 @@ body.integrations-page {
         font-size: .782vw;
         line-height: 1.251vw;
         letter-spacing: .01vw;
-        color: #b9babe;
+        color: $placeholder-color;
     }
 }
 
@@ -2691,7 +2692,7 @@ body.integrations-page {
         font-size: .834vw;
         line-height: 1.668vw;
         letter-spacing: .011vw;
-        color: #1b2438;
+        color: $primary-color;
         text-align: center;
     }
 
@@ -2754,13 +2755,13 @@ body.integrations-page {
         width: fit-content;
         height: auto;
         padding: 1.721vw 2.346vw;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.043vw;
         font-size: 0.782vw;
         line-height: 1.251vw;
         letter-spacing: 0.01vw;
-        color: #B9BABE;
+        color: $placeholder-color;
         position: absolute;
     }
 
@@ -2799,7 +2800,7 @@ body.integrations-page {
             .acievements-bg {
                 width: 6.413vw;
                 height: 4.38vw;
-                background: #1B2438;
+                background: $primary-color;
                 border-radius: 0.886vw;
                 display: flex;
                 align-items: center;
@@ -2825,7 +2826,7 @@ body.integrations-page {
                 font-size: 0.782vw;
                 line-height: 1.303vw;
                 letter-spacing: 0.01vw;
-                color: #8D919B;
+                color: $secondary-color
             }
         }
 
@@ -2868,7 +2869,7 @@ body.integrations-page {
         font-size: 1.043vw;
         line-height: 2.503vw;
         letter-spacing: 0.014vw;
-        color: #1B2438;
+        color: $primary-color;
         margin-top: 1.929vw;
     }
 
@@ -2993,7 +2994,7 @@ body.integrations-page {
     .badge__info-popup {
         width: auto;
         height: auto;
-        background: #FFFFFF;
+        background: $background-color;
         box-shadow: 0vw 0.209vw 1.303vw -0.209vw #8EA1BA;
         border-radius: 1.043vw;
         padding: 1.668vw 2.086vw;
@@ -3010,7 +3011,7 @@ body.integrations-page {
             font-size: 0.834vw;
             line-height: 1.668vw;
             letter-spacing: 0.011vw;
-            color: #1B2438;
+            color: $primary-color;
             margin-bottom: 0.938vw;
         }
 
@@ -3018,7 +3019,7 @@ body.integrations-page {
             font-size: 0.782vw;
             line-height: 1.251vw;
             letter-spacing: 0.01vw;
-            color: #B9BABE;
+            color: $placeholder-color;
             margin-bottom: 0.678vw;
             width: 13.191vw;
 
@@ -3026,7 +3027,7 @@ body.integrations-page {
                 font-size: 0.834vw;
                 line-height: 1.668vw;
                 letter-spacing: 0.011vw;
-                color: #1B2438;
+                color: $primary-color;
             }
         }
     }
@@ -3093,7 +3094,7 @@ body.integrations-page {
         p {
             display: flex;
             align-items: center;
-            color: #B9BABE;
+            color: $placeholder-color;
         }
 
         p::after {
@@ -3126,7 +3127,7 @@ body.integrations-page {
 
         .ninjable__popup-header {
             height: 8.759vw;
-            background: #FFFFFF;
+            background: $background-color;
             border: 0.104vw solid #E4E8EE;
             box-shadow: 0vw 0vw 0.261vw #E5E5E6;
             border-radius: 1.356vw 1.356vw 0vw 0vw;
@@ -3141,17 +3142,17 @@ body.integrations-page {
                 font-size: 1.303vw;
                 line-height: 2.503vw;
                 letter-spacing: 0.021vw;
-                color: #1B2438;
+                color: $primary-color;
             }
 
             .subtitle {
                 font-size: 0.834vw;
                 line-height: 1.147vw;
                 letter-spacing: 0.014vw;
-                color: #B9BABE;
+                color: $placeholder-color;
 
                 span {
-                    color: #8D919B;
+                    color: $secondary-color
                 }
             }
 
@@ -3169,63 +3170,7 @@ body.integrations-page {
             padding-right: 1.043vw;
             margin-right: 0.521vw;
 
-            .image-container {
-                position: relative;
-                width: 100%;
-                height: 33.42vw;
-            }
 
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                // box-shadow: rgba(139,139,139,.7) -1.1vw -4vw 0vw 6.989vw inset;
-                z-index: 1;
-            }
-
-            .crop-area {
-                position: absolute;
-                top: 3.033vw;
-                left: 5.996vw;
-                width: 65.3%;
-                height: 58%;
-                box-sizing: border-box;
-                z-index: 2;
-            }
-
-            .resize-handle {
-                position: absolute;
-                width: 0.521vw;
-                height: 0.521vw;
-                background: #ffffff;
-                border-radius: 0.104vw;
-            }
-
-            .top-left {
-                top: -0.261vw;
-                left: -0.261vw;
-                cursor: nwse-resize;
-            }
-
-            .top-right {
-                top: -0.261vw;
-                right: -0.261vw;
-                cursor: nesw-resize;
-            }
-
-            .bottom-left {
-                bottom: -0.261vw;
-                left: -0.261vw;
-                cursor: nesw-resize;
-            }
-
-            .bottom-right {
-                bottom: -0.261vw;
-                right: -0.261vw;
-                cursor: nwse-resize;
-            }
 
             .bottom {
                 display: flex;
@@ -3243,7 +3188,7 @@ body.integrations-page {
                     font-size: 0.782vw;
                     line-height: 4.015vw;
                     letter-spacing: 0.007vw;
-                    color: #8D919B;
+                    color: $secondary-color
                 }
             }
         }
@@ -3263,6 +3208,7 @@ body.integrations-page {
     .company-section {
         margin-bottom: 2.692vw;
     }
+
     .company-section:nth-child(3) {
         margin-bottom: 0;
     }
@@ -3275,7 +3221,7 @@ body.integrations-page {
         .task__list-item {
             width: 26.694vw;
             height: 19.447vw;
-            background: #FFFFFF;
+            background: $background-color;
             border: 0.104vw solid #E4E8EE;
             box-shadow: 0vw 0vw 0.261vw #E5E5E6;
             border-radius: 1.095vw;
@@ -3295,12 +3241,12 @@ body.integrations-page {
 
             .info {
                 h4 {
-                    font-family: 'Rubik';
+                    font-family: $font-family;
                     font-weight: 400;
                     font-size: 1.043vw;
                     line-height: 2.086vw;
                     letter-spacing: 0.014vw;
-                    color: #1B2438;
+                    color: $primary-color;
                     margin-bottom: 0.365vw;
                 }
 
@@ -3316,10 +3262,12 @@ body.integrations-page {
                 width: 7.56vw;
                 height: 2.086vw;
             }
+
             .btn.connected {
                 background: #EAF6EF;
                 color: #B1CCBC;
             }
+
             .btn.connected::before {
                 content: '';
                 background: url(../img/connected.svg) no-repeat center top / cover;
@@ -3391,7 +3339,5 @@ body.integrations-page {
                 }
             }
         }
-
-
     }
 }
