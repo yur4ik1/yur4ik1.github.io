@@ -1346,7 +1346,8 @@ body {
 
     .carriers__items {
         float: right;
-        margin-top: 5.304vw;
+        position: relative;
+        top: -36.533vw;
     }
 }
 
@@ -2158,6 +2159,7 @@ body {
         height: auto;
         padding-top: 19.531vw;
         padding-bottom: 10vw;
+        background: none;
     }
 
     .info-section.forwarders .carriers__right-text {
@@ -2175,11 +2177,16 @@ body {
         padding: 0 6.778vw;
         backdrop-filter: blur(17.391vw);
         padding: 4.521vw;
-        height: 125.958vw;
+        height: auto;
+
+        .carriers__desc {
+            width: 100%!important;
+            margin-top: 8vw!important;
+        }
     }
 
     .info-section.forwarders .carriers__items {
-        float: none;
+        top: 4.467vw;
     }
 
     .info-section.forwarders .container {
@@ -2240,5 +2247,11 @@ body {
         iframe {
             height: 43.625vw;
         }
+    }
+    .footer__right .footer__right-menu li {
+        margin-right: 8.604vw;
+    }
+    .footer__right .footer__right-menu li a {
+        font-size: 3.042vw;
     }
 }
