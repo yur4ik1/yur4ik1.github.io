@@ -53,7 +53,10 @@ body.rewards-page {
     background: url(../img/content-rewards.png) no-repeat center top / cover;
     height: 132.199vw;
 }
-
+body.integrations-page {
+    background: url(../img/content-integrations.png) no-repeat center top / cover;
+    height: 127.199vw;
+}
 
 .header {
     z-index: 99999;
@@ -1888,6 +1891,8 @@ body.rewards-page {
             z-index: 99999999;
             top: 1.4vw;
         }
+
+
     }
 
     .content__section {
@@ -1927,6 +1932,15 @@ body.rewards-page {
             }
         }
     }
+
+    .skills__alert-popup {
+        top: 19.5vw;
+    }
+
+    .skills__archive-popup {
+        top: 19.5vw;
+    }
+
 }
 
 .positions__popup {
@@ -3107,7 +3121,7 @@ body.rewards-page {
 .resize__img-popup {
     .ninjable__popup-inner {
         width: 43.535vw;
-        height: 40.861vw;
+        height: 41.561vw;
         padding: 0;
 
         .ninjable__popup-header {
@@ -3224,6 +3238,7 @@ body.rewards-page {
                     height: 2.503vw;
                     margin-right: 1.564vw;
                 }
+
                 a {
                     font-size: 0.782vw;
                     line-height: 4.015vw;
@@ -3232,5 +3247,151 @@ body.rewards-page {
                 }
             }
         }
+    }
+}
+
+/* integrations */
+
+.content.integrations {
+    h3 {
+        font-size: 1.043vw;
+        line-height: 2.503vw;
+        letter-spacing: 0.014vw;
+        margin-bottom: 1.408vw;
+    }
+
+    .company-section {
+        margin-bottom: 2.692vw;
+    }
+    .company-section:nth-child(3) {
+        margin-bottom: 0;
+    }
+
+    .task__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .task__list-item {
+            width: 26.694vw;
+            height: 19.447vw;
+            background: #FFFFFF;
+            border: 0.104vw solid #E4E8EE;
+            box-shadow: 0vw 0vw 0.261vw #E5E5E6;
+            border-radius: 1.095vw;
+            padding-top: 1.929vw;
+            padding-bottom: 2.763vw;
+            padding-left: 2.503vw;
+            padding-right: 2.503vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2.086vw;
+
+            .logo {
+                height: 4.171vw;
+            }
+
+            .info {
+                h4 {
+                    font-family: 'Rubik';
+                    font-weight: 400;
+                    font-size: 1.043vw;
+                    line-height: 2.086vw;
+                    letter-spacing: 0.014vw;
+                    color: #1B2438;
+                    margin-bottom: 0.365vw;
+                }
+
+                p {
+                    font-size: 0.782vw;
+                    line-height: 1.251vw;
+                    letter-spacing: 0.01vw;
+                    color: #BBBBBB;
+                }
+            }
+
+            .btn {
+                width: 7.56vw;
+                height: 2.086vw;
+            }
+            .btn.connected {
+                background: #EAF6EF;
+                color: #B1CCBC;
+            }
+            .btn.connected::before {
+                content: '';
+                background: url(../img/connected.svg) no-repeat center top / cover;
+                width: 0.73vw;
+                height: 0.73vw;
+                margin-right: 0.365vw;
+            }
+        }
+
+        .task__list-item:nth-child(1) {
+            .logo {
+                img {
+                    width: 5.318vw;
+                    height: 3.545vw;
+                }
+            }
+        }
+
+        .task__list-item:nth-child(2) {
+            .logo {
+                img {
+                    width: 3.806vw;
+                    height: 3.754vw;
+                }
+            }
+        }
+
+        .task__list-item:nth-child(3) {
+            .logo {
+                img {
+                    width: 11.314vw;
+                    height: 1.825vw;
+                }
+            }
+        }
+
+        .task__list-item:nth-child(4) {
+            .logo {
+                img {
+                    width: 10.01vw;
+                    height: 2.294vw;
+                }
+            }
+        }
+
+        .task__list-item:nth-child(5) {
+            .logo {
+                img {
+                    width: 6.934vw;
+                    height: 2.294vw;
+                }
+            }
+        }
+
+        .task__list-item:nth-child(6) {
+            .logo {
+                img {
+                    width: 6.934vw;
+                    height: 2.294vw;
+                }
+            }
+        }
+
+        .task__list-item.slack {
+            .logo {
+                img {
+                    width: 8.133vw;
+                    height: 2.294vw;
+                }
+            }
+        }
+
+
     }
 }
