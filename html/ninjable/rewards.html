@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./js/dist/jcrop.css" />
+    <link rel="stylesheet" href="./css/jcrop.css" />
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -519,14 +519,16 @@
 
                     <div class="bottom">
                         <button class="btn">Add</button>
-                        <a href="#">Сhoose another photo</a>
+                        <input type="file" id="file">
+                        <label for="file">Сhoose another photo</label>
+                       
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="./js/dist/jcrop.js"></script>
+    <script src="./js/jcrop.js"></script>
 
     <script>
         var jcp;

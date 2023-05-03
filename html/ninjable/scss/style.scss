@@ -1856,6 +1856,12 @@ body.integrations-page {
     }
 }
 
+.popup__users-content {
+    padding: 0.521vw;
+    padding-right: 0;
+    padding-top: 0;
+}
+
 /* Positions page */
 
 .content.positions {
@@ -3182,12 +3188,15 @@ body.integrations-page {
                     height: 2.503vw;
                     margin-right: 1.564vw;
                 }
-
-                a {
+                input {
+                    display: none;
+                }
+                label {
                     font-size: 0.782vw;
                     line-height: 4.015vw;
                     letter-spacing: 0.007vw;
-                    color: $secondary-color
+                    color: $secondary-color;
+                    cursor: pointer;
                 }
             }
         }

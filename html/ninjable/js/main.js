@@ -651,10 +651,6 @@ if (fileInput && popup) {
 };
 
 
-/* resize images */
-
-
-
 /* filter select */
 
 let select = document.querySelector(".filter-select");
