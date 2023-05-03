@@ -96,6 +96,8 @@ videoBack.addEventListener('click', () => {
 
 // request popup 
 
+/*
+
 let requestPopup = document.querySelector('.request__popup');
 let requestBtns = document.querySelectorAll('.contact__download-item');
 let requestPopupClose = requestPopup.querySelector('.requestclose');
@@ -110,7 +112,7 @@ requestPopupClose.addEventListener('click', () => {
   requestPopup.classList.remove('active');
 });
 
-
+*/
 
 
 // Contact forms

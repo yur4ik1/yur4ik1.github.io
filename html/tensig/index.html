@@ -644,14 +644,17 @@
             <input type="tel" name="phone" placeholder="Phone number" required>
             <textarea name="message" id="message" cols="30" rows="10"
               placeholder="briefly describe your inquiry"></textarea>
-            <button type="submit">Make a request</button>
+            <div class="contact__form-btns">
+              <button type="submit">Request a demo</button>
+              <button type="submit">Request information</button>
+            </div>
           </form>
           <div class="g-recaptcha" data-sitekey="6Lfgsl8lAAAAAPe6HoFOYp80o39f7_LNBY6HN1Oq"></div>
 
           <div class="contact__download">
             <a class="contact__download-item wow fadeInUp" data-wow-delay="0.2s" href="#">
               <p>
-                Request <br> brochures
+                Download <br> brochures
               </p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -661,7 +664,7 @@
             </a>
             <a class="contact__download-item wow fadeInUp" data-wow-delay="0.2s" href="#">
               <p>
-                Request <br> videos
+                Download <br> videos
               </p>
               <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -682,30 +685,6 @@
               <img src="./img/footer-logo.svg" alt="footer logo">
             </a>
 
-            <div class="footer__form">
-              <p class="desc">State of the art compliance solutions</p>
-              <!-- <h4>Start using Tensiq today</h4>
-              <form class="form" action="#" id="start">
-                <input type="text" name="email" placeholder="Your Email" required>
-                <button type="submit">
-                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_423_280)">
-                      <path
-                        d="M25.3125 4.41481C25.5351 4.35726 25.7692 4.36219 25.9891 4.42907C26.2091 4.49595 26.4063 4.62218 26.5591 4.79389C26.712 4.9656 26.8145 5.17614 26.8555 5.40234C26.8964 5.62855 26.8742 5.86167 26.7912 6.07606L19.2912 25.4511C19.2171 25.643 19.0967 25.8136 18.9407 25.9478C18.7848 26.082 18.5981 26.1756 18.3973 26.2204C18.1965 26.2651 17.9877 26.2596 17.7896 26.2044C17.5914 26.1491 17.4099 26.0458 17.2612 25.9036L13.0337 21.8598L11.53 23.3623C10.735 24.1573 9.375 23.5948 9.375 22.4698V18.3598L2.88625 12.1536C2.72525 11.9995 2.60835 11.8053 2.54765 11.5909C2.48695 11.3765 2.48465 11.1498 2.541 10.9342C2.59734 10.7187 2.71028 10.5221 2.86812 10.3648C3.02597 10.2076 3.22297 10.0954 3.43875 10.0398L25.3125 4.41481ZM22.67 9.79606L12.6725 18.0548L17.635 22.8023L22.67 9.79606ZM20.6975 8.18356L6.23875 11.8998L10.8537 16.3123L20.6975 8.18106V8.18356Z"
-                        fill="white" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_423_280">
-                        <rect width="30" height="30" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-              </form>-->
-            </div>
-          </div>
-          <div class="footer__right">
-
             <ul class="footer__right-menu">
               <li>
                 <a href="#">About</a>
@@ -715,6 +694,8 @@
               </li>
             </ul>
 
+          </div>
+          <div class="footer__right">
             <div class="footer__right-info">
               <div class="item">
                 Tensig BV <br>

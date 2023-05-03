@@ -834,6 +834,10 @@ body {
                 color: #434343;
             }
 
+            .contact__form-btns {
+                display: flex;
+            }
+
             button {
                 font-weight: 700;
                 font-size: 0.938vw;
@@ -843,10 +847,13 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 7.813vw;
                 height: 2.083vw;
-                width: 9.375vw;
+                width: auto;
                 height: 2.083vw;
+
+                padding-left: 1.043vw;
+                padding-right: 1.043vw;
+                margin-right: 0.821vw;
 
                 background: radial-gradient(100% 372.91% at 0% 100%, #8322FE 0%, #451DB7 100%)
                     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -908,6 +915,32 @@ body {
 
     &__left {
         width: 32.167vw;
+
+
+        .footer__right-menu {
+            display: flex;
+            margin-top: 3.781vw;
+            margin-bottom: 5.467vw;
+        }
+
+        .footer__right-menu li {
+            margin-right: 2.604vw;
+        }
+
+        .footer__right-menu li::before {
+            display: none;
+        }
+
+        .footer__right-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .footer__right-menu li a {
+            font-size: 1.042vw;
+            line-height: 150%;
+            color: #FFFFFF;
+            opacity: 0.5;
+        }
 
         .footer__logo img {
             width: 8.125vw;
@@ -976,35 +1009,11 @@ body {
     &__right {
         width: 35.573vw;
 
-        .footer__right-menu {
-            display: flex;
-            margin-top: 3.781vw;
-            margin-bottom: 5.467vw;
-        }
-
-        .footer__right-menu li {
-            margin-right: 2.604vw;
-        }
-
-        .footer__right-menu li::before {
-            display: none;
-        }
-
-        .footer__right-menu li:last-child {
-            margin-right: 0;
-        }
-
-        .footer__right-menu li a {
-            font-size: 1.042vw;
-            line-height: 150%;
-            color: #FFFFFF;
-            opacity: 0.5;
-        }
-
         .footer__right-info {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            margin-top: 6.65vw;
 
             .item {
                 font-size: 0.833vw;
@@ -1232,7 +1241,7 @@ body {
     }
 
     .carriers__btn {
-
+        margin-top: 2.564vw;
         svg {
             margin-left: 0;
             margin-right: 0.321vw;
@@ -1258,6 +1267,10 @@ body {
         right: 0;
     }
 
+}
+
+.forwarders-page .contact.contact-page {
+    margin-top: 36.381vw;
 }
 
 .contact.contact-page {
@@ -1345,9 +1358,7 @@ body {
     }
 
     .carriers__items {
-        float: right;
-        position: relative;
-        top: -36.533vw;
+       // float: right;
     }
 }
 
@@ -1445,9 +1456,11 @@ body {
         position: relative;
         -webkit-animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
         animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
+
         .contact__form {
- display: flex;
+            display: flex;
         }
+
         .contact__form input {
             width: 28.125vw;
             height: 2.083vw;
@@ -1461,6 +1474,7 @@ body {
             margin-bottom: 1.042vw;
             padding-bottom: 0.417vw;
         }
+
         .contact__form button {
             font-weight: 700;
             font-size: .938vw;
@@ -1474,8 +1488,8 @@ body {
             height: 2.083vw;
             width: 9.375vw;
             height: 2.083vw;
-            background: -o-radial-gradient(0% 100%, 100% 372.91%, #8322FE 0%, #451DB7 100%),-o-radial-gradient(0% 100%, 100% 372.91%, #D822FE 0%, #9933EF 100%);
-            background: radial-gradient(100% 372.91% at 0% 100%, #8322FE 0%, #451DB7 100%),radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
+            background: -o-radial-gradient(0% 100%, 100% 372.91%, #8322FE 0%, #451DB7 100%), -o-radial-gradient(0% 100%, 100% 372.91%, #D822FE 0%, #9933EF 100%);
+            background: radial-gradient(100% 372.91% at 0% 100%, #8322FE 0%, #451DB7 100%), radial-gradient(100% 372.91% at 0% 100%, #D822FE 0%, #9933EF 100%);
             border-radius: 1.563vw;
             border-radius: 1.563vw;
             border: none;
@@ -2304,11 +2318,11 @@ body {
         }
     }
 
-    .footer__right .footer__right-menu li {
+    .footer__left .footer__right-menu li {
         margin-right: 8.604vw;
     }
 
-    .footer__right .footer__right-menu li a {
+    .footer__left .footer__right-menu li a {
         font-size: 3.042vw;
     }
 }
