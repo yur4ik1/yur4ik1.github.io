@@ -673,24 +673,42 @@ if (selectSelected) {
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");
+
 for (let i = 0; i < selectElements.length; i++) {
   let selectElement = selectElements[i];
   let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
   let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
   let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
+  
   selectSelectedElement.addEventListener("click", function () {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
+    
+    // Оновлюємо стан `custom-select` на основі класів `select-selected`
+    if (this.classList.contains("select-arrow-active")) {
+      selectElement.classList.add("active");
+    } else {
+      selectElement.classList.remove("active");
+    }
   });
+  
   for (let j = 0; j < selectOptionElements.length; j++) {
     selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
       selectSelectedElement.classList.remove("select-arrow-active");
       selectItemsElement.classList.add("select-hide");
+      
+      // Оновлюємо стан `custom-select` на основі класів `select-selected`
+      if (selectSelectedElement.classList.contains("select-arrow-active")) {
+        selectElement.classList.add("active");
+      } else {
+        selectElement.classList.remove("active");
+      }
     });
   }
 }
+
 
 
 /* custom select new */

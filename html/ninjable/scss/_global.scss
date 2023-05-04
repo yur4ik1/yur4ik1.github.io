@@ -334,6 +334,25 @@ textarea:focus {
   box-shadow: 0vw 0vw 0.156vw 0.052vw #D7DEE6;
 }
 
+.custom-select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2.7vw;
+  height: 0.052vw;
+  background: #e4e8ee;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: 1.4vw;
+  left: 84%;
+  display: block;
+  z-index: 99999999;
+}
+
+.custom-select.active::after {
+  display: none;
+}
 
 
 .select-selected:after {
@@ -476,6 +495,7 @@ textarea:focus {
   position: absolute;
   width: 100%;
 }
+
 
 .new__custom-select__trigger {
   position: relative;

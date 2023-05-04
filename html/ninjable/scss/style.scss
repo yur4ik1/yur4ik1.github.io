@@ -1776,26 +1776,11 @@ body.integrations-page {
 
                             .select-selected {
                                 width: 100%;
-
-                                .line {
-                                    position: absolute;
-                                    width: 2.7vw;
-                                    height: 0.052vw;
-                                    background: #e4e8ee;
-                                    -webkit-transform: rotate(-90deg);
-                                    -ms-transform: rotate(-90deg);
-                                    transform: rotate(-90deg);
-                                    top: 1.4vw;
-                                    left: 18.5vw;
-                                    display: block;
-                                }
                             }
+                        }
 
-                            .select-selected.select-arrow-active {
-                                .line {
-                                    display: none;
-                                }
-                            }
+                        .custom-select::after {
+                            left: 81.8%;
                         }
 
                         .custom-select:hover {
@@ -2441,11 +2426,20 @@ body.integrations-page {
                 }
             }
 
+            .custom-select::after {
+                left: 92.5%;
+            }
+
             .new__custom-select-wrapper {
                 width: 100%;
 
                 .line {
-                    left: 51.6vw;
+                    left: 51vw;
+                }
+
+                .select-open-btn .arrow {
+                    top: 0.104vw;
+                    right: 0.052vw;
                 }
             }
 
@@ -2889,7 +2883,7 @@ body.integrations-page {
             margin-bottom: 2.138vw;
 
             .line {
-                left: 51.5vw;
+                left: 51vw;
             }
 
             .new__custom-option {
@@ -2926,6 +2920,10 @@ body.integrations-page {
                 flex-wrap: wrap;
                 padding-bottom: 1.721vw;
             }
+        }
+
+        .custom-select::after {
+            left: 92.6%;
         }
     }
 
@@ -3091,6 +3089,10 @@ body.integrations-page {
         .select-option {
             width: 100%;
         }
+    }
+
+    .custom-select::after {
+        left: 92.5%;
     }
 
     .upload__icon-input {
