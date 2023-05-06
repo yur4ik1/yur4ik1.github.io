@@ -450,7 +450,61 @@ body {
 /* My profile */
 
 .profile {
+    padding-top: 10.428vw;
+
     .container {
-        max-width: 81.387vw;
+        max-width: 78vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 8.29vw;
+    }
+
+    &__left-item {
+        width: 8.29vw;
+        height: 8.29vw;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 0.991vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.095vw 1.981vw;
+        margin-bottom: 1.981vw;
+
+        img {
+            width: 4.275vw;
+            height: 4.588vw;
+        }
+
+        p {
+            font-size: 1.043vw;
+            line-height: 1.147vw;
+            letter-spacing: 0.013vw;
+            color: #8093B2;
+            margin-top: 0.574vw;
+        }
+    }
+
+    &__left-item.deactivate::after {
+        content: '';
+        background: url(../img/lock-icon.svg) no-repeat center top / cover;
+        width: 2.138vw;
+        height: 2.45vw;
+        margin-top: 1.643vw;
+    }
+
+    &__centre {
+        width: 48.436vw;
+        height: 39.26vw;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.356vw;
+    }
+
+    &__right {
+        width: 8.29vw;
     }
 }
