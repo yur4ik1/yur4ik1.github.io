@@ -90,23 +90,6 @@ body {
             justify-content: space-between;
             margin-bottom: 2.086vw;
 
-            .field {
-                position: relative;
-            }
-
-            p {
-                font-size: 0.782vw;
-                line-height: 1.147vw;
-                letter-spacing: 0.01vw;
-                color: #FFFFFF;
-                margin-bottom: 0.782vw;
-                color: #869DC8;
-
-                span {
-                    color: #fff;
-                }
-            }
-
             input {
                 width: 17.623vw;
             }
@@ -167,13 +150,7 @@ body {
             }
 
             .term-field input[type=checkbox]:checked+label::before {
-                content: '';
                 background: url(../img/check-true.svg) no-repeat center top / cover;
-                width: 0.834vw;
-                height: 0.834vw;
-                display: block;
-                margin-right: 1.408vw;
-                cursor: pointer;
             }
         }
 
@@ -192,6 +169,156 @@ body {
                 line-height: 1.043vw;
                 letter-spacing: 0.016vw;
                 color: #FFFFFF;
+            }
+        }
+    }
+}
+
+/* login page */
+
+.login {
+    .container {
+        max-width: 61.835vw;
+        margin: 0 auto;
+    }
+
+    &__content {
+        width: 61.835vw;
+        height: 39.26vw;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.356vw;
+        margin-top: 10.375vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content-left {
+        padding-top: 11.94vw;
+        padding-left: 9.75vw;
+
+        h1 {
+            font-size: 1.043vw;
+            line-height: 2.503vw;
+            letter-spacing: 0.014vw;
+            color: #869DC8;
+        }
+
+        p {
+            font-size: 0.782vw;
+            line-height: 2.086vw;
+            letter-spacing: 0.01vw;
+            color: #FFFFFF;
+        }
+
+        a {
+            color: #869DC8;
+        }
+    }
+
+    &__content-right {
+        padding-top: 8.446vw;
+        padding-right: 9.593vw;
+    }
+
+    &__content-form {
+        width: 17.623vw;
+
+        .field {
+            margin-bottom: 1.721vw;
+        }
+
+        input {
+            width: 17.623vw;
+        }
+
+        .password-icon {
+            display: block;
+            cursor: pointer;
+        }
+
+        .password-icon::after {
+            content: '';
+            background: url(../img/password-icon.svg) no-repeat center top / cover;
+            height: 0.73vw;
+            width: 0.991vw;
+            display: block;
+            position: absolute;
+            top: 2.852vw;
+            right: 1vw;
+        }
+
+        .password-icon.active::after {
+            background: url(../img/password-icon-open.svg) no-repeat center top / cover;
+        }
+
+
+        .term {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.768vw;
+
+            input[type=checkbox] {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            label {
+                font-size: 0.782vw;
+                line-height: 2.086vw;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: #869DC8;
+                    margin-left: 0.261vw;
+                    margin-right: 0.261vw;
+                }
+            }
+
+            .term-field input[type=checkbox]+label:before {
+                content: '';
+                background: url(../img/check.svg) no-repeat center top / cover;
+                width: 0.834vw;
+                height: 0.834vw;
+                display: block;
+                margin-right: 0.574vw;
+                cursor: pointer;
+            }
+
+            .term-field input[type=checkbox]:checked+label::before {
+                background: url(../img/check-true.svg) no-repeat center top / cover;
+            }
+
+            .forgot {
+                font-size: 0.782vw;
+                line-height: 1.147vw;
+                letter-spacing: 0.01vw;
+                color: #869DC8;
+            }
+        }
+
+        .form-bottom {
+            display: flex;
+            justify-content: center;
+            margin-top: 3.441vw;
+
+            .btn {
+                font-size: 0.834vw;
+                line-height: 1.043vw;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.016vw;
+                color: #FFFFFF;
+                width: 7.351vw;
+                height: 2.503vw;
+                background: #212A41;
+                box-shadow: inset 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.469vw;
             }
         }
     }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NINJABLE - Login In</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="NINJABLE - Login In">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo" href="#">
+        <img src="./img/logo.svg" alt="logo">
+      </a>
+    </header>
+
+    <section class="login">
+      <div class="container">
+        <div class="login__content">
+          <div class="login__content-left">
+            <h1>Sign In</h1>
+            <p>Don’t have an account? <a href="index.html">Register</a></p>
+          </div>
+          <div class="login__content-right">
+            <form class="login__content-form" action="#">
+              <div class="field">
+                <p><span>*</span> User Name</p>
+                <input type="email" placeholder="Email">
+              </div>
+              
+              <div class="field">
+                <p><span>*</span> Password</p>
+                <input type="password" id="password" placeholder="Password">
+                <span class="password-icon"></span>
+              </div>
+
+              <div class="term">
+                <div class="term-field">
+                  <input type="checkbox" id="emails">
+                  <label for="emails">Remember Me</label>
+                </div>
+                <a class="forgot" href="#">Forgot Password</a>
+              </div>
+
+              <div class="form-bottom">
+                <button class="btn login-btn" type="submit">Sign In</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
