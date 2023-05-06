@@ -103,15 +103,25 @@ button {
   position: relative;
 
   p {
-      font-size: 0.782vw;
-      line-height: 1.147vw;
-      letter-spacing: 0.01vw;
-      color: #FFFFFF;
-      margin-bottom: 0.782vw;
-      color: #869DC8;
+    font-size: 0.782vw;
+    line-height: 1.147vw;
+    letter-spacing: 0.01vw;
+    color: #FFFFFF;
+    margin-bottom: 0.782vw;
+    color: #869DC8;
 
-      span {
-          color: #fff;
-      }
+    span {
+      color: #fff;
+    }
   }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #212A41;
+  box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+  border-radius: 0.469vw;
 }

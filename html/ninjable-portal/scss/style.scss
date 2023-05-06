@@ -13,6 +13,10 @@ body {
     height: 64vw;
 }
 
+.container {
+    margin: 0 auto;
+}
+
 .header {
     width: 100%;
     background: linear-gradient(0deg, #1D2438, #1D2438), #37D4E4;
@@ -22,6 +26,7 @@ body {
     height: 6.934vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding-left: 11.262vw;
     padding-right: 11.262vw;
 
@@ -31,12 +36,116 @@ body {
             height: 3.389vw;
         }
     }
+
+    &__admin-btn {
+        width: 6.778vw;
+        height: 1.981vw;
+        font-size: 0.938vw;
+        line-height: 1.043vw;
+        letter-spacing: 0.016vw;
+        color: #FFFFFF;
+        margin-right: 3.754vw;
+        transition: 0.3s;
+    }
+
+    &__admin-btn:hover {
+        box-shadow: inset 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+
+        .resources {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 0.938vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.013vw;
+                color: #FFFFFF;
+            }
+
+            .crystal::before {
+                content: '';
+                background: url(../img/crystal-icon.svg) no-repeat center top / cover;
+                width: 1.408vw;
+                height: 1.408vw;
+                margin-right: 0.834vw;
+            }
+
+            .coins {
+                margin-left: 1.095vw;
+            }
+
+            .coins::before {
+                content: '';
+                background: url(../img/coins-icon.svg) no-repeat center top / cover;
+                width: 1.043vw;
+                height: 1.564vw;
+                margin-right: 0.834vw;
+            }
+        }
+
+        .notification {
+            width: 2.995vw;
+            height: 2.995vw;
+            border: 0.104vw solid #869DC8;
+            box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
+            border-radius: 4.484vw;
+            margin-left: 2.398vw;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .notification::after {
+            content: '';
+            background: url(../img/notification-icon.svg) no-repeat center top / cover;
+            width: 1.176vw;
+            height: 1.447vw;
+            position: absolute;
+            top: 0.721vw;
+            left: 0.851vw;
+        }
+
+        .avatar {
+            width: 4.648vw;
+            height: 4.648vw;
+            border: 0.104vw solid #869DC8;
+            box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
+            border-radius: 4.484vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.095vw;
+            cursor: pointer;
+            position: relative;
+            margin-right: 2.503vw;
+
+            img {
+                width: 3.025vw;
+                height: 2.827vw;
+            }
+        }
+
+        .avatar::after {
+            content: '';
+            background: url(../img/avatar-arrow.svg) no-repeat center top / cover;
+            width: 0.938vw;
+            height: 0.574vw;
+            margin-left: 8.043vw;
+            position: absolute;
+        }
+    }
+
 }
 
 .register {
     .container {
         max-width: 77.685vw;
-        margin: 0 auto;
     }
 
     &__content {
@@ -84,6 +193,10 @@ body {
 
     &__content-form {
         width: 37.539vw;
+
+        .field {
+            display: grid;
+        }
 
         .row {
             display: flex;
@@ -179,7 +292,6 @@ body {
 .login {
     .container {
         max-width: 61.835vw;
-        margin: 0 auto;
         position: relative;
     }
 
@@ -236,6 +348,7 @@ body {
 
         .field {
             margin-bottom: 1.721vw;
+            display: grid;
         }
 
         input {
@@ -331,5 +444,13 @@ body {
                 border-radius: 0.469vw;
             }
         }
+    }
+}
+
+/* My profile */
+
+.profile {
+    .container {
+        max-width: 81.387vw;
     }
 }
