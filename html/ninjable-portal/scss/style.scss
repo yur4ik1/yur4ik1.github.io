@@ -546,14 +546,17 @@ body {
         background: rgba(29, 36, 56, 0.75);
         box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
         border-radius: 1.356vw;
-        padding: 1.981vw 2.972vw;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    &__centre-header {
+    &__centre-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 1.981vw 2.972vw;
 
         .title {
             h2 {
@@ -590,7 +593,18 @@ body {
     }
 
     &__centre-content {
-        
+        .character {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 17.518vw;
+                height: 25.495vw;
+                position: absolute;
+                top: 3vw;
+            }
+        }
+
         .leaves {
             background: url(../img/profile-leaves.webp) no-repeat center top / cover;
             width: 48.54vw;
@@ -598,6 +612,84 @@ body {
             position: absolute;
             top: 12.521vw;
             left: 0;
+        }
+    }
+
+    &__centre-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.043vw;
+        line-height: 1.303vw;
+        letter-spacing: 0.014vw;
+        color: #FFFFFF;
+        height: 9.228vw;
+        width: 100%;
+        background: #1C2439;
+        box-shadow: 0vw -0.521vw 0.626vw -0.209vw rgba(6, 8, 13, 0.3);
+        border-radius: 0vw 0vw 1.356vw 1.356vw;
+        padding: 1.981vw 2.972vw;
+
+        .masks {
+            &__list {
+                display: flex;
+                margin-top: 0.365vw;
+            }
+
+            &__list-item {
+                width: 3.806vw;
+                height: 3.754vw;
+                background: #212A41;
+                box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.469vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.678vw 0.574vw;
+                margin-right: 0.938vw;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__list-item.deactivate {
+                background: #212A41;
+                box-shadow: inset 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .map {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .map-btn {
+                width: 3.806vw;
+                height: 3.754vw;
+                background: #212A41;
+                box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.469vw;
+                margin-top: 0.886vw;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .map-btn::after {
+                content: '';
+                background: url(../img/map-icon.svg) no-repeat center top / cover;
+                width: 2.607vw;
+                height: 2.503vw;
+                position: absolute;
+                top: 0.552vw;
+                left: 0.552vw;
+            }
         }
     }
 }
