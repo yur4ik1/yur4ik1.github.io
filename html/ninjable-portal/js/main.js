@@ -1,4 +1,15 @@
 
+/* header avatar */
+
+const avatarBtn = document.querySelector('.avatar');
+const menuPopup = document.querySelector('.header__popup-menu');
+
+if (avatarBtn && menuPopup) {
+  avatarBtn.addEventListener('click', () => {
+    menuPopup.classList.toggle('active');
+  });
+}
+
 /* passwordInput */
 
 const passwordInput = document.getElementById("password");
@@ -22,10 +33,11 @@ const profilePopup = document.querySelector('.profile__info-popup');
 const profilePopupOpen = document.querySelector('.info-btn');
 const profilePopupClose = document.querySelector('.close-popup');
 
-profilePopupOpen.addEventListener('click', () => {
-  profilePopup.classList.add('active');
-});
-
-profilePopupClose.addEventListener('click', () => {
-  profilePopup.classList.remove('active');
-});
+if (profilePopup && profilePopupOpen) {
+  profilePopupOpen.addEventListener('click', () => {
+    profilePopup.classList.add('active');
+  });
+  profilePopupClose.addEventListener('click', () => {
+    profilePopup.classList.remove('active');
+  });
+}

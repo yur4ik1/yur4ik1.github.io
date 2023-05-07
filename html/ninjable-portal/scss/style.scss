@@ -156,7 +156,41 @@ body {
         transition: 0.2s;
         visibility: hidden;
         opacity: 0;
+        padding: 1.564vw 3.337vw;
+        padding-right: 4.692vw;
+
+        .profile__menu {
+            .profile__menu-item {
+                display: grid;
+
+                a {
+                    font-size: 0.834vw;
+                    line-height: 1.981vw;
+                    letter-spacing: 0.011vw;
+                    color: #FFFFFF;
+                }
+            }
+
+            .profile__menu-item.active>a {
+                color: #869DC8;
+            }
+
+            .profile__menu-item:last-child {
+                margin-top: 25%;
+            }
+        }
     }
+
+    &__popup-menu::before {
+        content: "";
+        background: url(../img/profile-line.svg) no-repeat center top/cover;
+        width: 16.163vw;
+        height: 0.052vw;
+        position: absolute;
+        top: 14.5vw;
+        left: 0;
+    }
+
     &__popup-menu.active {
         visibility: visible;
         opacity: 1;
