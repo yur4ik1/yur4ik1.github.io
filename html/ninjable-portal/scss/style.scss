@@ -19,9 +19,9 @@ body {
 
 .header {
     width: 100%;
-    background: linear-gradient(0deg, #1D2438, #1D2438), #37D4E4;
-    mix-blend-mode: normal;
-    opacity: 0.8;
+    background-image: url('../img/header-background.png');
+    background-color: rgb(104 117 145 / 80%);
+    background-blend-mode: multiply;
     box-shadow: 0vw 0vw 2.737vw rgba(6, 8, 13, 0.75);
     height: 6.934vw;
     display: flex;
@@ -29,6 +29,8 @@ body {
     justify-content: space-between;
     padding-left: 11.262vw;
     padding-right: 11.262vw;
+    position: relative;
+    z-index: 9999;
 
     &__logo {
         img {
@@ -141,6 +143,24 @@ body {
         }
     }
 
+    &__popup-menu {
+        width: 16.163vw;
+        height: 19.447vw;
+        right: 11vw;
+        top: 8vw;
+        background: #1B2439;
+        box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.095vw;
+        position: absolute;
+        z-index: 999;
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &__popup-menu.active {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .register {
@@ -788,6 +808,7 @@ body {
                 display: block;
                 margin-left: 3.285vw;
                 cursor: pointer;
+                transition: 0.3s;
             }
 
             .close-popup::after {
@@ -799,6 +820,11 @@ body {
                 top: 0.6vw;
                 left: 0.7vw;
                 display: block;
+            }
+
+            .close-popup:hover {
+                background: #212A41;
+                box-shadow: inset 0vw 0vw 0.313vw 0.261vw rgba(6, 8, 13, 0.18);
             }
         }
     }
