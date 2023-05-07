@@ -82,6 +82,7 @@ input {
   font-size: 0.782vw;
   line-height: 2.503vw;
   letter-spacing: 0.01vw;
+  transition: 0.3s;
 }
 
 input::placeholder {
@@ -91,6 +92,10 @@ input::placeholder {
   color: rgba(134, 157, 200, 0.3);
 }
 
+input:focus {
+  border: 0.052vw solid #546382;
+}
+
 button {
   border: none;
   cursor: pointer;
@@ -98,6 +103,7 @@ button {
   align-items: center;
   justify-content: center;
 }
+
 
 .field {
   position: relative;
@@ -114,6 +120,23 @@ button {
       color: #fff;
     }
   }
+
+
+  .let-know {
+    font-weight: 300;
+    font-size: 0.678vw;
+    line-height: 1.147vw;
+    letter-spacing: 0.008vw;
+    color: #FEFEFE;
+    position: absolute;
+    top: 5.021vw;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .let-know.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .btn {
@@ -124,4 +147,6 @@ button {
   background: #212A41;
   box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
   border-radius: 0.469vw;
+  color: #FFFFFF;
+  transition: 0.3s;
 }

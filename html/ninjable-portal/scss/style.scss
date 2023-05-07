@@ -471,12 +471,22 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1.095vw 1.981vw;
+        justify-content: space-evenly;
         margin-bottom: 1.981vw;
+        padding-top: 0.574vw;
+        padding-bottom: 0.834vw;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+
+        .icon {
+            width: initial;
+            height: 4.400vw;
+        }
 
         img {
-            width: 4.275vw;
-            height: 4.588vw;
+            width: 100%;
+            height: 100%;
         }
 
         p {
@@ -488,12 +498,46 @@ body {
         }
     }
 
+    &__left-item.speed {
+        .icon {
+            height: 3.4vw;
+        }
+    }
+
+    &__left-item.speed::after {
+        content: '';
+        width: 0.73vw;
+        height: 0.73vw;
+        background: #869DC8;
+        border-radius: 100%;
+        top: 0.752vw;
+        right: 0.7vw;
+        position: absolute;
+    }
+
     &__left-item.deactivate::after {
         content: '';
         background: url(../img/lock-icon.svg) no-repeat center top / cover;
         width: 2.138vw;
         height: 2.45vw;
-        margin-top: 1.643vw;
+    }
+
+    &__left-item.active {
+        border: 0.104vw solid #869DC8;
+        box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
+    }
+
+    &__left-item.active::before {
+        content: '';
+        background: url(../img/profile-item-active-icon.svg) no-repeat center top / cover;
+        width: 1.043vw;
+        height: 1.356vw;
+        position: absolute;
+        left: -1.3vw;
+    }
+
+    &__right {
+        width: 8.29vw;
     }
 
     &__centre {
@@ -502,9 +546,58 @@ body {
         background: rgba(29, 36, 56, 0.75);
         box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
         border-radius: 1.356vw;
+        padding: 1.981vw 2.972vw;
+        position: relative;
     }
 
-    &__right {
-        width: 8.29vw;
+    &__centre-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .title {
+            h2 {
+                font-weight: 700;
+                font-size: 1.564vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.021vw;
+                background: linear-gradient(90deg, #35B6F1 0%, #4CD4EC 116.58%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            p {
+                font-size: 1.043vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.014vw;
+                color: #FFFFFF;
+            }
+        }
+
+        .info-btn {
+            width: 6.778vw;
+            height: 1.981vw;
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            letter-spacing: 0.016vw;
+        }
+
+        .info-btn:hover {
+            box-shadow: inset 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+        }
+    }
+
+    &__centre-content {
+        
+        .leaves {
+            background: url(../img/profile-leaves.webp) no-repeat center top / cover;
+            width: 48.54vw;
+            height: 16.84vw;
+            position: absolute;
+            top: 12.521vw;
+            left: 0;
+        }
     }
 }
