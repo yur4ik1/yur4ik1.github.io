@@ -15,3 +15,17 @@ if (passwordInput && passwordIcon) {
     }
   })
 };
+
+/* profile info popup */
+
+const profilePopup = document.querySelector('.profile__info-popup');
+const profilePopupOpen = document.querySelector('.info-btn');
+const profilePopupClose = document.querySelector('.close-popup');
+
+profilePopupOpen.addEventListener('click', () => {
+  profilePopup.classList.add('active');
+});
+
+profilePopupClose.addEventListener('click', () => {
+  profilePopup.classList.remove('active');
+});
