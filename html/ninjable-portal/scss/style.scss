@@ -582,7 +582,35 @@ body {
 
     &__left {
         width: 8.29vw;
+        height: 39.468vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        position: relative;
+
+        .carousel {
+            position: absolute;
+            overflow: scroll;
+            transition: transform 0.3s ease-out;
+            cursor: ns-resize;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            left: -2vw;
+            top: -0.965vw;
+            padding-top: 1.2vw;
+            width: 12.29vw;
+            height: 41.268vw;
+            padding-left: 2vw;
+        }
     }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
 
     &__left-item {
         width: 8.29vw;
@@ -600,13 +628,17 @@ body {
         position: relative;
         cursor: pointer;
         transition: 0.3s;
+        user-select: none;
 
         .icon {
             width: initial;
             height: 4.400vw;
+            user-select: none;
+
         }
 
         img {
+            user-select: none;
             width: 100%;
             height: 100%;
         }

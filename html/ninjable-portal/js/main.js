@@ -88,3 +88,4 @@ if (profilePopup && profilePopupOpen) {
     profilePopup.classList.remove('active');
   });
 }
+
