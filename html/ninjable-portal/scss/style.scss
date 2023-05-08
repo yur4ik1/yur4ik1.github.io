@@ -599,7 +599,7 @@ body {
             left: -2vw;
             top: -0.965vw;
             padding-top: 1.2vw;
-            width: 12.29vw;
+            width: 22.29vw;
             height: 41.268vw;
             padding-left: 2vw;
         }
@@ -849,7 +849,7 @@ body {
 }
 
 
-.popup__info {
+.lock__popup {
     width: 15.068vw;
     height: 8.707vw;
     background: #1B2439;
@@ -857,11 +857,12 @@ body {
     border-radius: 1.095vw;
     padding: 1.773vw 2.346vw;
     position: absolute;
-    top: 40.214vw;
-    left: 15.214vw;
+    top: -7.786vw;
+    left: 4.214vw;
     visibility: hidden;
     opacity: 0;
     transition: 0.2s;
+    z-index: 99999999;
 
     h5 {
         font-size: 1.043vw;
@@ -879,7 +880,7 @@ body {
     }
 }
 
-.popup__info.active {
+.lock__popup.active {
     visibility: visible;
     opacity: 1;
 }

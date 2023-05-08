@@ -41,7 +41,7 @@ if (notificationBtn && notificationPopup) {
 /* info popup */
 
 const infoBtn = document.querySelector('.profile__left-item.deactivate');
-const infoPopup = document.querySelector('.popup__info');
+const infoPopup = document.querySelector('.lock__popup');
 
 if (infoBtn && infoPopup) {
   infoBtn.addEventListener('click', () => {
