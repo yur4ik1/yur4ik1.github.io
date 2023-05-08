@@ -816,6 +816,44 @@ body {
     }
 }
 
+
+.popup__info {
+    width: 15.068vw;
+    height: 8.707vw;
+    background: #1B2439;
+    box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+    border-radius: 1.095vw;
+    padding: 1.773vw 2.346vw;
+    position: absolute;
+    top: 40.214vw;
+    left: 15.214vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+
+    h5 {
+        font-size: 1.043vw;
+        line-height: 1.668vw;
+        letter-spacing: 0.014vw;
+        color: #869DC8;
+        margin-bottom: 0.574vw;
+    }
+
+    p {
+        font-size: 0.782vw;
+        line-height: 1.303vw;
+        letter-spacing: 0.01vw;
+        color: #FFFFFF;
+    }
+}
+
+.popup__info.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
 .profile__info-popup {
     z-index: 10000000000000000;
     position: fixed;

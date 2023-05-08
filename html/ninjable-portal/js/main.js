@@ -37,6 +37,26 @@ if (notificationBtn && notificationPopup) {
   });
 }
 
+
+/* info popup */
+
+const infoBtn = document.querySelector('.profile__left-item.active');
+const infoPopup = document.querySelector('.popup__info');
+
+if (infoBtn && infoPopup) {
+  infoBtn.addEventListener('click', () => {
+    infoPopup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = infoPopup.contains(event.target);
+    const isClickInsideBtn = infoBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      infoPopup.classList.remove('active');
+    }
+  });
+}
+
 /* passwordInput */
 
 const passwordInput = document.getElementById("password");
