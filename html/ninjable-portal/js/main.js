@@ -40,7 +40,7 @@ if (notificationBtn && notificationPopup) {
 
 /* info popup */
 
-const infoBtn = document.querySelector('.profile__left-item.active');
+const infoBtn = document.querySelector('.profile__left-item.deactivate');
 const infoPopup = document.querySelector('.popup__info');
 
 if (infoBtn && infoPopup) {
