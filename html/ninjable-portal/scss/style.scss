@@ -101,6 +101,24 @@ body {
             margin-left: 2.398vw;
             cursor: pointer;
             position: relative;
+
+            span {
+                width: 0.991vw;
+                height: 0.991vw;
+                left: 1.352vw;
+                top: 1.5vw;
+                background: #FFF;
+                border-radius: 100%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.782vw;
+                line-height: 1.147vw;
+                letter-spacing: 0.013vw;
+                color: #1B2439;
+                z-index: 99999999;
+            }
         }
 
         .notification::after {
@@ -141,6 +159,56 @@ body {
             margin-left: 8.043vw;
             position: absolute;
         }
+    }
+
+    &__popup-notification {
+        right: 19vw;
+        top: 8vw;
+        background: #1B2439;
+        width: 17.727vw;
+        height: 13.243vw;
+        background: #1B2439;
+        box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.095vw;
+        position: absolute;
+        z-index: 999;
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+        padding-top: 1.825vw;
+        padding-bottom: 1.825vw;
+
+        .notification__menu-item {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-size: 0.782vw;
+                line-height: 1.303vw;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+                padding-left: 3.233vw;
+                padding-right: 2.607vw;
+            }
+        }
+
+        .notification__menu-item::after {
+            content: '';
+            background: url(../img/notification-line.svg) no-repeat center top / cover;
+            width: 17.727vw;
+            height: 0.052vw;
+            margin-top: 0.886vw;
+            margin-bottom: 0.886vw;
+        }
+
+        .notification__menu-item:last-child::after {
+            display: none;
+        }
+    }
+
+    &__popup-notification.active {
+        visibility: visible;
+        opacity: 1;
     }
 
     &__popup-menu {

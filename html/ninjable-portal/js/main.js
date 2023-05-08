@@ -1,5 +1,5 @@
 
-/* header avatar */
+/* menu popup */
 
 const avatarBtn = document.querySelector('.avatar');
 const menuPopup = document.querySelector('.header__popup-menu');
@@ -7,6 +7,17 @@ const menuPopup = document.querySelector('.header__popup-menu');
 if (avatarBtn && menuPopup) {
   avatarBtn.addEventListener('click', () => {
     menuPopup.classList.toggle('active');
+  });
+}
+
+/* notification popup */
+
+const notificationBtn = document.querySelector('.notification');
+const notificationPopup = document.querySelector('.header__popup-notification');
+
+if (notificationBtn && notificationPopup) {
+  notificationBtn.addEventListener('click', () => {
+    notificationPopup.classList.toggle('active');
   });
 }
 
