@@ -8,6 +8,14 @@ if (avatarBtn && menuPopup) {
   avatarBtn.addEventListener('click', () => {
     menuPopup.classList.toggle('active');
   });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = menuPopup.contains(event.target);
+    const isClickInsideAvatar = avatarBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideAvatar) {
+      menuPopup.classList.remove('active');
+    }
+  });
 }
 
 /* notification popup */
@@ -18,6 +26,14 @@ const notificationPopup = document.querySelector('.header__popup-notification');
 if (notificationBtn && notificationPopup) {
   notificationBtn.addEventListener('click', () => {
     notificationPopup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = notificationPopup.contains(event.target);
+    const isClickInsideBtn = notificationBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      notificationPopup.classList.remove('active');
+    }
   });
 }
 
