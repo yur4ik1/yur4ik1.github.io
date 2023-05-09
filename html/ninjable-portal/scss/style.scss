@@ -119,16 +119,16 @@ body {
                 color: #1B2439;
                 z-index: 99999999;
             }
-        }
 
-        .notification::after {
-            content: '';
-            background: url(../img/notification-icon.svg) no-repeat center top / cover;
-            width: 1.176vw;
-            height: 1.447vw;
-            position: absolute;
-            top: 0.721vw;
-            left: 0.851vw;
+            &::after {
+                content: '';
+                background: url(../img/notification-icon.svg) no-repeat center top / cover;
+                width: 1.176vw;
+                height: 1.447vw;
+                position: absolute;
+                top: 0.721vw;
+                left: 0.851vw;
+            }
         }
 
         .avatar {
@@ -149,15 +149,15 @@ body {
                 width: 3.025vw;
                 height: 2.827vw;
             }
-        }
 
-        .avatar::after {
-            content: '';
-            background: url(../img/avatar-arrow.svg) no-repeat center top / cover;
-            width: 0.938vw;
-            height: 0.574vw;
-            margin-left: 8.043vw;
-            position: absolute;
+            &::after {
+                content: '';
+                background: url(../img/avatar-arrow.svg) no-repeat center top / cover;
+                width: 0.938vw;
+                height: 0.574vw;
+                margin-left: 8.043vw;
+                position: absolute;
+            }
         }
     }
 
@@ -190,15 +190,15 @@ body {
                 padding-left: 3.233vw;
                 padding-right: 2.607vw;
             }
-        }
 
-        .notification__menu-item::after {
-            content: '';
-            background: url(../img/notification-line.svg) no-repeat center top / cover;
-            width: 17.727vw;
-            height: 0.052vw;
-            margin-top: 0.886vw;
-            margin-bottom: 0.886vw;
+            &::after {
+                content: '';
+                background: url(../img/notification-line.svg) no-repeat center top / cover;
+                width: 17.727vw;
+                height: 0.052vw;
+                margin-top: 0.886vw;
+                margin-bottom: 0.886vw;
+            }
         }
 
         .notification__menu-item:last-child::after {
@@ -332,17 +332,17 @@ body {
             .password-icon {
                 display: block;
                 cursor: pointer;
-            }
 
-            .password-icon::after {
-                content: '';
-                background: url(../img/password-icon.svg) no-repeat center top / cover;
-                height: 0.73vw;
-                width: 0.991vw;
-                display: block;
-                position: absolute;
-                top: 2.852vw;
-                right: 1vw;
+                &::after {
+                    content: '';
+                    background: url(../img/password-icon.svg) no-repeat center top / cover;
+                    height: 0.73vw;
+                    width: 0.991vw;
+                    display: block;
+                    position: absolute;
+                    top: 2.852vw;
+                    right: 1vw;
+                }
             }
 
             .password-icon.active::after {
@@ -480,17 +480,17 @@ body {
         .password-icon {
             display: block;
             cursor: pointer;
-        }
 
-        .password-icon::after {
-            content: '';
-            background: url(../img/password-icon.svg) no-repeat center top / cover;
-            height: 0.73vw;
-            width: 0.991vw;
-            display: block;
-            position: absolute;
-            top: 2.852vw;
-            right: 1vw;
+            &::after {
+                content: '';
+                background: url(../img/password-icon.svg) no-repeat center top / cover;
+                height: 0.73vw;
+                width: 0.991vw;
+                display: block;
+                position: absolute;
+                top: 2.852vw;
+                right: 1vw;
+            }
         }
 
         .password-icon.active::after {
@@ -653,7 +653,7 @@ body {
 
     &__left-item.donthave.active {
         background: rgba(26, 37, 58);
-        
+
     }
 
     &__left-item.donthave.active>.icon {
@@ -673,18 +673,19 @@ body {
         .icon {
             height: 3.4vw;
         }
+
+        &::after {
+            content: '';
+            width: 0.73vw;
+            height: 0.73vw;
+            background: #869DC8;
+            border-radius: 100%;
+            top: 0.752vw;
+            right: 0.7vw;
+            position: absolute;
+        }
     }
 
-    &__left-item.speed::after {
-        content: '';
-        width: 0.73vw;
-        height: 0.73vw;
-        background: #869DC8;
-        border-radius: 100%;
-        top: 0.752vw;
-        right: 0.7vw;
-        position: absolute;
-    }
 
     &__left-item.deactivate::after {
         content: '';
@@ -696,15 +697,15 @@ body {
     &__left-item.active {
         border: 0.104vw solid #869DC8;
         box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
-    }
 
-    &__left-item.active::before {
-        content: '';
-        background: url(../img/profile-item-active-icon.svg) no-repeat center top / cover;
-        width: 1.043vw;
-        height: 1.356vw;
-        position: absolute;
-        left: -1.3vw;
+        &::before {
+            content: '';
+            background: url(../img/profile-item-active-icon.svg) no-repeat center top / cover;
+            width: 1.043vw;
+            height: 1.356vw;
+            position: absolute;
+            left: -1.3vw;
+        }
     }
 
     &__centre {
@@ -847,16 +848,16 @@ body {
                 margin-top: 0.886vw;
                 cursor: pointer;
                 position: relative;
-            }
 
-            .map-btn::after {
-                content: '';
-                background: url(../img/map-icon.svg) no-repeat center top / cover;
-                width: 2.607vw;
-                height: 2.503vw;
-                position: absolute;
-                top: 0.552vw;
-                left: 0.552vw;
+                &::after {
+                    content: '';
+                    background: url(../img/map-icon.svg) no-repeat center top / cover;
+                    width: 2.607vw;
+                    height: 2.503vw;
+                    position: absolute;
+                    top: 0.552vw;
+                    left: 0.552vw;
+                }
             }
         }
 
@@ -1010,22 +1011,22 @@ body {
                 margin-left: 3.285vw;
                 cursor: pointer;
                 transition: 0.3s;
-            }
 
-            .close-popup::after {
-                content: '';
-                background: url(../img/close-popup.svg) no-repeat center top / cover;
-                width: 1.095vw;
-                height: 1.095vw;
-                position: absolute;
-                top: 0.6vw;
-                left: 0.7vw;
-                display: block;
-            }
+                &::after {
+                    content: '';
+                    background: url(../img/close-popup.svg) no-repeat center top / cover;
+                    width: 1.095vw;
+                    height: 1.095vw;
+                    position: absolute;
+                    top: 0.6vw;
+                    left: 0.7vw;
+                    display: block;
+                }
 
-            .close-popup:hover {
-                background: #212A41;
-                box-shadow: inset 0vw 0vw 0.313vw 0.261vw rgba(6, 8, 13, 0.18);
+                &:hover {
+                    background: #212A41;
+                    box-shadow: inset 0vw 0vw 0.313vw 0.261vw rgba(6, 8, 13, 0.18);
+                }
             }
         }
     }
@@ -1123,17 +1124,17 @@ body {
                     span {
                         width: 100%;
                         border-radius: 0.417vw;
-                    }
 
-                    span::after {
-                        content: '';
-                        background: url(../img/tick.svg) no-repeat center top / cover;
-                        width: 0.938vw;
-                        height: 0.73vw;
-                        display: block;
-                        position: absolute;
-                        top: 0.92vw;
-                        right: 2vw;
+                        &::after {
+                            content: '';
+                            background: url(../img/tick.svg) no-repeat center top / cover;
+                            width: 0.938vw;
+                            height: 0.73vw;
+                            display: block;
+                            position: absolute;
+                            top: 0.92vw;
+                            right: 2vw;
+                        }
                     }
                 }
             }
@@ -1149,3 +1150,6 @@ body {
         animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
     }
 }
+
+
+.attributes__popup {}

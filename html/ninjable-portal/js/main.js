@@ -109,6 +109,22 @@ if (profilePopup && profilePopupOpen) {
   });
 }
 
+
+/* profile attributes popup */
+
+const attributesPopup = document.querySelector('.attributes__popup');
+const attributesPopupOpen = document.querySelector('.power');
+const attributesPopupClose = document.querySelector('.main__popup-close');
+
+if (attributesPopup && attributesPopupOpen) {
+  attributesPopupOpen.addEventListener('click', () => {
+    attributesPopup.classList.add('active');
+  });
+  attributesPopupClose.addEventListener('click', () => {
+    attributesPopup.classList.remove('active');
+  });
+}
+
 /* dont have popup */
 
 const donthaveBtn = document.querySelector('.donthave');
