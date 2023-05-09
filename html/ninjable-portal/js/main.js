@@ -57,6 +57,26 @@ if (infoBtn && infoPopup) {
   });
 }
 
+
+/* mask info popup */
+
+const maskInfoBtn = document.querySelector('.mask-info');
+const maskInfoPopup = document.querySelector('.mask__info-popup');
+
+if (maskInfoBtn && maskInfoPopup) {
+  maskInfoBtn.addEventListener('click', () => {
+    maskInfoPopup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = maskInfoPopup.contains(event.target);
+    const isClickInsideBtn = maskInfoBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      maskInfoPopup.classList.remove('active');
+    }
+  });
+}
+
 /* passwordInput */
 
 const passwordInput = document.getElementById("password");
@@ -89,3 +109,24 @@ if (profilePopup && profilePopupOpen) {
   });
 }
 
+/* dont have popup */
+
+const donthaveBtn = document.querySelector('.donthave');
+const donthavePopup = document.querySelector('.donthave-popup');
+
+if (donthaveBtn && donthavePopup) {
+
+  donthaveBtn.addEventListener('click', () => {
+    donthavePopup.classList.toggle('active');
+    donthaveBtn.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = donthavePopup.contains(event.target);
+    const isClickInsideBtn = donthaveBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      donthavePopup.classList.remove('active');
+      donthaveBtn.classList.remove('active');
+    }
+  });
+}

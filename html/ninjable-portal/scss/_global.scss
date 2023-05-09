@@ -65,6 +65,14 @@ h6 {
 
 }
 
+h5 {
+  font-size: 1.043vw;
+  line-height: 1.668vw;
+  letter-spacing: .014vw;
+  color: #869dc8;
+  margin-bottom: .574vw;
+}
+
 td,
 tr {
   padding: 0;
@@ -133,6 +141,7 @@ button {
     opacity: 0;
     visibility: hidden;
   }
+
   .let-know.active {
     opacity: 1;
     visibility: visible;
@@ -153,7 +162,31 @@ button {
 
 @keyframes SearchResultsAnonRestricted-module_message-fade-in-4XVrS {
   0% {
-      opacity: 0;
-      transform: scale(.95) translateY(1em)
+    opacity: 0;
+    transform: scale(.95) translateY(1em)
   }
+}
+
+.alert-popup {
+  position: absolute;
+  background: #1B2439;
+  box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+  border-radius: 1.095vw;
+  padding: 1.773vw 2.346vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 99999999;
+
+  p {
+    font-size: 0.782vw;
+    line-height: 1.303vw;
+    letter-spacing: 0.01vw;
+    color: #FFFFFF;
+  }
+}
+
+.alert-popup.active {
+  visibility: visible;
+  opacity: 1;
 }
