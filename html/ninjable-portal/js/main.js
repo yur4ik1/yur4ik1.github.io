@@ -112,7 +112,7 @@ if (profilePopup && profilePopupOpen) {
 
 /* profile attributes popup */
 
-const attributesPopup = document.querySelector('.attributes__popup');
+const attributesPopup = document.querySelector('.power__popup');
 const attributesPopupOpen = document.querySelector('.power');
 const attributesPopupClose = document.querySelector('.main__popup-close');
 
@@ -143,6 +143,63 @@ if (donthaveBtn && donthavePopup) {
     if (!isClickInsidePopup && !isClickInsideBtn) {
       donthavePopup.classList.remove('active');
       donthaveBtn.classList.remove('active');
+    }
+  });
+}
+
+/* attributes popup-info */
+
+const attributesPupupInfoBtn = document.querySelector('.attributes-info');
+const attributesPupupInfo = document.querySelector('.attributes__popup-info');
+
+if (attributesPupupInfoBtn && attributesPupupInfo) {
+  attributesPupupInfoBtn.addEventListener('click', () => {
+    attributesPupupInfo.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = attributesPupupInfo.contains(event.target);
+    const isClickInsideBtn = attributesPupupInfoBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      attributesPupupInfo.classList.remove('active');
+    }
+  });
+}
+
+/* exchange popup  */
+
+const exchangePupupBtn = document.querySelector('.three');
+const exchangePupup = document.querySelector('.exchange-popup');
+
+if (exchangePupupBtn && exchangePupup) {
+  exchangePupupBtn.addEventListener('click', () => {
+    exchangePupup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = exchangePupup.contains(event.target);
+    const isClickInsideBtn = exchangePupupBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      exchangePupup.classList.remove('active');
+    }
+  });
+}
+
+/* dismantle popup  */
+
+const dismantlePupupBtn = document.querySelector('.dismantle');
+const dismantlePupup = document.querySelector('.dismantle-popup');
+
+if (dismantlePupupBtn && dismantlePupup) {
+  dismantlePupupBtn.addEventListener('click', () => {
+    dismantlePupup.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsidePopup = dismantlePupup.contains(event.target);
+    const isClickInsideBtn = dismantlePupupBtn.contains(event.target);
+    if (!isClickInsidePopup && !isClickInsideBtn) {
+      dismantlePupup.classList.remove('active');
     }
   });
 }

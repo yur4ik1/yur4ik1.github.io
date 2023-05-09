@@ -275,6 +275,12 @@ button {
       }
     }
 
+    .attributes__popup-info {
+      top: 5.521vw;
+      left: 36.521vw;
+      transition: 0.2s;
+    }
+
     .main__popup-list {
       display: flex;
       justify-content: space-between;
@@ -288,9 +294,10 @@ button {
         width: 17.518vw;
         height: 27.842vw;
         background: #1B2439;
-        opacity: 0.8;
+        // opacity: 0.8;
         box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
         border-radius: 1.095vw;
+        position: relative;
 
         .item-top {
           position: relative;
@@ -345,6 +352,93 @@ button {
           }
         }
 
+        .exchange-popup {
+          width: 19.604vw;
+          height: 15.902vw;
+          padding-right: 1.721vw;
+          padding-top: 2.033vw;
+          top: 4.221vw;
+          left: 12.21vw;
+          opacity: 1;
+          transition: 0.2s;
+          position: absolute;
+          width: 19.604vw;
+          height: 15.902vw;
+          padding-right: 1.721vw;
+          padding-top: 2.033vw;
+          opacity: 1;
+          background: #1b2439;
+          visibility: hidden;
+          opacity: 0;
+
+          .top {
+            display: flex;
+          }
+
+          .exchange-icon {
+            margin-right: 0.834vw;
+            width: 2.659vw;
+            height: 2.659vw;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .exchange-info {
+            h5 {
+              font-size: 1.043vw;
+              line-height: 1.668vw;
+              letter-spacing: 0.014vw;
+              margin-bottom: 0;
+            }
+
+            p {
+              font-size: 0.782vw;
+              line-height: 1.668vw;
+              letter-spacing: 0.01vw;
+              color: #FFFFFF;
+            }
+          }
+
+          .desc {
+            font-size: 0.782vw;
+            line-height: 1.303vw;
+            letter-spacing: 0.01vw;
+            color: #FFFFFF;
+            opacity: 0.6;
+            margin-top: 2.138vw;
+          }
+
+          .bottom {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.877vw;
+
+            a {
+              font-size: 0.834vw;
+              line-height: 1.043vw;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              letter-spacing: 0.016vw;
+              color: #FFFFFF;
+              width: 6.413vw;
+              height: 1.981vw;
+              background: #212A41;
+              box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+              border-radius: 0.469vw;
+              transition: 0.2s;
+            }
+          }
+        }
+
+        .exchange-popup.active {
+          visibility: visible;
+          opacity: 1;
+        }
+
         img {
           width: 100%;
           height: auto;
@@ -394,6 +488,52 @@ button {
 
             &:nth-child(2) {
               margin-left: 0.938vw;
+            }
+          }
+        }
+
+        .dismantle-popup {
+          width: 15.372vw;
+          height: 13.921vw;
+          top: 10.21vw;
+          left: 11.121vw;
+
+          .crystal {
+            font-size: 0.938vw;
+            line-height: 2.503vw;
+            letter-spacing: 0.013vw;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.095vw;
+          }
+
+          .crystal::before {
+            content: '';
+            background: url(../img/coins-icon.svg) no-repeat center top / cover;
+            width: 1.043vw;
+            height: 1.564vw;
+            margin-right: 0.834vw;
+          }
+
+          .desc {
+            font-size: 0.782vw;
+            line-height: 1.303vw;
+            letter-spacing: 0.01vw;
+            color: #FFFFFF;
+            margin-bottom: 1.356vw;
+          }
+
+          div {
+            display: flex;
+            justify-content: center;
+
+            .btn {
+              font-size: 0.834vw;
+              line-height: 1.043vw;
+              letter-spacing: 0.016vw;
+              width: 6.413vw;
+              height: 1.981vw;
             }
           }
         }
