@@ -240,3 +240,200 @@ dismantlePopupBtns.forEach((btn, index) => {
     }
   });
 });
+
+
+
+/* rewardspopup */
+
+const rewardsPopup = document.querySelector('.rewards__pupup');
+const rewardsPopupOpen = document.querySelector('.coins');
+const rewardsPopupClose = document.querySelector('.rewards-close');
+
+if (rewardsPopup && rewardsPopupOpen) {
+  rewardsPopupOpen.addEventListener('click', () => {
+    rewardsPopup.classList.add('active');
+  });
+  rewardsPopupClose.addEventListener('click', () => {
+    rewardsPopup.classList.remove('active');
+  });
+}
+
+
+/* filter select */
+
+let select = document.querySelector(".filter-select");
+let selectSelected = select ? select.querySelector(".select-selected") : null;
+let selectItems = select ? select.querySelector(".select-items") : null;
+
+if (selectSelected) {
+  selectSelected.addEventListener("click", function () {
+    if (selectItems && selectItems.classList.contains("select-hide")) {
+      selectItems.classList.remove("select-hide");
+      select.classList.add('active');
+    } else if (selectItems) {
+      selectItems.classList.add("select-hide");
+      select.classList.remove('active');
+    }
+  })
+};
+
+/* custom select */
+
+let selectElements = document.getElementsByClassName("custom-select");
+
+for (let i = 0; i < selectElements.length; i++) {
+  let selectElement = selectElements[i];
+  let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
+  let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
+  let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
+  
+  selectSelectedElement.addEventListener("click", function () {
+    this.classList.toggle("select-arrow-active");
+    selectItemsElement.classList.toggle("select-hide");
+    
+    // Оновлюємо стан `custom-select` на основі класів `select-selected`
+    if (this.classList.contains("select-arrow-active")) {
+      selectElement.classList.add("active");
+    } else {
+      selectElement.classList.remove("active");
+    }
+  });
+  
+  for (let j = 0; j < selectOptionElements.length; j++) {
+    selectOptionElements[j].addEventListener("click", function () {
+      let selectOptionValue = this.innerHTML;
+      selectSelectedElement.innerHTML = selectOptionValue;
+      selectSelectedElement.classList.remove("select-arrow-active");
+      selectItemsElement.classList.add("select-hide");
+      
+      // Оновлюємо стан `custom-select` на основі класів `select-selected`
+      if (selectSelectedElement.classList.contains("select-arrow-active")) {
+        selectElement.classList.add("active");
+      } else {
+        selectElement.classList.remove("active");
+      }
+    });
+  }
+}
+
+/* custom select new */
+
+const newCustomSelects = document.querySelectorAll('.new__custom-select');
+
+function closeAllSelectsExcept(selectedSelect) {
+  newCustomSelects.forEach((select) => {
+    if (select !== selectedSelect && select.classList.contains('open')) {
+      select.classList.remove('open');
+    }
+  });
+}
+
+newCustomSelects.forEach((newCustomSelect) => {
+  const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+  const newCustomOptionsContainer = newCustomSelect.querySelector('.new__custom-options');
+  const newCustomOptionsList = newCustomSelect.querySelectorAll('.new__custom-option');
+  const customScrollbar = newCustomSelect.querySelector('.custom-scrollbar');
+  const customScrollbarThumb = document.createElement('div');
+  customScrollbarThumb.classList.add('custom-scrollbar-thumb');
+  customScrollbar.appendChild(customScrollbarThumb);
+
+  function updateScroll() {
+    const containerScrollTop = newCustomOptionsContainer.scrollTop;
+    const containerHeight = newCustomOptionsContainer.clientHeight;
+    const containerScrollHeight = newCustomOptionsContainer.scrollHeight;
+    const scrollbarHeight = customScrollbar.clientHeight;
+    const thumbHeight = Math.max((containerHeight / containerScrollHeight) * scrollbarHeight, 20);
+    const maxThumbTop = scrollbarHeight - thumbHeight;
+    const thumbTop = (containerScrollTop / (containerScrollHeight - containerHeight)) * maxThumbTop;
+    customScrollbarThumb.style.height = `${thumbHeight}px`;
+    customScrollbarThumb.style.top = `${thumbTop}px`;
+  }
+
+  newCustomTrigger.addEventListener('click', () => {
+    if (newCustomSelect.classList.contains('open')) {
+      newCustomSelect.classList.remove('open');
+    } else {
+      closeAllSelectsExcept(newCustomSelect);
+      newCustomSelect.classList.add('open');
+    }
+  });
+
+  newCustomOptionsContainer.addEventListener('scroll', updateScroll);
+
+  newCustomOptionsList.forEach((option) => {
+    option.addEventListener('click', (event) => {
+      if (newCustomSelect.closest('.skills-filter-select')) {
+        const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
+        const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
+        const newCustomOptionValue = option.getAttribute('data-value');
+        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+        const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
+
+        if (selectedOptionValues.includes(newCustomOptionValue)) {
+          return;
+        }
+
+        const tagItem = document.createElement('div');
+        tagItem.classList.add('tag-item');
+
+        const tagItemText = document.createElement('p');
+        tagItemText.textContent = option.textContent;
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove');
+        tagItem.appendChild(tagItemText);
+        tagItem.appendChild(removeButton);
+        skillsTagsList.appendChild(tagItem);
+        addRemoveButtonListener(removeButton);
+
+        option.classList.add('selected');
+        newCustomTrigger.textContent = 'Type here to search for Clan...';
+      } else {
+        const newCustomOptionValue = option.getAttribute('data-value');
+        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+        if (newCustomSelect.closest('.acievements-select')) {
+          newCustomTrigger.textContent = 'icon';
+        } else {
+          newCustomTrigger.textContent = option.textContent;
+        }
+        newCustomSelect.classList.remove('open');
+        if (newCustomSelect.classList.contains('filter-select-scroll')) {
+          newCustomSelect.classList.add('open');
+          newCustomTrigger.textContent = 'Type here to search for Clan...';
+        }
+      }
+    });
+  });
+
+
+  customScrollbarThumb.addEventListener("mousedown", (e) => {
+    const thumbStartPosition = e.clientY - customScrollbarThumb.getBoundingClientRect().top;
+    const scrollbarHeight = customScrollbar.clientHeight;
+    const thumbHeight = customScrollbarThumb.clientHeight;
+    const maxThumbTop = scrollbarHeight - thumbHeight;
+
+    function onMouseMove(e) {
+      const thumbTop = e.clientY - customScrollbar.getBoundingClientRect().top - thumbStartPosition;
+      if (thumbTop < 0) {
+        customScrollbarThumb.style.top = "0";
+        newCustomOptionsContainer.scrollTop = 0;
+      } else if (thumbTop > maxThumbTop) {
+        customScrollbarThumb.style.top = maxThumbTop + "px";
+        newCustomOptionsContainer.scrollTop = newCustomOptionsContainer.scrollHeight;
+      } else {
+        customScrollbarThumb.style.top = thumbTop + "px";
+        newCustomOptionsContainer.scrollTop = thumbTop / maxThumbTop * (newCustomOptionsContainer.scrollHeight - newCustomOptionsContainer.clientHeight);
+      }
+    }
+
+    function onMouseUp() {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+    }
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
+
+  });
+  updateScroll();
+});

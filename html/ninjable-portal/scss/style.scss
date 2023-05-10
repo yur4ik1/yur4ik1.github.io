@@ -69,6 +69,7 @@ body {
                 line-height: 2.503vw;
                 letter-spacing: 0.013vw;
                 color: #FFFFFF;
+                cursor: pointer;
             }
 
             .crystal::before {
@@ -1051,8 +1052,9 @@ body {
             overflow: auto;
             height: 20vw;
             padding-right: 3.754vw;
+            position: relative;
+            right: 0.721vw;
         }
-
 
         .skils__content::-webkit-scrollbar {
             width: 0.469vw;
@@ -1423,6 +1425,165 @@ body {
                 box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
                 border-radius: 1.095vw;
                 opacity: 1;
+            }
+        }
+    }
+}
+
+.profile__info-popup.rewards__pupup {
+    .popup__inner {
+        height: 45vw;
+    }
+
+    .info {
+        p {
+            font-size: 0.938vw;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "";
+                background: url(../img/coins-icon.svg) no-repeat center top/cover;
+                width: 1.043vw;
+                height: 1.564vw;
+                margin-right: .834vw;
+            }
+        }
+    }
+
+    .profile__info-content {
+        padding-left: 6.153vw;
+        padding-right: 4.171vw;
+        padding-top: 5.058vw;
+    }
+
+    .skils__content {
+        height: 22.865vw;
+        padding-right: 6.778vw;
+        padding-left: 0.821vw;
+        padding-top: 0.521vw;
+    }
+
+    .search-wrapper {
+        display: flex;
+        margin-bottom: 4.327vw;
+        width: 59.437vw;
+        border-radius: 0.417vw;
+        z-index: 99999;
+        position: relative;
+        box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
+
+        .search-input {
+            width: 48.071vw;
+            height: 2.555vw;
+            background: #1B2439;
+            border-radius: 0.417vw 0 0 0.417vw;
+            border: none;
+        }
+
+
+        .filter-select {
+            width: 11.314vw;
+            height: 2.555vw;
+            background: #1B2439;
+            border-radius: 0 0.417vw 0.417vw 0;
+        }
+    }
+
+    .rewards__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .rewards__list-item {
+        width: 17.518vw;
+        height: 30.865vw;
+        background: #1B2439;
+        opacity: 0.8;
+        box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.095vw;
+        margin-bottom: 3.441vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .rewards-img {
+            width: 100%;
+            height: 11.366vw;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            span {
+                width: 5.109vw;
+                height: 2.138vw;
+                background: #232B43;
+                box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(27, 36, 57, 0.56);
+                border-radius: 1.173vw;
+                font-size: 0.938vw;
+                line-height: 1.043vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.013vw;
+                color: #FFFFFF;
+                position: absolute;
+                top: 0.921vw;
+                right: .921vw;
+
+                &::before {
+                    content: "";
+                    background: url(../img/coins-icon.svg) no-repeat center top/cover;
+                    width: 1.043vw;
+                    height: 1.564vw;
+                    margin-right: 0.417vw;
+                    display: block;
+                }
+            }
+        }
+
+        .text {
+            padding-top: 1.668vw;
+            padding-left: 1.616vw;
+            padding-right: 1.616vw;
+            height: 13.191vw;
+
+            h5 {
+                font-size: 1.043vw;
+                line-height: 1.564vw;
+                letter-spacing: 0.014vw;
+                color: #869DC8;
+                margin-bottom: 1.356vw;
+            }
+
+            p {
+                font-size: 0.782vw;
+                line-height: 1.303vw;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 2.033vw;
+
+            a {
+                width: 6.413vw;
+                height: 1.981vw;
+                background: #212A41;
+                box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.469vw;
+                font-size: 0.834vw;
+                line-height: 1.043vw;
+                letter-spacing: 0.016vw;
+                color: #FFFFFF;
             }
         }
     }
