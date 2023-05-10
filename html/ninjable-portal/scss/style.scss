@@ -1587,4 +1587,53 @@ body {
             }
         }
     }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -0.748vw;
+
+        span {
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.016vw;
+            color: #FFFFFF;
+            width: 2.086vw;
+            height: 2.086vw;
+            background: #212A41;
+            box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+            border-radius: 1.251vw;
+            margin-right: 0.938vw;
+            cursor: pointer;
+        }
+
+        .prev {
+            &::before {
+                content: "";
+                background: url(../img/pagination-left.svg) no-repeat center top/cover;
+                width: 0.365vw;
+                height: 0.678vw;
+                display: block;
+            }
+        }
+
+        .page.active {
+            color: #869DC8;
+            background: #28324C;
+        }
+
+        .next {
+            &::before {
+                content: "";
+                background: url(../img/pagination-rigth.svg) no-repeat center top/cover;
+                width: 0.365vw;
+                height: 0.678vw;
+                display: block;
+            }
+        }
+    }
 }
