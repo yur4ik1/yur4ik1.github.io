@@ -772,3 +772,25 @@ button {
     color: #869DC8;
   }
 }
+
+
+.big__photo-popup {
+  position: absolute;
+  top: 15vw;
+  right: 23vw;
+  width: 28.05vw;
+  height: 24.4vw;
+  background: #1B2439;
+  box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+  border-radius: 1.095vw;
+  padding: 1.095vw 1.251vw;
+  z-index: 99999999999;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.big__photo-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
