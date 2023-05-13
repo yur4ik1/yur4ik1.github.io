@@ -13,6 +13,11 @@ body {
     height: 64vw;
 }
 
+body.skills-page {
+    background: url(../img/skills-page-bg.webp) no-repeat center top / cover;
+    height: auto;
+}
+
 .container {
     margin: 0 auto;
 }
@@ -1636,6 +1641,173 @@ body {
                 height: 0.678vw;
                 display: block;
             }
+        }
+    }
+}
+
+/* Skills page */
+
+.skills {
+    padding-top: 3.858vw;
+    padding-bottom: 8.498vw;
+
+    .container {
+        max-width: 77.633vw;
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__menu {
+        display: flex;
+
+        li {
+            margin-right: 3.233vw;
+
+            a {
+                font-family: 'Roboto';
+                font-weight: 500;
+                font-size: 1.303vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.278vw;
+                color: #FFFFFF;
+            }
+        }
+
+        li.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                color: #869DC8;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 0.313vw;
+                background: linear-gradient(0deg, #869DC8, #869DC8), #D6D6D6;
+                display: block;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 3.754vw;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 24.296vw;
+        height: 16.215vw;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.356vw;
+        padding-left: 1.877vw;
+        padding-right: 1.199vw;
+        margin-bottom: 2.92vw;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1.251vw;
+
+            span {
+                font-size: 1.043vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.015vw;
+                color: #FFFFFF;
+            }
+        }
+
+        button {
+            width: 8.968vw;
+            height: 2.503vw;
+            background: #6784A9;
+            box-shadow: 0vw 0vw 0.521vw 0.261vw rgba(29, 38, 50, 0.56);
+            border-radius: 0.469vw;
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.016vw;
+            color: #FFFFFF;
+            margin-bottom: 1.877vw;
+            visibility: hidden;
+            opacity: 1;
+            transition: 0.3s;
+            position: relative;
+            bottom: -11%;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__list-item.active {
+        width: 24.296vw;
+        height: 16.215vw;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+
+    }
+
+    &__list-item.active:hover {
+        border: 0.104vw solid #869DC8;
+        box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
+        transform: scale(1.04);
+
+        button {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0%;
+            max-height: 100%;
+        }
+    }
+
+    &__list-item.add {
+        padding: 0;
+        justify-content: center;
+
+        &::after {
+            content: '';
+            background: url('../img/skill-add.svg') no-repeat center top / cover;
+            width: 2.242vw;
+            height: 2.242vw;
+        }
+
+        .top,
+        button {
+            display: none;
+        }
+    }
+
+    &__list-item.lock {
+        padding: 0;
+        justify-content: center;
+
+        &::after {
+            content: '';
+            background: url('../img/skill-lock.svg') no-repeat center top / cover;
+            width: 2.711vw;
+            height: 3.076vw;
+        }
+
+        .top,
+        button {
+            display: none;
         }
     }
 }
