@@ -1904,3 +1904,146 @@ body.skills-page {
         }
     }
 }
+
+.passive__skills-popup {
+    .main__popup-inner {
+        width: 77.529vw;
+        height: 45.157vw;
+
+        h3::after {
+            display: none;
+        }
+    }
+
+    .main__popup-content {
+        overflow: auto;
+        height: 30.516vw;
+        padding-left: 6.778vw;
+        padding-right: 6.674vw;
+        padding-top: 2.346vw;
+        margin-top: 4.849vw;
+        margin-right: 4.223vw;
+    }
+
+    .main__popup-content::-webkit-scrollbar {
+        width: 0.469vw;
+    }
+
+    .main__popup-content::-webkit-scrollbar-track {
+        background: #202a40;
+        mix-blend-mode: normal;
+        border-radius: 0.521vw;
+    }
+
+    .main__popup-content::-webkit-scrollbar-thumb {
+        width: 0.469vw;
+        background: #869DC8;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        border-radius: 0.521vw;
+    }
+
+    .passive__skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .passive__skills-item {
+        width: 17.518vw;
+        height: 17.518vw;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.043vw;
+        margin-bottom: 5.285vw;
+        padding: 1.512vw 1.773vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        position: relative;
+
+        .coins {
+            position: absolute;
+            left: 0;
+            top: -2.1vw;
+            font-size: 0.991vw;
+            line-height: 1.668vw;
+            letter-spacing: 0.01vw;
+            color: #FEFEFF;
+        }
+
+        .top {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            font-size: 1.043vw;
+            line-height: 1.668vw;
+            letter-spacing: 0.014vw;
+            color: #FFFFFF;
+        }
+
+        button {
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.016vw;
+            color: #FFFFFF;
+            width: 7.925vw;
+            height: 2.346vw;
+            background: transparent;
+            box-shadow: 0vw 0vw 0.521vw 0.261vw rgba(30, 50, 50, 0.56);
+            border-radius: 0.469vw;
+        }
+
+        &:nth-child(1) {
+            button {
+                background: #91C0C0;
+            }
+        }
+
+        &:nth-child(2) {
+            button {
+                background: #6784A9;
+            }
+        }
+
+        &:nth-child(3) {
+            button {
+                background: #5FA069;
+            }
+        }
+
+        &:nth-child(4) {
+            button {
+                background: #5FA069;
+            }
+        }
+
+        &:nth-child(5) {
+            button {
+                background: #91C0C0;
+            }
+        }
+
+        &:nth-child(6) {
+            button {
+                background: #6784A9;
+            }
+        }
+    }
+
+    .passive__skills-item.deactivated {
+        opacity: 0.5;
+
+        button {
+            background: transparent;
+            cursor: default;
+        }
+    }
+}

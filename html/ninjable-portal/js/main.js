@@ -272,6 +272,21 @@ if (addSkillPopup && addSkillOpen) {
   });
 }
 
+/* passive skills popup */
+
+const passiveSkillsPopup = document.querySelector('.passive__skills-popup');
+const passiveSkillsOpen = document.querySelector('.request');
+const passiveSkillsClose = document.querySelector('.passive__skills-close');
+
+if (passiveSkillsPopup && passiveSkillsOpen) {
+  passiveSkillsOpen.addEventListener('click', () => {
+    passiveSkillsPopup.classList.add('active');
+  });
+  passiveSkillsClose.addEventListener('click', () => {
+    passiveSkillsPopup.classList.remove('active');
+  });
+}
+
 
 
 /* filter select */
