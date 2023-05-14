@@ -184,7 +184,7 @@ const popupInfoElements = document.querySelectorAll('.attributes__popup-info');
 
 popupInfoBtns.forEach((btn, index) => {
   const popupInfo = popupInfoElements[index];
-  
+
   btn.addEventListener('click', () => {
     popupInfo.classList.toggle('active');
   });
@@ -242,7 +242,6 @@ dismantlePopupBtns.forEach((btn, index) => {
 });
 
 
-
 /* rewardspopup */
 
 const rewardsPopup = document.querySelector('.rewards__pupup');
@@ -258,35 +257,55 @@ if (rewardsPopup && rewardsPopupOpen) {
   });
 }
 
+/* add skill popup */
+
+const addSkillPopup = document.querySelector('.add__skill-popup');
+const addSkillOpen = document.querySelector('.add');
+const addSkillClose = document.querySelector('.add-skill-close');
+
+if (addSkillPopup && addSkillOpen) {
+  addSkillOpen.addEventListener('click', () => {
+    addSkillPopup.classList.add('active');
+  });
+  addSkillClose.addEventListener('click', () => {
+    addSkillPopup.classList.remove('active');
+  });
+}
+
+
 
 /* filter select */
 
-let select = document.querySelector(".filter-select");
-let selectSelected = select ? select.querySelector(".select-selected") : null;
-let selectItems = select ? select.querySelector(".select-items") : null;
+let selectAll = document.querySelectorAll(".filter-select");
 
-if (selectSelected) {
-  selectSelected.addEventListener("click", function () {
-    if (selectItems && selectItems.classList.contains("select-hide")) {
-      selectItems.classList.remove("select-hide");
-      select.classList.add('active');
-    } else if (selectItems) {
-      selectItems.classList.add("select-hide");
-      select.classList.remove('active');
-    }
-  })
-};
+selectAll.forEach(function (select) {
+  let selectSelected = select.querySelector(".select-selected");
+  let selectItems = select.querySelector(".select-items");
+
+  if (selectSelected) {
+    selectSelected.addEventListener("click", function () {
+      if (selectItems && selectItems.classList.contains("select-hide")) {
+        selectItems.classList.remove("select-hide");
+        select.classList.add('active');
+      } else if (selectItems) {
+        selectItems.classList.add("select-hide");
+        select.classList.remove('active');
+      }
+    })
+  }
+});
+
 
 /* big photo popup */
 
 const rewardsImgTrigger = document.querySelector('.rewards-img-trigger');
 const bigPhotoPopup = document.querySelector('.big__photo-popup');
 
-rewardsImgTrigger.addEventListener('click', function() {
+rewardsImgTrigger.addEventListener('click', function () {
   bigPhotoPopup.classList.add('active');
 });
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
   const isClickInside = bigPhotoPopup.contains(event.target);
   if (!isClickInside && event.target !== rewardsImgTrigger) {
     bigPhotoPopup.classList.remove('active');
@@ -302,11 +321,11 @@ for (let i = 0; i < selectElements.length; i++) {
   let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
   let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
   let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
-  
+
   selectSelectedElement.addEventListener("click", function () {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
-    
+
     // Оновлюємо стан `custom-select` на основі класів `select-selected`
     if (this.classList.contains("select-arrow-active")) {
       selectElement.classList.add("active");
@@ -314,14 +333,14 @@ for (let i = 0; i < selectElements.length; i++) {
       selectElement.classList.remove("active");
     }
   });
-  
+
   for (let j = 0; j < selectOptionElements.length; j++) {
     selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
       selectSelectedElement.classList.remove("select-arrow-active");
       selectItemsElement.classList.add("select-hide");
-      
+
       // Оновлюємо стан `custom-select` на основі класів `select-selected`
       if (selectSelectedElement.classList.contains("select-arrow-active")) {
         selectElement.classList.add("active");
@@ -403,7 +422,7 @@ newCustomSelects.forEach((newCustomSelect) => {
         addRemoveButtonListener(removeButton);
 
         option.classList.add('selected');
-        newCustomTrigger.textContent = 'Type here to search for Clan...';
+        newCustomTrigger.textContent = 'Selected';
       } else {
         const newCustomOptionValue = option.getAttribute('data-value');
         const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
@@ -415,7 +434,7 @@ newCustomSelects.forEach((newCustomSelect) => {
         newCustomSelect.classList.remove('open');
         if (newCustomSelect.classList.contains('filter-select-scroll')) {
           newCustomSelect.classList.add('open');
-          newCustomTrigger.textContent = 'Type here to search for Clan...';
+          newCustomTrigger.textContent = 'Selected';
         }
       }
     });

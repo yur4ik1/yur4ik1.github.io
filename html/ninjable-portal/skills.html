@@ -91,75 +91,228 @@
                 </div>
 
                 <div class="skills__list">
-                    <a class="skills__list-item active"
-                        style="background: url(./img/skill-bg-1.png) no-repeat center top / cover;" href="#">
+                    <div class="skills__list-item active" style="background-image: url(./img/skill-bg-1.png);">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item active"
-                        style="background: url(./img/skill-bg-2.png) no-repeat center top / cover;" href="#">
+                    </div>
+                    <div class="skills__list-item active deactivate" style="background-image: url(./img/skill-bg-2.png);">
+                        <div class="top">
+                            <span class="skill">JS</span>
+                            <span class="raised">300/300</span>
+                        </div>
+                        <button>Deactivate</button>
+                    </div>
+                    <div class="skills__list-item active" style="background-image: url(./img/skill-bg-3.png);">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item active"
-                        style="background: url(./img/skill-bg-3.png) no-repeat center top / cover;" href="#">
+                    </div>
+                    <div class="skills__list-item add">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item add" href="#">
+                    </div>
+                    <div class="skills__list-item lock">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item lock" href="#">
+                    </div>
+                    <div class="skills__list-item lock">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item lock" href="#">
+                    </div>
+                    <div class="skills__list-item lock">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item lock" href="#">
+                    </div>
+                    <div class="skills__list-item lock">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item lock" href="#">
+                    </div>
+                    <div class="skills__list-item lock">
                         <div class="top">
                             <span class="skill">JS</span>
                             <span class="raised">300/300</span>
                         </div>
                         <button>Request</button>
-                    </a>
-                    <a class="skills__list-item lock" href="#">
-                        <div class="top">
-                            <span class="skill">JS</span>
-                            <span class="raised">300/300</span>
-                        </div>
-                        <button>Request</button>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <div class="main__popup add__skill-popup">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>ADD SKILL</h3>
+                    <span class="main__popup-close add-skill-close"></span>
+                </div>
+                <div class="field__wrapper">
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Clan</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all1">
+                                    <label for="all1">A Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all2">
+                                    <label for="all2">B Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all3">
+                                    <label for="all3">C Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all4">
+                                    <label for="all4">D Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all5">
+                                    <label for="all5">E Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all6">
+                                    <label for="all6">F Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all7">
+                                    <label for="all7">G Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all8">
+                                    <label for="all8">A Department</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all9">
+                                    <label for="all9">A Department</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Rank</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank1">
+                                    <label for="rank1">Artist</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank2">
+                                    <label for="rank2">Architect</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank3">
+                                    <label for="rank3">Analysts</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank4">
+                                    <label for="rank4">Developer</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank5">
+                                    <label for="rank5">Designer</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank6">
+                                    <label for="rank6">D Rank</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank7">
+                                    <label for="rank7">E Rank</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank8">
+                                    <label for="rank8">A Rank</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="rank9">
+                                    <label for="rank9">A Rank</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Skill</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill1">
+                                    <label for="skill1">A Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill2">
+                                    <label for="skill2">B Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill3">
+                                    <label for="skill3">C Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill4">
+                                    <label for="skill4">D Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill5">
+                                    <label for="skill5">E Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill6">
+                                    <label for="skill6">F Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill7">
+                                    <label for="skill7">G Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill8">
+                                    <label for="skill8">A Skill</label>
+                                </div>
+                                <div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="skill9">
+                                    <label for="skill9">A Skill</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="level__wrapper">
+                        <p><span>Current level: </span>Yellow</p>
+                        <p class="icon"><img src="./img/condition-icon.svg" alt=""><span>Upgrade condition:
+                            </span>300/600 Coins</p>
+                    </div>
+                    <div class="bottom">
+                        <a class="btn" href="#">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div class="profile__info-popup rewards__pupup">
