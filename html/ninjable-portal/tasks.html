@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Skills</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Skills">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="tasks-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Reports</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Settings</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="tasks">
+            <div class="container">
+                <div class="skills__menu-wrapper">
+                    <ul class="skills__menu">
+                        <li class="skills__menu-item">
+                            <a href="skills.html">SKILLS</a>
+                        </li>
+                        <li class="skills__menu-item active">
+                            <a href="tasks.html">TASKS</a>
+                        </li>
+                        <li class="skills__menu-item">
+                            <a href="#">ACHIEVEMENTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tasks__content">
+                    <div class="filter__wrapper">
+
+                        <div class="filter filter-select filter-priority">
+                            <div class="select-selected">Priority</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="highest">
+                                    <label for="highest">Highest</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="high">
+                                    <label for="high">High</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="medium">
+                                    <label for="medium">Medium</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="low">
+                                    <label for="low">Low</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="lowest">
+                                    <label for="lowest">Lowest</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-status">
+                            <div class="select-selected">Status</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="open">
+                                    <label for="open">Open</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="review">
+                                    <label for="review">After Review</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="progress">
+                                    <label for="progress">In Progress</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter new__custom-select-wrapper filter-skills">
+                            <div class="new__custom-select filter-select-scroll">
+                                <div class="arrow"></div>
+                                <div class="new__custom-select__trigger">Skills</div>
+                                <div class="new__custom-options">
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all1">
+                                        <label for="all1">Art</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all2">
+                                        <label for="all2">Analysis</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all3">
+                                        <label for="all3">Design</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all4">
+                                        <label for="all4">PHP</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all5">
+                                        <label for="all5">Program</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all6">
+                                        <label for="all6">P Skill</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all7">
+                                        <label for="all7">W Skill</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all8">
+                                        <label for="all8">W Skill</label>
+                                    </div>
+                                    <div class="new__custom-option" data-value="ua">
+                                        <input type="checkbox" id="all9">
+                                        <label for="all9">W Skill</label>
+                                    </div>
+                                </div>
+                                <div class="custom-scrollbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-price">
+                            <div class="select-selected">Price</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="low-price">
+                                    <label for="low-price">Low price first</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="high-price">
+                                    <label for="high-price">High price first</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

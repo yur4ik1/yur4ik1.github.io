@@ -316,16 +316,17 @@ selectAll.forEach(function (select) {
 const rewardsImgTrigger = document.querySelector('.rewards-img-trigger');
 const bigPhotoPopup = document.querySelector('.big__photo-popup');
 
-rewardsImgTrigger.addEventListener('click', function () {
-  bigPhotoPopup.classList.add('active');
-});
-
-document.addEventListener('click', function (event) {
-  const isClickInside = bigPhotoPopup.contains(event.target);
-  if (!isClickInside && event.target !== rewardsImgTrigger) {
-    bigPhotoPopup.classList.remove('active');
-  }
-});
+if (rewardsImgTrigger && bigPhotoPopup ) {
+  rewardsImgTrigger.addEventListener('click', function () {
+    bigPhotoPopup.classList.add('active');
+  });
+  document.addEventListener('click', function (event) {
+    const isClickInside = bigPhotoPopup.contains(event.target);
+    if (!isClickInside && event.target !== rewardsImgTrigger) {
+      bigPhotoPopup.classList.remove('active');
+    }
+  })
+};
 
 /* custom select */
 
