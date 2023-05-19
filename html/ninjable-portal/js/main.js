@@ -316,7 +316,7 @@ selectAll.forEach(function (select) {
 const rewardsImgTrigger = document.querySelector('.rewards-img-trigger');
 const bigPhotoPopup = document.querySelector('.big__photo-popup');
 
-if (rewardsImgTrigger && bigPhotoPopup ) {
+if (rewardsImgTrigger && bigPhotoPopup) {
   rewardsImgTrigger.addEventListener('click', function () {
     bigPhotoPopup.classList.add('active');
   });
@@ -327,6 +327,87 @@ if (rewardsImgTrigger && bigPhotoPopup ) {
     }
   })
 };
+
+
+/* tasks list bg */
+
+const items = document.querySelectorAll('.tasks__list-item');
+
+if (items) {
+  const images = [
+    '../img/tasks-yellow.webp',
+    '../img/tasks-green.webp',
+    '../img/tasks-white.webp',
+    '../img/tasks-purple.webp',
+    '../img/tasks-red.webp',
+    '../img/tasks-black.webp'
+  ];
+
+  const styles = [
+    {
+      nameColor: '#866639',
+      priceImage: '../img/tasks-price-yellow.svg',
+      textBackground: '#EAC185',
+      textShadow: '0px 0px 10px 5px rgba(140, 98, 39, 0.4)'
+    },
+    {
+      nameColor: '#27433E',
+      priceImage: '../img/tasks-price-green.svg',
+      textBackground: 'rgba(90, 147, 138, 0.4)',
+      textShadow: '0vw 0vw 0.521vw 0.261vw rgba(63, 101, 95, 0.65)'
+    },
+    {
+      nameColor: '#A0A0A0',
+      priceImage: '../img/tasks-price-white.svg',
+      textBackground: '#ECECEC',
+      textShadow: '0vw 0vw 0.521vw 0.261vw rgba(198, 198, 198, 0.8)'
+    },
+    {
+      nameColor: '#444561',
+      priceImage: '../img/tasks-price-purple.svg',
+      textBackground: '#8183B8',
+      textShadow: '0vw 0vw 0.521vw 0.261vw rgba(93, 95, 139, 0.8)'
+    },
+    {
+      nameColor: '#74423E',
+      priceImage: '../img/tasks-price-red.svg',
+      textBackground: 'rgba(190, 117, 112, 0.3)',
+      textShadow: '0vw 0vw 0.521vw 0.261vw rgba(136, 85, 82, 0.6)'
+    },
+    {
+      nameColor: '#A0A0A0',
+      priceImage: '../img/tasks-price-black.svg',
+      textBackground: '#242C3E',
+      textShadow: '0vw 0vw 0.521vw 0.261vw rgba(22, 26, 36, 0.8)'
+    }
+  ];
+
+  items.forEach((item, index) => {
+    const imageIndex = index % images.length;
+    item.style.background = `url('${images[imageIndex]}') no-repeat center top / cover`;
+
+    const styleIndex = index % styles.length;
+    const style = styles[styleIndex];
+
+    item.querySelector('.name').style.color = style.nameColor;
+    item.querySelector('.text a').style.background = style.textBackground;
+    item.querySelector('.text a').style.boxShadow = style.textShadow;
+
+    if ((index + 1) % 3 === 0) {
+      item.querySelector('.text a').style.color = '#A0A0A0';
+      item.querySelector('.price span').style.color = '#A0A0A0';
+      item.querySelector('.text p').style.color = '#A0A0A0';
+    }
+
+    const priceImageElement = document.createElement('span');
+    priceImageElement.classList.add('price-image');
+    priceImageElement.style.background = `url('${style.priceImage}') no-repeat center top / cover`;
+
+    item.querySelector('.price').insertBefore(priceImageElement, item.querySelector('.price').firstChild);
+  })
+};
+
+
 
 /* custom select */
 

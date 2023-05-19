@@ -2078,6 +2078,9 @@ body.tasks-page {
         display: flex;
         box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, .45);
         border-radius: .417vw;
+        margin-bottom: 3.65vw;
+        z-index: 999999999999;
+        position: relative;
 
         .filter {
             width: 17.362vw;
@@ -2152,5 +2155,108 @@ body.tasks-page {
             }
         }
     }
+
+    &__list-item {
+        background: #1B2439;
+        width: 100%;
+        height: 5.162vw;
+        opacity: 0.8;
+        box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+        border-radius: 0.782vw;
+        margin-bottom: 2.033vw;
+        display: flex;
+        align-items: center;
+
+        .price {
+            width: 10vw;
+            height: 100%;
+            padding-left: 2.607vw;
+            padding-right: 0.834vw;
+            display: flex;
+            align-items: center;
+    
+
+            .price-image {
+                width: 1.408vw;
+                height: 1.408vw;
+                margin-right: 0.886vw;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 0.834vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+                margin-right: 2.65vw;
+            }
+
+            &::after {
+                content: '';
+                width: 0.052vw;
+                height: 5.162vw;
+                background: linear-gradient(0deg, #866639, #866639), #DDDDDD;
+                mix-blend-mode: normal;
+                opacity: 0.4;
+                display: block;
+
+            }
+        }
+
+        .name {
+            width: 10.428vw;
+            font-size: 0.782vw;
+            line-height: 1.303vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            letter-spacing: 0.01vw;
+            color: #866639;
+            padding-left: 2.086vw;
+
+            &::after {
+                content: '';
+                width: 0.052vw;
+                height: 5.162vw;
+                background: linear-gradient(0deg, #866639, #866639), #DDDDDD;
+                mix-blend-mode: normal;
+                opacity: 0.4;
+                display: block;
+
+            }
+        }
+
+        .text {
+            width: 48.488vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 2.659vw;
+            padding-left: 2.086vw;
+
+            p {
+                font-size: 0.782vw;
+                line-height: 1.303vw;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+            }
+
+            a {
+                font-size: 0.834vw;
+                line-height: 1.043vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.016vw;
+                color: #FFFFFF;
+                width: 8.811vw;
+                height: 2.346vw;
+                border-radius: 0.469vw;
+            }
+        }
+    }
+
 
 }
