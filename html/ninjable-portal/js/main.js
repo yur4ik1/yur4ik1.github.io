@@ -287,6 +287,39 @@ if (passiveSkillsPopup && passiveSkillsOpen) {
   });
 }
 
+/* wisdom scroll popup */
+
+const wisdomScrollPopup = document.querySelector('.wisdom__scroll-popup');
+const wisdomScrollOpen = document.querySelector('.wisdom__scroll-btn');
+const wisdomScrollClose = document.querySelector('.wisdom__scroll-close');
+
+if (wisdomScrollPopup && wisdomScrollOpen) {
+  wisdomScrollOpen.addEventListener('click', () => {
+    wisdomScrollPopup.classList.add('active');
+  });
+  wisdomScrollClose.addEventListener('click', () => {
+    wisdomScrollPopup.classList.remove('active');
+  });
+}
+
+/* Pop up (Status: In progress) */
+
+const inProgressPopup = document.querySelector('.in-progress-popup');
+const inProgressOpen = document.querySelectorAll('.in-progress-btn');
+const inProgressClose = document.querySelector('.in-progress-close');
+
+if (inProgressPopup && inProgressOpen) {
+  inProgressOpen.forEach(button => {
+    button.addEventListener('click', () => {
+      inProgressPopup.classList.add('active');
+    });
+  });
+  inProgressClose.addEventListener('click', () => {
+    inProgressPopup.classList.remove('active');
+  });
+}
+
+
 
 
 /* filter select */
