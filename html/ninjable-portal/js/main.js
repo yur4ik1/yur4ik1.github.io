@@ -320,6 +320,137 @@ if (inProgressPopup && inProgressOpen) {
 }
 
 
+// desk editor
+
+const editor = document.getElementById('editor');
+const boldButton = document.querySelector('.bold-btn');
+const italicButton = document.querySelector('.italic-btn');
+const underlinedButton = document.querySelector('.underlined-btn');
+const bulletedButton = document.querySelector('.bulleted-btn');
+const checkboxButton = document.querySelector('.checkbox-btn');
+const linkButton = document.querySelector('.link-btn');
+const atButton = document.querySelector('.at-btn');
+const smileButton = document.querySelector('.smile-btn');
+
+boldButton.addEventListener('click', () => {
+  const isBold = document.queryCommandState('bold');
+  if (isBold) {
+    document.execCommand('bold', false, null);
+    removeTagFromSelectedText('strong');
+    boldButton.classList.remove('active');
+  } else {
+    document.execCommand('bold', false, null);
+    wrapSelectedTextWithTag('strong');
+    boldButton.classList.add('active');
+  }
+});
+
+function wrapSelectedTextWithTag(tagName) {
+  const selection = window.getSelection();
+  if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    const wrapper = document.createElement(tagName);
+    wrapper.appendChild(range.extractContents());
+    range.insertNode(wrapper);
+  }
+}
+
+function removeTagFromSelectedText(tagName) {
+  const selection = window.getSelection();
+  if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    const wrapper = document.createElement('div');
+    wrapper.appendChild(range.extractContents());
+    range.insertNode(wrapper.firstChild);
+    wrapper.parentNode.removeChild(wrapper);
+  }
+}
+
+function hasSelection() {
+  const selection = window.getSelection();
+  return selection.toString().length > 0;
+}
+
+function updateButtonStates() {
+  boldButton.classList.toggle('active', hasSelection());
+  italicButton.classList.toggle('active', hasSelection());
+  underlinedButton.classList.toggle('active', hasSelection());
+  bulletedButton.classList.toggle('active', hasSelection());
+  checkboxButton.classList.toggle('active', hasSelection());
+  linkButton.classList.toggle('active', hasSelection());
+  atButton.classList.toggle('active', hasSelection());
+  smileButton.classList.toggle('active', hasSelection());
+}
+
+italicButton.addEventListener('click', () => {
+  document.execCommand('italic', false, null);
+  updateButtonStates();
+});
+
+underlinedButton.addEventListener('click', () => {
+  document.execCommand('underline', false, null);
+  updateButtonStates();
+});
+
+bulletedButton.addEventListener('click', () => {
+  document.execCommand('insertUnorderedList', false, null);
+  updateButtonStates();
+});
+
+checkboxButton.addEventListener('click', () => {
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  const label = document.createElement('label');
+  const listItem = document.createElement('li');
+  listItem.appendChild(checkbox);
+  listItem.appendChild(label);
+  
+  const selection = window.getSelection();
+  if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    const ul = document.createElement('ul');
+    ul.appendChild(listItem);
+    range.insertNode(ul);
+  }
+  
+  updateButtonStates();
+});
+
+linkButton.addEventListener('click', () => {
+  const url = prompt('Введіть URL:');
+  if (url) {
+    document.execCommand('createLink', false, url);
+  }
+  updateButtonStates();
+});
+
+atButton.addEventListener('click', () => {
+  const span = document.createElement('span');
+  span.className = 'at';
+  span.textContent = '@';
+  
+  const selection = window.getSelection();
+  if (selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    range.insertNode(span);
+  }
+  
+  updateButtonStates();
+});
+
+smileButton.addEventListener('click', () => {
+  document.execCommand('insertText', false, '😊');
+  updateButtonStates();
+});
+
+editor.addEventListener('mouseup', () => {
+  updateButtonStates();
+});
+
+editor.addEventListener('keyup', () => {
+  updateButtonStates();
+});
+
 
 /* filter select */
 

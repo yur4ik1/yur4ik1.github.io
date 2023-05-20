@@ -2420,13 +2420,44 @@ body.tasks-page {
             margin-bottom: 0.938vw;
         }
 
+        .block-name.upload-btn {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            span {
+                color: #869DC8;
+                margin-left: 0.626vw;
+            }
+
+            &::before {
+                content: '';
+                background: url('../img/upload-icon.svg') no-repeat center top / cover;
+                width: 0.686vw;
+                height: 0.882vw;
+                margin-right: 0.521vw;
+            }
+        }
+
+        .block-name.upload-btn.btn {
+            width: fit-content;
+            height: 1.981vw;
+            background: #212A41;
+            box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
+            border-radius: 0.469vw;
+            padding-left: 0.561vw;
+            padding-right: 0.561vw;
+            cursor: pointer;
+        }
+
         .desc__editor {
             width: 100%;
-            height: 21.272vw;
+            height: auto;
             background: #20283C;
             border: 0.104vw solid #252E42;
             box-shadow: 0vw 0vw 0.261vw #0C1421;
             border-radius: 0.991vw;
+            margin-bottom: 2.515vw;
         }
 
         .desc__editor-top {
@@ -2445,8 +2476,9 @@ body.tasks-page {
         .settings-list {
             display: flex;
             height: 100%;
-            padding-right: 0.834vw;
-            border-right: 1px solid #869DC8;
+            padding-right: 0.73vw;
+            padding-left: 0.73vw;
+            border-right: 0.052vw solid #869DC8;
 
             button {
                 width: 1.46vw;
@@ -2457,6 +2489,11 @@ body.tasks-page {
                 background: none;
                 border: none;
                 position: relative;
+                margin-right: 0.313vw;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             button.active {
@@ -2473,6 +2510,80 @@ body.tasks-page {
                     position: absolute;
                 }
             }
+
+            .italic-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/italic-icon.svg') no-repeat center top / cover;
+                    width: 0.417vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .underlined-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/underlined-icon.svg') no-repeat center top / cover;
+                    width: 0.626vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .bulleted-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/bulleted-icon.svg') no-repeat center top / cover;
+                    width: 0.886vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .checkbox-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/checkbox-icon.svg') no-repeat center top / cover;
+                    width: 0.834vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .link-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/link-icon.svg') no-repeat center top / cover;
+                    width: 0.834vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .at-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/at-icon.svg') no-repeat center top / cover;
+                    width: 0.834vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            .smile-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/smile-icon.svg') no-repeat center top / cover;
+                    width: 0.834vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
+            &:last-child {
+                border-right: none;
+            }
         }
 
         .editor {
@@ -2485,6 +2596,63 @@ body.tasks-page {
             line-height: 1.303vw;
             letter-spacing: 0.01vw;
             color: #869DC8;
+
+            strong {
+                font-weight: 500;
+                letter-spacing: 0.01vw;
+                color: #FFFFFF;
+            }
+
+            p {
+                margin-top: 0.934vw;
+            }
+
+            a {
+                text-decoration-line: underline;
+                color: #869DC8;
+            }
+
+            ul {
+
+                li {
+                    display: flex;
+                }
+            }
+
+
+            input[type=checkbox] {
+                display: none;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+            }
+
+            input[type=checkbox]+label:before {
+                content: '';
+                background: url(../img/check.svg) no-repeat center top / cover;
+                width: 0.834vw;
+                height: 0.834vw;
+                display: block;
+                margin-right: 0.4vw;
+                cursor: pointer;
+            }
+
+            input[type=checkbox]:checked+label::before {
+                background: url(../img/check-true.svg) no-repeat center top / cover;
+            }
+
+            .at {
+                width: fit-content;
+                height: 1.199vw;
+                background: #2a344a;
+                border-radius: 0.261vw;
+                padding: 0.209vw 0.313vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
