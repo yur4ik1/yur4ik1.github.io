@@ -321,7 +321,6 @@ if (inProgressPopup && inProgressOpen) {
 
 
 
-
 /* filter select */
 
 let selectAll = document.querySelectorAll(".filter-select");

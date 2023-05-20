@@ -854,3 +854,26 @@ button {
     }
   }
 }
+
+.main__popup-content {
+  overflow: auto;
+  margin-right: 4.223vw;
+}
+
+.main__popup-content::-webkit-scrollbar {
+  width: 0.469vw;
+}
+
+.main__popup-content::-webkit-scrollbar-track {
+  background: #202a40;
+  mix-blend-mode: normal;
+  border-radius: 0.521vw;
+}
+
+.main__popup-content::-webkit-scrollbar-thumb {
+  width: 0.469vw;
+  background: #869DC8;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  border-radius: 0.521vw;
+}

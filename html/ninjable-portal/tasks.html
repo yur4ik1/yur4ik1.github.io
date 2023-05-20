@@ -340,12 +340,38 @@
 
                 <div class="main__popup-content">
 
+                    <div class="top">
+                        <button class="delete-btn">Delete the Task</button>
+                        <button class="save-btn">Save</button>
+                    </div>
+                    <div class="task__information">
+                        <p><span>Due Date:</span>03/05/2023</p>
+                        <p><span>Priority:</span>Medium</p>
+                        <p><span>Player:</span>Ivanov Ivan</p>
+                        <p><span>Status:</span>In progress</p>
+                    </div>
+
+                    <h5 class="block-name">Description</h5>
                     <div class="desc__editor">
                         <div class="desc__editor-top">
-                            <button>B</button>
-                            <button>I</button>
+                            <div class="settings-list">
+                                <button class="bold-btn active"></button>
+                                <button class="italic-btn"></button>
+                                <button class="underlined-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="bulleted-btn"></button>
+                                <button class="checkbox-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="link-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="at-btn"></button>
+                                <button class="smile-btn"></button>
+                            </div>
                         </div>
-                        <div id="editor" contenteditable="true"></div>
+                        <div class="editor" id="editor" contenteditable="true"></div>
                     </div>
 
 
