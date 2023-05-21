@@ -2587,7 +2587,7 @@ body.tasks-page {
         }
 
         .editor {
-            height: 100%;
+            min-height: 8.707vw;
             padding-top: 0.73vw;
             padding-bottom: 1.825vw;
             padding-left: 1.564vw;
@@ -2653,6 +2653,136 @@ body.tasks-page {
                 align-items: center;
                 justify-content: center;
             }
+        }
+
+        .attachments__list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 1.386vw;
+
+            .attachments__list-item {
+                width: 6.257vw;
+                height: 6.257vw;
+                margin-right: 2.19vw;
+                margin-bottom: 1.043vw;
+                position: relative;
+                transition: 0.2s;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .remove {
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0.313vw;
+                    right: 0.313vw;
+                    width: 1.199vw;
+                    height: 1.199vw;
+                    background: #212A41;
+                    box-shadow: 0vw 0vw 0.209vw 0.104vw rgba(6, 8, 13, 0.25);
+                    border-radius: 0.313vw;
+
+                    &::after {
+                        content: '';
+                        background: url(../img/attachments-delete.svg) no-repeat center top /cover;
+                        width: 0.521vw;
+                        height: 0.521vw;
+
+                    }
+                }
+
+                &:hover>.remove {
+                    display: flex;
+                }
+            }
+        }
+
+        .tag__list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 38vw;
+            justify-content: flex-start;
+            margin-bottom: 1.346vw;
+
+            .skills__list-tag {
+                display: flex;
+                width: fit-content;
+                height: 1.512vw;
+                background: #20283C;
+                opacity: 0.7;
+                border: 0.104vw solid #252E42;
+                box-shadow: 0vw 0vw 0.261vw #0C1421;
+                border-radius: 0.417vw;
+                font-size: 0.782vw;
+                line-height: 0.782vw;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                letter-spacing: 0.007vw;
+                color: #869DC8;
+                opacity: 0.7;
+                padding-left: 0.73vw;
+                margin-right: 1.043vw;
+                margin-bottom: 1.043vw;
+
+                .remove {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 1.512vw;
+                    height: 1.512vw;
+                    background: #2F3B54;
+                    opacity: 0.7;
+                    box-shadow: 0vw 0vw 0.261vw #0C1421;
+                    border-radius: 0vw 0.417vw 0.417vw 0vw;
+                    position: relative;
+                    margin-left: 0.469vw;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        background: url(../img/remove-icon.svg) no-repeat center top / cover;
+                        width: 0.574vw;
+                        height: 0.574vw;
+                    }
+                }
+            }
+
+            .add {
+                width: 1.512vw;
+                height: 1.512vw;
+                background: #5c6d8e;
+                box-shadow: 0vw 0vw 0.261vw 0.104vw #0C1421;
+                border-radius: 0.417vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &::after {
+                    content: '';
+                    background: url(../img/add-icon.svg) no-repeat center top / cover;
+                    width: 0.678vw;
+                    height: 0.782vw;
+                }
+            }
+        }
+
+        .comments-editor {
+            .file-btn {
+                &::after {
+                    content: '';
+                    background: url('../img/file-icon.svg') no-repeat center top / cover;
+                    width: 0.73vw;
+                    height: 0.834vw;
+                    position: absolute;
+                }
+            }
+
         }
     }
 }
