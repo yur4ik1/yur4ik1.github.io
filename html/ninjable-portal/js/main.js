@@ -304,11 +304,11 @@ if (wisdomScrollPopup && wisdomScrollOpen) {
 
 /* Pop up (Status: In progress) */
 
-const inProgressPopup = document.querySelector('.in-progress-popup');
+const inProgressPopup = document.querySelector('.in-progress');
 const inProgressOpen = document.querySelectorAll('.in-progress-btn');
 const inProgressClose = document.querySelector('.in-progress-close');
 
-if (inProgressPopup && inProgressOpen) {
+if (inProgressPopup && inProgressOpen && inProgressClose) {
   inProgressOpen.forEach(button => {
     button.addEventListener('click', () => {
       inProgressPopup.classList.add('active');
@@ -316,6 +316,40 @@ if (inProgressPopup && inProgressOpen) {
   });
   inProgressClose.addEventListener('click', () => {
     inProgressPopup.classList.remove('active');
+  });
+}
+
+/* Pop up (Under Review) */
+
+const underReviewPopup = document.querySelector('.under-review');
+const underReviewOpen = document.querySelectorAll('.under-review-btn');
+const underReviewClose = document.querySelector('.under-review-close');
+
+if (underReviewPopup && underReviewOpen && underReviewClose) {
+  underReviewOpen.forEach(button => {
+    button.addEventListener('click', () => {
+      underReviewPopup.classList.add('active');
+    });
+  });
+  underReviewClose.addEventListener('click', () => {
+    underReviewPopup.classList.remove('active');
+  });
+}
+
+/* Pop up (Status Open) */
+
+const statusOpenPopup = document.querySelector('.status-open');
+const statusOpenBtn = document.querySelectorAll('.status-open-btn');
+const statusOpenClose = document.querySelector('.status-open-close');
+
+if (statusOpenPopup && statusOpenBtn && statusOpenClose) {
+  statusOpenBtn.forEach(button => {
+    button.addEventListener('click', () => {
+      statusOpenPopup.classList.add('active');
+    });
+  });
+  statusOpenClose.addEventListener('click', () => {
+    statusOpenPopup.classList.remove('active');
   });
 }
 

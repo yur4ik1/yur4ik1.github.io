@@ -3383,3 +3383,55 @@ body.tasks-page {
         }
     }
 }
+
+.under-review,
+.status-open {
+    .main__popup-inner {
+        .main__popup-content {
+            margin-top: 3.318vw;
+        }
+
+        .task__information {
+            position: relative;
+
+            .crystal {
+                position: absolute;
+                right: 2.086vw;
+                font-size: 0.782vw;
+                line-height: 2.503vw;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.013vw;
+                color: #FFFFFF;
+
+                &::before {
+                    content: "";
+                    background: url(../img/crystal-icon.svg) no-repeat center top/cover;
+                    width: 1.408vw;
+                    height: 1.408vw;
+                    margin-right: .834vw;
+                }
+            }
+
+            p {
+                cursor: default;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .editor {
+            .at {
+                color: #FFFFFF;
+            }
+        }
+
+        .tag__list {
+            .skills__list-tag {
+                padding-right: .73vw;
+            }
+        }
+    }
+}
