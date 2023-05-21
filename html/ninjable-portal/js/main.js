@@ -353,6 +353,23 @@ if (statusOpenPopup && statusOpenBtn && statusOpenClose) {
   });
 }
 
+/* Pop up (Status Open) */
+
+const addTaskPopup = document.querySelector('.add-task');
+const addTaskBtn = document.querySelectorAll('.add__task-btn');
+const addTaskClose = document.querySelector('.add-task-close');
+
+if (addTaskPopup && addTaskBtn && addTaskClose) {
+  addTaskBtn.forEach(button => {
+    button.addEventListener('click', () => {
+      addTaskPopup.classList.add('active');
+    });
+  });
+  addTaskClose.addEventListener('click', () => {
+    addTaskPopup.classList.remove('active');
+  });
+}
+
 
 // editor
 /* 

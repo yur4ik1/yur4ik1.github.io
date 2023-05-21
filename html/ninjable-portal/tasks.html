@@ -887,10 +887,210 @@
             <div class="main__popup-inner">
                 <div class="main__popup-top">
                     <h3>ADD TASK</h3>
-                    <span class="main__popup-close status-open-close"></span>
+                    <span class="main__popup-close add-task-close"></span>
                 </div>
 
                 <div class="main__popup-content">
+                    <h5 class="block-name">Task Information</h5>
+                    <div class="field">
+                        <input type="text" placeholder="Summary">
+                        <span class="let-know active">Please let us know the summary</span>
+                    </div>
+
+                    <div class="desc__editor">
+                        <div class="desc__editor-top">
+                            <div class="settings-list">
+                                <button class="bold-btn active"></button>
+                                <button class="italic-btn"></button>
+                                <button class="underlined-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="bulleted-btn"></button>
+                                <button class="checkbox-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="link-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="at-btn"></button>
+                                <button class="smile-btn"></button>
+                            </div>
+                        </div>
+                        <div class="editor" id="editor" contenteditable="true">
+                            <p>Description</p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-select">
+                        <div class="select-selected">Select...</div>
+                        <div class="select-items select-hide">
+                            <div class="select-option">
+                                <input type="checkbox" id="low1">
+                                <label for="low1">Low</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="middle">
+                                <label for="middle">Middle</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="high1">
+                                <label for="high1">High</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="urgent">
+                                <label for="urgent">Urgent</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Due Date</h5>
+                    <div class="due__date-wrap">
+                        <div class="btns">
+                            <div class="btn-wrap">
+                                <button class="today"></button>
+                                <p>Today</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="tomorrow"></button>
+                                <p>Tomorrow</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="noduedate"></button>
+                                <p>No Due date</p>
+                            </div>
+                            <div class="btn-wrap active">
+                                <button class="calendar"></button>
+                                <p>Сalendar</p>
+                            </div>
+                        </div>
+                        <button class="date">
+                            mm/dd/yyyy
+                        </button>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Player</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player1">
+                                    <label for="player1">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player2">
+                                    <label for="player2">B Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player3">
+                                    <label for="player3">C Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player4">
+                                    <label for="player4">D Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player5">
+                                    <label for="player5">E Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player6">
+                                    <label for="player6">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player7">
+                                    <label for="player7">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player8">
+                                    <label for="player8">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player9">
+                                    <label for="player9">A Player</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Skill</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill11">
+                                    <label for="skill11">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill22">
+                                    <label for="skill22">B Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill33">
+                                    <label for="skill33">C Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill44">
+                                    <label for="skill44">D Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill55">
+                                    <label for="skill55">E Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill66">
+                                    <label for="skill66">F Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill77">
+                                    <label for="skill77">G Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill88">
+                                    <label for="skill88">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill99">
+                                    <label for="skill99">A Skill</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" placeholder="Coins Amount">
+                    </div>
+
+                    <div class="bottom">
+                        <button class="add-btn btn">Add</button>
+                    </div>
 
                 </div>
             </div>
