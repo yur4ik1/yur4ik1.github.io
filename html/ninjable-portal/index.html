@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NINJABLE - Register</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="NINJABLE - Register">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo" href="skills.html">
+        <img src="./img/logo.svg" alt="logo">
+      </a>
+    </header>
+
+    <section class="register">
+      <div class="container">
+        <div class="register__content">
+          <div class="register__content-left">
+            <h1>Sign up for free</h1>
+            <p>Full access. No credit card needed.</p>
+            <p>Already have an account? <a href="login-in.html">Log In</a></p>
+          </div>
+          <div class="register__content-right">
+            <form class="register__content-form" action="#">
+              <div class="row">
+                <div class="field">
+                  <p><span>*</span> Company Name</p>
+                  <input type="text" placeholder="Ninjable">
+                  <span class="let-know active">Please let us know your email</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <p><span>*</span> First Name</p>
+                  <input type="text" placeholder="Joe">
+                </div>
+                <div class="field">
+                  <p>Last Name</p>
+                  <input type="text" placeholder="Doe">
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <p><span>*</span> Phone Number</p>
+                  <input type="phone" placeholder="+323 (45) 678-91-26">
+                </div>
+                <div class="field">
+                  <p><span>*</span> Email</p>
+                  <input type="email" placeholder="JoeDoe@ninjable.com">
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <p><span>*</span> Password</p>
+                  <input type="password" id="password" placeholder="***********************">
+                  <span class="password-icon"></span>
+                </div>
+                <div class="field type-password">
+                  <p><span>*</span> Confirm Password</p>
+                  <input type="password" placeholder="***********************">
+                </div>
+              </div>
+
+              <div class="term">
+                <div class="term-field">
+                  <input type="checkbox" id="emails">
+                  <label for="emails">Yes, I want to receive Ninjable Emails</label>
+                </div>
+                <div class="term-field">
+                  <input type="checkbox" id="privacy">
+                  <label for="privacy">I agree to all <a href="#"> Term and Conditions, Privacy Policy </a> and <a
+                      href="#"> Fees</a>
+                  </label>
+                </div>
+              </div>
+              <div class="form-bottom">
+                <button class="btn register-btn" onclick="window.location.href = 'my-profile.html';" type="button">Create Account</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
