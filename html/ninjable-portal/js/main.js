@@ -321,7 +321,7 @@ if (inProgressPopup && inProgressOpen) {
 
 
 // editor
-
+/* 
 const editor = document.getElementById('editor');
 const boldButton = document.querySelector('.bold-btn');
 const italicButton = document.querySelector('.italic-btn');
@@ -452,6 +452,64 @@ if (editor) {
     updateButtonStates();
   })
 };
+
+*/
+
+/* Delete the Task */
+
+const deleteBtn = document.querySelector('.delete-btn');
+const taskDeletePopup = document.querySelector('.task__delete-popup');
+const yesBtn = document.querySelector('.task__delete-popup button:first-child');
+const noBtn = document.querySelector('.task__delete-popup button:last-child');
+
+function handleDeleteBtnClick(event) {
+  event.stopPropagation();
+
+  if (!taskDeletePopup.classList.contains('active')) {
+    taskDeletePopup.classList.add('active');
+  }
+}
+
+function handleConfirmationBtnClick(event) {
+  event.stopPropagation();
+
+  if (taskDeletePopup.classList.contains('active')) {
+    taskDeletePopup.classList.remove('active');
+  }
+}
+
+function handlePageClick() {
+  if (taskDeletePopup.classList.contains('active')) {
+    taskDeletePopup.classList.remove('active');
+  }
+}
+
+deleteBtn.addEventListener('click', handleDeleteBtnClick);
+yesBtn.addEventListener('click', handleConfirmationBtnClick);
+noBtn.addEventListener('click', handleConfirmationBtnClick);
+document.addEventListener('click', handlePageClick);
+
+
+// Due Date popup
+
+const dueDateBtn = document.querySelector('.due-date-btn');
+const datePopup = document.querySelector('.date__popup');
+
+function handleDueDateBtnClick(event) {
+  event.stopPropagation();
+  if (!datePopup.classList.contains('active')) {
+    datePopup.classList.add('active');
+  }
+}
+function handlePageClick(event) {
+  if (!datePopup.contains(event.target) && event.target !== dueDateBtn) {
+    datePopup.classList.remove('active');
+  }
+}
+dueDateBtn.addEventListener('click', handleDueDateBtnClick);
+document.addEventListener('click', handlePageClick);
+
+
 
 
 /* filter select */

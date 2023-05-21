@@ -142,39 +142,39 @@
                                 <div class="arrow"></div>
                                 <div class="new__custom-select__trigger">Skills</div>
                                 <div class="new__custom-options">
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all1">
                                         <label for="all1">Art</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all2">
                                         <label for="all2">Analysis</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all3">
                                         <label for="all3">Design</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all4">
                                         <label for="all4">PHP</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all5">
                                         <label for="all5">Program</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all6">
                                         <label for="all6">P Skill</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all7">
                                         <label for="all7">W Skill</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all8">
                                         <label for="all8">W Skill</label>
                                     </div>
-                                    <div class="new__custom-option" >
+                                    <div class="new__custom-option">
                                         <input type="checkbox" id="all9">
                                         <label for="all9">W Skill</label>
                                     </div>
@@ -331,7 +331,7 @@
         </section>
 
 
-        <div class="main__popup in-progress-popup">
+        <div class="main__popup in-progress-popup active">
             <div class="main__popup-inner">
                 <div class="main__popup-top">
                     <h3>CREATE MOCKUP “MY PROFILE”</h3>
@@ -342,12 +342,90 @@
                     <div class="top">
                         <button class="delete-btn">Delete the Task</button>
                         <button class="save-btn">Save</button>
+                        <div class="task__delete-popup">
+                            Are you sure?
+                            <div class="btns">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="task__information">
-                        <p><span>Due Date:</span>03/05/2023</p>
+                        <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
                         <p><span>Priority:</span>Medium</p>
                         <p><span>Player:</span>Ivanov Ivan</p>
                         <p><span>Status:</span>In progress</p>
+
+                        <div class="date__popup">
+                            <div class="calendar-top">
+                                <button class="prev"></button>
+                                <p>FEBRUARY 2023</p>
+                                <button class="next"></button>
+                            </div>
+                            <div class="calendar">
+                                <table>
+                                    <thead class="calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="calendar-content">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="active">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
                     </div>
                     <h5 class="block-name">Description</h5>
                     <div class="desc__editor">
@@ -468,10 +546,84 @@
                         </div>
                     </div>
 
+                    <h5 class="block-name comments-title">5 Comments</h5>
+                    <div class="comments__list">
+                        <div class="comments-item">
+                            <div class="comment-wrapper">
+                                <div class="avatar">
+                                    <img src="./img/coment-avatar-1.png" alt="">
+                                </div>
+                                <div class="coment-content">
+                                    <p class="name">Ivan Makarov</p>
+                                    <p class="date">25 Jul 2023 at 1:32 PM</p>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at
+                                        quam
+                                        volutpat aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus
+                                        rhoncus
+                                        nisi
+                                        mollis vulputate. Nullam malesuada leo nisi, at iaculis arcu maximus vitae.
+                                        Suspendisse id
+                                        quam vitae erat vehicula facilisis.
+                                    </p>
+                                    <div class="icons">
+                                        <span class="icon"><img src="./img/check-icon.svg" alt=""></span>
+                                        <span class="add-icon"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comments-item comments-child">
+                                <div class="comment-wrapper">
+                                    <div class="avatar">
+                                        <img src="./img/coment-avatar-2.png" alt="">
+                                    </div>
+                                    <div class="coment-content">
+                                        <p class="name">Anton Ivanov (Manager)</p>
+                                        <p class="date">25 Jul 2023 at 9:28 AM</p>
+                                        <p class="text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
+                                            mauris at quam volutpat aliquet. Praesent consequat auctor tellus et
+                                            pretium. Cras rhoncus rhoncus nisi mollis vulputate. Nullam malesuada
+                                            leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                            vehicula facilisis.
+                                        </p>
+                                        <div class="comment-attachments">
+                                            <img src="./img/attachments-1.png" alt="">
+                                            <img src="./img/attachments-2.png" alt="">
+                                        </div>
+                                        <div class="icons">
+                                            <span class="add-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comments-editor-wrap">
+                                <p class="answer">To answer</p>
+                                <div class="desc__editor comments-editor">
+                                    <div class="desc__editor-top">
+                                        <div class="settings-list">
+                                            <button class="file-btn active"></button>
+                                        </div>
+                                        <div class="settings-list">
+                                            <button class="at-btn"></button>
+                                            <button class="smile-btn"></button>
+                                        </div>
+                                    </div>
+                                    <div class="editor" id="editor" contenteditable="true">
+                                        <p>Text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button class="show-comments">Show more comments</button>
+                    </div>
                 </div>
             </div>
         </div>
-
 
 
         <div class="main__popup wisdom__scroll-popup">
@@ -486,39 +638,39 @@
                             <div class="arrow"></div>
                             <div class="new__custom-select__trigger">Clan</div>
                             <div class="new__custom-options">
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="1">
                                     <label for="1">A Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="2">
                                     <label for="2">B Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="3">
                                     <label for="3">C Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="4">
                                     <label for="4">D Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="5">
                                     <label for="5">E Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="6">
                                     <label for="6">F Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="7">
                                     <label for="7">G Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="8">
                                     <label for="8">A Department</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="9">
                                     <label for="9">A Department</label>
                                 </div>
@@ -532,39 +684,39 @@
                             <div class="arrow"></div>
                             <div class="new__custom-select__trigger">Rank</div>
                             <div class="new__custom-options">
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank1">
                                     <label for="rank1">Artist</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank2">
                                     <label for="rank2">Architect</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank3">
                                     <label for="rank3">Analysts</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank4">
                                     <label for="rank4">Developer</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank5">
                                     <label for="rank5">Designer</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank6">
                                     <label for="rank6">D Rank</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank7">
                                     <label for="rank7">E Rank</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank8">
                                     <label for="rank8">A Rank</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="rank9">
                                     <label for="rank9">A Rank</label>
                                 </div>
@@ -578,39 +730,39 @@
                             <div class="arrow"></div>
                             <div class="new__custom-select__trigger">Skill</div>
                             <div class="new__custom-options">
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill1">
                                     <label for="skill1">A Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill2">
                                     <label for="skill2">B Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill3">
                                     <label for="skill3">C Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill4">
                                     <label for="skill4">D Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill5">
                                     <label for="skill5">E Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill6">
                                     <label for="skill6">F Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill7">
                                     <label for="skill7">G Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill8">
                                     <label for="skill8">A Skill</label>
                                 </div>
-                                <div class="new__custom-option" >
+                                <div class="new__custom-option">
                                     <input type="checkbox" id="skill9">
                                     <label for="skill9">A Skill</label>
                                 </div>
