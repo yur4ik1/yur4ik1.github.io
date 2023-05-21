@@ -212,7 +212,7 @@
                             </div>
                             <div class="text">
                                 <p> Create landing, write document and create API Call. <br>Create landing.</p>
-                                <a href="#">Open</a>
+                                <a>Open</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -224,7 +224,7 @@
                             </div>
                             <div class="text">
                                 <p> Create API Call.</p>
-                                <a class="in-progress-btn" href="#">In progress</a>
+                                <a class="in-progress-btn">In progress</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -236,7 +236,7 @@
                             </div>
                             <div class="text">
                                 <p>Write Document</p>
-                                <a href="#">Under review </a>
+                                <a>Under review </a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -248,7 +248,7 @@
                             </div>
                             <div class="text">
                                 <p> Create landing, write document and create API Call. <br>Create landing.</p>
-                                <a href="#">Open</a>
+                                <a>Open</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -260,7 +260,7 @@
                             </div>
                             <div class="text">
                                 <p>Create API Call.</p>
-                                <a class="in-progress-btn" href="#">In progress</a>
+                                <a class="in-progress-btn">In progress</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -272,7 +272,7 @@
                             </div>
                             <div class="text">
                                 <p> Create landing, write document and create API Call. <br>Create landing.</p>
-                                <a href="#">Open</a>
+                                <a>Open</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -284,7 +284,7 @@
                             </div>
                             <div class="text">
                                 <p> Create landing, write document and create API Call. <br>Create landing.</p>
-                                <a href="#">Open</a>
+                                <a>Open</a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -296,7 +296,7 @@
                             </div>
                             <div class="text">
                                 <p> Create API Call.</p>
-                                <a class="in-progress-btn" href="#">In progress </a>
+                                <a class="in-progress-btn">In progress </a>
                             </div>
                         </div>
                         <div class="tasks__list-item">
@@ -308,7 +308,7 @@
                             </div>
                             <div class="text">
                                 <p>Write Document</p>
-                                <a href="#">Under review </a>
+                                <a>Under review </a>
                             </div>
                         </div>
                     </div>
@@ -331,7 +331,7 @@
         </section>
 
 
-        <div class="main__popup in-progress-popup active">
+        <div class="main__popup in-progress-popup">
             <div class="main__popup-inner">
                 <div class="main__popup-top">
                     <h3>CREATE MOCKUP “MY PROFILE”</h3>
@@ -352,9 +352,9 @@
                     </div>
                     <div class="task__information">
                         <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
-                        <p><span>Priority:</span>Medium</p>
-                        <p><span>Player:</span>Ivanov Ivan</p>
-                        <p><span>Status:</span>In progress</p>
+                        <p class="priority-btn"><span>Priority:</span>Medium</p>
+                        <p class="player-btn"><span>Player:</span>Ivanov Ivan</p>
+                        <p class="status-btn"><span>Status:</span>In progress</p>
 
                         <div class="date__popup">
                             <div class="calendar-top">
@@ -424,8 +424,37 @@
                                     </tbody>
                                 </table>
                             </div>
-
                         </div>
+
+                        <div class="priority__popup">
+                            <p>Highest</p>
+                            <p>High</p>
+                            <p class="active">Medium</p>
+                            <p>Low</p>
+                            <p>Lowest</p>
+                        </div>
+
+                        <div class="player__popup">
+                            <div class="player__popup-content">
+                                <p>A Player</p>
+                                <p>B Player</p>
+                                <p>C Player</p>
+                                <p>D Player</p>
+                                <p>E Player</p>
+                                <p>S Player</p>
+                                <p>R Player</p>
+                                <p>G Player</p>
+                            </div>
+                        </div>
+
+                        <div class="status__popup">
+                            <p>Under Review</p>
+                            <p>Open</p>
+                            <p class="active">In Progress</p>
+                            <p>Done</p>
+                            <p>Canceled</p>
+                        </div>
+
                     </div>
                     <h5 class="block-name">Description</h5>
                     <div class="desc__editor">
@@ -484,20 +513,32 @@
                     <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
                     <div class="attachments__list">
                         <div class="attachments__list-item">
-                            <img src="./img/attachments-1.png" alt="">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img src="./img/attachments-2.png" alt="">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img src="./img/attachments-3.png" alt="">
+                            <img class="photo" src="./img/attachments-3.png" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img src="./img/attachments-4.png" alt="">
+                            <img class="photo" src="./img/attachments-4.png" alt="">
                             <button class="remove"></button>
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -616,6 +657,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="no-comments-popup">
+                            <p>
+                                New comments <br>
+                                <span>Latest comments</span>
+                            </p>
                         </div>
                     </div>
                     <div class="bottom">
