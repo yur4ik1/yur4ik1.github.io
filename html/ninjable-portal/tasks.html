@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Skills</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Skills">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="tasks-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Reports</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Settings</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="tasks">
+            <div class="container">
+                <div class="skills__menu-wrapper">
+                    <ul class="skills__menu">
+                        <li class="skills__menu-item">
+                            <a href="skills.html">SKILLS</a>
+                        </li>
+                        <li class="skills__menu-item active">
+                            <a href="tasks.html">TASKS</a>
+                        </li>
+                        <li class="skills__menu-item">
+                            <a href="#">ACHIEVEMENTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tasks__content">
+                    <div class="filter__wrapper">
+
+                        <div class="filter filter-select filter-priority">
+                            <div class="select-selected">Priority</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="highest">
+                                    <label for="highest">Highest</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="high">
+                                    <label for="high">High</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="medium">
+                                    <label for="medium">Medium</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="low">
+                                    <label for="low">Low</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="lowest">
+                                    <label for="lowest">Lowest</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-status">
+                            <div class="select-selected">Status</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="open">
+                                    <label for="open">Open</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="review">
+                                    <label for="review">After Review</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="progress">
+                                    <label for="progress">In Progress</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter new__custom-select-wrapper filter-skills">
+                            <div class="new__custom-select filter-select-scroll">
+                                <div class="arrow"></div>
+                                <div class="new__custom-select__trigger">Skills</div>
+                                <div class="new__custom-options">
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all1">
+                                        <label for="all1">Art</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all2">
+                                        <label for="all2">Analysis</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all3">
+                                        <label for="all3">Design</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all4">
+                                        <label for="all4">PHP</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all5">
+                                        <label for="all5">Program</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all6">
+                                        <label for="all6">P Skill</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all7">
+                                        <label for="all7">W Skill</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all8">
+                                        <label for="all8">W Skill</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="all9">
+                                        <label for="all9">W Skill</label>
+                                    </div>
+                                </div>
+                                <div class="custom-scrollbar"></div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-price">
+                            <div class="select-selected">Price</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="low-price">
+                                    <label for="low-price">Low price first</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="high-price">
+                                    <label for="high-price">High price first</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tasks__list">
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>100</span>
+                            </div>
+                            <div class="name">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="text">
+                                <p> Create landing, write document and create API Call. <br>Create landing.</p>
+                                <a class="status-open-btn">Open</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>500</span>
+                            </div>
+                            <div class="name">
+                                Tilda
+                            </div>
+                            <div class="text">
+                                <p> Create API Call.</p>
+                                <a class="in-progress-btn">In progress</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>200</span>
+                            </div>
+                            <div class="name">
+                                Microsoft<br> Word
+                            </div>
+                            <div class="text">
+                                <p>Write Document</p>
+                                <a class="under-review-btn">Under review </a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>100</span>
+                            </div>
+                            <div class="name">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="text">
+                                <p> Create landing, write document and create API Call. <br>Create landing.</p>
+                                <a class="status-open-btn">Open</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>500</span>
+                            </div>
+                            <div class="name">
+                                Tilda
+                            </div>
+                            <div class="text">
+                                <p>Create API Call.</p>
+                                <a class="in-progress-btn">In progress</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>100</span>
+                            </div>
+                            <div class="name">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="text">
+                                <p> Create landing, write document and create API Call. <br>Create landing.</p>
+                                <a class="status-open-btn">Open</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>100</span>
+                            </div>
+                            <div class="name">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="text">
+                                <p> Create landing, write document and create API Call. <br>Create landing.</p>
+                                <a class="status-open-btn">Open</a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>500</span>
+                            </div>
+                            <div class="name">
+                                Tilda
+                            </div>
+                            <div class="text">
+                                <p> Create API Call.</p>
+                                <a class="in-progress-btn">In progress </a>
+                            </div>
+                        </div>
+                        <div class="tasks__list-item">
+                            <div class="price">
+                                <span>200</span>
+                            </div>
+                            <div class="name">
+                                Microsoft<br> Word
+                            </div>
+                            <div class="text">
+                                <p>Write Document</p>
+                                <a class="under-review-btn">Under review </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                    <div class="add__btns-wrapper">
+                        <div class="add__btns-list">
+                            <button class="wisdom__scroll-btn">+ Wisdom Scroll</button>
+                            <button class="add__task-btn">+ Add Task </button>
+                            <button class="find__task-btn">+ Find Task </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="main__popup in-progress-popup in-progress">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE MOCKUP “MY PROFILE”</h3>
+                    <span class="main__popup-close in-progress-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="top">
+                        <button class="delete-btn">Delete the Task</button>
+                        <button class="save-btn">Save</button>
+                        <div class="task__delete-popup">
+                            Are you sure?
+                            <div class="btns">
+                                <button>Yes</button>
+                                <button>No</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task__information">
+                        <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
+                        <p class="priority-btn"><span>Priority:</span>Medium</p>
+                        <p class="player-btn"><span>Player:</span>Ivanov Ivan</p>
+                        <p class="status-btn"><span>Status:</span>In progress</p>
+
+                        <div class="date__popup">
+                            <div class="calendar-top">
+                                <button class="prev"></button>
+                                <p>FEBRUARY 2023</p>
+                                <button class="next"></button>
+                            </div>
+                            <div class="calendar">
+                                <table>
+                                    <thead class="calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="calendar-content">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="active">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="priority__popup">
+                            <p>Highest</p>
+                            <p>High</p>
+                            <p class="active">Medium</p>
+                            <p>Low</p>
+                            <p>Lowest</p>
+                        </div>
+
+                        <div class="player__popup">
+                            <div class="player__popup-content">
+                                <p>A Player</p>
+                                <p>B Player</p>
+                                <p>C Player</p>
+                                <p>D Player</p>
+                                <p>E Player</p>
+                                <p>S Player</p>
+                                <p>R Player</p>
+                                <p>G Player</p>
+                            </div>
+                        </div>
+
+                        <div class="status__popup">
+                            <p>Under Review</p>
+                            <p>Open</p>
+                            <p class="active">In Progress</p>
+                            <p>Done</p>
+                            <p>Canceled</p>
+                        </div>
+
+                    </div>
+                    <h5 class="block-name">Description</h5>
+                    <div class="desc__editor">
+                        <div class="desc__editor-top">
+                            <div class="settings-list">
+                                <button class="bold-btn active"></button>
+                                <button class="italic-btn"></button>
+                                <button class="underlined-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="bulleted-btn"></button>
+                                <button class="checkbox-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="link-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="at-btn"></button>
+                                <button class="smile-btn"></button>
+                            </div>
+                        </div>
+                        <div class="editor" id="editor" contenteditable="true">
+                            <strong>Create mockup 😊</strong>
+                            <p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="check1">
+                                    <label for="check1"></label>
+                                    Create page
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                    Pop Up
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"></label>
+                                    Pop Up
+                                </li>
+                            </ul>
+                            </p>
+                            <p><a href="#">ninjable.io</a></p>
+                            <p><span class="at">@Kris Ti</span></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at quam
+                                volutpat
+                                aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus rhoncus nisi mollis
+                                vulputate.
+                                Nullam malesuada leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                vehicula facilisis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-3.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-4.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Skills</h5>
+                    <div class="tag__list">
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                            <button class="remove"></button>
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                            <button class="remove"></button>
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                            <button class="remove"></button>
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                            <button class="remove"></button>
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                            <button class="remove"></button>
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                            <button class="remove"></button>
+                        </div>
+                        <button class="add"></button>
+                    </div>
+
+                    <h5 class="block-name">Comments section</h5>
+                    <div class="desc__editor comments-editor">
+                        <div class="desc__editor-top">
+                            <div class="settings-list">
+                                <button class="file-btn active"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="at-btn"></button>
+                                <button class="smile-btn"></button>
+                            </div>
+                        </div>
+                        <div class="editor" id="editor" contenteditable="true">
+                            <p>Text</p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name comments-title">5 Comments</h5>
+                    <div class="comments__list">
+                        <div class="comments-item">
+                            <div class="comment-wrapper">
+                                <div class="avatar">
+                                    <img src="./img/coment-avatar-1.png" alt="">
+                                </div>
+                                <div class="coment-content">
+                                    <p class="name">Ivan Makarov</p>
+                                    <p class="date">25 Jul 2023 at 1:32 PM</p>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at
+                                        quam
+                                        volutpat aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus
+                                        rhoncus
+                                        nisi
+                                        mollis vulputate. Nullam malesuada leo nisi, at iaculis arcu maximus vitae.
+                                        Suspendisse id
+                                        quam vitae erat vehicula facilisis.
+                                    </p>
+                                    <div class="icons">
+                                        <span class="icon"><img src="./img/check-icon.svg" alt=""></span>
+                                        <span class="add-icon"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comments-item comments-child">
+                                <div class="comment-wrapper">
+                                    <div class="avatar">
+                                        <img src="./img/coment-avatar-2.png" alt="">
+                                    </div>
+                                    <div class="coment-content">
+                                        <p class="name">Anton Ivanov (Manager)</p>
+                                        <p class="date">25 Jul 2023 at 9:28 AM</p>
+                                        <p class="text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
+                                            mauris at quam volutpat aliquet. Praesent consequat auctor tellus et
+                                            pretium. Cras rhoncus rhoncus nisi mollis vulputate. Nullam malesuada
+                                            leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                            vehicula facilisis.
+                                        </p>
+                                        <div class="comment-attachments">
+                                            <img src="./img/attachments-1.png" alt="">
+                                            <img src="./img/attachments-2.png" alt="">
+                                        </div>
+                                        <div class="icons">
+                                            <span class="add-icon"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comments-editor-wrap">
+                                <p class="answer">To answer</p>
+                                <div class="desc__editor comments-editor">
+                                    <div class="desc__editor-top">
+                                        <div class="settings-list">
+                                            <button class="file-btn active"></button>
+                                        </div>
+                                        <div class="settings-list">
+                                            <button class="at-btn"></button>
+                                            <button class="smile-btn"></button>
+                                        </div>
+                                    </div>
+                                    <div class="editor" id="editor" contenteditable="true">
+                                        <p>Text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="no-comments-popup">
+                            <p>
+                                New comments <br>
+                                <span>Latest comments</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <button class="show-comments">Show more comments</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__popup in-progress-popup under-review">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE MOCKUP “MY PROFILE”</h3>
+                    <span class="main__popup-close under-review-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="task__information">
+                        <span class="crystal">300</span>
+                        <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
+                        <p class="priority-btn"><span>Priority:</span>Medium</p>
+                        <p class="player-btn"><span>Player:</span>Ivanov Ivan</p>
+                        <p class="status-btn"><span>Status:</span>In progress</p>
+                    </div>
+                    <h5 class="block-name">Description</h5>
+                    <div class="desc__editor">
+
+                        <div class="editor">
+                            <strong>Create mockup 😊</strong>
+                            <p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="check1" checked>
+                                    <label for="check1"></label>
+                                    Create page
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                    Pop Up
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"></label>
+                                    Pop Up
+                                </li>
+                            </ul>
+                            </p>
+                            <p><a href="#">ninjable.io</a></p>
+                            <p><span class="at">@Kris Ti</span></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at quam
+                                volutpat
+                                aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus rhoncus nisi mollis
+                                vulputate.
+                                Nullam malesuada leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                vehicula facilisis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Attachments</h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-3.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-4.png" alt="">
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Skills</h5>
+                    <div class="tag__list">
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__popup in-progress-popup status-open">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE MOCKUP “MY PROFILE”</h3>
+                    <span class="main__popup-close status-open-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="task__information">
+                        <span class="crystal">300</span>
+                        <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
+                        <p class="priority-btn"><span>Priority:</span>Medium</p>
+                        <p class="player-btn"><span>Player:</span>Ivanov Ivan</p>
+                        <p class="status-btn"><span>Status:</span>In progress</p>
+                    </div>
+                    <h5 class="block-name">Description</h5>
+                    <div class="desc__editor">
+
+                        <div class="editor">
+                            <strong>Create mockup 😊</strong>
+                            <p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="check1" checked>
+                                    <label for="check1"></label>
+                                    Create page
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                    Pop Up
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"></label>
+                                    Pop Up
+                                </li>
+                            </ul>
+                            </p>
+                            <p><a href="#">ninjable.io</a></p>
+                            <p><span class="at">@Kris Ti</span></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at quam
+                                volutpat
+                                aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus rhoncus nisi mollis
+                                vulputate.
+                                Nullam malesuada leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                vehicula facilisis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Attachments</h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-3.png" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-4.png" alt="">
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Skills</h5>
+                    <div class="tag__list">
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__popup in-progress-popup add-task">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>ADD TASK</h3>
+                    <span class="main__popup-close add-task-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <h5 class="block-name">Task Information</h5>
+                    <div class="field">
+                        <input type="text" placeholder="Summary">
+                        <span class="let-know active">Please let us know the summary</span>
+                    </div>
+
+                    <div class="desc__editor">
+                        <div class="desc__editor-top">
+                            <div class="settings-list">
+                                <button class="bold-btn active"></button>
+                                <button class="italic-btn"></button>
+                                <button class="underlined-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="bulleted-btn"></button>
+                                <button class="checkbox-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="link-btn"></button>
+                            </div>
+                            <div class="settings-list">
+                                <button class="at-btn"></button>
+                                <button class="smile-btn"></button>
+                            </div>
+                        </div>
+                        <div class="editor" id="editor" contenteditable="true">
+                            <p>Description</p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-1.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="./img/attachments-2.png" alt="">
+                            <button class="remove"></button>
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="./img/photo.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-select">
+                        <div class="select-selected">Select...</div>
+                        <div class="select-items select-hide">
+                            <div class="select-option">
+                                <input type="checkbox" id="low1">
+                                <label for="low1">Low</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="middle">
+                                <label for="middle">Middle</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="high1">
+                                <label for="high1">High</label>
+                            </div>
+                            <div class="select-option">
+                                <input type="checkbox" id="urgent">
+                                <label for="urgent">Urgent</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Due Date</h5>
+                    <div class="due__date-wrap">
+                        <div class="btns">
+                            <div class="btn-wrap">
+                                <button class="today"></button>
+                                <p>Today</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="tomorrow"></button>
+                                <p>Tomorrow</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <button class="noduedate"></button>
+                                <p>No Due date</p>
+                            </div>
+                            <div class="btn-wrap active">
+                                <button class="calendar-btn"></button>
+                                <p>Сalendar</p>
+                            </div>
+                        </div>
+                        <button class="date">
+                            mm/dd/yyyy
+                        </button>
+
+                        <div class="date__popup calendar-popup">
+                            <div class="calendar-top">
+                                <button class="prev"></button>
+                                <p>FEBRUARY 2023</p>
+                                <button class="next"></button>
+                            </div>
+                            <div class="calendar">
+                                <table>
+                                    <thead class="calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="calendar-content">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="active">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Player</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player1">
+                                    <label for="player1">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player2">
+                                    <label for="player2">B Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player3">
+                                    <label for="player3">C Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player4">
+                                    <label for="player4">D Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player5">
+                                    <label for="player5">E Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player6">
+                                    <label for="player6">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player7">
+                                    <label for="player7">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player8">
+                                    <label for="player8">A Player</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="player9">
+                                    <label for="player9">A Player</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Skill</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill11">
+                                    <label for="skill11">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill22">
+                                    <label for="skill22">B Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill33">
+                                    <label for="skill33">C Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill44">
+                                    <label for="skill44">D Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill55">
+                                    <label for="skill55">E Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill66">
+                                    <label for="skill66">F Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill77">
+                                    <label for="skill77">G Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill88">
+                                    <label for="skill88">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill99">
+                                    <label for="skill99">A Skill</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" placeholder="Coins Amount">
+                    </div>
+
+                    <div class="bottom">
+                        <button class="add-btn btn">Add</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__popup wisdom__scroll-popup">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>WISDOM SCROLL</h3>
+                    <span class="main__popup-close wisdom__scroll-close"></span>
+                </div>
+                <div class="field__wrapper">
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Clan</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="1">
+                                    <label for="1">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="2">
+                                    <label for="2">B Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="3">
+                                    <label for="3">C Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="4">
+                                    <label for="4">D Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="5">
+                                    <label for="5">E Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="6">
+                                    <label for="6">F Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="7">
+                                    <label for="7">G Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="8">
+                                    <label for="8">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="9">
+                                    <label for="9">A Department</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Rank</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank1">
+                                    <label for="rank1">Artist</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank2">
+                                    <label for="rank2">Architect</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank3">
+                                    <label for="rank3">Analysts</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank4">
+                                    <label for="rank4">Developer</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank5">
+                                    <label for="rank5">Designer</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank6">
+                                    <label for="rank6">D Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank7">
+                                    <label for="rank7">E Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank8">
+                                    <label for="rank8">A Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank9">
+                                    <label for="rank9">A Rank</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+                            <div class="new__custom-select__trigger">Skill</div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill1">
+                                    <label for="skill1">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill2">
+                                    <label for="skill2">B Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill3">
+                                    <label for="skill3">C Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill4">
+                                    <label for="skill4">D Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill5">
+                                    <label for="skill5">E Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill6">
+                                    <label for="skill6">F Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill7">
+                                    <label for="skill7">G Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill8">
+                                    <label for="skill8">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill9">
+                                    <label for="skill9">A Skill</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" placeholder="Course URL">
+                    </div>
+
+                    <div class="file">
+                        <input type="file" id="file">
+                        <label for="file">Upload File</label>
+                        <p>File.jpg</p>
+                    </div>
+
+                    <div class="bottom">
+                        <a class="btn" href="#">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="profile__info-popup rewards__pupup">
+            <div class="popup__inner">
+                <div class="profile__info-top">
+                    <div class="left">
+                        <img src="./img/popup-avatar.svg" alt="">
+                        <div class="title">
+                            <h4>MAKAROV IVAN</h4>
+                            <p>Green ninja (Senior)</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <p>15 Crystals</p>
+                        </div>
+                        <span class="close-popup rewards-close"></span>
+                    </div>
+                </div>
+
+                <div class="profile__info-content">
+                    <div class="search-wrapper">
+                        <input class="search-input" type="text" placeholder="Ivan Ivanov">
+                        <div class="filter-select">
+                            <div class="select-selected">Select...</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="active">
+                                    <label for="active">Active</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="archied">
+                                    <label for="archied">Archied</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skils__content">
+                        <div class="rewards__list">
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-1.png" alt="">
+                                    <span>300</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A little box with surprise</h5>
+                                    <p>
+                                        The box contains 2 items. <br>
+                                        Size 20x20 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img class="rewards-img-trigger" src="./img/rewards-2.png" alt="">
+                                    <span>5</span>
+
+                                </div>
+                                <div class="text">
+                                    <h5>A big box with fun</h5>
+                                    <p>
+                                        The box contains 4 items. <br>
+                                        Size 60x60 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-3.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Bluetooth wireless headphones Air Pods</h5>
+                                    <p>
+                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and watchOS-based
+                                        watches.
+                                        Bluetooth: 4.0
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-4.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Trip to Sochi</h5>
+                                    <p>
+                                        Duration: 5 days <br>
+                                        Location: Rosa Khutor and Krasnaya Polyana <br>
+                                        Includet: Breakfast, <br>
+                                        Guided tours, Delivery
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-5.png" alt="">
+                                    <span>8</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Hoody</h5>
+                                    <p>
+                                        Hoody with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-6.png" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>T-Shirt</h5>
+                                    <p>
+                                        T-Shirt with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-7.png" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Cap with Logo</h5>
+                                    <p>
+                                        Cap with logo of company. The size is adjustable.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-8.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-9.png" alt="">
+                                    <span>15</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <span class="prev"></span>
+                            <span class="page active">1</span>
+                            <span class="page">2</span>
+                            <span class="next"></span>
+                        </div>
+
+                    </div>
+                    <div class="big__photo-popup">
+                        <img src="./img/rewards-big-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
