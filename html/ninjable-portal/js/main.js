@@ -506,66 +506,6 @@ if (editor) {
 
 */
 
-/* Delete the Task */
-
-function handleBtnClick(event, btn, popup) {
-  event.stopPropagation();
-
-  if (!popup.classList.contains('active')) {
-    popup.classList.add('active');
-  }
-}
-
-function handlePageClick(event, popups, btns) {
-  const isClickOnPopup = popups.some((popup) => popup.contains(event.target));
-  const isClickOnButton = btns.some((btn) => event.target === btn);
-
-  if (!isClickOnPopup && !isClickOnButton) {
-    popups.forEach((popup) => {
-      popup.classList.remove('active');
-    });
-  }
-}
-
-const buttons = [
-  {
-    btn: document.querySelector('.delete-btn'),
-    popup: document.querySelector('.task__delete-popup'),
-  },
-  {
-    btn: document.querySelector('.due-date-btn'),
-    popup: document.querySelector('.date__popup'),
-  },
-  {
-    btn: document.querySelector('.priority-btn'),
-    popup: document.querySelector('.priority__popup'),
-  },
-  {
-    btn: document.querySelector('.player-btn'),
-    popup: document.querySelector('.player__popup'),
-  },
-  {
-    btn: document.querySelector('.status-btn'),
-    popup: document.querySelector('.status__popup'),
-  },
-];
-
-const commentsTitle = document.querySelector('.comments-title');
-const noCommentsPopup = document.querySelector('.no-comments-popup');
-
-buttons.push({
-  btn: commentsTitle,
-  popup: noCommentsPopup,
-});
-
-buttons.forEach(({ btn, popup }) => {
-  btn.addEventListener('click', (event) => handleBtnClick(event, btn, popup));
-});
-
-const allPopups = buttons.map((button) => button.popup);
-const allButtons = buttons.map((button) => button.btn);
-document.addEventListener('click', (event) => handlePageClick(event, allPopups, allButtons));
-
 
 // photo popup 
 
@@ -709,16 +649,18 @@ if (items) {
 const calendarPopup = document.querySelector('.calendar-popup');
 const calendarBtn = document.querySelector('.calendar-btn');
 
-calendarBtn.addEventListener('click', () => {
-  calendarPopup.classList.add('active');
-});
+if (calendarPopup && calendarBtn) {
+  calendarBtn.addEventListener('click', () => {
+    calendarPopup.classList.add('active');
+  });
 
-document.addEventListener('click', (event) => {
-  const targetElement = event.target;
-  if (!targetElement.closest('.calendar-popup') && !targetElement.closest('.calendar-btn')) {
-    calendarPopup.classList.remove('active');
-  }
-});
+  document.addEventListener('click', (event) => {
+    const targetElement = event.target;
+    if (!targetElement.closest('.calendar-popup') && !targetElement.closest('.calendar-btn')) {
+      calendarPopup.classList.remove('active');
+    }
+  })
+};
 
 
 
@@ -882,3 +824,65 @@ newCustomSelects.forEach((newCustomSelect) => {
   });
   updateScroll();
 });
+
+
+
+/* Delete the Task */
+
+function handleBtnClick(event, btn, popup) {
+  event.stopPropagation();
+
+  if (!popup.classList.contains('active')) {
+    popup.classList.add('active');
+  }
+}
+
+function handlePageClick(event, popups, btns) {
+  const isClickOnPopup = popups.some((popup) => popup.contains(event.target));
+  const isClickOnButton = btns.some((btn) => event.target === btn);
+
+  if (!isClickOnPopup && !isClickOnButton) {
+    popups.forEach((popup) => {
+      popup.classList.remove('active');
+    });
+  }
+}
+
+const buttons = [
+  {
+    btn: document.querySelector('.delete-btn'),
+    popup: document.querySelector('.task__delete-popup'),
+  },
+  {
+    btn: document.querySelector('.due-date-btn'),
+    popup: document.querySelector('.date__popup'),
+  },
+  {
+    btn: document.querySelector('.priority-btn'),
+    popup: document.querySelector('.priority__popup'),
+  },
+  {
+    btn: document.querySelector('.player-btn'),
+    popup: document.querySelector('.player__popup'),
+  },
+  {
+    btn: document.querySelector('.status-btn'),
+    popup: document.querySelector('.status__popup'),
+  },
+];
+
+const commentsTitle = document.querySelector('.comments-title');
+const noCommentsPopup = document.querySelector('.no-comments-popup');
+
+buttons.push({
+  btn: commentsTitle,
+  popup: noCommentsPopup,
+});
+
+buttons.forEach(({ btn, popup }) => {
+  btn.addEventListener('click', (event) => handleBtnClick(event, btn, popup));
+});
+
+const allPopups = buttons.map((button) => button.popup);
+const allButtons = buttons.map((button) => button.btn);
+document.addEventListener('click', (event) => handlePageClick(event, allPopups, allButtons));
