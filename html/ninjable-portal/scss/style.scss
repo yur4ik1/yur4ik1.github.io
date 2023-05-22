@@ -2459,134 +2459,6 @@ body.tasks-page {
                 }
             }
 
-            .date__popup {
-                visibility: hidden;
-                opacity: 0;
-                position: absolute;
-                top: 3.321vw;
-                left: 2.521vw;
-                transition: 0.2s;
-                width: 16.528vw;
-                height: 16.736vw;
-                z-index: 9999;
-            }
-
-            .calendar-top {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 1.303vw;
-                width: 100%;
-                height: 3.389vw;
-                background: #202A40;
-                border: 0.104vw solid #252E42;
-                box-shadow: 0vw 0vw 0.261vw #0C1421;
-                border-radius: 1.095vw 1.095vw 0vw 0vw;
-                z-index: 9999999;
-                position: relative;
-
-                p {
-                    font-family: 'Karla';
-                    font-weight: 500;
-                    font-size: 0.834vw;
-                    line-height: 2.19vw;
-                    letter-spacing: 0.016vw;
-                    color: #869DC8;
-                    cursor: default;
-
-                    &::after {
-                        display: none;
-                    }
-                }
-
-                button {
-                    display: flex;
-                    align-items: center;
-                    background: none;
-                }
-
-                .prev {
-                    &::after {
-                        content: '';
-                        background: url(../img/prev.svg) no-repeat center top / cover;
-                        width: 0.365vw;
-                        height: 0.678vw;
-                        position: absolute;
-                    }
-                }
-
-                .next {
-                    &::after {
-                        content: '';
-                        background: url(../img/next.svg) no-repeat center top / cover;
-                        width: 0.365vw;
-                        height: 0.678vw;
-                        position: absolute;
-                    }
-                }
-
-            }
-
-            .calendar {
-                width: 16.528vw;
-                height: 13.295vw;
-                background: #1B2439;
-                box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
-                border-radius: 0vw 0vw 1.095vw 1.095vw;
-                padding-top: 1vw;
-                padding-bottom: 1.773vw;
-                padding-left: 1.086vw;
-                padding-right: 1.086vw;
-
-
-                .calendar-header {
-                    td {
-                        color: #869DC8;
-                    }
-
-                }
-
-                table {
-                    width: 100%;
-                    border-spacing: .617vw .617vw;
-                    height: auto;
-                }
-
-                td,
-                tr {
-                    padding: 0;
-                }
-
-                td {
-                    text-align: center;
-                    font-size: 0.782vw;
-                    line-height: 1.19vw;
-                    letter-spacing: 0.012vw;
-                    color: #FFFFFF;
-                    cursor: pointer;
-                    transition: .2s;
-                }
-
-                .calendar-content {
-                    td.active {
-                        background: #869DC8;
-                        border-radius: 0.209vw;
-                    }
-                }
-
-                .calendar-content {
-                    td:hover {
-                        background: #869DC8;
-                        border-radius: 0.209vw;
-                    }
-                }
-
-            }
-
-            .date__popup.active {
-                opacity: 1;
-                visibility: visible;
-            }
 
             .priority__popup {
                 visibility: hidden;
@@ -2706,6 +2578,135 @@ body.tasks-page {
                 visibility: visible;
                 opacity: 1;
             }
+        }
+
+        .date__popup {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 3.321vw;
+            left: 2.521vw;
+            transition: 0.2s;
+            width: 16.528vw;
+            height: 16.736vw;
+            z-index: 9999;
+        }
+
+        .calendar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.303vw;
+            width: 100%;
+            height: 3.389vw;
+            background: #202A40;
+            border: 0.104vw solid #252E42;
+            box-shadow: 0vw 0vw 0.261vw #0C1421;
+            border-radius: 1.095vw 1.095vw 0vw 0vw;
+            z-index: 9999999;
+            position: relative;
+
+            p {
+                font-family: 'Karla';
+                font-weight: 500;
+                font-size: 0.834vw;
+                line-height: 2.19vw;
+                letter-spacing: 0.016vw;
+                color: #869DC8;
+                cursor: default;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                background: none;
+            }
+
+            .prev {
+                &::after {
+                    content: '';
+                    background: url(../img/prev.svg) no-repeat center top / cover;
+                    width: 0.365vw;
+                    height: 0.678vw;
+                    position: absolute;
+                }
+            }
+
+            .next {
+                &::after {
+                    content: '';
+                    background: url(../img/next.svg) no-repeat center top / cover;
+                    width: 0.365vw;
+                    height: 0.678vw;
+                    position: absolute;
+                }
+            }
+
+        }
+
+        .calendar {
+            width: 16.528vw;
+            height: 13.295vw;
+            background: #1B2439;
+            box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+            border-radius: 0vw 0vw 1.095vw 1.095vw;
+            padding-top: 1vw;
+            padding-bottom: 1.773vw;
+            padding-left: 1.086vw;
+            padding-right: 1.086vw;
+
+
+            .calendar-header {
+                td {
+                    color: #869DC8;
+                }
+
+            }
+
+            table {
+                width: 100%;
+                border-spacing: .617vw .617vw;
+                height: auto;
+            }
+
+            td,
+            tr {
+                padding: 0;
+            }
+
+            td {
+                text-align: center;
+                font-size: 0.782vw;
+                line-height: 1.19vw;
+                letter-spacing: 0.012vw;
+                color: #FFFFFF;
+                cursor: pointer;
+                transition: .2s;
+            }
+
+            .calendar-content {
+                td.active {
+                    background: #869DC8;
+                    border-radius: 0.209vw;
+                }
+            }
+
+            .calendar-content {
+                td:hover {
+                    background: #869DC8;
+                    border-radius: 0.209vw;
+                }
+            }
+
+        }
+
+        .date__popup.active {
+            opacity: 1;
+            visibility: visible;
         }
 
         .block-name {
@@ -3445,6 +3446,7 @@ body.tasks-page {
 
         .desc__editor {
             margin-top: 1.668vw;
+            box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
         }
 
         input {
@@ -3537,7 +3539,7 @@ body.tasks-page {
                     }
                 }
 
-                button.calendar {
+                button.calendar-btn {
                     &::after {
                         content: '';
                         background: url(../img/calendar.svg) no-repeat center top / cover;
@@ -3545,6 +3547,12 @@ body.tasks-page {
                         height: 1.616vw;
                     }
                 }
+            }
+
+            .calendar-popup {
+                top: 1.321vw;
+                left: 13.921vw;
+                z-index: 999999999;
             }
 
             .date {

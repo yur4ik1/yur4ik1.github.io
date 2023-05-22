@@ -704,6 +704,23 @@ if (items) {
 };
 
 
+/* calendar popup */
+
+const calendarPopup = document.querySelector('.calendar-popup');
+const calendarBtn = document.querySelector('.calendar-btn');
+
+calendarBtn.addEventListener('click', () => {
+  calendarPopup.classList.add('active');
+});
+
+document.addEventListener('click', (event) => {
+  const targetElement = event.target;
+  if (!targetElement.closest('.calendar-popup') && !targetElement.closest('.calendar-btn')) {
+    calendarPopup.classList.remove('active');
+  }
+});
+
+
 
 /* custom select */
 
