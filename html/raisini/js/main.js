@@ -12,20 +12,6 @@ burgerClose.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
 });
 
-// header
-
-const prevScrollPos = window.pageYOffset;
-
-window.addEventListener('scroll', function () {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollPos > currentScrollPos) {
-    document.querySelector('.header').classList.remove('hidden');
-  } else {
-    document.querySelector('.header').classList.add('hidden');
-  }
-  prevScrollPos = currentScrollPos;
-});
-
 
 // player
 
@@ -155,4 +141,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// header
 
+const prevScrollPos = window.pageYOffset;
+
+window.addEventListener('scroll', function () {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    document.querySelector('.header').classList.remove('hidden');
+  } else {
+    document.querySelector('.header').classList.add('hidden');
+  }
+  prevScrollPos = currentScrollPos;
+});
