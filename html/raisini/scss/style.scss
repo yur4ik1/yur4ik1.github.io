@@ -7,6 +7,7 @@ body {
     font-style: normal;
     overflow-x: hidden;
     background: #000000;
+    color: #fff;
 }
 
 .header {
@@ -634,8 +635,95 @@ body {
 
 /* contact page */
 
+.contact {
+    padding-top: 15.694vw;
+    padding-bottom: 7.5vw;
+
+    .subtitle {
+        font-size: 1.667vw;
+        line-height: 1.944vw;
+        color: #C4C4C4;
+        margin-top: 1.111vw;
+        margin-bottom: 2.778vw;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            width: 40.833vw;
+            position: relative;
+
+            img {
+                width: 40.833vw;
+                height: 32.5vw;
+                border-radius: 0.833vw;
+            }
+
+            .info {
+                padding: 1.667vw;
+                width: 40.833vw;
+                height: 10.972vw;
+                background: #282527;
+                border-radius: 0vw 0vw 0.833vw 0.833vw;
+                position: absolute;
+                top: 25.1vw;
+            }
+
+            .office {
+                font-size: 1.667vw;
+                line-height: 1.944vw;
+                text-transform: uppercase;
+                color: #EEC858;
+            }
+
+            .adress {
+                font-size: 1.667vw;
+                line-height: 1.944vw;
+                color: #FFFFFF;
+                margin-top: 1.111vw;
+            }
+        }
+
+        .right {
+            .item {
+                padding: 1.667vw;
+                width: 40.833vw;
+                height: 7.778vw;
+                background: #282527;
+                border-radius: 0.833vw;
+                margin-bottom: 1.667vw;
+
+                .title {
+                    font-size: 1.667vw;
+                    line-height: 1.944vw;
+                    text-transform: uppercase;
+                    color: #EEC858;
+                }
+
+                .text {
+                    font-size: 1.667vw;
+                    line-height: 1.944vw;
+                    color: #AEAEAE;
+                    margin-top: 0.556vw;
+                }
+            }
+        }
+    }
+}
 
 
+/* page content */ 
+
+.content {
+    padding-top: 15.694vw;
+    padding-bottom: 7.222vw;
+
+    p {
+        color: #fff;
+    }
+}
 
 
 
