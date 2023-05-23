@@ -6,7 +6,6 @@ body {
     font-family: 'Helvetica';
     font-style: normal;
     overflow-x: hidden;
-    position: relative;
     background: #000000;
 }
 
@@ -14,6 +13,8 @@ body {
     width: 100%;
     position: absolute;
     z-index: 999999;
+    opacity: 1;
+    transition: opacity 0.1s ease;
 
     .container {
         max-width: 100%;
@@ -78,6 +79,10 @@ body {
             }
         }
     }
+}
+
+.header.hidden {
+   display: none;
 }
 
 .offer {
@@ -155,7 +160,7 @@ body {
     }
 
     .offer {
-        height: 216.794vw;
+        height: 852px;
     }
 
     .header .container {
@@ -270,8 +275,8 @@ body {
 
     .offer {
         background: url(../img/offer-mobile-bg.webp) no-repeat center top / cover;
-        width: 100vw;
-        height: 216.794vw;
+        width: 100%;
+       
         display: flex;
         padding-top: 37.659vw;
 
