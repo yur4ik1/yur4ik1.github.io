@@ -714,7 +714,7 @@ body {
 }
 
 
-/* page content */ 
+/* page content */
 
 .content {
     padding-top: 15.694vw;
@@ -725,6 +725,28 @@ body {
     }
 }
 
+
+/* video page */
+
+.video {
+    padding-top: 15.694vw;
+    padding-bottom: 4.722vw;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2.778vw;
+    }
+
+    &__list-item {
+        width: 26.667vw;
+        height: 21.319vw;
+        background: #282527;
+        border-radius: 1.042vw 1.042vw;
+        margin-bottom: 1.667vw;
+    }
+}
 
 
 
@@ -890,5 +912,190 @@ body {
     .music__list {
         flex-direction: column;
         align-items: center;
+    }
+
+    h1 {
+        font-size: 8.142vw;
+        line-height: 9.415vw;
+    }
+
+    .music__top {
+        flex-direction: column;
+    }
+
+    .music__top .filter-wrap .filter {
+        font-size: 4.071vw;
+        line-height: 5.598vw;
+        padding: 4.071vw 6.107vw;
+        width: 42.875vw;
+        height: 11.45vw;
+        border-radius: 1.272vw;
+        margin-right: 4.071vw;
+    }
+
+
+    .music__top .filter-wrap .filter-container .filter-list {
+        padding-top: 4.389vw;
+        padding-right: 4.389vw;
+        left: 0.12vw;
+        top: 11.05vw;
+        border: 0.254vw solid #FFFFFF;
+        border-radius: 0vw 1.272vw 1.272vw 1.272vw;
+
+    }
+
+    .music__top .filter-wrap .filter-container .filter-list .field {
+        margin-bottom: 3.25vw;
+        margin-left: 3.389vw;
+    }
+
+    .music__top .filter-wrap .filter-container .filter-list .field input[type=checkbox]+label:before {
+        width: 3.042vw;
+        height: 3.111vw;
+        margin-right: 2.545vw;
+    }
+
+    .music__top .filter-wrap .filter-container .filter-list .field p {
+        font-size: 4.071vw;
+        line-height: 4.071vw;
+    }
+
+    .filter-wrap {
+        margin-top: 6.107vw;
+    }
+
+    .music__top .filter-wrap .sort {
+        padding: 3.817vw 5.089vw;
+        width: 42.875vw;
+        height: 11.45vw;
+        border: 0.254vw solid #FFFFFF;
+        border-radius: 1.272vw;
+        font-size: 4.071vw;
+        line-height: 4.58vw;
+        
+    }
+
+    .music__top .filter-wrap .sort::after {
+        width: 3.308vw;
+        height: 3.308vw;
+        margin-left: 2.036vw;
+    }
+
+    .music__top .filter-wrap .sort-list {
+        width: 100%;
+        padding-bottom: 4.25vw;
+        top: 11.056vw;
+    }
+
+    .music__top .filter-wrap .sort-list .field {
+        margin-top: 3.25vw;
+        margin-left: 3.042vw;
+    }
+
+    .music__top .filter-wrap .sort-list .field a {
+        font-size: 4.071vw;
+        line-height: 4.071vw;
+    }
+
+
+    .music__list {
+        margin-top: 8.142vw;
+    }
+
+    .music__list-item {
+        width: 89.822vw;
+        height: auto;
+        background: #282527;
+        border-radius: 3.053vw;
+        margin-bottom: 10.178vw;
+    }
+
+    .music__list-item .image {
+        margin: 4.071vw;
+        width: 81.679vw;
+        height: 69.211vw;
+    }
+
+    .music__list-item .info {
+        padding: 0 4.071vw;
+        margin-bottom: 4.835vw;
+        margin-top: 4.071vw;
+    }
+
+    .music__list-item .info h4 {
+        font-size: 5.598vw;
+        line-height: 6.361vw;
+        margin-bottom: 2.036vw;
+    }
+
+    .music__list-item .info .artists {
+        font-size: 4.071vw;
+        line-height: 4.58vw;
+    }
+
+    .music__list-item .sampler {
+        padding: 0 4.071vw;
+    }
+
+    .music__list-item .sampler p {
+        font-size: 3.562vw;
+        line-height: 4.071vw;
+    }
+
+    .music__list-item .sampler button {
+        width: 19.338vw;
+        height: 7.634vw;
+        font-size: 3.053vw;
+        line-height: 3.562vw;
+        padding-left: 2.29vw;
+
+    }
+
+    .music__list-item .bottom {
+        margin-top: 6.107vw;
+
+        border-radius: 0vw 0vw 3.053vw 3.053vw;
+        padding: 4.071vw 9.111vw;
+    }
+
+    .music__list-item .bottom a img {
+        width: 5.094vw;
+        height: 5.094vw;
+    }
+
+
+    .player {
+        min-width: 66%;
+        height: 32.472vw;
+        padding: 3.083vw;
+    }
+
+    .player .image {
+        width: 32.833vw;
+        height: 27.833vw;
+    }
+
+    .player .info h4 {
+        font-size: 3.889vw;
+        line-height: 6.2vw;
+    }
+
+    .player .info p {
+        font-size: 3.889vw;
+        line-height: 6.2vw;
+    }
+
+    .player .manage img.play {
+        width: 10.983vw;
+        height: 4.983vw;
+    }
+
+    .player .manage img.pause {
+        width: 10.983vw;
+        height: 9.983vw;
+    }
+
+    .player .manage button {
+        font-size: 8.5vw;
     }
 }
