@@ -30,17 +30,17 @@ window.addEventListener('scroll', function () {
 // player
 
 window.addEventListener('DOMContentLoaded', function () {
-  var playButtons = document.querySelectorAll('.play');
-  var player = document.querySelector('.player');
-  var pauseButton = player.querySelector('.player-pause');
-  var closeButton = player.querySelector('.close');
-  var audioPlayer = null;
-  var trackName = player.querySelector('.trackName');
-  var trackArtists = player.querySelector('.trackArtists');
-  var playerImage = player.querySelector('.image img');
-  var currentTrack = null;
+  let playButtons = document.querySelectorAll('.play');
+  let player = document.querySelector('.player');
+  let pauseButton = player.querySelector('.player-pause');
+  let closeButton = player.querySelector('.close');
+  let audioPlayer = null;
+  let trackName = player.querySelector('.trackName');
+  let trackArtists = player.querySelector('.trackArtists');
+  let playerImage = player.querySelector('.image img');
+  let currentTrack = null;
 
-  var savedTrack = localStorage.getItem('currentTrack');
+  let savedTrack = localStorage.getItem('currentTrack');
   if (savedTrack) {
     currentTrack = JSON.parse(savedTrack);
     loadTrack(currentTrack.track, currentTrack.title, currentTrack.artist, currentTrack.image);
@@ -49,102 +49,12 @@ window.addEventListener('DOMContentLoaded', function () {
   if (playButtons.length > 0) {
     playButtons.forEach(function (button) {
       button.addEventListener('click', function () {
-        var track = button.value;
-        var musicListItem = button.closest('.music__list-item');
-        var info = musicListItem.querySelector('.info');
-        var trackTitle = info.querySelector('h4').innerText;
-        var trackArtist = info.querySelector('.artists').innerText;
-        var trackImage = musicListItem.querySelector('.image img').src;
-
-        loadTrack(track, trackTitle, trackArtist, trackImage);
-
-        currentTrack = {
-          track: track,
-          title: trackTitle,
-          artist: trackArtist,
-          image: trackImage
-        };
-        localStorage.setItem('currentTrack', JSON.stringify(currentTrack));
-      });
-    });
-  }
-
-  pauseButton.addEventListener('click', function () {
-    if (audioPlayer && !audioPlayer.paused) {
-      audioPlayer.pause();
-      pauseButton.classList.remove('active');
-    } else if (audioPlayer && audioPlayer.paused) {
-      audioPlayer.play();
-      pauseButton.classList.add('active');
-    }
-  });
-
-  closeButton.addEventListener('click', function () {
-    if (audioPlayer && !audioPlayer.paused) {
-      audioPlayer.pause();
-    }
-    player.classList.remove('active');
-  });
-
-  function loadTrack(track, title, artist, image) {
-    player.classList.add('active');
-    playerImage.src = image;
-    trackName.innerText = title;
-    trackArtists.innerText = artist;
-
-    if (audioPlayer) {
-      audioPlayer.pause();
-      audioPlayer = null;
-    }
-
-    audioPlayer = new Audio(track);
-    audioPlayer.addEventListener('loadedmetadata', function () {
-      var savedTrackTime = localStorage.getItem('currentTrackTime');
-      if (savedTrackTime) {
-        audioPlayer.currentTime = parseFloat(savedTrackTime);
-        localStorage.removeItem('currentTrackTime');
-      }
-      audioPlayer.play();
-      pauseButton.classList.add('active');
-    });
-  }
-});
-
-window.addEventListener('beforeunload', function (event) {
-  if (audioPlayer && !audioPlayer.paused) {
-    localStorage.setItem('currentTrackTime', audioPlayer.currentTime);
-  }
-});
-
-
-// filter btns
-
-window.addEventListener('DOMContentLoaded', function () {
-  var playButtons = document.querySelectorAll('.play');
-  var player = document.querySelector('.player');
-  var pauseButton = player.querySelector('.player-pause');
-  var closeButton = player.querySelector('.close');
-  var audioPlayer = null;
-  var trackName = player.querySelector('.trackName');
-  var trackArtists = player.querySelector('.trackArtists');
-  var playerImage = player.querySelector('.image img');
-  var currentTrack = null;
-
-  var savedTrack = localStorage.getItem('currentTrack');
-  if (savedTrack) {
-    currentTrack = JSON.parse(savedTrack);
-    loadTrack(currentTrack.track, currentTrack.title, currentTrack.artist, currentTrack.image);
-  }
-
-  if (playButtons.length > 0) {
-    playButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var track = button.value;
-        var musicListItem = button.closest('.music__list-item');
-        var info = musicListItem.querySelector('.info');
-        var trackTitle = info.querySelector('h4').innerText;
-        var trackArtist = info.querySelector('.artists').innerText;
-        var trackImage = musicListItem.querySelector('.image img').src;
+        let track = button.value;
+        let musicListItem = button.closest('.music__list-item');
+        let info = musicListItem.querySelector('.info');
+        let trackTitle = info.querySelector('h4').innerText;
+        let trackArtist = info.querySelector('.artists').innerText;
+        let trackImage = musicListItem.querySelector('.image img').src;
 
         loadTrack(track, trackTitle, trackArtist, trackImage);
 
@@ -191,7 +101,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     audioPlayer = new Audio(track);
     audioPlayer.addEventListener('loadedmetadata', function () {
-      var savedTrackTime = localStorage.getItem('currentTrackTime');
+      let savedTrackTime = localStorage.getItem('currentTrackTime');
       if (savedTrackTime) {
         audioPlayer.currentTime = parseFloat(savedTrackTime);
         localStorage.removeItem('currentTrackTime');
@@ -211,34 +121,38 @@ window.addEventListener('unload', function (event) {
 
 // filter btns
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const filterButton = document.querySelector('.filter');
   const filterList = document.querySelector('.filter-list');
   const sortButton = document.querySelector('.sort');
   const sortList = document.querySelector('.sort-list');
 
-  filterButton.addEventListener('click', function() {
-    filterList.classList.toggle('active');
-    sortList.classList.remove('active'); 
-  });
-
-  sortButton.addEventListener('click', function() {
-    sortList.classList.toggle('active');
-    filterList.classList.remove('active'); 
-  });
-
-  document.addEventListener('click', function(event) {
-    const target = event.target;
-    if (
-      target !== filterButton &&
-      target !== sortButton &&
-      target !== filterList &&
-      target !== sortList &&
-      !filterList.contains(target) &&
-      !sortList.contains(target)
-    ) {
-      filterList.classList.remove('active');
+  if (filterButton) {
+    filterButton.addEventListener('click', function () {
+      filterList.classList.toggle('active');
       sortList.classList.remove('active');
-    }
-  });
+    });
+
+    sortButton.addEventListener('click', function () {
+      sortList.classList.toggle('active');
+      filterList.classList.remove('active');
+    });
+
+    document.addEventListener('click', function (event) {
+      const target = event.target;
+      if (
+        target !== filterButton &&
+        target !== sortButton &&
+        target !== filterList &&
+        target !== sortList &&
+        !filterList.contains(target) &&
+        !sortList.contains(target)
+      ) {
+        filterList.classList.remove('active');
+        sortList.classList.remove('active');
+      }
+    });
+  }
 });
+
+
