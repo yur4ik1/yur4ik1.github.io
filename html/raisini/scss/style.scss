@@ -7,6 +7,7 @@ body {
     font-style: normal;
     overflow-x: hidden;
     position: relative;
+    background: #000000;
 }
 
 .header {
@@ -56,6 +57,7 @@ body {
 
             li {
                 margin-right: 2.083vw;
+                display: flex;
 
                 a {
                     font-size: 1.111vw;
@@ -68,7 +70,9 @@ body {
                     color: #EEC858;
                 }
             }
-
+            li.active {
+                border-bottom: 0.139vw solid #EEC858;
+            }
             li.active>a {
                 color: #EEC858;
             }
@@ -118,6 +122,19 @@ body {
     }
 }
 
+/* music page */
+
+.music {
+
+}
+
+
+
+
+
+
+
+
 .burger {
     display: none;
 }
@@ -135,6 +152,10 @@ body {
 @media screen and (max-width: 920px) {
     .container {
         max-width: 100%;
+    }
+
+    .offer {
+        height: 216.794vw;
     }
 
     .header .container {
@@ -172,9 +193,9 @@ body {
         right: 0;
         transform: translate(-150%);
         width: 100%;
-        padding: 48px 16px 53px;
+        padding: 3.333vw 1.111vw 3.681vw;
         width: 100%;
-        height: fit-content;
+        height: 263.444vw;
         background: #000000;
         z-index: 999999;
         transition: .3s;
@@ -198,6 +219,7 @@ body {
 
     .mobile__menu-content {
         padding-right: 5.089vw;
+        padding-left: 5.089vw;
 
         ul {
             li {
@@ -229,7 +251,7 @@ body {
         justify-content: center;
         position: relative;
         left: 4vw;
-        margin-top: 41.221vw;
+        margin-top: 32.221vw;
         margin-bottom: 5.486vw;
 
         a {
