@@ -131,6 +131,7 @@ body {
 
 .music {
     padding-top: 15.278vw;
+    padding-bottom: 6.944vw;
 
     &__top {
         width: 100%;
@@ -388,7 +389,100 @@ body {
     }
 }
 
+.player {
+    width: 35%;
+    height: 10.472vw;
+    bottom: 2.389vw;
+    left: 2.389vw;
+    background-color: rgb(51 51 51 / 1);
+    z-index: 30;
+    position: fixed;
+    padding: 1.083vw;
+    border-radius: 1.472vw;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
 
+
+    .image {
+        width: 30%;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .info {
+        margin-left: 2.472vw;
+
+        h4 {
+            font-size: 1.389vw;
+            line-height: 2.2vw;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1.389vw;
+            line-height: 2.2vw;
+            font-weight: 700;
+            color: rgb(174 174 174 / 0.8);
+        }
+    }
+
+    .manage {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 2vw;
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+
+            img {
+                width: 1.983vw;
+                height: 1.983vw;
+            }
+
+            font-size: 2.6vw;
+            line-height: 1;
+            color: #fff;
+            margin-left: 1.389vw;
+        }
+
+        img.play {
+            width: 1.983vw;
+            height: 1.983vw;
+        }
+
+        img.pause {
+            display: none;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(22deg) brightness(101%) contrast(102%);
+        }
+
+        .player-pause.active {
+            img.play {
+                display: none;
+            }
+
+            img.pause {
+                display: block;
+            }
+        }
+    }
+}
+
+.player.active {
+    visibility: visible;
+    opacity: 1;
+    animation: SearchResultsAnonRestricted-module_message-fade-in-4XVrS .2s linear .1s backwards;
+}
 
 
 .burger {
@@ -549,5 +643,10 @@ body {
             width: 48.855vw;
             height: 11.277vw;
         }
+    }
+
+    .music__list {
+        flex-direction: column;
+        align-items: center;
     }
 }
