@@ -14,7 +14,7 @@ body {
     position: absolute;
     z-index: 999999;
     opacity: 1;
-    transition: opacity 0.1s ease;
+    transition: 0.3s ease;
 
     .container {
         max-width: 100%;
@@ -71,9 +71,11 @@ body {
                     color: #EEC858;
                 }
             }
+
             li.active {
                 border-bottom: 0.139vw solid #EEC858;
             }
+
             li.active>a {
                 color: #EEC858;
             }
@@ -81,9 +83,6 @@ body {
     }
 }
 
-.header.hidden {
-   display: none;
-}
 
 .offer {
     background: linear-gradient(108.46deg, #000000 -10.36%, #000000 52.44%, #E0B84C 101.28%);
@@ -129,13 +128,7 @@ body {
 
 /* music page */
 
-.music {
-
-}
-
-
-
-
+.music {}
 
 
 
@@ -148,11 +141,6 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1215px) {
-    .offer {
-        height: 852px;
-    }
-}
 
 @media screen and (max-width: 920px) {
     .container {
@@ -160,7 +148,16 @@ body {
     }
 
     .offer {
-        height: 852px;
+        height: 216.794vw;
+    }
+
+    .header {
+        position: fixed;
+        height: 14.723vw;
+    }
+
+    .header.hidden {
+        background-color: rgba(0, 0, 0, 1);
     }
 
     .header .container {
@@ -198,7 +195,7 @@ body {
         right: 0;
         transform: translate(-150%);
         width: 100%;
-        padding: 3.333vw 1.111vw 3.681vw;
+        padding: 4.233vw 1.111vw 3.681vw;
         width: 100%;
         height: 263.444vw;
         background: #000000;
@@ -262,6 +259,7 @@ body {
         a {
             margin-right: 6.361vw;
             margin-bottom: 7.125vw;
+
             img {
                 width: 5.089vw;
                 height: 5.089vw;
@@ -276,7 +274,7 @@ body {
     .offer {
         background: url(../img/offer-mobile-bg.webp) no-repeat center top / cover;
         width: 100%;
-       
+
         display: flex;
         padding-top: 37.659vw;
 

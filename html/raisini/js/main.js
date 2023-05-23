@@ -12,19 +12,18 @@ burgerClose.addEventListener('click', () => {
 
 // header
 
-window.addEventListener('scroll', function () {
-    var header = document.querySelector('.header');
-    var scrollPos = window.pageYOffset;
+var prevScrollPos = window.pageYOffset;
 
-    var opacity = 1 - scrollPos / 200; // Залежно від прокрутки, змінюємо значення прозорості
+window.addEventListener('scroll', function() {
+  var currentScrollPos = window.pageYOffset;
 
-    if (opacity < 0) {
-        // Прозорість досягла 0
-        header.style.opacity = 0;
-        header.classList.add('hidden');
-    } else {
-        // Прозорість все ще більше 0
-        header.style.opacity = opacity;
-        header.classList.remove('hidden');
-    }
+  if (prevScrollPos > currentScrollPos) {
+    // Прокручено вгору
+    document.querySelector('.header').classList.remove('hidden');
+  } else {
+    // Прокручено вниз
+    document.querySelector('.header').classList.add('hidden');
+  }
+
+  prevScrollPos = currentScrollPos;
 });
