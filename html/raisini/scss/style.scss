@@ -758,9 +758,14 @@ body {
     display: none;
 }
 
+.biography__dg-mob {
+    display: none;
+}
+
 @media screen and (max-width: 920px) {
     .container {
         max-width: 100%;
+        padding: 0 5.089vw;
     }
 
     .offer {
@@ -972,7 +977,7 @@ body {
         border-radius: 1.272vw;
         font-size: 4.071vw;
         line-height: 4.58vw;
-        
+
     }
 
     .music__top .filter-wrap .sort::after {
@@ -1098,5 +1103,215 @@ body {
 
     .player .manage button {
         font-size: 9.5vw;
+    }
+
+
+
+    .tour {
+        padding-top: 21.319vw;
+        padding-bottom: 20.356vw;
+    }
+
+    .tour__list {
+        margin-top: 8.142vw;
+    }
+
+    .tour__list-item {
+        padding: 6.107vw 0;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tour__list-item .date {
+        font-size: 4.071vw;
+        width: fit-content;
+    }
+
+    .tour__list-item .name {
+        font-size: 3.562vw;
+        color: rgba(255, 255, 255, 0.5);
+        width: fit-content;
+        margin-top: 2.036vw;
+    }
+
+    .tour__list-item .title {
+        font-size: 6.107vw;
+        width: fit-content;
+    }
+
+    .tour__list-item .btn {
+        font-size: 3.562vw;
+        line-height: 4.071vw;
+        padding: 4.071vw 4.58vw;
+        width: 24.427vw;
+        height: 8.651vw;
+        background: #EEC858;
+        border-radius: 25.445vw;
+        position: absolute;
+        top: 13.695vw;
+        right: 0;
+    }
+
+
+    .gallery-section {
+        padding-top: 21.319vw;
+        padding-bottom: 18.194vw;
+    }
+
+    .gallery-section .gallery {
+        margin-top: 10.687vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5.545vw;
+    }
+
+    .gallery img:first-child {
+        width: 89.822vw;
+        height: 89.822vw;
+        order: 1;
+    }
+
+    .gallery img:not(:first-child) {
+        width: 41.756vw;
+        height: 41.756vw;
+        order: 2;
+    }
+
+    .gallery-section .gallery img {
+        border-radius: 3.053vw;
+    }
+
+
+
+    .biography {
+        padding-top: 22.694vw;
+
+        .biography__dg-desc {
+            display: none;
+        }
+
+        .biography__dg-mob {
+            display: block;
+
+            img {
+                width: 144.275vw;
+                height: 183.206vw;
+            }
+        }
+
+        .biography__content {
+            padding-top: 6.361vw;
+            padding-bottom: 32.316vw;
+        }
+
+        p {
+            font-size: 5.089vw;
+            line-height: 5.852vw;
+            margin-bottom: 6.107vw;
+        }
+    }
+
+    .contact {
+        padding-top: 19.694vw;
+        padding-bottom: 12.5vw;
+    }
+
+    .contact .subtitle {
+        font-size: 5.089vw;
+        line-height: 5.852vw;
+        margin-top: 2.036vw;
+        margin-bottom: 8.142vw;
+    }
+
+    .contact__wrap {
+        flex-direction: column;
+    }
+
+    .contact__wrap .left {
+        width: 100%;
+    }
+
+    .contact__wrap .left img {
+        width: 100%;
+        height: 73.537vw;
+        border-radius: 3.053vw;
+    }
+
+    .contact__wrap .left .info {
+        padding: 4.071vw 4.071vw 8.142vw;
+        width: 100%;
+        height: 30.478vw;
+        border-radius: 0vw 0vw 3.053vw 3.053vw;
+        top: 43.1vw;
+    }
+
+    .contact__wrap .left .office {
+        font-size: 5.089vw;
+        line-height: 5.852vw;
+    }
+
+    .contact__wrap .left .adress {
+        font-size: 5.089vw;
+        line-height: 5.852vw;
+        margin-top: 4.071vw;
+    }
+
+    .right {
+        margin-top: 6.107vw;
+    }
+
+    .contact__wrap .right .item {
+        padding: 4.071vw;
+        width: 100%;
+        height: 21.883vw;
+        background: #282527;
+        border-radius: 3.053vw;
+        margin-bottom: 6.107vw;
+    }
+
+    .contact__wrap .right .item .title {
+        font-size: 5.089vw;
+        line-height: 5.852vw;
+    }
+
+    .contact__wrap .right .item .text {
+        font-size: 5.089vw;
+        line-height: 5.852vw;
+        margin-top: 2.036vw;
+    }
+
+    .footer {
+        padding: 5.089vw;
+    }
+
+    .footer .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer .copyright {
+        font-size: 3.308vw;
+        line-height: 5.089vw;
+        order: 2;
+        margin-top: 4.071vw;
+    }
+
+    .footer ul li {
+        margin-left: 7.634vw;
+    }
+
+    .footer ul li:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .footer ul li a {
+        font-size: 3.053vw;
+        line-height: 6.616vw;
     }
 }
