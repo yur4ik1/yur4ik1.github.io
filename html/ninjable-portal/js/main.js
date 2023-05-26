@@ -275,7 +275,7 @@ if (addSkillPopup && addSkillOpen) {
 /* passive skills popup */
 
 const passiveSkillsPopup = document.querySelector('.passive__skills-popup');
-const passiveSkillsOpen = document.querySelector('.request');
+const passiveSkillsOpen = document.querySelector('.passive-btn');
 const passiveSkillsClose = document.querySelector('.passive__skills-close');
 
 if (passiveSkillsPopup && passiveSkillsOpen) {
@@ -706,6 +706,7 @@ for (let i = 0; i < selectElements.length; i++) {
 /* custom select new */
 
 const newCustomSelects = document.querySelectorAll('.new__custom-select');
+const arrows = document.querySelectorAll('.arrow');
 
 function closeAllSelectsExcept(selectedSelect) {
   newCustomSelects.forEach((select) => {
@@ -714,6 +715,22 @@ function closeAllSelectsExcept(selectedSelect) {
     }
   });
 }
+
+document.addEventListener('click', (event) => {
+  const targetElement = event.target;
+
+  // Check if the clicked element is a new__custom-select or its descendant
+  const isCustomSelect = targetElement.closest('.new__custom-select');
+  if (!isCustomSelect) {
+    closeAllSelectsExcept(null);
+  }
+});
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener('click', () => {
+    closeAllSelectsExcept(null);
+  });
+});
 
 newCustomSelects.forEach((newCustomSelect) => {
   const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
@@ -738,7 +755,7 @@ newCustomSelects.forEach((newCustomSelect) => {
 
   newCustomTrigger.addEventListener('click', () => {
     if (newCustomSelect.classList.contains('open')) {
-      newCustomSelect.classList.remove('open');
+  
     } else {
       closeAllSelectsExcept(newCustomSelect);
       newCustomSelect.classList.add('open');
@@ -772,25 +789,23 @@ newCustomSelects.forEach((newCustomSelect) => {
         tagItem.appendChild(removeButton);
         skillsTagsList.appendChild(tagItem);
         addRemoveButtonListener(removeButton);
-
-        option.classList.add('selected');
-        newCustomTrigger.textContent = 'Selected';
       } else {
         const newCustomOptionValue = option.getAttribute('data-value');
         const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-        if (newCustomSelect.closest('.acievements-select')) {
+        if (newCustomSelect.closest('.achievements-select')) {
           newCustomTrigger.textContent = 'icon';
         } else {
-          newCustomTrigger.textContent = option.textContent;
+          // Add your desired code here
         }
         newCustomSelect.classList.remove('open');
         if (newCustomSelect.classList.contains('filter-select-scroll')) {
           newCustomSelect.classList.add('open');
-          newCustomTrigger.textContent = 'Selected';
         }
       }
     });
   });
+
+
 
 
   customScrollbarThumb.addEventListener("mousedown", (e) => {

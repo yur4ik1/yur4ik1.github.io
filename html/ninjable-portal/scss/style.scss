@@ -13,6 +13,11 @@ body {
     height: 64vw;
 }
 
+body.my-profile-page {
+    background: url(../img/my-profile-bg.png) no-repeat center top / cover;
+    height: auto;
+}
+
 body.skills-page {
     background: url(../img/skills-page-bg.webp) no-repeat center top / cover;
     height: auto;
@@ -20,7 +25,7 @@ body.skills-page {
 
 body.tasks-page {
     background: url(../img/tasks-page-bg.webp) no-repeat center top / cover;
-    height: auto;
+    height: 121.083vw;
 }
 
 .container {
@@ -583,7 +588,8 @@ body.tasks-page {
 /* My profile */
 
 .profile {
-    padding-top: 10.428vw;
+    padding-top: 9.906vw;
+    padding-bottom: 7.963vw;
 
     .container {
         max-width: 78vw;
@@ -1605,7 +1611,7 @@ body.tasks-page {
 
 .skills {
     padding-top: 3.858vw;
-    padding-bottom: 8.498vw;
+    padding-bottom: 8vw;
 
     .container {
         max-width: 77.633vw;
@@ -1771,6 +1777,20 @@ body.tasks-page {
         .top,
         button {
             display: none;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.607vw;
+
+        .btn {
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            width: 11.105vw;
+            height: 2.503vw;
+            letter-spacing: 0.016vw;
         }
     }
 }
@@ -1990,7 +2010,7 @@ body.tasks-page {
 
 .tasks {
     padding-top: 4.432vw;
-    padding-bottom: 7.5vw;
+    padding-bottom: 15.5vw;
 
     .container {
         max-width: 77.529vw;
@@ -2004,6 +2024,7 @@ body.tasks-page {
         border-radius: 1.356vw;
         margin-top: 3.806vw;
         padding: 3.754vw 4.171vw;
+        padding-bottom: 5.214vw;
     }
 
     .filter__wrapper {
@@ -2092,7 +2113,6 @@ body.tasks-page {
         background: #1B2439;
         width: 100%;
         height: 5.162vw;
-        opacity: 0.8;
         box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
         border-radius: 0.782vw;
         margin-bottom: 2.033vw;
@@ -3434,6 +3454,18 @@ body.tasks-page {
                 padding-right: .73vw;
             }
         }
+
+        .bottom {
+            button {
+                font-size: 0.938vw;
+                line-height: 1.043vw;
+                letter-spacing: 0.016vw;
+                width: 11.731vw;
+                height: 2.503vw;
+            }
+            padding-bottom: 3.849vw;
+            padding-top: 2.806vw;
+        }
     }
 }
 
@@ -3591,4 +3623,168 @@ body.tasks-page {
             }
         }
     }
+}
+
+
+/* achievements page */
+
+.achievements {
+    padding-top: 4.432vw;
+    padding-bottom: 9.906vw;
+
+    .container {
+        max-width: 79vw;
+    }
+
+    &__swiper-list {
+        width: 100%;
+        margin-top: 5.413vw;
+        position: relative;
+        margin-bottom: 2.711vw;
+
+        .achievementsSwiper {
+            padding: 1.1vw;
+            position: relative;
+            right: 1vw;
+        }
+
+        .swiper-button-next,
+        .swiper-rtl .swiper-button-prev {
+            left: 99.3%;
+            top: 53%;
+            width: 1.556vw;
+            height: 1.478vw;
+            margin: 0;
+        }
+
+        .swiper-button-prev,
+        .swiper-rtl .swiper-button-next {
+            left: -2.664vw;
+            top: 53%;
+            width: 1.556vw;
+            height: 1.478vw;
+            margin: 0;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: none;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            img {
+                width: 1.556vw;
+                height: 1.478vw;
+            }
+        }
+    }
+
+    &__swiper-item {
+        width: 13.869vw !important;
+        height: 9.645vw !important;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 0.991vw;
+        margin-right: 1.981vw !important;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: auto;
+            height: 4.745vw;
+            position: absolute;
+            top: 1.3vw;
+        }
+
+        .name {
+            position: absolute;
+            top: 7vw;
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            letter-spacing: 0.013vw;
+            color: #FFFFFF;
+        }
+
+        .info {
+            position: absolute;
+            top: 0.4vw;
+            right: 0.73vw;
+
+            .title {
+                font-size: 0.834vw;
+                line-height: 1.668vw;
+                letter-spacing: 0.008vw;
+                color: #8093B2;
+                text-align: right;
+            }
+
+            .raised {
+                font-family: 'Karla';
+                font-weight: 400;
+                font-size: 1.147vw;
+                line-height: 1.168vw;
+                letter-spacing: 0.013vw;
+                color: #FFFFFF;
+                text-align: right;
+            }
+        }
+    }
+
+    .section-title {
+        font-family: 'Karla';
+        font-weight: 500;
+        font-size: 1.303vw;
+        line-height: 1.408vw;
+        letter-spacing: 0.035vw;
+        color: #869DC8;
+    }
+
+    .acquired__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 1.199vw;
+
+
+
+        .center {
+            width: 33.42vw;
+            height: 29.353vw;
+            background: rgba(29, 36, 56, 0.75);
+            box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+            border-radius: 0.991vw;
+        }
+
+
+        .item {
+            width: 17.518vw;
+            height: 8.655vw;
+            background: rgba(29, 36, 56, 0.75);
+            box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+            border-radius: 0.991vw;
+            margin-bottom: 1.668vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 1.303vw;
+
+            img {
+                width: auto;
+                height: 5.474vw;
+            }
+
+            p {
+                font-size: 0.938vw;
+                line-height: 1.043vw;
+                letter-spacing: 0.013vw;
+                color: #869DC8;
+
+            }
+        }
+    }
+
 }

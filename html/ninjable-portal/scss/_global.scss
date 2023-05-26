@@ -629,6 +629,11 @@ button {
 
 .new__custom-select-wrapper {
   .new__custom-select.filter-select-scroll {
+
+    .arrow {
+      cursor: pointer;
+      z-index: 999999;
+    }
     .new__custom-select__trigger {
       padding-left: 2.086vw;
       background: #1B2439;
@@ -639,6 +644,10 @@ button {
       line-height: 0.73vw;
       letter-spacing: 0.01vw;
       color: #869DC8;
+
+      input {
+        display: none;
+      }
     }
 
     .new__custom-options {
@@ -701,8 +710,26 @@ button {
       font-weight: 400;
       color: #869DC8;
     }
+  }
 
+  .new__custom-select.filter-select-scroll.open {
 
+    .new__custom-select__trigger input {
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      font-weight: 300;
+      font-size: 0.782vw;
+      line-height: 0.73vw;
+      letter-spacing: 0.01vw;
+      color: rgba(134, 157, 200, 0.55);
+      background: #1B2439;
+      border: none;
+      z-index: 999;
+      box-shadow: none;
+    }
   }
 }
 
@@ -781,7 +808,22 @@ button {
     letter-spacing: 0.01vw;
     color: #fff;
   }
+
+  .select-text {
+    display: none;
+  }
 }
+
+.filter-select.active {
+  .select-name {
+    display: none;
+  }
+  .select-text {
+    display: block;
+    color: rgba(134, 157, 200, 0.55);
+  }
+}
+
 
 
 .big__photo-popup {
