@@ -371,142 +371,6 @@ if (addTaskPopup && addTaskBtn && addTaskClose) {
 }
 
 
-// editor
-/* 
-const editor = document.getElementById('editor');
-const boldButton = document.querySelector('.bold-btn');
-const italicButton = document.querySelector('.italic-btn');
-const underlinedButton = document.querySelector('.underlined-btn');
-const bulletedButton = document.querySelector('.bulleted-btn');
-const checkboxButton = document.querySelector('.checkbox-btn');
-const linkButton = document.querySelector('.link-btn');
-const atButton = document.querySelector('.at-btn');
-const smileButton = document.querySelector('.smile-btn');
-
-if (editor) {
-  boldButton.addEventListener('click', () => {
-    const isBold = document.queryCommandState('bold');
-    if (isBold) {
-      document.execCommand('bold', false, null);
-      removeTagFromSelectedText('strong');
-      boldButton.classList.remove('active');
-    } else {
-      document.execCommand('bold', false, null);
-      wrapSelectedTextWithTag('strong');
-      boldButton.classList.add('active');
-    }
-  });
-
-  function wrapSelectedTextWithTag(tagName) {
-    const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      const wrapper = document.createElement(tagName);
-      wrapper.appendChild(range.extractContents());
-      range.insertNode(wrapper);
-    }
-  }
-
-  function removeTagFromSelectedText(tagName) {
-    const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      const wrapper = document.createElement('div');
-      wrapper.appendChild(range.extractContents());
-      range.insertNode(wrapper.firstChild);
-      wrapper.parentNode.removeChild(wrapper);
-    }
-  }
-
-  function hasSelection() {
-    const selection = window.getSelection();
-    return selection.toString().length > 0;
-  }
-
-  function updateButtonStates() {
-    boldButton.classList.toggle('active', hasSelection());
-    italicButton.classList.toggle('active', hasSelection());
-    underlinedButton.classList.toggle('active', hasSelection());
-    bulletedButton.classList.toggle('active', hasSelection());
-    checkboxButton.classList.toggle('active', hasSelection());
-    linkButton.classList.toggle('active', hasSelection());
-    atButton.classList.toggle('active', hasSelection());
-    smileButton.classList.toggle('active', hasSelection());
-  }
-
-  italicButton.addEventListener('click', () => {
-    document.execCommand('italic', false, null);
-    updateButtonStates();
-  });
-
-  underlinedButton.addEventListener('click', () => {
-    document.execCommand('underline', false, null);
-    updateButtonStates();
-  });
-
-  bulletedButton.addEventListener('click', () => {
-    document.execCommand('insertUnorderedList', false, null);
-    updateButtonStates();
-  });
-
-  checkboxButton.addEventListener('click', () => {
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    const label = document.createElement('label');
-    const listItem = document.createElement('li');
-    listItem.appendChild(checkbox);
-    listItem.appendChild(label);
-
-    const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      const ul = document.createElement('ul');
-      ul.appendChild(listItem);
-      range.insertNode(ul);
-    }
-
-    updateButtonStates();
-  });
-
-  linkButton.addEventListener('click', () => {
-    const url = prompt('Введіть URL:');
-    if (url) {
-      document.execCommand('createLink', false, url);
-    }
-    updateButtonStates();
-  });
-
-  atButton.addEventListener('click', () => {
-    const span = document.createElement('span');
-    span.className = 'at';
-    span.textContent = '@';
-
-    const selection = window.getSelection();
-    if (selection.rangeCount > 0) {
-      const range = selection.getRangeAt(0);
-      range.insertNode(span);
-    }
-
-    updateButtonStates();
-  });
-
-  smileButton.addEventListener('click', () => {
-    document.execCommand('insertText', false, '😊');
-    updateButtonStates();
-  });
-
-  editor.addEventListener('mouseup', () => {
-    updateButtonStates();
-  });
-
-  editor.addEventListener('keyup', () => {
-    updateButtonStates();
-  })
-};
-
-*/
-
-
 // photo popup 
 
 const photoPopup = document.querySelector('.photo__popup');
@@ -710,16 +574,15 @@ const arrows = document.querySelectorAll('.arrow');
 
 function closeAllSelectsExcept(selectedSelect) {
   newCustomSelects.forEach((select) => {
-    if (select !== selectedSelect && select.classList.contains('open')) {
+    if (select !== selectedSelect && select.classList.contains('open') && !(select.classList.contains('filter-select-scroll') && select.classList.contains('new__custom-select-open'))) {
       select.classList.remove('open');
     }
   });
 }
 
+
 document.addEventListener('click', (event) => {
   const targetElement = event.target;
-
-  // Check if the clicked element is a new__custom-select or its descendant
   const isCustomSelect = targetElement.closest('.new__custom-select');
   if (!isCustomSelect) {
     closeAllSelectsExcept(null);
@@ -755,7 +618,6 @@ newCustomSelects.forEach((newCustomSelect) => {
 
   newCustomTrigger.addEventListener('click', () => {
     if (newCustomSelect.classList.contains('open')) {
-  
     } else {
       closeAllSelectsExcept(newCustomSelect);
       newCustomSelect.classList.add('open');
@@ -805,10 +667,34 @@ newCustomSelects.forEach((newCustomSelect) => {
     });
   });
 
+  const addSkillTagButton = document.querySelector('.add-skill-tag');
+  const addSlillSelect = document.querySelector('.add-slill-select');
+  const newCustomSelectOpen = document.querySelector('.new__custom-select-open');
 
+  addSkillTagButton.addEventListener('click', () => {
+    addSkillTagButton.style.display = 'none';
+    addSlillSelect.classList.add('active');
+    newCustomSelectOpen.classList.add('open'); // Add the 'open' class to new__custom-select-open
+  });
 
+  document.addEventListener('click', (event) => {
+    const targetElement = event.target;
 
-  customScrollbarThumb.addEventListener("mousedown", (e) => {
+    if (
+      !targetElement.closest('.new__custom-select') &&
+      !targetElement.classList.contains('add-skill-tag')
+    ) {
+      addSkillTagButton.style.display = 'flex';
+      addSlillSelect.classList.remove('active');
+      newCustomSelectOpen.classList.remove('open'); // Remove the 'open' class from new__custom-select-open
+    }
+  });
+
+  if (newCustomOptionsList.length < 9) {
+    customScrollbar.style.display = 'none';
+  }
+
+  customScrollbarThumb.addEventListener('mousedown', (e) => {
     const thumbStartPosition = e.clientY - customScrollbarThumb.getBoundingClientRect().top;
     const scrollbarHeight = customScrollbar.clientHeight;
     const thumbHeight = customScrollbarThumb.clientHeight;
@@ -817,28 +703,45 @@ newCustomSelects.forEach((newCustomSelect) => {
     function onMouseMove(e) {
       const thumbTop = e.clientY - customScrollbar.getBoundingClientRect().top - thumbStartPosition;
       if (thumbTop < 0) {
-        customScrollbarThumb.style.top = "0";
+        customScrollbarThumb.style.top = '0';
         newCustomOptionsContainer.scrollTop = 0;
       } else if (thumbTop > maxThumbTop) {
-        customScrollbarThumb.style.top = maxThumbTop + "px";
+        customScrollbarThumb.style.top = maxThumbTop + 'px';
         newCustomOptionsContainer.scrollTop = newCustomOptionsContainer.scrollHeight;
       } else {
-        customScrollbarThumb.style.top = thumbTop + "px";
-        newCustomOptionsContainer.scrollTop = thumbTop / maxThumbTop * (newCustomOptionsContainer.scrollHeight - newCustomOptionsContainer.clientHeight);
+        customScrollbarThumb.style.top = thumbTop + 'px';
+        newCustomOptionsContainer.scrollTop =
+          (thumbTop / maxThumbTop) * (newCustomOptionsContainer.scrollHeight - newCustomOptionsContainer.clientHeight);
       }
     }
 
     function onMouseUp() {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseup", onMouseUp);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
     }
 
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("mouseup", onMouseUp);
-
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
   });
+
   updateScroll();
 });
+
+
+
+
+
+/* Pop up (Status: In progress) add skill */
+
+/*
+const addSkillBtn = document.querySelector('.add-skill-tag');
+const addSkillSelect = document.querySelector('.add-slill-select');
+
+addSkillBtn.addEventListener('click', () => {
+  addSkillSelect.classList.add('active');
+  addSkillBtn.style.display = "none";
+});
+*/
 
 
 

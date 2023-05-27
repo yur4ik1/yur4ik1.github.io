@@ -3129,6 +3129,7 @@ body.tasks-page {
             width: 38vw;
             justify-content: flex-start;
             margin-bottom: 1.346vw;
+            position: relative;
 
             .skills__list-tag {
                 display: flex;
@@ -3190,6 +3191,14 @@ body.tasks-page {
                     width: 0.678vw;
                     height: 0.782vw;
                 }
+            }
+
+            .add-slill-select {
+                display: none;
+                width: 15.433vw;       
+            } 
+            .add-slill-select.active {
+                display: block;
             }
         }
 
