@@ -95,13 +95,24 @@
                     <h5 class="section-title">Challenges</h5>
                     <div class="swiper achievementsSwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide achievements__swiper-item">
+                            <div class="swiper-slide achievements__swiper-item task-trigger">
                                 <div class="info">
                                     <p class="title">Task</p>
                                     <p class="raised">3/10</p>
                                 </div>
                                 <img src="./img/challenges-1.png" alt="">
                                 <p class="name">Crowned Eagle Mask</p>
+
+                                <div class="achievements__item-popup tasks-popup">
+                                    <h4>Crowned Eagle Mask</h4>
+                                    <p class="text">+30 Crystals</p>
+                                    <div class="raised">
+                                        <p>Tasks: <span>3/10</span></p>
+                                        <p>Period: <span>Weekly</span></p>
+                                        <p>Badges Amount: <span>0/5</span></p>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="swiper-slide achievements__swiper-item">
                                 <div class="info">
@@ -157,43 +168,476 @@
                     <div class="swiper-button-prev"><img src="./img/prev-arrow.svg" alt=""></div>
                 </div>
 
-                <h5 class="section-title">Acquired skills</h5>
-                <div class="acquired__wrapper">
-                    <div class="left">
-                        <div class="item">
-                            <img src="./img/acquired-1.png" alt="">
-                            <p>Sword of Green Aventurine</p>
-                        </div>
-                        <div class="item">
+                <div class="acquired__content">
+                    <h5 class="section-title">Acquired skills</h5>
+                    <div class="acquired__wrapper">
+                        <div class="left">
+                            <div class="item sword-trigger">
+                                <img src="./img/acquired-1.png" alt="">
+                                <p>Sword of Green Aventurine</p>
 
+                                <div class="achievements__item-popup sword-popup">
+                                    <div class="img">
+                                        <img src="./img/acquired-1.png" alt="">
+                                    </div>
+                                    <h4>Sword of Green Aventurine</h4>
+                                    <p class="text">- 200 Coins</p>
+                                    <div class="skill">
+                                        PHP Skill
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <img src="./img/acquired-2.png" alt="">
+                                <p>Shield of Green Aventurine</p>
+                            </div>
+
+                            <div class="item">
+
+                            </div>
                         </div>
-                        <div class="item">
+
+                        <div class="center">
+                            <div class="profile__centre-content">
+                                <div class="character">
+                                    <img src="./img/character-avatar-2.webp" alt="">
+                                </div>
+                                <h3>YOUR CHARACTER</h3>
+                                <div class="leaves"></div>
+                            </div>
+                        </div>
+
+                        <div class="right">
+                            <div class="item meadow-trigger">
+                                <img src="./img/challenges-3.png" alt="">
+                                <p>Meadow with Magic Mushrooms</p>
+
+                                <div class="achievements__item-popup meadow-popup">
+                                    <div class="img">
+                                        <img src="./img/challenges-3.png" alt="">
+                                    </div>
+                                    <h4>Meadow with Magic <br>
+                                        Mushrooms</h4>
+                                    <p class="text">+ 30 Crystals</p>
+                                </div>
+
+                            </div>
+
+                            <div class="item">
+                                <img src="./img/acquired-4.png" alt="">
+                                <p>Indigo Sign</p>
+                            </div>
+
+                            <div class="item">
+                                <img src="./img/acquired-5.png" alt="">
+                                <p>Crowned Eagle Mask</p>
+                            </div>
 
                         </div>
                     </div>
-                    
-                    <div class="center">
-
-                    </div>
-
-                    <div class="right">
-                        <div class="item">
-
-                        </div>
-                        <div class="item">
-
-                        </div>
-                        <div class="item">
-
-                        </div>
+                    <div class="achievements__bottom">
+                        <button class="btn custom-period-btn">All Achievements</button>
                     </div>
                 </div>
-
-
-
             </div>
         </section>
 
+
+        <div class="profile__info-popup custom-period-popup">
+            <div class="popup__inner">
+                <div class="profile__info-top">
+                    <div class="left">
+
+                        <div class="title">
+                            <h4>CUSTOM PERIOD</h4>
+                            <p>5 Nov 2019 - Present Day</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="close-popup custom-period-close"></span>
+                    </div>
+                </div>
+
+                <div class="custom__period-content">
+                    <div class="date">
+                        <span class="date-btn active">11/05/2017</span>
+                        <span class="date-btn">mm/dd/yyyy</span>
+                    </div>
+                    <div class="date__list">
+                        <div class="date__list-item">
+                            <h4>From</h4>
+                            <div class="date__select-wrapper">
+                                <div class="new__custom-select-wrapper date-select">
+                                    <div class="new__custom-select filter-select-scroll">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger month">
+                                            <span>Month</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="January">
+                                                <label for="January">January</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="February">
+                                                <label for="February">February</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="March">
+                                                <label for="March">March</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="July">
+                                                <label for="July">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="April">
+                                                <label for="April">April</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="May">
+                                                <label for="May">May</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="June">
+                                                <label for="June">June</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="July">
+                                                <label for="July">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="August">
+                                                <label for="August">August</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="September">
+                                                <label for="September">September</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="October">
+                                                <label for="October">October</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="November">
+                                                <label for="November">November</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="December">
+                                                <label for="December">December</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-select filter-select-scroll years">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger years">
+                                            <span>Year</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2022">
+                                                <label for="2022">2022</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2021">
+                                                <label for="2021">2021</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2020">
+                                                <label for="2020">2020</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2019">
+                                                <label for="2019">2019</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2018">
+                                                <label for="2018">2018</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2017">
+                                                <label for="2017">2017</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2016">
+                                                <label for="2016">2016</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2015">
+                                                <label for="2015">2015</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2014">
+                                                <label for="2014">2014</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datepicker__calendar">
+                                <table>
+                                    <thead class="datepicker__calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="datepicker__calendar-content calendar-from">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="active">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="date__list-item">
+                            <h4>To</h4>
+                            <div class="date__select-wrapper">
+                                <div class="new__custom-select-wrapper date-select">
+                                    <div class="new__custom-select filter-select-scroll">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger month">
+                                            <span>Month</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJanuary">
+                                                <label for="dJanuary">January</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dFebruary">
+                                                <label for="dFebruary">February</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dMarch">
+                                                <label for="dMarch">March</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJuly">
+                                                <label for="dJuly">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dApril">
+                                                <label for="dApril">April</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dMay">
+                                                <label for="dMay">May</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJune">
+                                                <label for="dJune">June</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJuly">
+                                                <label for="dJuly">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dAugust">
+                                                <label for="dAugust">August</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dSeptember">
+                                                <label for="dSeptember">September</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dOctober">
+                                                <label for="dOctober">October</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dNovember">
+                                                <label for="dNovember">November</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dDecember">
+                                                <label for="dDecember">December</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="new__custom-select filter-select-scroll years">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger years">
+                                            <span>Year</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2022">
+                                                <label for="years2022">2022</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2021">
+                                                <label for="years2021">2021</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2020">
+                                                <label for="years2020">2020</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2019">
+                                                <label for="years2019">2019</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2018">
+                                                <label for="years2018">2018</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2017">
+                                                <label for="years2017">2017</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2016">
+                                                <label for="years2016">2016</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2015">
+                                                <label for="years2015">2015</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2014">
+                                                <label for="years2014">2014</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="datepicker__calendar">
+                                <table>
+                                    <thead class="datepicker__calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="datepicker__calendar-content calendar-to">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom__period-bottom">
+                    <button class="btn">Select</button>
+                </div>
+            </div>
+        </div>
 
 
         <div class="profile__info-popup rewards__pupup">

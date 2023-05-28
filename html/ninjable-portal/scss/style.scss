@@ -3195,8 +3195,9 @@ body.tasks-page {
 
             .add-slill-select {
                 display: none;
-                width: 15.433vw;       
-            } 
+                width: 15.433vw;
+            }
+
             .add-slill-select.active {
                 display: block;
             }
@@ -3472,6 +3473,7 @@ body.tasks-page {
                 width: 11.731vw;
                 height: 2.503vw;
             }
+
             padding-bottom: 3.849vw;
             padding-top: 2.806vw;
         }
@@ -3655,12 +3657,13 @@ body.tasks-page {
             padding: 1.1vw;
             position: relative;
             right: 1vw;
+            height: 18.342vw;
         }
 
         .swiper-button-next,
         .swiper-rtl .swiper-button-prev {
             left: 99.3%;
-            top: 53%;
+            top: 35%;
             width: 1.556vw;
             height: 1.478vw;
             margin: 0;
@@ -3669,7 +3672,7 @@ body.tasks-page {
         .swiper-button-prev,
         .swiper-rtl .swiper-button-next {
             left: -2.664vw;
-            top: 53%;
+            top: 35%;
             width: 1.556vw;
             height: 1.478vw;
             margin: 0;
@@ -3689,6 +3692,66 @@ body.tasks-page {
         }
     }
 
+    .achievements__item-popup {
+        width: auto;
+        height: auto;
+        left: 10.474vw;
+        top: 3.067vw;
+        background: #1B2439;
+        box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.095vw;
+        position: absolute;
+        padding-top: 1.825vw;
+        padding-left: 2.242vw;
+        padding-right: 1.303vw;
+        padding-bottom: 1.564vw;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 999999999;
+        transition: 0.3s;
+
+        h4 {
+            font-size: 1.043vw;
+            line-height: 1.303vw;
+            letter-spacing: 0.014vw;
+            color: #869DC8;
+
+        }
+
+        .text {
+            font-family: 'Karla';
+            font-weight: 500;
+            font-size: 0.782vw;
+            line-height: 1.303vw;
+            letter-spacing: 0.01vw;
+            color: #FFFFFF;
+
+        }
+
+        .raised {
+            margin-top: 0.938vw;
+
+            p {
+                font-size: 0.782vw;
+                line-height: 1.303vw;
+                letter-spacing: 0.01vw;
+                color: #869DC8;
+
+                span {
+                    font-size: 0.782vw;
+                    line-height: 1.668vw;
+                    letter-spacing: 0.01vw;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .achievements__item-popup.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__swiper-item {
         width: 13.869vw !important;
         height: 9.645vw !important;
@@ -3700,6 +3763,8 @@ body.tasks-page {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        z-index: -1;
 
         img {
             width: auto;
@@ -3740,6 +3805,14 @@ body.tasks-page {
                 text-align: right;
             }
         }
+
+        .achievements__item-popup {
+            min-width: 11.755vw;
+        }
+    }
+
+    .acquired__content {
+        margin-top: -6vw;
     }
 
     .section-title {
@@ -3765,6 +3838,42 @@ body.tasks-page {
             background: rgba(29, 36, 56, 0.75);
             box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
             border-radius: 0.991vw;
+            position: relative;
+            padding-top: 1.825vw;
+
+            .profile__centre-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile__centre-content .character img {
+                width: 17.518vw;
+                height: 19.37vw;
+                position: initial;
+            }
+
+            .profile__centre-content .leaves {
+                background: url(../img/profile-leaves-2.webp) no-repeat center top/cover;
+                width: 100%;
+                height: 13.139vw;
+                top: 7.521vw;
+            }
+
+            h3 {
+                font-weight: 700 !important;
+                font-size: 1.303vw;
+                line-height: 2.503vw;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.021vw;
+                background: linear-gradient(90deg, #35B6F1 0%, #4CD4EC 116.58%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-top: 4.171vw;
+            }
         }
 
 
@@ -3780,10 +3889,12 @@ body.tasks-page {
             align-items: center;
             flex-direction: column;
             padding: 1.303vw;
+            cursor: pointer;
+            position: relative;
 
             img {
                 width: auto;
-                height: 5.474vw;
+                height: 4.474vw;
             }
 
             p {
@@ -3791,9 +3902,288 @@ body.tasks-page {
                 line-height: 1.043vw;
                 letter-spacing: 0.013vw;
                 color: #869DC8;
+                margin-top: 1.043vw;
+            }
 
+            .achievements__item-popup {
+                width: 18.04vw;
+                height: 13.556vw;
+                left: 12.474vw;
+                top: 2.067vw;
+                padding-right: 2.303vw;
+
+                p {
+                    margin: 0;
+                }
+
+                .img {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.043vw;
+                    width: 100%;
+                    height: 4.327vw;
+
+                    img {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+
+                .text {
+                    color: #fff;
+                    line-height: 2.243vw;
+                }
+
+                .skill {
+                    font-size: 0.782vw;
+                    line-height: 1.303vw;
+                    letter-spacing: 0.01vw;
+                    color: #FFFFFF;
+                    opacity: 0.6;
+                    margin-top: 0.469vw;
+                }
+            }
+        }
+
+        .right {
+            .achievements__item-popup {
+                left: -9.926vw;
+                width: auto;
             }
         }
     }
 
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.962vw;
+
+        button {
+            width: 11.314vw;
+            height: 2.503vw;
+            font-size: 0.938vw;
+            line-height: 1.043vw;
+            letter-spacing: 0.016vw;
+        }
+    }
+}
+
+.custom-period-popup {
+    .popup__inner {
+        width: 43.431vw;
+        height: 45.142vw;
+    }
+
+    .profile__info-top {
+        padding-right: 1.877vw;
+    }
+
+
+    .custom__period-content {
+        padding: 1.711vw 3.962vw;
+        padding-bottom: 2.711vw;
+
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 13.243vw;
+            height: 2.555vw;
+            background: #202A40;
+            border: 0.052vw solid #252E42;
+            border-radius: 0.417vw;
+            padding-left: 0.417vw;
+            padding-right: 0.417vw;
+            margin-bottom: 2.398vw;
+
+            .date-btn {
+                width: 5.214vw;
+                height: 1.721vw;
+                border-radius: 0.261vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.782vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.01vw;
+                color: #869dc8;
+                cursor: pointer;
+                position: relative;
+
+                &.active {
+                    background: #869dc8;
+                    color: #fff;
+                }
+
+                &:nth-child(1):after {
+                    content: "";
+                    background: url(../img/date-btn-arrow.svg) no-repeat center top/cover;
+                    width: 1.043vw;
+                    height: 0.73vw;
+                    display: block;
+                    position: absolute;
+                    left: 5.6vw;
+                }
+            }
+        }
+
+        .date__list {
+            display: flex;
+            justify-content: space-between;
+
+            .date__list-item {
+                width: 16.475vw;
+
+                h4 {
+                    font-weight: 500;
+                    font-size: 1.043vw;
+                    line-height: 2.19vw;
+                    letter-spacing: 0.016vw;
+                    color: #fff;
+                    margin-bottom: 0.938vw;
+                }
+
+                .date__select-wrapper {
+                    position: relative;
+                    box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
+                    border-radius: 0.417vw;
+
+                    .new__custom-select-wrapper.date-select {
+                        position: relative;
+                        user-select: none;
+                        width: 100%;
+                        display: flex;
+
+                        .new__custom-select.month {
+                            width: 9.541vw;
+                        }
+
+                        .new__custom-select {
+                            width: 100%;
+                            position: relative;
+
+
+                            .new__custom-select__trigger {
+                                border: .052vw solid #2f3b54;
+                                z-index: 9999;
+                                padding-left: 1.086vw;
+                                box-shadow: none;
+
+                                input {
+                                    padding-left: 1.086vw;
+                                }
+                            }
+
+                            .new__custom-options {
+                                box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
+                                border-radius: 0vw 0.417vw 0.417vw 0.417vw;
+                                top: 0vw;
+                                z-index: 999;
+                                max-height: 17.641vw;
+                            }
+
+                            .new__custom-option {
+                                padding: .678vw 1.086vw;
+
+                                &:nth-child(1) {
+                                    margin-top: 3.064vw;
+                                }
+                            }
+
+
+                            .new__custom-select__trigger.month {
+                                width: 9.593vw;
+                                border-top-left-radius: 0.417vw;
+                                border-bottom-left-radius: 0.417vw;
+                                border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                                border-top: none;
+                                border-bottom: none;
+                                border-left: none;
+                            }
+
+                            .new__custom-select__trigger.years {
+                                width: 6.934vw;
+                                border-top-right-radius: 0.417vw;
+                                border-bottom-right-radius: 0.417vw;
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                                border-left: none;
+                                border-top: none;
+                                border-bottom: none;
+                                border-right: none;
+                            }
+                        }
+                    }
+                }
+
+                .datepicker__calendar {
+                    margin-top: 2.19vw;
+                    width: 16.475vw;
+                    height: 14.39vw;
+                    background: #1B2439;
+                    box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
+                    border-radius: 21px;
+                    border-radius: 1.095vw;
+                    padding-top: 1.46vw;
+                    padding-bottom: 1.773vw;
+                    padding-left: 2.086vw;
+                    padding-right: 2.086vw;
+                    opacity: 0.9;
+
+                    table {
+                        width: 100%;
+                        border-spacing: 0.617vw 0.617vw;
+                        height: auto;
+
+                        .datepicker__calendar-header td {
+                            font-size: 0.782vw;
+                            letter-spacing: -0.012vw;
+                            color: #869dc8;
+                        }
+
+                        .datepicker__calendar-content td {
+                            font-size: 0.782vw;
+                            letter-spacing: 0.012vw;
+                            color: #fff;
+                            cursor: pointer;
+                            transition: 0.2s;
+
+                            &.active {
+                                background: #869dc8;
+                                border-radius: 0.209vw;
+                                color: #fff;
+                            }
+
+                            &:hover {
+                                background: #869dc8;
+                                border-radius: 0.209vw;
+                                color: #fff;
+                            }
+                        }
+
+                        td,
+                        th {
+                            width: 1.147vw;
+                            height: 1.147vw;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .custom__period-bottom {
+        display: flex;
+        justify-content: center;
+
+        button {
+            font-size: 0.834vw;
+            line-height: 1.043vw;
+            letter-spacing: 0.016vw;
+            width: 8.238vw;
+            height: 2.503vw;
+        }
+    }
 }

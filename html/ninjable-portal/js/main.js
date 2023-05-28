@@ -428,6 +428,50 @@ if (rewardsImgTrigger && bigPhotoPopup) {
   })
 };
 
+/* tasks-popup */
+
+const taskTrigger = document.querySelector('.task-trigger');
+const taskPopup = document.querySelector('.tasks-popup');
+
+if (taskTrigger && taskPopup) {
+  taskTrigger.addEventListener('click', function () {
+    taskPopup.classList.add('active');
+    taskTrigger.style.zIndex = '9999';
+
+    setTimeout(function () {
+      taskPopup.classList.remove('active');
+    }, 3000);
+  });
+}
+
+/* tasks-popup */
+
+const swordTrigger = document.querySelector('.sword-trigger');
+const swordPopup = document.querySelector('.sword-popup');
+
+if (swordTrigger && swordPopup) {
+  swordTrigger.addEventListener('click', function () {
+    swordPopup.classList.add('active');
+
+    setTimeout(function () {
+      swordPopup.classList.remove('active');
+    }, 3000);
+  });
+}
+
+const meadowTrigger = document.querySelector('.meadow-trigger');
+const meadowPopup = document.querySelector('.meadow-popup');
+
+if (meadowTrigger && meadowPopup) {
+  meadowTrigger.addEventListener('click', function () {
+    meadowPopup.classList.add('active');
+
+    setTimeout(function () {
+      meadowPopup.classList.remove('active');
+    }, 3000);
+  });
+}
+
 
 /* tasks list bg */
 
@@ -525,6 +569,21 @@ if (calendarPopup && calendarBtn) {
     }
   })
 };
+
+/* custom period popup */
+
+const customPeriodPopup = document.querySelector('.custom-period-popup');
+const customPeriodBtn = document.querySelector('.custom-period-btn');
+const customPeriodClose = document.querySelector('.custom-period-close');
+
+if (customPeriodPopup && customPeriodBtn) {
+  customPeriodBtn.addEventListener('click', () => {
+    customPeriodPopup.classList.add('active');
+  });
+  customPeriodClose.addEventListener('click', () => {
+    customPeriodPopup.classList.remove('active');
+  });
+}
 
 
 
@@ -671,24 +730,30 @@ newCustomSelects.forEach((newCustomSelect) => {
   const addSlillSelect = document.querySelector('.add-slill-select');
   const newCustomSelectOpen = document.querySelector('.new__custom-select-open');
 
-  addSkillTagButton.addEventListener('click', () => {
-    addSkillTagButton.style.display = 'none';
-    addSlillSelect.classList.add('active');
-    newCustomSelectOpen.classList.add('open'); // Add the 'open' class to new__custom-select-open
-  });
 
-  document.addEventListener('click', (event) => {
-    const targetElement = event.target;
+  if (addSkillTagButton) {
+    addSkillTagButton.addEventListener('click', () => {
+      addSkillTagButton.style.display = 'none';
+      addSlillSelect.classList.add('active');
+      newCustomSelectOpen.classList.add('open');
+    });
 
-    if (
-      !targetElement.closest('.new__custom-select') &&
-      !targetElement.classList.contains('add-skill-tag')
-    ) {
-      addSkillTagButton.style.display = 'flex';
-      addSlillSelect.classList.remove('active');
-      newCustomSelectOpen.classList.remove('open'); // Remove the 'open' class from new__custom-select-open
-    }
-  });
+    document.addEventListener('click', (event) => {
+      const targetElement = event.target;
+
+      if (
+        !targetElement.closest('.new__custom-select') &&
+        !targetElement.classList.contains('add-skill-tag')
+      ) {
+        addSkillTagButton.style.display = 'flex';
+        addSlillSelect.classList.remove('active');
+        newCustomSelectOpen.classList.remove('open');
+      }
+    });
+
+  }
+
+
 
   if (newCustomOptionsList.length < 9) {
     customScrollbar.style.display = 'none';
@@ -726,23 +791,6 @@ newCustomSelects.forEach((newCustomSelect) => {
 
   updateScroll();
 });
-
-
-
-
-
-/* Pop up (Status: In progress) add skill */
-
-/*
-const addSkillBtn = document.querySelector('.add-skill-tag');
-const addSkillSelect = document.querySelector('.add-slill-select');
-
-addSkillBtn.addEventListener('click', () => {
-  addSkillSelect.classList.add('active');
-  addSkillBtn.style.display = "none";
-});
-*/
-
 
 
 /* Delete the Task */
