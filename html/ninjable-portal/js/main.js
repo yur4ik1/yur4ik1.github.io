@@ -570,6 +570,21 @@ if (calendarPopup && calendarBtn) {
   })
 };
 
+/* achievements popup */
+
+const achievementsPopup = document.querySelector('.achievements-popup');
+const achievementsBtn = document.querySelector('.achievements-btn');
+const achievementsClose = document.querySelector('.achievements-close');
+
+if (achievementsPopup && achievementsBtn) {
+  achievementsBtn.addEventListener('click', () => {
+    achievementsPopup.classList.add('active');
+  });
+  achievementsClose.addEventListener('click', () => {
+    achievementsPopup.classList.remove('active');
+  });
+}
+
 /* custom period popup */
 
 const customPeriodPopup = document.querySelector('.custom-period-popup');
@@ -582,6 +597,25 @@ if (customPeriodPopup && customPeriodBtn) {
   });
   customPeriodClose.addEventListener('click', () => {
     customPeriodPopup.classList.remove('active');
+  });
+}
+
+// temporary block
+
+const temporaryTrigger = document.querySelector('.temporary-trigger');
+const permanentTrigger = document.querySelector('.permanent-trigger');
+const permanentAchievements = document.querySelector('.permanent-achievements');
+const temporaryAchievements = document.querySelector('.temporary-achievements');
+
+if (temporaryTrigger && permanentTrigger && permanentAchievements && temporaryAchievements) {
+  temporaryTrigger.addEventListener('click', function() {
+    permanentAchievements.classList.add('active');
+    temporaryAchievements.classList.remove('active');
+  });
+
+  permanentTrigger.addEventListener('click', function() {
+    permanentAchievements.classList.remove('active');
+    temporaryAchievements.classList.add('active');
   });
 }
 
