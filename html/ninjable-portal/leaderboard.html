@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NINJABLE - Achievements</title>
+    <title>NINJABLE - Leaderboard</title>
     <meta name="robots" content="index,follow">
-    <meta name="description" content="NINJABLE - Achievements">
+    <meta name="description" content="NINJABLE - Leaderboard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="skills-page achievements-page">
+<body class="leaderboard-page">
     <div class="wrapper">
         <header class="header">
             <a class="header__logo" href="skills.html">
@@ -53,7 +52,7 @@
                     <li class="profile__menu-item">
                         <a href="my-profile.html">My Profile</a>
                     </li>
-                    <li class="profile__menu-item">
+                    <li class="profile__menu-item active">
                         <a href="leaderboard.html">Leaderboard</a>
                     </li>
                     <li class="profile__menu-item">
@@ -75,351 +74,532 @@
             </div>
         </header>
 
-        <section class="achievements">
+        <section class="leaderboard">
             <div class="container">
-                <div class="skills__menu-wrapper">
-                    <ul class="skills__menu">
-                        <li class="skills__menu-item">
-                            <a href="skills.html">SKILLS</a>
-                        </li>
-                        <li class="skills__menu-item">
-                            <a href="tasks.html">TASKS</a>
-                        </li>
-                        <li class="skills__menu-item active">
-                            <a href="achievements.html">ACHIEVEMENTS</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="achievements__swiper-list">
-                    <h5 class="section-title">Challenges</h5>
-                    <div class="swiper achievementsSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide achievements__swiper-item task-trigger">
-                                <div class="info">
-                                    <p class="title">Task</p>
-                                    <p class="raised">3/10</p>
-                                </div>
-                                <img src="./img/challenges-1.png" alt="">
-                                <p class="name">Crowned Eagle Mask</p>
-
-                                <div class="achievements__item-popup tasks-popup">
-                                    <h4>Crowned Eagle Mask</h4>
-                                    <p class="text">+30 Crystals</p>
-                                    <div class="raised">
-                                        <p>Tasks: <span>3/10</span></p>
-                                        <p>Period: <span>Weekly</span></p>
-                                        <p>Badges Amount: <span>0/5</span></p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <div class="info">
-                                    <p class="title">Coins</p>
-                                    <p class="raised">150/200</p>
-                                </div>
-                                <img src="./img/challenges-2.png" alt="">
-                                <p class="name">Indigo Sign</p>
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <div class="info">
-                                    <p class="title">Task</p>
-                                    <p class="raised">3/3</p>
-                                </div>
-                                <img src="./img/challenges-3.png" alt="">
-                                <p class="name">Meadow with Magic... </p>
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <img src="./img/challenges-1.png" alt="">
-                                <p class="name">Super Hero</p>
-                                <div class="info">
-                                    <p class="title">Skills</p>
-                                    <p class="raised">0/1</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <div class="info">
-                                    <p class="title">Task</p>
-                                    <p class="raised">20/25</p>
-                                </div>
-                                <img src="./img/challenges-2.png" alt="">
-                                <p class="name">Mayan Totem</p>
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <div class="info">
-                                    <p class="title">Task</p>
-                                    <p class="raised">3/10</p>
-                                </div>
-                                <img src="./img/challenges-3.png" alt="">
-                                <p class="name">Crowned Eagle Mask</p>
-                            </div>
-                            <div class="swiper-slide achievements__swiper-item">
-                                <div class="info">
-                                    <p class="title">Task</p>
-                                    <p class="raised">3/10</p>
-                                </div>
-                                <img src="./img/challenges-1.png" alt="">
-                                <p class="name">Crowned Eagle Mask</p>
-                            </div>
-                        </div>
+                <div class="leaderboard__content">
+                    <div class="top">
+                        <h1>LEADERBOARD</h1>
                     </div>
-                    <div class="swiper-button-next"><img src="./img/next-arrow.svg" alt=""></div>
-                    <div class="swiper-button-prev"><img src="./img/prev-arrow.svg" alt=""></div>
-                </div>
-
-                <div class="acquired__content">
-                    <h5 class="section-title">Acquired skills</h5>
-                    <div class="acquired__wrapper">
+                    <div class="leaderboard__info">
                         <div class="left">
-                            <div class="item sword-trigger">
-                                <img src="./img/acquired-1.png" alt="">
-                                <p>Sword of Green Aventurine</p>
+                            <div class="title">
+                                <div class="avatar">
+                                    <img src="./img/avatar.svg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>YOU (2D ARTIST)</h3>
+                                    <p class="rang">Green ninja (Senior)</p>
 
-                                <div class="achievements__item-popup sword-popup">
-                                    <div class="img">
-                                        <img src="./img/acquired-1.png" alt="">
+                                    <h6>This week:</h6>
+
+                                    <div class="item">
+                                        <span class="coins">Coins earned</span>
+                                        <span>40</span>
                                     </div>
-                                    <h4>Sword of Green Aventurine</h4>
-                                    <p class="text">- 200 Coins</p>
-                                    <div class="skill">
-                                        PHP Skill
+                                    <div class="item">
+                                        <span class="crystals">Сrystals earned</span>
+                                        <span>15</span>
                                     </div>
+                                    <div class="item">
+                                        <span class="finished">Tasks finished</span>
+                                        <span>22</span>
+                                    </div>
+                                    <div class="item">
+                                        <span class="upgraded">Skills upgraded</span>
+                                        <span>1</span>
+                                    </div>
+
+                                    <button class="btn report-btn">Report</button>
                                 </div>
 
                             </div>
-
-                            <div class="item">
-                                <img src="./img/acquired-2.png" alt="">
-                                <p>Shield of Green Aventurine</p>
-                            </div>
-
-                            <div class="item">
-
-                            </div>
                         </div>
-
-                        <div class="center">
-                            <div class="profile__centre-content">
-                                <div class="character">
-                                    <img src="./img/character-avatar-2.webp" alt="">
-                                </div>
-                                <h3>YOUR CHARACTER</h3>
-                                <div class="leaves"></div>
-                            </div>
-                        </div>
-
                         <div class="right">
-                            <div class="item meadow-trigger">
-                                <img src="./img/challenges-3.png" alt="">
-                                <p>Meadow with Magic Mushrooms</p>
-
-                                <div class="achievements__item-popup meadow-popup">
-                                    <div class="img">
-                                        <img src="./img/challenges-3.png" alt="">
-                                    </div>
-                                    <h4>Meadow with Magic <br>
-                                        Mushrooms</h4>
-                                    <p class="text">+ 30 Crystals</p>
-                                </div>
-
+                            <div class="illustrations">
+                                <img src="./img/illustrations-img.png" alt="">
+                                <h5>Well done! :)</h5>
                             </div>
-
-                            <div class="item">
-                                <img src="./img/acquired-4.png" alt="">
-                                <p>Indigo Sign</p>
-                            </div>
-
-                            <div class="item">
-                                <img src="./img/acquired-5.png" alt="">
-                                <p>Crowned Eagle Mask</p>
-                            </div>
-
                         </div>
                     </div>
-                    <div class="achievements__bottom">
-                        <button class="btn achievements-btn">All Achievements</button>
+
+                    <div class="leaderboard__filter">
+                        <div class="filter new__custom-select-wrapper filter-name">
+                            <div class="new__custom-select filter-select-scroll">
+                                <div class="arrow"></div>
+
+                                <div class="new__custom-select__trigger">
+                                    <span>Name</span>
+                                    <input type="text" placeholder="Type here to search...">
+                                </div>
+
+                                <div class="new__custom-options">
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Abramenko">
+                                        <label for="Abramenko">Abramenko Nikita</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Antonov">
+                                        <label for="Antonov">Antonov Ivan</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Doe">
+                                        <label for="Doe">Doe Joe</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Eliseeva">
+                                        <label for="Eliseeva">Eliseeva Irina</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Filimonova">
+                                        <label for="Filimonova">Filimonova Natalya</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Ivanova">
+                                        <label for="Ivanova">Ivanova Marina</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Williams">
+                                        <label for="Williams">Williams Piter</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Ivanova">
+                                        <label for="Ivanova">Ivanova Marina</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Williams">
+                                        <label for="Williams">Williams Piter</label>
+                                    </div>
+                                </div>
+                                <div class="custom-scrollbar">
+                                    <div class="custom-scrollbar-thumb"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-level">
+                            <div class="select-selected">
+                                <span class="select-name">Level</span>
+                                <span class="select-text">Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="White">
+                                    <label for="White">White Ninja</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Yellow">
+                                    <label for="Yellow">Yellow Ninja</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Green">
+                                    <label for="Green">Green Ninja </label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Red">
+                                    <label for="Red">Red Ninja</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Purple">
+                                    <label for="Purple">Purple Ninja </label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Black">
+                                    <label for="Black">Black Ninja</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select new__custom-select-wrapper filter-clan">
+                            <div class="new__custom-select filter-select-scroll">
+                                <div class="arrow"></div>
+
+                                <div class="new__custom-select__trigger">
+                                    <span>Clan</span>
+                                    <input type="text" placeholder="Type here to search...">
+                                </div>
+
+                                <div class="new__custom-options">
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="a">
+                                        <label for="a">A Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="b">
+                                        <label for="b">B Department </label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="d">
+                                        <label for="d">D Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="e">
+                                        <label for="e">E Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="f">
+                                        <label for="f">F Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="h">
+                                        <label for="h">H Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="t">
+                                        <label for="t">T Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="t">
+                                        <label for="t">T Department</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="t">
+                                        <label for="t">T Department</label>
+                                    </div>
+                                </div>
+                                <div class="custom-scrollbar">
+                                    <div class="custom-scrollbar-thumb"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select new__custom-select-wrapper filter-rank">
+                            <div class="new__custom-select filter-select-scroll">
+                                <div class="arrow"></div>
+
+                                <div class="new__custom-select__trigger">
+                                    <span>Rank</span>
+                                    <input type="text" placeholder="Type here to search...">
+                                </div>
+
+                                <div class="new__custom-options">
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Artists">
+                                        <label for="Artists">Artists</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Accounting">
+                                        <label for="Accounting">Accounting</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Developers">
+                                        <label for="Developers">Developers</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Engineering">
+                                        <label for="Engineering">Engineering</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Financial">
+                                        <label for="Financial">Financial</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="HR">
+                                        <label for="HR">HR</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Testers">
+                                        <label for="Testers">Testers</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Testers">
+                                        <label for="Testers">Testers</label>
+                                    </div>
+                                    <div class="new__custom-option">
+                                        <input type="checkbox" id="Testers">
+                                        <label for="Testers">Testers</label>
+                                    </div>
+                                </div>
+                                <div class="custom-scrollbar">
+                                    <div class="custom-scrollbar-thumb"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">Period</span>
+                                <span class="select-text">Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="Week">
+                                    <label for="Week">This Week</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Month">
+                                    <label for="Month">This Month</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Quarter">
+                                    <label for="Quarter">This Quarter</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Year">
+                                    <label for="Year">This Year</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="All">
+                                    <label for="All">All Time</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard__list">
+
+                        <div class="leaderboard__list-item yellow">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-1.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>JOE DOE <span>Tester (Yellow Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">48 Coins Earned</span>
+                                        <span class="crystals">8 Crystals Earned</span>
+                                        <span class="finished">31 Tasks Finished</span>
+                                        <span class="upgraded">2 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>1</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item green">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-2.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>YOU <span>2D Artist (Green Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">40 Coins Earned</span>
+                                        <span class="crystals">15 Crystals Earned</span>
+                                        <span class="finished">22 Tasks Finished</span>
+                                        <span class="upgraded">1 Skill Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>2</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item white">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-3.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>MARINA IVANOVA <span>2D Artist (White Ninja) </span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">38 Coins Earned</span>
+                                        <span class="crystals">22 Crystals Earned</span>
+                                        <span class="finished">20 Tasks Finished</span>
+                                        <span class="upgraded">0 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>3</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item purple">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-4.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>JOE DOE <span>Tester (Green Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">48 Coins Earned</span>
+                                        <span class="crystals">8 Crystals Earned</span>
+                                        <span class="finished">31 Tasks Finished</span>
+                                        <span class="upgraded">2 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>4</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item black">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-5.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>JOE DOE <span>Tester (Green Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">48 Coins Earned</span>
+                                        <span class="crystals">8 Crystals Earned</span>
+                                        <span class="finished">31 Tasks Finished</span>
+                                        <span class="upgraded">2 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>5</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item red">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>JOE DOE <span>Tester (Green Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">48 Coins Earned</span>
+                                        <span class="crystals">8 Crystals Earned</span>
+                                        <span class="finished">31 Tasks Finished</span>
+                                        <span class="upgraded">2 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>6</span>
+                            </div>
+                        </div>
+
+                        <div class="leaderboard__list-item yellow">
+                            <div class="wrap">
+                                <div class="avatar">
+                                    <img src="./img/leaderboard-avatar-1.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>JOE DOE <span>Tester (Yellow Ninja)</span></h3>
+                                    <div class="info-list">
+                                        <span class="coins">48 Coins Earned</span>
+                                        <span class="crystals">8 Crystals Earned</span>
+                                        <span class="finished">31 Tasks Finished</span>
+                                        <span class="upgraded">2 Skills Upgraded</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="number">
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <div class="main__popup achievements-popup">
+        <div class="main__popup skill-report">
             <div class="main__popup-inner">
                 <div class="main__popup-top">
-                    <h3>ALL ACHIEVEMENTS</h3>
-                    <span class="main__popup-close achievements-close"></span>
+                    <h3>SKILL REPORT</h3>
+                    <span class="main__popup-close skill-report-close"></span>
                 </div>
-
                 <div class="main__popup-content">
-                    <div class="badges-wrap">
-                        <h4 class="custom-period-btn">Badges of the year</h4>
-                        <div class="badges-list">
+                    <div class="report__dropdown active">
+                        <span class="arrow dropdown-btn"></span>
+                        <h6>This Week:</h6>
+                        <div class="info">
+                            <span class="coins">40 Coins earned</span>
+                            <span class="crystals">15 Сrystals  earned </span>
+                            <span class="finished">22 Tasks finished</span>
+                            <span class="upgraded">1 Skill upgraded</span>
+                        </div>
+
+                        <div class="info-list">
                             <div class="item">
-                                <div class="images image-container">
-                                    <img src="./img/achievements-item-1.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
+                                <p class="name">Sketch</p>
+                                <div class="info right">
+                                    <span class="finished">3</span>
+                                    <span class="coins">3</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="images image-container">
-                                    <img src="./img/achievements-item-2.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
+                                <p class="name">Photoshop</p>
+                                <div class="info right">
+                                    <span class="finished">17</span>
+                                    <span class="coins">300</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="images image-container">
-                                    <img src="./img/achievements-item-3.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
+                                <p class="name">English</p>
+                                <div class="info right">
+                                    <span class="finished">2</span>
+                                    <span class="coins">5</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="info-list">
+                            <h6>Wisdom Scroll:</h6>
                             <div class="item">
-                                <div class="images">
-                                    <img src="./img/achievements-item-4.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="images">
-                                    <img src="./img/achievements-item-5.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="images">
-                                    <img src="./img/achievements-item-6.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>
-                                        <span>Indigo Sign</span> <br>
-                                        (10 times)
-                                    </p>
+                                <p class="name">Sketch</p>
+                                <div class="info right">
+                                    <span class="finished">3</span>
+                                    <span class="coins">3</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="temporary temporary-achievements active">
-                        <h4 class="temporary-trigger">Temporary Achievements</h4>
-                        <div class="temporary-list">
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-1.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Indigo Sign</p>
-                                </div>
-                            </div>
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-4.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Crowned Eagle<br>Mask</p>
-                                </div>
-                            </div>
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-5.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Meadow with Magic <br>Mushrooms</p>
+                    <div class="report__dropdown">
+                        <span class="arrow dropdown-btn"></span>
+                        <h6>This Week:</h6>
+                        <div class="info">
+                            <span class="coins">40 Coins earned</span>
+                            <span class="crystals">15 Сrystals  earned </span>
+                            <span class="finished">22 Tasks finished</span>
+                            <span class="upgraded">1 Skill upgraded</span>
+                        </div>
+
+                        <div class="info-list">
+                            <div class="item">
+                                <p class="name">Sketch</p>
+                                <div class="info right">
+                                    <span class="finished">3</span>
+                                    <span class="coins">3</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
+                                <p class="name">Photoshop</p>
+                                <div class="info right">
+                                    <span class="finished">17</span>
+                                    <span class="coins">300</span>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
+                                <p class="name">English</p>
+                                <div class="info right">
+                                    <span class="finished">2</span>
+                                    <span class="coins">5</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="info-list">
+                            <h6>Wisdom Scroll:</h6>
                             <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
+                                <p class="name">Sketch</p>
+                                <div class="info right">
+                                    <span class="finished">3</span>
+                                    <span class="coins">3</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="temporary permanent-achievements">
-                        <h4 class="permanent-trigger">Permanent Achievements</h4>
-                        <div class="temporary-list">
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-7.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Shield of Green <br>Aventurine</p>
-                                </div>
-                            </div>
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-8.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Shield of<br>Tanzonite</p>
-                                </div>
-                            </div>
-                            <div class="item active">
-                                <div class="images">
-                                    <img src="./img/achievements-item-9.png" alt="">
-                                </div>
-                                <div class="info">
-                                    <p>Shield of <br>Emerald</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="images">
-                                    <!--<img src="./img/achievements-item-5.png" alt=""> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+            
                 </div>
             </div>
         </div>
-
 
         <div class="profile__info-popup custom-period-popup">
             <div class="popup__inner">
@@ -815,7 +995,6 @@
             </div>
         </div>
 
-
         <div class="profile__info-popup rewards__pupup">
             <div class="popup__inner">
                 <div class="profile__info-top">
@@ -899,8 +1078,7 @@
                                 <div class="text">
                                     <h5>Bluetooth wireless headphones Air Pods</h5>
                                     <p>
-                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and
-                                        watchOS-based
+                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and watchOS-based
                                         watches.
                                         Bluetooth: 4.0
                                     </p>
@@ -1026,24 +1204,7 @@
 
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".achievementsSwiper", {
-            slidesPerView: 5,
-            spaceBetween: 30,
-            freeMode: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
     <script src="./js/main.min.js"></script>
-
 
 </body>
 

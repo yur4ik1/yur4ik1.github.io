@@ -472,6 +472,23 @@ if (meadowTrigger && meadowPopup) {
   });
 }
 
+/* skill report popup */
+
+const skillReportPopup = document.querySelector('.skill-report');
+const skillReportOpen = document.querySelector('.report-btn');
+const skillReportClose = document.querySelector('.skill-report-close');
+
+if (skillReportPopup && skillReportOpen) {
+  skillReportOpen.addEventListener('click', () => {
+    skillReportPopup.classList.add('active');
+  });
+  skillReportClose.addEventListener('click', () => {
+    skillReportPopup.classList.remove('active');
+  });
+}
+
+
+
 
 /* tasks list bg */
 
@@ -608,22 +625,50 @@ const permanentAchievements = document.querySelector('.permanent-achievements');
 const temporaryAchievements = document.querySelector('.temporary-achievements');
 
 if (temporaryTrigger && permanentTrigger && permanentAchievements && temporaryAchievements) {
-  temporaryTrigger.addEventListener('click', function() {
+  temporaryTrigger.addEventListener('click', function () {
     permanentAchievements.classList.add('active');
     temporaryAchievements.classList.remove('active');
   });
 
-  permanentTrigger.addEventListener('click', function() {
+  permanentTrigger.addEventListener('click', function () {
     permanentAchievements.classList.remove('active');
     temporaryAchievements.classList.add('active');
   });
 }
+
+// dropdown block
+
+const dropdowns = document.querySelectorAll('.report__dropdown');
+
+document.querySelectorAll('.dropdown-btn').forEach((btn) => {
+  btn.addEventListener('click', function () {
+    const dropdown = this.closest('.report__dropdown');
+    if (dropdown) {
+      dropdown.classList.toggle('active');
+    }
+  });
+});
 
 
 
 /* custom select */
 
 let selectElements = document.getElementsByClassName("custom-select");
+
+document.addEventListener("click", function (event) {
+
+  if (!event.target.closest(".custom-select")) {
+    for (let i = 0; i < selectElements.length; i++) {
+      let selectElement = selectElements[i];
+      let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
+      let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
+
+      selectSelectedElement.classList.remove("select-arrow-active");
+      selectItemsElement.classList.add("select-hide");
+      selectElement.classList.remove("active");
+    }
+  }
+});
 
 for (let i = 0; i < selectElements.length; i++) {
   let selectElement = selectElements[i];
@@ -635,7 +680,6 @@ for (let i = 0; i < selectElements.length; i++) {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
 
-    // Оновлюємо стан `custom-select` на основі класів `select-selected`
     if (this.classList.contains("select-arrow-active")) {
       selectElement.classList.add("active");
     } else {
@@ -650,7 +694,6 @@ for (let i = 0; i < selectElements.length; i++) {
       selectSelectedElement.classList.remove("select-arrow-active");
       selectItemsElement.classList.add("select-hide");
 
-      // Оновлюємо стан `custom-select` на основі класів `select-selected`
       if (selectSelectedElement.classList.contains("select-arrow-active")) {
         selectElement.classList.add("active");
       } else {
@@ -659,6 +702,7 @@ for (let i = 0; i < selectElements.length; i++) {
     });
   }
 }
+
 
 /* custom select new */
 
@@ -886,3 +930,4 @@ buttons.forEach(({ btn, popup }) => {
 const allPopups = buttons.map((button) => button.popup);
 const allButtons = buttons.map((button) => button.btn);
 document.addEventListener('click', (event) => handlePageClick(event, allPopups, allButtons));
+
