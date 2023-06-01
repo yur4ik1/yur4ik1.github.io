@@ -918,16 +918,19 @@ const buttons = [
 const commentsTitle = document.querySelector('.comments-title');
 const noCommentsPopup = document.querySelector('.no-comments-popup');
 
-buttons.push({
-  btn: commentsTitle,
-  popup: noCommentsPopup,
-});
+if (commentsTitle && noCommentsPopup) {
+  buttons.push({
+    btn: commentsTitle,
+    popup: noCommentsPopup,
+  });
 
-buttons.forEach(({ btn, popup }) => {
-  btn.addEventListener('click', (event) => handleBtnClick(event, btn, popup));
-});
+  buttons.forEach(({ btn, popup }) => {
+    btn.addEventListener('click', (event) => handleBtnClick(event, btn, popup));
+  });
 
-const allPopups = buttons.map((button) => button.popup);
-const allButtons = buttons.map((button) => button.btn);
-document.addEventListener('click', (event) => handlePageClick(event, allPopups, allButtons));
+  const allPopups = buttons.map((button) => button.popup);
+  const allButtons = buttons.map((button) => button.btn);
+  document.addEventListener('click', (event) => handlePageClick(event, allPopups, allButtons));
+}
+
 

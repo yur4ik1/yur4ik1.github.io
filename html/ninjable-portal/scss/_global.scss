@@ -78,6 +78,47 @@ tr {
   padding: 0;
 }
 
+
+body {
+  font-style: normal;
+  overflow-x: hidden;
+  background: url(../img/register.webp) no-repeat center top / cover;
+  height: 64vw;
+}
+
+body.my-profile-page {
+  background: url(../img/my-profile-bg.webp) no-repeat center top / cover;
+  height: auto;
+}
+
+body.skills-page {
+  background: url(../img/skills-page-bg.webp) no-repeat center top / cover;
+  height: auto;
+}
+
+body.tasks-page {
+  background: url(../img/tasks-page-bg.webp) no-repeat center top / cover;
+  height: 121.083vw;
+}
+
+body.leaderboard-page {
+  background: url(../img/leaderboard-page-bg.webp) no-repeat center top / cover;
+  height: 155.083vw;
+}
+
+body.settings-page {
+  background: url(../img/settings-page-bg.webp) no-repeat center top / cover;
+  height: 82.083vw;
+}
+
+
+
+
+
+
+
+
+
 input {
   width: 100%;
   height: 2.555vw;
@@ -138,6 +179,7 @@ button {
     color: #FEFEFE;
     position: absolute;
     top: 5.021vw;
+    left: 0;
     opacity: 0;
     visibility: hidden;
   }
@@ -147,6 +189,28 @@ button {
     visibility: visible;
   }
 }
+
+.password-icon {
+  display: block;
+  cursor: pointer;
+
+  &::after {
+      content: '';
+      background: url(../img/password-icon.svg) no-repeat center top / cover;
+      height: 0.73vw;
+      width: 0.991vw;
+      display: block;
+      position: absolute;
+      top: 2.852vw;
+      right: 1vw;
+  }
+}
+
+.password-icon.active::after {
+  background: url(../img/password-icon-open.svg) no-repeat center top / cover;
+}
+
+
 
 .btn {
   display: flex;
