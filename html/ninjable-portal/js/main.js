@@ -487,6 +487,22 @@ if (skillReportPopup && skillReportOpen) {
   });
 }
 
+/* feedback popup */
+
+const feedbackPopup = document.querySelector('.feedback-reject');
+const feedbackOpen = document.querySelectorAll('.repost-btn');
+const feedbackClose = document.querySelector('.feedback-reject-close');
+
+if (feedbackPopup && feedbackOpen && feedbackClose) {
+  feedbackOpen.forEach(button => {
+    button.addEventListener('click', () => {
+      feedbackPopup.classList.add('active');
+    });
+  });
+  feedbackClose.addEventListener('click', () => {
+    feedbackPopup.classList.remove('active');
+  });
+}
 
 
 
