@@ -111,12 +111,10 @@ body.settings-page {
   height: 82.083vw;
 }
 
-
-
-
-
-
-
+body.approvals-page {
+  background: url(../img/approvals-page-bg.webp) no-repeat center top / cover;
+  height: 172.083vw;
+}
 
 
 input {
@@ -195,14 +193,14 @@ button {
   cursor: pointer;
 
   &::after {
-      content: '';
-      background: url(../img/password-icon.svg) no-repeat center top / cover;
-      height: 0.73vw;
-      width: 0.991vw;
-      display: block;
-      position: absolute;
-      top: 2.852vw;
-      right: 1vw;
+    content: '';
+    background: url(../img/password-icon.svg) no-repeat center top / cover;
+    height: 0.73vw;
+    width: 0.991vw;
+    display: block;
+    position: absolute;
+    top: 2.852vw;
+    right: 1vw;
   }
 }
 
@@ -518,7 +516,7 @@ button {
   letter-spacing: 0.01vw;
   color: #B9BABE;
   background: #1B2439;
- 
+
   border-radius: 0.417vw;
   cursor: pointer;
   transition: 0.3s;
@@ -698,6 +696,7 @@ button {
       cursor: pointer;
       z-index: 999999;
     }
+
     .new__custom-select__trigger {
       padding-left: 2.086vw;
       background: #1B2439;
@@ -882,6 +881,7 @@ button {
   .select-name {
     display: none;
   }
+
   .select-text {
     display: block;
     color: rgba(134, 157, 200, 0.55);

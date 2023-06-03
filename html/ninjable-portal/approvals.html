@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Approvals</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Approvals">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="approvals-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="reports.html">Reports</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="settings.html">Settings</a>
+                    </li>
+                    <li class="profile__menu-item active">
+                        <a href="approvals.html">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="login-in.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="approvals">
+            <div class="container">
+                <div class="approvals__content">
+                    <div class="top">
+                        <h1>APPROVALS</h1>
+                    </div>
+                    <div class="approvals__info-table">
+                        <div class="row row-top">
+                            <div class="cell">
+                                Status
+                            </div>
+                            <div class="cell">
+                                Skill
+                            </div>
+                            <div class="cell">
+                                Requester
+                            </div>
+                            <div class="cell">
+                                Derailed Report
+                            </div>
+                            <div class="cell">
+                                Actions
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="cell">
+                                PHP
+                            </div>
+                            <div class="cell">
+                                John Smith
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link to report</a>
+                            </div>
+                            <div class="cell">
+                                <a class="repost-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="cell">
+                                Mongo DB
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link to report</a>
+                            </div>
+                            <div class="cell">
+                                <a class="repost-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Rejected
+                            </div>
+                            <div class="cell">
+                                JS
+                            </div>
+                            <div class="cell">
+                                Jane Daw
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Communication
+                            </div>
+                            <div class="cell">
+                                Marina Semenova
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Adobe Photoshop
+                            </div>
+                            <div class="cell">
+                                Aleksandr Sidorenko
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                CSS
+                            </div>
+                            <div class="cell">
+                                Joe Doe
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Adobe Illustrator
+                            </div>
+                            <div class="cell">
+                                Natalia Kovaleva
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Java
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                    <div class="approvals__filter-wrap">
+                        <h3>Approval’s History</h3>
+                        <div class="leaderboard__filter">
+                            <div class="filter new__custom-select-wrapper filter-name">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Name</span>
+                                        <input type="text" placeholder="Type here to search...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Abramenko">
+                                            <label for="Abramenko">Abramenko Nikita</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Antonov">
+                                            <label for="Antonov">Antonov Ivan</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Doe">
+                                            <label for="Doe">Doe Joe</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Eliseeva">
+                                            <label for="Eliseeva">Eliseeva Irina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Filimonova">
+                                            <label for="Filimonova">Filimonova Natalya</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">Williams Piter</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select new__custom-select-wrapper filter-skill">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Skill</span>
+                                        <input type="text" placeholder="Type here to search for Skill...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Art">
+                                            <label for="Art">Art</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Analysis">
+                                            <label for="Analysis">Analysis</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Design">
+                                            <label for="Design">Design</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="PHP">
+                                            <label for="PHP">PHP</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Program">
+                                            <label for="Program">Program</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="P-Skill">
+                                            <label for="P-Skill">P Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">Status</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Approved">
+                                        <label for="Approved">Approved</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Rejected">
+                                        <label for="Rejected">Rejected</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select new__custom-select-wrapper filter-manager">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Manager</span>
+                                        <input type="text" placeholder="Type here to search...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Artists">
+                                            <label for="Artists">Abramenko Nikita</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Accounting">
+                                            <label for="Accounting">Antonov Ivan</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Developers">
+                                            <label for="Developers">Doe Joe</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Engineering">
+                                            <label for="Engineering">Eliseeva Irina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Financial">
+                                            <label for="Financial">Filimonova Natalya</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="HR">
+                                            <label for="HR">HR</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testers">
+                                            <label for="Testers">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testers">
+                                            <label for="Testers">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testerss">
+                                            <label for="Testerss">Williams Piter</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="approvals__info-table history">
+                        <div class="row row-top">
+                            <div class="cell requester">
+                                Requester
+                            </div>
+                            <div class="cell status">
+                                Status
+                            </div>
+                            <div class="cell skill">
+                                Skill
+                            </div>
+                            <div class="cell date">
+                                Date
+                            </div>
+                            <div class="cell feedback">
+                                Feedback
+                            </div>
+                            <div class="cell manager">
+                                Manager
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                John Smith
+                            </div>
+                            <div class="cell status">
+                                Rejected
+                            </div>
+                            <div class="cell skill">
+                                PHP
+                            </div>
+                            <div class="cell date">
+                                11/26/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>I saw that you learned how to use pivot<br>tables for your Excel project and it
+                                    really
+                                    <br>helped display the data. Even though<br>that wasn’t in your job description,
+                                    it<br>shows
+                                    that you are a great learner and<br>hungry to do the best job possible.<br>
+
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Marina Markova
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Mongo DB
+                            </div>
+                            <div class="cell date">
+                                10/20/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Sarah Jonson
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Jane Daw
+                            </div>
+                            <div class="cell status">
+                                Rejected
+                            </div>
+                            <div class="cell skill">
+                                JS
+                            </div>
+                            <div class="cell date">
+                                10/09/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Jan Ivanov
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Marina Semenova
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Communication
+                            </div>
+                            <div class="cell date">
+                                09/15/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#"> www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Sarah Jonson
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Aleksandr <br>Samsonenko
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="cell date">
+                                09/01/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Aleksandr <br>Sidorenko
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

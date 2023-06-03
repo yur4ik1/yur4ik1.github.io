@@ -5391,3 +5391,275 @@
         }
     }
 }
+
+/* approvals page */
+
+.approvals {
+    padding-top: 10.636vw;
+    padding-bottom: 7.034vw;
+
+    .container {
+        max-width: 77.529vw;
+    }
+
+    &__content {
+        width: 100%;
+        height: auto;
+        background: #1D2438;
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.356vw;
+        padding-top: 3.076vw;
+        padding-bottom: 3.735vw;
+        padding-left: 4.015vw;
+        padding-right: 4.015vw;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5.422vw;
+
+            &::after {
+                content: "";
+                background: url(../img/approvals-line.svg) no-repeat center top/cover;
+                width: 69.135vw;
+                height: 0.104vw;
+                margin-top: 2.711vw;
+            }
+        }
+
+        h1 {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 1.303vw;
+            line-height: 1.147vw;
+            letter-spacing: 0.278vw;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+
+    &__info-table {
+        display: table;
+        border-collapse: separate;
+        width: 100%;
+        height: auto;
+        background: rgba(29, 36, 56, 0.75);
+        box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
+        border-radius: 1.043vw;
+        border: none;
+
+        .row {
+            display: table-row;
+        }
+
+        .row-top {
+            height: 4.692vw;
+
+            .cell {
+                font-family: 'Karla';
+                font-weight: 700;
+                font-size: 0.834vw;
+                line-height: normal;
+                letter-spacing: 0.011vw;
+                color: #869DC8;
+                padding-top: 1.564vw;
+                padding-bottom: 1.512vw;
+            }
+        }
+
+        .row-item {
+            height: 3.493vw;
+
+            &:last-child {
+                border-bottom-right-radius: 1.043vw;
+                border-bottom-left-radius: 1.043vw;
+            }
+        }
+
+        .row-item.colored {
+            background: #202A40;
+            border: 0.052vw solid #252E42;
+        }
+
+        .cell {
+            display: table-cell;
+            padding: 0.6vw 3.493vw;
+            font-size: 0.782vw;
+            line-height: normal;
+            letter-spacing: 0.01vw;
+            color: #FFFFFF;
+            position: relative;
+            vertical-align: middle;
+
+            a {
+                text-decoration-line: underline;
+                color: #869DC8;
+            }
+
+            &:nth-child(1) {
+                color: #869DC8;
+            }
+
+            .repost-btn {
+                width: 1.825vw;
+                height: 1.825vw;
+                background: #212A41;
+                box-shadow: 0vw 0vw 0.209vw 0.209vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.417vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                right: -2vw;
+
+                &::after {
+                    content: '';
+                    background: url('../img/repost-icon.svg') no-repeat center top / cover;
+                    width: 1.043vw;
+                    height: 0.73vw;
+                    position: absolute;
+                }
+            }
+
+            .edit-btn {
+                width: 1.825vw;
+                height: 1.825vw;
+                background: #212A41;
+                box-shadow: 0vw 0vw 0.209vw 0.209vw rgba(6, 8, 13, 0.25);
+                border-radius: 0.417vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                right: -2vw;
+
+                &::after {
+                    content: '';
+                    background: url('../img/edit-icon.svg') no-repeat center top / cover;
+                    width: 1.095vw;
+                    height: 1.095vw;
+                    position: absolute;
+                }
+            }
+        }
+
+        .cell.pending {
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                right: 1.2vw;
+
+                &::before {
+                    content: '';
+                    background: url('../img/circle.svg') no-repeat center top / cover;
+                    width: 0.469vw;
+                    height: 0.521vw;
+                    display: block;
+                    margin-right: 0.626vw;
+                }
+            }
+        }
+    }
+
+    &__info-table.history {
+    
+        .row-item:last-child {
+            .cell:last-child {
+                border-bottom-right-radius: 1.043vw;
+            }
+
+            .cell:first-child {
+                border-bottom-left-radius: 1.043vw;
+            }
+        }
+
+        .row-top {
+            .cell {
+                line-height: normal;
+                vertical-align: middle;
+            }
+        }
+
+        .cell {
+            vertical-align: top;
+            padding: 1.356vw 0;
+            line-height: 1.303vw;
+
+            &:nth-child(1) {
+                padding-left: 3.493vw;
+            }
+        }
+
+        .cell.requester {
+            width: 11.157vw;
+        }
+
+        .cell.status {
+            width: 7.821vw;
+        }
+
+        .cell.skill {
+            width: 10.219vw;
+        }
+
+        .cell.date {
+            width: 9.385vw;
+        }
+
+        .cell.feedback {
+            width: 16.111vw;
+
+            p {
+                font-size: 0.782vw;
+                line-height: 1.303vw;
+                letter-spacing: 0.01vw;
+                color: #869DC8;
+
+                a {
+                    text-decoration-line: underline;
+                    font-size: 0.782vw;
+                    line-height: 2.086vw;
+                    letter-spacing: 0.01vw;
+                    margin-top: 1.303vw;
+                }
+            }
+        }
+
+        .cell.manager {
+            width: 10.172vw;
+            text-align: right;
+            padding-right: 3.597vw;
+        }
+
+    }
+
+    .pagination {
+        margin-top: 3vw;
+    }
+
+    &__filter-wrap {
+        margin-top: 4.588vw;
+        margin-bottom: 3.441vw;
+
+        h3 {
+            font-size: 1.043vw;
+            line-height: 2.503vw;
+            letter-spacing: 0.014vw;
+            color: #FFFFFF;
+            margin-bottom: 1.825vw;
+        }
+
+        .filter-select {
+            border-radius: 0vw 0.417vw 0.417vw 0.417vw;
+        }
+
+        .new__custom-select__trigger {
+            padding-top: 0.9vw;
+            padding-bottom: 0.9vw;
+        }
+
+    }
+}

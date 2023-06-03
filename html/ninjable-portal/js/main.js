@@ -934,3 +934,13 @@ if (commentsTitle && noCommentsPopup) {
 }
 
 
+
+/* table colored  */
+
+const rowItem = document.querySelectorAll(".row-item");
+
+if (rowItem) {
+  for (let i = 0; i < rowItem.length; i += 2) {
+    rowItem[i].classList.add("colored");
+  }
+}
