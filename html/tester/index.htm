@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3562687575244804" crossorigin="anonymous"></script>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-D5J534LHR6"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-D5J534LHR6");
+    </script>
+<link rel="shortcut icon" href="site-files\favicon.png" type="image/png">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,900" rel="stylesheet">
+<link ref="alternate" hreflang="en-us" href="https://keyboardtester.io/">
+<link rel="stylesheet" type="text/css" href="site-files\main.css">
+<script type="text/javascript" src="site-files\jquery.min.js"></script>
+<script type="text/javascript" src="site-files\keys.js"></script>
+<title>Keyboard Tester</title>
+</head>
+<body>
+<div id="load-up">
+<h1>
+KeyboardTester.io <br>
+<p style="
+            font-size: 15px;
+            font-weight: 400;
+            padding-top: 5px;
+            float: left;
+            max-width: 500px;
+            display: block;
+          ">
+Our coded testing software will help you properly test each keyboard
+without much effort. Our simple and fast keyboard tester is the top
+choice of users from around the world.
+</p>
+</h1>
+<span id="keys-frame" style="font-size: 30px">
+Last Key Pressed<br><br>
+<span id="out">&nbsp;</span>
+<span id="cursor"></span>
+</span>
+</div>
+<div class="clean"></div>
+<audio id="audio" controls="" style="display: none">
+<source src="site-files\sound\key_press.bin" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div id="load-down">
+<div id="keyboard-frame"></div>
+<span id="stay-pressed">Stay pressed</span>
+<label class="switch">
+<input type="checkbox" checked="checked" id="test">
+<span class="slider round"></span>
+</label>
+<div class="keyboard-options">
+<div class="keyboard-choose" id="apple-wired">
+<img src="site-files\A1243-t.svg">
+Apple Wired Keyboard<br>A1243
+</div>
+<div class="keyboard-choose" id="apple-wireless">
+<img src="site-files\A1314-t.svg">
+Apple Wireless Keyboard<br>A1314
+</div>
+<div class="keyboard-choose" id="generic-pc">
+<img src="site-files\Generic-PC-t.svg">
+Windows<br>Generic PC Keyboard
+</div>
+</div>
+<br><br>
+<p>Thanks For Using Keyboardtester.io</p>
+</div>
+<br><br>
+<div class="clean"></div>
+<script type="text/javascript">
+      var os = 0;
+      if (navigator.userAgent.indexOf("Windows") != -1) os = 1;
+      if (os == 1) {
+        $("#keyboard-frame").load("site-files/Generic-PC.svg");
+        $("#generic-pc").addClass("active");
+      } else {
+        $("#keyboard-frame").load("site-files/A1243.svg");
+        $("#apple-wired").addClass("active");
+      }
+    </script>
+<script type="text/javascript">
+      $(document).ready(function () {
+        $("#apple-wired").click(function () {
+          $("#keyboard-frame").load("site-files/A1243.svg");
+          $(".keyboard-choose").removeClass("active");
+          $("#apple-wired").addClass("active");
+        });
+        $("#apple-wireless").click(function () {
+          $("#keyboard-frame").load("site-files/A1314.svg");
+          $(".keyboard-choose").removeClass("active");
+          $("#apple-wireless").addClass("active");
+        });
+        $("#generic-pc").click(function () {
+          $("#keyboard-frame").load("site-files/Generic-PC.svg");
+          $(".keyboard-choose").removeClass("active");
+          $("#generic-pc").addClass("active");
+        });
+      });
+    </script>
+<script type="text/javascript">
+      $(window).on("load", function () {
+        setTimeout(function () {
+          $("#preloader").fadeOut("slow");
+          $("#load-up").css({
+            opacity: "1",
+            bottom: "0",
+          });
+          $("#load-down").css({
+            opacity: "1",
+            top: "0",
+          });
+        }, 1000);
+      });
+    </script>
+</body>
+<footer>
+<a href="https://keyboardtester.io/" class="footer-link">
+KeyboardTester.io
+</a>
+<span> - All rights reserved</span>
+</footer>
+</html>
