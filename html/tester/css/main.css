@@ -1,0 +1,267 @@
+body {
+    margin: 0;
+    color: #2d2d2d;
+    font-family: 'Roboto';
+}
+
+
+.p {
+    font-size: 15px;
+    font-weight: 100
+}
+
+.clean {
+    clear: both
+}
+
+.fleft {
+    float: left
+}
+
+.fright {
+    float: right
+}
+
+h1 {
+    display: block;
+    margin: 0;
+    padding: 0 0 60px;
+    font-weight: 900;
+    font-size: 64px;
+    float: left
+}
+
+h1 a {
+    color: #fff;
+    text-decoration: none
+}
+
+use {
+    -webkit-transition: fill ease .2s;
+    -moz-transition: fill ease .2s;
+    -o-transition: fill ease .2s;
+    transition: fill ease .2s
+}
+
+use.pressed {
+    fill: #fe5a3f;
+}
+
+use.led {
+    fill: green
+}
+
+use.pressed-key {
+    fill: #fff
+}
+
+svg {
+    width: 100%;
+    max-width: 1338px;
+    min-width: 350px;
+    display: block;
+}
+
+#a-little-one {
+    max-width: 875px
+}
+
+#out {
+    font-size: 30px;
+    height: 100px;
+    font-weight: 100;
+    line-height: 50px;
+    color: #fe5a3f;
+}
+
+#cursor {
+    display: block;
+    width: 30px;
+    height: 50px;
+    border-right: 3px solid #fff;
+    float: right;
+    position: relative;
+    top: 0
+}
+
+#keys-frame {
+    min-width: 350px;
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+.keys-frame.light {
+    background: #fff;
+}
+
+@media all and (max-width:1300px) {
+    h1 {
+        font-size: 32px;
+        padding: 0 0 50px
+    }
+
+    #keys-frame {
+        clear: both;
+        float: none;
+        text-align: left;
+    }
+
+    #cursor {
+        float: left;
+        height: 65px;
+        border-right: none;
+        border-left: 3px solid #fff
+    }
+}
+
+#stay-pressed {
+    display: inline-block;
+    margin: 0;
+    padding: 30px 0px 30px 0;
+    font-weight: 400;
+    font-size: 24px
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 57px;
+    height: 27px;
+    top: 4px
+}
+
+.switch input {
+    display: none
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: 6px;
+    border: 1px solid #fff;
+}
+
+.slider.light {
+    border: 1px solid #2d2d2d;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider.light:before {
+    background-color: #2d2d2d;
+}
+
+input:checked+.slider.light:before {
+    background-color: #fff;
+}
+
+input:checked+.slider {
+    background-color: #fe5a3f;
+    border: 0 !important;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #fe5a3f;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px)
+}
+
+.slider.round {
+    border-radius: 3px;
+}
+
+.slider.round:before {
+    border-radius: 3px;
+}
+
+.keyboard-options {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.keyboard-options.light {
+    background: #fff;
+}
+
+#keyboard-frame {
+    display: flex;
+    justify-content: center;
+}
+
+.set-panel {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.set-panel.light {
+    background: #fff;
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+
+@media(max-width:800px) {
+    .keyboard-options {
+        flex-direction: column
+    }
+}
+
+.keyboard-choose {
+    margin: 20px auto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    cursor: pointer
+}
+
+.keyboard-choose img {
+    display: block;
+    margin: 10px auto;
+    padding: 3px;
+    border: 1px solid #23272a;
+    border-radius: 5px
+}
+
+.keyboard-choose:hover img {
+    border: 1px solid #fe4957
+}
+
+.keyboard-choose.active {
+    cursor: default
+}
+
+.keyboard-choose.active img {
+    border: 1px solid #fe4957
+}

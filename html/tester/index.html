@@ -1,421 +1,270 @@
-<html>
-<head>
-	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-	<meta name="robots" content="all" />
-	<meta property="og:title" content="Online Keyboard & Mouse Tester" />
-	<meta property="og:description" content="An Online Testing Utility that helps you to test all keys on 
-	your keyboard. Works accurate with any keyboard and any browser" />
-	<meta property="og:image" content="img/meta_image.PNG" />
-	<meta property="og:url" content="https://shawon9324.github.io/apps/keytester" />
-	<meta name="description" content="Online Keyboard & Mouse Tester" />
-	<meta name="keywords" content="mouse,checker,test, keyboard, button, online, key-test, keys" />
-	<link rel="shortcut icon" type="image/x-icon" href="img/keyboard (5).png" />
-	<title>Keyboard & Mouse Tester</title>
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="https://code.jquery.com/jquery-3.5.1.js"
-		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-	<script src="js/custom-script.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-		crossorigin="anonymous" />
-	<link rel="stylesheet" href="css/dark.min.css" />
-	<script src="js/sweetalert2.min.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f7726941438d6cb"></script>
-</head>
-<body>
-	<header>
-		<div class="header-gap">
-			<div></div>
-			<div></div>
-		</div>
-		<br /><br /><br />
-		<div class="keyboard-body">
-			<div class="keyboard-bg-blur"></div>
-			<div class="keyboard-bg-fade"></div>
-			<div class="content">
-				<div class="keyboard-header"></div>
-				<br /><br />
-				<div class="keyboard-section">
-					<div class="keyFunc key27">
-						<p>ESC</p>
-					</div>
-					<div class="keyFunc key112">
-						<p>F1</p>
-					</div>
-					<div class="keyFunc key113">
-						<p>F2</p>
-					</div>
-					<div class="keyFunc key114">
-						<p>F3</p>
-					</div>
-					<div class="keyFunc key115">
-						<p>F4</p>
-					</div>
-					<div class="keyFunc key116">
-						<p>F5</p>
-					</div>
-					<div class="keyFunc key117">
-						<p>F6</p>
-					</div>
-					<div class="keyFunc key118">
-						<p>F7</p>
-					</div>
-					<div class="keyFunc key119">
-						<p>F8</p>
-					</div>
-					<div class="keyFunc key120">
-						<p>F9</p>
-					</div>
-					<div class="keyFunc key121">
-						<p>F10</p>
-					</div>
-					<div class="keyFunc key122">
-						<p>F11</p>
-					</div>
-					<div class="keyFunc key123">
-						<p>F12</p>
-					</div>
-					<div class="keyFunc key19" style="font-size: 10px">
-						<p>
-							Pause <br />
-							break
-						</p>
-					</div>
-					<div class="keyFunc key44">
-						<p>prt sc</p>
-					</div>
-					<div class="keyFunc key46">
-						<p>del</p>
-					</div>
-					<div class="keyFunc key36">
-						<p>home</p>
-					</div>
-					<div class="keyFunc key33">
-						<p>pgup</p>
-					</div>
-					<div class="keyFunc key34">
-						<p>pgdn</p>
-					</div>
-					<div class="keyFunc key145">
-						<p>scr lk</p>
-					</div>
-					<div class="keyFunc key45">
-						<p>ins</p>
-					</div>
-					<div class="keyFunc key35">
-						<p>end</p>
-					</div>
-					<div class="key delKey key192">
-						<p style="font-size: 40px">`</p>
-					</div>
-					<div class="key key49">
-						<p>1</p>
-					</div>
-					<div class="key key50">
-						<p>2</p>
-					</div>
-					<div class="key key51">
-						<p>3</p>
-					</div>
-					<div class="key key52">
-						<p>4</p>
-					</div>
-					<div class="key key53">
-						<p>5</p>
-					</div>
-					<div class="key key54">
-						<p>6</p>
-					</div>
-					<div class="key key55">
-						<p>7</p>
-					</div>
-					<div class="key key56">
-						<p>8</p>
-					</div>
-					<div class="key key57">
-						<p>9</p>
-					</div>
-					<div class="key key48">
-						<p>0</p>
-					</div>
-					<div class="key delKey minSize key173 key189">
-						<p>_<br />-</p>
-					</div>
-					<div class="key delKey plusKey key61 key187">
-						<p>+<br />=</p>
-					</div>
-					<div class="key backSpace key8">
-						<div class="mod" style="
-                  font-size: 14;
-                  margin-top: 12px;
-                  text-align: right;
-                  margin-right: 20px;
-                ">
-							backspace
-						</div>
-						<p>&#10229;</p>
-					</div>
-					<div class="key areaGap gapWidth"></div>
-					<div class="key delKey key144">
-						<p>num lk</p>
-					</div>
-					<div class="key key111">
-						<p>/</p>
-					</div>
-					<div class="key key106">
-						<p>*</p>
-					</div>
-					<div class="key delKey key109">
-						<p>_</p>
-					</div>
-					<div class="key tab key9">
-						<p style="margin-left: 7px">tab ⇄</p>
-					</div>
-					<div class="key key81">
-						<p>Q</p>
-					</div>
-					<div class="key key87">
-						<p>W</p>
-					</div>
-					<div class="key key69">
-						<p>E</p>
-					</div>
-					<div class="key key82">
-						<p>R</p>
-					</div>
-					<div class="key key84">
-						<p>T</p>
-					</div>
-					<div class="key key89">
-						<p>Y</p>
-					</div>
-					<div class="key key85">
-						<p>U</p>
-					</div>
-					<div class="key key73">
-						<p>I</p>
-					</div>
-					<div class="key key79">
-						<p>O</p>
-					</div>
-					<div class="key key80">
-						<p>P</p>
-					</div>
-					<div class="key key219">
-						<p>[</p>
-					</div>
-					<div class="key key221">
-						<p>]</p>
-					</div>
-					<div class="key arithmeticKey backslash key220">
-						<p>\</p>
-					</div>
-					<div class="key areaGap gapWidth"></div>
-					<div class="key key103">
-						<p>7</p>
-					</div>
-					<div class="key key104">
-						<p>8</p>
-					</div>
-					<div class="key key105">
-						<p>9</p>
-					</div>
-					<div class="key plus key107">
-						<p>+</p>
-					</div>
-					<div class="key caps key20">
-						<p>caps lock</p>
-					</div>
-					<div class="key key65">
-						<p>A</p>
-					</div>
-					<div class="key key83">
-						<p>S</p>
-					</div>
-					<div class="key key68">
-						<p>D</p>
-					</div>
-					<div class="key key70">
-						<p>F</p>
-					</div>
-					<div class="key key71">
-						<p>G</p>
-					</div>
-					<div class="key key72">
-						<p>H</p>
-					</div>
-					<div class="key key74">
-						<p>J</p>
-					</div>
-					<div class="key key75">
-						<p>K</p>
-					</div>
-					<div class="key key76">
-						<p>L</p>
-					</div>
-					<div class="key arithmeticKey key59 key186">
-						<p>;</p>
-					</div>
-					<div class="key arithmeticKey key222">
-						<p>'</p>
-					</div>
-					<div class="key enter key13">
-						<div class="mod" style="
-                  font-size: 16px;
-                  margin-top: 12px;
-                  text-align: right;
-                  margin-right: 20px;
-                ">
-							enter
-						</div>
-						<p>⬑</p>
-					</div>
-					<div class="key areaGap gapWidth"></div>
-					<div class="key key100">
-						<p>4</p>
-					</div>
-					<div class="key key101">
-						<p>5</p>
-					</div>
-					<div class="key key102">
-						<p>6</p>
-					</div>
-					<div class="key shiftLeft key16">
-						<p>shift ⇧</p>
-					</div>
-					<div class="key key90">
-						<p>Z</p>
-					</div>
-					<div class="key key88">
-						<p>X</p>
-					</div>
-					<div class="key key67">
-						<p>C</p>
-					</div>
-					<div class="key key86">
-						<p>V</p>
-					</div>
-					<div class="key key66">
-						<p>B</p>
-					</div>
-					<div class="key key78">
-						<p>N</p>
-					</div>
-					<div class="key key77">
-						<p>M</p>
-					</div>
-					<div class="key arithmeticKey key188">
-						<p>,</p>
-					</div>
-					<div class="key arithmeticKey key190">
-						<p>.</p>
-					</div>
-					<div class="key arithmeticKey key191">
-						<p>/</p>
-					</div>
-					<div class="key shiftRight keyPosShiftRight">
-						<p style="text-align: right; margin-right: 10px">shift ⇧</p>
-					</div>
-					<div class="key arrowUp key38">
-						<p>➤</p>
-					</div>
-					<div class="key areaGap gapWidth"></div>
-					<div class="key key97">
-						<p>1</p>
-					</div>
-					<div class="key key98">
-						<p>2</p>
-					</div>
-					<div class="key key99">
-						<p>3</p>
-					</div>
-					<div class="key enterRight keyPosNumpadEnter">
-						<p>enter</p>
-					</div>
-					<div class="key ctrl1 key17">
-						<p style="margin-left: 7px">ctrl</p>
-					</div>
-					<div class="key wndw key91">
-						<p style="font-size: 22px">
-							<i class="fa fa-windows" aria-hidden="true"></i>
-						</p>
-					</div>
-					<div class="key alt key18">
-						<p>alt</p>
-					</div>
-					<div class="key space key32"></div>
-					<div class="key alt keyPosAltRight">
-						<p>alt gr</p>
-					</div>
-					<div class="key cont key93">
-						<p style="font-size: 28px">
-							<i class="fa fa-file-text-o" aria-hidden="true"></i>
-						</p>
-					</div>
-					<div class="key ctrl2 keyPosControlRight">
-						<p style="text-align: right; margin-right: 10px">ctrl</p>
-					</div>
-					<div class="key arrowLeft key37">
-						<p>➤</p>
-					</div>
-					<div class="key arrowDown key40">
-						<p>➤</p>
-					</div>
-					<div class="key areaGap gapWidth"></div>
-					<div class="key arrowRight key39">
-						<p style="transform: rotate(-0deg)">➤</p>
-					</div>
-					<div class="key key96">
-						<p>0</p>
-					</div>
-					<div class="key key110">
-						<p><b>.</b></p>
-					</div>
-					<br /><br />
-					<div class="mouse-section">
-						<div class="key lclick key0"></div>
-						<div class="key cclick key1"></div>
-						<div class="key rclick key2"></div>
-					</div>
-					<div class="mouse-section">
-						<div class="key scrollUp">▲</div>
-						<div class="key divider"></div>
-						<div class="key scrollDown">▼</div>
-					</div>
-				</div>
-				<div style="display: inline-block">
-					<x style="
-                color: hsla(0, 100%, 50%, 0.678);
-                font-size: 12px;
-                font-family: consolas;
-              "></x>
-					<y style="
-                color: hsla(0, 100%, 50%, 0.678);
-                font-size: 12px;
-                font-family: consolas;
-              "></y>
-				</div>
-				<br /><br />
+<!DOCTYPE html>
+<html lang="en">
 
-				<div class="sliding_text_info">
-					<marquee direction="left">FOR AN ACCURATE KEY TEST, PLEASE MAKE SURE THAT YOUR KEYBOARD
-						LAYOUT IS ENGLISH!</marquee>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div class="footer-text">
-		<div class="addthis_inline_share_toolbox"></div>
-		<i class="fa fa-cog fa-spin" aria-hidden="true"></i> Online Keyboard &
-		Mouse Tester<br />
-		Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2020 Creative
-		Dev Labs<br />
-		<i class="fa fa-github" aria-hidden="true"></i>/shawon9324
-		<br>
-		<!-- Start of WebFreeCounter Code -->
-		<a style="float: right;" href="http://www.statworker.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gfpfdk&nd=7&style=15" border="0" alt="statworker.com"></a>
-		<!-- End of WebFreeCounter Code -->
-	</div>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test - One Minute Typing Test (WPM)</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description"
+        content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+    <meta name="author" content="Typing Speed Test">
+    <meta name="referrer" content="origin">
+    <meta name="application-name" content="Typing Speed Test">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Typing Speed Test">
+    <meta property="og:title" content="Typing Speed Test - One Minute Typing Test (WPM)">
+    <meta property="og:description"
+        content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+    <meta property="og:image" content="https://typingspeedtest.app/img/share.webp">
+    <meta name="twitter:title" content="Typing Speed Test - One Minute Typing Test (WPM)">
+    <meta name="twitter:description"
+        content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="https://typingspeedtest.app/img/favicon.ico" title="Favicon" />
+
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local(''),
+                url('./fonts/roboto-v30-latin-regular.woff2') format('woff2')
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: local(''),
+                url('./fonts/roboto-v30-latin-500.woff2') format('woff2')
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: local(''),
+                url('./fonts/roboto-v30-latin-700.woff2') format('woff2')
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: local(''),
+                url('./fonts/roboto-v30-latin-900.woff2') format('woff2')
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <button aria-label="toggle menu" class="header__burger">
+                <span></span>
+            </button>
+            <a href="/" class="header__logo">
+                <img width="400" height="64" src="https://typingspeedtest.app/img/logo.webp"
+                    alt="Typing Speed Test APP">
+            </a>
+
+            <nav>
+                <ul class="header__nav">
+                    <li><a class="active" href="/">Home</a></li>
+                    <li><a href="keyboard.html">Keyboard test</a></li>
+                    <li><a href="#"> </a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="ads">
+        <div class="ads__adplace">
+
+        </div>
+    </div>
+
+    <main>
+
+        <div class="wrapper">
+            <div class="splitted-content">
+                <section class="container game">
+                    <h1 class="game__title">Typing Speed Test</h1>
+                    <p class="game__subtitle h2">Test your typing skills</p>
+
+                    <div class="game__counters">
+                        <div class="counters__counter counters__seconds-counter">
+                            <svg viewBox="0 0 100 100" width="110" height="110">
+                                <circle id="circleTimeCounter" cx="50" cy="50" r="48" fill="none" stroke="#fe5a3f"
+                                    stroke-width="4" stroke-dasharray="332px"
+                                    style="transform: rotate(-90deg); transform-origin: center center; transition: all 1s linear 0s; stroke-dashoffset: 110.667px;">
+                                </circle>
+                            </svg>
+                            <p id="secondsRemainCounter">60</p>
+                            <p>seconds</p>
+                        </div>
+
+                        <div class="counters__group">
+                            <div class="counters__counter">
+                                <p id="wordsMinCounter">0</p>
+                                <p>words/min</p>
+                            </div>
+
+                            <div class="counters__counter">
+                                <p id="charsMinCounter">0</p>
+                                <p>chars/min</p>
+                            </div>
+
+                            <div class="counters__counter">
+                                <p id="accuracyCounter">0</p>
+                                <p>% accuracy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game__text-container">
+                        <div class="game__text-holder">
+                            <p id="typedText" style="color: red;"></p>
+                            <p id="typeCoursor"></p>
+                            <p id="needToTypeText"></p>
+                        </div>
+
+                        <p id="startTypingIndicator">Start typing</p>
+
+                        <label for="inputZone" class="visually-hidden">Start typing text</label>
+                        <textarea tabindex="-1" id="inputZone" name="" id="" cols="30" rows="10"></textarea>
+
+                        <div id="capsLockAlert">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+                                    stroke="#fe5a3f" stroke-width="2" />
+                                <path d="M11 15.5V16M11 6V12V6Z" stroke="#fe5a3f" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <p>CapsLock is on</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="container adblock">
+                    <h2 class="visually-hidden">Ou partners</h2>
+                    <div class="banner-v">
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <div class="wrapper">
+                <h2 class="chart__title">
+                    Global Scores
+                </h2>
+
+                <p class="chart__subtitle">
+                    Histogram of results (WPM)
+                </p>
+
+                <div class="chart__wrapper">
+                    <canvas id="myChart" width="400"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="faq-grid">
+
+                <h3>
+                    <center>Typing Test: The Top Ways to Improve Your Typing Speed and Accuracy in Little to No Time
+                    </center>
+                </h3>
+
+                <h3>Make Sure You Sit Comfortable Before You Get Started</h3>
+                <p>Before you focus on improving your typing speed by taking the words per minute test, take the time to
+                    get situated in a comfortable position. It's harder to type well when standing in place, leaning
+                    over the keyboard, or sitting on an uncomfortable chair that causes you to experience back or neck
+                    pain. It's far better to sit on a comfortable, supportive chair while maintaining a good posture to
+                    increase your comfort before you begin typing away. If you feel good, you can focus more on typing
+                    than anything else.</p>
+                <h3>Practice Daily with a Convenient Typing Test</h3>
+                <p>Once you've found a comfortable position, start practicing typing while taking a convenient and fun
+                    typing test.Once you're on the website, begin typing the words in the box on the screen, focusing
+                    more on accuracy than anything else. While you're typing away at the words, the clock is counting
+                    down, timing how long it takes you to type out different words within 60 seconds. After the minute
+                    passes, you will have the chance to review your words per minute, characters, and accuracy. You will
+                    also find out how well your speed is compared to others, whether you're moving at the slower pace of
+                    a turtle or a quick speed like a cheetah. The best part about using the typing speed tests is that
+                    you can take it as many times as you'd like while improving your skill. You can take the test for
+                    hours on end if you feel like it!</p>
+                <h3>Become More Familiarized with the Location of the Letter Keys on the Keyboard</h3>
+                <p>If you want to get better at typing quickly and more accurately, it helps to study the keyboard and
+                    try remembering where different letters are located. Since the letters aren't in the standard order
+                    of A, B, C, D, and so forth, it's a bit tricky at first. However, because of muscle memory, once you
+                    get the hang of using the keyboard quite often, your fingers will start remembering the exact
+                    location of the different letters. Most keyboards will have the letters in the same spots unless
+                    they&rsquo;re used for specific reasons, such as gaming, so once you know where they go, you can get
+                    the hang of positioning your fingers in the right spots.</p>
+                <h3>Take the speed typing test While Looking at the Screen Instead of Looking Down at the Keyboard</h3>
+                <p>When you initially begin testing your typing skills, you may have to look down at the keyboard more
+                    often than not to see what you're pressing. After all, if you're not a skilled typist, you might not
+                    remember where to find the different letters of the alphabet on the keyboard. But once you start
+                    getting more familiar with the letter placement, start challenging yourself by taking the typing
+                    speed test and looking at the screen instead of looking down at the keyboard. Although this may slow
+                    you down initially, you can quickly work on improving your speed and accuracy to achieve better
+                    results.</p>
+                <h3>Try to Improve Your Accuracy Before Focusing Solely on Enhancing Your Speed</h3>
+                <p>Don't forget to work on your accuracy before worrying too much about the speed at which you type. It
+                    won't matter if you can type 100 words per minute or more if the words don't make much sense.
+                    Instead, you should prioritize improving your speed and begin working on receiving higher accuracy
+                    so that what you're typing makes sense and isn't grammatically incorrect. The best way to focus on
+                    accuracy is to type out the words in front of you without paying too much attention to the clock.
+                    The countdown timer is there to give you an idea of how fast you're moving, but it's not something
+                    you need to look at or worry about when you want to improve accuracy.</p>
+                <h3>Practice Makes Perfect: Take the Typing Speed Online Test as Often as You Need</h3>
+                <p>Now that you know what it takes to improve your typing skill, speed, and accuracy, take the typing
+                    online test as often as you want and need! If you're serious about becoming an even better typist,
+                    it's a good idea to practice in 30-60 minute intervals throughout the day. Try testing yourself
+                    first thing in the morning and then later in the evening, especially if you have some free time
+                    available.</p>
+                <h3>Turn the Typing Speed Practice Test Into a Fun Competition with Friends and Family</h3>
+                <p>While practicing more often, consider turning the speed typing test into a fun competition between
+                    yourself and your loved ones, such as your partner, sibling, parents, best friend, or anyone else.
+                    Each person can take the typing online speed test and track their results to see who is the fastest.
+                    It's a fun way to stay motivated and continue practicing for extended periods so that you can become
+                    faster, more accurate, and even better at typing than you were in the past.</p>
+                <p>Typing quickly and efficiently is vital in today's digital world. In fact, if you plan to get a job
+                    in a field where you will spend hours each day on a computer, having a fast typing speed with the
+                    ideal accuracy could leave hiring managers impressed enough to help you to get hired for a job you
+                    truly want. Even if you're not the fastest typer, you can start making steady progress by practicing
+                    our speed test because practice makes perfect</p>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./script.js" defer></script>
+    <script src="./howler.js" defer></script>
+    <script src="./speed-typing-script.js" defer></script>
+    <script src="./chart.min.js" defer></script>
+    <script src="./chart.js" defer></script>
+
+
+
 </body>
 
 </html>

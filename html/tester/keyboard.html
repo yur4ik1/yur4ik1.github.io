@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Keyboard Tester</title>
+
+  <link rel="shortcut icon" href="https://typingspeedtest.app/img/favicon.ico" title="Favicon" />
+
+  <meta name="robots" content="index,follow">
+  <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+  <meta name="description"
+    content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+  <meta name="author" content="Typing Speed Test">
+  <meta name="referrer" content="origin">
+  <meta name="application-name" content="Typing Speed Test">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Typing Speed Test">
+  <meta property="og:title" content="Typing Speed Test - One Minute Typing Test (WPM)">
+  <meta property="og:description"
+    content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+  <meta property="og:image" content="https://typingspeedtest.app/img/share.webp">
+  <meta name="twitter:title" content="Typing Speed Test - One Minute Typing Test (WPM)">
+  <meta name="twitter:description"
+    content="Discover how to quickly and easily improve your typing speed, skill, and accuracy with a simple yet fun and effective typing speed test.">
+
+
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="keys.js"></script>
+
+</head>
+
+<style>
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+      url('./fonts/roboto-v30-latin-regular.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(''),
+      url('./fonts/roboto-v30-latin-500.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''),
+      url('./fonts/roboto-v30-latin-700.woff2') format('woff2')
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local(''),
+      url('./fonts/roboto-v30-latin-900.woff2') format('woff2')
+  }
+</style>
+
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <button aria-label="toggle menu" class="header__burger">
+        <span></span>
+      </button>
+      <a href="/" class="header__logo">
+        <img width="400" height="64" src="https://typingspeedtest.app/img/logo.webp" alt="Typing Speed Test APP">
+      </a>
+
+      <nav>
+        <ul class="header__nav">
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="keyboard.html">Keyboard test</a></li>
+          <li><a href="#"> </a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- <div class="ads">
+    <div class="ads__adplace">
+
+    </div>
+  </div> -->
+
+  <main>
+    <div class="wrapper">
+
+      <audio id="audio" controls="" style="display: none">
+        <source src="./sound/key_press.bin" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="set-panel light">
+        <div>
+          <span id="stay-pressed">light/dark</span>
+          <label class="switch">
+            <input type="checkbox" id="theme">
+            <span class="slider round light"></span>
+          </label>
+        </div>
+
+        <div>
+          <span id="stay-pressed">Sound</span>
+          <label class="switch">
+            <input type="checkbox" checked="checked" id="sound">
+            <span class="slider round light"></span>
+          </label>
+        </div>
+
+        <div>
+          <span id="stay-pressed">Stay pressed</span>
+          <label class="switch">
+            <input type="checkbox" checked="checked" id="test">
+            <span class="slider round light"></span>
+          </label>
+        </div>
+
+        <div id="load-up">
+          <span id="keys-frame" class="keys-frame light" style="font-size: 28px">
+            Last Key Pressed
+            <span id="out">&nbsp;</span>
+            <span id="cursor"></span>
+          </span>
+        </div>
+      </div>
+
+      <div id="load-down">
+        <div id="keyboard-frame"></div>
+
+        <div class="keyboard-options light">
+          <div class="keyboard-choose" id="apple-wired">
+            <img src="./keyboards/A1243.svg">
+            Apple Wired Keyboard<br>A1243
+          </div>
+          <div class="keyboard-choose" id="apple-wireless">
+            <img src="./keyboards/A1314.svg">
+            Apple Wireless Keyboard<br>A1314
+          </div>
+          <div class="keyboard-choose" id="generic-pc">
+            <img src="./keyboards/Generic-PC.svg">
+            Windows<br>Generic PC Keyboard
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <br><br>
+  <br><br>
+
+  <script type="text/javascript">
+    var os = 0;
+    if (navigator.userAgent.indexOf("Windows") != -1) os = 1;
+    if (os == 1) {
+      $("#keyboard-frame").load("./keyboards/Generic-PC.svg");
+      $("#generic-pc").addClass("active");
+    } else {
+      $("#keyboard-frame").load("./keyboards/A1243.svg");
+      $("#apple-wired").addClass("active");
+    }
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#apple-wired").click(function () {
+        $("#keyboard-frame").load("./keyboards/A1243.svg");
+        $(".keyboard-choose").removeClass("active");
+        $("#apple-wired").addClass("active");
+      });
+      $("#apple-wireless").click(function () {
+        $("#keyboard-frame").load("./keyboards/A1314.svg");
+        $(".keyboard-choose").removeClass("active");
+        $("#apple-wireless").addClass("active");
+      });
+      $("#generic-pc").click(function () {
+        $("#keyboard-frame").load("./keyboards/Generic-PC.svg");
+        $(".keyboard-choose").removeClass("active");
+        $("#generic-pc").addClass("active");
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(window).on("load", function () {
+      setTimeout(function () {
+        $("#preloader").fadeOut("slow");
+        $("#load-up").css({
+          opacity: "1",
+          bottom: "0",
+        });
+        $("#load-down").css({
+          opacity: "1",
+          top: "0",
+        });
+      }, 1000);
+    });
+  </script>
+
+  <script src="./script.js" defer></script>
+</body>
+
+</html>
