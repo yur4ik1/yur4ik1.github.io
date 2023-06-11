@@ -133,3 +133,9 @@ window.addEventListener("keydown", function (event) {
     event.preventDefault();
   }
 });
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 121) {
+    event.preventDefault();
+  }
+});
+
