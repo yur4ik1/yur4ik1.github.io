@@ -230,6 +230,32 @@ input:checked+.slider:before {
     color: #ffffff;
 }
 
+.dark-mode {
+    background-color: #23272a;
+    color: #fff;
+}
+.dark-mode .set-panel.light {
+    background-color: #23272a;
+}
+
+
+.dark-mode .keys-frame.light  {
+    background-color: #23272a;
+}
+.dark-mode #cursor {
+    border: none;
+}
+.dark-mode .keyboard-options.light {
+    background-color: #23272a;
+}
+
+
+.dark-mode .slider.light {
+    border: 1px solid #fff;
+}
+.dark-mode .slider.light:before {
+    background-color: #fff;
+}
 
 
 @media(max-width:800px) {
