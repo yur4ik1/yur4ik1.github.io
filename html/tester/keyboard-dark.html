@@ -74,7 +74,7 @@
 
 </head>
 
-<body>
+<body class="dark-mode">
   <header>
     <div class="wrapper">
       <button aria-label="toggle menu" class="header__burger">
@@ -114,7 +114,7 @@
         <div>
           <span id="stay-pressed">light/dark</span>
           <label class="switch">
-            <input type="checkbox" id="theme" onclick="window.location.href='keyboard-dark.html'">
+            <input type="checkbox" id="theme" checked="checked" onclick="window.location.href='keyboard.html'">
             <span class="slider round light"></span>
           </label>
         </div>
@@ -149,15 +149,15 @@
 
         <div class="keyboard-options light">
           <div class="keyboard-choose" id="apple-wired">
-            <img src="./keyboards/A1243.svg">
+            <img src="./keyboards/A1243-dark.svg">
             Apple Wired Keyboard<br>A1243
           </div>
           <div class="keyboard-choose" id="apple-wireless">
-            <img src="./keyboards/A1314.svg">
+            <img src="./keyboards/A1314-dark.svg">
             Apple Wireless Keyboard<br>A1314
           </div>
           <div class="keyboard-choose" id="generic-pc">
-            <img src="./keyboards/Generic-PC.svg">
+            <img src="./keyboards/Generic-PC-dark.svg">
             Windows<br>Generic PC Keyboard
           </div>
         </div>
@@ -172,26 +172,26 @@
     var os = 0;
     if (navigator.userAgent.indexOf("Windows") != -1) os = 1;
     if (os == 1) {
-      $("#keyboard-frame").load("./keyboards/Generic-PC.svg");
+      $("#keyboard-frame").load("./keyboards/Generic-PC-dark.svg");
       $("#generic-pc").addClass("active");
     } else {
-      $("#keyboard-frame").load("./keyboards/A1243.svg");
+      $("#keyboard-frame").load("./keyboards/A1243-dark.svg");
       $("#apple-wired").addClass("active");
     }
 
     $(document).ready(function () {
       $("#apple-wired").click(function () {
-        $("#keyboard-frame").load("./keyboards/A1243.svg");
+        $("#keyboard-frame").load("./keyboards/A1243-dark.svg");
         $(".keyboard-choose").removeClass("active");
         $("#apple-wired").addClass("active");
       });
       $("#apple-wireless").click(function () {
-        $("#keyboard-frame").load("./keyboards/A1314.svg");
+        $("#keyboard-frame").load("./keyboards/A1314-dark.svg");
         $(".keyboard-choose").removeClass("active");
         $("#apple-wireless").addClass("active");
       });
       $("#generic-pc").click(function () {
-        $("#keyboard-frame").load("./keyboards/Generic-PC.svg");
+        $("#keyboard-frame").load("./keyboards/Generic-PC-dark.svg");
         $(".keyboard-choose").removeClass("active");
         $("#generic-pc").addClass("active");
       });
