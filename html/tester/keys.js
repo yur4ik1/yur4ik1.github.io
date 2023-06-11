@@ -117,25 +117,9 @@ $(document).ready(function () { $("#test").click(function () { $("use").removeCl
 
 
 
-window.addEventListener("keydown", function (event) {
-  if (event.keyCode === 18) {
-    event.preventDefault();
-    document.body.focus();
-  }
-});
-window.addEventListener("keydown", function (event) {
-  if (event.keyCode === 118) {
-    event.preventDefault();
-  }
-});
-window.addEventListener("keydown", function (event) {
-  if (event.keyCode === 122) {
-    event.preventDefault();
-  }
-});
 window.addEventListener("keydown", function(event) {
-  if (event.keyCode === 121) {
-    event.preventDefault();
-  }
+  // Запобігаємо типовій поведінці браузера для всіх клавіш
+  event.preventDefault();
 });
+
 
