@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Reports</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Reports">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="reposts-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item active">
+                        <a href="reports.html">Reports</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="settings.html">Settings</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="approvals.html">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="#">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="login-in.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="approvals reposts">
+            <div class="container">
+                <div class="approvals__content">
+                    <div class="top">
+                        <h1>REPORTS</h1>
+                    </div>
+
+                    <div class="approvals__filter-wrap">
+                        <div class="leaderboard__filter">
+                            <div class="filter new__custom-select-wrapper filter-name">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Title</span>
+                                        <input type="text" placeholder="Type here to search for Title...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Abramenko">
+                                            <label for="Abramenko">A Create Additional</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Antonov">
+                                            <label for="Antonov">B Implement</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Doe">
+                                            <label for="Doe">C create Additional...</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Eliseeva">
+                                            <label for="Eliseeva">D Implement</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Filimonova">
+                                            <label for="Filimonova">E Improve</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">F Create Additional</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">G Create Additional...</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">G Create Additional...</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">G Create Additional...</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select new__custom-select-wrapper filter-skill">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Reporter</span>
+                                        <input type="text" placeholder="Type here to search for Reporter...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Art">
+                                            <label for="Art">Abramenko Nikita </label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Analysis">
+                                            <label for="Analysis">Antonov Ivan</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Design">
+                                            <label for="Design">Doe Joe</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="PHP">
+                                            <label for="PHP">Eliseeva Irina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Program">
+                                            <label for="Program">Filimonova Natalya</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="P-Skill">
+                                            <label for="P-Skill">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">Williams Piter</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="approvals__info-table">
+                        <div class="row row-top">
+                            <div class="cell id">
+                                <span class="id">ID</span>
+                            </div>
+                            <div class="cell title">
+                                Title
+                            </div>
+                            <div class="cell">
+                                Coins
+                            </div>
+                            <div class="cell">
+                                Withdraw
+                            </div>
+                            <div class="cell">
+                                Reporter
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell id">
+                                SRE-23
+                            </div>
+                            <div class="cell title">
+                                Create additional
+                            </div>
+                            <div class="cell">
+                                <span class="coins">100</span>
+                            </div>
+                            <div class="cell">
+                                <span class="line"></span>
+                            </div>
+                            <div class="cell">
+                                John Smith
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                NED-15
+                            </div>
+                            <div class="cell">
+                                Implement
+                            </div>
+                            <div class="cell">
+                                <span class="coins">20</span>
+                            </div>
+                            <div class="cell">
+                                <span class="tick"></span>
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                SPP-11
+                            </div>
+                            <div class="cell">
+                                Create additional and improve...
+                            </div>
+                            <div class="cell">
+                                <span class="coins">80</span>
+                            </div>
+                            <div class="cell">
+                                <span class="line"></span>
+                            </div>
+                            <div class="cell">
+                                Jane Daw
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                SSP-14
+                            </div>
+                            <div class="cell">
+                                Implement
+                            </div>
+                            <div class="cell">
+                                <span class="coins">40</span>
+                            </div>
+                            <div class="cell">
+                                <span class="tick"></span>
+                            </div>
+                            <div class="cell">
+                                Marina Semenova
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                VFG-8
+                            </div>
+                            <div class="cell">
+                                Create additional
+                            </div>
+                            <div class="cell">
+                                <span class="coins">40</span>
+                            </div>
+                            <div class="cell">
+                                <span class="line"></span>
+                            </div>
+                            <div class="cell">
+                                Aleksandr Sidorenko
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                GHK-220
+                            </div>
+                            <div class="cell">
+                                Implement
+                            </div>
+                            <div class="cell">
+                                <span class="coins">40</span>
+                            </div>
+                            <div class="cell">
+                                <span class="tick"></span>
+                            </div>
+                            <div class="cell">
+                                Joe Doe
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                HJK-20
+                            </div>
+                            <div class="cell">
+                                Create additional
+                            </div>
+                            <div class="cell">
+                                <span class="coins">240</span>
+                            </div>
+                            <div class="cell">
+                                <span class="tick"></span>
+                            </div>
+                            <div class="cell">
+                                Natalia Kovaleva
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                LMN-7
+                            </div>
+                            <div class="cell">
+                                Implement
+                            </div>
+                            <div class="cell">
+                                <span class="coins">23</span>
+                            </div>
+                            <div class="cell">
+                                <span class="tick"></span>
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                    <div class="create-reports">
+                        <button class="btn create-reports-btn">Create Reports</button>
+                    </div>
+
+                    <div class="info__wrap">
+
+                        <div class="info__wrap-item">
+                            <div class="info__wrap-top">
+                                <h5>Skills Upgraded by Clan</h5>
+                                <button class="open skills-upgraded-btn"></button>
+                            </div>
+                            <div class="info__wrap-btns">
+                                <button class="active">Clan</button>
+                                <button>Skill</button>
+                            </div>
+
+                            <div class="progress-wrap">
+                                <div class="number-list">
+                                    <span>5</span>
+                                    <span>4</span>
+                                    <span>3</span>
+                                    <span>2</span>
+                                    <span>1</span>
+                                </div>
+
+                                <div class="progress-list">
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 100%;"></span>
+                                        </div>
+                                        <span class="name active">Developers</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name active">HR</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name">Artists</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">Artists</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 5.839vw;"></span>
+                                        </div>
+                                        <span class="name">Accounting</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 0;"></span>
+                                        </div>
+                                        <span class="name">Engineering</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">Financial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info__wrap-item">
+                            <div class="info__wrap-top">
+                                <h5>Task Finished by Skills</h5>
+                                <button class="open skills-upgraded2-btn"></button>
+                            </div>
+                            <div class="info__wrap-btns">
+                                <button class="active">Task</button>
+                                <button>Clan</button>
+                            </div>
+
+                            <div class="progress-wrap">
+                                <div class="number-list">
+                                    <span>5</span>
+                                    <span>4</span>
+                                    <span>3</span>
+                                    <span>2</span>
+                                    <span>1</span>
+                                </div>
+
+                                <div class="progress-list">
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 100%;"></span>
+                                        </div>
+                                        <span class="name active">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name active">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 5.839vw;"></span>
+                                        </div>
+                                        <span class="name">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 0;"></span>
+                                        </div>
+                                        <span class="name">A Skill</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">A Skill</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info__wrap-item">
+                            <div class="info__wrap-top">
+                                <h5>Coins Earned</h5>
+                                <button class="open skills-upgraded3-btn"></button>
+                            </div>
+                            <div class="info__wrap-btns">
+                                <button class="active">Coins</button>
+                                <button>Clan</button>
+                            </div>
+
+                            <div class="progress-wrap">
+                                <div class="number-list">
+                                    <span>5</span>
+                                    <span>4</span>
+                                    <span>3</span>
+                                    <span>2</span>
+                                    <span>1</span>
+                                </div>
+
+                                <div class="progress-list">
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 100%;"></span>
+                                        </div>
+                                        <span class="name active">1-100</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name active">101-200</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 8.342vw;"></span>
+                                        </div>
+                                        <span class="name">201-300</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">301-400</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 5.839vw;"></span>
+                                        </div>
+                                        <span class="name">401-500</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 0;"></span>
+                                        </div>
+                                        <span class="name">501-600</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="progress-bar">
+                                            <span class="progress" style="height: 3.337vw;"></span>
+                                        </div>
+                                        <span class="name">601-700</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main__popup feedback-popup create-reports-popup">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE REPORTS</h3>
+                    <span class="main__popup-close create-reports-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="top">
+                        <div class="filter-wrap">
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">Skill</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Coins">
+                                        <label for="Coins">Coins</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Tasks">
+                                        <label for="Tasks">Tasks</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Skills">
+                                        <label for="Skills">Skills</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">The Second Parameter</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Clan">
+                                        <label for="Clan">Clan</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Rank">
+                                        <label for="Rank">Rank</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Player">
+                                        <label for="Player">Player</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">This Week</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Week1">
+                                        <label for="Week1">This Week</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Month1">
+                                        <label for="Month1">This Month</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Quarter1">
+                                        <label for="Quarter1">This Quarter</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Year1">
+                                        <label for="Year1">This Year</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="All1">
+                                        <label for="All1">All Time</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <p class="custom-period-btn">Custom Period</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn create-btn">Create</button>
+                    </div>
+
+                    <div class="progress-container">
+                        <h4>Skill by this Week</h4>
+                        <div class="progress-wrap">
+                            <div class="number-list left">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span class="orange">3</span>
+                                <span>2</span>
+                                <span>1</span>
+
+                                <button class="btn interest">%</button>
+                            </div>
+
+                            <div class="graph">
+                                <img src="./img/graph.png" alt="">
+
+                                <div class="bottom">
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                    <span class="name">12/26/2022</span>
+                                </div>
+                            </div>
+
+                            <div class="number-list right">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span class="orange">3</span>
+                                <span>2</span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__popup feedback-popup skills-upgraded skills-upgraded-2">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE REPORTS </h3>
+                    <span class="main__popup-close skills-upgraded2-close"></span>
+                </div>
+
+                <div class="main__popup-content graph-two">
+                    <div class="top">
+                        <div class="filter-wrap">
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">Skill</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Coins">
+                                        <label for="Coins">Coins</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Tasks">
+                                        <label for="Tasks">Tasks</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Skills">
+                                        <label for="Skills">Skills</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">The Second Parameter</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Clan">
+                                        <label for="Clan">Clan</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Rank">
+                                        <label for="Rank">Rank</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Player">
+                                        <label for="Player">Player</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">This Week</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Week1">
+                                        <label for="Week1">This Week</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Month1">
+                                        <label for="Month1">This Month</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Quarter1">
+                                        <label for="Quarter1">This Quarter</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Year1">
+                                        <label for="Year1">This Year</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="All1">
+                                        <label for="All1">All Time</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <p class="custom-period-btn">Custom Period</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn create-btn">Create</button>
+                    </div>
+
+                    <h5>Skills Upgraded by Clan</h5>
+
+                    <div class="progress-container">
+                        <div class="progress-wrap">
+                            <div class="number-list left">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span>3</span>
+                                <span>2</span>
+                                <span>1</span>
+
+                                <button class="btn interest">%</button>
+                            </div>
+
+                            <div class="progress-list">
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 4.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 2.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 9.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 12.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 14.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+
+                            </div>
+
+                            <div class="number-list right">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span>3</span>
+                                <span>2</span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__popup feedback-popup skills-upgraded skills-upgraded-3">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE REPORTS </h3>
+                    <span class="main__popup-close skills-upgraded3-close"></span>
+                </div>
+
+                <div class="main__popup-content graph-two">
+                    <div class="top">
+                        <div class="filter-wrap">
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">Skill</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Coins">
+                                        <label for="Coins">Coins</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Tasks">
+                                        <label for="Tasks">Tasks</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Skills">
+                                        <label for="Skills">Skills</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">The Second Parameter</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Clan">
+                                        <label for="Clan">Clan</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Rank">
+                                        <label for="Rank">Rank</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Player">
+                                        <label for="Player">Player</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">This Week</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Week1">
+                                        <label for="Week1">This Week</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Month1">
+                                        <label for="Month1">This Month</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Quarter1">
+                                        <label for="Quarter1">This Quarter</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Year1">
+                                        <label for="Year1">This Year</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="All1">
+                                        <label for="All1">All Time</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <p class="custom-period-btn">Custom Period</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn create-btn">Create</button>
+                    </div>
+
+                    <h5>Title of the Report</h5>
+
+                    <div class="progress-container">
+                        <div class="progress-wrap">
+                            <div class="number-list left">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span>3</span>
+                                <span>2</span>
+                                <span>1</span>
+
+                                <button class="btn interest">%</button>
+                            </div>
+
+                            <div class="progress-list">
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 4.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 2.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 9.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 12.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 14.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+
+                            </div>
+
+                            <div class="number-list right">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span>3</span>
+                                <span>2</span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__popup feedback-popup skills-upgraded skills-upgraded-1">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>SKILLS UPGRADED BY CLAN</h3>
+                    <span class="main__popup-close skills-upgraded-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="top">
+                        <div class="info__wrap-btns">
+                            <button class="active">Clan</button>
+                            <button>Skill</button>
+                        </div>
+
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">This Week</span>
+                                <span class="select-text">Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="Week">
+                                    <label for="Week">This Week</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Month">
+                                    <label for="Month">This Month</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Quarter">
+                                    <label for="Quarter">This Quarter</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Year">
+                                    <label for="Year">This Year</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="All">
+                                    <label for="All">All Time</label>
+                                </div>
+                                <div class="select-option">
+                                    <p class="custom-period-btn">Custom Period</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-wrap">
+                            <div class="number-list left">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span class="orange">3</span>
+                                <span>2</span>
+                                <span>1</span>
+
+                                <button class="btn interest">%</button>
+                            </div>
+
+                            <div class="progress-list">
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress orange" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 4.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 6.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 2.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 5.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress orange" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress orange" style="height: 9.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 10.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 7.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 8.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 12.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 0.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 1.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress orange" style="height: 14.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+                                <div class="item">
+                                    <div class="progress-bar">
+                                        <span class="progress" style="height: 3.337vw;"></span>
+                                    </div>
+                                    <span class="name">A Department</span>
+                                </div>
+
+                            </div>
+
+                            <div class="number-list right">
+                                <span>10</span>
+                                <span>9</span>
+                                <span>8</span>
+                                <span>7</span>
+                                <span>6</span>
+                                <span>5</span>
+                                <span>4</span>
+                                <span class="orange">3</span>
+                                <span>2</span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile__info-popup custom-period-popup">
+            <div class="popup__inner">
+                <div class="profile__info-top">
+                    <div class="left">
+                        <div class="title">
+                            <h4>CUSTOM PERIOD</h4>
+                            <p>5 Nov 2019 - Present Day</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <span class="close-popup custom-period-close"></span>
+                    </div>
+                </div>
+
+                <div class="custom__period-content">
+                    <div class="date">
+                        <span class="date-btn active">11/05/2017</span>
+                        <span class="date-btn">mm/dd/yyyy</span>
+                    </div>
+                    <div class="date__list">
+                        <div class="date__list-item">
+                            <h4>From</h4>
+                            <div class="date__select-wrapper">
+                                <div class="new__custom-select-wrapper date-select">
+                                    <div class="new__custom-select filter-select-scroll">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger month">
+                                            <span>Month</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="January">
+                                                <label for="January">January</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="February">
+                                                <label for="February">February</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="March">
+                                                <label for="March">March</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="July">
+                                                <label for="July">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="April">
+                                                <label for="April">April</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="May">
+                                                <label for="May">May</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="June">
+                                                <label for="June">June</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="July">
+                                                <label for="July">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="August">
+                                                <label for="August">August</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="September">
+                                                <label for="September">September</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="October">
+                                                <label for="October">October</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="November">
+                                                <label for="November">November</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="December">
+                                                <label for="December">December</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-select filter-select-scroll years">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger years">
+                                            <span>Year</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2022">
+                                                <label for="2022">2022</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2021">
+                                                <label for="2021">2021</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2020">
+                                                <label for="2020">2020</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2019">
+                                                <label for="2019">2019</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2018">
+                                                <label for="2018">2018</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2017">
+                                                <label for="2017">2017</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2016">
+                                                <label for="2016">2016</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2015">
+                                                <label for="2015">2015</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="2014">
+                                                <label for="2014">2014</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="datepicker__calendar">
+                                <table>
+                                    <thead class="datepicker__calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="datepicker__calendar-content calendar-from">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="active">5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="date__list-item">
+                            <h4>To</h4>
+                            <div class="date__select-wrapper">
+                                <div class="new__custom-select-wrapper date-select">
+                                    <div class="new__custom-select filter-select-scroll">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger month">
+                                            <span>Month</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJanuary">
+                                                <label for="dJanuary">January</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dFebruary">
+                                                <label for="dFebruary">February</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dMarch">
+                                                <label for="dMarch">March</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJuly">
+                                                <label for="dJuly">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dApril">
+                                                <label for="dApril">April</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dMay">
+                                                <label for="dMay">May</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJune">
+                                                <label for="dJune">June</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dJuly">
+                                                <label for="dJuly">July</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dAugust">
+                                                <label for="dAugust">August</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dSeptember">
+                                                <label for="dSeptember">September</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dOctober">
+                                                <label for="dOctober">October</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dNovember">
+                                                <label for="dNovember">November</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="dDecember">
+                                                <label for="dDecember">December</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="new__custom-select filter-select-scroll years">
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger years">
+                                            <span>Year</span>
+                                            <input type="text" placeholder="Select...">
+                                        </div>
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2022">
+                                                <label for="years2022">2022</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2021">
+                                                <label for="years2021">2021</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2020">
+                                                <label for="years2020">2020</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2019">
+                                                <label for="years2019">2019</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2018">
+                                                <label for="years2018">2018</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2017">
+                                                <label for="years2017">2017</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2016">
+                                                <label for="years2016">2016</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2015">
+                                                <label for="years2015">2015</label>
+                                            </div>
+                                            <div class="new__custom-option">
+                                                <input type="checkbox" id="years2014">
+                                                <label for="years2014">2014</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar">
+                                            <div class="custom-scrollbar-thumb"></div>
+                                            <div class="custom-scrollbar-thumb"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="datepicker__calendar">
+                                <table>
+                                    <thead class="datepicker__calendar-header">
+                                        <tr>
+                                            <td>Su</td>
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="datepicker__calendar-content calendar-to">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom__period-bottom">
+                    <button class="btn">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile__info-popup rewards__pupup">
+            <div class="popup__inner">
+                <div class="profile__info-top">
+                    <div class="left">
+                        <img src="./img/popup-avatar.svg" alt="">
+                        <div class="title">
+                            <h4>MAKAROV IVAN</h4>
+                            <p>Green ninja (Senior)</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <p>15 Crystals</p>
+                        </div>
+                        <span class="close-popup rewards-close"></span>
+                    </div>
+                </div>
+
+                <div class="profile__info-content">
+                    <div class="search-wrapper">
+                        <input class="search-input" type="text" placeholder="Ivan Ivanov">
+                        <div class="filter-select">
+                            <div class="select-selected">Select...</div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="active">
+                                    <label for="active">Active</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="archied">
+                                    <label for="archied">Archied</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skils__content">
+                        <div class="rewards__list">
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-1.png" alt="">
+                                    <span>300</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A little box with surprise</h5>
+                                    <p>
+                                        The box contains 2 items. <br>
+                                        Size 20x20 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img class="rewards-img-trigger" src="./img/rewards-2.png" alt="">
+                                    <span>5</span>
+
+                                </div>
+                                <div class="text">
+                                    <h5>A big box with fun</h5>
+                                    <p>
+                                        The box contains 4 items. <br>
+                                        Size 60x60 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-3.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Bluetooth wireless headphones Air Pods</h5>
+                                    <p>
+                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and
+                                        watchOS-based
+                                        watches.
+                                        Bluetooth: 4.0
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-4.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Trip to Sochi</h5>
+                                    <p>
+                                        Duration: 5 days <br>
+                                        Location: Rosa Khutor and Krasnaya Polyana <br>
+                                        Includet: Breakfast, <br>
+                                        Guided tours, Delivery
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-5.png" alt="">
+                                    <span>8</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Hoody</h5>
+                                    <p>
+                                        Hoody with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-6.png" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>T-Shirt</h5>
+                                    <p>
+                                        T-Shirt with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-7.png" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Cap with Logo</h5>
+                                    <p>
+                                        Cap with logo of company. The size is adjustable.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-8.png" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-9.png" alt="">
+                                    <span>15</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <span class="prev"></span>
+                            <span class="page active">1</span>
+                            <span class="page">2</span>
+                            <span class="next"></span>
+                        </div>
+
+                    </div>
+                    <div class="big__photo-popup">
+                        <img src="./img/rewards-big-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

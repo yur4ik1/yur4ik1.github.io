@@ -505,6 +505,68 @@ if (feedbackPopup && feedbackOpen && feedbackClose) {
 }
 
 
+/* skills upgraded popup */
+
+const skillsUpgradedPopup = document.querySelector('.skills-upgraded-1');
+const skillsUpgradedOpen = document.querySelector('.skills-upgraded-btn');
+const skillsUpgradedClose = document.querySelector('.skills-upgraded-close');
+
+if (skillsUpgradedPopup && skillsUpgradedOpen) {
+  skillsUpgradedOpen.addEventListener('click', () => {
+    skillsUpgradedPopup.classList.add('active');
+  });
+  skillsUpgradedClose.addEventListener('click', () => {
+    skillsUpgradedPopup.classList.remove('active');
+  });
+}
+
+/* skills upgraded popup 2 */
+
+const skillsUpgradedPopup2 = document.querySelector('.skills-upgraded-2');
+const skillsUpgradedOpen2 = document.querySelector('.skills-upgraded2-btn');
+const skillsUpgradedClose2 = document.querySelector('.skills-upgraded2-close');
+
+if (skillsUpgradedPopup2 && skillsUpgradedOpen2) {
+  skillsUpgradedOpen2.addEventListener('click', () => {
+    skillsUpgradedPopup2.classList.add('active');
+  });
+  skillsUpgradedClose2.addEventListener('click', () => {
+    skillsUpgradedPopup2.classList.remove('active');
+  });
+}
+
+/* skills upgraded popup 3 */
+
+const skillsUpgradedPopup3 = document.querySelector('.skills-upgraded-3');
+const skillsUpgradedOpen3 = document.querySelector('.skills-upgraded3-btn');
+const skillsUpgradedClose3 = document.querySelector('.skills-upgraded3-close');
+
+if (skillsUpgradedPopup3 && skillsUpgradedOpen3) {
+  skillsUpgradedOpen3.addEventListener('click', () => {
+    skillsUpgradedPopup3.classList.add('active');
+  });
+  skillsUpgradedClose3.addEventListener('click', () => {
+    skillsUpgradedPopup3.classList.remove('active');
+  });
+}
+
+
+/* create reports popup */
+
+const createReportsPopup = document.querySelector('.create-reports-popup');
+const createReportsOpen = document.querySelector('.create-reports-btn');
+const createReportsClose = document.querySelector('.create-reports-close');
+
+if (createReportsPopup && createReportsOpen) {
+  createReportsOpen.addEventListener('click', () => {
+    createReportsPopup.classList.add('active');
+  });
+  createReportsClose.addEventListener('click', () => {
+    createReportsPopup.classList.remove('active');
+  });
+}
+
+
 
 /* tasks list bg */
 
@@ -621,17 +683,21 @@ if (achievementsPopup && achievementsBtn) {
 /* custom period popup */
 
 const customPeriodPopup = document.querySelector('.custom-period-popup');
-const customPeriodBtn = document.querySelector('.custom-period-btn');
+const customPeriodBtns = document.querySelectorAll('.custom-period-btn');
 const customPeriodClose = document.querySelector('.custom-period-close');
 
-if (customPeriodPopup && customPeriodBtn) {
-  customPeriodBtn.addEventListener('click', () => {
-    customPeriodPopup.classList.add('active');
+if (customPeriodPopup && customPeriodBtns.length > 0) {
+  customPeriodBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      customPeriodPopup.classList.add('active');
+    });
   });
+
   customPeriodClose.addEventListener('click', () => {
     customPeriodPopup.classList.remove('active');
   });
 }
+
 
 // temporary block
 
@@ -960,3 +1026,8 @@ if (rowItem) {
     rowItem[i].classList.add("colored");
   }
 }
+
+
+/* graph  */
+
+
