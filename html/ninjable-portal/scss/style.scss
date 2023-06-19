@@ -12,7 +12,7 @@
 
 .header {
     width: 100%;
-    background: url('../img/header-background.png') no-repeat center top / cover;
+    background: url('../img/header-background.webp') no-repeat center top / cover;
     background-color: rgb(104 117 145 / 80%);
     background-blend-mode: multiply;
     box-shadow: 0vw 0vw 2.737vw rgba(6, 8, 13, 0.75);
@@ -4729,7 +4729,7 @@
     }
 
     &__list-item.yellow {
-        background: url(../img/leaderboard-yellow.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-yellow.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw rgba(140, 98, 39, 0.75);
@@ -4787,7 +4787,7 @@
 
 
     &__list-item.green {
-        background: url(../img/leaderboard-green.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-green.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw #3F655F;
@@ -4844,7 +4844,7 @@
     }
 
     &__list-item.white {
-        background: url(../img/leaderboard-white.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-white.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw #C6C6C6;
@@ -4901,7 +4901,7 @@
     }
 
     &__list-item.purple {
-        background: url(../img/leaderboard-purple.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-purple.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw #5D5F8B;
@@ -4959,7 +4959,7 @@
 
 
     &__list-item.black {
-        background: url(../img/leaderboard-black.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-black.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw rgba(6, 8, 13, 0.75);
@@ -5017,7 +5017,7 @@
     }
 
     &__list-item.red {
-        background: url(../img/leaderboard-red.png) no-repeat center top / cover;
+        background: url(../img/leaderboard-red.webp) no-repeat center top / cover;
 
         .avatar {
             box-shadow: 0vw 0vw 0.574vw 0.261vw #885552;
@@ -6301,6 +6301,7 @@
 
     .filter-select {
         border-radius: 0.417vw;
+
         &::before {
             z-index: 999999999;
         }
@@ -6420,5 +6421,73 @@
             width: 2.29vw;
         }
     }
+}
 
+.course-popup {
+    .main__popup-inner {
+        width: 50.834vw;
+        height: 44.421vw;
+
+        h3 {
+            &::after {
+                display: none;
+            }
+        }
+
+        .main__popup-top::after {
+            content: "";
+            background: url(../img/course-popup-line.svg) no-repeat center top/cover;
+            width: 40.146vw;
+            height: 0.104vw;
+            margin-top: 2.607vw;
+        }
+
+        .main__popup-content {
+            padding-top: 2.45vw;
+            padding-left: 5.318vw;
+            padding-right: 5.318vw;
+            margin-right: 0;
+
+            p {
+                font-family: 'Karla';
+                font-weight: 500;
+                font-size: 1.043vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.014vw;
+                color: #869DC8;
+
+                span {
+                    color: #fff;
+                }
+            }
+
+            a {
+                font-size: 0.782vw;
+                line-height: 2.503vw;
+                letter-spacing: 0.01vw;
+                text-decoration-line: underline;
+                color: #869DC8;
+            }
+
+            .certificate {
+                margin-top: 2.346vw;
+                width: 39.99vw;
+                height: 23.045vw;
+                border: 0.104vw solid #869DC8;
+                box-shadow: 0vw 0vw 0.313vw 0.104vw rgba(47, 196, 211, 0.75);
+                border-radius: 1.199vw;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 1.199vw;
+                }
+            }
+        }
+    }
+}
+
+#myChart {
+    width: 59.333vw;
+    height: 13.295vw;
 }

@@ -567,6 +567,22 @@ if (createReportsPopup && createReportsOpen) {
 }
 
 
+/* course popup */
+
+const coursePopup = document.querySelector('.course-popup');
+const coursePopupOpen = document.querySelector('.course-popup-open');
+const coursePopupClose = document.querySelector('.course-popup-close');
+
+if (coursePopup && coursePopupOpen) {
+  coursePopupOpen.addEventListener('click', () => {
+    coursePopup.classList.add('active');
+  });
+  coursePopupClose.addEventListener('click', () => {
+    coursePopup.classList.remove('active');
+  });
+}
+
+
 
 /* tasks list bg */
 
@@ -951,6 +967,9 @@ newCustomSelects.forEach((newCustomSelect) => {
 
   updateScroll();
 });
+
+
+
 
 
 /* Delete the Task */
