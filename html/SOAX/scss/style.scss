@@ -24,6 +24,7 @@
 
         .header__menu-item {
             position: relative;
+            display: flex;
 
             a {
                 color: var(--blue-700, #595B7C);
@@ -33,6 +34,9 @@
         }
     }
 
+    &__menu-item {
+        display: flex;
+    }
 
     &__menu-item.sub {
         display: flex;
