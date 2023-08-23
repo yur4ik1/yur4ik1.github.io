@@ -101,3 +101,26 @@ class TextScramble {
   }
   
   next()
+
+
+
+
+
+  const gradients = document.querySelectorAll("linearGradient");
+
+  function animateGradients() {
+    gradients.forEach((gradient, index) => {
+      let offset = 0;
+
+      function animateGradient() {
+        offset += 0.005; // Змінюйте це значення для налаштування швидкості анімації
+        gradient.setAttribute("x1", 686 + Math.sin(offset + index * 2) * 50);
+        gradient.setAttribute("x2", 772.565 + Math.cos(offset + index * 2) * 50);
+        requestAnimationFrame(animateGradient);
+      }
+
+      animateGradient();
+    });
+  }
+
+  animateGradients();
