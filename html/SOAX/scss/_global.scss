@@ -46,3 +46,27 @@ ul {
   max-width: 91.25vw;
   margin: 0 auto;
 }
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.972vw;
+}
+
+.pretitle {
+  color: var(--success, #07BF82);
+  text-align: center;
+  font-size: 1.042vw;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.333vw;
+  font-weight: 600;
+  line-height: 4.444vw;
+  width: 55.556vw;
+  color: var(--black, #000);
+}
