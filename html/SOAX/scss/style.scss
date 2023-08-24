@@ -750,6 +750,7 @@
 
     .container {
         max-width: 87.569vw;
+        position: relative;
     }
 
     &__illustration {
@@ -759,6 +760,7 @@
     }
 
     &__title {
+        margin-bottom: 2.431vw;
         span {
             background: linear-gradient(295deg, #6F6CFF 0%, #A9DBF1 41.67%, #7B78FC 82.81%);
             background-clip: text;
@@ -774,16 +776,20 @@
     &__features {
         background: url('../img/features.png') no-repeat center top / cover;
         width: 100%;
-        height: 24.861vw;
+        height: auto;
     }
 
     &__list-wrap {
         display: flex;
         flex-direction: column;
+        margin-top: 1.667vw;
     }
 
     &__list {
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.667vw;
     }
 
     &__list-title {
@@ -794,6 +800,25 @@
         line-height: normal;
         letter-spacing: 0.072vw;
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 1.667vw;
+        margin-bottom: 1.667vw;
+        white-space: nowrap;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 0.069vw;
+            background: #ECE5DF;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 0.069vw;
+            background: #ECE5DF;
+        }
     }
 
     &__list-item {
@@ -828,9 +853,8 @@
         &::after {
             content: '';
             width: 1vw;
-            height: 1vw;
+            height: 0.8vw;
             background: url('../img/arrow.svg') no-repeat center top / cover;
         }
     }
-
 }
