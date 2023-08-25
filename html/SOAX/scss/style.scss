@@ -3,6 +3,10 @@
 @use 'vars';
 @use 'global';
 
+body.home-page {
+    background: #0B0C17;
+}
+
 .header {
     width: 100%;
 
@@ -414,6 +418,7 @@
     align-items: center;
     padding-top: 3.125vw;
     padding-bottom: 3.125vw;
+    background: #fff;
 
     .container {
         display: flex;
@@ -430,6 +435,7 @@
 .products {
     padding-top: 4.583vw;
     padding-bottom: 7.292vw;
+    background: #fff;
 
     &__wrap {
         margin-top: 4.236vw;
@@ -648,6 +654,7 @@
 .testimonial {
     padding-top: 4.306vw;
     padding-bottom: 3.75vw;
+    background: #fff;
 
     &__content {
         background: url(../img/testimonial-bg.png) no-repeat center top / cover;
@@ -747,6 +754,11 @@
 }
 
 .features {
+    position: relative;
+    padding-bottom: 6.544vw;
+    border-bottom-right-radius: 1.389vw;
+    border-bottom-left-radius: 1.389vw;
+    background: var(--white, #FFF);
 
     .container {
         max-width: 87.569vw;
@@ -761,6 +773,7 @@
 
     &__title {
         margin-bottom: 2.431vw;
+
         span {
             background: linear-gradient(295deg, #6F6CFF 0%, #A9DBF1 41.67%, #7B78FC 82.81%);
             background-clip: text;
@@ -773,10 +786,12 @@
         }
     }
 
-    &__features {
+    &__bg {
         background: url('../img/features.png') no-repeat center top / cover;
         width: 100%;
-        height: auto;
+        height: 50.556vw;
+        position: absolute;
+        top: 12.528vw;
     }
 
     &__list-wrap {
@@ -852,9 +867,44 @@
 
         &::after {
             content: '';
-            width: 1vw;
+            width: 1.1vw;
             height: 0.8vw;
+            transition: 0.3s;
             background: url('../img/arrow.svg') no-repeat center top / cover;
         }
     }
+
+    &__bottom {
+        margin-top: 4.028vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__btn {
+        padding: 0.339vw 2.778vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.694vw;
+        border-radius: 2.778vw;
+        border: 0.694vw solid var(--white, #FFF);
+        background: var(--blue-500, #4855DC);
+        box-shadow: 0vw 0.278vw 0.833vw 0vw rgba(0, 0, 0, 0.08);
+        width: 16.167vw;
+        color: var(--white, #FFF);
+        font-size: 0.972vw;
+        font-weight: 500;
+        line-height: 2.569vw;
+
+        &::after {
+            content: "";
+            background: url(../img/arrow-narrow-up-right.svg) no-repeat center top/cover;
+            width: 1.111vw;
+            height: 1.111vw;
+        }
+    }
 }
+
+.plans {}
