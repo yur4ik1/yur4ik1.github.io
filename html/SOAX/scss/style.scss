@@ -153,11 +153,12 @@ body.home-page {
 
 .hero {
     padding-top: 10.417vw;
+    padding-bottom: 4.861vw;
 
     &__bg {
         background: url(../img/hero-bg.png) no-repeat center top / cover;
         width: 100%;
-        height: 54.097vw;
+        height: 57.097vw;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -907,4 +908,61 @@ body.home-page {
     }
 }
 
-.plans {}
+.plans {
+    padding-top: 20.208vw;
+    padding-bottom: 11.042vw;
+    position: relative;
+
+    &__illustration {
+        background: url(../img/flexible-illustration.svg) no-repeat center top / cover;
+        width: 43.333vw;
+        height: 17.917vw;
+        position: absolute;
+        top: 5.1vw;
+        z-index: -1;
+    }
+
+    &__title {
+        color: var(--white, #FFF);
+        text-align: center;
+    }
+
+    &__items {
+        margin-top: 2.778vw;
+    }
+
+    &__items-item {
+        border-radius: 1.389vw;
+        background: #1A1C28;
+        width: 100%;
+        height: 44.375vw;
+        margin-bottom: 2.778vw;
+        position: relative;
+    }
+
+    &__items-item:nth-child(1) {
+        height: 22.431vw;
+
+        &::before {
+            content: '';
+            background: url(../img/circles.png) no-repeat center top / cover;
+            width: 58.227vw;
+            height: 31.528vw;
+            position: absolute;
+            left: 0vw;
+            bottom: 0;
+        }
+    }
+
+    &__items-item:nth-child(2) {
+        &::before {
+            content: '';
+            background: url(../img/circles-2.png) no-repeat center top / cover;
+            width: 58.227vw;
+            height: 31.528vw;
+            position: absolute;
+            left: 0vw;
+            top: 0;
+        }
+    }
+}
