@@ -938,6 +938,9 @@ body.home-page {
         height: 44.375vw;
         margin-bottom: 2.778vw;
         position: relative;
+        z-index: 999999;
+        display: flex;
+        justify-content: space-between;
     }
 
     &__items-item:nth-child(1) {
@@ -951,6 +954,8 @@ body.home-page {
             position: absolute;
             left: 0vw;
             bottom: 0;
+            border-bottom-left-radius: 20px;
+            z-index: -1;
         }
     }
 
@@ -963,6 +968,66 @@ body.home-page {
             position: absolute;
             left: 0vw;
             top: 0;
+            border-top-left-radius: 1.389vw;
+            z-index: -1;
         }
+    }
+
+    &__names {
+        padding-top: 3.681vw;
+        padding-bottom: 1.389vw;
+        padding-left: 4.583vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.181vw;
+        width: 27.986vw;
+
+        .pre-title {
+            font-size: 1.042vw;
+            font-weight: 500;
+            line-height: normal;
+            background: var(--blue-gradient, linear-gradient(295deg, #6F6CFF 0%, #B9E1F2 52.60%, #7B78FC 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            color: var(--white, #FFF);
+            font-family: Suisse Intl;
+            font-size: 1.806vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .desc {
+            color: var(--violet-200, #ACADC4);
+            font-size: 1.25vw;
+            font-weight: 400;
+            line-height: 2.222vw;
+        }
+
+    }
+
+
+    &__list {
+        padding-top: 2.153vw;
+        padding-bottom: 2.153vw;
+        padding-right: 2.292vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.111vw;
+    }
+
+    &__list-item {
+        display: flex;
+        width: 51.389vw;
+        padding: 1.389vw;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1.389vw;
+        background: #242738;
+        height: 5.278vw;
     }
 }
