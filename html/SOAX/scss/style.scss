@@ -1296,12 +1296,10 @@ body.home-page {
     background: #fff;
 
     &__illustration {
-        background: url(../img/reviews-illustration.png) no-repeat center top / cover;
+        background: url(../img/reviews-illustration.svg) no-repeat center top / cover;
         width: 13.889vw;
         height: 3.056vw;
-        position: absolute;
-        top: 1.5vw;
-        z-index: 0;
+        z-index: 9;
     }
 
     &__text-wrap {
@@ -1350,6 +1348,20 @@ body.home-page {
         border-radius: 0.694vw;
         background: var(--white, #FFF);
         box-shadow: 0vw 0.278vw 0.278vw 0vw rgba(0, 0, 0, 0.06);
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            background: url(../img/reviews-bg.png) no-repeat center top/cover;
+            width: 32.239vw;
+            height: 16.583vw;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            border-bottom-right-radius: 0.694vw;
+        }
     }
 
     &__items-item {
@@ -1551,3 +1563,5 @@ body.home-page {
         }
     }
 }
+
+.integrations {}
