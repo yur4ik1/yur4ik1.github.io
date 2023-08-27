@@ -497,9 +497,14 @@ body.home-page {
     }
 
     &__items {
-        display: flex;
-        justify-content: space-between;
+        .tabs-item {
+            display: none;
+        }
 
+        .tabs-item.active {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__wrap-item {
@@ -935,16 +940,17 @@ body.home-page {
         border-radius: 1.389vw;
         background: #1A1C28;
         width: 100%;
-        height: 44.375vw;
+        height: auto;
         margin-bottom: 2.778vw;
         position: relative;
         z-index: 999999;
         display: flex;
         justify-content: space-between;
+        padding-bottom: 2.153vw;
+        transition: 0.3s;
     }
 
     &__items-item:nth-child(1) {
-        height: 22.431vw;
 
         &::before {
             content: '';
@@ -954,7 +960,7 @@ body.home-page {
             position: absolute;
             left: 0vw;
             bottom: 0;
-            border-bottom-left-radius: 20px;
+            border-bottom-left-radius: 1.389vw;
             z-index: -1;
         }
     }
@@ -970,6 +976,13 @@ body.home-page {
             top: 0;
             border-top-left-radius: 1.389vw;
             z-index: -1;
+        }
+
+        .plans__list-item:nth-child(4) {
+            .icons {
+                width: 2.153vw;
+                height: 1.111vw;
+            }
         }
     }
 
@@ -1013,7 +1026,6 @@ body.home-page {
 
     &__list {
         padding-top: 2.153vw;
-        padding-bottom: 2.153vw;
         padding-right: 2.292vw;
         display: flex;
         flex-direction: column;
@@ -1021,13 +1033,150 @@ body.home-page {
     }
 
     &__list-item {
-        display: flex;
         width: 51.389vw;
         padding: 1.389vw;
-        justify-content: space-between;
-        align-items: center;
         border-radius: 1.389vw;
         background: #242738;
-        height: 5.278vw;
+        max-height: 5.278vw;
+        transition: 0.3s;
+        overflow: hidden;
     }
+
+    &__list-item.active {
+        max-height: 100%;
+    }
+
+    &__list-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 1.111vw;
+        }
+
+        .icon {
+            width: 1.111vw;
+            height: 1.111vw;
+        }
+
+        .name {
+            color: var(--white, #FFF);
+            font-size: 1.25vw;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .icons {
+            width: fit-content;
+            height: 1.806vw;
+        }
+    }
+
+    &__open {
+        display: flex;
+
+        &::after {
+            content: '';
+            background: url(../img/chevron-down-plans.svg) no-repeat center top / cover;
+            width: 1.667vw;
+            height: 1.667vw;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    }
+
+    &__list-item.active {
+        .plans__open {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__feature {
+        color: #E9C5FB;
+        text-align: center;
+        font-size: 0.972vw;
+        font-weight: 500;
+        line-height: 2.222vw;
+        display: flex;
+        padding: 0.2vw 1.3vw;
+        justify-content: center;
+        align-items: center;
+        gap: 0.417vw;
+        border-radius: 1.389vw;
+        position: relative;
+        background: url(../img/feature.svg) no-repeat center top / cover;
+    }
+
+
+    &__list-content {
+        padding-top: 1.458vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25vw;
+
+        .text {
+            color: var(--white, #FFF);
+            font-size: 1.042vw;
+            font-weight: 400;
+            line-height: 1.944vw;
+        }
+
+        .btn {
+            color: var(--white, #FFF);
+            font-size: 0.972vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2.569vw;
+            display: flex;
+            width: 14.167vw;
+            height: 3.472vw;
+            padding: 0.417vw 2.778vw;
+            align-items: center;
+            gap: 0.556vw;
+            border-radius: 2.778vw;
+            background: var(--blue-500, #4855DC);
+            box-shadow: 0vw 0.278vw 0.833vw 0vw rgba(0, 0, 0, 0.08);
+
+            &::after {
+                content: "";
+                background: url(../img/arrow-narrow-up-right.svg) no-repeat center top/cover;
+                width: 1.111vw;
+                height: 1.111vw;
+            }
+        }
+    }
+
+    &__list-tag {
+        display: flex;
+        gap: 0.694vw;
+
+        .tag {
+            display: flex;
+            padding: 0.139vw 0.972vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.417vw;
+            border-radius: 1.389vw;
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--white, #FFF);
+            font-size: 0.833vw;
+            font-weight: 450;
+            line-height: 2.222vw;
+
+            &::before {
+                content: '';
+                background: url(../img/tick.svg) no-repeat center top / cover;
+                width: 1.111vw;
+                height: 1.111vw;
+            }
+        }
+    }
+
+
 }
