@@ -1177,6 +1177,192 @@ body.home-page {
             }
         }
     }
+}
 
+.worldwide {
+    background: #fff;
+    position: relative;
+    padding-top: 10.139vw;
+    padding-bottom: 7.014vw;
+    border-bottom: 0.069vw solid #F0EBE6;
+    border-top-right-radius: 1.389vw;
+    border-top-left-radius: 1.389vw;
 
+    .container {
+        max-width: 85.639vw;
+    }
+
+    &__title {
+        z-index: 999;
+        line-height: 3.444vw;
+    }
+
+    &__desc {
+        color: var(--black, #000);
+        text-align: center;
+        font-size: 1.25vw;
+        font-weight: 400;
+        line-height: 2.222vw;
+    }
+
+    &__illustration {
+        background: url(../img/worldwide-illustration.png) no-repeat center top / cover;
+        width: 53.75vw;
+        height: 12.778vw;
+        position: absolute;
+        top: 1.5vw;
+        z-index: 0;
+    }
+
+    &__items {
+        display: flex;
+        margin-top: 2.778vw;
+        flex-wrap: wrap;
+        gap: 1.389vw;
+    }
+
+    &__items-item {
+        display: flex;
+        width: 15.972vw;
+        padding: 0.694vw 1.389vw;
+        align-items: center;
+        gap: 0.694vw;
+        border-radius: 1.389vw;
+        background: var(--gray-100, #F8F6F5);
+
+        img {
+            width: 3.681vw;
+            height: 3.681vw;
+        }
+
+        .name {
+            color: var(--black, #000);
+            font-size: 1.042vw;
+            font-weight: 600;
+            line-height: 1.458vw;
+        }
+
+        .ips {
+            color: var(--black, #000);
+            font-size: 0.972vw;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 0.486vw;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            color: var(--black, #000);
+            font-size: 0.972vw;
+            font-weight: 500;
+            line-height: 2.569vw;
+            display: flex;
+            height: 3.472vw;
+            padding: 0.417vw 2.778vw;
+            align-items: center;
+            gap: 0.556vw;
+            border-radius: 2.778vw;
+            background: var(--gray-200, #F6F3F0);
+            margin-top: 4.167vw;
+
+            svg {
+                width: 1.111vw;
+                height: 1.111vw;
+            }
+        }
+    }
+}
+
+.reviews {
+    padding-top: 8.194vw;
+    padding-bottom: 3.403vw;
+    background: #fff;
+
+    &__illustration {
+        background: url(../img/reviews-illustration.png) no-repeat center top / cover;
+        width: 13.889vw;
+        height: 3.056vw;
+        position: absolute;
+        top: 1.5vw;
+        z-index: 0;
+    }
+
+    &__text-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.972vw;
+    }
+
+    &__desc {
+        color: var(--black, #000);
+        font-size: 1.25vw;
+        font-weight: 400;
+        line-height: 2.222vw;
+    }
+
+    &__btn {
+        display: flex;
+        height: 3.472vw;
+        padding: 0.417vw 2.778vw;
+        align-items: center;
+        gap: 0.556vw;
+        border-radius: 2.778vw;
+        background: var(--gray-200, #F6F3F0);
+        color: var(--black, #000);
+        font-size: 0.972vw;
+        font-weight: 500;
+        line-height: 2.569vw;
+    }
+
+    &__items {
+        margin-top: 4.583vw;
+        display: flex;
+        height: 19.931vw;
+        padding: 4.167vw 7.917vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.778vw;
+        border-radius: 0.694vw;
+        background: var(--white, #FFF);
+        box-shadow: 0vw 0.278vw 0.278vw 0vw rgba(0, 0, 0, 0.06);
+    }
+
+    &__items-item {
+        width: 20.278vw;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__text {
+        color: var(--black, #000);
+        text-align: center;
+        font-size: 1.25vw;
+        font-weight: 400;
+        line-height: 2.222vw;
+    }
+
+    &__stars {
+        display: flex;
+        gap: 0.417vw;
+        margin-bottom: 1.389vw;
+    }
+
+    &__star {
+        display: flex;
+        &::after {
+            content: '';
+            background: url(../img/star.svg) no-repeat center top / cover;
+            width: 1.25vw;
+            height: 1.25vw;
+        }
+    }
 }

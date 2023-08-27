@@ -1,3 +1,26 @@
+const grayTextElement = document.querySelector('.gray');
+const text = grayTextElement.textContent;
+
+const chars = text.split('');
+const coloredSpans = chars.map(char => {
+  const charSpan = document.createElement('span');
+  charSpan.textContent = char;
+  charSpan.className = 'gray'; // Додаємо клас для анімації
+  grayTextElement.appendChild(charSpan);
+  return charSpan;
+});
+
+grayTextElement.textContent = ''; // Очищаємо вміст елементу
+
+coloredSpans.forEach((charSpan, index) => {
+  setTimeout(() => {
+    charSpan.style.animationDelay = `${index * 0.5}s`; // Затримка для анімації
+    charSpan.style.animationDuration = `${chars.length * 0.5}s`; // Тривалість анімації
+    charSpan.style.opacity = 1; // Задаємо початкову прозорість
+  }, index * 500);
+});
+
+
 
 // Scroll header
 
@@ -146,4 +169,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
