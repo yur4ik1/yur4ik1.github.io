@@ -1448,6 +1448,8 @@ body.home-page {
     background: #fff;
     padding-top: 6.597vw;
     padding-bottom: 6.667vw;
+    border-bottom-right-radius: 1.389vw;
+    border-bottom-left-radius: 1.389vw;
 
     .container {
         max-width: 84.306vw;
@@ -1457,6 +1459,20 @@ body.home-page {
         width: 100%;
         height: 49.306vw;
         margin-top: 3.403vw;
+        position: relative;
+    }
+
+    &__table-bg {
+        position: absolute;
+        width: 11.806vw;
+        height: 44.583vw;
+        background: rgba(255, 255, 255, 0.01);
+        box-shadow: (0vw 0.278vw 2.361vw rgba(0, 0, 0, 0.14));
+        z-index: 999999999999;
+        top: 0.694vw;
+        left: 24.736vw;
+        border-radius: 0.694vw;
+        z-index: 0;
     }
 
     &__table-head {
@@ -1486,6 +1502,7 @@ body.home-page {
     &__table-content {
         border-radius: 1.667vw;
         border: 0.069vw solid #f0e0b4;
+        height: 33.306vw;
     }
 
 
@@ -1510,7 +1527,47 @@ body.home-page {
         &:nth-child(6) {
             background: none;
         }
+    }
 
+    &__list-row.btns {
+        justify-content: flex-end;
+        background: none;
+
+
+        .cell {
+            visibility: hidden;
+            opacity: 0;
+            padding: 0;
+        }
+
+        .cell.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .btn {
+            color: var(--white, #FFF);
+            font-size: 0.972vw;
+            font-weight: 500;
+            line-height: 2.569vw;
+            display: flex;
+            width: 9.028vw;
+            height: 3.472vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.556vw;
+            border-radius: 2.778vw;
+            background: var(--blue-500, #4855DC);
+            box-shadow: 0vw 0.278vw 0.833vw 0vw rgba(0, 0, 0, 0.08);
+            z-index: 9;
+
+            &::after {
+                content: "";
+                background: url(../img/arrow-narrow-up-right.svg) no-repeat center top/cover;
+                width: 1.111vw;
+                height: 1.111vw;
+            }
+        }
     }
 
     .cell {
@@ -1564,4 +1621,104 @@ body.home-page {
     }
 }
 
-.integrations {}
+.integrations {
+    padding-top: 9.583vw;
+    position: relative;
+
+    &__titles {
+        margin-bottom: 3.403vw;
+    }
+
+    &__title {
+        color: var(--white, #FFF);
+        width: 100%;
+    }
+
+    &__items-row-container {
+        position: relative;
+        width: 100%;
+        margin-bottom: 23.653vw;
+    }
+
+    &__items-row {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.389vw;
+        overflow: hidden;
+        position: absolute;
+
+        &:nth-child(1) {
+            left: -6.042vw;
+        }
+
+        &:nth-child(2) {
+            margin-top: 7.544vw;
+            right: -15.389vw;
+        }
+    }
+
+    &__items-item {
+        display: flex;
+        width: 17.361vw;
+        height: 6.25vw;
+        padding: 0.694vw 1.389vw;
+        align-items: center;
+        gap: 1.389vw;
+        border-radius: 1.389vw;
+        background: #1A1C28;
+
+
+        img {
+            width: 3.125vw;
+            height: 2.917vw;
+        }
+
+        p {
+            color: var(--white, #FFF);
+            font-size: 1.111vw;
+            font-weight: 500;
+            line-height: 1.458vw;
+        }
+
+        &:nth-child(9) {
+            width: 9.722vw;
+
+            img {
+                width: 6.944vw;
+                height: 3.472vw;
+            }
+        }
+
+        &:nth-child(12) {
+            width: 11.111vw;
+
+            img {
+                width: 8.333vw;
+                height: 2.708vw;
+            }
+        }
+    }
+
+    .left-scroll {
+        .integrations__items-item {
+            &:nth-child(3) {
+                width: 9.722vw;
+
+                img {
+                    width: 6.944vw;
+                    height: 3.472vw;
+                }
+            }
+
+            &:nth-child(6) {
+                width: 11.111vw;
+
+                img {
+                    width: 8.333vw;
+                    height: 2.708vw;
+                }
+            }
+        }
+    }
+
+}

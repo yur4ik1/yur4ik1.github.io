@@ -1,6 +1,3 @@
-
-
-
 // Scroll header
 
 const header = document.querySelector(".header__main");
@@ -136,14 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const head = item.querySelector(".plans__list-head");
 
     head.addEventListener("click", function () {
-      // Забираємо всі інші активні класи
       listItems.forEach(function (otherItem) {
         if (otherItem !== item) {
           otherItem.classList.remove("active");
         }
       });
-
-      // Додаємо або видаляємо клас active
       item.classList.toggle("active");
     });
   });
