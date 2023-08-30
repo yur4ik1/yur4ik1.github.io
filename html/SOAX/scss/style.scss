@@ -1625,6 +1625,10 @@ body.home-page {
     padding-top: 9.583vw;
     position: relative;
 
+    .container {
+        max-width: 94.444vw;
+    }
+
     &__titles {
         margin-bottom: 3.403vw;
     }
@@ -1638,6 +1642,31 @@ body.home-page {
         position: relative;
         width: 100%;
         margin-bottom: 23.653vw;
+
+        &::before {
+            content: '';
+            background: linear-gradient(270deg, rgba(11, 12, 23, 0.00) 0%, #0B0C17 100%);
+            width: 4.861vw;
+            height: 20.278vw;
+            flex-shrink: 0;
+            position: absolute;
+            left: -2.694vw;
+            top: -2.694vw;
+            z-index: 999999;
+        }
+
+        &::after {
+            content: '';
+            background: linear-gradient(270deg, rgba(11, 12, 23, 0.00) 0%, #0B0C17 100%);
+            width: 4.097vw;
+            height: 20.278vw;
+            flex-shrink: 0;
+            position: absolute;
+            right: -2.5vw;
+            top: -2.694vw;
+            z-index: 999999;
+            transform: rotate(180deg);
+        }
     }
 
     &__items-row {
@@ -1653,7 +1682,7 @@ body.home-page {
 
         &:nth-child(2) {
             margin-top: 7.544vw;
-            right: -15.389vw;
+            right: -13.389vw;
         }
     }
 
@@ -1719,6 +1748,39 @@ body.home-page {
                 }
             }
         }
+    }
+
+    &__info-title {
+        display: flex;
+        align-items: center;
+        color: var(--violet-200, #ACADC4);
+        text-align: center;
+        font-size: 1.042vw;
+        font-weight: 500;
+        line-height: normal;
+        white-space: nowrap;
+        justify-content: space-between;
+        margin-bottom: 6.181vw;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 0.069vw;
+            background: #292C3E;
+            margin-right: 2.083vw;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 0.069vw;
+            background: #292C3E;
+            margin-left: 2.083vw;
+        }
+    }
+
+    &__people {
+        
     }
 
 }
