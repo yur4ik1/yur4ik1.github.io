@@ -143,5 +143,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+/*
+const gradient1 = document.getElementById('gradient-1');
+const gradient2 = document.getElementById('gradient-2');
+const peopleBlock = document.querySelector('.integrations__people');
+
+peopleBlock.addEventListener('mousemove', (event) => {
+  const mouseX = event.clientX - peopleBlock.getBoundingClientRect().left;
+  const mouseY = event.clientY - peopleBlock.getBoundingClientRect().top;
+  
+  // Обчислення позиції градієнту відносно курсора
+  const gradientX = mouseX - gradient1.offsetWidth / 2;
+  const gradientY = mouseY - gradient1.offsetHeight / 2;
+
+  // Оновлення стилів позиції градієнтів
+  gradient1.style.left = `${gradientX}px`;
+  gradient1.style.top = `${gradientY}px`;
+  
+  gradient2.style.left = `${gradientX}px`;
+  gradient2.style.top = `${gradientY}px`;
+}); 
+*/
+
+
+
 
 
