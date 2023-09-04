@@ -51,6 +51,7 @@ body.home-page {
     &__menu-item.sub {
         display: flex;
         align-items: center;
+        position: relative;
 
         &::after {
             content: '';
@@ -60,6 +61,54 @@ body.home-page {
             display: block;
             margin-left: 0.417vw;
             cursor: pointer;
+        }
+    }
+
+    &__menu-item.sub {
+        .submenu {
+            display: flex;
+            width: 14.236vw;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 0.556vw;
+            border: 0.069vw solid var(--Gray-100, #F8F6F5);
+            background: var(--base-white, #FFF);
+            box-shadow: 0vw 0.278vw 0.833vw 0vw rgba(0, 0, 0, 0.08);
+            position: absolute;
+            top: 3vw;
+            left: 0vw;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+
+            li {
+                display: flex;
+                padding: 0.764vw 1.111vw;
+                align-items: center;
+                gap: 0.556vw;
+                align-self: stretch;
+
+                a {
+                    color: var(--Blue-700, #595B7C);
+                    font-size: 0.972vw;
+                    font-weight: 500;
+                    line-height: 1.389vw;
+                    flex: 1 0 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.556vw;
+                }
+
+                img {
+                    width: 1.111vw;
+                    height: 1.111vw;
+                }
+            }
+        }
+
+        .submenu.active {
+            visibility: visible;
+            opacity: 1;
         }
     }
 
@@ -2340,4 +2389,59 @@ body.home-page {
             line-height: normal;
         }
     }
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        max-width: 100%;
+     
+    }
+
+    .header {
+        &__top {
+            display: none;
+        }
+
+        &__main {
+            height: auto;
+        }
+
+        &__main-wrap {
+            height: 100%;
+            padding: 5.128vw;
+        }
+
+        &__main-logo {
+            img {
+                width: 20.513vw;
+                height: 4.137vw;
+            }
+        }
+
+        &__main-menu {
+            display: none;
+        }
+
+        &__main-right {
+            .sales-btn {
+                display: none;
+            }
+
+            .start-btn {
+                color: var(--White, #FFF);
+                font-size: 3.333vw;
+                line-height: 9.487vw;
+                padding: 5.128vw 5.128vw;
+                border-radius: 10.256vw;
+            }
+        }
+    }
+
+    .hero {
+        padding-top: 20.417vw;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
 }
