@@ -88,6 +88,7 @@ body.home-page {
                 gap: 0.556vw;
                 align-self: stretch;
 
+
                 a {
                     color: var(--Blue-700, #595B7C);
                     font-size: 0.972vw;
@@ -123,6 +124,12 @@ body.home-page {
 
         .header__menu-item {
             transition: 0.3s;
+            color: var(--black, #000);
+            font-size: 0.903vw;
+            font-weight: 500;
+            line-height: 2.569vw;
+            transition: 0.3s;
+            cursor: pointer;
 
             a {
                 color: var(--black, #000);
@@ -219,6 +226,12 @@ body.home-page {
             &:hover {
                 background: var(--blue-600, #323EBA);
             }
+        }
+    }
+
+    &__main-right {
+        .burger {
+            display: none;
         }
     }
 }
@@ -2394,7 +2407,6 @@ body.home-page {
 @media screen and (max-width: 720px) {
     .container {
         max-width: 100%;
-     
     }
 
     .header {
@@ -2428,20 +2440,130 @@ body.home-page {
             }
 
             .start-btn {
-                color: var(--White, #FFF);
-                font-size: 3.333vw;
-                line-height: 9.487vw;
-                padding: 5.128vw 5.128vw;
-                border-radius: 10.256vw;
+                padding: 5vw 5vw;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+                border-radius: 10vw;
+                font-size: 3.25vw;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 9.25vw;
+            }
+        }
+
+        &__main-right {
+            gap: 3.5vw;
+
+            .burger {
+                display: flex;
+                padding: 2vw 4vw;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 2vw;
+                border-radius: 10vw;
+                border: 0.25vw solid #DFDFE7;
+                background: var(--White, #FFF);
+
+                &::before {
+                    content: '';
+                    background: url(../img/burger.svg) no-repeat center top / cover;
+                    width: 6vw;
+                    height: 6vw;
+                }
             }
         }
     }
 
     .hero {
-        padding-top: 20.417vw;
-    }
-}
+        padding-top: 35.25vw;
+        padding-bottom: 30vw;
+        background: #fff;
+        height: 235vw;
 
-@media screen and (max-width: 960px) {
-    
+        &__bg {
+            background: url(../img/hero-bg-mob.png) no-repeat center top/cover;
+            height: 235vw;
+            z-index: 0;
+            left: 0;
+        }
+
+        .container {
+            align-items: flex-start;
+            padding: 0 5vw;
+        }
+
+        &__reviews img {
+            width: 40vw;
+            height: 8.25vw;
+        }
+
+        &__titles {
+            margin-top: 5vw;
+            width: 100%;
+            z-index: 999;
+        }
+
+        &__title {
+            width: auto;
+            color: var(--Black, #000);
+            font-size: 10vw;
+            font-weight: 600;
+            line-height: 13.5vw;
+            text-align: left;
+            margin-bottom: 3.5vw;
+
+            span {
+                font-size: 10vw;
+                font-weight: 600;
+                line-height: 13.5vw;
+            }
+
+            .gray {
+                color: #DEE4FF;
+                font-size: 10vw;
+                font-weight: 600;
+                line-height: 13.5vw;
+            }
+
+            .title-position {
+                right: 0.8vw;
+            }
+        }
+
+
+        &__desc {
+            width: 100%;
+            font-size: 4vw;
+            font-weight: 400;
+            line-height: 8vw;
+            text-align: left;
+            z-index: 999;
+        }
+
+        &__cards {
+            z-index: 999;
+            overflow: scroll;
+            width: 100%;
+            gap: 3vw;
+        }
+
+        &__cards-item {
+            width: 38.75vw;
+            padding: 4.5vw;
+            gap: 1.5vw;
+            border-radius: 3.5vw;
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
+            box-shadow: 0vw 1vw 3vw 0vw rgba(0, 0, 0, 0.08);
+            color: var(--Black, #000);
+            font-size: 3vw;
+            font-weight: 500;
+            line-height: normal;
+
+            &::before {
+                width: 3.5vw!important;
+                height: 3.5vw!important;
+            }
+        }
+    }
 }
