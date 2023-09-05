@@ -7,7 +7,7 @@
   <title>SOAX</title>
   <meta name="description" content="SOAX">
   <link rel="stylesheet" href="./css/style.min.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body class="home-page">
@@ -709,60 +709,77 @@
 
         <div class="reviews__items-wrap">
           <div class="reviews__items">
-            <div class="reviews__items-item">
-              <div class="reviews__item-content">
-                <div class="reviews__stars">
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
+            <div class="swiper reviewsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="reviews__items-item">
+                    <div class="reviews__item-content">
+                      <div class="top">
+
+                        <div class="reviews__stars">
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                        </div>
+                        <p class="reviews__text">
+                          I've used a few proxy services and this is TOP NOTCH.
+                        </p>
+
+                      </div>
+                      <div class="reviews__author">
+                        <img src="./img/author-1.jpg" alt="">
+                        <p>Operations Manager</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p class="reviews__text">
-                  I've used a few proxy services and this is TOP NOTCH.
-                </p>
-                <div class="reviews__author">
-                  <img src="./img/author-1.jpg" alt="">
-                  <p>Operations Manager</p>
+                <div class="swiper-slide">
+                  <div class="reviews__items-item">
+                    <div class="reviews__item-content">
+                      <div class="reviews__stars">
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                      </div>
+                      <p class="reviews__text">
+                        Great proxies and support is unbelievable, Emily was a total star this morning!
+                      </p>
+                      <div class="reviews__author">
+                        <img src="./img/author-2.jpg" alt="">
+                        <p>Software Engineer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="reviews__items-item">
+                    <div class="reviews__item-content">
+                      <div class="reviews__stars">
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                        <span class="reviews__star"></span>
+                      </div>
+                      <p class="reviews__text">
+                        Best proxy service in the business, with the most premium proxies that actually work!
+                      </p>
+                      <div class="reviews__author">
+                        <img src="./img/author-3.jpg" alt="">
+                        <p>CMO</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+             
             </div>
-            <div class="reviews__items-item">
-              <div class="reviews__item-content">
-                <div class="reviews__stars">
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                </div>
-                <p class="reviews__text">
-                  Great proxies and support is unbelievable, Emily was a total star this morning!
-                </p>
-                <div class="reviews__author">
-                  <img src="./img/author-2.jpg" alt="">
-                  <p>Software Engineer</p>
-                </div>
-              </div>
-            </div>
-            <div class="reviews__items-item">
-              <div class="reviews__item-content">
-                <div class="reviews__stars">
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                  <span class="reviews__star"></span>
-                </div>
-                <p class="reviews__text">
-                  Best proxy service in the business, with the most premium proxies that actually work!
-                </p>
-                <div class="reviews__author">
-                  <img src="./img/author-3.jpg" alt="">
-                  <p>CMO</p>
-                </div>
-              </div>
-            </div>
+ <div class="swiper-pagination"></div>
+
           </div>
         </div>
       </div>
@@ -1393,13 +1410,47 @@
       </div>
     </footer>
 
-
-
-
   </div>
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper; // Змінна для збереження інстанції Swiper
 
+    function initSwiper() {
+      // Ініціалізуємо Swiper тільки якщо розмір екрану менше або дорівнює 720px
+      if (window.innerWidth <= 720) {
+        swiper = new Swiper(".reviewsSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          freeMode: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          initialSlide: 1, // Задаємо індекс початкового слайда
+          centeredSlides: true, // Центруємо позицію прокрутки
+          centeredSlidesOffset: 0, // Зміщуємо середній слайд вправо на 30px
+        });
+      } else {
+        // Якщо розмір екрану більше 720px і Swiper існує, то знищуємо його
+        if (swiper) {
+          swiper.destroy();
+          swiper = undefined;
+        }
+      }
+    }
+
+    // Викликаємо функцію для ініціалізації Swiper при завантаженні сторінки
+    initSwiper();
+
+    // Додаємо обробник події зміни розміру вікна для оновлення Swiper
+    window.addEventListener("resize", function () {
+      // Викликаємо функцію ініціалізації Swiper під час зміни розміру вікна
+      initSwiper();
+    });
+
+  </script>
   <script src="./js/main.min.js"></script>
 
 </body>
