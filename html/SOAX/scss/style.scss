@@ -1483,10 +1483,11 @@ body.home-page {
 
     .swiper {
         overflow: initial!important;
+        margin-left: inherit;
     }
 
     .swiper-slide {
-        width: 37%;
+        width: 45%;
     }
 
 
@@ -1528,6 +1529,8 @@ body.home-page {
         justify-content: center;
         align-items: center;
         gap: 2.778vw;
+
+
     }
 
     &__item-content {
@@ -1535,6 +1538,7 @@ body.home-page {
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     &__items-item:nth-child(1) {
@@ -2447,6 +2451,14 @@ body.home-page {
 }
 
 .prices__table-mob {
+    display: none;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.swiper-pagination2 {
     display: none;
 }
 
@@ -3526,6 +3538,7 @@ body.home-page {
 
     .reviews .swiper-pagination {
         top: 76.154vw !important;
+        display: block;
     }
 
     .swiper-pagination-bullet-active {
@@ -3668,8 +3681,11 @@ body.home-page {
         padding-bottom: 11.692vw;
     }
 
-    .pricesSwiper .swiper-pagination {
+    .pricesSwiper .swiper-pagination2 {
         top: 143.641vw !important;
         z-index: 999999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
