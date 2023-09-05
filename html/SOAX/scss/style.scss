@@ -2907,10 +2907,15 @@ body.home-page {
         border-radius: 2.564vw 2.564vw 0vw 0vw;
     }
 
+
+    .testimonial {
+        padding-bottom: 10.256vw;
+        padding-top: 10.256vw;
+    }
+
     .testimonial .container {
         padding: 0 5.128vw;
     }
-
 
     .testimonial__title {
         width: 84%;
@@ -2994,5 +2999,282 @@ body.home-page {
         font-size: 3.59vw;
         line-height: 6.154vw;
         text-align: center;
+    }
+
+    .features {
+        position: relative;
+        padding-top: 10.256vw;
+        padding-bottom: 20.513vw;
+        border-bottom-right-radius: 5.128vw;
+        border-bottom-left-radius: 5.128vw;
+    }
+
+    .features .container {
+        max-width: 100%;
+        padding: 0 5.128vw;
+    }
+
+    .features__illustration {
+        background: url(../img/feature-bg-mob.svg) no-repeat center top/cover;
+        width: 100%;
+        height: 53.308vw;
+        position: absolute;
+        top: 0;
+    }
+
+
+    .features__pretitle {
+        margin-top: 52.282vw;
+    }
+
+    .features__bg {
+        display: none;
+    }
+
+    .features__list-title {
+        text-align: center;
+        font-size: 3.333vw;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.267vw;
+        text-transform: uppercase;
+        margin-bottom: 10.256vw;
+    }
+
+    .features__list {
+        gap: 3.59vw;
+    }
+
+    .features__list-wrap {
+        margin-top: 10.256vw;
+    }
+
+    .features__list-item {
+        width: 42.533vw;
+        height: 17.949vw;
+        padding: 5.128vw 3.077vw;
+        align-items: center;
+        gap: 2.051vw;
+        border-radius: 2.564vw;
+        box-shadow: 0vw 1.026vw 1.026vw 0vw rgba(0, 0, 0, 0.06);
+    }
+
+    .features__list-item .icon {
+        width: 5.128vw;
+        height: 5.128vw;
+    }
+
+    .features__list-item .name {
+        font-size: 3.333vw;
+    }
+
+    .features__list-item::after {
+        width: 2.103vw;
+        height: 2.103vw;
+    }
+
+    .features__bottom {
+        margin-top: 10.256vw;
+    }
+
+    .features__btn {
+        width: 100%;
+        height: 12.821vw;
+        padding: 5.813vw 10.256vw;
+        gap: 2.051vw;
+        border-radius: 10.256vw;
+        border: 2.564vw solid var(--White, #FFF);
+        background: var(--Blue-500, #4855DC);
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+        font-size: 3.59vw;
+        line-height: 9.487vw;
+    }
+
+    .features__btn::after {
+        width: 4.103vw;
+        height: 4.103vw;
+    }
+
+
+    .plans {
+        padding-top: 65.077vw;
+
+        .container {
+            padding: 0 5.128vw;
+        }
+    }
+
+    .plans__illustration {
+        width: 42.564vw;
+        height: 41.282vw;
+        top: 27.1vw;
+    }
+
+    .plans__items {
+        margin-top: 10.256vw;
+    }
+
+    .plans__items-item {
+        flex-direction: column;
+        padding: 7.692vw 5.128vw 10.256vw 5.128vw;
+        gap: 10.256vw;
+        border-radius: 5.128vw;
+    }
+
+    .plans__names {
+        padding: 0;
+        gap: 4.359vw;
+        width: 100%;
+    }
+
+    .plans__list {
+        padding: 0;
+    }
+
+    .plans__names .pre-title {
+        font-size: 3.59vw;
+    }
+
+    .plans__items-item:nth-child(2) .pre-title {
+        font-size: 3.59vw;
+    }
+
+    .plans__names .title {
+        font-size: 5.641vw;
+    }
+
+    .plans__names .desc {
+        font-size: 3.59vw;
+        line-height: 7.179vw;
+    }
+
+    .plans__list {
+        gap: 4.103vw;
+    }
+
+    .plans__list-item {
+        width: 100%;
+        max-height: 25.278vw;
+        padding: 5.128vw 4.103vw;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 5.128vw;
+        position: relative;
+    }
+
+    .plans__list-head div:nth-child(1) {
+        order: 2;
+    }
+
+    .plans__list-head div:nth-child(2) {
+        order: 1;
+    }
+
+    .plans__open {
+        position: absolute;
+        right: 3vw;
+        top: 15vw;
+    }
+
+    .plans__open::after {
+        width: 6.154vw;
+        height: 6.154vw;
+    }
+
+    .plans__list-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3.59vw;
+    }
+
+    .plans__list-head div {
+        gap: 2.051vw;
+    }
+
+    .plans__list-head .icon {
+        width: 4.103vw;
+        height: 4.103vw;
+    }
+
+    .plans__list-head .name {
+        font-size: 4.103vw;
+        line-height: 5.128vw;
+        white-space: nowrap;
+    }
+
+    .plans__feature {
+        padding: 2.85vw 3.077vw;
+        font-size: 3.077vw;
+    }
+
+    .plans__list-content {
+        padding-top: 3.59vw;
+        gap: 3.077vw;
+    }
+
+    .plans__list-tag {
+        gap: 2.564vw;
+        flex-direction: column;
+    }
+
+    .plans__list-tag .tag {
+        justify-content: flex-start;
+        width: max-content;
+        padding: 2.051vw;
+        gap: 1.538vw;
+        border-radius: 5.128vw;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--White, #FFF);
+        font-size: 3.077vw;
+        font-weight: 450;
+    }
+
+    .plans__list-tag .tag::before {
+        width: 3.077vw;
+        height: 3.077vw;
+    }
+
+    .plans__list-content .text {
+        font-size: 3.59vw;
+        line-height: 7.692vw;
+    }
+
+    .plans__list-head .icons {
+        width: 30%;
+        height: 100%;
+        position: absolute;
+        top: -3vw;
+        right: 4vw;
+    }
+
+    .plans__items-item:nth-child(2) .plans__list-item:nth-child(4) .icons {
+        width: 7.153vw;
+        height: 17.111vw;
+    }
+
+    .plans__list-item.active {
+        .plans__list-head .icons {
+            display: none;
+        }
+    }
+
+    .plans__list-content .btn {
+        display: flex;
+        height: 12.821vw;
+        padding: 1.538vw 10.256vw;
+        align-items: center;
+        gap: 2.051vw;
+        border-radius: 10.256vw;
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+        font-size: 3.59vw;
+        line-height: 9.487vw;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .plans__list-content .btn::after {
+        width: 4.103vw;
+        height: 4.103vw;
     }
 }
