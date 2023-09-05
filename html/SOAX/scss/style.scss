@@ -2538,6 +2538,10 @@ body.home-page {
             padding: 0 5vw;
         }
 
+        &__reviews {
+            z-index: 999;
+        }
+
         &__reviews img {
             width: 40vw;
             height: 8.25vw;
@@ -2622,7 +2626,7 @@ body.home-page {
         }
 
         &__btns {
-            margin-top: 15.385vw;
+            margin-top: 13.385vw;
             width: 100%;
             z-index: 999;
         }
@@ -2692,7 +2696,7 @@ body.home-page {
 
     .logos .container {
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .logos__item {
@@ -2903,9 +2907,10 @@ body.home-page {
         border-radius: 2.564vw 2.564vw 0vw 0vw;
     }
 
-    .testimonial {
-        padding-top: 10.256vw;
+    .testimonial .container {
+        padding: 0 5.128vw;
     }
+
 
     .testimonial__title {
         width: 84%;
@@ -2914,11 +2919,80 @@ body.home-page {
     .testimonial__content {
         background: url(../img/testimonial-bg-mob.png) no-repeat center top/cover;
         margin-top: 10.256vw;
-        height: 89.744vw;
+        height: auto;
         padding: 8.205vw 5.128vw;
     }
+
     .testimonial__block {
         flex-direction: column;
         gap: 5.128vw;
+        border-radius: 5.128vw;
+        box-shadow: 0vw 1.026vw 3.59vw 0vw rgba(0, 0, 0, 0.16);
+        position: relative;
+        padding: 8.205vw 5.128vw;
+        height: 189.974vw;
+        justify-content: flex-start;
+    }
+
+
+    .testimonial__block .left .testimonial__logo {
+        width: 20.769vw;
+        height: 6.667vw;
+    }
+
+    .testimonial__block .left {
+        width: 100%;
+        gap: 5.128vw;
+    }
+
+    .testimonial__block .left .title {
+        font-size: 5.128vw;
+        font-weight: 600;
+        line-height: 8.205vw;
+    }
+
+    .testimonial__block .left .desc {
+        font-size: 4.103vw;
+        line-height: 7.179vw;
+    }
+
+    .testimonial__block .left .testimonial__btn {
+        display: flex;
+        width: 69.231vw;
+        height: 12.821vw;
+        padding: 1.538vw 10.256vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.051vw;
+        align-self: stretch;
+        border-radius: 10.256vw;
+        color: var(--Black, #000);
+        font-size: 3.59vw;
+        font-weight: 500;
+        line-height: 9.487vw;
+        position: absolute;
+        top: 164.641vw;
+
+        svg {
+            width: 4.103vw;
+            height: 4.103vw;
+        }
+    }
+
+    .testimonial__block .right {
+        gap: 5.128vw;
+    }
+
+    .testimonial__block .right img {
+        width: 100%;
+        height: auto;
+        align-self: stretch;
+        border-radius: 2.051vw;
+    }
+
+    .testimonial__block .right .info {
+        font-size: 3.59vw;
+        line-height: 6.154vw;
+        text-align: center;
     }
 }
