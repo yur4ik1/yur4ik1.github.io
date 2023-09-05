@@ -270,6 +270,7 @@ body.home-page {
         }
     }
 
+
     &__titles {
         margin-top: 2.083vw;
         text-align: center;
@@ -1480,6 +1481,21 @@ body.home-page {
         margin-top: 4.583vw;
     }
 
+    .swiper {
+        overflow: initial!important;
+    }
+
+    .swiper-slide {
+        width: 37%;
+    }
+
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__items {
         display: flex;
         height: 19.931vw;
@@ -2430,6 +2446,10 @@ body.home-page {
     }
 }
 
+.prices__table-mob {
+    display: none;
+}
+
 @media screen and (max-width: 720px) {
 
     .container {
@@ -3375,6 +3395,7 @@ body.home-page {
 
     .reviews {
         padding-top: 20.513vw;
+        padding-bottom: 12.821vw;
 
         .container {
             padding: 0;
@@ -3441,7 +3462,7 @@ body.home-page {
     }
 
     .reviews__items-item {
-        width: 81.026vw;
+        width: 80.026vw;
         height: 52.308vw;
         display: flex;
         padding: 5.128vw 3.077vw;
@@ -3455,9 +3476,11 @@ body.home-page {
     .reviews__items-item::after {
         display: none !important;
     }
+
     .reviews__stars {
         gap: 2.051vw;
     }
+
     .reviews__star::after {
         width: 4.615vw;
         height: 4.615vw;
@@ -3494,17 +3517,159 @@ body.home-page {
     }
 
     .swiper-slide {
-        width: 84vw!important;
+        width: 84vw !important;
+    }
+
+    .reviews .swiper {
+       overflow: clip!important;
     }
 
     .reviews .swiper-pagination {
         top: 76.154vw !important;
     }
+
     .swiper-pagination-bullet-active {
-        background: #000!important;
+        background: #000 !important;
     }
 
     .reviews__items-item:nth-child(1) {
         margin-left: 20px;
+    }
+
+
+    .prices {
+        padding-top: 10.256vw;
+        padding-bottom: 22.308vw;
+    }
+
+    .prices .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .prices__table {
+        display: none;
+    }
+
+    .prices__table-mob {
+        display: block;
+        margin-top: 15.385vw;
+        position: relative;
+    }
+
+    .pricesSwiper .item {
+        width: 89.744vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 5.128vw;
+
+        &:nth-child(1) {
+            margin-left: 5.128vw;
+        }
+    }
+
+    .pricesSwiper .item .logo {
+        width: 23.077vw;
+        height: 4.654vw;
+    }
+
+    .pricesSwiper .item .list {
+        border-radius: 5.128vw;
+        border: 0.256vw solid #F0E0B3;
+        background: var(--White, #FFF);
+    }
+
+    .pricesSwiper .item .row {
+        display: flex;
+        padding: 5.128vw 7.692vw;
+        align-items: center;
+        gap: 2.564vw;
+        align-self: stretch;
+        justify-content: space-between;
+
+        p {
+            color: var(--Black, #000);
+            font-size: 3.846vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        &::after {
+            content: '';
+            background: url(../img/tick.svg) no-repeat center top / cover;
+            width: 6.154vw;
+            height: 6.154vw;
+        }
+
+        &:nth-child(1) {
+            background: var(--Gray-200, #F6F3F0);
+            border-top-right-radius: 5.128vw;
+            border-top-left-radius: 5.128vw;
+        }
+
+        &:nth-child(3) {
+            background: var(--Gray-200, #F6F3F0);
+        }
+
+        &:nth-child(5) {
+            background: var(--Gray-200, #F6F3F0);
+        }
+    }
+
+    .pricesSwiper .item .btn {
+        display: flex;
+        height: 12.821vw;
+        padding: 1.538vw 10.256vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.051vw;
+        align-self: stretch;
+        border-radius: 10.256vw;
+        background: var(--Blue-500, #4855DC);
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+        color: var(--White, #FFF);
+        font-size: 3.59vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 9.487vw;
+
+        &::after {
+            content: "";
+            background: url(../img/arrow-narrow-up-right.svg) no-repeat center top/cover;
+            width: 4.103vw;
+            height: 4.103vw;
+        }
+    }
+
+    .pricesSwiper .item .row.bottom {
+        padding: 4.103vw 7.692vw;
+
+        p {
+            text-align: center;
+            font-size: 3.846vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 6.923vw;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .pricesSwiper .swiper-slide {
+        width: 89.744vw !important;
+    }
+
+    .pricesSwiper .swiper-wrapper {
+        padding-bottom: 11.692vw;
+    }
+
+    .pricesSwiper .swiper-pagination {
+        top: 143.641vw !important;
+        z-index: 999999999;
     }
 }
