@@ -23,36 +23,31 @@ window.onscroll = () => {
 
 // submenu
 
-// Отримуємо всі елементи li.sub і їх підменю
-var subMenuItems = document.querySelectorAll('.header__menu-item.sub');
+let subMenuItems = document.querySelectorAll('.header__menu-item.sub');
 
 subMenuItems.forEach(function (item) {
-  item.addEventListener('click', function () {
+  let submenu = item.querySelector('.submenu');
 
-    var submenu = this.querySelector('.submenu');
+  if (submenu) {
+    item.addEventListener('mouseenter', function () {
+      submenu.classList.add('active');
+    });
 
-    if (submenu) {
-      if (submenu.classList.contains('active')) {
-        submenu.classList.remove('active');
-      } else {
-        closeOtherSubmenus(item);
-        submenu.classList.add('active');
-      }
-    }
-  });
+    item.addEventListener('mouseleave', function () {
+      submenu.classList.remove('active');
+    });
+
+    submenu.addEventListener('mouseenter', function () {
+      submenu.classList.add('active');
+    });
+
+    submenu.addEventListener('mouseleave', function () {
+      submenu.classList.remove('active');
+    });
+  }
 });
 
 
-function closeOtherSubmenus(currentItem) {
-  subMenuItems.forEach(function (item) {
-    if (item !== currentItem) {
-      var submenu = item.querySelector('.submenu');
-      if (submenu && submenu.classList.contains('active')) {
-        submenu.classList.remove('active');
-      }
-    }
-  });
-}
 
 
 // ——————————————————————————————————————————————————

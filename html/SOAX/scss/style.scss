@@ -2483,9 +2483,11 @@ body.home-page {
 
         &__bg {
             background: url(../img/hero-bg-mob.png) no-repeat center top/cover;
-            height: 235vw;
+            width: 100vw;
+            height: 242.308vw;
             z-index: 0;
             left: 0;
+            top: -15.897vw;
         }
 
         .container {
@@ -2545,11 +2547,15 @@ body.home-page {
             z-index: 999;
             overflow: scroll;
             width: 100%;
+            height: 20.821vw;
             gap: 3vw;
+            position: relative;
+            align-items: center;
         }
 
         &__cards-item {
-            width: 38.75vw;
+            width: auto;
+            height: 16.821vw;
             padding: 4.5vw;
             gap: 1.5vw;
             border-radius: 3.5vw;
@@ -2559,10 +2565,79 @@ body.home-page {
             font-size: 3vw;
             font-weight: 500;
             line-height: normal;
+            white-space: nowrap;
+            top: 0;
 
             &::before {
-                width: 3.5vw!important;
-                height: 3.5vw!important;
+                width: 3.5vw !important;
+                height: 3.5vw !important;
+            }
+
+            &:nth-child(2) {
+                left: 12.821vw;
+            }
+        }
+
+        &__btns {
+            margin-top: 15.385vw;
+            width: 100%;
+            z-index: 999;
+        }
+
+        &__btns-wrap {
+            gap: 4.103vw;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__btn-price {
+            width: 100%;
+            height: 12.821vw;
+            padding: 1.538vw 10.256vw;
+            gap: 2.051vw;
+            border-radius: 10.256vw;
+            box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+            font-size: 3.59vw;
+            font-weight: 500;
+            line-height: 9.487vw;
+            justify-content: center;
+            order: 2;
+        }
+
+        &__btn-trial {
+            width: 100%;
+            height: 12.821vw;
+            padding: 1.538vw 10.256vw;
+            gap: 2.051vw;
+            border-radius: 10.256vw;
+            box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+            font-size: 3.59vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 9.487vw;
+            justify-content: center;
+
+            &::after {
+                width: 4.103vw;
+                height: 4.103vw;
+            }
+        }
+
+        &__features {
+            margin-top: 5.128vw;
+            gap: 2.564vw;
+            z-index: 999;
+
+            p {
+                font-size: 3.077vw;
+                font-weight: 400;
+                line-height: normal;
+
+                &::after {
+                    width: 1.282vw !important;
+                    height: 3.59vw !important;
+                    margin-left: 10px !important;
+                }
             }
         }
     }
