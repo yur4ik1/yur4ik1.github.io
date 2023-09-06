@@ -1482,14 +1482,13 @@ body.home-page {
     }
 
     .swiper {
-        overflow: initial!important;
+        overflow: initial !important;
         margin-left: inherit;
     }
 
     .swiper-slide {
         width: 45%;
     }
-
 
     .top {
         display: flex;
@@ -3533,7 +3532,7 @@ body.home-page {
     }
 
     .reviews .swiper {
-       overflow: clip!important;
+        overflow: clip !important;
     }
 
     .reviews .swiper-pagination {
@@ -3553,6 +3552,8 @@ body.home-page {
     .prices {
         padding-top: 10.256vw;
         padding-bottom: 22.308vw;
+        border-bottom-right-radius: 5.128vw;
+        border-bottom-left-radius: 5.128vw;
     }
 
     .prices .container {
@@ -3687,5 +3688,177 @@ body.home-page {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+
+    .integrations {
+        padding-top: 17.436vw;
+    }
+
+    .integrations__items-row {
+        gap: 3.077vw;
+        
+    }
+
+    .integrations__items-item {
+        width: 33.59vw;
+        height: 15.385vw;
+        padding: 4.615vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.051vw;
+        border-radius: 3.59vw;
+        background: #1A1C28;
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+    }
+
+    .integrations__items-item img {
+        width: 7.692vw;
+        height: 7.179vw;
+    }
+
+    .integrations .left-scroll .integrations__items-item:nth-child(3) {
+        width: 22.051vw;
+    }
+
+    .integrations .left-scroll .integrations__items-item:nth-child(3) img {
+        width: 12.821vw;
+        height: 6.41vw;
+    }
+
+    .integrations .left-scroll .integrations__items-item:nth-child(6) {
+        width: 22.051vw;
+    }
+
+    .integrations .left-scroll .integrations__items-item:nth-child(6) img {
+        width: 12.821vw;
+        height: 6.41vw;
+    }
+
+    .integrations__items-item p {
+        font-size: 3.077vw;
+        line-height: 5.385vw;
+    }
+
+    .integrations__items-row:nth-child(2) {
+        margin-top: 18.544vw;
+    }
+
+    .integrations__items-row-container {
+        margin-bottom: 47.653vw;
+    }
+
+    .integrations__items-row-container::before {
+        width: 10.861vw;
+        height: 39.278vw;
+    }
+
+    .integrations__items-row-container::after {
+        width: 10.861vw;
+        height: 39.278vw;
+    }
+
+    .integrations__info-title {
+        font-size: 3.333vw;
+    }
+
+    .integrations__people {
+        width: 100%;
+        height: 115.897vw;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 10.256vw;
+        position: relative;
+    }
+
+    .integrations__people-titles {
+        gap: 4.615vw;
+        width: 100%;
+        padding: 10.256vw 5.128vw;
+        margin-bottom: 0;
+    }
+
+    .integrations__people-titles h3 {
+        font-size: 5.641vw;
+    }
+
+    .integrations__people-titles p {
+        font-size: 3.59vw;
+        line-height: 7.179vw;
+    }
+
+    .integrations__people-titles a {
+        font-size: 3.59vw;
+        gap: 2.051vw;
+        position: absolute;
+        top: 101.282vw;
+
+        svg {
+            width: 4.103vw;
+            height: 4.103vw;
+        }
+    }
+
+    .integrations__people-list {
+        overflow: scroll;
+        width: 100%;
+        gap: 3.846vw;
+        height: 49.744vw;
+    }
+
+    .integrations__people-item {
+        width: auto;
+
+        &:nth-child(1) {
+            margin-left: 5.128vw;
+        }
+    }
+
+    .integrations__people-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .integrations__people-item .info {
+        width: 30.769vw;
+        padding: 2.051vw 2.564vw;
+        gap: 1.538vw;
+        margin-top: 3.59vw;
+        border-radius: 5.128vw;
+    }
+
+    .integrations__people-item .info .name {
+        font-size: 2.564vw;
+        gap: 1.564vw;
+    }
+
+    .integrations__people-item .info .name img {
+        width: 3.077vw;
+        height: 3.077vw;
+    }
+
+    .integrations__people-item .info .position {
+        font-size: 2.051vw;
+    }
+
+    .integrations__gradient {
+        position: relative;
+        top: 149px;
+        left: 31px;
+    }
+
+    .integrations .integrations__gradient-1 {
+        width: 65.204vw;
+        height: 58.204vw;
+        top: 31.694vw;
+        left: -37.833vw;
+    }
+
+    .integrations .integrations__gradient-2 {
+        width: 60.183vw;
+        height: 50.183vw;
+        top: 25.694vw;
+        left: -18.833vw;
     }
 }
