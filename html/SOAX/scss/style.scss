@@ -979,6 +979,8 @@ body.home-page {
         border-radius: 0.694vw;
         background: var(--white, #FFF);
         box-shadow: 0vw 0.278vw 0.278vw 0vw rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+        border: 0;
 
         .text {
             display: flex;
@@ -1005,6 +1007,13 @@ body.home-page {
             transition: 0.3s;
             background: url('../img/arrow.svg') no-repeat center top / cover;
         }
+
+        &:hover {
+            border: 0.069vw solid var(--Green-Gradient, #00B67A);
+        }
+    }
+    &__list-item.active {
+        border: 0.069vw solid var(--Green-Gradient, #00B67A);
     }
 
     &__bottom {
@@ -2342,6 +2351,8 @@ body.home-page {
 .footer {
     padding-top: 4.028vw;
     padding-bottom: 4.375vw;
+    position: relative;
+    overflow: hidden;
 
     h4 {
         color: var(--violet-200, #ACADC4);
@@ -2454,6 +2465,19 @@ body.home-page {
             line-height: normal;
         }
     }
+
+    &__bg {
+        position: absolute;
+        width: 41.204vw;
+        height: 41.204vw;
+        transform: rotate(59.748deg);
+        flex-shrink: 0;
+        border-radius: 13.601vw;
+        background: radial-gradient(49.28% 49.28% at 32.21% 54.04%, #FFF 0%, rgba(146, 112, 243, 0.74) 15.94%, rgba(77, 87, 209, 0.00) 100%);
+        filter: blur(1.278vw);
+        bottom: -33.694vw;
+        left: 25vw;
+    }
 }
 
 .prices__table-mob {
@@ -2563,7 +2587,7 @@ body.home-page {
         overflow: hidden;
 
         &__bg {
-            background: url(../img/hero-bg-mob.png) no-repeat center top/cover;
+            background: url(../img/hero-bg-mob.webp) no-repeat center top/cover;
             width: 100vw;
             height: 242.308vw;
             z-index: 0;
@@ -2846,7 +2870,7 @@ body.home-page {
         }
 
         &:last-child:after {
-            background: url(../img/products-item-gradient-last.png) no-repeat center top / cover;
+            background: url(../img/products-item-gradient-last.webp) no-repeat center top / cover;
             width: 69.744vw;
             height: 16.923vw;
             bottom: -16vw;
@@ -2960,7 +2984,7 @@ body.home-page {
     }
 
     .testimonial__content {
-        background: url(../img/testimonial-bg-mob.png) no-repeat center top/cover;
+        background: url(../img/testimonial-bg-mob.webp) no-repeat center top/cover;
         margin-top: 10.256vw;
         height: auto;
         padding: 8.205vw 5.128vw;
@@ -3712,6 +3736,10 @@ body.home-page {
 
     }
 
+    .integrations__titles {
+        margin-bottom: 10.256vw;
+    }
+
     .integrations__items-item {
         width: 33.59vw;
         height: 15.385vw;
@@ -3757,7 +3785,7 @@ body.home-page {
     }
 
     .integrations__items-row-container {
-        margin-bottom: 47.653vw;
+        margin-bottom: 54.653vw;
     }
 
     .integrations__items-row-container::before {
@@ -3774,6 +3802,7 @@ body.home-page {
 
     .integrations__info-title {
         font-size: 3.333vw;
+        margin-bottom: 10vw;
     }
 
     .integrations__people {
@@ -4061,6 +4090,7 @@ body.home-page {
 
     .footer {
         padding-top: 20.513vw;
+        padding-bottom: 10.256vw;
     }
 
     .footer .container {
@@ -4082,6 +4112,34 @@ body.home-page {
 
     .footer .row {
         flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        &:nth-child(1) {
+            order: 4;
+        }
+
+        &:nth-child(2) {
+            order: 3;
+        }
+
+        &:nth-child(3) {
+            order: 1;
+        }
+
+        &:nth-child(4) {
+            order: 3;
+
+            .footer__menu-container:nth-child(3) {
+                position: absolute;
+                top: 25.641vw;
+            }
+        }
+
+    }
+
+    .footer__menu-container {
+        width: 48.718vw;
     }
 
     .footer__menu-item {
@@ -4095,9 +4153,9 @@ body.home-page {
 
 
     .footer__contact {
-        margin-top: 10.256vw;
+        margin-top: 0;
         order: 2;
-        display: none;
+        gap: 3.59vw;
     }
 
     .footer__contact-item {
@@ -4118,6 +4176,10 @@ body.home-page {
     }
 
     .footer__certificates {
+        display: none;
+    }
+
+    .footer__bg {
         display: none;
     }
 }
