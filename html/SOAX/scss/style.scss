@@ -2307,6 +2307,13 @@ body.home-page {
             &:hover {
                 background: #101118;
             }
+
+            &::after {
+                content: "";
+                background: url(../img/arrow-narrow-up-right.svg) no-repeat center top/cover;
+                width: 1.111vw;
+                height: 1.111vw;
+            }
         }
     }
 
@@ -2714,7 +2721,7 @@ body.home-page {
                 &::after {
                     width: 1.282vw !important;
                     height: 3.59vw !important;
-                    margin-left: 10px !important;
+                    margin-left: 2.564vw !important;
                 }
             }
         }
@@ -3322,7 +3329,7 @@ body.home-page {
 
 
     .worldwide {
-        padding-top: 127px;
+        padding-top: 32.564vw;
         padding-bottom: 20.513vw;
         border-top-right-radius: 5.128vw;
         border-top-left-radius: 5.128vw;
@@ -3469,7 +3476,7 @@ body.home-page {
     .reviews__items-wrap {
         background: var(--gray-100, #F8F6F5);
         height: 83.611vw;
-        padding: 40px 0;
+        padding: 10.256vw 0;
     }
 
     .reviews__items-item {
@@ -3545,7 +3552,7 @@ body.home-page {
     }
 
     .reviews__items-item:nth-child(1) {
-        margin-left: 20px;
+        margin-left: 5.128vw;
     }
 
 
@@ -3695,6 +3702,11 @@ body.home-page {
         padding-top: 17.436vw;
     }
 
+    .integrations .container {
+        max-width: 100%;
+        padding: 0 5.128vw;
+    }
+
     .integrations__items-row {
         gap: 3.077vw;
 
@@ -3751,11 +3763,13 @@ body.home-page {
     .integrations__items-row-container::before {
         width: 10.861vw;
         height: 39.278vw;
+        left: -5.694vw;
     }
 
     .integrations__items-row-container::after {
         width: 10.861vw;
         height: 39.278vw;
+        right: -5.5vw;
     }
 
     .integrations__info-title {
@@ -3771,6 +3785,7 @@ body.home-page {
         gap: 10.256vw;
         position: relative;
         margin-bottom: 6.154vw;
+        border-radius: 5.128vw;
     }
 
     .integrations__people-titles {
@@ -3845,8 +3860,8 @@ body.home-page {
 
     .integrations__gradient {
         position: relative;
-        top: 149px;
-        left: 31px;
+        top: 38.205vw;
+        left: 7.949vw;
     }
 
     .integrations .integrations__gradient-1 {
@@ -3865,6 +3880,7 @@ body.home-page {
 
     .integrations__info-items {
         flex-direction: column;
+        gap: 6.154vw;
     }
 
     .integrations__info-item {
@@ -3872,6 +3888,7 @@ body.home-page {
         height: auto;
         padding: 10.256vw 5.128vw;
         gap: 10.256vw;
+        border-radius: 5.128vw;
     }
 
     .integrations__info-titles h3 {
@@ -3948,5 +3965,97 @@ body.home-page {
     .integrations__info-card:nth-child(3) img {
         width: 100%;
         height: 43.769vw;
+    }
+
+
+
+    .contacts {
+        padding-top: 5.128vw;
+    }
+
+    .contacts .container {
+        max-width: 100%;
+        padding: 0 5.128vw;
+    }
+
+    .contacts__block {
+        padding: 10.256vw 5.128vw;
+        height: auto;
+        align-items: flex-start;
+        border-radius: 5.128vw;
+    }
+
+    .contacts__title {
+        width: 84%;
+        font-size: 6.154vw;
+        line-height: 9.231vw;
+        text-align: left;
+    }
+
+    .contacts__btns {
+        margin-top: 10.256vw;
+    }
+
+    .contacts__btns {
+        flex-direction: column;
+        width: 100%;
+        gap: 4.103vw;
+    }
+
+    .contacts__btns .experts-btn {
+        width: 100%;
+        height: 12.821vw;
+        padding: 0.513vw 10.256vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.051vw;
+        border-radius: 10.256vw;
+        border: 0.256vw solid rgba(255, 255, 255, 0.60);
+        font-size: 3.59vw;
+        line-height: 9.487vw;
+    }
+
+    .contacts__btns .experts-btn img {
+        width: 10.256vw;
+        height: 4.103vw;
+    }
+
+    .contacts__btns .start-btn {
+        width: 100%;
+        height: 12.821vw;
+        padding: 1.538vw 10.256vw;
+        justify-content: center;
+        align-items: center;
+        gap: 2.051vw;
+        border-radius: 10.256vw;
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+        font-size: 3.59vw;
+        line-height: 9.487vw;
+    }
+
+    .contacts__btns .start-btn::after {
+        width: 4.103vw;
+        height: 4.103vw;
+    }
+
+    .contacts__info {
+        margin-top: 5.128vw;
+        margin-left: 5vw;
+        gap: 2.051vw;
+    }
+
+    .contacts__info p {
+        font-size: 3.077vw;
+    }
+
+    .contacts__info span {
+        font-size: 3.077vw;
+    }
+
+    .contacts__block::before {
+        width: 92.565vw;
+        height: 108.758vw;
+        top: 14vw;
+        left: 0vw;
     }
 }
