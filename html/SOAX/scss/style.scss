@@ -4058,4 +4058,66 @@ body.home-page {
         top: 14vw;
         left: 0vw;
     }
+
+    .footer {
+        padding-top: 20.513vw;
+    }
+
+    .footer .container {
+        max-width: 100%;
+        padding: 0 5.128vw;
+        flex-direction: column;
+        gap: 10.256vw;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer h4 {
+        font-size: 3.077vw;
+        letter-spacing: 0.123vw;
+        margin-bottom: 5.128vw;
+    }
+
+    .footer .row {
+        flex-direction: row;
+    }
+
+    .footer__menu-item {
+        display: flex;
+        margin-bottom: 5.128vw;
+    }
+
+    .footer__menu-item a {
+        font-size: 3.077vw;
+    }
+
+
+    .footer__contact {
+        margin-top: 10.256vw;
+        order: 2;
+        display: none;
+    }
+
+    .footer__contact-item {
+        gap: 1.538vw;
+    }
+
+    .footer__contact-item .title {
+        font-size: 3.846vw;
+        width: 15.167vw;
+    }
+
+    .footer__contact-item .text {
+        font-size: 3.846vw;
+    }
+
+    .footer__social {
+        display: none;
+    }
+
+    .footer__certificates {
+        display: none;
+    }
 }
