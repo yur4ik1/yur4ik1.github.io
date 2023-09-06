@@ -21,6 +21,26 @@ window.onscroll = () => {
 
 }
 
+// mobile menu
+
+let burder = document.querySelector('.burger');
+let mobileMenu = document.querySelector('.header__mobile-menu');
+
+if (mobileMenu) {
+  burder.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+
+    if (mobileMenu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  });
+}
+
+
+
+
 // submenu
 
 let subMenuItems = document.querySelectorAll('.header__menu-item.sub');

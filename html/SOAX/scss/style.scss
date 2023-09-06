@@ -14,6 +14,10 @@ body.home-page {
         max-width: 100%;
     }
 
+    &__mobile-menu {
+        display: none;
+    }
+
     &__top {
         width: 100%;
         background: #F2F3FA;
@@ -1012,6 +1016,7 @@ body.home-page {
             border: 0.069vw solid var(--Green-Gradient, #00B67A);
         }
     }
+
     &__list-item.active {
         border: 0.069vw solid var(--Green-Gradient, #00B67A);
     }
@@ -2513,6 +2518,10 @@ body.home-page {
         line-height: 10.256vw;
     }
 
+    .header__main.active .header__main-wrap {
+        backdrop-filter: blur(1.833vw);
+    }
+
     .header {
         &__top {
             display: none;
@@ -2578,6 +2587,71 @@ body.home-page {
             }
         }
     }
+
+    .header__main {
+        top: 0;
+    }
+
+    .header__mobile-menu {
+        position: fixed;
+        top: 20.628vw;
+        bottom: 0;
+        right: 0;
+        transform: translate(-150%);
+        height: 100%;
+        max-width: 694px;
+        width: 100%;
+        background-color: #fff;
+        padding: 6.917vw;
+        z-index: 999999;
+        transition: .3s;
+        display: block;
+        z-index: 999999999999999999;
+        backdrop-filter: blur(2.833vw);
+        background: rgba(255, 255, 255, .5);
+    }
+
+    .header__mobile-menu.active {
+        transform: translate(0%);
+    }
+
+    .header__mob-menu {
+        li {
+            a {
+                font-size: 3.903vw !important;
+                line-height: 14.569vw !important;
+                color: #000;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .header__mob-menu .header__menu-item.sub::after {
+        width: 3.833vw !important;
+        height: 3.833vw !important;
+        margin-left: 2.051vw;
+    }
+
+    .header__mob-menu .submenu {
+        width: 45.236vw!important;
+        top: 11vw!important;
+        z-index: 9999999999999;
+    }
+
+    .header__mob-menu .header__menu-item.sub .submenu li {
+        padding: 1.764vw 2.111vw;
+    }
+
+    .header__mob-menu .header__menu-item.sub .submenu li a {
+        gap: 1.556vw;
+        line-height: 8.569vw !important;
+    }
+
+    .header__mob-menu .header__menu-item.sub .submenu li img {
+        width: 3.111vw;
+        height: 3.111vw;
+    }
+
 
     .hero {
         padding-top: 35.25vw;
@@ -4121,6 +4195,12 @@ body.home-page {
 
         &:nth-child(2) {
             order: 3;
+
+            .footer__menu-container:nth-child(2) {
+                position: absolute;
+                right: -6vw;
+                top: -47vw;
+            }
         }
 
         &:nth-child(3) {
@@ -4130,9 +4210,16 @@ body.home-page {
         &:nth-child(4) {
             order: 3;
 
+            .footer__menu-container:nth-child(2) {
+                position: absolute;
+                top: -105.359vw;
+                right: -6vw;
+            }
+
             .footer__menu-container:nth-child(3) {
                 position: absolute;
-                top: 25.641vw;
+                top: -18.359vw;
+                right: -6vw;
             }
         }
 
