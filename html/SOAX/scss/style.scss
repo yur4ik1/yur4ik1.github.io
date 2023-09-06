@@ -3697,7 +3697,7 @@ body.home-page {
 
     .integrations__items-row {
         gap: 3.077vw;
-        
+
     }
 
     .integrations__items-item {
@@ -3770,6 +3770,7 @@ body.home-page {
         align-items: center;
         gap: 10.256vw;
         position: relative;
+        margin-bottom: 6.154vw;
     }
 
     .integrations__people-titles {
@@ -3860,5 +3861,92 @@ body.home-page {
         height: 50.183vw;
         top: 25.694vw;
         left: -18.833vw;
+    }
+
+    .integrations__info-items {
+        flex-direction: column;
+    }
+
+    .integrations__info-item {
+        width: 100%;
+        height: auto;
+        padding: 10.256vw 5.128vw;
+        gap: 10.256vw;
+    }
+
+    .integrations__info-titles h3 {
+        font-size: 5.641vw;
+        margin-bottom: 4.615vw;
+    }
+
+    .integrations__info-titles p {
+        font-size: 3.59vw;
+        line-height: 7.179vw;
+        width: 100%;
+    }
+
+    .integrations__info-images {
+        gap: 5.128vw;
+    }
+
+    .integrations__info-images img {
+        width: 20.513vw;
+        height: 21.538vw;
+    }
+
+    .integrations__info-cards {
+        margin-top: 0;
+        width: 100%;
+        overflow: scroll;
+        gap: 5.128vw;
+    }
+
+    .integrations__info-card {
+        width: 53.846vw;
+        height: 69.231vw;
+        border-radius: 5.128vw;
+        border: 0.256vw solid rgba(115, 122, 158, 0.00);
+        background: #242736;
+    }
+
+    .integrations__info-card:nth-child(3) {
+        position: relative;
+        left: 0;
+    }
+
+    .integrations__info-card .titless {
+        padding-left: 5.897vw;
+        padding-right: 5.897vw;
+        padding-top: 7.692vw;
+    }
+
+    .integrations__info-card .title {
+        width: 35.897vw;
+        font-size: 3.333vw;
+        line-height: 5.385vw;
+    }
+
+    .integrations__info-card .info {
+        font-size: 6.667vw;
+        width: 100%;
+        margin-top: 3.59vw;
+    }
+
+    .integrations__info-card:nth-child(1) img {
+        width: 100%;
+        height: 28.718vw;
+        padding-left: 5.897vw;
+        padding-right: 5.897vw;
+        margin-left: 0;
+    }
+
+    .integrations__info-card:nth-child(2) img {
+        width: 53.846vw;
+        height: 34.872vw;
+    }
+
+    .integrations__info-card:nth-child(3) img {
+        width: 100%;
+        height: 43.769vw;
     }
 }
