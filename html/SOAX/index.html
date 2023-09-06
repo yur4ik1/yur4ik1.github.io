@@ -1572,10 +1572,9 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper; // Змінна для збереження інстанції Swiper
+    var swiper; 
 
     function initSwiper() {
-      // Ініціалізуємо Swiper тільки якщо розмір екрану менше або дорівнює 720px
       if (window.innerWidth <= 720) {
         swiper = new Swiper(".reviewsSwiper", {
           slidesPerView: 1,
@@ -1587,7 +1586,6 @@
           },
         });
       } else {
-        // Якщо розмір екрану більше 720px і Swiper існує, то знищуємо його
         if (swiper) {
           swiper.destroy();
           swiper = undefined;
@@ -1595,12 +1593,8 @@
       }
     }
 
-    // Викликаємо функцію для ініціалізації Swiper при завантаженні сторінки
     initSwiper();
-
-    // Додаємо обробник події зміни розміру вікна для оновлення Swiper
     window.addEventListener("resize", function () {
-      // Викликаємо функцію ініціалізації Swiper під час зміни розміру вікна
       initSwiper();
     });
 
