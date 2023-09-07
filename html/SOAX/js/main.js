@@ -246,7 +246,7 @@ function toggleAnimatedBorderForContainer2() {
 }
 
 // Викликаємо функції для кожного контейнера окремо, щоразу, коли пройшло 2 секунди
-setInterval(toggleAnimatedBorderForContainer1, 1200);
+setInterval(toggleAnimatedBorderForContainer1, 1250);
 setInterval(toggleAnimatedBorderForContainer2, 1400);
 
 
