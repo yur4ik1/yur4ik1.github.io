@@ -149,7 +149,7 @@ const next = () => {
 }
 
 next()
-
+*/
 
 // Products Tabs 
 
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-*/
+
 
 // Line animatiton
 
