@@ -1758,7 +1758,7 @@
     // Початковий рандомний текст
     const randomTextElement = document.getElementById('randomText');
     randomTextElement.style.color = '#000'; // Задайте бажаний колір
-    const randomText = generateRandomText(20); // Задайте бажану довжину
+    const randomText = generateRandomText(22); // Задайте бажану довжину
     randomTextElement.innerText = randomText;
 
     // Текст, який потрібно написати
@@ -1772,7 +1772,7 @@
         randomTextElement.innerText = randomTextArray.join('');
         setTimeout(function () {
           animateText(index + 1);
-        }, 50); // Затримка між символами
+        }, 40); // Затримка між символами
       }
     }
 
