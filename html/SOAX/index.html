@@ -193,13 +193,20 @@
         </div>
 
         <div class="hero__titles">
-          <h1 class="hero__title">20M+ IP's and Scraping tools <span class="title-position"> for <span
-                class="cursive">Unrestricted Web A<span class="gray gray-text">xoyof</span></span></span> </h1>
+          <h1 class="hero__title ">20M+ IP's and Scraping tools
+            <span class="title-position"> for
+              <span class="" id="element">
+                <span class="cursive gray-text" id="randomText"></span>
+              </span>
+            </span>
+          </h1>
           <p class="hero__desc">
             Step into a world where online barriers dissolve. Our cutting-edge proxy service empowers you to reclaim
             control over your digital life.
           </p>
         </div>
+
+
 
         <div class="hero__cards">
           <div class="hero__cards-item">
@@ -1730,6 +1737,50 @@
   </script>
 
   <script src="./js/main.min.js"></script>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    // Функція для генерації рандомного тексту з заданими символами
+    function generateRandomText(length) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
+    }
+
+    // Початковий рандомний текст
+    const randomTextElement = document.getElementById('randomText');
+    randomTextElement.style.color = '#000'; // Задайте бажаний колір
+    const randomText = generateRandomText(20); // Задайте бажану довжину
+    randomTextElement.innerText = randomText;
+
+    // Текст, який потрібно написати
+    const typedText = 'Unrestricted Web Axoyof';
+
+    // Функція для анімації заміни символів
+    function animateText(index) {
+      if (index < typedText.length) {
+        const randomTextArray = randomTextElement.innerText.split('');
+        randomTextArray[index] = typedText.charAt(index);
+        randomTextElement.innerText = randomTextArray.join('');
+        setTimeout(function () {
+          animateText(index + 1);
+        }, 50); // Затримка між символами
+      }
+    }
+
+    // Анімація заміни символів
+    animateText(0);
+
+  </script>
+</body>
 
 </body>
 

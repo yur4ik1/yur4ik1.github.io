@@ -68,6 +68,7 @@ subMenuItems.forEach(function (item) {
 
 
 
+
 // ——————————————————————————————————————————————————
 // TextScramble
 // ——————————————————————————————————————————————————
@@ -75,7 +76,7 @@ subMenuItems.forEach(function (item) {
 class TextScramble {
   constructor(el) {
     this.el = el
-    this.chars = 'xoyof'
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
     this.update = this.update.bind(this)
   }
   setText(newText) {
@@ -130,8 +131,10 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
+/*
 const phrases = [
-  'xoyof',
+  '',
+  'Unrestricted eb Axoyof',
 ]
 
 const el = document.querySelector('.gray-text')
@@ -146,7 +149,6 @@ const next = () => {
 }
 
 next()
-
 
 
 // Products Tabs 
@@ -189,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
+*/
 
 // Line animatiton
 
