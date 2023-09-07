@@ -39,8 +39,6 @@ if (mobileMenu) {
 }
 
 
-
-
 // submenu
 
 let subMenuItems = document.querySelectorAll('.header__menu-item.sub');
@@ -190,6 +188,79 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
+// Line animatiton
+
+// Функція для додавання класу .animated-border до випадкового елемента та забирання з попереднього для першого контейнера
+function toggleAnimatedBorderForContainer1() {
+  const container1 = document.querySelector('.integrations__items-row.right-scroll:first-child');
+  if (!container1) return;
+
+  // Знаходимо всі елементи з класом .integrations__items-item в першому контейнері
+  const items1 = container1.querySelectorAll('.integrations__items-item.animated-border');
+
+  if (items1.length > 0) {
+    // Якщо є елементи з класом .animated-border в першому контейнері, забираємо їх
+    items1.forEach((item) => {
+      item.classList.remove('animated-border');
+    });
+  }
+
+  // Знаходимо всі елементи з класом .integrations__items-item в першому контейнері
+  const items = container1.querySelectorAll('.integrations__items-item');
+
+  // Вибираємо випадковий елемент зі списку
+  const randomIndex = Math.floor(Math.random() * items.length);
+  const randomItem = items[randomIndex];
+
+  // Додаємо клас .animated-border до вибраного елемента
+  randomItem.classList.add('animated-border');
+}
+
+// Функція для додавання класу .animated-border до випадкового елемента та забирання з попереднього для другого контейнера
+function toggleAnimatedBorderForContainer2() {
+  const container2 = document.querySelector('.integrations__items-row.left-scroll:nth-child(2)');
+  if (!container2) return;
+
+  // Знаходимо всі елементи з класом .integrations__items-item в другому контейнері
+  const items2 = container2.querySelectorAll('.integrations__items-item.animated-border');
+
+  if (items2.length > 0) {
+    // Якщо є елементи з класом .animated-border в другому контейнері, забираємо їх
+    items2.forEach((item) => {
+      item.classList.remove('animated-border');
+    });
+  }
+
+  // Знаходимо всі елементи з класом .integrations__items-item в другому контейнері
+  const items = container2.querySelectorAll('.integrations__items-item');
+
+  // Вибираємо випадковий елемент зі списку
+  const randomIndex = Math.floor(Math.random() * items.length);
+  const randomItem = items[randomIndex];
+
+  // Додаємо клас .animated-border до вибраного елемента
+  randomItem.classList.add('animated-border');
+}
+
+// Викликаємо функції для кожного контейнера окремо, щоразу, коли пройшло 2 секунди
+setInterval(toggleAnimatedBorderForContainer1, 1200);
+setInterval(toggleAnimatedBorderForContainer2, 1400);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 const gradient1 = document.getElementById('gradient-1');
