@@ -195,7 +195,7 @@
         <div class="hero__titles">
           <h1 class="hero__title ">20M+ IP's and Scraping tools
             <span class="title-position"> for
-              <span class="" id="element">
+              <span id="element">
                 <span class="cursive gray-text" id="randomText"></span>
               </span>
             </span>
@@ -1740,12 +1740,9 @@
 
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
-  <!-- Load library from the CDN -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
   <!-- Setup and start animation! -->
   <script>
-    // Функція для генерації рандомного тексту з заданими символами
+
     function generateRandomText(length) {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
       let result = '';
@@ -1757,27 +1754,38 @@
 
     // Початковий рандомний текст
     const randomTextElement = document.getElementById('randomText');
-    randomTextElement.style.color = '#000'; // Задайте бажаний колір
-    const randomText = generateRandomText(22); // Задайте бажану довжину
+
+    const randomText = generateRandomText(20);
     randomTextElement.innerText = randomText;
 
     // Текст, який потрібно написати
     const typedText = 'Unrestricted Web Axoyof';
 
+
     // Функція для анімації заміни символів
     function animateText(index) {
       if (index < typedText.length) {
-        const randomTextArray = randomTextElement.innerText.split('');
-        randomTextArray[index] = typedText.charAt(index);
-        randomTextElement.innerText = randomTextArray.join('');
+        const originalText = randomTextElement.innerText;
+        const before = originalText.substr(0, index);
+        const after = originalText.substr(index + 1);
+
+        // Додаємо span.dud до останніх п'яти символів
+        const beforeWithSpan = '<span class="dud">' + before.slice(0, -4) + '</span>' + before.slice(-4);
+
+        
+        
+        const newText = beforeWithSpan + typedText.charAt(index) + after;
+        randomTextElement.innerHTML = newText;
         setTimeout(function () {
           animateText(index + 1);
-        }, 40); // Затримка між символами
+        }, 40);
       }
     }
 
-    // Анімація заміни символів
-    animateText(0);
+
+    setTimeout(function () {
+      animateText(0);
+    }, 300);
 
   </script>
 </body>

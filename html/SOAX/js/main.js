@@ -67,7 +67,7 @@ subMenuItems.forEach(function (item) {
 
 
 
-
+/*
 
 // ——————————————————————————————————————————————————
 // TextScramble
@@ -131,7 +131,7 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
-/*
+
 const phrases = [
   '',
   'Unrestricted eb Axoyof',

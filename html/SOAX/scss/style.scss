@@ -313,7 +313,9 @@ body.home-page {
         }
 
         .title-position {
-           
+            position: absolute;
+            top: 23.547vw;
+            left: 19.056vw;
         }
     }
 
@@ -2746,13 +2748,15 @@ body.home-page {
         }
 
         &__title {
-            width: auto;
+            width: 88.444vw;
             color: var(--Black, #000);
             font-size: 10vw;
             font-weight: 600;
             line-height: 13.5vw;
             text-align: left;
             margin-bottom: 3.5vw;
+            height: auto;
+            overflow: hidden;
 
             span {
                 font-size: 10vw;
@@ -2768,7 +2772,11 @@ body.home-page {
             }
 
             .title-position {
-                right: 0.8vw;
+                display: block;
+               
+                position: relative;
+                top: 0;
+                left:0;
             }
         }
 
