@@ -69,6 +69,46 @@ subMenuItems.forEach(function (item) {
 
 /*
 
+// hero animation
+
+const bgElement1 = document.querySelector('.bg-1');
+const bgElement2 = document.querySelector('.bg-2');
+let marginLeftValue1 = 0; // Начальное значение margin-left для .bg-1
+let marginLeftValue2 = 0; // Начальное значение margin-left для .bg-2
+
+// Функция для анимации .bg-1 (влево)
+function animateMarginLeft1() {
+  marginLeftValue1 += 3; // Увеличиваем значение margin-left на 100px (или любое другое значение)
+  bgElement1.style.marginLeft = marginLeftValue1 + 'px';
+
+  // Если достигнута необходимая позиция, останавливаем анимацию
+  if (marginLeftValue1 < 400) { // Замените на нужное вам значение
+    requestAnimationFrame(animateMarginLeft1);
+  }
+}
+
+// Функция для анимации .bg-2 (вправо)
+function animateMarginLeft2() {
+  marginLeftValue2 -= 3; // Увеличиваем значение margin-left на 100px (или любое другое значение)
+  bgElement2.style.marginLeft = marginLeftValue2 + 'px';
+
+  // Если достигнута необходимая позиция, останавливаем анимацию
+  if (marginLeftValue2 < 100) { // Замените на нужное вам значение
+    requestAnimationFrame(animateMarginLeft2);
+  }
+}
+
+// Запускаем анимации
+animateMarginLeft1(); // Для .bg-1 (влево)
+animateMarginLeft2(); // Для .bg-2 (вправо)
+
+
+*/
+
+
+
+/*
+
 // ——————————————————————————————————————————————————
 // TextScramble
 // ——————————————————————————————————————————————————
@@ -170,6 +210,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// dark mode
+function toggleDarkHeader() {
+  const headerMain = document.querySelector('.header__main');
+  const plansSection = document.querySelector('.plans');
+  const integrationsSection = document.querySelector('.integrations');
+  const contactsSection = document.querySelector('.contacts');
+  const footerSection = document.querySelector('.footer');
+  const mobileMenu = document.querySelector('.header__mobile-menu');
+
+  if (!headerMain) {
+    return;
+  }
+
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+
+  const isInPlansSection = plansSection && scrollPosition >= plansSection.offsetTop && scrollPosition < plansSection.offsetTop + plansSection.offsetHeight;
+  const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
+  const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
+  const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
+
+  if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
+    headerMain.classList.add('dark');
+    mobileMenu.classList.add('dark');
+  } else {
+    headerMain.classList.remove('dark');
+    mobileMenu.classList.remove('dark');
+  }
+}
+
+window.addEventListener('scroll', toggleDarkHeader);
+window.addEventListener('load', toggleDarkHeader);
+
 
 
 // Plans Dropdown 
