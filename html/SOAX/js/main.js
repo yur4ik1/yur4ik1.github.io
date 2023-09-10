@@ -212,6 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // dark mode
+
 function toggleDarkHeader() {
   const headerMain = document.querySelector('.header__main');
   const plansSection = document.querySelector('.plans');
