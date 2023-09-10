@@ -1735,8 +1735,8 @@
       if (window.innerWidth <= 720) {
         swiper = new Swiper(".reviewsSwiper", {
           slidesPerView: 1,
-          spaceBetween: 30,
-          freeMode: true,
+          spaceBetween: 0,
+ 
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -1760,8 +1760,7 @@
   <script>
     var swiper = new Swiper(".pricesSwiper", {
       slidesPerView: 1,
-      spaceBetween: 30,
-      freeMode: true,
+      spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination2",
         clickable: true,
