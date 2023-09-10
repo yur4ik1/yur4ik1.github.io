@@ -495,11 +495,33 @@
                 <img class="icon" src="./img/features-icon-15.svg" alt="">
                 <p class="name">Reddit</p>
               </a>
+
+              <a class="features__list-item" href="#">
+                <img class="icon" src="./img/features-icon-17.svg" alt="">
+                <p class="name">Instagram</p>
+              </a>
+              <a class="features__list-item" href="#">
+                <img class="icon" src="./img/features-icon-17.svg" alt="">
+                <p class="name">TikTok</p>
+              </a>
+              <a class="features__list-item" href="#">
+                <img class="icon" src="./img/features-icon-17.svg" alt="">
+                <p class="name">Google</p>
+              </a>
+              <a class="features__list-item" href="#">
+                <img class="icon" src="./img/features-icon-17.svg" alt="">
+                <p class="name">Amazon</p>
+              </a>
+              <a class="features__list-item" href="#">
+                <img class="icon" src="./img/features-icon-17.svg" alt="">
+                <p class="name">Reddit</p>
+              </a>
             </div>
           </div>
-          <div class="features__bottom">
-            <a class="features__btn" href="#">Start $1.99 Trial</a>
-          </div>
+          
+        </div>
+        <div class="features__bottom">
+          <a class="features__btn" href="#">Start $1.99 Trial</a>
         </div>
       </div>
     </section>
@@ -1755,7 +1777,7 @@
   <script>
 
     function generateRandomText(length) {
-      const characters = 'abcdefghijklmnopqrstuvwxyz)';
+      const characters = 'abcdefghijklmnopqrstuvwxyz';
       let result = '';
       for (let i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -1778,7 +1800,7 @@
         randomTextElement.innerHTML = newText;
         setTimeout(function () {
           animateText(index + 1);
-        }, 40);
+        }, 45);
       }
     }
 
