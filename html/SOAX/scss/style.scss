@@ -3276,7 +3276,7 @@ body.home-page {
     .features {
         position: relative;
         padding-top: 10.256vw;
-        padding-bottom: 20.513vw;
+        padding-bottom: 34.513vw;
         border-bottom-right-radius: 5.128vw;
         border-bottom-left-radius: 5.128vw;
     }
@@ -3303,7 +3303,7 @@ body.home-page {
         width: 100%;
         height: 346.556vw;
         position: absolute;
-        top: 12.528vw;
+        top: -3.472vw;
     }
 
     .features__list-title {
@@ -3314,6 +3314,10 @@ body.home-page {
         letter-spacing: 0.267vw;
         text-transform: uppercase;
         margin-bottom: 10.256vw;
+    }
+
+    .features__title span {
+        font-size: 7.692vw;
     }
 
     .features__list {
@@ -3358,7 +3362,7 @@ body.home-page {
     }
 
     .features__bottom {
-        margin-top: 10.256vw;
+        margin-top: -8vw;
     }
 
     .features__btn {
@@ -3372,11 +3376,16 @@ body.home-page {
         box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
         font-size: 3.59vw;
         line-height: 9.487vw;
+        top: 13vw;
     }
 
     .features__btn::after {
         width: 4.103vw;
         height: 4.103vw;
+    }
+
+    .features__features {
+        height: 216.2vw;
     }
 
 
