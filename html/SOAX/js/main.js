@@ -309,8 +309,8 @@ function toggleAnimatedBorderForContainer2() {
   randomItem.classList.add('animated-border');
 }
 
-setInterval(toggleAnimatedBorderForContainer1, 1700);
-setInterval(toggleAnimatedBorderForContainer2, 1900);
+setInterval(toggleAnimatedBorderForContainer1, 1800);
+setInterval(toggleAnimatedBorderForContainer2, 2000);
 
 
 
