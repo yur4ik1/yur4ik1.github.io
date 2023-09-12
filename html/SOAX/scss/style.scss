@@ -1989,8 +1989,8 @@ body.home-page {
 
     .main-element {
         position: relative;
-        width: 99.7%;
-        height: 98%;
+        width: 99.8%;
+        height: 98.4%;
         margin: auto;
         align-self: center;
         background: transparent;
@@ -2013,7 +2013,7 @@ body.home-page {
         background: linear-gradient(to right, #191919 20%, #191919 40%, #191919 50%, #737A9E 70%, #191919 100%);
         background-size: 200% auto;
 
-        animation: shine 2s linear infinite;
+        animation: shine 1.7s linear infinite;
     }
 
      .animated-border .border-2 {
@@ -2029,14 +2029,10 @@ body.home-page {
         overflow: hidden;
         background: linear-gradient(to right, #191919 20%, #191919 40%, #191919 50%, #737A9E 70%, #191919 100%);
         background-size: 200% auto;
-
-        animation: shine2 2s linear infinite;
+        animation: shine2 1.7s linear infinite;
     }
 
 
-
-
-    /*Begin shimmer code*/
 
     @keyframes shine {
         to {
@@ -2049,6 +2045,8 @@ body.home-page {
             background-position: -200% center;
         }
     }
+
+
     .left-scroll {
         .integrations__items-item {
             &:nth-child(3) {
