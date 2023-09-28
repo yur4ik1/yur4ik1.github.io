@@ -127,7 +127,17 @@
                     <div class="profile__centre-top">
                         <div class="title">
                             <h2>MAKAROV IVAN</h2>
-                            <p>Green ninja</p>
+                            <p class="ninja__color-btn">Green ninja</p>
+
+                            <div class="ninja__color-popup">
+                                <a href="#">Junior (White) </a>
+                                <a href="#">Middle (Yellow)</a>
+                                <a class="active" href="#">Senior (Green)</a>
+                                <a href="#">Lead (Red)</a>
+                                <a href="#">Manager (Purple)</a>
+                                <a href="#">C-Level (Black)</a>
+                            </div>
+
                         </div>
                         <a class="btn info-btn" href="#!">Info</a>
                     </div>
@@ -222,9 +232,9 @@
                 </div>
 
                 <div class="profile__info-content">
-                    <p class="next-level"><span>Next Level:</span> Red ninja (Team Lead) - 1/10 Skills</p>
 
                     <div class="skils__content">
+                        <p class="next-level"><span>Next Level:</span> Red ninja (Team Lead) - 1/10 Skills</p>
                         <div class="skils__list">
                             <div class="skils__list-col">
                                 <div class="skils__list-item">
@@ -306,10 +316,243 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="level-row">
+                            <p class="next-level"><span>Side Skills:</span> 2 Skills</p>
+                            <a class="add-skill-btn" href="#">+ Add Skill</a>
+                        </div>
+                        
+                        <div class="skils__list">
+                            <div class="skils__list-col">
+                                <div class="skils__list-item">
+                                    <div class="progress-info">
+                                        <p class="name">HTML 5 (Yellow)</p>
+                                        <p class="raised">170/300</p>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <span style="width: 15.433vw;"></span>
+                                    </div>
+                                </div>
+                        
+                            </div>
+
+                            <div class="skils__list-col">
+                                <div class="skils__list-item">
+                                    <div class="progress-info">
+                                        <p class="name">CSS 3 (White)</p>
+                                        <p class="raised">300/300</p>
+                                    </div>
+                                    <div class="progress-bar full">
+                                        <span style="width: 100%;"></span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        
+        
+
+        <div class="main__popup add__skill-popup add__skill-profile">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>ADD SKILL</h3>
+                    <span class="main__popup-close add-skill-profile-close"></span>
+                </div>
+                <div class="field__wrapper">
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+
+                            <div class="new__custom-select__trigger">
+                                <span>Clan</span>
+                                <input type="text" placeholder="Type here to search for Clan...">
+                            </div>
+
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all1">
+                                    <label for="all1">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all2">
+                                    <label for="all2">B Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all3">
+                                    <label for="all3">C Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all4">
+                                    <label for="all4">D Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all5">
+                                    <label for="all5">E Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all6">
+                                    <label for="all6">F Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all7">
+                                    <label for="all7">G Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all8">
+                                    <label for="all8">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all9">
+                                    <label for="all9">A Department</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"><div class="custom-scrollbar-thumb"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+
+                            <div class="new__custom-select__trigger">
+                                <span>Rank</span>
+                                <input type="text" placeholder="Type here to search for Rank...">
+                            </div>
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank1">
+                                    <label for="rank1">Artist</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank2">
+                                    <label for="rank2">Architect</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank3">
+                                    <label for="rank3">Analysts</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank4">
+                                    <label for="rank4">Developer</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank5">
+                                    <label for="rank5">Designer</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank6">
+                                    <label for="rank6">D Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank7">
+                                    <label for="rank7">E Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank8">
+                                    <label for="rank8">A Rank</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="rank9">
+                                    <label for="rank9">A Rank</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"><div class="custom-scrollbar-thumb"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+
+                            <div class="new__custom-select__trigger">
+                                <span>Skill</span>
+                                <input type="text" placeholder="Type here to search for Skill...">
+                            </div>
+
+                        
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill1">
+                                    <label for="skill1">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill2">
+                                    <label for="skill2">B Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill3">
+                                    <label for="skill3">C Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill4">
+                                    <label for="skill4">D Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill5">
+                                    <label for="skill5">E Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill6">
+                                    <label for="skill6">F Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill7">
+                                    <label for="skill7">G Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill8">
+                                    <label for="skill8">A Skill</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="skill9">
+                                    <label for="skill9">A Skill</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"><div class="custom-scrollbar-thumb"></div></div>
+                        </div>
+                    </div>
+                    <div class="level__wrapper">
+                       <span class="title">Level</span>
+                       <div class="level-list">
+                            <div class="item active">
+                                <img src="./img/level-icon-1.svg" alt="">
+                                <p class="color">White</p>
+                            </div>
+                            <div class="item">
+                                <img src="./img/level-icon-2.svg" alt="">
+                                <p class="color">Yellow</p>
+                            </div>
+                            <div class="item">
+                                <img src="./img/level-icon-3.svg" alt="">
+                                <p class="color">Green</p>
+                            </div>
+                            <div class="item">
+                                <img src="./img/level-icon-4.svg" alt="">
+                                <p class="color">Red</p>
+                            </div>
+                            <div class="item">
+                                <img src="./img/level-icon-5.svg" alt="">
+                                <p class="color">Purple</p>
+                            </div>
+                            <div class="item">
+                                <img src="./img/level-icon-6.svg" alt="">
+                                <p class="color">Black</p>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="bottom">
+                        <a class="btn" href="#">Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <div class="main__popup attributes__popup power__popup">
             <div class="main__popup-inner">
@@ -645,28 +888,28 @@
                 </div>
 
                 <div class="profile__info-content">
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="Ivan Ivanov">
-                        <div class="filter-select">
-                            <div class="select-selected">Select...</div>
-                            <div class="select-items select-hide">
-                                <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
-                                </div>
-                                <div class="select-option">
-                                    <input type="checkbox" id="active">
-                                    <label for="active">Active</label>
-                                </div>
-                                <div class="select-option">
-                                    <input type="checkbox" id="archied">
-                                    <label for="archied">Archied</label>
+                    
+                    <div class="skils__content">
+                        <div class="search-wrapper">
+                            <input class="search-input" type="text" placeholder="Ivan Ivanov">
+                            <div class="filter-select">
+                                <div class="select-selected">Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="all">
+                                        <label for="all">All</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="active">
+                                        <label for="active">Active</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="archied">
+                                        <label for="archied">Archied</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="skils__content">
                         <div class="rewards__list">
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
@@ -688,7 +931,7 @@
                                 <div class="rewards-img">
                                     <img class="rewards-img-trigger" src="./img/rewards-2.webp" alt="">
                                     <span>5</span>
-                                    
+
                                 </div>
                                 <div class="text">
                                     <h5>A big box with fun</h5>
@@ -824,12 +1067,80 @@
                             <span class="page">2</span>
                             <span class="next"></span>
                         </div>
-                       
+
                     </div>
                     <div class="big__photo-popup">
                         <img src="./img/rewards-big-1.webp" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+
+        <div class="main__popup skill__map active">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="arrow"></div>
+
+                            <div class="new__custom-select__trigger">
+                                <span>Art Department</span>
+                                <input type="text" placeholder="Type here to search for Clan...">
+                            </div>
+
+                            <div class="new__custom-options">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all1">
+                                    <label for="all1">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all2">
+                                    <label for="all2">B Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all3">
+                                    <label for="all3">C Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all4">
+                                    <label for="all4">D Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all5">
+                                    <label for="all5">E Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all6">
+                                    <label for="all6">F Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all7">
+                                    <label for="all7">G Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all8">
+                                    <label for="all8">A Department</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="all9">
+                                    <label for="all9">A Department</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"><div class="custom-scrollbar-thumb"></div></div>
+                        </div>
+                    </div>
+                    <span class="main__popup-close skill__map-close"></span>
+                </div>
+
+                <div class="map-container">
+                    <div class="map-bg">
+
+                    </div>
+                        
+                </div>
+                
             </div>
         </div>
 

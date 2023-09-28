@@ -251,10 +251,15 @@
                     <h3>ALL ACHIEVEMENTS</h3>
                     <span class="main__popup-close achievements-close"></span>
                 </div>
-
+                
                 <div class="main__popup-content">
                     <div class="badges-wrap">
-                        <h4 class="custom-period-btn">Badges of the year</h4>
+                        <h4 class="badges-trigger">Badges of the year</h4>
+                        <div class="badges-popup">
+                            <span>Month</span>
+                            <span class="active">Year</span>
+                            <span class="custom-period-btn">Custom</span>
+                        </div>
                         <div class="badges-list">
                             <div class="item">
                                 <div class="images image-container">
@@ -325,8 +330,15 @@
                         </div>
                     </div>
 
+                    <div class="temporary-popup">
+                        <span class="permanent-btn">Permanent Achievements</span>
+                        <span class="temporary-btn active">Temporary Achievements</span>
+                    </div>
+
                     <div class="temporary temporary-achievements active">
                         <h4 class="temporary-trigger">Temporary Achievements</h4>
+                        
+                    
                         <div class="temporary-list">
                             <div class="item active">
                                 <div class="images">
@@ -372,6 +384,7 @@
 
                     <div class="temporary permanent-achievements">
                         <h4 class="permanent-trigger">Permanent Achievements</h4>
+                        
                         <div class="temporary-list">
                             <div class="item active">
                                 <div class="images">
@@ -835,28 +848,28 @@
                 </div>
 
                 <div class="profile__info-content">
-                    <div class="search-wrapper">
-                        <input class="search-input" type="text" placeholder="Ivan Ivanov">
-                        <div class="filter-select">
-                            <div class="select-selected">Select...</div>
-                            <div class="select-items select-hide">
-                                <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
-                                </div>
-                                <div class="select-option">
-                                    <input type="checkbox" id="active">
-                                    <label for="active">Active</label>
-                                </div>
-                                <div class="select-option">
-                                    <input type="checkbox" id="archied">
-                                    <label for="archied">Archied</label>
+                    
+                    <div class="skils__content">
+                        <div class="search-wrapper">
+                            <input class="search-input" type="text" placeholder="Ivan Ivanov">
+                            <div class="filter-select">
+                                <div class="select-selected">Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="all">
+                                        <label for="all">All</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="active">
+                                        <label for="active">Active</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="archied">
+                                        <label for="archied">Archied</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="skils__content">
                         <div class="rewards__list">
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
@@ -899,8 +912,7 @@
                                 <div class="text">
                                     <h5>Bluetooth wireless headphones Air Pods</h5>
                                     <p>
-                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and
-                                        watchOS-based
+                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and watchOS-based
                                         watches.
                                         Bluetooth: 4.0
                                     </p>

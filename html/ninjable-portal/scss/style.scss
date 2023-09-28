@@ -702,6 +702,7 @@
         padding: 1.981vw 2.972vw;
 
         .title {
+            position: relative;
             h2 {
                 font-weight: 700;
                 font-size: 1.564vw;
@@ -719,6 +720,51 @@
                 line-height: 2.503vw;
                 letter-spacing: 0.014vw;
                 color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    background: url(../img/info-icon-2.svg) no-repeat center top / cover;
+                    width: 0.677vw;
+                    height: 0.677vw;
+                    margin-left: 0.469vw;
+                    cursor: pointer;
+                }
+            }
+
+            .ninja__color-popup {
+                padding: 1.667vw 2.292vw;
+                padding-right: 1.563vw;
+                width: 11.406vw;
+                height: auto;
+                flex-shrink: 0;
+                border-radius: 1.094vw;
+                position: absolute;
+                top: 6vw;
+                left: 1.563vw;
+                z-index: 999999;
+                transition: 0.2s;
+                opacity: 0;
+                visibility: hidden;
+                background: #1B2439;
+                box-shadow: 0vw 0vw 0.99vw 0.156vw rgba(6, 8, 13, 0.75);
+                a {
+                    color: #FFF;
+                    font-size: 0.833vw;
+                    font-weight: 400;
+                    line-height: 1.979vw;
+                    letter-spacing: 0.011vw;
+                }
+                a.active {
+                    color: #869DC8;
+                }
+            }
+
+            .ninja__color-popup.active {
+                opacity: 1;
+                visibility: visible;
             }
         }
 
@@ -1020,6 +1066,28 @@
                 font-weight: 500;
                 color: #869DC8;
             }
+        }
+
+        .level-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4.167vw;
+        }
+
+        .add-skill-btn {
+            color: #FFF;
+            font-size: 0.833vw;
+            font-weight: 400;
+            line-height: 1.042vw;
+            letter-spacing: 0.016vw;
+            width: 7.656vw;
+            height: 1.979vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.469vw;
+            background: #212A41;
+            box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
         }
 
         .skils__content {
@@ -1407,6 +1475,7 @@
 .profile__info-popup.rewards__pupup {
     .popup__inner {
         height: 45vw;
+        overflow: hidden;
     }
 
     .info {
@@ -1429,19 +1498,19 @@
     .profile__info-content {
         padding-left: 6.153vw;
         padding-right: 4.171vw;
-        padding-top: 5.058vw;
+        padding-top: 2vw;
     }
 
     .skils__content {
-        height: 22.865vw;
-        padding-right: 6.778vw;
+        height: 34vw;
+        padding-right: 6.178vw;
         padding-left: 0.821vw;
         padding-top: 0.521vw;
     }
 
     .search-wrapper {
         display: flex;
-        margin-bottom: 4.327vw;
+        margin-bottom: 3vw;
         width: 59.437vw;
         border-radius: 0.417vw;
         z-index: 99999;
@@ -1456,6 +1525,12 @@
             border: none;
         }
 
+        .search-input::placeholder {
+            color: #869DC8;
+            font-size: 0.782vw;
+            line-height: 0.723vw;
+            letter-spacing: 0.01vw;
+        }
 
         .filter-select {
             width: 11.314vw;
@@ -1473,7 +1548,7 @@
 
     .rewards__list-item {
         width: 17.518vw;
-        height: 30.865vw;
+        height: 26.865vw;
         background: #1B2439;
         opacity: 0.8;
         box-shadow: 0vw 0vw 0.991vw 0.156vw rgba(6, 8, 13, 0.75);
@@ -1565,6 +1640,97 @@
     }
 }
 
+.add__skill-profile {
+    .main__popup-inner {
+        height: 47.241vw!important;
+    }
+    .level__wrapper {
+        flex-direction: column;
+        .title {
+            color: #FFF;
+            font-size: 1.042vw;
+            font-weight: 500;
+            line-height: 2.164vw; 
+            letter-spacing: 0.016vw;
+            margin-bottom: 0.885vw;
+        }
+        .level-list {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.823vw;
+        }
+        
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            opacity: 0.6;
+            cursor: pointer;
+            img {
+                width: 2.083vw;
+                height: 2.083vw;
+            }
+
+            p {
+                color: #FFF;
+                font-size: 0.677vw;
+                font-weight: 400;
+                line-height: 0.723vw;
+                letter-spacing: 0.01vw;
+                margin-top: 1.042vw;
+            }
+        }
+        .item.active {
+            opacity: 1;
+                img {
+                width: 2.188vw;
+                height: 2.188vw;
+                border-radius: 4.479vw;
+                border: 0.104vw solid #869DC8;
+                background: #1B2439;
+                box-shadow: 0vw 0vw 0.208vw 0.104vw rgba(47, 196, 211, 0.75);
+            }
+        }
+    }
+}
+
+
+.skill__map {
+    .main__popup-top {
+        flex-direction: row!important;
+        justify-content: normal!important;
+
+        &::after {
+            display: none;
+        }
+    }
+    .new__custom-select-wrapper {
+        width: 13.854vw;
+        margin-left: 3.385vw;
+    }
+
+    .main__popup-inner  {
+        width: 87.396vw;
+        height: 46.198vw;
+    }
+
+    .map-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+
+       .map-bg {
+            background: url(../img/skill-map.svg) no-repeat center top / cover;
+            width: 62.344vw;
+            height: 33.25vw;
+       }
+    }
+}
+
+
+
 /* Skills page */
 
 .skills {
@@ -1655,7 +1821,7 @@
         button {
             width: 8.968vw;
             height: 2.503vw;
-            background: #6784A9;
+
             box-shadow: 0vw 0vw 0.521vw 0.261vw rgba(29, 38, 50, 0.56);
             border-radius: 0.469vw;
             font-size: 0.938vw;
@@ -2196,6 +2362,29 @@
             box-shadow: 0vw 0vw 0.156vw 0.156vw rgba(6, 8, 13, 0.25);
             border-radius: 0.469vw;
             margin-right: 2.815vw;
+        }
+
+        .find__task-btn {
+            position: relative;
+
+            span {
+                color: #FFF;
+                font-family: Rubik;
+                font-size: 0.782vw;
+                font-weight: 400;
+                line-height: 1.043vw;
+                letter-spacing: 0.016vw;
+                width: 5.839vw;
+                height: 1.46vw;
+                border-radius: 0.417vw;
+                background: #D2A970;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -1.121vw;
+                right: -2.76vw;
+            }
         }
     }
 }
@@ -4167,6 +4356,7 @@
         padding-right: 4.223vw;
         padding-bottom: 1vw;
         height: 29.069vw;
+        position: relative;
 
         h4 {
             display: flex;
@@ -4187,6 +4377,78 @@
                 height: 0.365vw;
                 margin-left: 0.365vw;
             }
+        }
+
+        .badges-popup {
+            position: absolute;
+            top: 2.521vw;
+            left: 11.521vw;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            width: 12.604vw;
+            height: 9.219vw;
+            padding-top: 1.563vw;
+            padding-bottom: 1.615vw;
+            padding-right: 1.563vw;
+            padding-left: 3.281vw;
+            border-radius: 1.094vw;
+            background: #1B2439;
+            box-shadow: 0vw 0vw 0.99vw 0.156vw rgba(6, 8, 13, 0.75);
+
+            span {
+                display: block;
+                color: #FFF;
+                font-size: 0.833vw;
+                font-weight: 400;
+                line-height: 1.979vw; /* 237.5% */
+                letter-spacing: 0.011vw;
+                cursor: pointer;
+            }
+            span.active {
+                color: #869DC8;
+            }
+        }
+        .badges-popup.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+        .temporary-popup {
+            position: absolute;
+            top: 33.521vw;
+            left: 11.521vw;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            width: 16.875vw;
+            height: 7.188vw;
+            padding-top: 1.563vw;
+            padding-bottom: 1.615vw;
+            padding-right: 1.563vw;
+            padding-left: 3.281vw;
+            border-radius: 1.094vw;
+            background: #1B2439;
+            box-shadow: 0vw 0vw 0.99vw 0.156vw rgba(6, 8, 13, 0.75);
+
+            span {
+                display: block;
+                color: #FFF;
+                font-size: 0.833vw;
+                font-weight: 400;
+                line-height: 1.979vw; /* 237.5% */
+                letter-spacing: 0.011vw;
+                cursor: pointer;
+            }
+            span.active {
+                color: #869DC8;
+            }
+        }
+        .temporary-popup.active {
+            visibility: visible;
+            opacity: 1;
         }
     }
 
