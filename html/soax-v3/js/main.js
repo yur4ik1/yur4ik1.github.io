@@ -87,6 +87,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// dots animation
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get a reference to the SVG object
+  const svgObject = document.getElementById('svg-object');
+
+  // Function to toggle the "active" class and change the fill attribute for a single path element
+  function toggleActiveClassAndChangeFill(path) {
+      path.classList.add('active'); // Add the "active" class
+      path.setAttribute('fill', '#4855DC'); // Change the fill attribute to red
+      path.parentElement.removeAttribute('filter'); // Remove the filter attribute from the parent <g> element
+
+      setTimeout(() => {
+          path.classList.remove('active'); // Remove the "active" class
+          path.setAttribute('fill', '#F2EDE9'); // Change the fill attribute back to its original color
+          setTimeout(() => {
+              toggleActiveClassAndChangeFill(path); // Call the function recursively
+          }, Math.random() * 2500); // Random delay between 0 and 2500 milliseconds
+      }, 2500); // Keep the "active" class for 2.5 seconds
+  }
+
+  // Wait for the SVG to load
+  svgObject.addEventListener('load', function () {
+      // Get the SVG document within the object
+      const svgDocument = svgObject.contentDocument;
+
+      // Find all <path> elements with class "blue"
+      const bluePaths = svgDocument.querySelectorAll('path.blue');
+
+      // Convert the NodeList to an array
+      const bluePathsArray = Array.from(bluePaths);
+
+      // Iterate over the <path> elements and apply the function
+      bluePathsArray.forEach(path => {
+          toggleActiveClassAndChangeFill(path);
+      });
+  });
+});
+
 
 /*
 
@@ -126,8 +165,6 @@ animateMarginLeft2(); // Для .bg-2 (вправо)
 */
 
 
-/*
-
 // dark mode
 
 function toggleDarkHeader() {
@@ -162,7 +199,6 @@ function toggleDarkHeader() {
 window.addEventListener('scroll', toggleDarkHeader);
 window.addEventListener('load', toggleDarkHeader);
 
-*/
 
 
 /*
