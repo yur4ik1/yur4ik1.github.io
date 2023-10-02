@@ -90,41 +90,83 @@ document.addEventListener("DOMContentLoaded", function () {
 // dots animation
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get a reference to the SVG object
   const svgObject = document.getElementById('svg-object');
 
-  // Function to toggle the "active" class and change the fill attribute for a single path element
+ 
   function toggleActiveClassAndChangeFill(path) {
-      path.classList.add('active'); // Add the "active" class
-      path.setAttribute('fill', '#4855DC'); // Change the fill attribute to red
-      path.parentElement.removeAttribute('filter'); // Remove the filter attribute from the parent <g> element
+      path.classList.add('active'); 
+      path.setAttribute('fill', '#4855DC'); 
+      path.parentElement.removeAttribute('filter'); 
 
       setTimeout(() => {
-          path.classList.remove('active'); // Remove the "active" class
-          path.setAttribute('fill', '#F2EDE9'); // Change the fill attribute back to its original color
+          path.classList.remove('active');
+          path.setAttribute('fill', '#F2EDE9');
           setTimeout(() => {
-              toggleActiveClassAndChangeFill(path); // Call the function recursively
-          }, Math.random() * 2500); // Random delay between 0 and 2500 milliseconds
-      }, 2500); // Keep the "active" class for 2.5 seconds
+              toggleActiveClassAndChangeFill(path); 
+          }, Math.random() * 2500); 
+      }, 2500); 
   }
 
-  // Wait for the SVG to load
   svgObject.addEventListener('load', function () {
-      // Get the SVG document within the object
       const svgDocument = svgObject.contentDocument;
-
-      // Find all <path> elements with class "blue"
       const bluePaths = svgDocument.querySelectorAll('path.blue');
-
-      // Convert the NodeList to an array
       const bluePathsArray = Array.from(bluePaths);
-
-      // Iterate over the <path> elements and apply the function
       bluePathsArray.forEach(path => {
           toggleActiveClassAndChangeFill(path);
       });
   });
 });
+
+
+// dark mode
+
+function toggleDarkHeader() {
+  const headerMain = document.querySelector('.header__main');
+  const plansSection = document.querySelector('.plans');
+  const integrationsSection = document.querySelector('.integrations');
+  const contactsSection = document.querySelector('.contacts');
+  const footerSection = document.querySelector('.footer');
+  const mobileMenu = document.querySelector('.header__mobile-menu');
+
+  if (!headerMain) {
+    return;
+  }
+
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+
+  const isInPlansSection = plansSection && scrollPosition >= plansSection.offsetTop && scrollPosition < plansSection.offsetTop + plansSection.offsetHeight;
+  const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
+  const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
+  const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
+
+  if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
+    headerMain.classList.add('dark');
+    mobileMenu.classList.add('dark');
+  } else {
+    headerMain.classList.remove('dark');
+    mobileMenu.classList.remove('dark');
+  }
+}
+
+window.addEventListener('scroll', toggleDarkHeader);
+window.addEventListener('load', toggleDarkHeader);
+
+
+// gradient animation
+
+document.addEventListener('mousemove', function(event) {
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+  
+  let mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+  let mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+  
+  let radialGradient = document.querySelector('.radial-gradient');
+  radialGradient.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3498db, #9b59b6)';
+});
+
+
 
 
 /*
@@ -163,41 +205,6 @@ animateMarginLeft1(); // Для .bg-1 (влево)
 animateMarginLeft2(); // Для .bg-2 (вправо)
 
 */
-
-
-// dark mode
-
-function toggleDarkHeader() {
-  const headerMain = document.querySelector('.header__main');
-  const plansSection = document.querySelector('.plans');
-  const integrationsSection = document.querySelector('.integrations');
-  const contactsSection = document.querySelector('.contacts');
-  const footerSection = document.querySelector('.footer');
-  const mobileMenu = document.querySelector('.header__mobile-menu');
-
-  if (!headerMain) {
-    return;
-  }
-
-  const windowHeight = window.innerHeight;
-  const scrollPosition = window.scrollY;
-
-  const isInPlansSection = plansSection && scrollPosition >= plansSection.offsetTop && scrollPosition < plansSection.offsetTop + plansSection.offsetHeight;
-  const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
-  const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
-  const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
-
-  if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
-    headerMain.classList.add('dark');
-    mobileMenu.classList.add('dark');
-  } else {
-    headerMain.classList.remove('dark');
-    mobileMenu.classList.remove('dark');
-  }
-}
-
-window.addEventListener('scroll', toggleDarkHeader);
-window.addEventListener('load', toggleDarkHeader);
 
 
 

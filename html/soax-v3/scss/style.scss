@@ -3,8 +3,6 @@
 @use 'vars';
 @use 'global';
 
-
-
 .header {
     width: 100%;
 
@@ -2068,18 +2066,10 @@
     .hero {
         padding-top: 35.25vw;
         padding-bottom: 30vw;
-        background: #fff;
+        background: url(../img/hero-bg-mob.png) no-repeat center top/cover;
         height: 226vw;
         overflow: hidden;
 
-        &__bg {
-            background: url(../img/hero-bg-mob.webp) no-repeat center top/cover;
-            width: 100vw;
-            height: 242.308vw;
-            z-index: 0;
-            left: 0;
-            top: -15.897vw;
-        }
 
         .container {
             align-items: flex-start;
@@ -2089,12 +2079,17 @@
         &__reviews {
             z-index: 999;
             display: flex;
-            gap: 2.778vw;
+            gap: 10.256vw;
         }
 
         &__reviews img {
-            width: 100%;
-            height: auto;
+            width: 15.385vw;
+            height: 8.462vw;
+        }
+
+        &__reviews img:nth-child(3) {
+            width: 24.345vw;
+            height: 8.462vw;
         }
 
         &__titles {
@@ -2258,8 +2253,8 @@
     }
 
     .logos__item {
-        width: 44.872vw;
-        height: 19.968vw;
+        width: 15.61vw;
+        height: 3.846vw;
     }
 
 
