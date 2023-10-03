@@ -789,7 +789,7 @@
               </div>
 
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-2-pagination"></div>
 
           </div>
         </div>
@@ -1263,6 +1263,35 @@
       },
     });
   </script>
+
+<script>
+  var swiper2;
+
+  function initSwiper() {
+    if (window.innerWidth <= 720) {
+      swiper2 = new Swiper(".reviewsSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        pagination: {
+          el: ".swiper-2-pagination",
+          clickable: true,
+        },
+      });
+    } else {
+      if (swiper2) {
+        swiper2.destroy();
+        swiper2 = undefined;
+      }
+    }
+  }
+
+  initSwiper();
+  window.addEventListener("resize", function () {
+    initSwiper();
+  });
+
+</script>
 
 
   <script src="./js/main.min.js"></script>
