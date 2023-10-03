@@ -307,6 +307,9 @@
         font-weight: 600;
         line-height: 4.861vw;
         margin-bottom: 1.389vw;
+        position: absolute;
+        left: 5vw;
+        
 
         span {
             font-weight: 600;
@@ -330,6 +333,7 @@
         font-size: 1.25vw;
         font-weight: 400;
         line-height: 2.222vw;
+        margin-top: 5.778vw;
     }
 
 
@@ -1873,6 +1877,34 @@
         filter: blur(1.278vw);
         bottom: -20vw;
         left: 48vw;
+    }
+
+
+    .radial-gradient {
+        position: absolute;
+        width: 29.183vw;
+        height: 29.183vw;
+        transform: rotate(59.748deg);
+        flex-shrink: 0;
+        border-radius: 13.601vw;
+        opacity: 0.7;
+        background: radial-gradient(44.79% 44.79% at 50% 50%, #FC7CFF 0%, rgba(218, 113, 231, 0.00) 100%);
+        filter: blur(1.278vw);
+        bottom: -20vw;
+        left: 48vw;
+    }
+
+    .radial-gradient-2 {
+        position: absolute;
+        width: 41.204vw;
+        height: 41.204vw;
+        transform: rotate(59.748deg);
+        flex-shrink: 0;
+        border-radius: 13.601vw;
+        background: radial-gradient(49.28% 49.28% at 32.21% 54.04%, #FFF 0%, rgba(146, 112, 243, 0.74) 15.94%, rgba(77, 87, 209, 0.00) 100%);
+        filter: blur(1.278vw);
+        bottom: -33.694vw;
+        left: 25vw;
     }
 }
 

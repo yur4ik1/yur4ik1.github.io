@@ -159,12 +159,22 @@ document.addEventListener('mousemove', function(event) {
   let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
   
-  let mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-  let mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+  let mouseXpercentage = event.pageX / windowWidth * 50;
+  let mouseYpercentage = event.pageY / windowHeight * 50;
   
-  let radialGradient = document.querySelector('.radial-gradient');
-  radialGradient.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3498db, #9b59b6)';
+  let radialGradient1 = document.querySelector('.radial-gradient');
+  let radialGradient2 = document.querySelector('.radial-gradient-2');
+  
+  radialGradient1.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #FC7CFF, rgba(218, 113, 231, 0.00))';
+  radialGradient2.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, rgba(146, 112, 243, 0.74), rgba(77, 87, 209, 0.00))';
 });
+
+
+
+
+
+
+
 
 
 
