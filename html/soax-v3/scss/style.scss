@@ -193,14 +193,15 @@
             &::after {
                 content: '';
                 background: linear-gradient(100deg, #DFDFE7, #DFDFE700);
-                top: -0vw;
-                left: -0vw;
-                height: 2.9vw;
-                width: 5.625vw;
+                top: -0.05vw;
+                left: -0.05vw;
+                height: 2.8vw;
+                width: 5.479vw;
                 position: absolute;
                 border-radius: 2.778vw;
                 z-index: -1;
                 transition: 0.3s;
+                opacity: 0.9;
             }
             
             img {
@@ -210,7 +211,10 @@
 
             &:hover {
                 &::after {
-                    background: #6b6b6b;
+                    background: linear-gradient(100deg, #DFDFE7, #DFDFE7);
+                    opacity: 1;
+                    animation: gradientTransition 2s linear infinite;
+                    background-size: 200% 100%;
                 }
             }
         }
@@ -260,6 +264,10 @@
 
         .header__main-right .sales-btn {
             color: #fff;
+        }
+
+        .sales-btn  {
+            color: #000!important;
         }
     }
 }
@@ -1047,7 +1055,7 @@
 
     &__items {
         padding: 2.778vw 4.167vw;
-        padding-bottom: 6.944vw;
+        padding-bottom: 2.778vw;
     }
 
     .tabs-item {
@@ -1061,7 +1069,7 @@
 
     &__wrap-item {
         width: 21.875vw;
-        height: 35.556vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1070,10 +1078,11 @@
         background: rgba(255, 255, 255, 0.70);
         box-shadow: 0vw 0.278vw 0.278vw 0vw rgba(0, 0, 0, 0.06);
         backdrop-filter: blur(0.139vw);
+        position: relative;
 
         .top {
             display: flex;
-            padding: 2.222vw 1.389vw 0vw 1.389vw;
+            padding: 3.522vw 1.389vw 0vw 1.389vw;
             flex-direction: column;
             align-items: flex-start;
             align-self: stretch;
@@ -1177,6 +1186,52 @@
                     background: #14151e;
                 }
             }
+        }
+    }
+
+    &__wrap-item.popular {
+        .popular-block {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--White, #FFF);
+            text-align: center;
+            font-size: 0.903vw;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.072vw;
+            text-transform: uppercase;
+            display: flex;
+            width: 21.875vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.694vw;
+            border-radius: 0.694vw 0.694vw 0vw 0vw;
+            background: linear-gradient(90deg, #00B67A 0%, #9BE3CC 51.97%, #00B67A 100%);
+            padding: 0.417vw 0vw;
+        }
+        .bottom a {
+            background: var(--success, #07BF82);
+            box-shadow: 0vw 0.278vw 0.833vw 0vw rgba(0, 0, 0, 0.08);
+            &:hover {
+                background: var(--success, #05aa73);
+            }
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 8.333vw;
+        .wrap {
+            display: flex;
+            justify-content: center;
+            gap: 0.694vw;
+        }
+
+        span {
+            color: #8A8BA0;
+            font-size: 0.972vw;
+            font-weight: 400;
+            line-height: normal;
         }
     }
 }
@@ -1519,6 +1574,7 @@
         flex-direction: column;
         align-items: center;
         gap: 0.972vw;
+        padding-bottom: 0.972vw;
     }
 
     &__illustration {
@@ -2065,9 +2121,7 @@
         z-index: 999999;
         transition: .3s;
         display: block;
-        z-index: 9999999999999999999999999999999999999999999;
-        backdrop-filter: blur(2.833vw);
-        background: rgba(255, 255, 255, .5);
+        z-index: 999999999999999999999999999999999;
     }
 
 
@@ -2077,11 +2131,13 @@
 
     .header__mob-menu {
         li {
+            padding: 0vw 5.128vw;
             a {
-                font-size: 3.903vw !important;
-                line-height: 14.569vw !important;
-                color: #000;
-                font-weight: 500;
+                color: var(--Black, #000);
+                font-size: 5.128vw;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 8.205vw; 
             }
         }
     }
