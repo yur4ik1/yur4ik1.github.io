@@ -29,6 +29,7 @@ let mobileMenu = document.querySelector('.header__mobile-menu');
 if (mobileMenu) {
   burder.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
+    burder.classList.toggle('active')
 
     if (mobileMenu.classList.contains('active')) {
       document.body.style.overflow = 'hidden';
@@ -39,28 +40,22 @@ if (mobileMenu) {
 }
 
 
-// Отримуємо всі елементи меню з класом "header__menu-item sub"
-var menuItems = document.querySelectorAll('.header__menu-item.sub');
+let menuItems = document.querySelectorAll('.header__menu-item.sub');
 
-// Функція, яка додає або видаляє клас "active" при кліку
 function toggleActiveClass() {
-  // Видаляємо клас "active" з усіх елементів меню з класом "header__menu-item sub"
   menuItems.forEach(function(menuItem) {
     menuItem.classList.remove('active');
   });
 
-  // Додаємо клас "active" до поточного елемента меню
   this.classList.add('active');
 }
 
-// Перевіряємо ширину вікна при завантаженні сторінки і при кліку
 if (window.innerWidth < 720) {
   menuItems.forEach(function(item) {
     item.addEventListener('click', toggleActiveClass);
   });
 }
 
-// Додатково, слід слухати подію зміни розміру вікна, щоб додати або видалити обробники подій при зміні розміру вікна
 window.addEventListener('resize', function() {
   if (window.innerWidth < 720) {
     menuItems.forEach(function(item) {
