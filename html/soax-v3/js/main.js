@@ -1,3 +1,5 @@
+
+
 // Scroll header
 
 const header = document.querySelector(".header__main");
@@ -199,12 +201,6 @@ document.addEventListener('mousemove', function(event) {
   radialGradient1.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #FC7CFF, rgba(218, 113, 231, 0.00))';
   radialGradient2.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, rgba(146, 112, 243, 0.74), rgba(77, 87, 209, 0.00))';
 });
-
-
-
-
-
-
 
 
 
