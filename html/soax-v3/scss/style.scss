@@ -2131,42 +2131,92 @@
 
     .header__mob-menu {
         li {
-            padding: 0vw 5.128vw;
+            padding: 5.128vw 5.128vw;
+            border-top: 0.256vw solid #000;
+            border-bottom: 0.256vw solid #000;
+            align-items: flex-start!important;
+            flex-direction: column!important;
+            width: 100%;
             a {
                 color: var(--Black, #000);
                 font-size: 5.128vw;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 8.205vw; 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
             }
         }
     }
 
     .header__mob-menu .header__menu-item.sub::after {
-        width: 3.833vw !important;
-        height: 3.833vw !important;
-        margin-left: 2.051vw;
+       display: none;
+    }
+    .header__mob-menu .header__menu-item.sub {
+        overflow: hidden;
+        max-height: 18vw;
+        transition: 0.3s;
+    }
+    .header__mob-menu .header__menu-item.sub a {
+        &::after {
+            content: '';
+            background: url(../img/chevron-down-mob.svg) no-repeat center top / cover;
+            width: 7.692vw;
+            height: 7.692vw;
+            transition: 0.3s;
+        }
     }
 
-    .header__mob-menu .submenu {
-        width: 45.236vw !important;
-        top: 11vw !important;
+  
+    .header__menu-item.sub .submenu{
+        position: initial!important;
+        width: auto!important;
+        top: 0vw !important;
         z-index: 9999999999999;
-        padding: 0.156vw !important;
+        display: flex;
+        padding: 1.538vw 5.128vw!important;
+        align-items: center;
+        gap: 1.026vw!important;
+        align-self: stretch;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 3.077vw;
     }
 
     .header__mob-menu .header__menu-item.sub .submenu li {
-        padding: 1.764vw 2.111vw;
+        padding: 0;
+        border: none;
+        margin-bottom: 2.821vw;
     }
 
     .header__mob-menu .header__menu-item.sub .submenu li a {
-        gap: 1.556vw;
-        line-height: 8.569vw !important;
+       color: var(--Black, #000);
+        font-family: Suisse Intl;
+        font-size: 4.103vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 7.179vw; /* 175% */
+        &::after {
+            display: none;
+        }
     }
 
     .header__mob-menu .header__menu-item.sub .submenu li img {
-        width: 3.111vw;
-        height: 3.111vw;
+        display: none;
+    }
+
+    .header__menu-item.sub.active {
+        max-height:150vw;
+
+        a {
+            transition: 0.3s;
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
     }
 
     .header__mobile-menu.dark {
