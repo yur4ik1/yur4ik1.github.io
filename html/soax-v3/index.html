@@ -242,7 +242,6 @@
     </div>
 
     <section class="platform">
-
       <div class="module text-with-image">
         <div class="container">
           <div class="text">
@@ -708,7 +707,7 @@
           <span>/</span>
           <span>Cancel anytime</span>
         </div>
-       
+
       </div>
     </div>
 
@@ -919,7 +918,8 @@
       <div class="container">
         <div class="titles worldwide__titles">
           <div class="worldwide__illustration">
-            <object id="svg-object" data="./img/worldwide-illustration.svg" type="image/svg+xml" width="774" height="179"></object>
+            <object id="svg-object" data="./img/worldwide-illustration.svg" type="image/svg+xml" width="774"
+              height="179"></object>
           </div>
           <h2 class="worldwide__title">
             Top Proxy Locations
@@ -1070,7 +1070,7 @@
               <a class="footer__social-item" href="#">
                 <img src="./img/youtube.svg" alt="">
               </a>
-              
+
             </div>
           </div>
 
@@ -1279,34 +1279,34 @@
     });
   </script>
 
-<script>
-  var swiper2;
+  <script>
+    var swiper2;
 
-  function initSwiper() {
-    if (window.innerWidth <= 720) {
-      swiper2 = new Swiper(".reviewsSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 0,
+    function initSwiper() {
+      if (window.innerWidth <= 720) {
+        swiper2 = new Swiper(".reviewsSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 0,
 
-        pagination: {
-          el: ".swiper-2-pagination",
-          clickable: true,
-        },
-      });
-    } else {
-      if (swiper2) {
-        swiper2.destroy();
-        swiper2 = undefined;
+          pagination: {
+            el: ".swiper-2-pagination",
+            clickable: true,
+          },
+        });
+      } else {
+        if (swiper2) {
+          swiper2.destroy();
+          swiper2 = undefined;
+        }
       }
     }
-  }
 
-  initSwiper();
-  window.addEventListener("resize", function () {
     initSwiper();
-  });
+    window.addEventListener("resize", function () {
+      initSwiper();
+    });
 
-</script>
+  </script>
 
 
   <script src="./js/main.min.js"></script>

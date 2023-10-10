@@ -27,11 +27,13 @@ window.onscroll = () => {
 
 let burder = document.querySelector('.burger');
 let mobileMenu = document.querySelector('.header__mobile-menu');
+let headerMain = document.querySelector('.header__main')
 
 if (mobileMenu) {
   burder.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
-    burder.classList.toggle('active')
+    burder.classList.toggle('active');
+    headerMain.classList.toggle('act');
 
     if (mobileMenu.classList.contains('active')) {
       document.body.style.overflow = 'hidden';
