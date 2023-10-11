@@ -806,6 +806,10 @@
                     color: var(--black, #000);
                 }
             }
+
+            .testimonial__btn {
+                display: none;
+            }
         }
     }
 }
@@ -2627,11 +2631,15 @@
         box-shadow: 0vw 1.026vw 3.59vw 0vw rgba(0, 0, 0, 0.16);
     }
     .testimonial__block .left .testimonial__btn {
-        width: 55.487vw;
+        display: none;
+    }
 
+    .testimonial__block .right .testimonial__btn {
+        width: 55.487vw;
         margin-top: 5.128vw;
-        height: 12.821vw;
+        height: auto;
         padding: 1.538vw 10.256vw;
+        display: flex;
         justify-content: center;
         align-items: center;
         gap: 2.051vw;
@@ -2640,8 +2648,8 @@
         font-weight: 500;
         line-height: 9.487vw;
         border-radius: 10.256vw;
-        position: absolute;
-        top: 170vw;
+        color: #000;
+        background: var(--Gray-200, #F6F3F0);
         svg {
             width: 4.103vw;
             height: 4.103vw;
@@ -2671,7 +2679,6 @@
 
     .testimonial__block .right {
         gap: 5.128vw;
-        padding-bottom: 16.385vw;
     }
 
     .testimonial__block .right img {
