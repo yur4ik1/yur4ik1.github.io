@@ -2706,9 +2706,11 @@
     }
 
     .cards__content {
-        height: auto;
+        background: url(../img/grid-mob.svg) no-repeat center top/cover;
+        height: 363.385vw;
         padding: 5.128vw;
         border-radius: 2.564vw;
+        margin-bottom: 7vw;
     }
 
     .cards__list {
@@ -2726,8 +2728,37 @@
         border-radius: 2.564vw;
         box-shadow: 0vw 1.026vw 1.026vw 0vw rgba(0, 0, 0, 0.04);
 
-        &::after {
-            display: none;
+
+        &:nth-child(1)::after {
+            background: url('../img/line-1.svg') no-repeat center top / cover !important;
+            height: 10.256vw !important;
+            width: 1.526vw;
+            top: 75.944vw;
+            left: 39vw;
+        }
+
+        &:nth-child(2)::after {
+            background: url('../img/line-1.svg') no-repeat center top / cover !important;
+            height: 10.256vw !important;
+            width: 1.526vw;
+            top: 82.744vw;
+            left: 39vw;
+        }
+
+        &:nth-child(3)::after {
+            background: url('../img/line-1.svg') no-repeat center top / cover !important;
+            height: 10.256vw !important;
+            width: 1.526vw;
+            top: 75.944vw;
+            left: 39vw;
+        }
+
+        &:last-child::after {
+            background: url('../img/lines.svg') no-repeat center top / cover !important;
+            height: 13.59vw !important;
+            width: 69.744vw!important;
+            top: 73.944vw;
+            left: 5vw;
         }
 
     }
@@ -2795,6 +2826,31 @@
     .cards__content .content__bottom a::after {
         width: 4.103vw;
         height: 4.103vw;
+    }
+
+
+
+    .pricing__tabs {
+        padding: 3.077vw 5.128vw;
+        gap: 3.077vw;
+        border-radius: 12.821vw;
+        border: 0.256vw solid var(--gray-300, #F0EBE6);
+    }
+    .pricing__tabs-item {
+        width: 23.846vw;
+        padding: 2.051vw;
+        gap: 1.026vw;
+        flex-shrink: 0;
+        font-size: 3.333vw;
+
+        svg {
+            width: 3.59vw;
+            height: 3.59vw;
+        }
+    }
+    .pricing__tabs-item.active {
+        border-radius: 12.821vw;
+        box-shadow: 0vw 1.026vw 0.513vw 0vw rgba(0, 0, 0, 0.02);
     }
 
 
