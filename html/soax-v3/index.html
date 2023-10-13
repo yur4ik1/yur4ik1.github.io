@@ -1316,14 +1316,14 @@
     });
   </script>
 
+  <!-- Reviews swiper -->
   <script>
     var swiper2;
-    function initSwiper() {
+    function initReviewsSwiper() {
       if (window.innerWidth <= 720) {
         swiper2 = new Swiper(".reviewsSwiper", {
           slidesPerView: 'auto',
           spaceBetween: 12,
-
           pagination: {
             el: ".swiper-2-pagination",
             clickable: true,
@@ -1336,22 +1336,21 @@
         }
       }
     }
-    initSwiper();
+    initReviewsSwiper();
     window.addEventListener("resize", function () {
-      initSwiper();
+      initReviewsSwiper();
     });
-
   </script>
 
+  <!-- Pricing swiper -->
   <script>
     var swiper3;
-    function initSwiper() {
+    function initPricingSwiper() {
       if (window.innerWidth <= 720) {
         swiper3 = new Swiper(".pricingSwiper", {
           slidesPerView: 'auto',
           spaceBetween: 12,
           initialSlide: 2,
-
           pagination: {
             el: ".swiper-3-pagination",
             clickable: true,
@@ -1364,15 +1363,16 @@
         }
       }
     }
-    initSwiper();
+    initPricingSwiper();
     window.addEventListener("resize", function () {
-      initSwiper();
+      initPricingSwiper();
     });
   </script>
 
+  <!-- Logos swiper -->
   <script>
     var swiper4;
-    function initSwiper() {
+    function initLogosSwiper() {
       if (window.innerWidth <= 720) {
         swiper4 = new Swiper(".logosSwiper", {
           slidesPerView: 5,
@@ -1381,7 +1381,6 @@
             delay: 1000,
           },
         });
-
       } else {
         if (swiper4) {
           swiper4.destroy();
@@ -1389,18 +1388,13 @@
         }
       }
     }
-    initSwiper();
+    initLogosSwiper();
     window.addEventListener("resize", function () {
-      initSwiper();
+      initLogosSwiper();
     });
   </script>
 
-
-
-
   <script src="./js/main.min.js"></script>
-
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
   <!-- Setup and start animation! -->
   <script>

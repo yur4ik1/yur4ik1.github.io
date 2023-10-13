@@ -1547,6 +1547,13 @@
     .container {
         gap: 2.778vw;
     }
+    .swiper-wrapper {
+        gap: 2.778vw;
+        align-items: center;
+    }
+    .swiper-slide {
+        width: 5.556vw;
+    }
 
     .logos__item {
         opacity: 1;
@@ -3044,8 +3051,8 @@
 
     .reviews__items-wrap {
         background: var(--gray-100, #F8F6F5);
-        height: 83.611vw;
-        padding: 10.256vw 0;
+        height: auto;
+        padding: 7.692vw 0vw;
         margin-top: 10.256vw;
     }
 
@@ -3118,7 +3125,7 @@
 
     .reviews .swiper-2-pagination {
         position: absolute;
-        top: 67.154vw !important;
+        top: 75.154vw !important;
         display: flex;
         justify-content: center;
     }
@@ -3138,7 +3145,7 @@
         overflow: scroll;
         white-space: nowrap;
         display: flex;
-        padding-top: 10.256vw;
+        padding-top: 15.256vw;
         padding-bottom: 20.513vw;
         padding-left: 5.128vw;
         padding-right: 5.128vw;
