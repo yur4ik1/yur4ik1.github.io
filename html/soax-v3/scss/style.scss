@@ -2029,10 +2029,6 @@
         max-width: 100%;
     }
 
-    .module {
-        overflow: hidden;
-    }
-
     .titles {
         gap: 3.077vw;
         padding-top: 20.513vw;
@@ -3177,7 +3173,7 @@
 
     .cards-v2 {
         padding-top: 0;
-        overflow: hidden;
+        overflow: unset;
     }
 
     .cards-v2 h2 {
@@ -3189,6 +3185,7 @@
         height: 141.641vw;
         width: 100%;
         top: 64.4vw;
+        left: 0vw;
     }
 
     .cards-v2 .container {
