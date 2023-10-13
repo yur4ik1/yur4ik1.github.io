@@ -2278,17 +2278,17 @@
     }
 
     .header__mobile-menu.dark {
-        background: rgba(255, 255, 255, .12) !important;
-        backdrop-filter: blur(1.833vw) !important;
+     
 
         .header__mob-menu li a {
-            color: #fff;
+            color: #000;
         }
 
         .header__mob-menu .header__menu-item.sub .submenu li a {
             color: var(--Blue-700, #595B7C);
         }
     }
+ 
 
 
     .hero {
@@ -3483,7 +3483,7 @@
 
 
     .contacts {
-        padding-top: 5.128vw;
+        padding-top: 0;
     }
 
     .contacts .container {
@@ -3499,10 +3499,18 @@
     }
 
     .contacts__title {
-        width: 84%;
+        width: 100%;
         font-size: 6.154vw;
         line-height: 9.231vw;
-        text-align: left;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        br {
+            display: none;
+        }
     }
 
     .contacts__btns {
@@ -3570,6 +3578,11 @@
         height: 108.758vw;
         top: 14vw;
         left: 0vw;
+    }
+
+    .contacts__bottom {
+        height: 31.375vw;
+        bottom: -1px;
     }
 
     .footer {
