@@ -695,9 +695,9 @@
                 </div>
               </div>
             </div>
-           
+
           </div>
-           <div class="swiper-3-pagination"></div>
+          <div class="swiper-3-pagination"></div>
         </div>
 
         <div class="tabs-item">
@@ -821,16 +821,43 @@
     </div>
 
     <div class="module logos logos-v2">
-      <div class="container">
-        <img class="logos__item" src="./img/reviews-logo-1.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-2.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-3.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-5.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-6.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-7.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-8.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-9.svg" alt="">
-        <img class="logos__item" src="./img/reviews-logo-10.svg" alt="">
+      <div class="container scroll">
+        <div class="swiper logosSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-1.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-2.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-3.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-4.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-5.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-6.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-7.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-8.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-9.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-10.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
 
@@ -1291,11 +1318,10 @@
 
   <script>
     var swiper2;
-
     function initSwiper() {
       if (window.innerWidth <= 720) {
         swiper2 = new Swiper(".reviewsSwiper", {
-          slidesPerView: 'auto', 
+          slidesPerView: 'auto',
           spaceBetween: 12,
 
           pagination: {
@@ -1310,7 +1336,6 @@
         }
       }
     }
-
     initSwiper();
     window.addEventListener("resize", function () {
       initSwiper();
@@ -1320,12 +1345,12 @@
 
   <script>
     var swiper3;
-
     function initSwiper() {
       if (window.innerWidth <= 720) {
         swiper3 = new Swiper(".pricingSwiper", {
-          slidesPerView: 'auto', 
+          slidesPerView: 'auto',
           spaceBetween: 12,
+          initialSlide: 2,
 
           pagination: {
             el: ".swiper-3-pagination",
@@ -1339,13 +1364,35 @@
         }
       }
     }
-
     initSwiper();
     window.addEventListener("resize", function () {
       initSwiper();
     });
+  </script>
 
+  <script>
+    var swiper4;
+    function initSwiper() {
+      if (window.innerWidth <= 720) {
+        swiper4 = new Swiper(".logosSwiper", {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 1000,
+          },
+        });
 
+      } else {
+        if (swiper4) {
+          swiper4.destroy();
+          swiper4 = undefined;
+        }
+      }
+    }
+    initSwiper();
+    window.addEventListener("resize", function () {
+      initSwiper();
+    });
   </script>
 
 
