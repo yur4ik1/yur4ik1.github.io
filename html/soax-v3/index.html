@@ -1295,7 +1295,7 @@
     function initSwiper() {
       if (window.innerWidth <= 720) {
         swiper2 = new Swiper(".reviewsSwiper", {
-          slidesPerView: 1,
+          slidesPerView: 'auto', 
           spaceBetween: 12,
 
           pagination: {
@@ -1324,7 +1324,7 @@
     function initSwiper() {
       if (window.innerWidth <= 720) {
         swiper3 = new Swiper(".pricingSwiper", {
-          slidesPerView: 1,
+          slidesPerView: 'auto', 
           spaceBetween: 12,
 
           pagination: {
@@ -1344,6 +1344,7 @@
     window.addEventListener("resize", function () {
       initSwiper();
     });
+
 
   </script>
 

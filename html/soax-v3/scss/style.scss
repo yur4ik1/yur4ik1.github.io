@@ -2861,8 +2861,14 @@
         box-shadow: 0vw 1.026vw 0.513vw 0vw rgba(0, 0, 0, 0.02);
     }
 
+    .pricingSwiper {
+        padding-right: 10vw;
+    }
+
     .pricing .tabs-item .swiper-wrapper {
         gap: 0vw;
+        padding-left: 5.128vw;
+        padding-right: 5.128vw;
     }
 
     .pricing .tabs-item .swiper-slide {
@@ -2870,7 +2876,7 @@
     }
 
     .pricing__items {
-        padding: 5.128vw;
+        padding: 5.128vw 0;
         padding-bottom: 16vw;
     }
 
@@ -3097,8 +3103,12 @@
         align-items: center;
     }
 
+    .reviewsSwiper {
+        padding-right: 11vw;
+    }
+
     .reviews .swiper-slide {
-      
+        width: auto!important;
     }
 
     .reviews .swiper {
@@ -3116,13 +3126,15 @@
         background: #000 !important;
     }
 
-    .reviews__items-item:nth-child(1) {
-        margin-left: 6.528vw;
+    .reviews .swiper-wrapper {
+        padding-left: 5.128vw;
+        padding-right: 5.128vw;
     }
+    
 
 
     .logos.logos-v2 {
-        
+
     }
 
 
