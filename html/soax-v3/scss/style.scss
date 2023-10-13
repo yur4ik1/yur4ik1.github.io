@@ -1071,13 +1071,17 @@
         justify-content: space-between;
     }
 
+    .tabs-item .swiper-wrapper {
+        gap: 1.389vw;
+    }
+
     &__wrap-item {
         width: 21.875vw;
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        border-radius: 1.389vw;
+        border-radius: 0.694vw;
         border: 0.069vw solid var(--gray-300, #F0EBE6);
         background: rgba(255, 255, 255, 0.70);
         box-shadow: 0vw 0.278vw 0.278vw 0vw rgba(0, 0, 0, 0.06);
@@ -2756,7 +2760,7 @@
         &:last-child::after {
             background: url('../img/lines.svg') no-repeat center top / cover !important;
             height: 13.59vw !important;
-            width: 69.744vw!important;
+            width: 69.744vw !important;
             top: 73.944vw;
             left: 5vw;
         }
@@ -2832,13 +2836,13 @@
 
     .pricing__tabs {
         padding: 3.077vw 5.128vw;
-        gap: 3.077vw;
         border-radius: 12.821vw;
         border: 0.256vw solid var(--gray-300, #F0EBE6);
     }
+
     .pricing__tabs-item {
         width: 23.846vw;
-        padding: 2.051vw;
+        padding: 3.077vw 0;
         gap: 1.026vw;
         flex-shrink: 0;
         font-size: 3.333vw;
@@ -2848,13 +2852,90 @@
             height: 3.59vw;
         }
     }
+
     .pricing__tabs-item.active {
+        width: 26.846vw;
         border-radius: 12.821vw;
         box-shadow: 0vw 1.026vw 0.513vw 0vw rgba(0, 0, 0, 0.02);
     }
 
 
+    .pricing .tabs-item .swiper-slide {
+        width: 89.744vw!important;
+    }
 
+    .pricing__items {
+        padding: 5.128vw;
+    }
+
+    .pricing__wrap-item {
+        width: 89.744vw;
+        height: 117.949vw;
+        border-radius: 2.564vw;
+        background: rgba(255, 255, 255, 0.80);
+        box-shadow: 0vw 1.026vw 1.026vw 0vw rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(0.513vw);
+    }
+
+    .pricing__wrap-item .top {
+        padding: 5.128vw 5.128vw 0vw 5.128vw;
+        gap: 6.154vw;
+    }
+
+    .pricing__wrap-item .top .starts {
+        font-size: 4.103vw;
+        line-height: 7.692vw;
+    }
+
+    .pricing__wrap-item .top h2 {
+        font-size: 7.692vw;
+        line-height: 10.256vw;
+    }
+
+    .pricing__wrap-item .content {
+        padding: 5.128vw;
+        gap: 6.154vw;
+        height: auto;
+    }
+
+    .pricing__wrap-item .bottom {
+        padding: 5.128vw;
+    }
+
+    .pricing__wrap-item .content ul li {
+        font-size: 3.846vw;
+        line-height: 7.179vw;
+    }
+
+    .pricing__wrap-item .content ul li::before {
+        width: 5.128vw;
+        height: 5.128vw;
+        margin-right: 2.051vw;
+    }
+
+    .pricing__wrap-item .content ul li.deactivate::before {
+        width: 4.128vw;
+        height: 4.128vw;
+        margin-right: 2.556vw;    
+    }
+
+    .pricing__wrap-item .top .price {
+        font-size: 3.846vw;
+        line-height: 7.179vw;
+    }
+
+    .pricing__wrap-item .bottom a {
+        height: 12.821vw;
+        padding: 1.538vw 10.256vw;
+        gap: 2.051vw;
+        border-radius: 10.256vw;
+        box-shadow: 0vw 1.026vw 3.077vw 0vw rgba(0, 0, 0, 0.08);
+        font-size: 3.59vw;
+        line-height: 9.487vw;
+    }
+    .pricing__bottom {
+        display: none;
+    }
 
 
     .worldwide {
