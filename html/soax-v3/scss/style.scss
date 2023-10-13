@@ -1547,10 +1547,12 @@
     .container {
         gap: 2.778vw;
     }
+
     .swiper-wrapper {
         gap: 2.778vw;
         align-items: center;
     }
+
     .swiper-slide {
         width: 5.556vw;
     }
@@ -3142,7 +3144,6 @@
 
 
     .logos.logos-v2 {
-        overflow: scroll;
         white-space: nowrap;
         display: flex;
         padding-top: 15.256vw;
@@ -3165,13 +3166,100 @@
     }
 
 
+    .cards-v2 {
+        padding-top: 0;
+    }
+
+    .cards-v2 h2 {
+        width: 90%;
+    }
+
+    .cards-v2::after {
+        background: url(../img/carts-blurs-mob.png) no-repeat center top/cover;
+        height: 141.641vw;
+        width: 100%;
+        top: 64.4vw;
+    }
+
+    .cards-v2 .container {
+        padding: 0 5.128vw;
+    }
+
+    .cards-v2__illustration {
+        background: url(../img/products-illustration-mob.svg) no-repeat center top/cover;
+        width: 100%;
+        height: 54.359vw;
+    }
+
+    .cards-v2__list-title {
+        font-size: 4.103vw;
+        line-height: 7.179vw;
+        width: auto;
+        white-space: wrap;
+        margin-bottom: 10.256vw;
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .cards-v2 .fcards-v2__list {
+        gap: 3.077vw;
+        justify-content: center;
+    }
+
+    .cards-v2__list-item {
+        width: 43.333vw;
+        height: 17.949vw;
+        padding: 5.128vw 3.077vw;
+        gap: 2.051vw;
+        border-radius: 2.564vw;
+        box-shadow: 0vw 1.026vw 1.026vw 0vw rgba(0, 0, 0, 0.06);
+    }
+
+    .cards-v2__list-item .icon {
+        width: 5.128vw;
+        height: 5.128vw;
+    }
+
+    .cards-v2__list-item .name {
+        width: 25.641vw;
+        font-size: 3.333vw;
+        line-height: normal;
+    }
+
+    .cards-v2__list-item .desc {
+        font-size: 3.333vw;
+        line-height: normal;
+        display: none;
+    }
+
+    .cards-v2__list-item::after {
+        width: 4.103vw;
+        height: 4.103vw;
+    }
+
+
+
 
     .worldwide {
+        margin-top: 5.128vw;
         padding-top: 32.564vw;
         padding-bottom: 20.513vw;
         border-top-right-radius: 5.128vw;
         border-top-left-radius: 5.128vw;
         overflow: hidden;
+    }
+    .worldwide__illustration {
+        top: 14.5vw;
+    }
+    .worldwide__illustration #svg-object {
+        width: 100%;
+        height: 37.692vw;
     }
 
     .worldwide .container {
@@ -3214,8 +3302,6 @@
     .worldwide__items-item img {
         width: 10.256vw;
         height: 10.256vw;
-        border-radius: 23.077vw;
-        box-shadow: 0vw 0.685vw 2.392vw 0vw rgba(0, 0, 0, 0.16);
     }
 
     .worldwide__items-item .name {
