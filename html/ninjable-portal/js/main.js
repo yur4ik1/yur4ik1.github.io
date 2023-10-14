@@ -1228,3 +1228,51 @@ if (skillMapPopup && skillMapPopup && skillMapClose) {
   });
 }
 
+
+
+// Отримати всі елементи з класом "item"
+var itemsColor = document.querySelectorAll('.item');
+
+// Додати обробник подій для кожного "item"
+itemsColor.forEach(function(item) {
+    item.addEventListener('click', function() {
+        // Знайти вкладений "item-popup" для кожного "item"
+        var popup = item.querySelector('.item-popup');
+
+        if (popup) {
+            // Видалити клас "act" у всіх "item-popup"
+            itemsColor.forEach(function(item) {
+                var popup = item.querySelector('.item-popup');
+                if (popup) {
+                    popup.classList.remove('act');
+                }
+            });
+
+            // Додати клас "act" до поточного "item-popup"
+            popup.classList.add('act');
+        }
+    });
+});
+
+// Додати обробник подій для документа для прибирання "popup" при кліку на будь-яку іншу область
+document.addEventListener('click', function(event) {
+    // Перевірити, чи клік відбувся на "item" або "item-popup"
+    var isInsideItem = false;
+    for (var i = 0; i < itemsColor.length; i++) {
+        if (itemsColor[i].contains(event.target)) {
+            isInsideItem = true;
+            break;
+        }
+    }
+
+    if (!isInsideItem) {
+        // Видалити клас "act" у всіх "item-popup"
+        itemsColor.forEach(function(item) {
+            var popup = item.querySelector('.item-popup');
+            if (popup) {
+                popup.classList.remove('act');
+            }
+        });
+    }
+});
+
