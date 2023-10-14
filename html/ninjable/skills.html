@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="skills-page">
@@ -100,319 +101,89 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="content skills">
-                <h2>SKILLS</h2>
+                <div id="anchor">
+                    <h2>SKILLS</h2>
+                </div>
                 <div class="add-skill">
                     <a class="add-skill-btn btn">Add Skill</a>
                 </div>
                 <div class="search__wrapper">
                     <span class="search-icon">
-                        <input class="search-input" type="text" placeholder="Adobe Photoshop">
+                        <div class="search-input-block">
+                            <input class="search-input" id="search-input" type="text"
+                                placeholder="Type here to search for Skill...">
+                            <button class="closeFilter hidden">
+                                <img src="./img/subscription__popup-close.svg" alt="">
+                            </button>
+                            <div class="search-input-selector hidden">
+                            </div>
+                        </div>
                     </span>
                     <div class="filter-select">
-                        <div class="select-selected">Select...</div>
+                        <div class="select-selected" id="filterSelect">All</div>
                         <span class="line"></span>
-                        <div class="select-items select-hide">
+                        <div class="select-items select-hide" id="selectItemsFilter">
                             <div class="select-option">
-                                <input type="checkbox" id="all">
-                                <label for="all">All</label>
+                                <input type="checkbox" id="all" checked>
+                                <label for="all" class="filterLabel">All</label>
                             </div>
                             <div class="select-option">
                                 <input type="checkbox" id="active">
-                                <label for="active">Active</label>
+                                <label for="active" class="filterLabel">Active</label>
                             </div>
                             <div class="select-option">
-                                <input type="checkbox" id="archied">
-                                <label for="archied">Archied</label>
+                                <input type="checkbox" id="Archived">
+                                <label for="Archived" class="filterLabel">Archived</label>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="department__wrapper">
-                    <div class="department">
-                        <input class="department-field" type="text" placeholder="Adobe Photoshop">
-                        <a class="edit edit-skill-btn" href="#"></a>
-                        <a class="skills-archive" href="#"></a>
-                    </div>
-
-                    <div class="skills__alert-popup">
-                        <p>Are you sure?</p>
-                        <div class="btns">
-                            <button class="true">Yes</button>
-                            <button class="false">No</button>
-                        </div>
-                    </div>
-
-                    <div class="skills__archive-popup">
-                        <p>Skill can't be deactivated until you have at least one active user with this skill.</p>
-                    </div>
-
-                    <div class="add-job">
-                        <button class="add-skills btn">Add Skill’s Level</button>
-                    </div>
-                </div>
-                <div class="section__tags">
-                    <a href="#">Art Department</a>
-                    <a href="#">Development Department</a>
-                </div>
-
-                <div class="content__section">
-                    <div class="table">
-                        <div class="row row-header">
-                            <div class="cell">Level</div>
-                            <div class="cell">Description</div>
-                            <div class="cell">Attribute</div>
-                            <div class="cell">Receipt <br> Condition</div>
-                            <div class="cell">Status</div>
-                            <div class="cell">Actions</div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell name">Junior</div>
-                            <div class="cell desc">
-                                Software engineering (SE) is the <br>application of a systematic, <br>disciplined,
-                                quantifiable approach <br>to the development, operation, and <br>maintenance of
-                                software, and <br>the study of these approaches; <br>that is, the application of
-                                engi-<br>neering to software.
-                            </div>
-                            <div class="cell attribute">
-                                <div class="flex">
-                                    <img src="./img/power-1.png" alt="">
-                                    <p>Power</p>
-                                </div>
-
-                            </div>
-                            <div class="cell coins">30</div>
-                            <div class="cell status">Archived</div>
-                            <div class="cell actions">
-                                <span class="edit edit-job-btn"></span>
-                                <span class="archive deactivate"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell name">Middle</div>
-                            <div class="cell desc">
-                                Software engineering (SE) is the <br>application of a systematic, <br>disciplined,
-                                quantifiable approach <br>to the development, operation, and <br>maintenance of
-                                software, and <br>the study of these approaches; <br>that is, the application of
-                                engi-<br>neering to software.
-                            </div>
-                            <div class="cell attribute">
-                                <div class="flex">
-                                    <img src="./img/power-2.png" alt="">
-                                    <p>Protection</p>
-                                </div>
-                            </div>
-                            <div class="cell coins">80</div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit edit-job-btn"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell name">Senior</div>
-                            <div class="cell desc">
-                                Software engineering (SE) is the <br>application of a systematic, <br>disciplined,
-                                quantifiable approach <br>to the development, operation, and <br>maintenance of
-                                software, and <br>the study of these approaches; <br>that is, the application of
-                                engi-<br>neering to software.
-                            </div>
-                            <div class="cell attribute">
-                                <div class="flex">
-                                    <img src="./img/power-3.png" alt="">
-                                    <p>Protection</p>
-                                </div>
-                            </div>
-                            <div class="cell coins">120</div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit edit-job-btn"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell name">Lead</div>
-                            <div class="cell desc">
-                                Software engineering (SE) is the <br>application of a systematic, <br>disciplined,
-                                quantifiable approach <br>to the development, operation, and <br>maintenance of
-                                software, and <br>the study of these approaches; <br>that is, the application of
-                                engi-<br>neering to software.
-                            </div>
-                            <div class="cell attribute">
-                                <div class="flex">
-                                    <img src="./img/power-1.png" alt="">
-                                    <p>Power</p>
-                                </div>
-                            </div>
-                            <div class="cell coins">250</div>
-                            <div class="cell status">Archived</div>
-                            <div class="cell actions">
-                                <span class="edit edit-job-btn"></span>
-                                <span class="archive deactivate"></span>
-                            </div>
-                        </div>
+                <div class="overlay">
+                    <div class="overlay__inner">
+                        <div class="overlay__content"><span class="spinner"></span></div>
                     </div>
                 </div>
 
-                <div class="department__wrapper">
-                    <div class="department">
-                        <input class="department-field" type="text" placeholder="Adobe Photoshop">
-                        <a class="edit" href="#"></a>
-                        <a class="archive" href="#"></a>
-                    </div>
-                    <div class="add-job">
-                        <button class="add-skills btn">Add Skill’s Level</button>
-                    </div>
-                </div>
-                <div class="section__tags">
-                    <a href="#">Art Department</a>
-                    <a href="#">Development Department</a>
-                    <a href="#">Art Department</a>
-                    <a href="#">Development Department</a>
-                    <a href="#">Art Department</a>
-                    <a href="#">Development Department</a>
+                <div id="skills-view"></div>
+
+                <div class="navigation" id="navigation">
+                    <span class="prev" id="btnPrev"></span>
+                    <span class="page active" id="firstCircle">1</span>
+                    <span class="page" id="secondCircle">2</span>
+                    <span class="next" id="btnNext"></span>
                 </div>
 
-
-                <div class="content__section">
-                    <div class="table">
-                        <div class="row row-header">
-                            <div class="cell">Level</div>
-                            <div class="cell">Description</div>
-                            <div class="cell">Attribute</div>
-                            <div class="cell">Receipt <br> Condition</div>
-                            <div class="cell">Status</div>
-                            <div class="cell">Actions</div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell name">Junior</div>
-                            <div class="cell desc">
-                                Software engineering (SE) is the <br>application of a systematic, <br>disciplined,
-                                quantifiable approach <br>to the development, operation, and <br>maintenance of
-                                software, and <br>the study of these approaches; <br>that is, the application of
-                                engi-<br>neering to software.
-                            </div>
-                            <div class="cell attribute">
-                                <div class="flex">
-                                    <img src="./img/power-1.png" alt="">
-                                    <p>Power</p>
-                                </div>
-                            </div>
-                            <div class="cell coins">30 Coins</div>
-                            <div class="cell status">Archived</div>
-                            <div class="cell actions">
-                                <span class="edit edit-job-btn"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="navigation">
-                    <span class="prev"></span>
-                    <span class="page active">1</span>
-                    <span class="page">2</span>
-                    <span class="next"></span>
+                <div id="pagination-numbers">
                 </div>
 
             </section>
         </section>
 
-        <div class="ninjable__popup skillss__level-popup add-skillss-level">
+        <div class="ninjable__popup skillss__level-popup edit-skillss-level edit-skillss-level-level"
+            id="edit-skillss-level-level">
             <div class="ninjable__popup-inner">
                 <div class="ninjable__popup-header">
-                    <span class="ninjable__popup-close add-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
-                    <h3>ADD SKILL’S LEVEL</h3>
-                </div>
-                <div class="popup__users-content">
-                    <div class="skillss__popup-form">
-                        <label>* Level
-                            <div class="custom-select">
-                                <div class="select-selected">Please Select...</div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Junior</div>
-                                    <div class="select-option">Middle</div>
-                                    <div class="select-option">Senior</div>
-                                    <div class="select-option">Lead</div>
-                                    <div class="select-option">Manager</div>
-                                    <div class="select-option">C-level / Chef</div>
-                                </div>
-                            </div>
-                            <span class="let-know">Please let us know the level</span>
-                        </label>
-                        <label>* Description
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
-                            <span class="let-know">Please let us know the rank</span>
-                        </label>
-                        <label>
-                            <p class="skills-info">* Receipt Condition</p>
-                            <input type="text" placeholder="30 Coins">
-                            <div class="info-popup">
-                                <p class="title">Receipt Condition</p>
-                                <p class="text">
-                                    Please select how many coins will be taken from the participant for upgrading the
-                                    skill.
-                                </p>
-                            </div>
-                            <span class="let-know">Please let us know how much it cost</span>
-                        </label>
-                        <label>* Attribute
-                            <div class="custom-select">
-                                <div class="select-selected">Please Select...
-                                </div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Magic</div>
-                                    <div class="select-option">Protection</div>
-                                    <div class="select-option">Power</div>
-                                    <div class="select-option">Speed</div>
-                                </div>
-                            </div>
-                            <span class="let-know">Please let us know the attribute</span>
-                        </label>
-                        <label>Icon
-                            <div class="upload__icon-input">
-                                <input class="file" type="file" id="upload__file">
-                                <div class="icon">
-                                    <img src="./img/icon.png" alt="">
-                                </div>
-                                <label for="upload__file">Tanzonite Sword</label>
-                            </div>
-                        </label>
-                        <label>* Status
-                            <div class="custom-select">
-                                <div class="select-selected">Please Select...
-                                </div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Active</div>
-                                    <div class="select-option">Archied</div>
-                                </div>
-                            </div>
-                            <span class="let-know">Please let us know the status</span>
-                        </label>
-                        <div class="add__btn-wrapper">
-                            <button class="btn user-add" type="submit">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ninjable__popup skillss__level-popup edit-skillss-level">
-            <div class="ninjable__popup-inner">
-                <div class="ninjable__popup-header">
-                    <span class="ninjable__popup-close edit-close">
+                    <span class="ninjable__popup-close edit-close" id="editClosePopupLevel">
                         <img src="./img/subscription__popup-close.svg" alt="">
                     </span>
                     <h3>EDIT SKILL’S LEVEL </h3>
@@ -421,26 +192,24 @@
                     <div class="skillss__popup-form">
                         <label>* Level
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected" id="edit-skill-level-level-select-selected">Please
+                                    Select...
                                 </div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Junior</div>
-                                    <div class="select-option">Middle</div>
-                                    <div class="select-option">Senior</div>
-                                    <div class="select-option">Lead</div>
-                                    <div class="select-option">Manager</div>
-                                    <div class="select-option">C-level / Chef</div>
+                                <div class="select-items select-hide" id="edit-skill-level-level-select-items">
                                 </div>
                             </div>
-                            <span class="let-know">Please let us know the level</span>
+                            <span class="let-know-required" id="required-edit-skill-level-level-select-selected">Please
+                                let us know the level</span>
                         </label>
                         <label>* Description
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
-                            <span class="let-know">Please let us know the rank</span>
+                            <textarea name="" id="edit-skill-level-description" cols="30" rows="10"
+                                placeholder="Text"></textarea>
+                            <span class="let-know-required" id="required-edit-skill-level-description">Please let us
+                                know the rank</span>
                         </label>
                         <label>
                             <p class="skills-info">* Receipt Condition</p>
-                            <input type="text" placeholder="30 Coins">
+                            <input type="text" placeholder="30 Coins" id="edit-skill-level-recipient-condition">
                             <div class="info-popup">
                                 <p class="title">Receipt Condition</p>
                                 <p class="text">
@@ -448,11 +217,12 @@
                                     skill.
                                 </p>
                             </div>
-                            <span class="let-know">Please let us know how much it cost</span>
+                            <span class="let-know-required" id="required-edit-skill-level-recipient-condition">Please
+                                let us know how much it cost</span>
                         </label>
-                        <label>* Attribute
+                        <!-- <label>* Attribute
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected" id="edit-skill-level-attribute-select-selected">Please Select...
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Magic</div>
@@ -461,30 +231,33 @@
                                     <div class="select-option">Speed</div>
                                 </div>
                             </div>
-                            <span class="let-know">Please let us know the attribute</span>
-                        </label>
-                        <label>Icon
+                            <span class="let-know-required" id="required-edit-skill-level-attribute-select-selected">Please let us know the attribute</span>
+                        </label> -->
+                        <!-- <label>Icon
                             <div class="upload__icon-input">
-                                <input class="file" type="file" id="upload__file">
+                                <input class="file" type="file" id="upload__file-edit-skill-level">
                                 <div class="icon">
                                     <img src="./img/icon.png" alt="">
                                 </div>
-                                <label for="upload__file">Tanzonite Sword</label>
+                                <label for="upload__file-edit-skill-level">Tanzonite Sword</label>
                             </div>
-                        </label>
+                        </label> -->
                         <label>* Status
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected" id="edit-skill-level-status-select-selected">Please
+                                    Select...
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Active</div>
-                                    <div class="select-option">Archied</div>
+                                    <div class="select-option">Archived</div>
                                 </div>
                             </div>
-                            <span class="let-know">Please let us know the status</span>
+                            <span class="let-know-required" id="required-edit-skill-level-status-select-selected">Please
+                                let us know the status</span>
                         </label>
                         <div class="add__btn-wrapper">
-                            <button class="btn user-add" type="submit">Add</button>
+                            <button class="btn user-add" type="button" id="editLevelButtonRequest" name="100"
+                                onclick="editSkillLevel()">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -502,59 +275,121 @@
                 </div>
                 <div class="popup__users-content">
                     <div class="skillss__popup-form">
-                        <label>* Title
-                            <input type="text" placeholder="Adobe Photoshop">
-                            <span class="let-know">Please let us know the title</span>
+                        <label for="add-title">* Title
+                            <input type="text" placeholder="Adobe Photoshop" id="add-title" name="add-tile">
+                            <span class="let-know-required" id="required-title">Please let us know the title</span>
                         </label>
-                        <label>Tag
-                            <input type="text" placeholder="PS">
+                        <label for="add-tag">Tag
+                            <input type="text" placeholder="PS" id="add-tag" name="add-tag">
                         </label>
                         <label>* Department (Clan)
-
-                            <div class="new__custom-select-wrapper skills-filter-select">
-                                <div class="skills-tags-list"></div>
-                                <button class="select-open-btn">
+                            <div class="new__custom-select-wrapper add-new__custom-select-wrapper skills-filter-select">
+                                <div class="skills-tags-list add-skills-tags-list" id="skills-tags-list"></div>
+                                <span class="select-open-btn">
                                     <div class="arrow"></div>
-                                </button>
-                                <div class="new__custom-select">
+                                </span>
+                                <div class="new__custom-select" id="newCustomSelectField">
                                     <span class="line"></span>
 
-                                    <div class="new__custom-select__trigger">Type here to search for Clan...</div>
-                                    <div class="new__custom-options">
-                                        <div class="new__custom-option" data-value="1">C</div>
-                                        <div class="new__custom-option" data-value="2">C Department</div>
-                                        <div class="new__custom-option" data-value="3">C Department</div>
-                                        <div class="new__custom-option" data-value="4">C Department</div>
-                                        <div class="new__custom-option" data-value="5">F Department</div>
-                                        <div class="new__custom-option" data-value="6">C</div>
-                                        <div class="new__custom-option" data-value="8">C</div>
-                                        <div class="new__custom-option" data-value="7">C</div>
+                                    <div class="new__custom-select__trigger" id="newCustomSelectTrigger"> Type here to
+                                        search for Clan...</div>
+                                    <div class="new__custom-options add-new__custom-options">
                                     </div>
                                     <div class="custom-scrollbar"></div>
                                 </div>
                             </div>
 
-                            <span class="let-know">Please let us know the clan</span>
+                            <span class="let-know-required" id="required-clan">Please let us know the clan</span>
                         </label>
 
                         <label>* Status
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected" id="select-selected">Please Select...
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Active</div>
-                                    <div class="select-option">Archied</div>
+                                    <div class="select-option">Archived</div>
                                 </div>
                             </div>
-                            <span class="let-know">Please let us know the status</span>
+                            <span class="let-know-required" id="required-status">Please let us know the status</span>
                         </label>
                         <div class="add__btn-wrapper">
-                            <button class="btn user-add" type="submit">Add</button>
+                            <button class="btn user-add" type="button" onclick="addSkills()">Add</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="ninjable__popup skillss__level-popup add-skillss-level-level" id="add-skillss-level-level">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close edit-close" id="addClosePopupLevel">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>ADD SKILL’S LEVEL </h3>
+                </div>
+                <div class="popup__users-content">
+                    <div class="skillss__popup-form">
+                        <label>* Level
+                            <div class="custom-select">
+                                <div class="select-selected" id="add-skill-level-level-select-selected">Please Select...
+                                </div>
+                                <div class="select-items select-hide" id="add-skill-level-level-select-items">
+                                    <div class="select-option">Junior</div>
+                                    <div class="select-option">Middle</div>
+                                    <div class="select-option">Senior</div>
+                                    <div class="select-option">Lead</div>
+                                    <div class="select-option">Manager</div>
+                                    <div class="select-option">C-level / Chef</div>
+                                </div>
+                            </div>
+                            <span class="let-know-required" id="required-add-skill-level-level-select-selected">Please
+                                let us know the level</span>
+                        </label>
+                        <label for="add-skill-level-description">* Description
+                            <textarea name="add-skill-level-description" id="add-skill-level-description" cols="30"
+                                rows="10" placeholder="Text"></textarea>
+                            <span class="let-know-required" id="required-add-skill-level-description">Please let us know
+                                the rank</span>
+                        </label>
+                        <label for="add-skill-level-recipient-condition">
+                            <p class="skills-info">* Receipt Condition</p>
+                            <input type="number" name="add-skill-level-recipient-condition" placeholder="30"
+                                id="add-skill-level-recipient-condition">
+                            <div class="info-popup">
+                                <p class="title">Receipt Condition</p>
+                                <p class="text">
+                                    Please select how many coins will be taken from the participant for upgrading the
+                                    skill.
+                                </p>
+                            </div>
+                            <span class="let-know-required" id="required-add-skill-level-recipient-condition">Please let
+                                us know how much it cost</span>
+                        </label>
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected" id="add-skill-level-status-select-selected">Please
+                                    Select...
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Active</div>
+                                    <div class="select-option">Archived</div>
+                                </div>
+                            </div>
+                            <span class="let-know-required" id="required-add-skill-level-status-select-selected">Please
+                                let us know the status</span>
+                        </label>
+                        <div class="add__btn-wrapper">
+                            <button class="btn user-add" id="add-skill-level-button" type="button">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
         <div class="ninjable__popup skillss__level-popup edit-skillss-popup ">
@@ -565,65 +400,2364 @@
                     </span>
                     <h3>EDIT SKILL</h3>
                 </div>
-                <div class="popup__users-content">
-                    <div class="skillss__popup-form">
-                        <label>* Title
-                            <input type="text" placeholder="Adobe Photoshop">
-                            <span class="let-know">Please let us know the title</span>
-                        </label>
-                        <label>Tag
-                            <input type="text" placeholder="PS">
-                        </label>
-                        <label>* Department (Clan)
 
-                            <div class="new__custom-select-wrapper skills-filter-select">
-                                <div class="skills-tags-list"></div>
-                                <button class="select-open-btn">
-                                    <div class="arrow"></div>
-                                </button>
-                                <div class="new__custom-select">
-                                    <span class="line"></span>
-
-                                    <div class="new__custom-select__trigger">Type here to search for Clan...</div>
-                                    <div class="new__custom-options">
-                                        <div class="new__custom-option" data-value="1">C</div>
-                                        <div class="new__custom-option" data-value="2">C Department</div>
-                                        <div class="new__custom-option" data-value="3">C Department</div>
-                                        <div class="new__custom-option" data-value="4">C Department</div>
-                                        <div class="new__custom-option" data-value="5">F Department</div>
-                                        <div class="new__custom-option" data-value="6">C</div>
-                                        <div class="new__custom-option" data-value="8">C</div>
-                                        <div class="new__custom-option" data-value="7">C</div>
-                                    </div>
-                                    <div class="custom-scrollbar"></div>
-                                </div>
-                            </div>
-
-                            <span class="let-know">Please let us know the clan</span>
-                        </label>
-
-                        <label>* Status
-                            <div class="custom-select">
-                                <div class="select-selected">Please Select...
-                                </div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Active</div>
-                                    <div class="select-option">Archied</div>
-                                </div>
-                            </div>
-                            <span class="let-know">Please let us know the status</span>
-                        </label>
-                        <div class="add__btn-wrapper">
-                            <button class="btn user-add" type="submit">Add</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
     </div>
 
-    <script src="./js/main.min.js"></script>
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .let-know-required {
+            display: none;
+            font-weight: 400;
+            font-size: 0.678vw;
+            line-height: 0.73vw;
+            letter-spacing: 0.01vw;
+            margin-top: 0.782vw;
+        }
+
+        .let-know-required.active {
+            display: block;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 99999999;
+        }
+
+        .overlay.active {
+            display: block;
+            z-index: 99999999;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .no-absolute {
+            position: static !important;
+        }
+
+        .name {
+            vertical-align: top !important;
+        }
+
+        .desc {
+            vertical-align: top !important;
+            padding-right: 25px !important;
+        }
+
+        .flex {
+            align-items: flex-start !important;
+            display: inline-block !important;
+        }
+
+        .flex-start {
+            padding-top: 0.5vw;
+        }
+
+        .coins {
+            vertical-align: top !important;
+        }
+
+        .row-item:nth-child(even) {
+            background-color: rgba(233, 237, 242, .45);
+        }
+
+
+
+        *,
+        *::after,
+        *::before {
+            vertical-align: top !important;
+        }
+
+
+        .remove-span {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            position: relative;
+            border: none;
+            background: #fafcfb;
+            border-left: 0.052vw solid #e3e8ee;
+            cursor: pointer;
+            margin-left: 0.678vw;
+            font: inherit;
+            padding: 1px 6px;
+        }
+
+
+        .remove-span::after {
+            content: "";
+            background: url(../img/tag-remove-icon.svg) no-repeat center top/cover;
+            width: 0.574vw;
+            height: 0.574vw;
+            display: block;
+        }
+
+        .Archived-statu {
+            opacity: 0.3;
+        }
+
+        .department-field {
+            padding-left: 2.086vw !important;
+            color: #1b2438;
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-family: "Karla";
+            font-weight: 500;
+            font-size: 1.043vw;
+            line-height: 2.503vw;
+            letter-spacing: .014vw;
+            color: #1b2438;
+            margin-right: 5px;
+            transition: 0.4s;
+            border-radius: .521vw;
+        }
+
+        .search-input-block {
+            display: flex;
+        }
+
+        .search-input {
+            position: relative;
+        }
+
+        .search-input-selector {
+            position: absolute;
+            width: 100%;
+            top: 95%;
+            background-color: white;
+            z-index: 99;
+            line-height: 0;
+            border: 0.052vw solid #d7dee6;
+            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+            border-radius: 0.417vw;
+            /* border-bottom-right-radius: 0.417vw;
+            border-bottom-left-radius: 0.417vw; */
+            border-top: none;
+        }
+
+        .search-input-selector label {
+            font-family: Rubik;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .834vw;
+            letter-spacing: .01vw;
+            color: #869dc8;
+            padding-left: 3.91vw;
+            padding-right: 3.91vw;
+            padding-top: 0.626vw;
+            padding-bottom: 0.521vw;
+            cursor: pointer;
+            color: #869dc8;
+            line-height: .834vw;
+        }
+
+        .search-input-selector label:hover {
+            background: rgba(233, 237, 242, 0.7);
+        }
+
+        .closeFilter {
+            position: absolute;
+            right: 0.5vw;
+            top: 0.8vw;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 1vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+        }
+    </style>
+    <script>
+
+
+        const limit = 1
+
+        let idButtonAdd = ''
+        let paginationFlag = 'all'
+        let statusItems = ''
+        let currentPage = 1;
+        let totalPages = ''
+        let searchFilter = []
+        let filterSearchRenderValue = ''
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            const datas = await getDepartments();
+            await getSkills()
+            await pagination()
+            // await openSkillLevelAddDialog()
+            await customSelect()
+            await filter()
+            document.querySelector('.overlay').classList.remove('active')
+        });
+
+        async function renderSkills() {
+            document.querySelector('.overlay').classList.add('active')
+            navigation.removeAttribute('style')
+            const datas = await getSkills();
+            const data = await getDepartments();
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+            clearForm()
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        const skillsTagsListField = document.getElementById('newCustomSelectField');
+
+        skillsTagsListField.addEventListener('click', (event) => handleOpenCustomOptions(event));
+        skillsTagsListField.removeEventListener('click', (event) => handleOpenCustomOptions(event));
+
+        function handleOpenCustomOptions(event) {
+
+            if (event.target.classList.contains('new__custom-option')) {
+                document.getElementById('skills-tags-list').classList.add('active')
+                const e = event.target;
+                const newTagItem = document.createElement('div');
+                newTagItem.classList.add('tag-item');
+                newTagItem.setAttribute('data-id', e.dataset.id);
+                newTagItem.innerHTML = `
+                                        <p>${e.textContent}</p>
+                                        <span class="remove-span" data-id="${e.dataset.id}"></span>  
+                                    `
+                document.getElementById('skills-tags-list').insertAdjacentHTML('beforeend', newTagItem.outerHTML);
+            }
+        }
+        const newCustomSelectTrigger = document.getElementById('newCustomSelectTrigger')
+        document.getElementById('skills-tags-list').addEventListener('click', (e) => {
+            if (event.target.classList.contains('remove-span')) {
+                event.target.parentElement.remove()
+            }
+
+            if (!document.getElementById('skills-tags-list').hasChildNodes()) {
+                document.getElementById('skills-tags-list').classList.remove('active')
+                skillsTagsListField.classList.remove('hidden')
+            } else {
+                skillsTagsListField.classList.add('hidden')
+                skillsTagsListField.classList.remove('open')
+            }
+
+        })
+
+        newCustomSelectTrigger.addEventListener('click', () => {
+            if (!document.getElementById('skills-tags-list').hasChildNodes()) {
+                document.getElementById('skills-tags-list').classList.remove('active')
+                skillsTagsListField.classList.remove('hidden')
+            } else {
+                skillsTagsListField.classList.add('hidden')
+                skillsTagsListField.classList.remove('open')
+            }
+            skillsTagsListField.classList.toggle('open')
+        })
+
+        const selectOpenBtn = document.querySelector('.select-open-btn');
+        selectOpenBtn.addEventListener('click', () => {
+            skillsTagsListField.classList.toggle('hidden')
+            skillsTagsListField.classList.add('open')
+
+        });
+
+        async function openSkillLevelAddDialog(tableLevelsFind) {
+            scrollToAnchorPopup()
+
+            document.querySelectorAll('.custom-select').forEach((e) => {
+                e.classList.remove('active')
+            })
+
+            document.querySelectorAll('.select-selected').forEach((e) => {
+                e.classList.remove('select-arrow-active')
+            })
+
+            document.querySelectorAll('.select-items').forEach((e) => {
+                e.classList.add('select-hide')
+            })
+
+            let tableLevels = []
+            document.getElementById('add-skill-level-level-select-items').innerHTML = ''
+            document.getElementById('edit-skill-level-level-select-items').innerHTML = ''
+
+            const data = JSON.stringify({
+                query: `query MyLevels {
+                                                    levels {
+                                                        color
+                                                        id
+                                                        is_active
+                                                        slug
+                                                        title
+                                                        }
+                                                    }`,
+            });
+            const responseLevel = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const jsonLevels = await responseLevel.json();
+            const jsonLevelsData = jsonLevels.data.levels
+
+            for (i = 0; i < jsonLevelsData.length; i++) {
+                tableLevels.push(jsonLevelsData[i].title)
+            }
+
+
+            const tableLevelsArr = tableLevels.filter(item => !tableLevelsFind.includes(item))
+
+
+            if (tableLevelsArr.length > 0) {
+                document.getElementById('add-skill-level-level-select-items').parentElement.removeAttribute('style')
+                document.getElementById('edit-skill-level-level-select-items').parentElement.removeAttribute('style')
+
+                document.getElementById('add-skill-level-level-select-items').innerHTML = jsonLevelsData
+                    .filter(Level => tableLevelsArr.includes(Level.title))
+                    .map((Level, index) => {
+                        return `<div class="select-option" data-id="${Level.id}">${Level.title}</div>`;
+                    })
+                    .join(' ');
+
+                document.getElementById('edit-skill-level-level-select-items').innerHTML = jsonLevelsData
+                    .filter(Level => tableLevelsArr.includes(Level.title))
+                    .map((Level, index) => {
+                        return `<div class="select-option" data-id="${Level.id}">${Level.title}</div>`;
+                    })
+                    .join(' ');
+            } else {
+                document.getElementById('add-skill-level-level-select-items').parentElement.style = 'pointer-events: none;'
+                document.getElementById('edit-skill-level-level-select-items').parentElement.style = 'pointer-events: none;'
+                document.getElementById('add-skill-level-level-select-items').innerHTML = ''
+                document.getElementById('edit-skill-level-level-select-items').innerHTML = ''
+            }
+
+            document.getElementById('edit-skill-level-level-select-items').querySelectorAll('.select-option').forEach((e) => {
+                e.addEventListener('click', () => {
+                    document.getElementById('edit-skill-level-level-select-selected').textContent = e.textContent
+                    document.getElementById('edit-skill-level-level-select-selected').setAttribute('data-id-varibles', e.dataset.id)
+                    e.parentElement.classList.add('select-hide')
+                    e.parentElement.parentElement.classList.remove('active')
+                    e.parentElement.parentElement.firstElementChild.classList.remove('select-arrow-active')
+                })
+            })
+
+            document.getElementById('add-skill-level-level-select-items').querySelectorAll('.select-option').forEach((e) => {
+                e.addEventListener('click', () => {
+                    document.getElementById('add-skill-level-level-select-selected').textContent = e.textContent
+                    document.getElementById('add-skill-level-level-select-selected').setAttribute('data-id-varibles', e.dataset.id)
+                    e.parentElement.classList.add('select-hide')
+                    e.parentElement.parentElement.classList.remove('active')
+                    e.parentElement.parentElement.firstElementChild.classList.remove('select-arrow-active')
+                })
+            })
+
+
+        }
+
+        function customSelect() {
+            document.getElementById('add-skill-level-button').addEventListener('click', async () => {
+                skill_id = idButtonAdd
+                addSkillLevel(skill_id)
+                idButtonAdd = ''
+                document.querySelector('.overlay').classList.add('active')
+                const popupSkillsLevel = document.querySelector('.add-skillss-level-level');
+                popupSkillsLevel.classList.remove('active');
+            })
+
+            document.querySelector('.overlay').classList.remove('active')
+
+            /* custom select */
+
+            let selectElements = document.getElementsByClassName("custom-select");
+
+            for (let i = 0; i < selectElements.length; i++) {
+                let selectElement = selectElements[i];
+                let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
+                let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
+                let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
+
+                for (let j = 0; j < selectOptionElements.length; j++) {
+                    selectOptionElements[j].addEventListener("click", function () {
+                        if (this.hasAttribute('data-id')) {
+                            document.getElementById('edit-skill-level-level-select-selected').setAttribute('data-id-varibles', this.dataset.id)
+                        }
+
+                        let selectOptionValue = this.innerHTML;
+                        selectSelectedElement.innerHTML = selectOptionValue;
+                        selectSelectedElement.classList.remove("select-arrow-active");
+                        selectItemsElement.classList.add("select-hide");
+
+                        // Оновлюємо стан `custom-select` на основі класів `select-selected`
+                        if (selectSelectedElement.classList.contains("select-arrow-active")) {
+                            selectElement.classList.add("active");
+                        } else {
+                            selectElement.classList.remove("active");
+                        }
+                    });
+                }
+            }
+        }
+
+
+        function appendDepartmentAddSkill(department) {
+            const skillAddTagslist = document.querySelector('.add-new__custom-select-wrapper').querySelector('.skills-tags-list');
+            let idFound = false
+            for (let i = 0; i < skillAddTagslist.childNodes.length; i++) {
+                if (skillAddTagslist.childNodes[i].id == department.id) {
+                    idFound = true
+                }
+            }
+            if (idFound) {
+                return
+            }
+
+            if (department.title) {
+                const tagItem = document.createElement('div');
+                tagItem.classList.add('tag-item');
+                tagItem.setAttribute('id', department.id);
+
+                const tagItemText = document.createElement('p');
+                tagItemText.textContent = department.title;
+
+                const removeButton = document.createElement('button');
+                removeButton.classList.add('remove');
+                tagItem.appendChild(tagItemText);
+                tagItem.appendChild(removeButton);
+                skillAddTagslist.appendChild(tagItem);
+            }
+        }
+        function appendDepartmentEditSkill(department) {
+            debugger
+            const skillsTagsList = document.querySelector('.edit-new__custom-select-wrapper').querySelector('.skills-tags-list');
+            let idFound = false
+            for (let i = 0; i < skillsTagsList.childNodes.length; i++) {
+                if (skillsTagsList.childNodes[i].id == department.id) {
+                    idFound = true
+                }
+            }
+            if (idFound) {
+                return
+            }
+            if (department.title) {
+                const tagItem = document.createElement('div');
+                tagItem.classList.add('tag-item');
+                tagItem.setAttribute('id', department.id);
+
+                const tagItemText = document.createElement('p');
+                tagItemText.textContent = department.title;
+
+                const removeButton = document.createElement('button');
+                removeButton.classList.add('remove');
+                tagItem.appendChild(tagItemText);
+                tagItem.appendChild(removeButton);
+                skillsTagsList.appendChild(tagItem);
+            }
+        }
+        async function openEditSkillPopupDialog(skill) {
+            document.getElementById('editSkillButtonRequest').setAttribute('name', skill.id);
+            const skillsTagsList = document.querySelector('.edit-new__custom-select-wrapper').querySelector('.skills-tags-list');
+            while (skillsTagsList.hasChildNodes())
+                skillsTagsList.removeChild(skillsTagsList.firstChild)
+            const editSkillPopup = document.querySelector('.edit-skillss-popup');
+            editSkillPopup.classList.add('active');
+            let title = document.getElementById('edit-skill-title')
+            let tag = document.getElementById('edit-skill-tag')
+            let departments = []
+            document.getElementById('edit-skills-tags-list').childNodes.forEach(child => {
+                departments.push(child.innerText)
+            })
+            let status = document.getElementById('edit-skill-select-selected')
+            status.innerText = skill.status == 1 ? 'Active' : 'Archived'
+
+            title.value = skill.title
+            tag.value = skill.tag ? skill.tag : ''
+            if (skill.skills_skills_departments && skill.skills_skills_departments.length) {
+                for (let i = 0; i < skill.skills_skills_departments.length; i++) {
+                    const tagItem = document.createElement('div');
+                    tagItem.classList.add('tag-item');
+                    tagItem.setAttribute('id', skill.skills_skills_departments[i].skills_departments_department.id);
+
+                    const tagItemText = document.createElement('p');
+                    tagItemText.textContent = skill.skills_skills_departments[i].skills_departments_department.title;
+
+                    const removeButton = document.createElement('button');
+                    removeButton.classList.add('remove');
+                    tagItem.appendChild(tagItemText);
+                    tagItem.appendChild(removeButton);
+                    skillsTagsList.appendChild(tagItem);
+                }
+            }
+        }
+
+        let levelsTest = []
+
+        async function openEditLevelPopupDialog(level) {
+
+            let = tableLevelsFind = []
+            const tableLevels = event.target.parentElement.parentElement.parentElement.querySelectorAll('.name')
+            tableLevels.forEach((e) => {
+                tableLevelsFind.push(e.textContent)
+            })
+
+            openSkillLevelAddDialog(tableLevelsFind)
+            levelsTest = level
+            document.getElementById('editLevelButtonRequest').setAttribute('name', level.id);
+            const editLevelPopup = document.querySelector('.edit-skillss-level-level');
+            editLevelPopup.classList.add('active');
+
+            let levelId = level.id
+            let descriptionLevel = document.getElementById('edit-skill-level-description')
+            let goal = document.getElementById('edit-skill-level-recipient-condition')
+            let statusLevel = document.getElementById('edit-skill-level-status-select-selected')
+            document.getElementById('edit-skill-level-level-select-selected').innerText = level.skills_levels_level.title
+            document.getElementById('edit-skill-level-level-select-selected').setAttribute('data-id-varibles', level.level_id)
+
+            descriptionLevel.value = level.description
+            goal.value = level.goal
+            statusLevel.innerText = level.status == 1 ? 'Active' : 'Archived'
+        }
+
+        async function getDepartments() {
+            clearForm()
+            const data = JSON.stringify({
+
+                query: `query DepartmentsQuery($limit: Int, $offset: Int) {
+                        departments(limit: $limit, offset: $offset, where:{active: {_eq:true}}, order_by: {id: asc}) {
+                        title
+                        id
+                        }
+                        }`
+                ,
+                variables: {
+                    limit: 100,
+                    offset: 0
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.departments
+
+
+            ''
+            datas.forEach((item) => {
+                document.querySelector('.add-new__custom-options').innerHTML +=
+                    `<div class="new__custom-option" data-id='${item.id}'>${item.title}</div>`
+            })
+        }
+
+        async function getSkills(offset) {
+            navigation.removeAttribute('style')
+            clearForm()
+            if (document.getElementById('search-input').value && document.getElementById('search-input').value.length && document.getElementById('search-input').value.length > 2) {
+                document.getElementById('search-input').value = ''
+            }
+            document.querySelector('.overlay').classList.add('active')
+            const data = JSON.stringify({
+                query: `query SkillsQuery($limit: Int, $offset: Int = 0) {
+                                skills(limit: $limit, offset: $offset, order_by:{id:asc}) {
+                                active
+                                status
+                                title
+                                id
+                                skills_skills_levels(order_by:{id:asc}) {
+                                active
+                                id
+                                description
+                                goal
+                                status
+                                skill_id
+                                level_id
+                                skills_levels_level {
+                                title
+                                }
+                                }
+                                skills_skills_departments {
+                                skills_departments_department {
+                                id
+                                title
+                                }
+                                }
+                                }
+                                }`,
+                variables: {
+                    limit: limit,
+                    offset: offset,
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.skills
+
+
+            document.querySelector('.overlay').classList.remove('active')
+            document.getElementById('skills-view').innerHTML = datas.map((data, index) => {
+
+                return `
+                                        <div class="skill-item">
+                                        <div class="department__wrapper">
+                                                    <div class="department">
+                                                        <p class="department-field" type="text" contentEditable="false" data-default-value="${data.title}" data-id="${data.id}">${data.title}</p>
+                                                        <button type="button" class="edit edit-skill-btn" style="border: none; background: none"></button>
+                                                        <a class="archive ${data.active == true ? "" : "Archived-statu"}" href="#" data-id="${data.id}"></a>
+                                                    </div>
+                                                    <div class="add-job">
+                                        ${data.skills_skills_levels.length < 6 ? `<button class="add-skills btn add-skills-btn" data-id-button="${data.id}">Add Skill’s Level</button>` : `<button class="add-skills btn deactive-btn" data-id-button="${data.id}" style="color:#b9babe; background: #fafcfb;">Add Skill’s Level</button>`}
+                                    </div>
+
+                                    <div class="deactive-info-popup">
+                                        <p class="title">You can’t add Skill’s Level</p>
+                                        <p class="text">All levels already added to this skill. You can only edit or archive any necessary skill's level.</p>
+                                    </div>
+                                                </div>
+                        
+                                            ${data.skills_skills_departments.length ? `<div class="section__tags">${data.skills_skills_departments.map((skilldepartment) => {
+                    return `<a href="#">${skilldepartment.skills_departments_department.title}</a>`
+                }).join(' ')}</div>` : ''}
+                                            <div class="content__section">
+                                                <div class="table">
+                                                    <div class="row row-header">
+                                                        <div class="cell">Level</div>
+                                                        <div class="cell">Description</div>
+                                                        <div class="cell" style="width: 10.46vw;">Attribute</div>
+                                                        <div class="cell" style="width: 6.72vw;">Receipt <br> Condition</div>
+                                                        <div class="cell"style="width: 5.7vw;">Status</div>
+                                                        <div class="cell">Actions</div>
+                                                    </div>
+                                                    ${data.skills_skills_levels.length ? `${data.skills_skills_levels.map((level, index) => {
+                    return `<div class="row row-item">
+                                                                    <div class="cell name">${level.skills_levels_level.title}</div>
+                                                                    <div class="cell desc">
+                                                                        ${level.description}
+                                                                    </div>
+                                                                    <div class="cell attribute">
+                                                                        <div class="flex">
+                                                                            <div class="flex-start">
+                                                                                <img src="./img/power-2.png" alt="" class="no-absolute">
+                                                                                <p class="no-absolute">Power</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell coins">${level.goal}</div>
+                                                                    <div class="cell status">${level.status == 1 ? "Active" : "Archived"}</div>
+                                                                    <div class="cell actions">
+                                                                        <span class="edit edit-job-btn" onclick="openEditLevelPopupDialog(${JSON.stringify(level).split('"').join("&quot;")})"></span>
+                                                                        <span class="archive ${level.status == 1 ? "" : "Archived-statu"}" data-row-archive-id=${level.id}></span>
+                                                                    </div>
+                                                                 </div>`
+                }).join(' ')}` : ''}
+                        
+                                                </div>
+                                            </div>
+                                        </div>`
+            }).join(' ')
+            /* popup edit skills */
+            document.querySelectorAll('.add-skills-btn').forEach((e) => {
+                e.addEventListener('click', () => {
+
+                    let = tableLevelsFind = []
+                    const tableLevels = event.target.parentElement.parentElement.parentElement.querySelectorAll('.name')
+                    tableLevels.forEach((e) => {
+                        tableLevelsFind.push(e.textContent)
+                    })
+
+
+
+                    openSkillLevelAddDialog(tableLevelsFind)
+                    document.getElementById('add-skillss-level-level').classList.add('active')
+                    idButtonAdd = e.dataset.idButton
+                })
+            })
+
+            // info popup for add skill btn (if skils > 6)
+            const deactivePopup = document.querySelector('.deactive-info-popup');
+            const deactiveBtn = document.querySelector('.deactive-btn'); 
+
+            if (deactivePopup && deactiveBtn) {
+                deactiveBtn.addEventListener('click', () => {
+                    deactivePopup.classList.add('act');
+                    setTimeout(() => {
+                        deactivePopup.classList.remove('act');
+                    }, 3000); 
+                });
+            }
+
+
+
+            const editSkillPopup = document.querySelector('.edit-skillss-popup');
+            const editSkillBtn = document.querySelectorAll('.edit-skill-btn');
+            const closeEditSkill = document.querySelector('.edit-skill-close');
+
+            if (editSkillPopup && editSkillBtn.length > 0) {
+                closeEditSkill.addEventListener('click', () => {
+                    editSkillPopup.classList.remove('active');
+                });
+            }
+        }
+
+    </script>
+    <script>
+        async function addSkills() {
+            document.querySelector('.overlay').classList.add('active')
+            const addSkillPopup = document.querySelector('.add-skillss-popup');
+            addSkillPopup.classList.remove('active');
+            let title = document.getElementById('add-title')
+            let tag = document.getElementById('add-tag')
+            let departments = []
+            document.getElementById('skills-tags-list').childNodes.forEach(child => {
+                departments.push(child.dataset.id)
+            })
+
+            let status = document.getElementById('select-selected')
+
+            if (!title.value || !departments.length > 0 || status.innerText === 'Please Select...') {
+                if (!title.value) {
+                    title.classList.add('error');
+                    document.getElementById('required-title').classList.add('active');
+                    document.getElementById('add-title').addEventListener('click', () => {
+                        document.getElementById('required-title').classList.remove('active')
+                        document.getElementById('add-title').classList.remove('error')
+                    })
+                }
+
+                if (!departments.length > 0) {
+                    let customSelect = document.getElementsByClassName('new__custom-select__trigger')[0];
+                    customSelect.classList.add('error')
+                    document.getElementById('required-clan').classList.add('active');
+                    document.getElementById('skills-tags-list').addEventListener('click', () => {
+                        document.getElementsByClassName('new__custom-select__trigger')[0].classList.remove('error')
+                        document.getElementById('required-clan').classList.remove('active')
+                    })
+                }
+                if (status.innerText === 'Please Select...') {
+                    status.classList.add('error');
+                    document.getElementById('required-status').classList.add('active');
+                    document.getElementById('select-selected').addEventListener('click', () => {
+                        document.getElementById('required-status').classList.remove('active')
+                        document.getElementById('select-selected').classList.remove('error')
+                    })
+                }
+                return
+            }
+
+
+            const data = JSON.stringify({
+                query: `mutation AddSkillMutation($status: Int, $title: String) {
+                                      insert_skills(objects: {status: $status, title: $title}) {
+                                      returning {
+                                          id
+                                          status
+                                          title
+                                        }
+                                      }
+                                    }`, variables: {
+                    status: status.innerText == 'Active' ? 1 : 2,
+                    title: title.value
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const jsonSkills = await response.json();
+
+            const skill_id = jsonSkills.data.insert_skills.returning[0].id
+
+
+            for (let i = 0; i < departments.length; i++) {
+                const dataSkillDepartment = JSON.stringify({
+                    query: `mutation SkillsDepartmentsMutation($department_id: Int, $skill_id: Int) {
+                                      insert_skills_departments(objects: [{department_id: $department_id, skill_id: $skill_id}]) {
+                                        returning {
+                                          department_id
+                                          skill_id
+                                        }
+                                      }
+                                    }`, variables: {
+                        department_id: departments[i],
+                        skill_id: skill_id
+                    }
+                });
+                const responseSkillDepartment = await fetch(
+                    BaseUrl,
+                    {
+                        method: 'post',
+
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Content-Length': dataSkillDepartment.length,
+                            'Authorization': 'Bearer ' + localStorage.getItem('token')
+                        },
+                        body: dataSkillDepartment
+                    }
+                );
+
+                const jsonSkillDepartment = await responseSkillDepartment.json();
+                const SkillDepartmentRelation = jsonSkillDepartment.data.insert_skills_departments.returning[0]
+            }
+            const popupSkillsLevel = document.querySelector('.add-skillss-popup');
+            popupSkillsLevel.classList.remove('active');
+            pagination()
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            if (paginationFlag === 'all') {
+                await getSkills(offset)
+            } else if (paginationFlag !== 'all') {
+                await renderFilter(statusItems, offset)
+            }
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+            getDepartments()
+
+        }
+
+        async function editSkill() {
+            let title = document.getElementById('edit-skill-title')
+            let tag = document.getElementById('edit-skill-tag')
+            let departments = []
+            let skillId = document.getElementById('editSkillButtonRequest').name
+            document.getElementById('edit-skills-tags-list').childNodes.forEach(child => {
+                departments.push(Number(child.id))
+            })
+            let status = document.getElementById('edit-skill-select-selected')
+
+            if (!title.value || !departments.length > 0 || status.innerText === 'Please Select...') {
+                if (!title.value) {
+                    title.classList.add('error');
+                    document.getElementById('edit-skill-title-required').classList.add('active');
+                    document.getElementById('edit-skill-title').addEventListener('click', () => {
+                        document.getElementById('edit-skill-title-required').classList.remove('active')
+                        document.getElementById('edit-skill-title').classList.remove('error')
+                    })
+                }
+                if (!departments.length > 0) {
+                    let customSelect = document.getElementsByClassName('new__custom-select-edit-job__trigger')[0];
+                    customSelect.classList.add('error')
+                    document.getElementById('required-clan-edit-skills').classList.add('active');
+                    document.getElementById('edit-skills-tags-list').addEventListener('click', () => {
+                        document.getElementsByClassName('new__custom-select-edit-job__trigger')[0].classList.remove('error')
+                        document.getElementById('required-clan-edit-skills').classList.remove('active')
+                    })
+                }
+                if (status.innerText === 'Please Select...') {
+                    status.classList.add('error');
+                    document.getElementById('edit-skill-required-status').classList.add('active');
+                    document.getElementById('edit-skill-select-selected').addEventListener('click', () => {
+                        document.getElementById('edit-skill-required-status').classList.remove('active')
+                        document.getElementById('edit-skill-select-selected').classList.remove('error')
+                    })
+                }
+                return
+            }
+
+
+            const data = JSON.stringify({
+                query: `mutation EditSkills($title: String, $status: Int, $id: Int) {
+                              update_skills(where: {id: {_eq: $id}}, _set: {title: $title, status: $status}) {
+                                affected_rows
+                              }
+                            }`, variables: {
+                    status: status.innerText == 'Active' ? 1 : 2,
+                    title: title.value,
+                    id: Number(skillId)
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const jsonSkills = await response.json();
+            const SkillUpdateData = jsonSkills.data
+
+
+            const dataSkillDepartment = JSON.stringify({
+                query: `mutation DeleteSkillDepartments($skill_id: Int) {
+                              delete_skills_departments(where: {skill_id: {_eq: $skill_id}}) {
+                                affected_rows
+                              }
+                            }`, variables: {
+                    skill_id: skillId
+                }
+            });
+            const responseSkillDeleteDepartment = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': dataSkillDepartment.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: dataSkillDepartment
+                }
+            );
+
+            const jsonSkillDeleteDepartment = await responseSkillDeleteDepartment.json();
+
+            for (let i = 0; i < departments.length; i++) {
+                const dataSkillDepartment = JSON.stringify({
+                    query: `mutation SkillsDepartmentsMutation($department_id: Int, $skill_id: Int) {
+                                      insert_skills_departments(objects: [{department_id: $department_id, skill_id: $skill_id}]) {
+                                        returning {
+                                          department_id
+                                          skill_id
+                                        }
+                                      }
+                                    }`, variables: {
+                        department_id: departments[i],
+                        skill_id: skillId
+                    }
+                });
+                const responseSkillDepartment = await fetch(
+                    BaseUrl,
+                    {
+                        method: 'post',
+
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Content-Length': dataSkillDepartment.length,
+                            'Authorization': 'Bearer ' + localStorage.getItem('token')
+                        },
+                        body: dataSkillDepartment
+                    }
+                );
+
+                const jsonSkillDepartment = await responseSkillDepartment.json();
+            }
+            const popUpEditSkills = document.querySelector('.edit-skillss-popup');
+            popUpEditSkills.classList.remove('active');
+            getSkills();
+            getDepartments()
+        }
+        async function editSkillLevel() {
+            let levelId = document.getElementById('editLevelButtonRequest').name
+            let descriptionLevel = document.getElementById('edit-skill-level-description')
+            let goal = document.getElementById('edit-skill-level-recipient-condition')
+            let statusLevel = document.getElementById('edit-skill-level-status-select-selected')
+
+
+            if (statusLevel.innerText === 'Please Select...' || !descriptionLevel.value || !goal.value) {
+                if (statusLevel.innerText === 'Please Select...') {
+                    statusLevel.classList.add('error');
+                    document.getElementById('required-edit-skill-level-status-select-selected').classList.add('active');
+                    document.getElementById('edit-skill-level-status-select-selected').addEventListener('click', () => {
+                        document.getElementById('required-edit-skill-level-status-select-selected').classList.remove('active')
+                        document.getElementById('edit-skill-level-status-select-selected').classList.remove('error')
+                    })
+                }
+                if (!descriptionLevel.value) {
+                    descriptionLevel.classList.add('error');
+                    document.getElementById('required-edit-skill-level-description').classList.add('active');
+                    document.getElementById('edit-skill-level-description').addEventListener('click', () => {
+                        document.getElementById('required-edit-skill-level-description').classList.remove('active')
+                        document.getElementById('edit-skill-level-description').classList.remove('error')
+                    })
+                }
+                if (!goal.value) {
+                    goal.classList.add('error');
+                    document.getElementById('required-edit-skill-level-recipient-condition').classList.add('active');
+                    document.getElementById('edit-skill-level-recipient-condition').addEventListener('click', () => {
+                        document.getElementById('required-edit-skill-level-recipient-condition').classList.remove('active')
+                        document.getElementById('edit-skill-level-recipient-condition').classList.remove('error')
+                    })
+                }
+                return
+            }
+
+            let active = ''
+            let status = ''
+
+            if (document.getElementById('edit-skill-level-status-select-selected').textContent === "Active") {
+                active = true
+                status = 1
+            } else {
+                active = false
+                status = 2
+            }
+            const data = JSON.stringify({
+                query: `mutation updateSkillLevel($active: Boolean, $id: Int, $description: String, $goal: Int, $level_id: Int, $status: Int) {
+                            update_skills_levels(where: {id: {_eq: $id}}, _set: {description: $description, goal: $goal, level_id: $level_id, active: $active, status: $status}) {
+                                returning {
+                                active
+                                status
+                                description
+                                goal
+                                id
+                                level_id
+                                }
+                                affected_rows
+                            }
+                            }`
+
+                , variables: {
+                    "id": levelsTest.id,
+                    "active": active,
+                    "status": parseInt(status),
+                    "description": document.getElementById('edit-skill-level-description').value,
+                    "goal": parseInt(document.getElementById('edit-skill-level-recipient-condition').value),
+                    "level_id": parseInt(document.getElementById('edit-skill-level-level-select-selected').getAttribute('data-id-varibles'))
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const jsonSkills = await response.json();
+            const SkillUpdateData = jsonSkills.data
+
+
+
+            const editLevelPopup = document.querySelector('.edit-skillss-level-level');
+            editLevelPopup.classList.remove('active');
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+
+            if (paginationFlag === 'all' && document.getElementById('search-input').value === '') {
+                await getSkills(offset)
+                editTitleList()
+                archiveListJob()
+                archiveListJobSkill()
+            } else if (paginationFlag !== 'all' && document.getElementById('search-input').value === '') {
+                await renderFilter(statusItems, offset)
+                editTitleList()
+                archiveListJob()
+                archiveListJobSkill()
+
+            } else if (document.getElementById('search-input').value !== '') {
+                filterSearchRender()
+            }
+        }
+
+        async function addSkillLevel(skill_id) {
+            let level = document.getElementById('add-skill-level-level-select-selected')
+            let description = document.getElementById('add-skill-level-description')
+            let goal = document.getElementById('add-skill-level-recipient-condition')
+            let status = document.getElementById('add-skill-level-status-select-selected')
+
+            if (level.innerText === 'Please Select...' || !description.value || !goal.value || status.innerText === 'Please Select...') {
+                if (level.innerText === 'Please Select...') {
+                    level.classList.add('error');
+                    document.getElementById('required-add-skill-level-level-select-selected').classList.add('active');
+                    document.getElementById('add-skill-level-level-select-selected').addEventListener('click', () => {
+                        document.getElementById('required-add-skill-level-level-select-selected').classList.remove('active')
+                        document.getElementById('add-skill-level-level-select-selected').classList.remove('error')
+                    })
+                }
+                if (!description.value) {
+                    description.classList.add('error');
+                    document.getElementById('required-add-skill-level-description').classList.add('active');
+                    document.getElementById('add-skill-level-description').addEventListener('click', () => {
+                        document.getElementById('required-add-skill-level-description').classList.remove('active')
+                        document.getElementById('add-skill-level-description').classList.remove('error')
+                    })
+                }
+                if (!goal.value) {
+                    goal.classList.add('error');
+                    document.getElementById('required-add-skill-level-recipient-condition').classList.add('active');
+                    document.getElementById('add-skill-level-recipient-condition').addEventListener('click', () => {
+                        document.getElementById('required-add-skill-level-recipient-condition').classList.remove('active')
+                        document.getElementById('add-skill-level-recipient-condition').classList.remove('error')
+                    })
+                }
+                if (status.innerText === 'Please Select...') {
+                    status.classList.add('error');
+                    document.getElementById('required-add-skill-level-status-select-selected').classList.add('active');
+                    document.getElementById('add-skill-level-status-select-selected').addEventListener('click', () => {
+                        document.getElementById('required-add-skill-level-status-select-selected').classList.remove('active')
+                        document.getElementById('add-skill-level-status-select-selected').classList.remove('error')
+                    })
+                }
+                return
+            }
+
+            let level_id
+            document.getElementById('add-skill-level-level-select-items').childNodes.forEach((child, index) => {
+                if (child.innerText == level.innerText) {
+                    level_id = child.id.split('-')[1]
+                }
+            })
+
+
+            const data = JSON.stringify({
+                query: `mutation insertSkillLevel($description: String, $goal: Int, $level_id: Int, $skill_id: Int, $status: Int ) {
+                                  insert_skills_levels(objects: {description: $description, goal: $goal, level_id: $level_id, skill_id: $skill_id, status: $status}) {
+                                    returning {
+                                      id
+                                    }
+                                  }
+                                }`, variables: {
+                    description: description.value,
+                    goal: goal.value,
+                    level_id: document.getElementById('add-skill-level-level-select-selected').dataset.idVaribles,
+                    skill_id: Number(skill_id),
+                    status: status.innerText == 'Active' ? 1 : 2
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const jsonSkillsLevels = await response.json();
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+
+            if (paginationFlag === 'all' && document.getElementById('search-input').value === '') {
+                await getSkills(offset)
+                editTitleList()
+                archiveListJob()
+                archiveListJobSkill()
+            } else if (paginationFlag !== 'all' && document.getElementById('search-input').value === '') {
+                await renderFilter(statusItems, offset)
+                editTitleList()
+                archiveListJob()
+                archiveListJobSkill()
+
+            } else if (document.getElementById('search-input').value !== '') {
+                filterSearchRender()
+            }
+
+
+            const popupSkillsLevel = document.querySelector('.add-skillss-level-level');
+            popupSkillsLevel.classList.remove('active');
+        }
+
+        document.getElementById('addClosePopupLevel').addEventListener('click', () => {
+            document.getElementById('add-skillss-level-level').classList.remove('active')
+            clearForm()
+        })
+
+        document.getElementById('editClosePopupLevel').addEventListener('click', () => {
+            document.getElementById('edit-skillss-level-level').classList.remove('active')
+            scrollToAnchorPopup()
+            clearForm()
+        })
+
+        function clearForm() {
+            document.querySelectorAll('.popup__users-content').forEach((e) => {
+
+                e.querySelectorAll('input').forEach((input) => {
+
+                    input.value = ''
+                })
+                document.getElementById('skills-tags-list').classList.remove('active')
+                document.getElementById('newCustomSelectField').classList.remove('open')
+                document.getElementById('newCustomSelectField').classList.remove('hidden')
+                e.querySelectorAll('textarea').forEach((textarea) => {
+                    textarea.value = ''
+                })
+                document.getElementById('add-skill-level-level-select-selected').textContent = 'Please Select...'
+                document.getElementById('add-skill-level-status-select-selected').textContent = 'Please Select...'
+                document.getElementById('select-selected').textContent = 'Please Select...'
+            })
+        }
+
+    </script>
+    <script src="./js/main.js"></script>
+
+    <script>
+        let btnEdit = []
+        const inputItem = []
+        let inputTitleChange = ''
+        let defaultInputTitle = ''
+        let inputIndex = ''
+
+        function editTitleList() {
+            const departmentsView = document.getElementById('skills-view');
+            const departmentsViewEdit = departmentsView.querySelectorAll('.edit');
+            const inputItem = departmentsView.querySelectorAll('.department-field');
+
+            for (let i = 0; i < departmentsViewEdit.length; i++) {
+                if (departmentsViewEdit[i].tagName.toLowerCase() === 'button') {
+                    btnEdit.push(departmentsViewEdit[i]);
+                }
+            }
+            btnEdit.forEach((element, index) => {
+                element.addEventListener('click', (e) => {
+                    popupArhivehidden()
+                    inputIndex = index
+                    defaultInputTitle = inputItem[index].dataset.defaultValue
+                    inputTitleChange = inputItem[index].textContent
+                    inputItem[index].contentEditable = true
+                    inputItem[index].addEventListener('input', () => {
+                        inputTitleChange = inputItem[index].textContent
+                    })
+                    e.preventDefault()
+                    element.blur()
+                    if (inputItem[index].hasAttribute('style')) {
+                        removeStyleAttribute(inputItem, index)
+                        inputItem[index].textContent = inputItem[index].dataset.defaultValue
+                    }
+                    else {
+                        removeStyleAttribute(inputItem, index)
+                        inputItem[index].style = 'pointer-events: all; border: 0.104vw solid #E4E8EE; width: 100%;  padding-right:2.086vw; margin-right: 15px;';
+                        inputItem[index].textContent = inputItem[index].dataset.defaultValue
+                    }
+                })
+            })
+            btnEdit = []
+        }
+
+        function removeStyleAttribute(inputItem, index) {
+            inputItem[index].textContent = inputItem[index].dataset.defaultValue
+            for (let i = 0; i < inputItem.length; i++) {
+                if (inputItem[i].hasAttribute('style')) {
+                    inputItem[i].removeAttribute('style');
+                    inputItem[i].blur()
+                    inputItem[i].contentEditable = false
+                    inputItem[i].textContent = inputItem[i].dataset.defaultValue
+                    inputTitleChange = ''
+                }
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            scrollToAnchorPopup()
+            if (e.key === 'Enter' && inputTitleChange === defaultInputTitle) {
+                const departmentsView = document.getElementById('skills-view');
+                const inputItem = departmentsView.querySelectorAll('.department-field');
+                removeStyleAttribute(inputItem, inputIndex)
+                inputTitleChange = ''
+            }
+            else if (e.key === 'Enter' && inputTitleChange !== defaultInputTitle) {
+                updateTitleDepartment(defaultInputTitle, inputTitleChange)
+                const departmentsView = document.getElementById('skills-view');
+                const inputItem = departmentsView.querySelectorAll('.department-field');
+                removeStyleAttribute(inputItem, inputIndex)
+            }
+        });
+
+        async function updateTitleDepartment(defaultInputTitle, inputTitleChange) {
+            const departmentsView = document.getElementById('skills-view');
+            const inputItem = departmentsView.querySelectorAll('.department-field');
+            defaultInputTitle = inputTitleChange
+            inputItem[inputIndex].setAttribute('data-default-value', defaultInputTitle);
+            inputItem[inputIndex].textContent = defaultInputTitle
+            const requestOptionsSave = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                                mutation updateSkill($title: String, $id: Int) {
+                                    update_skills(where: {id: {_eq: $id}}, _set: {title: $title}) {
+                                        returning {
+                                        id
+                                        title
+                                        }
+                                        affected_rows
+                                    }
+                                    }`,
+                    variables: {
+                        "id": inputItem[inputIndex].dataset.id,
+                        "title": inputTitleChange
+                    }
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptionsSave)
+            const data = await response.json();
+            inputTitleChange = ''
+            defaultInputTitle = ''
+            inputIndex = ''
+        }
+
+        function popupArhivehidden() {
+            const archiveDeleteBtns = document.querySelectorAll('.skills-archive')
+            const archivePopup = document.querySelectorAll('.skills__alert-popup')
+            archivePopup.forEach((e) => {
+                e.classList.remove('active')
+            })
+        }
+
+        function archiveListJob() {
+            const departmentsView = document.getElementById('skills-view')
+            const positionsItem = departmentsView.querySelectorAll('.archive');
+            const archiveBtn = [];
+
+            positionsItem.forEach((item) => {
+                if (item.tagName === 'A') {
+                    const archiveInfo = {
+                        positionsItem: item,
+                        archiveElement: item
+                    };
+                    archiveBtn.push(archiveInfo);
+                }
+
+            });
+
+            archiveBtn.forEach((e) => {
+
+                e.archiveElement.addEventListener('click', () => {
+                    event.preventDefault()
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                        return
+                    }
+                    removeSkillsAlertPopup(archiveBtn)
+                    e.archiveElement.insertAdjacentHTML('afterend', `
+                                                        <div class="skills__alert-popup department__wrapper-archive active" style="left: 130%; top: -50% !important; " >        
+                                                            <p>Are you sure?</p>
+                                                            <div class="btns">
+                                                                <button class="true">Yes</button>
+                                                                <button class="false">No</button>
+                                                            </div>
+                                                        </div>
+                                                    `);
+                    const popup = e.archiveElement.nextElementSibling;
+                    const falseButton = popup.querySelector('.false');
+                    const trueButton = popup.querySelector('.true')
+
+                    falseButton.addEventListener('click', () => {
+                        popup.remove();
+                    });
+                    trueButton.addEventListener('click', async () => {
+                        let activeFlag = ""
+                        if (e.archiveElement.classList.contains('Archived-statu')) {
+                            activeFlag = true
+                        }
+                        else {
+                            activeFlag = false
+                        }
+                        document.querySelector('.overlay').classList.add('active')
+                        popup.remove();
+                        const requestOptionsSave = {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + localStorage.getItem('token')
+                            },
+                            body: JSON.stringify({
+                                query: `
+                                            mutation updateSkill($active: Boolean, $id: Int) {
+                                            update_skills(where: {id: {_eq: $id}}, _set: {active: $active}) {
+                                                returning {
+                                                active
+                                                id
+                                                title
+                                                }
+                                                affected_rows
+                                            }
+                                            } `,
+                                variables: {
+                                    id: parseInt(e.archiveElement.dataset.id),
+                                    active: activeFlag
+                                }
+
+                            })
+                        }
+                        const response = await fetch(BaseUrl, requestOptionsSave)
+                        const data = await response.json();
+
+                        offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                        if (paginationFlag === 'all' && document.getElementById('search-input').value === '') {
+                            await getSkills(offset)
+                        } else if (paginationFlag !== 'all' && document.getElementById('search-input').value === '') {
+                            offset = 0
+                            await paginationFilter(statusItems)
+                            renderFilter(statusItems, offset)
+                        } else if (document.getElementById('search-input').value !== '') {
+                            offset = 0
+                            await paginationFilter(statusItems)
+                            renderFilter(statusItems, offset)
+                            document.querySelector('.closeFilter').classList.add('hidden')
+                            navigation.removeAttribute('style')
+                        }
+
+                        editTitleList()
+                        archiveListJob()
+                        archiveListJobSkill()
+                    })
+                });
+            });
+
+
+            function removeSkillsAlertPopup(archiveBtn) {
+                archiveBtn.forEach((e) => {
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                    }
+                })
+            }
+
+            function popupArhivehidden() {
+                const archiveDeleteBtns = document.querySelectorAll('.skills-archive')
+                const archivePopup = document.querySelectorAll('.skills__alert-popup')
+                archivePopup.forEach((e) => {
+                    e.classList.remove('active')
+                })
+            }
+        }
+
+    </script>
+
+    <script>
+        btnPrev.style = 'display:none;'
+
+        const navigation = document.getElementById('navigation')
+
+
+        async function pagination() {
+            const data = JSON.stringify({
+                query: `query SkillsQuery($limit: Int, $offset: Int=0) {
+                                skills(limit: $limit, offset: $offset, order_by:{id:asc}) {
+                                title
+                                }                      
+                                }
+                                `,
+                variables: {
+                    offset: 0
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.skills
+            searchFilter = datas
+
+            if (document.getElementById('filterSelect').textContent === 'All') {
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+            }
+
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+            const btnPrev = document.getElementById('btnPrev');
+            const firstCircle = document.getElementById('firstCircle');
+            const secondCircle = document.getElementById('secondCircle');
+            const btnNext = document.getElementById('btnNext');
+            totalPages = Math.ceil(datas.length / limit);
+
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+        }
+
+        btnNext.addEventListener('click', async () => {
+
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+
+            scrollToAnchor()
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active');
+                    currentPage++
+                    if (currentPage > 2) {
+                        currentPage++
+                    }
+                    firstCircle.textContent = currentPage + 1;
+                    secondCircle.textContent = currentPage + 2;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            if (paginationFlag === 'all') {
+                await getSkills(offset)
+            } else if (paginationFlag !== 'all') {
+                await renderFilter(statusItems, offset)
+            }
+
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+        });
+        // pagination prev
+        btnPrev.addEventListener('click', async () => {
+
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+            scrollToAnchor()
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            if (paginationFlag === 'all') {
+                await getSkills(offset)
+            } else if (paginationFlag !== 'all') {
+                await renderFilter(statusItems, offset)
+            }
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+        })
+
+        firstCircle.addEventListener('click', async () => {
+            scrollToAnchor()
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            if (paginationFlag === 'all') {
+                await getSkills(offset)
+            } else if (paginationFlag !== 'all') {
+                await renderFilter(statusItems, offset)
+            }
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+        })
+
+        secondCircle.addEventListener('click', async () => {
+            scrollToAnchor()
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            if (paginationFlag === 'all') {
+                await getSkills(offset)
+            } else if (paginationFlag !== 'all') {
+                await renderFilter(statusItems, offset)
+            }
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+        })
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        function scrollToAnchorPopup() {
+            let anchorPopup = []
+            const anchorPopupAll = document.querySelectorAll('.popup__users-content')
+            anchorPopupAll.forEach((e) => {
+                anchorPopup.push(e.firstElementChild)
+            })
+            anchorPopup.forEach((e) => {
+                e.scrollIntoView({ behavior: 'smooth' })
+            })
+
+        }
+
+    </script>
+
+    <script>
+        function archiveListJobSkill() {
+            const departmentsView = document.getElementById('skills-view')
+            const positionsItem = departmentsView.querySelectorAll('.row-item');
+            const archiveBtn = [];
+
+            positionsItem.forEach((item) => {
+                const archiveItems = item.querySelectorAll('.archive');
+                archiveItems.forEach((archiveElement) => {
+
+                    const archiveInfo = {
+                        positionsItem: item,
+                        archiveElement: archiveElement
+                    };
+                    archiveBtn.push(archiveInfo);
+                });
+            });
+
+            archiveBtn.forEach((e) => {
+                e.archiveElement.addEventListener('click', () => {
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                        return
+                    }
+                    removeSkillsAlertPopup(archiveBtn)
+                    e.archiveElement.insertAdjacentHTML('afterend', `
+                                                        <div class="skills__alert-popup department__wrapper-archive active" style="left: 100%; top: -50% !important; " >        
+                                                            <p>Are you sure?</p>
+                                                            <div class="btns">
+                                                                <button class="true">Yes</button>
+                                                                <button class="false">No</button>
+                                                            </div>
+                                                        </div>
+                                                    `);
+                    const popup = e.archiveElement.nextElementSibling;
+                    const falseButton = popup.querySelector('.false');
+                    const trueButton = popup.querySelector('.true')
+
+                    falseButton.addEventListener('click', () => {
+                        popup.remove();
+                    });
+                    trueButton.addEventListener('click', async () => {
+                        let status = ''
+                        let active = ''
+
+                        if (e.archiveElement.classList.contains('Archived-statu')) {
+                            status = 1
+                            active = true
+                        } else {
+                            status = 2
+                            active = false
+                        }
+                        document.querySelector('.overlay').classList.add('active')
+                        popup.remove();
+                        const requestOptionsSave = {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + localStorage.getItem('token')
+                            },
+                            body: JSON.stringify({
+                                query: `mutation updateSkillLevel($active: Boolean, $id: Int,$status: Int) {
+                                             update_skills_levels(where: {id: {_eq: $id}}, _set: {active: $active, status: $status}) {
+                                             returning {
+                                                 id
+                                                 active
+                                                status
+                                                 }
+                                                 affected_rows
+                                                }
+                                            }
+                                                `,
+                                variables: {
+                                    "id": parseInt(e.archiveElement.dataset.rowArchiveId),
+                                    "active": active,
+                                    "status": status,
+
+                                }
+
+                            })
+                        }
+                        const response = await fetch(BaseUrl, requestOptionsSave)
+                        const data = await response.json();
+
+                        offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+
+
+                        if (paginationFlag === 'all' && document.getElementById('search-input').value === '') {
+                            await getSkills(offset)
+                            editTitleList()
+                            archiveListJob()
+                            archiveListJobSkill()
+                        } else if (paginationFlag !== 'all' && document.getElementById('search-input').value === '') {
+                            await renderFilter(statusItems, offset)
+                            editTitleList()
+                            archiveListJob()
+                            archiveListJobSkill()
+
+                        } else if (document.getElementById('search-input').value !== '') {
+                            filterSearchRender()
+                        }
+                    })
+                });
+            });
+
+            // filterSearchRender(event)
+
+
+            function removeSkillsAlertPopup(archiveBtn) {
+                archiveBtn.forEach((e) => {
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                    }
+                })
+            }
+        }
+    </script>
+
+    <script>
+
+        function filter() {
+            const filter = document.getElementById('selectItemsFilter')
+            const allLabel = filter.querySelectorAll('label')
+
+            allLabel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => filterOption(event, filter, e))
+            })
+        }
+
+        function filterOption(event, filter, e) {
+
+            if (event.target.previousElementSibling.checked) {
+                filter.classList.add('select-hide')
+                document.getElementById('filterSelect').textContent = 'All'
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                paginationFlag = 'all'
+                offset = 0
+                pagination()
+                getSkills(offset)
+                return
+            }
+
+            document.getElementById('filterSelect').textContent = event.target.textContent
+            filter.classList.add('select-hide')
+            const allInput = filter.querySelectorAll('input')
+            const inputItem = event.target.parentNode.querySelector('input');
+            allInput.forEach((e) => {
+                if (e !== inputItem) {
+                    e.checked = false;
+                }
+            });
+
+
+            if (document.getElementById('filterSelect').textContent === 'All') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                paginationFlag = 'all'
+                offset = 0
+                pagination()
+                getSkills(offset)
+            }
+
+            else if (document.getElementById('filterSelect').textContent === 'Active') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                statusItems = true
+                offset = 0
+                paginationFlag = 'active'
+                paginationFilter(statusItems)
+                renderFilter(statusItems, offset)
+
+            }
+
+            else if (document.getElementById('filterSelect').textContent === 'Archived') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                statusItems = false
+                offset = 0
+                paginationFlag = 'Archived'
+                paginationFilter(statusItems)
+                renderFilter(statusItems, offset)
+
+            }
+        }
+
+        async function renderFilter(statusItems, offset) {
+            clearForm()
+            if (document.getElementById('search-input').value && document.getElementById('search-input').value.length && document.getElementById('search-input').value.length > 2) {
+                document.getElementById('search-input').value = ''
+            }
+            document.querySelector('.overlay').classList.add('active')
+            const data = JSON.stringify({
+                query: `query SkillsQuery($limit: Int, $offset: Int = 0, $active: Boolean) {
+                                    skills(limit: $limit, offset: $offset, where:{active:{_eq:$active}} ,order_by:{id:asc}) {
+                                    active
+                                    status
+                                    title
+                                    id
+                                    skills_skills_levels(order_by:{id:asc}) {
+                                    active
+                                    id
+                                    description
+                                    goal
+                                    status
+                                    skill_id
+                                    level_id
+                                    skills_levels_level {
+                                    title
+                                    }
+                                    }
+                                    skills_skills_departments {
+                                    skills_departments_department {
+                                    id
+                                    title
+                                    }
+                                    }
+                                    }
+                                    }`,
+                variables: {
+                    limit: limit,
+                    offset: offset,
+                    active: statusItems,
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.skills
+            document.querySelector('.overlay').classList.remove('active')
+            document.getElementById('skills-view').innerHTML = datas.map((data, index) => {
+
+                return `
+                                        <div class="skill-item">
+                                        <div class="department__wrapper">
+                                                    <div class="department">
+                                                        <p class="department-field" type="text" contentEditable="false" data-default-value="${data.title}" data-id="${data.id}">${data.title}</p>
+                                                        <button type="button" class="edit edit-skill-btn" style="border: none; background: none"></button>
+                                                        <a class="archive ${data.active == true ? "" : "Archived-statu"}" href="#" data-id="${data.id}"></a>
+                                                    </div>
+                                                    <div class="add-job">
+                                                        <button class="add-skills btn add-skills-btn" data-id-button="${data.id}">Add Skill’s Level</button>
+                                                    </div>
+                                                </div>
+                        
+                                            ${data.skills_skills_departments.length ? `<div class="section__tags">${data.skills_skills_departments.map((skilldepartment) => {
+                    return `<a href="#">${skilldepartment.skills_departments_department.title}</a>`
+                }).join(' ')}</div>` : ''}
+                        
+                        
+                                            <div class="content__section">
+                                                <div class="table">
+                                                    <div class="row row-header">
+                                                        <div class="cell">Level</div>
+                                                        <div class="cell">Description</div>
+                                                        <div class="cell" style="width: 10.46vw;">Attribute</div>
+                                                        <div class="cell" style="width: 6.72vw;">Receipt <br> Condition</div>
+                                                        <div class="cell"style="width: 5.7vw;">Status</div>
+                                                        <div class="cell">Actions</div>
+                                                    </div>
+                                                    ${data.skills_skills_levels.length ? `${data.skills_skills_levels.map((level, index) => {
+                    return `<div class="row row-item">
+                                                                    <div class="cell name">${level.skills_levels_level.title}</div>
+                                                                    <div class="cell desc">
+                                                                        ${level.description}
+                                                                    </div>
+                                                                    <div class="cell attribute">
+                                                                        <div class="flex">
+                                                                            <div class="flex-start">
+                                                                                <img src="./img/power-2.png" alt="" class="no-absolute">
+                                                                                <p class="no-absolute">Power</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cell coins">${level.goal}</div>
+                                                                    <div class="cell status">${level.status == 1 ? "Active" : "Archived"}</div>
+                                                                    <div class="cell actions">
+                                                                        <span class="edit edit-job-btn" onclick="openEditLevelPopupDialog(${JSON.stringify(level).split('"').join("&quot;")})"></span>
+                                                                        <span class="archive ${level.status == 1 ? "" : "Archived-statu"}" data-row-archive-id=${level.id}></span>
+                                                                    </div>
+                                                                 </div>`
+                }).join(' ')}` : ''}
+                        
+                                                </div>
+                                            </div>
+                                        </div>`
+            }).join(' ')
+            /* popup edit skills */
+            document.querySelectorAll('.add-skills-btn').forEach((e) => {
+                e.addEventListener('click', () => {
+                    document.getElementById('add-skillss-level-level').classList.add('active')
+                    idButtonAdd = e.dataset.idButton
+                })
+            })
+
+
+            const editSkillPopup = document.querySelector('.edit-skillss-popup');
+            const editSkillBtn = document.querySelectorAll('.edit-skill-btn');
+            const closeEditSkill = document.querySelector('.edit-skill-close');
+
+            if (editSkillPopup && editSkillBtn.length > 0) {
+                closeEditSkill.addEventListener('click', () => {
+                    editSkillPopup.classList.remove('active');
+                });
+            }
+        }
+
+        async function paginationFilter(statusItems) {
+            scrollToAnchor()
+            totalPages = 0
+            const data = JSON.stringify({
+                query: `query SkillsQuery($limit: Int, $offset: Int=0, $active: Boolean) {
+                                skills(limit: $limit, offset: $offset, where:{active:{_eq:$active}} ,order_by:{id:asc}) {
+                                title
+                                active
+                                }                      
+                                }
+                                    `,
+                variables: {
+                    offset: 0,
+                    active: statusItems,
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.skills
+            searchFilter = datas
+            editTitleList()
+            archiveListJob()
+            archiveListJobSkill()
+            const btnPrev = document.getElementById('btnPrev');
+            const firstCircle = document.getElementById('firstCircle');
+            const secondCircle = document.getElementById('secondCircle');
+            const btnNext = document.getElementById('btnNext');
+            totalPages = Math.ceil(datas.length / limit);
+
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+            secondCircle.removeAttribute('style')
+        }
+    </script>
+    <!-- searchFilter -->
+
+    <script>
+        let filteredItems = []
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            if (document.getElementById('search-input').value.length < 3) {
+                document.querySelector('.search-input-selector').classList.add('hidden')
+                return
+            } else {
+                filteredItems = searchFilter.filter(function (item) {
+                    return item.title.toLowerCase().startsWith(document.getElementById('search-input').value.toLowerCase().substring(0, 10))
+                })
+                document.querySelector('.search-input-selector').innerHTML = filteredItems.map((da, index) => {
+                    return `<label>${da.title}</label>`
+                }).join('')
+
+                if (filteredItems.length === 0) {
+                    document.querySelector('.search-input-selector').classList.add('hidden')
+                } else {
+                    document.querySelector('.search-input-selector').classList.remove('hidden')
+                    filterSearch()
+                }
+            }
+        })
+
+        async function filterSearch() {
+
+            document.querySelector('.search-input-block').querySelectorAll('label').forEach((e) => {
+                e.addEventListener('click', () => {
+                    filterSearchRender(event)
+                })
+            })
+        }
+
+        async function filterSearchRender(event) {
+            if (typeof event !== 'undefined') {
+                filterSearchRenderValue = event.target.textContent
+            } else if (document.getElementById('search-input').value !== '') {
+                filterSearchRenderValue = document.querySelector('.department-field').textContent
+            }
+
+            document.querySelector('.overlay').classList.add('active')
+            document.getElementById('search-input').value = filterSearchRenderValue
+            document.querySelector('.search-input-selector').classList.add('hidden')
+            document.querySelector('.closeFilter').classList.remove('hidden')
+            navigation.style = 'display:none;'
+
+            const data = JSON.stringify({
+                query: `query getSkills($f: String, $o: Int, $l: Int) {
+                                        skills(limit: $l, offset: $o, order_by: {title: asc}, where: {title: {_eq: $f}}) {
+                                        active
+                                        status
+                                        title
+                                        id
+                                        skills_skills_levels(order_by:{id:asc}) {
+                                        active
+                                        id
+                                        description
+                                        goal
+                                        status
+                                        skill_id
+                                        level_id
+                                        skills_levels_level {
+                                        title
+                                        }
+                                        }
+                                        skills_skills_departments {
+                                        skills_departments_department {
+                                        id
+                                        title
+                                        }
+                                        }
+                                        }
+                                        }
+                                        `,
+                variables: {
+                    "f": filterSearchRenderValue,
+                    "o": 0,
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.skills
+
+            document.getElementById('skills-view').innerHTML = datas.map((data, index) => {
+
+                return `
+                        <div class="skill-item">
+                        <div class="department__wrapper">
+                                    <div class="department">
+                                        <p class="department-field" type="text" contentEditable="false" data-default-value="${data.title}" data-id="${data.id}">${data.title}</p>
+                                        <button type="button" class="edit edit-skill-btn" style="border: none; background: none"></button>
+                                        <a class="archive ${data.active == true ? "" : "Archived-statu"}" href="#" data-id="${data.id}"></a>
+                                    </div>
+                                    <div class="add-job">
+                                        <button class="add-skills btn add-skills-btn" data-id-button="${data.id}">Add Skill’s Level</button>
+                                    </div>
+                                </div>
+            
+                            ${data.skills_skills_departments.length ? `<div class="section__tags">${data.skills_skills_departments.map((skilldepartment) => {
+                    return `<a href="#">${skilldepartment.skills_departments_department.title}</a>`
+                }).join(' ')}</div>` : ''}
+            
+            
+                            <div class="content__section">
+                                <div class="table">
+                                    <div class="row row-header">
+                                        <div class="cell">Level</div>
+                                        <div class="cell">Description</div>
+                                        <div class="cell" style="width: 10.46vw;">Attribute</div>
+                                        <div class="cell" style="width: 6.72vw;">Receipt <br> Condition</div>
+                                        <div class="cell"style="width: 5.7vw;">Status</div>
+                                        <div class="cell">Actions</div>
+                                    </div>
+                                    ${data.skills_skills_levels.length ? `${data.skills_skills_levels.map((level, index) => {
+                    return `<div class="row row-item">
+                                                    <div class="cell name">${level.skills_levels_level.title}</div>
+                                                    <div class="cell desc">
+                                                        ${level.description}
+                                                    </div>
+                                                    <div class="cell attribute">
+                                                        <div class="flex">
+                                                            <div class="flex-start">
+                                                                <img src="./img/power-2.png" alt="" class="no-absolute">
+                                                                <p class="no-absolute">Power</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell coins">${level.goal}</div>
+                                                    <div class="cell status">${level.status == 1 ? "Active" : "Archived"}</div>
+                                                    <div class="cell actions">
+                                                        <span class="edit edit-job-btn" onclick="openEditLevelPopupDialog(${JSON.stringify(level).split('"').join("&quot;")})"></span>
+                                                        <span class="archive ${level.status == 1 ? "" : "Archived-statu"}" data-row-archive-id=${level.id}></span>
+                                                    </div>
+                                                 </div>`
+                }).join(' ')}` : ''}
+            
+                                </div>
+                            </div>
+                        </div>`
+            }).join(' ')
+            /* popup edit skills */
+            document.querySelectorAll('.add-skills-btn').forEach((e) => {
+                e.addEventListener('click', () => {
+                    document.getElementById('add-skillss-level-level').classList.add('active')
+                    idButtonAdd = e.dataset.idButton
+                })
+            })
+
+            const editSkillPopup = document.querySelector('.edit-skillss-popup');
+            const editSkillBtn = document.querySelectorAll('.edit-skill-btn');
+            const closeEditSkill = document.querySelector('.edit-skill-close');
+
+            if (editSkillPopup && editSkillBtn.length > 0) {
+                closeEditSkill.addEventListener('click', () => {
+                    editSkillPopup.classList.remove('active');
+                });
+            }
+            await editTitleList()
+            await archiveListJob()
+            await archiveListJobSkill()
+            clearForm()
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        document.querySelector('.closeFilter').addEventListener('click', () => {
+            document.querySelector('.closeFilter').classList.add('hidden')
+            navigation.removeAttribute('style')
+            document.getElementById('search-input').value = ''
+
+            if (document.getElementById('filterSelect').textContent === 'All') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                paginationFlag = 'all'
+                offset = 0
+                pagination()
+                getSkills(offset)
+            }
+
+            else if (document.getElementById('filterSelect').textContent === 'Active') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                statusItems = true
+                offset = 0
+                paginationFlag = 'active'
+                paginationFilter(statusItems)
+                renderFilter(statusItems, offset)
+
+            }
+
+            else if (document.getElementById('filterSelect').textContent === 'Archived') {
+                navigation.removeAttribute('style')
+                document.getElementById('search-input').value = ''
+                statusItems = false
+                offset = 0
+                paginationFlag = 'Archived'
+                paginationFilter(statusItems)
+                renderFilter(statusItems, offset)
+
+            }
+        })
+
+        function filterSelectScrollOutside(event) {
+            const filterSelect = document.querySelector('.filter-select')
+            if (event.target !== filterSelect && !filterSelect.contains(event.target)) {
+                filterSelect.classList.remove('active')
+                document.getElementById('selectItemsFilter').classList.add('select-hide')
+
+            }
+
+        }
+        document.addEventListener('click', filterSelectScrollOutside)
+
+        document.querySelectorAll('[contentEditable]').forEach((e)=>{
+            e.addEventListener('keydown', (event)=>{
+                if(event.key === 'Enter'){
+                    event.preventDefault()
+                }
+            })
+        })
+
+
+    </script>
+
 
 </body>
 

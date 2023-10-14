@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="billing-page">
@@ -100,10 +101,20 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -114,29 +125,34 @@
                     <h3 class="content__section-title">Your Subscription</h3>
                     <div class="content__block subdomain">
                         <p>You are currently on the Core Monthly plan (monthly payments). </p>
-                        <a href="subscription.html">Upgrade</a>
+                        <a href="#" id="upgradeBtn">Upgrade</a>
                     </div>
                     <div class="content__block">
                         <div class="subscription__info">
                             <div class="subscription__info-item">
                                 <p class="info-title">Users:</p>
-                                <p class="info-number">95 Users - $3 per month</p>
+                                <p class="info-number" id="userCount"></p>
                             </div>
                             <div class="subscription__info-item">
                                 <p class="info-title">Monthly cost:</p>
-                                <p class="info-number">$ 276.00</p>
+                                <p class="info-number" id='monthlyCost'></p>
                             </div>
                             <div class="subscription__info-item">
                                 <p class="info-title">Next payment due:</p>
-                                <p class="info-number">22 - Sep - 2021</p>
+                                <p class="info-number" id="nextPay"></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="content__section">
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
                     <div class="invoices-title">
                         <h3 class="content__section-title">Invoices</h3>
-                        <a class="invoices-btn">
+                        <a class="invoices-btn disabled">
                             <img src="./img/invoices-icon.svg" alt="">
                         </a>
                     </div>
@@ -149,7 +165,7 @@
                                 <p>Amount</p>
                                 <p>Download</p>
                             </div>
-                            <div class="invoices__list">
+                            <!-- <div class="invoices__list">
                                 <div class="invoices__list-item">
                                     <p>#120587</p>
                                     <p>22/08/21</p>
@@ -168,14 +184,14 @@
                                     <p>$ 276.00</p>
                                     <a href="#">PDF File</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="content__section">
                     <div class="payment-method">
                         <h3 class="content__section-title">Payment Method</h3>
-                        <a href="#">
+                        <a href="#" class="disabled">
                             <img src="./img/payment-method-icon.svg" alt="">
                         </a>
                     </div>
@@ -192,7 +208,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="payment__method-item row-item active">
+                                <!-- <tr class="payment__method-item row-item active">
                                     <td class="payment-cart-col">
                                         <img class="payment-icon" src="./img/payment-method-1.svg" alt="">
                                     </td>
@@ -248,13 +264,13 @@
                                     <td class="payment-delete">
                                         <span class="delete-icon"></span>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
-                    
+
                     </div>
                     <div class="payment__method-bottom">
-                        <a class="payment-btn btn" href="#">Switch active card</a>
+                        <a class="payment-btn btn disabled" href="#">Switch active card</a>
                         <a class="cancel" href="#">Cancel</a>
                     </div>
 
@@ -495,9 +511,289 @@
             </section>
         </section>
 
+        <div class="ninjable__popup subscription__popup">
+            <div class="ninjable__popup-inner">
+                <div class="light-bg"></div>
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <div class="subscription__header-list">
+                        <div>
+                            <p>FREE</p>
+                        </div>
+                        <div>
+                            <p>LIGHT</p>
+                        </div>
+                        <div>
+                            <p>PRO</p>
+                        </div>
+                        <div>
+                            <p>ENTERPRISE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__users-content">
+                    <div class="subscription__list-content">
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Users</div>
+                            <div class="cell subscription-free">3</div>
+                            <div class="cell subscription-light">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-pro">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active skills/User</div>
+                            <div class="cell subscription-free">9</div>
+                            <div class="cell subscription-light">9</div>
+                            <div class="cell subscription-pro">18</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active departments/Company</div>
+                            <div class="cell subscription-free">1</div>
+                            <div class="cell subscription-light">15</div>
+                            <div class="cell subscription-pro">26</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill Map (Positoions/ <br>
+                                Department)
+                            </div>
+                            <div class="cell subscription-free">10</div>
+                            <div class="cell subscription-light">10</div>
+                            <div class="cell subscription-pro">16</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKRs (Company OKRs x <br>
+                                Departments drill down levels)
+                            </div>
+                            <div class="cell subscription-free">2х3</div>
+                            <div class="cell subscription-light">2х3</div>
+                            <div class="cell subscription-pro">10х3</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Standart Reporting</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill approval flow</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Integrations</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Branding</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Performance Review</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKR analytics</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Reporting</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                    </div>
+                    <div class="subscription__bottom">
+                        <div class="subscription__bottom-item">
+                            <p class="price">$0</p>
+                            <button class="btn">Downgrade</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <p class="price">$5</p>
+                            <p class="sale">
+                                <span>user/month</span><br>
+                                -25% annual commit
+                            </p>
+                            <button class="btn active">Current</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Coming Soon</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <script src="./js/main.min.js"></script>
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getUsers()
+            document.querySelector('.overlay').classList.remove('active')
+        })
+
+        async function getUsers() {
+            let datas = []
+            let query = `query getUsers {
+                users_aggregate(where: {active: {_eq: true}}) {
+                aggregate {
+                    count
+                }}company {
+                    billing_cycle
+                }
+            }`
+            let variables = {
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            usersAggregate = json.data.users_aggregate.aggregate.count
+            company = new Date(json.data.company[0].billing_cycle)
+            monthlyCost = usersAggregate * 5
+
+            console.log('pay:', company)
+
+            company.setMonth(company.getMonth() + 3)
+            console.log('next pay:', company)
+
+            document.getElementById('userCount').textContent = usersAggregate + ' Users - $5 per month'
+            document.getElementById('monthlyCost').textContent = '$ ' + monthlyCost.toFixed(2).toString()
+            document.getElementById('nextPay').textContent = company.getDate() + '-' + (company.toLocaleString('en-US', { month: 'short' })) + '-' + company.getFullYear()
+        }
+
+        document.getElementById('upgradeBtn').addEventListener('click',()=>{
+            document.querySelector('.subscription__popup').classList.add('active')
+        })
+
+        document.querySelector('.ninjable__popup-close').addEventListener('click', ()=>{
+            document.querySelector('.subscription__popup').classList.remove('active')
+        })
+
+    </script>
+
+<script src="./js/main.min.js"></script>
 
 </body>
 

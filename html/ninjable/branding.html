@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="branding">
@@ -100,10 +101,20 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -113,7 +124,7 @@
                 <div class="content__section">
                     <h3 class="content__section-title">Subdomain</h3>
                     <div class="content__block subdomain">
-                        <a target="__blank" href="https://company.ninjable.com">https://company.ninjable.com</a>
+                        <a target="__blank" href="" id="companyUrl"></a>
                         <p>Subdomain is given upon account signup and it is fixed. Submit a Ninjable support request to
                             change it. This URL is where the users login
                             to the portal or an app. Your custom brand elements such as logo and background image will
@@ -123,18 +134,18 @@
                 </div>
 
                 <div class="content__section">
-                    <h3 class="content__section-title icon">Custom branding</h3>
+                    <h3 class="content__section-title icon alertPopup">Custom branding</h3>
                     <div class="content__block subdomain">
                         <p>With Custom branding enabled, your Ninjable account can be customized to reflect the visual
                             personality of your organization.
                         </p>
                     </div>
-                    <div class="branding__popup">
+                    <div class="branding__popup iconPopup">
                         <p class="title">Upgrade Subscription</p>
                         <p class="desc">
                             Available for Pro and <br> Enterprise Subscription
                         </p>
-                        <a href="subscription.html">Upgrade</a>
+                        <a href="subscription.html" class="popupBtn">Upgrade</a>
                     </div>
                 </div>
 
@@ -144,14 +155,28 @@
                         <form action="#">
                             <div class="upload__heading">
                                 <img class="logo" src="./img/upload-logo.svg" alt="">
-                                <a class="remove-btn" href="#">Remove</a>
+                                <a class="remove-btn alertPopup" href="#">Remove</a>
+                            </div>
+                            <div class="branding__popup removePopup">
+                                <p class="title">Upgrade Subscription</p>
+                                <p class="desc">
+                                    Available for Pro and <br> Enterprise Subscription
+                                </p>
+                                <a href="subscription.html" class="popupBtn">Upgrade</a>
                             </div>
                             <div class="upload__icon-wrapper">
                                 <p class="title">Upload a new icon</p>
                                 <div class="upload__icon-input">
                                     <input type="file" id="upload__file">
-                                    <label for="upload__file">Upload Icon</label>
+                                    <label for="" id="uploadFile" class="alertPopup">Upload Icon</label>
                                     <p>Please, upload PNG, JPG or JPEG file</p>
+                                </div>
+                                <div class="branding__popup uploadPopup">
+                                    <p class="title">Upgrade Subscription</p>
+                                    <p class="desc">
+                                        Available for Pro and <br> Enterprise Subscription
+                                    </p>
+                                    <a href="subscription.html" class="popupBtn">Upgrade</a>
                                 </div>
                             </div>
                         </form>
@@ -173,6 +198,11 @@
                 </div>
 
                 <div class="content__section">
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
                     <h3 class="content__section-title">Colors</h3>
                     <div class="content__block">
                         <div class="colors">
@@ -183,7 +213,7 @@
                                     header and login banner.
                                 </p>
                                 <div class="color-content">
-                                    <div class="colors-block">
+                                    <div class="colors-block disabled">
                                         <span class="color"
                                             style="background: linear-gradient(0deg, #2B3653, #2B3653), #1A2236;"></span>
                                     </div>
@@ -197,7 +227,7 @@
                                     elements.
                                 </p>
                                 <div class="color-content">
-                                    <div class="colors-block">
+                                    <div class="colors-block disabled">
                                         <span class="color"
                                             style="background: linear-gradient(0deg, #7C9ECB, #7C9ECB), #1A2236;"></span>
                                     </div>
@@ -214,6 +244,162 @@
             </section>
         </section>
     </div>
+
+    <style>
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .desc {
+            text-align: center;
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .removePopup {
+            left: 20vw !important;
+        }
+
+        .uploadPopup {
+            top: 13.352vw !important;
+            left: 1.052vw !important;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getCompany()
+            document.querySelector('.overlay').classList.remove('active')
+        })
+
+        async function getCompany() {
+            let datas = []
+            let query = `query getCompany {
+                company {
+                    url
+                }
+            }`
+            let variables = {
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            companyUrl = json.data.company[0].url
+            document.getElementById('companyUrl').textContent = companyUrl
+            document.getElementById('companyUrl').href = companyUrl
+        }
+
+        document.querySelector('.remove-btn').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelectorAll('.branding__popup').forEach((e) => {
+                e.classList.remove('active')
+            })
+            document.querySelector('.removePopup').classList.add('active')
+        })
+
+        document.getElementById('uploadFile').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelectorAll('.branding__popup').forEach((e) => {
+                e.classList.remove('active')
+            })
+            document.querySelector('.uploadPopup').classList.add('active')
+        })
+
+        document.addEventListener('click', () => {
+            if (!event.target.classList.contains('branding__popup') && !event.target.parentNode.classList.contains('upload__heading') && !event.target.classList.contains('alertPopup') && !event.target.parentNode.classList.contains('branding__popup')) {
+                document.querySelectorAll('.branding__popup').forEach((e) => {
+                    e.classList.remove('active')
+                })
+            }
+
+            if (event.target.classList.contains('icon')) {
+                document.querySelectorAll('.branding__popup').forEach((e) => {
+                    e.classList.remove('active')
+                })
+                document.querySelector('.iconPopup').classList.add('active')
+            }
+
+            if (event.target.classList.contains('popupBtn')) {
+                document.querySelectorAll('.branding__popup').forEach((e) => {
+                    e.classList.remove('active')
+                })
+            }
+        })
+
+    </script>
 
     <script src="./js/main.min.js"></script>
 

@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="users-page">
@@ -100,10 +101,20 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -226,6 +237,17 @@
 
 
     </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+    </style>
 
     <script src="./js/main.min.js"></script>
 

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Requests</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Requests">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
+</head>
+
+<body class="requests-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link notifications" href="requests.html">Requests
+                                    <span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content requests">
+                <div id="anchor">
+                    <h2>REQUEST</h2>
+                </div>
+                <div class="content__section">
+                    <div class="search__wrapper">
+                        <span class="search-icon hidden">
+                            <div class="search-input-block">
+                                <input class="search-input" id="search-input" type="text"
+                                    placeholder="Type here to search for Reward...">
+                                <button class="closeFilter hidden">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </button>
+                                <div class="search-input-selector hidden">
+                                </div>
+                            </div>
+                        </span>
+                        <div class="filter-select">
+                            <div class="select-selected" id="filterSelect">All</div>
+                            <span class="line"></span>
+                            <div class="select-items select-hide" id="selectItemsFilter">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all" checked>
+                                    <label for="all" class="filterLabel">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Pending">
+                                    <label for="Pending" class="filterLabel">Pending</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Approved">
+                                    <label for="Approved" class="filterLabel">Approved</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="Rejected">
+                                    <label for="Rejected" class="filterLabel">Rejected</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="row row-header">
+                            <div class="cell id" id="cellId">ID</div>
+                            <div class="cell">Full Name</div>
+                            <div class="cell">Status</div>
+                            <div class="cell">Item</div>
+                            <div class="cell">Comment</div>
+                            <div class="cell">Actions</div>
+                        </div>
+                    </div>
+
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="navigation" id="navigation">
+                        <span class="prev" id="btnPrev"></span>
+                        <span class="page active" id="firstCircle">1</span>
+                        <span class="page" id="secondCircle">2</span>
+                        <span class="next" id="btnNext"></span>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <div class="ninjable__popup answer__popup answer-edit">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close answer-edit-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>EDIT</h3>
+                </div>
+                <div class="positions__popup-content" id="mainPopup">
+                    <div class="positions__popup-form">
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected" id="status">Please Select...
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">Pending</div>
+                                    <div class="select-option">Approved</div>
+                                    <div class="select-option">Reject</div>
+                                </div>
+                            </div>
+                            <span class="let-know">Please let us know the status</span>
+                        </label>
+                        <label>* Comment
+                            <textarea name="" id="comment" cols="30" rows="10" placeholder="Text"></textarea>
+                        </label>
+                    </div>
+                    <div class="popup__users-footer">
+                        <button class="btn request-edit" type="button">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 99999999;
+        }
+
+        .overlay.active {
+            display: block;
+            z-index: 99999999;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .row-item:nth-child(even) {
+            background-color: rgba(233, 237, 242, .45);
+        }
+
+        .row-header :nth-child(1) {
+            width: 4vw !important;
+        }
+
+        .row-header :nth-child(2) {
+            width: 10vw !important;
+        }
+
+        .row-header :nth-child(3) {
+            width: 10vw !important;
+        }
+
+        .row-header :nth-child(4) {
+            width: 10vw !important;
+        }
+
+        .row-header :nth-child(5) {
+            width: 15vw !important;
+        }
+
+        .row-header :nth-child(6) {
+            width: 4.86vw !important;
+        }
+
+        row-header .id {
+            cursor: pointer;
+        }
+
+        .search-input-block {
+            display: flex;
+        }
+
+        .search-input {
+            position: relative;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .search-input-selector {
+            position: absolute;
+            width: 100%;
+            top: 95%;
+            background-color: white;
+            z-index: 99;
+            line-height: 0;
+            border: 0.052vw solid #d7dee6;
+            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+            border-radius: 0.417vw;
+            border-top: none;
+        }
+
+        .search-input-selector label {
+            font-family: Rubik;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .834vw;
+            letter-spacing: .01vw;
+            color: #869dc8;
+            padding-left: 3.91vw;
+            padding-right: 3.91vw;
+            padding-top: 0.626vw;
+            padding-bottom: 0.521vw;
+            cursor: pointer;
+            color: #869dc8;
+            line-height: .834vw;
+        }
+
+        .search-input-selector label:hover {
+            background: rgba(233, 237, 242, 0.7);
+        }
+
+        .closeFilter {
+            position: absolute;
+            right: 0.5vw;
+            top: 0.8vw;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 1vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .popup__users-footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .popup__users-footer button {
+            font-size: 0.834vw;
+            line-height: 0.938vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.02vw;
+            color: #FFFFFF;
+            width: 8.238vw;
+            height: 2.503vw;
+            background: #869DC8;
+            box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+            border-radius: 0.521vw;
+            margin-top: 1.1vw;
+        }
+
+        .error {
+            border: 1px solid red !important;
+        }
+
+        .row-header .id {
+            cursor: pointer;
+        }
+
+        .search__wrapper {
+            justify-content: flex-end;
+        }
+    </style>
+
+    <script>
+
+        let limit = 10
+        let statusItems = ''
+        let offset = 0
+        let foundChoiceFlag = 0
+        let order = 'asc'
+        let countItems
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getRequest(offset, statusItems);
+            pagination(countItems)
+            commonFilter()
+            document.querySelector('.overlay').classList.remove('active')
+        });
+
+        // getting all records from API
+
+        async function getRequest(offset, statusItems, e) {
+            document.querySelector('.overlay').classList.add('active')
+            let datas = []
+            let query = ''
+            let variables = {
+                limit: limit,
+                offset: offset,
+                order: order
+            }
+
+            console.log(statusItems)
+            if (statusItems === '' && foundChoiceFlag === 0) {
+                query = `query getRewardRequests($limit: Int, $offset: Int, $order: order_by, $status: Int = 0) {
+                            rewards_requests(limit: $limit, offset: $offset, order_by: {created: $order}, where:{status:{_eq: $status}}) {
+                                comment
+                                status
+                                id
+                                	requestee {
+										id
+										lastname
+										firstname
+									}
+                                    approver {
+                                        firstname
+                                        id
+                                        lastname
+                                    }reward{
+                                        title
+                                    }}rewards_requests_aggregate(where:{status:{_eq: $status}}){
+                                    aggregate{
+                                        count
+                                    }
+                                }
+                            }`
+            }
+            else if (statusItems !== '' && foundChoiceFlag === 0) {
+                query = `query getRewardRequests($limit: Int, $offset: Int, $order: order_by, $status: Int) {
+                            rewards_requests(limit: $limit, offset: $offset, where: {status: {_eq:$status}},order_by: {created: $order}) {
+                                comment
+                                status
+                                id
+                                    requestee {
+										id
+										lastname
+										firstname
+									}
+                                    approver {
+                                        firstname
+                                        id
+                                        lastname
+                                    }reward{
+                                        title
+                                    }
+	                            }rewards_requests_aggregate(where: {status: {_eq:$status}}){
+                                    aggregate{
+                                        count
+                                    }
+                                }
+                            }`
+                variables = {
+                    ...variables,
+                    status: statusItems,
+                }
+            }
+            // else if (foundChoiceFlag === 1) {
+            //     query = `query getRequest($id:Int) {rewards(where: {id: {_eq: $id}}) {
+            //                 active
+            //                 description
+            //                 id
+            //                 price
+            //                 size
+            //                 status
+            //                 title
+            //                 }
+            //             }`
+            //     variables = {
+            //         id: e.dataset.id
+            //     }
+            // }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.rewards_requests
+
+            foundChoiceFlag === 1 ? foundChoiceFlag = 0 : countItems = json.data.rewards_requests_aggregate.aggregate.count
+            const rowHeader = document.querySelector('.table');
+
+            document.querySelectorAll('.row-item').forEach((e) => {
+                e.remove()
+            })
+
+            if (datas.length === 0) {
+                if (countItems === 0) {
+                    pagination(countItems)
+                } else {
+                    offset = 0
+                    await getRequest(offset, statusItems)
+                    pagination(countItems)
+                }
+            }
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'row row-item';
+                newRow.innerHTML = `
+                                <div class="cell id">${item.id}</div>
+                                <div class="cell">${item.approver != null ? item.requestee.firstname + " " + item.requestee.lastname : ''}</div>
+                                <div class="cell status">${item.status == 0 ? "Pending" : item.status == 1 ? "Approved" : "Rejected"}</div>
+                                <div class="cell">${item.reward.title}</div>
+                                <div class="cell name">${item.comment == null ? '' : item.comment}</div>
+                                <div class="cell actions">
+                                    <span class="edit" data-id="${item.id}" data-approver-id="${item.approver == null ? '' : item.approver.id}"></span>
+                                </div>`;
+                rowHeader.appendChild(newRow)
+            });
+
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        const inputElementFilter = document.getElementById('search-input');
+
+        // paginatin
+        let totalPages
+        const navigation = document.getElementById('navigation')
+        const btnPrev = document.getElementById('btnPrev');
+        const firstCircle = document.getElementById('firstCircle');
+        const secondCircle = document.getElementById('secondCircle');
+        const btnNext = document.getElementById('btnNext');
+
+        function pagination(countItems) {
+            inputElementFilter.value = ''
+            navigation.removeAttribute('style')
+            navigation.classList.remove('hidden')
+            totalPages = Math.ceil(countItems / limit);
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+            secondCircle.removeAttribute('style')
+
+            if (totalPages === 1) {
+                firstCircle.textContent = '1';
+                secondCircle.textContent = '2';
+                firstCircle.classList.add('active');
+                secondCircle.classList.remove('active');
+                btnPrev.style = 'display:none;'
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            } else if (totalPages === 0) {
+                document.getElementById('navigation').style = 'display:none;'
+            }
+        }
+
+        // pagination next btn 
+        let currentPage
+        btnNext.addEventListener('click', () => {
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active')
+
+                    firstCircle.textContent = parseInt(secondCircle.textContent) + 1;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRequest(offset, statusItems)
+            scrollToAnchor()
+        });
+
+        // pagination prev btn
+        btnPrev.addEventListener('click', () => {
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRequest(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination firstCircle btn
+        firstCircle.addEventListener('click', () => {
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRequest(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination secondCircle btn
+        secondCircle.addEventListener('click', () => {
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRequest(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // scroll to top Page
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // common filter
+        const filter = document.getElementById('selectItemsFilter')
+        const allLabel = filter.querySelectorAll('label')
+
+        function commonFilter() {
+            allLabel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => filterOption(event, filter, e))
+            })
+        }
+
+        async function filterOption(event, e) {
+            if (event.target.previousElementSibling.checked) {
+                filter.classList.add('select-hide')
+                document.getElementById('filterSelect').textContent = 'All'
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+                statusItems = ''
+                offset = 0
+                await getRequest(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            }
+
+            document.getElementById('filterSelect').textContent = event.target.textContent
+            filter.classList.add('select-hide')
+            const allInput = filter.querySelectorAll('input')
+            const inputItem = event.target.parentNode.querySelector('input');
+            allInput.forEach((e) => {
+                e.checked = e !== inputItem ? false : e.checked;
+            });
+            const filterText = document.getElementById('filterSelect').textContent;
+            inputElementFilter.value = ''
+            statusItems = filterText == "All" ? '' : filterText == "Pending" ? 0 : filterText == "Approved" ? 1 : 2;
+            offset = 0
+            await getRequest(offset, statusItems)
+            pagination(countItems)
+            document.querySelector('.closeFilter').classList.add('hidden')
+        }
+
+
+        // error checking
+
+        function addErrorEmpty(element, text) {
+            if (text === '' || text.trim() === 'Please Select...' || text.trim() === 'Select Department First' || text.trim() === 'Please Select Another Department') {
+                element.classList.add("error");
+                if (element.parentNode.classList.contains('custom-select')) {
+                    element.parentNode.classList.add("error")
+                }
+            } else {
+                element.classList.remove("error");
+            }
+        }
+
+        // getting records from API
+
+        async function AddEdit(event) {
+
+            const popupAdd = event.target.parentNode.parentNode
+
+            let status = document.getElementById('status') //textContent
+            let comment = document.getElementById('comment') //value
+
+            addErrorEmpty(status, status.textContent);
+            addErrorEmpty(comment, comment.value);
+
+            const elementValueArr = [comment]
+
+            elementValueArr.forEach((e) => {
+                e.addEventListener('input', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            const elementTextContentArr = [status]
+
+            elementTextContentArr.forEach((e) => {
+                e.addEventListener('click', () => {
+                    e.classList.remove('error')
+                    e.parentNode.classList.remove('error')
+                })
+            })
+
+            if (popupAdd.querySelectorAll('.error').length !== 0) {
+                return
+            }
+
+            document.querySelector('.overlay').classList.add('active')
+
+            console.log(status.textContent == "Pending" ? 0 : status.textContent == "Approved" ? 1 : 2)
+
+            let datas = []
+            let query = ''
+            let variables = {}
+            if (event.target.textContent === 'Edit') {
+                query = `mutation editRewardRequest($id: Int, $approver_id: Int, $comment:String,$status: Int,) {
+                            update_rewards_requests(where: {id: {_eq: $id}}, _set: {approver_id: $approver_id, comment: $comment, status: $status}) {
+                                affected_rows
+                            }
+                        }`
+
+                variables = {
+                    id: status.dataset.id,
+                    approver_id: 13,
+                    comment: comment.value,
+                    status: status.textContent == "Pending" ? 0 : status.textContent == "Approved" ? 1 : 2
+                }
+
+                const data = JSON.stringify({ query, variables });
+
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length,
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                };
+
+                const response = await fetch(
+                    BaseUrl,
+                    {
+                        method: 'post',
+                        headers,
+                        body: data
+                    }
+                );
+
+                const json = await response.json();
+                //     await allUsers()
+
+                // if (!navigation.hasAttribute('style')) {
+                //     if (event.target.textContent === 'Add' && totalPages === parseInt(navigation.querySelector('.page.active').textContent)) {
+                //         if (document.querySelectorAll('.row-item').length === limit) {
+                //             totalPages++
+                //             if (secondCircle.classList.contains('active')) {
+                //                 btnNext.style = 'display:flex;'
+                //             }
+                //             if (firstCircle.classList.contains('active') && secondCircle.hasAttribute('style')) {
+                //                 btnNext.style = 'display:flex;'
+                //                 secondCircle.removeAttribute('style')
+                //             }
+                //         } else {
+                //             offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                //             await getUsers(offset, statusItems)
+                //         }
+                //     }
+                // }
+
+                //     if (event.target.textContent === 'Edit' && !navigation.classList.contains('hidden')) {
+                //         offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                //         getUsers(offset, statusItems)
+                //         document.querySelector('.ninjable__popup-close').click()
+                //         return
+                //     } else if (event.target.textContent === 'Edit' && document.getElementById('filterSelect').textContent === 'All') {
+                //         foundChoiceFlag = 1
+                //         getUsers(offset, statusItems, firstName)
+                //         document.querySelector('.ninjable__popup-close').click()
+                //         return
+                //     }
+                //     else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && status.textContent === document.getElementById('filterSelect').textContent) {
+                //         foundChoiceFlag = 1
+                //         getUsers(offset, statusItems, firstName)
+                //         document.querySelector('.ninjable__popup-close').click()
+                //         return
+                //     } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && status.textContent !== document.getElementById('filterSelect').textContent) {
+                //         offset = 0
+                //         await getUsers(offset, statusItems)
+                //         pagination(countItems)
+                //         document.querySelector('.ninjable__popup-close').click()
+                //         document.querySelector('.closeFilter').classList.add('hidden')
+                //         return
+                //     }
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                getRequest(offset, statusItems)
+                document.querySelector('.answer-edit-close').click()
+                document.querySelector('.overlay').classList.remove('active')
+            }
+        }
+
+        // Order 
+
+        function orderId() {
+            if (order === 'asc') {
+                order = 'desc'
+            } else if (order === 'desc') {
+                order = 'asc'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRequest(offset, statusItems)
+        }
+
+        const popupContent = document.querySelector('.positions__popup-content')
+
+        // clear Form
+
+        function clearForm() {
+            try {
+                popupContent.querySelectorAll('input').forEach((e) => {
+                    e.value = ''
+                    e.classList.remove("error")
+                })
+                popupContent.querySelectorAll('.select-selected').forEach((e) => {
+                    e.textContent = 'Please Select...'
+                    e.classList.remove('error')
+                    e.removeAttribute('style')
+                })
+                popupContent.querySelectorAll('textarea').forEach((e) => {
+                    e.value = ''
+                    e.classList.remove('error')
+                    e.removeAttribute('style')
+                })
+            } catch { }
+        }
+
+        // hidden selector
+
+        function hiddenSelector() {
+            popupContent.querySelectorAll('.select-selected').forEach((e) => {
+                e.parentNode.classList.remove('active')
+                e.classList.remove('select-arrow-active')
+                e.parentNode.children[1].classList.add('select-hide')
+            })
+        }
+
+
+        // ALL EVENT
+
+        // Close Popup 
+
+        document.querySelector('.answer-edit-close').addEventListener('click', () => {
+            document.querySelector('.answer-edit').classList.remove('active')
+            clearForm()
+            hiddenSelector()
+        })
+
+        // document event
+
+        document.addEventListener('click', () => {
+            if (event.target.classList.contains('edit')) {
+                document.querySelector('.answer-edit').classList.add('active')
+                document.getElementById('status').textContent = event.target.parentNode.parentNode.children[2].textContent
+                document.getElementById('status').setAttribute('data-id', event.target.dataset.id)
+                document.getElementById('status').style = "font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;"
+                document.getElementById('comment').value = event.target.parentNode.parentNode.children[4].textContent
+            }
+
+            if (event.target.classList.contains('request-edit')) {
+                AddEdit(event)
+            }
+
+            if (event.target === document.getElementById('cellId')) {
+                orderId()
+            }
+
+            if (event.target !== document.getElementById('filterSelect')) {
+                document.querySelector('.filter-select').classList.remove('active')
+                filter.classList.add('select-hide')
+            }
+
+            if (!event.target.classList.contains('select-selected')) {
+                hiddenSelector()
+            }
+
+        })
+
+
+
+
+    </script>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

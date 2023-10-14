@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="subscription-page">
@@ -100,27 +101,42 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="content subscription">
+                <div class="overlay">
+                    <div class="overlay__inner">
+                        <div class="overlay__content"><span class="spinner"></span></div>
+                    </div>
+                </div>
                 <h2>SUBSCRIPION</h2>
                 <div class="content__section">
                     <h3 class="content__section-title">Subscription Summary</h3>
                     <div class="content__block">
                         <div class="summary">
-                            <p class="number">95</p>
+                            <p class="number" id="userCount"></p>
                             <p class="text">Licensed Users</p>
                         </div>
                     </div>
                     <div class="content__block pro">
                         <div class="summary">
-                            <p class="number">PRO</p>
+                            <p class="number">Light</p>
                             <p class="text">Current Plan</p>
                             <div class="summary__btns">
                                 <a class="downgrade__btn btn" href="#">Downgrade</a>
@@ -131,6 +147,13 @@
                     <div class="subscription__content-bottom">
                         <p class="zone">Danger Zone</p>
                         <a class="zone__btn" href="#">Cancel Subscription</a>
+                        <div class="branding__popup">
+                            <p class="title">Cancel Subscription</p>
+                            <p class="desc">
+                                Please contact the support team to request your subscription cancelling.
+                            </p>
+                            <a href="#" id="closeBtn">Close</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -289,6 +312,138 @@
             </div>
         </div>
     </div>
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .subscription__content-bottom {
+            position: relative;
+        }
+
+        .branding__popup {
+            width: 14.139vw !important;
+            top: unset !important;
+            left: 38% !important;
+            bottom: 0 !important;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getUsers()
+            document.querySelector('.overlay').classList.remove('active')
+        })
+
+        async function getUsers() {
+            let datas = []
+            let query = `query getUsers {
+                            users_aggregate(where: {active: {_eq: true}}) {
+                                aggregate {
+                                    count
+                                }
+                            }
+                        }`
+            let variables = {
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            usersAggregate = json.data.users_aggregate.aggregate.count
+            document.getElementById('userCount').textContent = usersAggregate
+        }
+
+        document.querySelector('.zone__btn').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelector('.branding__popup').classList.toggle('active')
+        })
+
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelector('.branding__popup').classList.remove('active')
+        })
+
+        document.addEventListener('click', ()=>{
+            console.log(event.target)
+            if (document.querySelector('.branding__popup').classList.contains('active') && !event.target.classList.contains('zone__btn') && !event.target.classList.contains('branding__popup') && !event.target.parentNode.classList.contains('branding__popup')){
+                document.querySelector('.branding__popup').classList.remove('active')
+            }
+        })
+
+
+
+    </script>
 
     <script src="./js/main.min.js"></script>
 

@@ -15,6 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/jcrop.css" />
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="rewards-page">
@@ -101,46 +102,66 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item active">
-                        <a class="sidemenu__item-link active" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="content acievements rewards">
-                <h2>REWARDS</h2>
+                <div id="anchor">
+                    <h2>REWARDS</h2>
+                </div>
                 <div class="content__section">
                     <div class="add-badge">
                         <a class="add-revard-btn btn">Add Reward</a>
                     </div>
                     <div class="search__wrapper">
                         <span class="search-icon">
-                            <input class="search-input" type="text" placeholder="T-Shirt">
+                            <div class="search-input-block">
+                                <input class="search-input" id="search-input" type="text"
+                                    placeholder="Type here to search for Reward...">
+                                <button class="closeFilter hidden">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </button>
+                                <div class="search-input-selector hidden">
+                                </div>
+                            </div>
                         </span>
                         <div class="filter-select">
-                            <div class="select-selected">Select...</div>
+                            <div class="select-selected" id="filterSelect">All</div>
                             <span class="line"></span>
-                            <div class="select-items select-hide">
+                            <div class="select-items select-hide" id="selectItemsFilter">
                                 <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
+                                    <input type="checkbox" id="all" checked>
+                                    <label for="all" class="filterLabel">All</label>
                                 </div>
                                 <div class="select-option">
                                     <input type="checkbox" id="active">
-                                    <label for="active">Active</label>
+                                    <label for="active" class="filterLabel">Active</label>
                                 </div>
                                 <div class="select-option">
-                                    <input type="checkbox" id="archied">
-                                    <label for="archied">Archied</label>
+                                    <input type="checkbox" id="Archived">
+                                    <label for="Archived" class="filterLabel">Archived</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="table">
                         <div class="row row-header">
-                            <div class="cell id">ID</div>
+                            <div class="cell id" id="cellId">ID</div>
                             <div class="cell">Photo</div>
                             <div class="cell">Title</div>
                             <div class="cell">Description</div>
@@ -148,243 +169,20 @@
                             <div class="cell">Status</div>
                             <div class="cell">Actions</div>
                         </div>
-                        <div class="row row-item">
-                            <div class="cell id"><span>1</span></div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">A little box with <br>
-                                surprise</div>
-                            <div class="cell condition">
-                                <p>
-                                    The box contains 2 items. <br>
-                                    <span>Size:</span> 20x20 cm.
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Archived</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive deactivate"></span>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">A big box with <br>
-                                fun</div>
-                            <div class="cell condition">
-                                <p>
-                                    The box contains 2 items. <br>
-                                    <span>Size:</span> 60x60 cm.
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">3</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-3.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Bluetooth wireless <br>
-                                headphones Air <br>
-                                Pods</div>
-                            <div class="cell condition">
-                                <p>
-                                    Compatible: iOS 10 or later,
-                                    PCs, macOS Sierra-based
-                                    laptops, and watchOS-based
-                                    watches.
-                                    Bluetooth: 4.0
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">4</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-4.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Trip to Sochi</div>
-                            <div class="cell condition">
-                                <p>
-                                    Duration: 5 days
-                                    Location: Rosa Khutor and
-                                    Krasnaya Polyana
-                                    Includet: Breakfast,
-                                    Guided tours, Delivery
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">5</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-5.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Hoody</div>
-                            <div class="cell condition">
-                                <p>
-                                    Hoody with logo of company.
-                                    <span>Sizes:</span> S,M,L,XL
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">6</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-6.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">T-Shirt</div>
-                            <div class="cell condition">
-                                <p>
-                                    Hoody with logo of company.
-                                    <span>Sizes:</span> S,M,L,XL
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">7</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-7.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Cap with Logo</div>
-                            <div class="cell condition">
-                                <p>
-                                    Cap with logo of company.
-                                    The size is adjustable.
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">8</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-8.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">A Day Off</div>
-                            <div class="cell condition">
-                                <p>
-                                    Day off for one day. The date
-                                    must be agreed with your
-                                    manager.
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">9</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/rewards-img-9.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Headphones <br>
-                                Beats STN-13</div>
-                            <div class="cell condition">
-                                <p>
-                                    The bluetooth wireless
-                                    headphones has microphone.
-                                    Color: Pink.
-                                    Bluethooth: 2.1
-                                </p>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">300 </p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
                         </div>
                     </div>
-                    <div class="navigation">
-                        <span class="prev"></span>
-                        <span class="page active">1</span>
-                        <span class="page">2</span>
-                        <span class="next"></span>
+
+                    <div class="navigation" id="navigation">
+                        <span class="prev" id="btnPrev"></span>
+                        <span class="page active" id="firstCircle">1</span>
+                        <span class="page" id="secondCircle">2</span>
+                        <span class="next" id="btnNext"></span>
                     </div>
-                </div>
             </section>
         </section>
 
@@ -396,8 +194,8 @@
                     </span>
                     <h3>ADD REWARD</h3>
                 </div>
-                <div class="popup__users-content">
-                    <div class="reward__popup-form">
+                <div class="popup__users-content popup__users-content-new" id="mainPopup">
+                    <div class="reward__popup-form" id="popup">
                         <label>* Title
                             <input type="text" placeholder="T-Shirt">
                             <span class="let-know">Please let us know the title</span>
@@ -408,7 +206,7 @@
                         </label>
 
                         <label>Size
-                            <input type="text" placeholder="XL">
+                            <input class="size-field" type="text" placeholder="XL">
                             <span class="let-know">Please let us know the size</span>
                         </label>
                         <label>
@@ -421,67 +219,12 @@
                             </div>
                         </label>
                         <label>* Price
-                            <input type="text" placeholder="30 ">
+                            <input type="number" placeholder="30 ">
                             <span class="let-know">Please let us know the price</span>
                         </label>
                         <label>* Status
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
-                                </div>
-                                <div class="select-items select-hide">
-                                    <div class="select-option">Active</div>
-                                    <div class="select-option">Archied</div>
-                                </div>
-                            </div>
-                            <span class="let-know">Please let us know the status</span>
-                        </label>
-                        <div class="add__btn-wrapper">
-                            <button class="btn user-add" type="submit">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ninjable__popup reward-popup edit-reward-popup">
-            <div class="ninjable__popup-inner">
-                <div class="ninjable__popup-header">
-                    <span class="ninjable__popup-close edit-revard-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
-                    <h3>EDIT REWARD</h3>
-                </div>
-                <div class="popup__users-content">
-                    <div class="reward__popup-form">
-                        <label>* Title
-                            <input type="text" placeholder="T-Shirt">
-                            <span class="let-know">Please let us know the title</span>
-                        </label>
-                        <label>* Description
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
-                            <span class="let-know">Please let us know the description</span>
-                        </label>
-
-                        <label>Size
-                            <input type="text" placeholder="XL">
-                            <span class="let-know">Please let us know the size</span>
-                        </label>
-                        <label>
-                            <div class="upload__icon-wrapper">
-                                <div class="upload__icon-input">
-                                    <input type="file" id="upload__file">
-                                    <label for="upload__file">Upload Icon</label>
-                                    <p>File.jpg</p>
-                                </div>
-                            </div>
-                        </label>
-                        <label>* Price
-                            <input type="text" placeholder="30 ">
-                            <span class="let-know">Please let us know the price</span>
-                        </label>
-                        <label>* Status
-                            <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected select-selected-new">Please Select...
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Active</div>
@@ -519,12 +262,195 @@
                         <button class="btn">Add</button>
                         <input type="file" id="file">
                         <label for="file">Сhoose another photo</label>
-                       
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 99999999;
+        }
+
+        .overlay.active {
+            display: block;
+            z-index: 99999999;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .row-item:nth-child(even) {
+            background-color: rgba(233, 237, 242, .45);
+        }
+
+        .row-header :nth-child(2) {
+            max-width: 7.71vw !important;
+        }
+
+        .row-header :nth-child(3) {
+            width: 10.151vw !important;
+        }
+
+        .row-header :nth-child(4) {
+            width: 15.9vw !important;
+        }
+
+        .row-header :nth-child(5) {
+            width: 4.56vw !important;
+        }
+
+        .row-header :nth-child(6) {
+            width: 4.86vw !important;
+        }
+
+        .row-header .id {
+            cursor: pointer;
+        }
+
+        .search-input-block {
+            display: flex;
+        }
+
+        .search-input {
+            position: relative;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .search-input-selector {
+            position: absolute;
+            width: 100%;
+            top: 95%;
+            background-color: white;
+            z-index: 99;
+            line-height: 0;
+            border: 0.052vw solid #d7dee6;
+            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+            border-radius: 0.417vw;
+            border-top: none;
+        }
+
+        .search-input-selector label {
+            font-family: Rubik;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .834vw;
+            letter-spacing: .01vw;
+            color: #869dc8;
+            padding-left: 3.91vw;
+            padding-right: 3.91vw;
+            padding-top: 0.626vw;
+            padding-bottom: 0.521vw;
+            cursor: pointer;
+            color: #869dc8;
+            line-height: .834vw;
+        }
+
+        .search-input-selector label:hover {
+            background: rgba(233, 237, 242, 0.7);
+        }
+
+        .closeFilter {
+            position: absolute;
+            right: 0.5vw;
+            top: 0.8vw;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 1vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+        }
+
+        .error {
+            border: 1px solid red !important;
+        }
+
+        .size-field {
+            text-transform: uppercase;
+        }
+    </style>
 
     <script src="./js/jcrop.js"></script>
 
@@ -543,6 +469,802 @@
         });
     </script>
 
+    <script>
+
+        let limit = 5
+        let statusItems = ''
+        let offset = 0
+        let foundChoiceFlag = 0
+        let order = 'asc'
+        let countItems
+
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getRewards(offset, statusItems);
+            pagination(countItems)
+            commonFilter()
+            document.querySelector('.overlay').classList.remove('active')
+        });
+
+        // getting all records from API
+
+        async function getRewards(offset, statusItems, e) {
+            document.querySelector('.overlay').classList.add('active')
+            let datas = []
+            let query = ''
+            let variables = {
+                limit: limit,
+                offset: offset,
+                order: order
+            }
+            if (statusItems === '' && foundChoiceFlag === 0) {
+                query = `query getRewards($limit: Int, $offset: Int, $order: order_by) {
+                            rewards(limit: $limit, offset: $offset, order_by: {id: $order}) {
+                                active
+                                description
+                                id
+                                price
+                                size
+                                status
+                                title
+                                    },rewards_aggregate{aggregate{
+                                        count
+                                }
+                            }
+                        }`
+            }
+            else if (statusItems !== '' && foundChoiceFlag === 0) {
+                query = `query getRewards($limit: Int, $offset: Int, $order: order_by, $active: Boolean) {
+                            rewards(limit: $limit, offset: $offset, order_by: {id: $order}, where: {active:{_eq:$active}}) {
+                                active
+                                description
+                                id
+                                price
+                                size
+                                status
+                                title
+                                    },rewards_aggregate(where: {active:{_eq:$active}}){aggregate{
+                                        count
+                                }
+                            }
+                        }`
+                variables = {
+                    ...variables,
+                    active: statusItems,
+                }
+            }
+            else if (foundChoiceFlag === 1) {
+                query = `query getRewards($id:Int) {rewards(where: {id: {_eq: $id}}) {
+                            active
+                            description
+                            id
+                            price
+                            size
+                            status
+                            title
+                            }
+                        }`
+                variables = {
+                    id: e.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.rewards
+
+            foundChoiceFlag === 1 ? foundChoiceFlag = 0 : countItems = json.data.rewards_aggregate.aggregate.count
+            const rowHeader = document.querySelector('.table');
+
+            document.querySelectorAll('.row-item').forEach((e) => {
+                e.remove()
+            })
+
+            if (datas.length === 0) {
+                offset = 0
+                await getRewards(offset, statusItems)
+                pagination(countItems)
+            }
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'row row-item';
+                newRow.innerHTML = `
+                                <div class="cell id"><span>${item.id}</span></div>
+                                <div class="cell acievements-icon">
+                                    <div class="acievements-bg">
+                                        <img src="./img/rewards-img-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="cell name">${item.title}</div>
+                                <div class="cell condition">
+                                    <p>
+                                        <span> ${item.description}</span> <br>
+                                        <span>Size: ${item.size}</span>
+                                    </p>
+                                </div>
+                                <div class="cell">
+                                    <p class="coins">${item.price} </p>
+                                </div>
+                                <div class="cell status">${item.active == true ? "Active" : "Archived"}</div>
+                                <div class="cell actions">
+                                    <span class="edit" data-id="${item.id}"></span>
+                                    <span class="archive ${item.active == true ? "" : "deactivate"}" data-id="${item.id}"></span>
+                                </div>
+                        `;
+                rowHeader.appendChild(newRow)
+            });
+
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        // paginatin
+        let totalPages
+        const navigation = document.getElementById('navigation')
+        const btnPrev = document.getElementById('btnPrev');
+        const firstCircle = document.getElementById('firstCircle');
+        const secondCircle = document.getElementById('secondCircle');
+        const btnNext = document.getElementById('btnNext');
+
+        function pagination(countItems) {
+            inputElementFilter.value = ''
+            navigation.removeAttribute('style')
+            navigation.classList.remove('hidden')
+            totalPages = Math.ceil(countItems / limit);
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+            secondCircle.removeAttribute('style')
+
+            if (totalPages === 1) {
+                firstCircle.textContent = '1';
+                secondCircle.textContent = '2';
+                firstCircle.classList.add('active');
+                secondCircle.classList.remove('active');
+                btnPrev.style = 'display:none;'
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            } else if (totalPages === 0) {
+                document.getElementById('navigation').style = 'display:none;'
+            }
+        }
+
+
+        // pagination next btn 
+        let currentPage
+        btnNext.addEventListener('click', () => {
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active')
+
+                    firstCircle.textContent = parseInt(secondCircle.textContent) + 1;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRewards(offset, statusItems)
+            scrollToAnchor()
+        });
+
+        // pagination prev btn
+        btnPrev.addEventListener('click', () => {
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRewards(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination firstCircle btn
+        firstCircle.addEventListener('click', () => {
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRewards(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination secondCircle btn
+        secondCircle.addEventListener('click', () => {
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRewards(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // common filter
+        const filter = document.getElementById('selectItemsFilter')
+        const allLabel = filter.querySelectorAll('label')
+
+        function commonFilter() {
+            allLabel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => filterOption(event, filter, e))
+            })
+        }
+
+        async function filterOption(event, e) {
+            if (event.target.previousElementSibling.checked) {
+                filter.classList.add('select-hide')
+                document.getElementById('filterSelect').textContent = 'All'
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+                statusItems = ''
+                offset = 0
+                await getRewards(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            }
+
+            document.getElementById('filterSelect').textContent = event.target.textContent
+            filter.classList.add('select-hide')
+            const allInput = filter.querySelectorAll('input')
+            const inputItem = event.target.parentNode.querySelector('input');
+            allInput.forEach((e) => {
+                e.checked = e !== inputItem ? false : e.checked;
+            });
+            const filterText = document.getElementById('filterSelect').textContent;
+            inputElementFilter.value = ''
+            statusItems = (filterText === 'Active') ? true : (filterText === 'Archived') ? false : '';
+            offset = 0
+            await getRewards(offset, statusItems)
+            pagination(countItems)
+            document.querySelector('.closeFilter').classList.add('hidden')
+        }
+
+        // Search
+
+        let abortControllerFilter = new AbortController();
+        const inputElementFilter = document.getElementById('search-input');
+        const inputSearchField = document.querySelector('.search-input-selector')
+
+        inputElementFilter.addEventListener('input', (e) => {
+            search(e)
+        })
+
+        async function search(e) {
+            inputSearchField.innerHTML = '';
+            inputSearchField.classList.add('hidden');
+
+            const inputValue = e.target.value.trim();
+            if (inputValue === '') {
+                return;
+            }
+
+            abortControllerFilter.abort();
+            abortControllerFilter = new AbortController();
+            abortControllerFilter.signal.addEventListener('abort', () => {
+                console.log('Request has been canceled');
+            });
+
+            try {
+                let query = '';
+                let variables = {
+                    search: inputValue + "%",
+                    order: "desc",
+                };
+
+                if (statusItems === '') {
+                    query = `query getRewards($search: String, $order: order_by) {
+                                rewards(order_by: {id: $order}, where: {title: {_ilike: $search}}) {
+                                    id
+                                    title
+                                }
+                                }`;
+                } else {
+                    query = `query getRewards($search: String, $active: Boolean, $order: order_by) {
+                                rewards(order_by: {id: $order}, where: {title: {_ilike: $search}, active: {_eq: $active}}) {
+                                    active
+                                    id
+                                    title
+                                }
+                            }`;
+                    variables = {
+                        ...variables,
+                        active: statusItems,
+                    };
+                }
+
+                const data = JSON.stringify({ query, variables });
+
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length,
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: data,
+                    signal: abortControllerFilter.signal
+                };
+
+                const response = await fetch(BaseUrl, requestOptions);
+
+                if (response.ok) {
+                    const json = await response.json();
+                    const datas = json.data.rewards;
+
+                    if (datas.length > 0) {
+                        inputSearchField.classList.remove('hidden');
+                        inputSearchField.innerHTML = datas.map((da) => {
+                            return `<label class="found_acievements" data-id="${da.id}">${da.title}</label>`;
+                        }).join('');
+
+                        document.querySelectorAll('.found_acievements').forEach((e) => {
+                            e.addEventListener('click', () => {
+                                foundChoiceFlag = 1
+                                navigation.classList.add('hidden')
+                                inputSearchField.classList.add('hidden');
+                                inputElementFilter.value = e.textContent;
+                                document.querySelector('.closeFilter').classList.remove('hidden')
+                                getRewards(offset, statusItems, e)
+                            });
+                        });
+                    } else {
+                        inputSearchField.classList.add('hidden');
+                    }
+                }
+            } catch (error) {
+
+            }
+        }
+
+        document.querySelector('.closeFilter').addEventListener('click', () => {
+            foundChoiceFlag = 0
+            offset = 0
+            getRewards(offset, statusItems)
+            navigation.classList.remove('hidden')
+            document.querySelector('.closeFilter').classList.add('hidden')
+            inputElementFilter.value = ''
+        })
+
+        // archive rewards
+
+        async function archiveAchievements(event) {
+
+            event.target.insertAdjacentHTML('afterend', `
+                 <div class="skills__alert-popup department__wrapper-archive active" style="left: 100%; top: -20% !important; " >        
+                    <p>Are you sure?</p>
+                    <div class="btns">
+                        <button class="true">Yes</button>
+                        <button class="false">No</button>
+                    </div>
+                 </div>
+                 `);
+
+            const falseButton = event.target.nextElementSibling.querySelector('.false');
+            const trueButton = event.target.nextElementSibling.querySelector('.true')
+
+            falseButton.addEventListener('click', () => {
+                event.target.nextElementSibling.remove();
+            });
+
+            trueButton.addEventListener('click', async () => {
+                document.querySelector('.overlay').classList.add('active')
+                const request = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: JSON.stringify({
+                        query: `mutation editReward($id: Int, $active: Boolean) {
+                                    update_rewards(where: {id: {_eq: $id}}, _set: {active: $active}) {
+                                        returning {
+                                        active
+                                        id
+                                        }
+                                    }
+                                    }`,
+                        variables: {
+                            "id": event.target.dataset.id,
+                            "active": event.target.classList.contains('deactivate') ? true : false,
+                        }
+                    })
+                }
+
+                event.target.nextElementSibling.remove();
+                const response = await fetch(BaseUrl, request)
+
+                if (statusItems === '' && navigation.classList.contains('hidden')) {
+                    event.target.classList.toggle('deactivate')
+                    document.querySelector('.overlay').classList.remove('active')
+                } else {
+                    inputElementFilter.value !== '' && navigation.classList.remove('hidden')
+                    inputElementFilter.value = ''
+                    document.querySelector('.closeFilter').classList.add('hidden')
+                    offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                    await getRewards(offset, statusItems)
+                }
+            })
+        }
+
+        // add and edit reward
+
+        async function rewardAddEdit(event) {
+            const popupAdd = event.target.parentNode.parentNode
+
+            let title = popupAdd.children[0].querySelector('input') //value
+            let text = popupAdd.children[1].querySelector('textarea') //value
+            let size = popupAdd.children[2].querySelector('input') //value
+            let price = popupAdd.children[4].querySelector('input') //value
+            let active = popupAdd.children[5].children[0].children[0]//textContent
+
+            addErrorEmpty(title, title.value);
+            addErrorEmpty(text, text.value);
+            addErrorEmpty(size, size.value);
+            addErrorEmpty(price, price.value);
+            addErrorEmpty(active, active.textContent);
+
+
+            const elementValueArr = [title, text, size, price]
+
+            elementValueArr.forEach((e) => {
+                e.addEventListener('input', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            const elementTextContentArr = [active]
+
+            elementTextContentArr.forEach((e) => {
+                e.addEventListener('click', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            if (popupAdd.querySelectorAll('.error').length !== 0) {
+                return
+            }
+
+            document.querySelector('.overlay').classList.add('active')
+
+            let datas = []
+            let query = ''
+            let variables = {
+                active: active.textContent === "Active" ? true : false,
+                title: title.value,
+                desc: text.value,
+                size: size.value.toUpperCase(),
+                price: price.value,
+                status: 1
+            }
+            if (event.target.textContent === 'Add') {
+                query = `mutation insertReward($active: Boolean,$desc: String,$price: Int,$size: String,$status: Int,$title: String) {
+                            insert_rewards(objects: {active: $active, description: $desc, price: $price, size: $size, status: $status, title: $title}) {
+                                returning {
+                                    active
+                                    description
+                                    id
+                                    price
+                                    size
+                                    status
+                                    title
+                                }
+                            }
+                        }`
+            } else if (event.target.textContent === 'Edit') {
+                query = `mutation editReward($id: Int, $active: Boolean, $desc: String, $price: Int, $size: String, $status: Int, $title: String) {
+                            update_rewards(where: {id: {_eq: $id}}, _set: {active: $active, description: $desc, price: $price, size: $size, status: $status, title: $title}) {
+                                returning {
+                                    active
+                                    description
+                                    id
+                                    price
+                                    size
+                                    status
+                                    title
+                                }
+                            }
+                        }`
+                variables = {
+                    ...variables,
+                    id: title.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+
+            if (!navigation.hasAttribute('style')) {
+                if (event.target.textContent === 'Add' && totalPages === parseInt(navigation.querySelector('.page.active').textContent)) {
+                    if (document.querySelectorAll('.row-item').length === limit) {
+                        totalPages++
+                        if (secondCircle.classList.contains('active')) {
+                            btnNext.style = 'display:flex;'
+                        }
+                        if (firstCircle.classList.contains('active') && secondCircle.hasAttribute('style')) {
+                            btnNext.style = 'display:flex;'
+                            secondCircle.removeAttribute('style')
+                        }
+                    } else {
+                        offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                        await getRewards(offset, statusItems)
+                    }
+                }
+            }
+
+            if (event.target.textContent === 'Edit' && !navigation.classList.contains('hidden')) {
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                getRewards(offset, statusItems)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && active.textContent === document.getElementById('filterSelect').textContent) {
+                foundChoiceFlag = 1
+                getRewards(offset, statusItems, title)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && active.textContent !== document.getElementById('filterSelect').textContent) {
+                offset = 0
+                await getRewards(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && document.getElementById('filterSelect').textContent === 'All') {
+                foundChoiceFlag = 1
+                getRewards(offset, statusItems, title)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            }
+
+            document.querySelector('.ninjable__popup-close').click()
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        // error checking
+
+        function addErrorEmpty(element, text) {
+            if (text === '' || text.trim() === 'Please Select...') {
+                element.classList.add("error");
+            } else {
+                element.classList.remove("error");
+            }
+        }
+
+        // scroll to top Page
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // Order 
+
+        function orderId() {
+            if (order === 'asc') {
+                order = 'desc'
+            } else if (order === 'desc') {
+                order = 'asc'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getRewards(offset, statusItems)
+        }
+
+        const popupContent = document.querySelector('.popup__users-content-new')
+
+        // Close Popup 
+
+        document.querySelector('.ninjable__popup-close').addEventListener('click', () => {
+            scrollToAnchorPopup()
+            clearForm()
+            hiddenSelector()
+        })
+
+        // clear Form
+
+        function clearForm() {
+            popupContent.querySelectorAll('input').forEach((e) => {
+                e.value = ''
+                e.classList.remove("error")
+            })
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.textContent = 'Please Select...'
+                e.classList.remove('error')
+                e.removeAttribute('style')
+            })
+            popupContent.querySelectorAll('textarea').forEach((e) => {
+                e.value = ''
+                e.classList.remove('error')
+                e.removeAttribute('style')
+            })
+        }
+
+        // hidden selector
+
+        function hiddenSelector() {
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.parentNode.classList.remove('active')
+                e.classList.remove('select-arrow-active')
+                e.parentNode.children[1].classList.add('select-hide')
+            })
+        }
+
+        // scroll to top Popup
+
+        function scrollToAnchorPopup() {
+            let anchorPopup = []
+            const anchorPopupAll = document.querySelectorAll('.popup__users-content-new')
+            anchorPopupAll.forEach((e) => {
+                anchorPopup.push(e.firstElementChild)
+            })
+            anchorPopup.forEach((e) => {
+                e.scrollIntoView({ behavior: 'smooth' })
+            })
+        }
+
+        // document event target
+
+        document.addEventListener('click', () => {
+            if (event.target === document.getElementById('cellId')) {
+                orderId()
+            }
+
+            if (event.target.classList.contains('archive')) {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+                archiveAchievements(event)
+            } else {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+            }
+
+            if (event.target !== document.getElementById('filterSelect')) {
+                document.querySelector('.filter-select').classList.remove('active')
+                filter.classList.add('select-hide')
+            }
+
+            if (event.target !== document.getElementById('search-input')) {
+                document.querySelector('.search-input-selector').classList.add('hidden')
+                if (document.querySelector('.closeFilter ').classList.contains('hidden')) {
+                    inputElementFilter.value = ''
+                }
+            }
+
+            if (event.target.classList.contains('add-revard-btn')) {
+                document.querySelector('.reward-popup').querySelector('h3').textContent = 'ADD REWARD'
+                document.querySelector('.user-add').textContent = 'Add'
+            }
+
+            if (event.target.classList.contains('user-add')) {
+                rewardAddEdit(event)
+            }
+
+            if (!event.target.classList.contains('select-selected-new')) {
+                hiddenSelector()
+            } else {
+                hiddenSelector()
+                event.target.parentNode.classList.add('active')
+                event.target.parentNode.children[1].classList.remove('select-hide')
+                event.target.classList.add('select-arrow-active')
+            }
+
+
+            if (event.target.classList.contains('edit')) {
+                document.querySelector('.add-reward-popup').classList.add('active')
+                document.querySelector('.reward-popup').querySelector('h3').textContent = 'EDIT REWARD'
+                document.querySelector('.user-add').textContent = 'Edit'
+
+                const popup = document.getElementById('popup')
+
+
+                let titleEdit = popup.children[0].querySelector('input')
+                let textEdit = popup.children[1].querySelector('textarea')
+                let sizeEdit = popup.children[2].querySelector('input')
+                let priceEdit = popup.children[4].querySelector('input')
+                let activeEdit = popup.children[5].children[0].children[0]
+
+                titleEdit.setAttribute('data-id', event.target.dataset.id)
+
+                activeEdit.style = 'font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;'
+                titleEdit.value = event.target.parentNode.parentNode.children[2].textContent
+                textEdit.value = event.target.parentNode.parentNode.children[3].children[0].children[0].textContent.trim()
+                sizeEdit.value = event.target.parentNode.parentNode.children[3].children[0].children[2].textContent.split(": ")[1]
+                priceEdit.value = parseInt(event.target.parentNode.parentNode.children[4].children[0].textContent)
+                activeEdit.textContent = event.target.parentNode.parentNode.children[5].textContent
+            }
+        })
+
+    </script>
     <script src="./js/main.min.js"></script>
 
 </body>

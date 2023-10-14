@@ -1,17 +1,17 @@
-/* let know */
 
+/* let know */
 const addBtns = document.querySelectorAll('.user-add');
 
-if (addBtns) {
-  addBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const letKnowElems = document.querySelectorAll('.let-know');
-      letKnowElems.forEach(elem => {
-        elem.classList.add('active');
-      });
-    });
-  });
-}
+// if (addBtns) {
+//   addBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       const letKnowElems = document.querySelectorAll('.let-know');
+//       letKnowElems.forEach(elem => {
+//         elem.classList.add('active');
+//       });
+//     });
+//   });
+// }
 
 // Levels popup
 
@@ -28,47 +28,52 @@ if (levelsPopup && openLevelsPopup) {
   });
 }
 
+//Get Levels
 
 // Levels buttons 
 
-const buttons = document.querySelectorAll('.level__popup-form button');
+function addPopupButtonsListeners() {
 
-buttons.forEach(button => {
-  let clickCount = 0;
-  let popup = null;
+  const buttons = document.querySelectorAll('.level__popup-form button');
 
-  button.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount === 2 && button.classList.contains('active')) {
-      popup = document.createElement('div');
-      popup.classList.add('delete-level-popup');
-      popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
+  buttons.forEach(button => {
+    let clickCount = 0;
+    let popup = null;
 
-      popup.style.position = 'absolute';
-      popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
-      popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
+    button.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount === 2 && button.classList.contains('active')) {
+        popup = document.createElement('div');
+        popup.classList.add('delete-level-popup');
+        popup.innerHTML = '<p>Level can\'t be deactivated until you have at least one active user with this level.</p>';
 
-      button.parentNode.insertBefore(popup, button.nextSibling);
-      clickCount = 0;
-    } else {
-      if (button.classList.contains('active')) {
-        button.classList.remove('active');
+        popup.style.position = 'absolute';
+        popup.style.top = `${(button.offsetTop + button.offsetHeight) / window.innerHeight * 55}%`;
+        popup.style.right = `${(window.innerWidth - button.offsetLeft) / window.innerWidth * 55}%`;
+
+        button.parentNode.insertBefore(popup, button.nextSibling);
+        clickCount = 0;
       } else {
-        button.classList.add('active');
+        if (button.classList.contains('active')) {
+          button.classList.remove('active');
+        } else {
+          button.classList.add('active');
+        }
       }
-    }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
+        popup.remove();
+        popup = null;
+      }
+    });
   });
-
-  document.addEventListener('click', (event) => {
-    if (popup && !button.contains(event.target) && !popup.contains(event.target)) {
-      popup.remove();
-      popup = null;
-    }
-  });
-});
+}
 
 
-// auto entry of the extended department
+
+// Auto entry of the extended department
 
 const inputs = document.querySelectorAll('.department-field');
 if (inputs.length > 0) {
@@ -178,6 +183,10 @@ if (addSkillPopup && addSkillBtn.length > 0) {
   });
   closeAddSkill.addEventListener('click', () => {
     addSkillPopup.classList.remove('active');
+    clearForm()
+    const AddSkillsTagsList = document.querySelector('.add-new__custom-select-wrapper').querySelector('.skills-tags-list');
+    while (AddSkillsTagsList.hasChildNodes())
+      AddSkillsTagsList.removeChild(AddSkillsTagsList.firstChild)
   });
 }
 
@@ -305,6 +314,44 @@ if (editRewardPopup && editRewardBtn.length > 0) {
 }
 
 
+/* answer popup */
+
+const answerPopup = document.querySelector('.answer-popup');
+const answerBtn = document.querySelectorAll('.answer');
+const answerClose = document.querySelector('.answer__popup-close');
+
+if (answerPopup && answerBtn.length > 0) {
+  answerBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      answerPopup.classList.add('active');
+    });
+  });
+  answerClose.addEventListener('click', () => {
+    answerPopup.classList.remove('active');
+  });
+}
+
+/* request edit popup */
+
+const requestEditPopup = document.querySelector('.answer-edit');
+const requestEditBtn = document.querySelectorAll('.edit');
+const requestEditClose = document.querySelector('.answer-edit-close');
+
+if (requestEditPopup && requestEditBtn.length > 0) {
+  requestEditBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      requestEditPopup.classList.add('active');
+    });
+  });
+  requestEditClose.addEventListener('click', () => {
+    requestEditPopup.classList.remove('active');
+  });
+}
+
+
+
+
+
 /* header avatar */
 
 const profileBtn = document.querySelector('.header__avatar');
@@ -317,84 +364,131 @@ if (profileBtn && profilePopup) {
 }
 
 /* alert popup */
-
-const archiveDeleteBtns = document.querySelectorAll('.delete-icon, .archive');
-
-archiveDeleteBtns.forEach((btn) => {
-  btn.addEventListener('click', (event) => {
-    event.preventDefault();
-    const row = btn.closest('.row-item');
-    const popup = document.createElement('div');
-    popup.classList.add('alert-popup');
-    popup.innerHTML = `
+function archiveButton() {
+  const archiveDeleteBtns = document.querySelectorAll('.delete-icon, .archive');
+  archiveDeleteBtns.forEach((e) => {
+    e.addEventListener('click', (event) => {
+      event.preventDefault();
+      const row = e.closest('.row-item');
+      const popup = document.createElement('div');
+      popup.classList.add('alert-popup');
+      popup.innerHTML = `
       <p>Are you sure?</p>
       <div class="btns">
         <button class="true">Yes</button>
         <button class="false">No</button>
       </div>
     `;
-    row.appendChild(popup);
-    const trueBtn = popup.querySelector('.true');
-    const falseBtn = popup.querySelector('.false');
-    trueBtn.addEventListener('click', () => {
-      if (document.body.classList.contains('levels-page')) {
-        const deleteLevelPopup = document.createElement('div');
-        deleteLevelPopup.classList.add('delete-level-popup');
-        deleteLevelPopup.innerHTML = `
-          <p>
-            Level can't be deactivated until you have at least one active user with this level.
-          </p>
-        `;
-        const rowRect = row.getBoundingClientRect();
-        const popupHeight = deleteLevelPopup.getBoundingClientRect().height;
-        const topOffset = rowRect.top - popupHeight;
-        deleteLevelPopup.style.position = 'absolute';
-        deleteLevelPopup.style.top = `1vw`;
-        deleteLevelPopup.style.left = `33vw`;
-        row.parentNode.appendChild(deleteLevelPopup); // Append to the parent of the table row
-      } else {
-        row.remove();
-      }
+      row.appendChild(popup);
+      const trueBtn = popup.querySelector('.true');
+      const falseBtn = popup.querySelector('.false');
 
-      popup.remove();
-    });
-    falseBtn.addEventListener('click', () => {
-      popup.remove();
+      trueBtn.addEventListener('click', async () => {
+        const numberIsActive = parseInt(e.getAttribute('data-id'))
+        const btnsLevelIs = formPopupLevels.querySelectorAll('button')
+        const btnsLevelIsArr = []
+        for (let i = 0; i < btnsLevelIs.length; i++) {
+          btnsLevelIsArr.push({
+            id: parseInt(btnsLevelIs[i].getAttribute('data-id')),
+            is_active: btnsLevelIs[i].classList.contains('active')
+          })
+        }
+        const delNumberIsActive = btnsLevelIsArr.find(item => item.id === numberIsActive)
+        delNumberIsActive.is_active = false;
+
+        const requestOptionsSave = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-hasura-admin-secret': HASURA_KEY
+          },
+          body: JSON.stringify({
+            query: `
+            mutation LevelsMutation($l1: Boolean, $l2: Boolean, $l3: Boolean, $l4: Boolean, $l5: Boolean, $l6: Boolean) {
+            update_levels_many (
+                updates: [
+                {
+                    where: {id: {_eq: 1}},
+                    _set: {is_active: $l1}
+                },
+                {
+                    where: {id: {_eq: 2}},
+                    _set: {is_active: $l2}
+                },
+                {
+                    where: {id: {_eq: 3}},
+                    _set: {is_active: $l3}
+                },
+                {
+                    where: {id: {_eq: 4}},
+                    _set: {is_active: $l4}
+                },
+                {
+                    where: {id: {_eq: 5}},
+                    _set: {is_active: $l5}
+                },
+                {
+                    where: {id: {_eq: 6}},
+                    _set: {is_active: $l6}
+                },
+                ]
+            ) {
+                affected_rows
+            }
+            }`,
+
+            variables: {
+              "l1": btnsLevelIsArr[0].is_active,
+              "l2": btnsLevelIsArr[1].is_active,
+              "l3": btnsLevelIsArr[2].is_active,
+              "l4": btnsLevelIsArr[3].is_active,
+              "l5": btnsLevelIsArr[4].is_active,
+              "l6": btnsLevelIsArr[5].is_active,
+            }
+          })
+        }
+        const response = await fetch(BaseUrl, requestOptionsSave)
+        const data = await response.json();
+        renderLevels();
+      });
+
+      falseBtn.addEventListener('click', () => {
+        popup.remove();
+      });
     });
   });
-});
 
 
-const skillsArchive = document.querySelector('.skills-archive');
-const skillsArchivePopup = document.querySelector('.skills__archive-popup');
-const skillsAlertPopup = document.querySelector('.skills__alert-popup');
-const alertFalse = document.querySelector('.false');
-const alertTrue = document.querySelector('.true');
+  const skillsArchive = document.querySelector('.skills-archive');
+  const skillsArchivePopup = document.querySelector('.skills__archive-popup');
+  const skillsAlertPopup = document.querySelector('.skills__alert-popup');
+  const alertFalse = document.querySelector('.false');
+  const alertTrue = document.querySelector('.true');
 
-if (skillsArchive && skillsArchivePopup && skillsAlertPopup && alertFalse && alertTrue) {
-  skillsArchive.addEventListener('click', (event) => {
-    event.preventDefault();
-    skillsAlertPopup.classList.add('active');
+  if (skillsArchive && skillsArchivePopup && skillsAlertPopup && alertFalse && alertTrue) {
+    skillsArchive.addEventListener('click', (event) => {
+      event.preventDefault();
+      skillsAlertPopup.classList.add('active');
 
-    setTimeout(() => {
+      setTimeout(() => {
+        if (skillsArchivePopup) {
+          skillsArchivePopup.classList.remove('active');
+        }
+      }, 3000);
+    });
+
+    alertTrue.addEventListener('click', () => {
+      skillsAlertPopup.classList.remove('active');
       if (skillsArchivePopup) {
-        skillsArchivePopup.classList.remove('active');
+        skillsArchivePopup.classList.add('active');
       }
-    }, 3000);
-  });
+    });
 
-  alertTrue.addEventListener('click', () => {
-    skillsAlertPopup.classList.remove('active');
-    if (skillsArchivePopup) {
-      skillsArchivePopup.classList.add('active');
-    }
-  });
-
-  alertFalse.addEventListener('click', () => {
-    skillsAlertPopup.classList.remove('active');
-  });
+    alertFalse.addEventListener('click', () => {
+      skillsAlertPopup.classList.remove('active');
+    });
+  }
 }
-
 
 /* custom period popup */
 
@@ -539,22 +633,22 @@ if (positionsPopup && addDepartmentBtns.length > 0) {
   }
 }
 
-const addJobPopup = document.querySelector('.positions__popup.add-job');
-const addJobBtns = Array.from(document.querySelectorAll('.add-job-btn'));
-const addJobClose = document.querySelector('.add-job-close');
+// const addJobPopup = document.querySelector('.positions__popup.add-job');
+// const addJobBtns = Array.from(document.querySelectorAll('.add-job-btn'));
+// const addJobClose = document.querySelector('.add-job-close');
 
-if (addJobPopup && addJobBtns.length > 0) {
-  addJobBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      addJobPopup.classList.add('active');
-    });
-  });
-  if (addJobClose) {
-    addJobClose.addEventListener('click', () => {
-      addJobPopup.classList.remove('active');
-    });
-  }
-}
+// if (addJobPopup && addJobBtns.length > 0) {
+//   addJobBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       addJobPopup.classList.add('active');
+//     });
+//   });
+//   if (addJobClose) {
+//     addJobClose.addEventListener('click', () => {
+//       addJobPopup.classList.remove('active');
+//     });
+//   }
+// }
 
 const editJobPopup = document.querySelector('.positions__popup.edit-job');
 const editJobBtns = Array.from(document.querySelectorAll('.edit-job-btn'));
@@ -679,11 +773,12 @@ for (let i = 0; i < selectElements.length; i++) {
   let selectSelectedElement = selectElement.getElementsByClassName("select-selected")[0];
   let selectItemsElement = selectElement.getElementsByClassName("select-items")[0];
   let selectOptionElements = selectItemsElement.getElementsByClassName("select-option");
-  
+
   selectSelectedElement.addEventListener("click", function () {
     this.classList.toggle("select-arrow-active");
     selectItemsElement.classList.toggle("select-hide");
-    
+    // document.getElementById('statusAdd').classList.remove('error')
+    // document.getElementById('permissionRole').classList.remove('error')
     // Оновлюємо стан `custom-select` на основі класів `select-selected`
     if (this.classList.contains("select-arrow-active")) {
       selectElement.classList.add("active");
@@ -691,14 +786,14 @@ for (let i = 0; i < selectElements.length; i++) {
       selectElement.classList.remove("active");
     }
   });
-  
+
   for (let j = 0; j < selectOptionElements.length; j++) {
     selectOptionElements[j].addEventListener("click", function () {
       let selectOptionValue = this.innerHTML;
       selectSelectedElement.innerHTML = selectOptionValue;
       selectSelectedElement.classList.remove("select-arrow-active");
       selectItemsElement.classList.add("select-hide");
-      
+
       // Оновлюємо стан `custom-select` на основі класів `select-selected`
       if (selectSelectedElement.classList.contains("select-arrow-active")) {
         selectElement.classList.add("active");
@@ -744,61 +839,88 @@ newCustomSelects.forEach((newCustomSelect) => {
     customScrollbarThumb.style.top = `${thumbTop}px`;
   }
 
-  newCustomTrigger.addEventListener('click', () => {
-    if (newCustomSelect.classList.contains('open')) {
-      newCustomSelect.classList.remove('open');
-    } else {
-      closeAllSelectsExcept(newCustomSelect);
-      newCustomSelect.classList.add('open');
-    }
-  });
+  // newCustomTrigger.addEventListener('click', () => {
+  //   if (newCustomSelect.classList.contains('open')) {
+  //     newCustomSelect.classList.remove('open');
+  //   } else {
+  //     closeAllSelectsExcept(newCustomSelect);
+  //     newCustomSelect.classList.add('open');
+  //   }
+  // });
 
   newCustomOptionsContainer.addEventListener('scroll', updateScroll);
 
-  newCustomOptionsList.forEach((option) => {
-    option.addEventListener('click', (event) => {
-      if (newCustomSelect.closest('.skills-filter-select')) {
-        const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
-        const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
-        const newCustomOptionValue = option.getAttribute('data-value');
-        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-        const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
+  // newCustomOptionsList.forEach((option) => {
+  //   option.addEventListener('click', (event) => {
+  //     if (newCustomSelect.closest('.skills-filter-select')) {
+  //       const selectedOptions = newCustomSelect.querySelectorAll('.new__custom-option.selected');
+  //       const selectedOptionValues = Array.from(selectedOptions).map((option) => option.getAttribute('data-value'));
+  //       const newCustomOptionValue = option.getAttribute('data-value');
+  //       const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+  //       const skillsTagsList = newCustomSelect.closest('.new__custom-select-wrapper').querySelector('.skills-tags-list');
 
-        if (selectedOptionValues.includes(newCustomOptionValue)) {
-          return;
-        }
+  //       if (selectedOptionValues.includes(newCustomOptionValue)) {
+  //         return;
+  //       }
 
-        const tagItem = document.createElement('div');
-        tagItem.classList.add('tag-item');
+  //       const tagItem = document.createElement('div');
+  //       tagItem.classList.add('tag-item');
 
-        const tagItemText = document.createElement('p');
-        tagItemText.textContent = option.textContent;
+  //       const tagItemText = document.createElement('p');
+  //       tagItemText.textContent = option.textContent;
 
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('remove');
-        tagItem.appendChild(tagItemText);
-        tagItem.appendChild(removeButton);
-        skillsTagsList.appendChild(tagItem);
-        addRemoveButtonListener(removeButton);
+  //       const removeButton = document.createElement('button');
+  //       removeButton.classList.add('remove');
+  //       tagItem.appendChild(tagItemText);
+  //       tagItem.appendChild(removeButton);
+  //       skillsTagsList.appendChild(tagItem);
 
-        option.classList.add('selected');
-        newCustomTrigger.textContent = 'Type here to search for Clan...';
-      } else {
-        const newCustomOptionValue = option.getAttribute('data-value');
-        const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
-        if (newCustomSelect.closest('.acievements-select')) {
-          newCustomTrigger.textContent = 'icon';
-        } else {
-          newCustomTrigger.textContent = option.textContent;
-        }
-        newCustomSelect.classList.remove('open');
-        if (newCustomSelect.classList.contains('filter-select-scroll')) {
-          newCustomSelect.classList.add('open');
-          newCustomTrigger.textContent = 'Type here to search for Clan...';
-        }
-      }
-    });
-  });
+  //       option.classList.add('selected');
+  //       newCustomTrigger.textContent = 'Type here to search for Clan...';
+
+
+
+  //       // const selectedOptionsEdit = newCustomSelectEdit.querySelectorAll('.new__custom-option-edit.selected');
+  //       // const selectedOptionValuesEdit = Array.from(selectedOptionsEdit).map((option) => option.getAttribute('data-value'));
+  //       // const newCustomOptionValueEdit = option.getAttribute('data-value');
+  //       // const newCustomTriggerEdit = newCustomSelectEdit.querySelector('.new__custom-select__trigger');
+  //       // const skillsTagsListEdit = document.querySelector('.edit-new__custom-select-wrapper').querySelector('.edit-skills-tags-list');
+  //       //
+  //       // if (selectedOptionValuesEdit.includes(newCustomOptionValueEdit)) {
+  //       //   return;
+  //       // }
+  //       //
+  //       // const tagItemEdit = document.createElement('div');
+  //       // tagItemEdit.classList.add('tag-item');
+  //       //
+  //       // const tagItemEditText = document.createElement('p');
+  //       // tagItemEditText.textContent = option.textContent;
+  //       //
+  //       // const removeButtonEdit = document.createElement('button');
+  //       // removeButtonEdit.classList.add('remove');
+  //       // tagItemEdit.appendChild(tagItemEditText);
+  //       // tagItemEdit.appendChild(removeButtonEdit);
+  //       // skillsTagsListEdit.appendChild(tagItemEdit);
+  //       // addRemoveButtonListener(removeButtonEdit);
+  //       //
+  //       // option.classList.add('selected');
+  //       // newCustomTriggerEdit.textContent = 'Type here to search for Clan...';
+  //     } else {
+  //       const newCustomOptionValue = option.getAttribute('data-value');
+  //       const newCustomTrigger = newCustomSelect.querySelector('.new__custom-select__trigger');
+  //       if (newCustomSelect.closest('.acievements-select')) {
+  //         newCustomTrigger.textContent = 'icon';
+  //       } else {
+  //         newCustomTrigger.textContent = option.textContent;
+  //       }
+  //       newCustomSelect.classList.remove('open');
+  //       if (newCustomSelect.classList.contains('filter-select-scroll')) {
+  //         newCustomSelect.classList.add('open');
+  //         newCustomTrigger.textContent = 'Type here to search for Clan...';
+  //       }
+  //     }
+  //   });
+  // });
 
 
   customScrollbarThumb.addEventListener("mousedown", (e) => {
@@ -833,42 +955,42 @@ newCustomSelects.forEach((newCustomSelect) => {
   updateScroll();
 });
 
-const skillsTagsList = document.querySelector('.skills-tags-list');
+// const skillsTagsList = document.querySelector('.skills-tags-list');
 
-const observer = new MutationObserver(() => {
-  if (skillsTagsList.querySelectorAll('.tag-item').length > 0) {
-    skillsTagsList.classList.add('active');
-  } else {
-    skillsTagsList.classList.remove('active');
-  }
-});
+// const observer = new MutationObserver(() => {
+//   if (skillsTagsList.querySelectorAll('.tag-item').length > 0) {
+//     skillsTagsList.classList.add('active');
+//   } else {
+//     skillsTagsList.classList.remove('active');
+//   }
+// });
 
-const config = { childList: true };
-observer.observe(skillsTagsList, config);
+// const config = { childList: true };
+// observer.observe(skillsTagsList, config);
 
 
-const newCustomSelect = document.querySelector('.new__custom-select');
+// const newCustomSelect = document.querySelector('.new__custom-select');
 
-function checkCustomSelect() {
-  if (skillsTagsList.classList.contains('active') && !newCustomSelect.classList.contains('open')) {
-    newCustomSelect.classList.add('hide');
-  } else {
-    newCustomSelect.classList.remove('hide');
-  }
-}
+// function checkCustomSelect() {
+//   if (skillsTagsList.classList.contains('active') && !newCustomSelect.classList.contains('open')) {
+//     newCustomSelect.classList.add('hide');
+//   } else {
+//     newCustomSelect.classList.remove('hide');
+//   }
+// }
 
-checkCustomSelect();
+// checkCustomSelect();
 
-skillsTagsList.addEventListener('click', () => {
-  checkCustomSelect();
-});
+// skillsTagsList.addEventListener('click', () => {
+//   checkCustomSelect();
+// });
 
-const selectOpenBtn = document.querySelector('.select-open-btn');
-selectOpenBtn.addEventListener('click', () => {
-  console.log('clk')
-  newCustomSelect.classList.add('open');
-  newCustomSelect.classList.remove('hide');
-});
+// const selectOpenBtn = document.querySelector('.select-open-btn');
+// selectOpenBtn.addEventListener('click', () => {
+//   console.log('clk')
+//   newCustomSelect.classList.add('open');
+//   newCustomSelect.classList.remove('hide');
+// });
 
 
 
@@ -886,4 +1008,38 @@ if (passwordInput && passwordIcon) {
     }
   })
 };
+
+
+
+
+const addSkillsTagsList = document.querySelector('.add-skills-tags-list');
+const customSelectTrigger = document.querySelector('.new__custom-select__trigger');
+
+if (addSkillsTagsList && customSelectTrigger) {
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        if (addSkillsTagsList.classList.contains('active')) {
+          customSelectTrigger.classList.add('hidden');
+        } else {
+          customSelectTrigger.classList.remove('hidden');
+        }
+
+        if (customSelectTrigger.classList.contains('open')) {
+          selectOpenBtn.classList.add('active');
+        } else {
+          selectOpenBtn.classList.remove('active');
+        }
+      }
+    }
+  });
+
+  observer.observe(addSkillsTagsList, { attributes: true });
+
+  if (addSkillsTagsList.classList.contains('active')) {
+    customSelectTrigger.classList.add('hidden');
+  }
+}
+
+
 

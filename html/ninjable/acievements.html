@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="acievements-page">
@@ -100,17 +101,28 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="content acievements">
-                <h2>ACHIEVEMENTS <span class="acievements-info"></span></h2>
-
+                <div id="anchor">
+                    <h2>ACHIEVEMENTS <span class="acievements-info"></span></h2>
+                </div>
                 <div class="info-popup acievements-title">
                     <p>
                         You can have only 5 active challenges. <br>
@@ -124,30 +136,38 @@
                     </div>
                     <div class="search__wrapper">
                         <span class="search-icon">
-                            <input class="search-input" type="text" placeholder="Super Hero">
+                            <div class="search-input-block">
+                                <input class="search-input" id="search-input" type="text"
+                                    placeholder="Type here to search for Acievements...">
+                                <button class="closeFilter hidden">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </button>
+                                <div class="search-input-selector hidden">
+                                </div>
+                            </div>
                         </span>
                         <div class="filter-select">
-                            <div class="select-selected">Select...</div>
+                            <div class="select-selected" id="filterSelect">All</div>
                             <span class="line"></span>
-                            <div class="select-items select-hide">
+                            <div class="select-items select-hide" id="selectItemsFilter">
                                 <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
+                                    <input type="checkbox" id="all" checked>
+                                    <label for="all" class="filterLabel">All</label>
                                 </div>
                                 <div class="select-option">
                                     <input type="checkbox" id="active">
-                                    <label for="active">Active</label>
+                                    <label for="active" class="filterLabel">Active</label>
                                 </div>
                                 <div class="select-option">
-                                    <input type="checkbox" id="archied">
-                                    <label for="archied">Archied</label>
+                                    <input type="checkbox" id="Archived">
+                                    <label for="Archived" class="filterLabel">Archived</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="table">
                         <div class="row row-header">
-                            <div class="cell id">ID</div>
+                            <div class="cell id" id="cellId">ID</div>
                             <div class="cell">Icon</div>
                             <div class="cell">Name</div>
                             <div class="cell">Condition</div>
@@ -155,151 +175,18 @@
                             <div class="cell">Status</div>
                             <div class="cell">Actions</div>
                         </div>
-                        <div class="row row-item">
-                            <div class="cell id"><span>1</span></div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <div>
-                                    <span>Tasks:</span> 10 <br>
-                                    <span>Period:</span> Weekly <br>
-                                    <span>Badges Amount:</span> 5 <br>
-                                </div>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Archived</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive deactivate"></span>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <span>Tasks:</span> 200 <br>
-                                <span>Period:</span> Monthly <br>
-                                <span>Badges Amount:</span> 4 <br>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <span>Tasks:</span> 200 <br>
-                                <span>Period:</span> Monthly <br>
-                                <span>Badges Amount:</span> 4 <br>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <span>Tasks:</span> 200 <br>
-                                <span>Period:</span> Monthly <br>
-                                <span>Badges Amount:</span> 4 <br>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-2.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <span>Tasks:</span> 200 <br>
-                                <span>Period:</span> Monthly <br>
-                                <span>Badges Amount:</span> 4 <br>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell acievements-icon">
-                                <div class="acievements-bg">
-                                    <img src="./img/acievements-img-3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="cell name">Meadow with Magic <br> Mushrooms</div>
-                            <div class="cell condition">
-                                <span>Tasks:</span> 200 <br>
-                                <span>Period:</span> Monthly <br>
-                                <span>Badges Amount:</span> 4 <br>
-                            </div>
-                            <div class="cell">
-                                <p class="coins">30</p>
-                            </div>
-                            <div class="cell status">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
                         </div>
                     </div>
-                    <div class="navigation">
-                        <span class="prev"></span>
-                        <span class="page active">1</span>
-                        <span class="page">2</span>
-                        <span class="next"></span>
+                    <div class="navigation" id="navigation">
+                        <span class="prev" id="btnPrev"></span>
+                        <span class="page active" id="firstCircle">1</span>
+                        <span class="page" id="secondCircle">2</span>
+                        <span class="next" id="btnNext"></span>
                     </div>
                 </div>
             </section>
@@ -314,7 +201,7 @@
                     <h3>ADD BADGE</h3>
                 </div>
                 <div class="popup__users-content">
-                    <div class="badge__popup-form">
+                    <div class="badge__popup-form" id="popup">
                         <label>* Icon
                             <div class="new__custom-select-wrapper acievements-select">
                                 <div class="new__custom-select">
@@ -370,8 +257,8 @@
                             <span class="let-know">Please let us know icon</span>
                         </label>
                         <label>* Name
-                            <input type="text" placeholder="Joe Doe">
-                            <span class="let-know">Please let us know your name</span>
+                            <input type="text" placeholder="Please let us know badge name">
+                            <span class="let-know">Please let us know badge name</span>
                         </label>
 
                         <h4>Condition</h4>
@@ -393,7 +280,7 @@
                                 </label>
 
                                 <div class="custom-select">
-                                    <div class="select-selected">Please Select...
+                                    <div class="select-selected-new">Please Select...
                                     </div>
                                     <div class="select-items select-hide">
                                         <div class="select-option">Coins</div>
@@ -412,7 +299,7 @@
                                     </div>
                                 </label>
                                 <div class="custom-select">
-                                    <div class="select-selected">Please Select...
+                                    <div class="select-selected-new">Please Select...
                                     </div>
                                     <div class="select-items select-hide">
                                         <div class="select-option">Monthly</div>
@@ -437,7 +324,7 @@
                                         </p>
                                     </div>
                                 </label>
-                                <input type="text" placeholder="10">
+                                <input type="number" placeholder="10">
                                 <span class="let-know">Please let us know amount</span>
 
                                 <label class="info">* Badges Amount
@@ -455,7 +342,7 @@
                                         </p>
                                     </div>
                                 </label>
-                                <input type="text" placeholder="1">
+                                <input type="number" placeholder="1">
                                 <span class="let-know">Please let us know badges amount</span>
                             </div>
                         </div>
@@ -472,32 +359,1063 @@
                             </div>
                         </label>
 
-                        <input type="text" placeholder="30 Coins">
+                        <input type="number" placeholder="30 Coins">
                         <span class="let-know">Please let us know reward</span>
                         <h4>Reward</h4>
 
                         <label>* Status
                             <div class="custom-select">
-                                <div class="select-selected">Please Select...
+                                <div class="select-selected-new">Please Select...
                                 </div>
                                 <div class="select-items select-hide">
                                     <div class="select-option">Active</div>
                                     <div class="select-option">Archied</div>
                                 </div>
                             </div>
-                            <span class="let-know">Please let us know status</span>
+                            <span class="let-know">Please let us knoкw status</span>
                         </label>
 
                         <div class="bottom">
-                            <button class="btn user-add" type="submit">Add</button>
+                            <button class="btn badge-add" type="submit">Add</button>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 99999999;
+        }
+
+        .overlay.active {
+            display: block;
+            z-index: 99999999;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .row-item:nth-child(even) {
+            background-color: rgba(233, 237, 242, .45);
+        }
+
+        .row-header :nth-child(1) {
+            width: 3.86vw !important;
+        }
+
+        .row-header :nth-child(2) {
+            max-width: 7.71vw !important;
+        }
+
+        .row-header :nth-child(3) {
+            width: 12.08vw !important;
+        }
+
+        .row-header :nth-child(4) {
+            width: 11.36vw !important;
+        }
+
+        .row-header :nth-child(5) {
+            width: 4.85vw !important;
+        }
+
+        .row-header :nth-child(6) {
+            min-width: 5.5vw !important;
+        }
+
+        .row-header :nth-child(6) {
+            width: 4.86vw !important;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .search-input-block {
+            display: flex;
+        }
+
+        .search-input {
+            position: relative;
+        }
+
+        .search-input-selector {
+            position: absolute;
+            width: 100%;
+            top: 95%;
+            background-color: white;
+            z-index: 99;
+            line-height: 0;
+            border: 0.052vw solid #d7dee6;
+            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+            border-radius: 0.417vw;
+            border-top: none;
+        }
+
+        .search-input-selector label {
+            font-family: Rubik;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .834vw;
+            letter-spacing: .01vw;
+            color: #869dc8;
+            padding-left: 3.91vw;
+            padding-right: 3.91vw;
+            padding-top: 0.626vw;
+            padding-bottom: 0.521vw;
+            cursor: pointer;
+            color: #869dc8;
+            line-height: .834vw;
+        }
+
+        .search-input-selector label:hover {
+            background: rgba(233, 237, 242, 0.7);
+        }
+
+        .closeFilter {
+            position: absolute;
+            right: 0.5vw;
+            top: 0.8vw;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 1vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+        }
+
+        .info {
+            width: fit-content;
+        }
+
+        .error {
+            border: 1px solid red !important;
+        }
+
+        .add-badge-popup .custom-select .select-selected-new {
+            width: 100%;
+            padding-bottom: 0.798vw;
+        }
+
+        .select-selected-new {
+            padding-top: 0.938vw;
+            padding-bottom: 0.938vw;
+            padding-left: 2.086vw;
+            padding-right: 1.199vw;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .73vw;
+            letter-spacing: .01vw;
+            color: #b9babe;
+            width: 26.799vw;
+            background: #fff;
+            border: 0.052vw solid #d7dee6;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            border-radius: 0.417vw;
+            text-transform: capitalize;
+        }
+
+        .select-selected-new::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 1.199vw;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 0.261vw solid rgba(0, 0, 0, 0);
+            border-right: 0.261vw solid rgba(0, 0, 0, 0);
+            border-top: 0.261vw solid #555;
+        }
+
+        .row-header .id {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        let limit = 5
+        let statusItems = ''
+        let offset = 0
+        let foundChoiceFlag = 0
+        let order = 'asc'
+        let countItems
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            await getAcievements(offset, statusItems)
+            pagination(countItems)
+            commonFilter()
+        });
+
+        // getting all records from API
+
+        async function getAcievements(offset, statusItems, e) {
+            document.querySelector('.overlay').classList.add('active')
+            let datas = []
+            let query = ''
+            let variables = {}
+            if (statusItems === '' && foundChoiceFlag === 0) {
+                query = `query getBadges($limit: Int, $offset: Int, $order: order_by) {
+                            badges(limit: $limit, offset: $offset, order_by: {id: $order}) {
+                                active
+                                camount
+                                cbamount
+                                cperiod
+                                creward
+                                ctype
+                                id
+                                title
+                                    },badges_aggregate{
+                                        aggregate{
+                                            count
+                                    }
+                                }
+                            }`
+                variables = {
+                    limit: limit,
+                    offset: offset,
+                    order: order
+                }
+            } else if (statusItems !== '' && foundChoiceFlag === 0) {
+                query = `query getBadges($limit: Int, $offset: Int, $order: order_by, $active: Boolean) {
+                            badges(limit: $limit, offset: $offset, order_by: {id: $order}, where: {active: {_eq: $active}}) {
+                                active
+                                camount
+                                cbamount
+                                cperiod
+                                creward
+                                ctype
+                                id
+                                title
+                                 },badges_aggregate(where: {active:{_eq:$active}}){
+                                    aggregate{
+                                        count
+                                    }
+                                }
+                            }`
+                variables = {
+                    active: statusItems,
+                    limit: limit,
+                    offset: offset,
+                    order: order
+                }
+            } else if (foundChoiceFlag === 1) {
+                query = `query getBadges($id:Int) {badges(where: {id: {_eq: $id}}) {
+                                active
+                                camount
+                                cbamount
+                                cperiod
+                                creward
+                                ctype
+                                id
+                                title
+                                 }
+                            }`
+                variables = {
+                    id: e.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.badges
+
+            foundChoiceFlag === 1 ? foundChoiceFlag = 0 : countItems = json.data.badges_aggregate.aggregate.count
+
+            const rowHeader = document.querySelector('.table');
+
+            document.querySelectorAll('.row-item').forEach((e) => {
+                e.remove()
+            })
+
+            if (datas.length === 0) {
+                offset = 0
+                await getAcievements(offset, statusItems)
+                pagination(countItems)
+            }
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'row row-item';
+                newRow.innerHTML = `<div class="cell id"><span>${item.id}</span></div>
+                                        <div class="cell acievements-icon">
+                                            <div class="acievements-bg">
+                                                <img src="./img/acievements-img-1.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cell name">${item.title}</div>
+                                        <div class="cell condition">
+                                            <div>
+                                                <span>${item.ctype}: ${item.camount}</span><br>
+                                                <span>Period: ${item.cperiod}</span><br> 
+                                                <span>Badges Amount: ${item.cbamount}</span><br>
+                                            </div>
+                                        </div>
+                                        <div class="cell">
+                                            <p class="coins">${item.creward}</p>
+                                        </div>
+                                        <div class="cell status">${item.active == true ? "Active" : "Archived"}</div>
+                                        <div class="cell actions">
+                                            <span class="edit" data-id="${item.id}"></span>
+                                            <span class="archive ${item.active == true ? "" : "deactivate"}" data-id="${item.id}"></span>
+                                    </div>`
+                rowHeader.appendChild(newRow)
+            });
+
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        // common filter
+        const filter = document.getElementById('selectItemsFilter')
+        const allLabel = filter.querySelectorAll('label')
+
+        function commonFilter() {
+            allLabel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => filterOption(event, filter, e))
+            })
+        }
+
+        async function filterOption(event, e) {
+            if (event.target.previousElementSibling.checked) {
+                filter.classList.add('select-hide')
+                document.getElementById('filterSelect').textContent = 'All'
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+                statusItems = ''
+                offset = 0
+                await getAcievements(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            }
+
+            document.getElementById('filterSelect').textContent = event.target.textContent
+            filter.classList.add('select-hide')
+            const allInput = filter.querySelectorAll('input')
+            const inputItem = event.target.parentNode.querySelector('input');
+            allInput.forEach((e) => {
+                e.checked = e !== inputItem ? false : e.checked;
+            });
+            const filterText = document.getElementById('filterSelect').textContent;
+            inputElementFilter.value = ''
+            statusItems = (filterText === 'Active') ? true : (filterText === 'Archived') ? false : '';
+            offset = 0
+            await getAcievements(offset, statusItems)
+            pagination(countItems)
+            document.querySelector('.closeFilter').classList.add('hidden')
+        }
+
+        // Search
+        let abortControllerFilter = new AbortController();
+        const inputElementFilter = document.getElementById('search-input');
+        const inputSearchField = document.querySelector('.search-input-selector')
+
+        inputElementFilter.addEventListener('input', (e) => {
+            search(e)
+        })
+
+        async function search(e) {
+            inputSearchField.innerHTML = '';
+            inputSearchField.classList.add('hidden');
+
+            const inputValue = e.target.value.trim();
+            if (inputValue === '') {
+                return;
+            }
+
+            abortControllerFilter.abort();
+            abortControllerFilter = new AbortController();
+            abortControllerFilter.signal.addEventListener('abort', () => {
+                console.log('Request has been canceled');
+            });
+
+            try {
+                let query = '';
+                let variables = {
+                    search: inputValue + "%",
+                    order: "desc",
+                };
+
+                if (statusItems === '') {
+                    query = `query getBadges($search: String, $order: order_by) {
+                badges(order_by: {id: $order}, where: {title: {_ilike: $search}}) {
+                    id
+                    title
+                }
+            }`;
+                } else {
+                    query = `query getBadges($search: String, $active: Boolean, $order: order_by) {
+                badges(order_by: {id: $order}, where: {title: {_ilike: $search}, active: {_eq: $active}}) {
+                    active
+                    id
+                    title
+                }
+            }`;
+                    variables = {
+                        ...variables,
+                        active: statusItems,
+                    };
+                }
+
+                const data = JSON.stringify({ query, variables });
+
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length,
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: data,
+                    signal: abortControllerFilter.signal
+                };
+
+                const response = await fetch(BaseUrl, requestOptions);
+
+                if (response.ok) {
+                    const json = await response.json();
+                    const datas = json.data.badges;
+
+                    if (datas.length > 0) {
+                        inputSearchField.classList.remove('hidden');
+                        inputSearchField.innerHTML = datas.map((da) => {
+                            return `<label class="found_acievements" data-id="${da.id}">${da.title}</label>`;
+                        }).join('');
+
+                        document.querySelectorAll('.found_acievements').forEach((e) => {
+                            e.addEventListener('click', () => {
+                                foundChoiceFlag = 1
+                                navigation.classList.add('hidden')
+                                inputSearchField.classList.add('hidden');
+                                inputElementFilter.value = e.textContent;
+                                document.querySelector('.closeFilter').classList.remove('hidden')
+                                getAcievements(offset, statusItems, e)
+                            });
+                        });
+                    } else {
+                        inputSearchField.classList.add('hidden');
+                    }
+                }
+            } catch (error) {
+
+            }
+        }
+
+        document.querySelector('.closeFilter').addEventListener('click', () => {
+            foundChoiceFlag = 0
+            offset = 0
+            getAcievements(offset, statusItems)
+            navigation.classList.remove('hidden')
+            document.querySelector('.closeFilter').classList.add('hidden')
+            inputElementFilter.value = ''
+        })
+
+        // archive achievements
+
+        async function archiveAchievements(event) {
+            event.target.insertAdjacentHTML('afterend', `
+                 <div class="skills__alert-popup department__wrapper-archive active" style="left: 100%; top: -20% !important; " >        
+                    <p>Are you sure?</p>
+                    <div class="btns">
+                        <button class="true">Yes</button>
+                        <button class="false">No</button>
+                    </div>
+                 </div>
+                 `);
+
+            const falseButton = event.target.nextElementSibling.querySelector('.false');
+            const trueButton = event.target.nextElementSibling.querySelector('.true')
+
+            falseButton.addEventListener('click', () => {
+                event.target.nextElementSibling.remove();
+            });
+
+            trueButton.addEventListener('click', async () => {
+                const request = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: JSON.stringify({
+                        query: `mutation updateBadge($id: Int = 1, $active: Boolean = false) {
+                                    update_badges(where: {id: {_eq: $id}}, _set: {active: $active}) {
+                                        returning {
+                                        active
+                                        id
+                                        }
+                                    }
+                                }`,
+                        variables: {
+                            "id": event.target.dataset.id,
+                            "active": event.target.classList.contains('deactivate') ? true : false,
+                        }
+                    })
+                }
+
+                event.target.nextElementSibling.remove();
+                const response = await fetch(BaseUrl, request)
+                inputElementFilter.value !== '' && navigation.classList.remove('hidden')
+                inputElementFilter.value = ''
+                document.querySelector('.closeFilter').classList.add('hidden')
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                await getAcievements(offset, statusItems)
+            })
+        }
+
+        // paginatin
+        let totalPages
+        const navigation = document.getElementById('navigation')
+        const btnPrev = document.getElementById('btnPrev');
+        const firstCircle = document.getElementById('firstCircle');
+        const secondCircle = document.getElementById('secondCircle');
+        const btnNext = document.getElementById('btnNext');
+
+        function pagination(countItems) {
+            inputElementFilter.value = ''
+            navigation.removeAttribute('style')
+            navigation.classList.remove('hidden')
+            totalPages = Math.ceil(countItems / limit);
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+            secondCircle.removeAttribute('style')
+
+            if (totalPages === 1) {
+                firstCircle.textContent = '1';
+                secondCircle.textContent = '2';
+                firstCircle.classList.add('active');
+                secondCircle.classList.remove('active');
+                btnPrev.style = 'display:none;'
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            } else if (totalPages === 0) {
+                document.getElementById('navigation').style = 'display:none;'
+            }
+        }
+
+
+        // pagination next btn 
+        let currentPage
+        btnNext.addEventListener('click', () => {
+            // debugger
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active')
+
+                    firstCircle.textContent = parseInt(secondCircle.textContent) + 1;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getAcievements(offset, statusItems)
+            scrollToAnchor()
+        });
+        // pagination prev btn
+        btnPrev.addEventListener('click', () => {
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getAcievements(offset, statusItems)
+            scrollToAnchor()
+        })
+        // pagination firstCircle btn
+        firstCircle.addEventListener('click', () => {
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getAcievements(offset, statusItems)
+            scrollToAnchor()
+        })
+        // pagination secondCircle btn
+        secondCircle.addEventListener('click', () => {
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getAcievements(offset, statusItems)
+            scrollToAnchor()
+        })
+
+
+        const popupContent = document.querySelector('.popup__users-content')
+
+        // error checking
+
+        function addErrorEmpty(element, text) {
+            if (text === '' || text.trim() === 'Please Select...') {
+                element.classList.add("error");
+            } else {
+                element.classList.remove("error");
+            }
+        }
+
+        // hidden selector
+
+        function hiddenSelector() {
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.parentNode.classList.remove('active')
+                e.classList.remove('select-arrow-active')
+                e.parentNode.children[1].classList.add('select-hide')
+            })
+        }
+
+        // clear Form
+
+        function clearForm() {
+            popupContent.querySelectorAll('input').forEach((e) => {
+                e.value = ''
+                e.classList.remove("error")
+            })
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.textContent = 'Please Select...'
+                e.classList.remove('error')
+                e.removeAttribute('style')
+            })
+        }
+
+        // Close Popup 
+
+        document.querySelector('.ninjable__popup-close').addEventListener('click', () => {
+            scrollToAnchorPopup()
+            clearForm()
+            hiddenSelector()
+        })
+
+        // Add Badge and Edit Badge
+
+        async function addBadge(event) {
+            const popupAdd = event.target.parentNode.parentNode
+
+            let title = popupAdd.children[1].querySelector('input')
+            let ctype = popupAdd.children[3].children[0].children[1].children[0]
+            let cperiod = popupAdd.children[3].children[0].children[4].children[0]
+            let camount = popupAdd.children[3].children[1].children[1]
+            let cbamount = popupAdd.children[3].children[1].children[4]
+            let creward = popupAdd.children[5]
+            let active = popupAdd.children[8].children[0].children[0]
+
+            addErrorEmpty(title, title.value);
+            addErrorEmpty(ctype, ctype.textContent);
+            addErrorEmpty(cperiod, cperiod.textContent);
+            addErrorEmpty(camount, camount.value);
+            addErrorEmpty(cbamount, cbamount.value);
+            addErrorEmpty(creward, creward.value);
+            addErrorEmpty(active, active.textContent);
+
+            const elementValueArr = [title, camount, cbamount, creward]
+
+            elementValueArr.forEach((e) => {
+                e.addEventListener('input', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            const elementTextContentArr = [ctype, cperiod, active]
+
+            elementTextContentArr.forEach((e) => {
+                e.addEventListener('click', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            if (popupAdd.querySelectorAll('.error').length !== 0) {
+                return
+            }
+
+            let datas = []
+            let query = ''
+            let variables = {
+                active: active.textContent === "Active" ? true : false,
+                camount: camount.value,
+                cbamount: cbamount.value,
+                cperiod: cperiod.textContent,
+                creward: creward.value,
+                ctype: ctype.textContent,
+                title: title.value
+            }
+            if (event.target.textContent === 'Add') {
+                query = `mutation insertBadge ($active: Boolean,$camount: Int, $cbamount: Int, $cperiod: String, $creward: Int, $ctype: String, $title: String) {
+                                 insert_badges(objects: {active: $active, camount: $camount, cbamount: $cbamount, cperiod: $cperiod, creward: $creward, ctype: $ctype, title: $title}) {
+                                    returning {
+                                    active
+                                    camount
+                                    cbamount
+                                    cperiod
+                                    creward
+                                    ctype
+                                    title
+                                    }
+                                }
+                            }`
+            } else if (event.target.textContent === 'Edit') {
+                query = `mutation updateBadge($id: Int, $active: Boolean, $camount: Int, $cbamount: Int, $cperiod: String, $creward: Int, $ctype: String, $title: String) {
+                            update_badges(where: {id: {_eq: $id}}, _set: {active: $active, camount: $camount, cbamount: $cbamount, cperiod: $cperiod, creward: $creward, ctype: $ctype, title: $title}) {
+                                returning {
+                                    active
+                                    camount
+                                    cbamount
+                                    cperiod
+                                    creward
+                                    ctype
+                                    id
+                                    title
+                                    }
+                                }
+                            }`
+                variables = {
+                    ...variables,
+                    id: title.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+
+
+            if (!navigation.hasAttribute('style')) {
+                if (event.target.textContent === 'Add' && totalPages === parseInt(navigation.querySelector('.page.active').textContent)) {
+                    if (document.querySelectorAll('.row-item').length === limit) {
+                        totalPages++
+                        if (secondCircle.classList.contains('active')) {
+                            btnNext.style = 'display:flex;'
+                        }
+                        if (firstCircle.classList.contains('active') && secondCircle.hasAttribute('style')) {
+                            btnNext.style = 'display:flex;'
+                            secondCircle.removeAttribute('style')
+                        }
+                    } else {
+                        offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                        await getRewards(offset, statusItems)
+                    }
+                }
+            }
+
+            if (event.target.textContent === 'Edit' && !navigation.classList.contains('hidden')) {
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                getAcievements(offset, statusItems)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && active.textContent === document.getElementById('filterSelect').textContent) {
+                foundChoiceFlag = 1
+                getAcievements(offset, statusItems, title)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && active.textContent !== document.getElementById('filterSelect').textContent) {
+                offset = 0
+                await getAcievements(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && document.getElementById('filterSelect').textContent === 'All') {
+                foundChoiceFlag = 1
+                getAcievements(offset, statusItems, title)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            }
+
+            document.querySelector('.ninjable__popup-close').click()
+        }
+
+        // scroll to top Popup
+
+        function scrollToAnchorPopup() {
+            let anchorPopup = []
+            const anchorPopupAll = document.querySelectorAll('.popup__users-content')
+            anchorPopupAll.forEach((e) => {
+                anchorPopup.push(e.firstElementChild)
+            })
+            anchorPopup.forEach((e) => {
+                e.scrollIntoView({ behavior: 'smooth' })
+            })
+        }
+
+        // scroll to top Page
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // Order 
+
+        function orderId() {
+            if (order === 'asc') {
+                order = 'desc'
+            } else if (order === 'desc') {
+                order = 'asc'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getAcievements(offset, statusItems)
+        }
+
+        // document event target
+
+        document.addEventListener('click', () => {
+
+            if (event.target !== document.getElementById('filterSelect')) {
+                document.querySelector('.filter-select').classList.remove('active')
+                filter.classList.add('select-hide')
+            }
+
+            if (event.target !== document.getElementById('search-input')) {
+                document.querySelector('.search-input-selector').classList.add('hidden')
+                if (document.querySelector('.closeFilter ').classList.contains('hidden')) {
+                    inputElementFilter.value = ''
+                }
+            }
+
+            if (event.target.classList.contains('archive')) {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+                archiveAchievements(event)
+            } else {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+            }
+
+            if (event.target.classList.contains('badge-add')) {
+                addBadge(event)
+            }
+
+            if (!event.target.classList.contains('select-selected-new')) {
+                hiddenSelector()
+            } else {
+                hiddenSelector()
+                event.target.parentNode.classList.add('active')
+                event.target.parentNode.children[1].classList.remove('select-hide')
+                event.target.classList.add('select-arrow-active')
+            }
+
+            if (event.target.classList.contains('select-option')) {
+                event.target.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.children[0].style = 'font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;'
+            }
+
+            if (event.target.classList.contains('id')) {
+                orderId()
+            }
+
+            if (event.target.classList.contains('add-badge-btn')) {
+                document.querySelector('.add-badge-popup').querySelector('h3').textContent = 'ADD BADGE'
+                document.querySelector('.badge-add').textContent = 'Add'
+            }
+
+            if (event.target.classList.contains('edit')) {
+                document.querySelector('.add-badge-popup').classList.add('active')
+                document.querySelector('.add-badge-popup').querySelector('h3').textContent = 'EDIT BADGE'
+                document.querySelector('.badge-add').textContent = 'Edit'
+
+                const popup = document.getElementById('popup')
+
+                let titleEdit = popup.children[1].querySelector('input')
+                let ctypeEdit = popup.children[3].children[0].children[1].children[0]
+                let cperiodEdit = popup.children[3].children[0].children[4].children[0]
+                let camountEdit = popup.children[3].children[1].children[1]
+                let cbamountEdit = popup.children[3].children[1].children[4]
+                let crewardEdit = popup.children[5]
+                let activeEdit = popup.children[8].children[0].children[0]
+
+                titleEdit.setAttribute('data-id', event.target.dataset.id)
+
+                ctypeEdit.style = 'font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;'
+                cperiodEdit.style = 'font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;'
+                activeEdit.style = 'font: inherit;font-size: .782vw;line-height: .73vw;letter-spacing: .01vw;color: #1b2438;'
+
+                titleEdit.value = event.target.parentNode.parentNode.children[2].textContent
+                ctypeEdit.textContent = event.target.parentNode.parentNode.children[3].children[0].children[0].textContent.split(": ")[0];
+                camountEdit.value = event.target.parentNode.parentNode.children[3].children[0].children[0].textContent.split(": ")[1];
+                cperiodEdit.textContent = event.target.parentNode.parentNode.children[3].children[0].children[2].textContent.split(": ")[1];
+                cbamountEdit.value = event.target.parentNode.parentNode.children[3].children[0].children[4].textContent.split(": ")[1];
+                crewardEdit.value = event.target.parentNode.parentNode.children[4].children[0].textContent
+                activeEdit.textContent = event.target.parentNode.parentNode.children[5].textContent
+            }
+
+        })
+
+
+
+    </script>
 
     <script src="./js/main.min.js"></script>
 

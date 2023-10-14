@@ -14,9 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="levels-page">
+
     <div class="wrapper">
         <header class="header">
             <div class="container">
@@ -100,10 +102,20 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -114,97 +126,23 @@
                     <button class="add-level btn">Modify Level</button>
                 </div>
                 <div class="content__section">
-                    <div class="table">
-                        <div class="row row-header">
-                            <div class="cell id">ID</div>
-                            <div class="cell">Title Level</div>
-                            <div class="cell">Color</div>
-                            <div class="cell">Actions</div>
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
                         </div>
-
-                        <div class="row row-item">
-                            <div class="cell id">1</div>
-                            <div class="cell name">Junior</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="white">White - White Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell name">Middle</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="yellow">Yellow - Yellow Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">3</div>
-                            <div class="cell name">Senior</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="green">Green - Green Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">4</div>
-                            <div class="cell name">Lead</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="red">Red - Red Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">5</div>
-                            <div class="cell name">Manager</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="purple">Purple - Purple Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">4</div>
-                            <div class="cell name">C-level (Chef)</div>
-                            <div class="cell color">
-                                <div>
-                                    <span class="black">Black - Black Ninja</span>
-                                </div>
-                            </div>
-                            <div class="cell actions">
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-
-
                     </div>
-                </div>
+                    <table class="table table-wrapper" id="table">
+                        <tr class="row row-header">
+                            <th class="cell id">ID</th>
+                            <th class="cell">Title Level</th>
+                            <th class="cell">Color</th>
+                            <th class="cell">Actions</th>
+                        </tr>
 
-                <!--  <div class="navigation">
-                    <span class="prev"></span>
-                    <span class="page active">1</span>
-                    <span class="page">2</span>
-                    <span class="next"></span>
-                </div> -->
+                        <tbody id="cellid"></tbody>
+                    </table>
+
+                </div>
 
             </section>
         </section>
@@ -220,26 +158,314 @@
 
                 <div class="level__popup-content">
                     <h4>Levels</h4>
-                    <div class="level__popup-form">
-                        <button>Junior</button>
-                        <button>Lead</button>
-                        <button>Middle</button>
-                        <button>Manager</button>
-                        <button>Senior</button>
-                        <button>C-Level (Chef)</button>
+                    <div class="level__popup-form" id="formPopupLevels">
                     </div>
                 </div>
 
                 <div class="level__popup-bottom">
-                    <a class="btn" href="#">Save</a>
+                    <a class="btn" href="#" id="btnLevelSave">Save</a>
                 </div>
             </div>
+
         </div>
 
     </div>
+    <script>
 
-    <script src="./js/main.min.js"></script>
+        async function renderLevels() {
+            document.querySelector('.overlay').classList.add('active')
+            const data = JSON.stringify({
+                query: `query MyLevels {
+                    levels(order_by: { id: asc }) {
+                    color
+                    id
+                    is_active
+                    slug
+                    title
+                    }
+                }`,
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.levels.sort((a, b) => a.id - b.id);
+            let body = "";
+
+            document.getElementById('formPopupLevels').innerHTML = '';
+            datas.map((item) => {
+                const button = document.createElement('button')
+                button.innerHTML = item.title
+                button.setAttribute('data-id', item.id)
+                item.is_active && button.classList.add('active')
+                document.getElementById('formPopupLevels').append(button)
+            })
+            addPopupButtonsListeners()
+
+
+            document.getElementById('cellid').innerHTML = '';
+            datas.forEach((da) => {
+                if (da.is_active === true) {
+                    document.getElementById('cellid').innerHTML += `<tr class="row row-item"> 
+                            <td class="cell id">${da.id}</td>
+                            <td class="cell name">${da.title}</td>
+                            <td class="cell color">
+                                <div class="span-color__center">
+                                    <span class="${da.color}">${da.color} - ${da.color} Ninja</span>
+                                </div>
+                            </td>
+                            <td class="cell actions">
+                                <span class="archive" data-id="${da.id}"></span>
+                            </td> 
+                        </tr>`
+                }
+            })
+
+            archiveButton()
+            document.querySelector('.overlay').classList.remove('active')
+        };
+        renderLevels();
+    </script>
+
+    <script>
+        const btnLevelSave = document.getElementById('btnLevelSave')
+        btnLevelSave.addEventListener('click', (e) => modifyLevel(e))
+        async function modifyLevel(e) {
+            document.querySelector('.overlay').classList.add('active')
+            document.querySelector('.ninjable__popup').classList.remove('active')
+            e.preventDefault()
+            const btnsLevelIs = formPopupLevels.querySelectorAll('button')
+            const btnsLevelIsArr = []
+
+            for (let i = 0; i < btnsLevelIs.length; i++) {
+                btnsLevelIsArr.push({
+                    id: parseInt(btnsLevelIs[i].getAttribute('data-id')),
+                    is_active: btnsLevelIs[i].classList.contains('active')
+                })
+            }
+
+            const requestOptionsSave = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                    mutation LevelsMutation($l1: Boolean, $l2: Boolean, $l3: Boolean, $l4: Boolean, $l5: Boolean, $l6: Boolean) {
+                    update_levels_many (
+                        updates: [
+                        {
+                            where: {id: {_eq: 1}},
+                            _set: {is_active: $l1}
+                        },
+                        {
+                            where: {id: {_eq: 2}},
+                            _set: {is_active: $l2}
+                        },
+                        {
+                            where: {id: {_eq: 3}},
+                            _set: {is_active: $l3}
+                        },
+                        {
+                            where: {id: {_eq: 4}},
+                            _set: {is_active: $l4}
+                        },
+                        {
+                            where: {id: {_eq: 5}},
+                            _set: {is_active: $l5}
+                        },
+                        {
+                            where: {id: {_eq: 6}},
+                            _set: {is_active: $l6}
+                        },
+                        ]
+                    ) {
+                        affected_rows
+                    }
+                    }`,
+
+                    variables: {
+                        "l1": btnsLevelIsArr[0].is_active,
+                        "l2": btnsLevelIsArr[1].is_active,
+                        "l3": btnsLevelIsArr[2].is_active,
+                        "l4": btnsLevelIsArr[3].is_active,
+                        "l5": btnsLevelIsArr[4].is_active,
+                        "l6": btnsLevelIsArr[5].is_active,
+                    }
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptionsSave)
+            const data = await response.json();
+            renderLevels();
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+    </script>
+
+    <script src="./js/main.js"></script>
 
 </body>
+
+<style>
+    .soon {
+        display: block;
+        line-height: 1vw !important;
+    }
+
+    .soon span {
+        font-size: 0.65vw;
+    }
+
+    #formPopupLevels {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    #formPopupLevels button[data-id="1"] {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="2"] {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="3"] {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="4"] {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #formPopupLevels button[data-id="5"] {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #formPopupLevels button[data-id="6"] {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .span-color__center {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        margin-left: 0;
+        text-transform: capitalize;
+        align-items: center;
+    }
+
+    .cell {
+        text-align: start;
+    }
+
+    .row-item .cell {
+        height: 5.2vw;
+    }
+
+    #cellid .row:nth-child(odd) {
+        background-color: #f7f8fa;
+    }
+
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .row-header {
+        height: 5.01vw !important;
+    }
+
+    .row .cell:nth-child(1) {
+        width: 8.76vw;
+    }
+
+    .row .cell:nth-child(2) {
+        width: 12.49vw;
+    }
+
+    .row .cell:nth-child(3) {
+        width: 22.23vw;
+    }
+
+    .overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.5);
+        display: none;
+        z-index: 999999;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .overlay__inner {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+    }
+
+    .overlay__content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .spinner {
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        border-width: 2px;
+        border-color: rgba(0, 0, 0, 0.5);
+        border-top-color: #fff;
+        animation: spin 1s infinite linear;
+        border-radius: 100%;
+        border-style: solid;
+    }
+
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
 
 </html>

@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/variables.js"></script>
 </head>
 
 <body class="users-page">
@@ -100,413 +101,1866 @@
                         </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="sidemenu__item">
-                        <a class="sidemenu__item-link" href="integrations.html">Integrations</a>
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
                     </li>
                 </ul>
             </section>
 
             <section class="content users">
-                <h2>Users</h2>
+                <div id="anchor">
+                    <h2>Users</h2>
+                </div>
                 <div class="content__section">
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
                     <div class="add-user">
                         <a class="add-user-btn btn">Add User</a>
                     </div>
                     <div class="search__wrapper">
                         <span class="search-icon">
-                            <input class="search-input" type="text" placeholder="Joe Doe">
+                            <div class="search-input-block">
+                                <input class="search-input" id="search-input" type="text"
+                                    placeholder="Type here to search for Users...">
+                                <button class="closeFilter hidden">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </button>
+                                <div class="search-input-selector hidden">
+                                </div>
+                            </div>
                         </span>
                         <div class="filter-select">
-                            <div class="select-selected">Select...</div>
+                            <div class="select-selected" id="filterSelect">All</div>
                             <span class="line"></span>
-                            <div class="select-items select-hide">
+                            <div class="select-items select-hide" id="selectItemsFilter"
+                                style="position: absolute !important;">
                                 <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
+                                    <input type="checkbox" id="all" checked>
+                                    <label for="all" class="filterLabel">All</label>
                                 </div>
                                 <div class="select-option">
                                     <input type="checkbox" id="active">
-                                    <label for="active">Active</label>
+                                    <label for="active" class="filterLabel">Active</label>
                                 </div>
                                 <div class="select-option">
-                                    <input type="checkbox" id="archied">
-                                    <label for="archied">Archied</label>
+                                    <input type="checkbox" id="Archived">
+                                    <label for="Archived" class="filterLabel">Archived</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="table">
+                    <div class="table" id="users-table">
                         <div class="row row-header">
-                            <div class="cell id">ID</div>
+                            <div class="cell id" id="cellId">ID</div>
                             <div class="cell">Full Name</div>
                             <div class="cell">Email</div>
                             <div class="cell">Permissions<br>Role</div>
                             <div class="cell">Status</div>
                             <div class="cell">Actions</div>
                         </div>
-                        <div class="row row-item">
-                            <div class="cell id">1</div>
-                            <div class="cell name">Andrey Olishchuck</div>
-                            <div class="cell email">bobroe.web@gmail.com</div>
-                            <div class="cell admin">Admin</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">2</div>
-                            <div class="cell name">Mila Pater</div>
-                            <div class="cell email">mila@patel.com</div>
-                            <div class="cell admin">User</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive archive-alert"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">3</div>
-                            <div class="cell name">Jasmin Morgan</div>
-                            <div class="cell email">jasmin@morgan.de</div>
-                            <div class="cell admin">User</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">4</div>
-                            <div class="cell name">Felix McCoy</div>
-                            <div class="cell email">felix@mccoy.rs</div>
-                            <div class="cell admin">User</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">5</div>
-                            <div class="cell name">Olga Grekova</div>
-                            <div class="cell email">ovgrekova@gmail.com</div>
-                            <div class="cell admin">Admin</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                        <div class="row row-item">
-                            <div class="cell id">6</div>
-                            <div class="cell name">Samuel Bekele</div>
-                            <div class="cell email">sam@gmail.com</div>
-                            <div class="cell admin">Admin</div>
-                            <div class="cell active">Active</div>
-                            <div class="cell actions">
-                                <span class="edit"></span>
-                                <span class="archive"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="navigation">
-                        <span class="prev"></span>
-                        <span class="page active">1</span>
-                        <span class="page">2</span>
-                        <span class="next"></span>
                     </div>
                 </div>
+                <div class="navigation" id="navigation">
+                    <span class="prev" id="btnPrev"></span>
+                    <span class="page active" id="firstCircle">1</span>
+                    <span class="page" id="secondCircle">2</span>
+                    <span class="next" id="btnNext"></span>
+                </div>
+    </div>
+    </div>
 
-            </section>
-        </section>
+    </section>
+    </section>
 
-        <div class="ninjable__popup popup__users add-users">
-            <div class="ninjable__popup-inner">
-                <div class="ninjable__popup-header">
-                    <span class="ninjable__popup-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
+    <div class="ninjable__popup popup__users add-users" id="add-users_popup">
+        <div class="ninjable__popup-inner">
+            <div class="ninjable__popup-header">
+                <span class="ninjable__popup-close">
+                    <img src="./img/subscription__popup-close.svg" alt="">
+                </span>
+                <div id='anchor'>
                     <h3>ADD USER</h3>
                 </div>
-                <div class="popup__users-content">
-                    <div class="popup__users-form">
-                        <div class="popup__users-col">
-                            <label>* Full Name
-                                <input type="text" placeholder="Joe Doe">
-                                <span class="let-know">Please let us know your name</span>
-                            </label>
-                            <label>* Email
-                                <input type="text" placeholder="JoeDoe@company.com">
-                                <span class="let-know">Please let us know the email</span>
-                            </label>
-                            <label>* Department (Clan)
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Clan...</div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">F Department</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
+            </div>
+            <div class="popup__users-content" id="mainPopup">
+                <div class="popup__users-form" id="popup">
+                    <div class="popup__users-col">
+                        <label>* Full Name
+                            <input type="text" placeholder="Please let us know your full name" class="selected"
+                                id="add-user-firstname">
+                            <span class="let-know-required" id="add-user-firstname-required">Please let us know your
+                                full name</span>
+                        </label>
+                        <!-- <label>* Last Name
+                            <input type="text" placeholder="Please let us know your last name" class="selected"
+                                id="add-user-lastname">
+                            <span class="let-know-required" id="add-user-lastname-required">Please let us know your last
+                                name</span>s
+                        </label> -->
+                        <label>* Email
+                            <input type="text" placeholder="Please let us know the email" class="selected"
+                                id="add-user-email">
+                            <span class="let-know-required" id="add-user-email-required">Please let us know the
+                                email</span>
+                        </label>
+                        <label>* Department (Clan)
+                            <div class="custom-select">
+                                <div class="select-selected-new" contentEditable="true" id="depatmentField">Please Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="custom-scrollbar-new" id="selectDepatment">
                                     </div>
                                 </div>
-                                <span class="let-know">Please let us know the clan</span>
-                            </label>
-                            <label>* Level
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Junior</div>
-                                        <div class="select-option">Middle</div>
-                                        <div class="select-option">Senior</div>
-                                        <div class="select-option">Lead</div>
-                                        <div class="select-option">Manager</div>
-                                        <div class="select-option">C-level / Chef</div>
-                                    </div>
+                            </div>
+                            <span class="let-know">Please let us know the clan</span>
+                        </label>
+                        <label>* Level
+                            <div class="custom-select">
+                                <div class="select-selected-new" id="levelField">Please Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option level">Junior</div>
+                                    <div class="select-option level">Middle</div>
+                                    <div class="select-option level">Senior</div>
+                                    <div class="select-option level">Lead</div>
+                                    <div class="select-option level">Manager</div>
+                                    <div class="select-option level">C-level / Chef</div>
                                 </div>
-                                <span class="let-know">Please let us know the level</span>
-                            </label>
-                            <label>* Manager
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Manager...
-                                        </div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">A</div>
-                                            <div class="new__custom-option" data-value="ua">Alex Veremeev</div>
-                                            <div class="new__custom-option" data-value="ua">Angelina Savel’eva</div>
-                                            <div class="new__custom-option" data-value="ua">Artur Ivanov</div>
-                                            <div class="new__custom-option" data-value="ua">F Department</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-                                            <div class="new__custom-option" data-value="ua">Dariya Svetlova</div>
-                                            <div class="new__custom-option" data-value="ua">Demitriy Miheev</div>
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
-                                    </div>
+                            </div>
+                            <span class="let-know">Please let us know the level</span>
+                        </label>
+                        <label>* Manager
+                            <div class="custom-select">
+                                <div class="select-selected-new" id="managerField" contentEditable="true">Please
+                                    Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="custom-scrollbar-new" id="selectManager"></div>
                                 </div>
-                                <span class="let-know">Please let us know the manager</span>
-                            </label>
-                            <label>* Password
-                                <input class="password" type="password" id="password" name="password"
-                                    placeholder="*************************">
-                                <span class="password-icon"></span>
-                                <span class="let-know">Please let us know your password</span>
-                            </label>
-                        </div>
+                            </div>
+                            <span class="let-know">Please let us know the manager</span>
+                        </label>
+                        <label>* Password
+                            <input class="password" type="password" id="password" name="password"
+                                placeholder="*************************">
+                            <span class="password-icon"></span>
+                            <span class="let-know">Please let us know your password</span>
+                        </label>
+                    </div>
 
-                        <div class="popup__users-col">
-                            <label>* Job (Rank)
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Rank...
-                                        </div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">A</div>
-                                            <div class="new__custom-option" data-value="ua">Artist</div>
-                                            <div class="new__custom-option" data-value="ua">Architect</div>
-                                            <div class="new__custom-option" data-value="ua">Analyst</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-                                            <div class="new__custom-option" data-value="ua">Developer</div>
-                                            <div class="new__custom-option" data-value="ua">Designer</div>
-                                            <div class="new__custom-option" data-value="ua">Architect</div>
-                                            <div class="new__custom-option" data-value="ua">Analyst</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
+                    <div class="popup__users-col">
+                        <label>* Job (Rank)
+                            <div class="custom-select">
+                                <div class="select-selected-new" contentEditable="false" id="jobField">Select Department First</div>
+                                <div class="select-items select-hide">
+                                    <div class="custom-scrollbar-new" id="selectJob">
                                     </div>
                                 </div>
-                                <span class="let-know">Please let us know the rank</span>
-                            </label>
-                            <label>* Permission Role
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Admin</div>
-                                        <div class="select-option">User</div>
-                                    </div>
+                            </div>
+                            <span class="let-know">Please let us know the rank</span>
+                        </label>
+
+                        <label>Title
+                            <input type="text" placeholder="Manager Developer">
+                            <span class="let-know">Please let us know the rank</span>
+                        </label>
+
+                        <label>* Permission Role
+                            <div class="custom-select">
+                                <div class="select-selected-new" id="permissionRole">Please Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option role">Admin</div>
+                                    <div class="select-option role">User</div>
                                 </div>
-                                <span class="let-know">Please let us know the role</span>
-                            </label>
-                            <label>* Status
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Active</div>
-                                        <div class="select-option">Archived</div>
-                                    </div>
+                            </div>
+                            <span class="let-know">Please let us know the role</span>
+                        </label>
+                        <label>* Status
+                            <div class="custom-select">
+                                <div class="select-selected-new" id="statusAdd">Please Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option status">Active</div>
+                                    <div class="select-option status">Archived</div>
                                 </div>
-                                <span class="let-know">Please let us know the status</span>
-                            </label>
-                        </div>
+                            </div>
+                            <span class="let-know" id="roleAdd">Please let us know the status</span>
+                        </label>
                     </div>
-                    <div class="popup__users-footer">
-                        <a class="user-add" href="#">Add</a>
-                    </div>
+                </div>
+                <div class="popup__users-footer">
+                    <button class="btn user-add" type="button">Add</button>
                 </div>
             </div>
         </div>
-
-        <div class="ninjable__popup popup__users edit-users">
-            <div class="ninjable__popup-inner">
-                <div class="ninjable__popup-header">
-                    <span class="ninjable__popup-close edit-close">
-                        <img src="./img/subscription__popup-close.svg" alt="">
-                    </span>
-                    <h3>EDIT USER</h3>
-                </div>
-                <div class="popup__users-content">
-                    <div class="popup__users-form">
-                        <div class="popup__users-col">
-                            <label>* Full Name
-                                <input type="text" placeholder="Joe Doe">
-                                <span class="let-know">Please let us know your name</span>
-                            </label>
-                            <label>* Email
-                                <input type="text" placeholder="JoeDoe@company.com">
-                                <span class="let-know">Please let us know the email</span>
-                            </label>
-                            <label>* Department (Clan)
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Clan...
-                                        </div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">C Department</div>
-                                            <div class="new__custom-option" data-value="ua">F Department</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                            <div class="new__custom-option" data-value="ua">C</div>
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the clan</span>
-                            </label>
-                            <label>* Level
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Junior</div>
-                                        <div class="select-option">Middle</div>
-                                        <div class="select-option">Senior</div>
-                                        <div class="select-option">Lead</div>
-                                        <div class="select-option">Manager</div>
-                                        <div class="select-option">C-level / Chef</div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the level</span>
-                            </label>
-                            <label>* Manager
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Manager...
-                                        </div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">A</div>
-                                            <div class="new__custom-option" data-value="ua">Alex Veremeev</div>
-                                            <div class="new__custom-option" data-value="ua">Angelina Savel’eva</div>
-                                            <div class="new__custom-option" data-value="ua">Artur Ivanov</div>
-                                            <div class="new__custom-option" data-value="ua">F Department</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-                                            <div class="new__custom-option" data-value="ua">Dariya Svetlova</div>
-                                            <div class="new__custom-option" data-value="ua">Demitriy Miheev</div>
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the manager</span>
-                            </label>
-                            <label>* Password
-                                <input class="password" type="password" id="password" name="password"
-                                    placeholder="*************************">
-                                <span class="password-icon"></span>
-                                <span class="let-know">Please let us know your password</span>
-                            </label>
-                        </div>
-
-                        <div class="popup__users-col">
-                            <label>* Job (Rank)
-                                <div class="new__custom-select-wrapper department-select">
-                                    <div class="new__custom-select">
-                                        <span class="line"></span>
-                                        <div class="arrow"></div>
-                                        <div class="new__custom-select__trigger">Type here to search for Rank...
-                                        </div>
-                                        <div class="new__custom-options">
-                                            <div class="new__custom-option" data-value="ua">A</div>
-                                            <div class="new__custom-option" data-value="ua">Artist</div>
-                                            <div class="new__custom-option" data-value="ua">Architect</div>
-                                            <div class="new__custom-option" data-value="ua">Analyst</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-                                            <div class="new__custom-option" data-value="ua">Developer</div>
-                                            <div class="new__custom-option" data-value="ua">Designer</div>
-                                            <div class="new__custom-option" data-value="ua">Architect</div>
-                                            <div class="new__custom-option" data-value="ua">Analyst</div>
-                                            <div class="new__custom-option" data-value="ua">D</div>
-
-                                        </div>
-                                        <div class="custom-scrollbar"></div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the rank</span>
-                            </label>
-                            <label>* Permission Role
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Admin</div>
-                                        <div class="select-option">User</div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the role</span>
-                            </label>
-                            <label>* Status
-                                <div class="custom-select">
-                                    <div class="select-selected">Please Select...</div>
-                                    <div class="select-items select-hide">
-                                        <div class="select-option">Active</div>
-                                        <div class="select-option">Archived</div>
-                                    </div>
-                                </div>
-                                <span class="let-know">Please let us know the status</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="popup__users-footer">
-                        <a class="user-add" href="#">Add</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
     </div>
 
-    <script src="./js/main.min.js"></script>
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .select-items {
+            position: relative !important;
+            background-color: #ffffff;
+            border-top-left-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+        }
+
+        .select-option {
+            max-width: 100% !important;
+        }
+
+        .custom-select_new {
+            height: 100%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .custom-select_new:hover {
+            border-radius: 0.417vw;
+            box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+            transition: 0.2s !important;
+        }
+
+        .custom-select_new::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2.7vw;
+            height: .052vw;
+            background: #e4e8ee;
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            top: 1.4vw;
+            left: 84%;
+            display: block;
+            z-index: 99999999;
+            left: 81.8%;
+        }
+
+        .custom-scrollbar-new {
+            max-height: calc(2.242vw * 5);
+            overflow-y: scroll;
+            margin-right: 1.199vw;
+        }
+
+        .custom-scrollbar-new::-webkit-scrollbar {
+            width: .313vw;
+        }
+
+        .custom-scrollbar-new::-webkit-scrollbar-thumb {
+            width: .313vw;
+            background: #b0bfde;
+            mix-blend-mode: normal;
+            opacity: .6;
+            border-radius: 1.043vw;
+        }
+
+        .custom-scrollbar-new::-webkit-scrollbar-track {
+            background: -webkit-gradient(linear, left bottom, left top, from(rgb(238, 239, 243)), to(rgb(224, 228, 236))), #1f1f23;
+            background: linear-gradient(0deg, rgb(238, 239, 243), rgb(224, 228, 236)), #1f1f23;
+            mix-blend-mode: normal;
+            border-radius: 1.043vw;
+            margin-block: 10px;
+        }
+
+        .custom-scrollbar-new::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .select-arrow-active {
+            border-bottom: none !important;
+            border-bottom-left-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+        }
+
+        .select-arrow-active::after {
+            transform: rotate(180deg) !important;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .popup__users-footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .popup__users-footer button {
+            font-size: 0.834vw;
+            line-height: 0.938vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.02vw;
+            color: #FFFFFF;
+            width: 8.238vw;
+            height: 2.503vw;
+            background: #869DC8;
+            box-shadow: 0vw 0vw 0.261vw 0.052vw rgba(142, 161, 186, 0.6);
+            border-radius: 0.521vw;
+            margin-top: 1.1vw;
+        }
+
+        .let-know-required {
+            display: none;
+            font-weight: 400;
+            font-size: 0.678vw;
+            line-height: 0.73vw;
+            letter-spacing: 0.01vw;
+            color: red;
+            margin-top: 0.782vw;
+        }
+
+        .let-know-required.active {
+            display: block;
+        }
+
+        .error {
+            border: 1px solid red;
+            border-radius: 0.417vw;
+        }
+
+        .row-item:nth-child(even) {
+            background-color: rgba(233, 237, 242, .45);
+        }
+
+        .row-header :nth-child(2) {
+            width: 12.11vw !important;
+        }
+
+        .row-header :nth-child(3) {
+            width: 15.4vw !important;
+        }
+
+        .search-input-block {
+            display: flex;
+        }
+
+        .search-input {
+            position: relative;
+        }
+
+        .search-input:hover {
+            border-radius: 0.417vw;
+            box-shadow: 0vw 0vw 0.156vw 0.052vw #d7dee6;
+            transition: 0.2s !important;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .search-input-selector {
+            position: absolute;
+            width: 100%;
+            top: 95%;
+            background-color: white;
+            z-index: 99;
+            line-height: 0;
+            border: 0.052vw solid #d7dee6;
+            box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+            border-radius: 0.417vw;
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .search-input-selector label {
+            font-family: Rubik;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .834vw;
+            letter-spacing: .01vw;
+            color: #869dc8;
+            padding-left: 3.91vw;
+            padding-right: 3.91vw;
+            padding-top: 0.626vw;
+            padding-bottom: 0.521vw;
+            cursor: pointer;
+            color: #869dc8;
+            line-height: .834vw;
+        }
+
+        .search-input-selector label:hover {
+            background: rgba(233, 237, 242, 0.7);
+        }
+
+        .closeFilter {
+            position: absolute;
+            right: 0.5vw;
+            top: 0.8vw;
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 1vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .filterLabel {
+            width: 100%;
+            height: 100%;
+        }
+
+        #selectItemsFilter .select-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+
+        .cellId {
+            cursor: pointer;
+        }
+
+        .selected {
+            color: #1b2438 !important;
+            font-family: "Roboto", sans-serif !important;
+            font-weight: 400 !important;
+        }
+
+
+        .add-badge-popup .custom-select .select-selected-new {
+            width: 100%;
+            padding-bottom: 0.798vw;
+        }
+
+        .select-selected-new {
+            position: relative;
+            padding-top: 0.938vw;
+            padding-bottom: 0.938vw;
+            padding-left: 2.086vw;
+            padding-right: 1.199vw;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .73vw;
+            letter-spacing: .01vw;
+            color: #b9babe;
+            background: #fff;
+            border: 0.052vw solid #d7dee6;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            border-radius: 0.417vw;
+            text-transform: capitalize;
+        }
+
+        .select-selected-new::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 1.199vw;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 0.261vw solid rgba(0, 0, 0, 0);
+            border-right: 0.261vw solid rgba(0, 0, 0, 0);
+            border-top: 0.261vw solid #555;
+        }
+
+        .row-header .id {
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+
+        const limit = 10
+
+        let countItems
+        let order = 'asc'
+        let statusItems = ''
+        let offset = 0
+        let foundChoiceFlag = 0
+        let allDepartment = []
+        let allJob = []
+        let allManager = []
+
+        const popupContent = document.getElementById('mainPopup')
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getUsers(offset, statusItems);
+            pagination(countItems)
+            allDepartments()
+            allUsers()
+            commonFilter()
+            document.querySelector('.overlay').classList.remove('active')
+        });
+
+        // getting all records from API
+
+        async function getUsers(offset, statusItems, e) {
+            document.querySelector('.overlay').classList.add('active')
+            let datas = []
+            let query = ''
+            let variables = {
+                limit: limit,
+                offset: offset,
+                order: order
+            }
+            if (statusItems === '' && foundChoiceFlag === 0) {
+                query = `query getUsers($limit: Int, $offset: Int = 1, $order: order_by) {
+                    users(limit: $limit, offset: $offset, order_by: {id: $order}, where:{active:{_eq:true}}) {
+                        email
+                        firstname
+                        id
+                        lastname
+                        role
+                        status
+                        active
+                        manager_id
+                        job_id
+	                    },users_aggregate(where:{active:{_eq:true}}){
+                            aggregate{count}}
+                    }`
+            }
+            else if (statusItems === true && foundChoiceFlag === 0) {
+                query = `query getUsers($limit: Int, $offset: Int, $order: order_by, $active: Boolean, $status: Int) {
+                        users(limit: $limit, offset: $offset, order_by: {id: $order}, where: {active: {_eq:$active}, status:{_eq:$status}}) {
+                        email
+                        firstname
+                        id
+                        lastname
+                        role
+                        status
+                        active
+                        manager_id
+                        job_id
+                    },users_aggregate(where: {active: {_eq:$active}, status:{_eq:$status}}){
+                    aggregate{
+                        count}}
+                    }`
+                variables = {
+                    ...variables,
+                    status: 1,
+                    active: statusItems,
+                }
+            }
+            else if (statusItems === false && foundChoiceFlag === 0) {
+                query = `query getUsers($limit: Int, $offset: Int, $order: order_by, $active: Boolean) {
+                        users(limit: $limit, offset: $offset, order_by: {id: $order}, where: {active: {_eq:$active}}) {
+                        email
+                        firstname
+                        id
+                        lastname
+                        role
+                        status
+                        active
+                        manager_id
+                        job_id
+                    },users_aggregate(where: {active: {_eq: $active}}){
+                    aggregate{
+                        count}}
+                    }`
+                variables = {
+                    ...variables,
+                    active: statusItems,
+                }
+            }
+            else if (foundChoiceFlag === 1) {
+                query = `query getUsers($id:Int) {
+	                        users(where: {id: {_eq: $id}}) {
+  	                            email
+                                firstname
+                                id
+                                lastname
+                                role
+                                status
+                                active
+                                manager_id
+                                job_id
+                            }
+                        }`
+                variables = {
+                    id: e.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.users
+            foundChoiceFlag === 1 ? foundChoiceFlag = 0 : countItems = json.data.users_aggregate.aggregate.count
+            const rowHeader = document.querySelector('.table');
+
+            document.querySelectorAll('.row-item').forEach((e) => {
+                e.remove()
+            })
+            if (datas.length === 0) {
+                if (countItems === 0) {
+                    pagination(countItems)
+                } else {
+                    offset = 0
+                    await getUsers(offset, statusItems)
+                    pagination(countItems)
+                }
+            }
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'row row-item';
+                newRow.innerHTML = `
+                    <div class="cell id">${item.id}</div>
+                    <div class="cell name">${item.firstname} ${item.lastname}</div>
+                    <div class="cell email">${item.email}</div>
+                    <div class="cell admin">${item.role}</div>
+                    <div class="cell active"> ${item.status === 1 ? 'Active' : 'Archived '} </div>
+                    <div class="cell actions">
+                        <span type="button" class="edit edit-user-btn" style="border: none; background: none" data-id="${item.id}"></span>
+                        <span class="archive ${item.status === 1 ? "" : "deactivate"}" data-id="${item.id}" data-active="${item.active === true ? 1 : 0}"></span>
+                    </div>`;
+                rowHeader.appendChild(newRow)
+            });
+
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        // paginatin
+
+        let totalPages
+        const navigation = document.getElementById('navigation')
+        const btnPrev = document.getElementById('btnPrev');
+        const firstCircle = document.getElementById('firstCircle');
+        const secondCircle = document.getElementById('secondCircle');
+        const btnNext = document.getElementById('btnNext');
+
+        function pagination(countItems) {
+
+            inputElementFilter.value = ''
+            navigation.removeAttribute('style')
+            navigation.classList.remove('hidden')
+            totalPages = Math.ceil(countItems / limit);
+            firstCircle.textContent = '1';
+            secondCircle.textContent = '2';
+            firstCircle.classList.add('active');
+            secondCircle.classList.remove('active');
+            btnPrev.style = 'display:none;'
+            btnNext.style = 'display:flex;'
+            secondCircle.removeAttribute('style')
+
+            if (totalPages === 1) {
+                firstCircle.textContent = '1';
+                secondCircle.textContent = '2';
+                firstCircle.classList.add('active');
+                secondCircle.classList.remove('active');
+                btnPrev.style = 'display:none;'
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            } else if (totalPages === 0) {
+                document.getElementById('navigation').style = 'display:none;'
+            }
+        }
+
+        // pagination next btn 
+        let currentPage
+        btnNext.addEventListener('click', () => {
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                currentPage = 1
+            }
+
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active')
+
+                    firstCircle.textContent = parseInt(secondCircle.textContent) + 1;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getUsers(offset, statusItems)
+            scrollToAnchor()
+        });
+
+        // pagination prev btn
+        btnPrev.addEventListener('click', () => {
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getUsers(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination firstCircle btn
+        firstCircle.addEventListener('click', () => {
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getUsers(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // pagination secondCircle btn
+        secondCircle.addEventListener('click', () => {
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getUsers(offset, statusItems)
+            scrollToAnchor()
+        })
+
+        // common filter
+        const filter = document.getElementById('selectItemsFilter')
+        const allLabel = filter.querySelectorAll('label')
+
+        function commonFilter() {
+            allLabel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => filterOption(event, filter, e))
+            })
+        }
+
+        async function filterOption(event, e) {
+            if (event.target.previousElementSibling.checked) {
+                filter.classList.add('select-hide')
+                document.getElementById('filterSelect').textContent = 'All'
+                document.getElementById('selectItemsFilter').firstElementChild.querySelector('input').checked = true
+                statusItems = ''
+                offset = 0
+                await getUsers(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            }
+
+            document.getElementById('filterSelect').textContent = event.target.textContent
+            filter.classList.add('select-hide')
+            const allInput = filter.querySelectorAll('input')
+            const inputItem = event.target.parentNode.querySelector('input');
+            allInput.forEach((e) => {
+                e.checked = e !== inputItem ? false : e.checked;
+            });
+            const filterText = document.getElementById('filterSelect').textContent;
+            inputElementFilter.value = ''
+            statusItems = (filterText === 'Active') ? true : (filterText === 'Archived') ? false : '';
+            offset = 0
+            await getUsers(offset, statusItems)
+            pagination(countItems)
+            document.querySelector('.closeFilter').classList.add('hidden')
+        }
+
+        // Search
+
+        let abortControllerFilter = new AbortController();
+        const inputElementFilter = document.getElementById('search-input');
+        const inputSearchField = document.querySelector('.search-input-selector')
+
+        inputElementFilter.addEventListener('input', (e) => {
+            search(e)
+        })
+
+        async function search(e) {
+            inputSearchField.innerHTML = '';
+            inputSearchField.classList.add('hidden');
+
+            const inputValue = e.target.value.trim();
+            if (inputValue === '') {
+                return;
+            }
+
+            abortControllerFilter.abort();
+            abortControllerFilter = new AbortController();
+            abortControllerFilter.signal.addEventListener('abort', () => {
+                console.log('Request has been canceled');
+            });
+
+            try {
+                let query = '';
+                let variables = {
+                    search: inputValue + "%",
+                    order: "desc",
+                };
+
+                if (statusItems === '') {
+                    query = `query getUsers($search: String, $active: Boolean = true, $order: order_by) {
+                                users(order_by: {id: $order}, where: {active: {_eq: $active}, lastname: {_ilike: $search}}) {
+                                    firstname
+                                    id
+                                    lastname
+                                    }
+                                }`;
+                } else {
+                    query = `query getUsers($search: String, $active: Boolean = true, $order: order_by , $status: Int) {
+                                users(order_by: {id: $order}, where: {active: {_eq: $active}, status:{_eq: $status}, lastname: {_ilike: $search}}) {
+                                    firstname
+                                    id
+                                    lastname
+                                    }
+                                }`;
+                    variables = {
+                        ...variables,
+                        status: statusItems,
+                    };
+                }
+
+                const data = JSON.stringify({ query, variables });
+
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length,
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: data,
+                    signal: abortControllerFilter.signal
+                };
+
+                const response = await fetch(BaseUrl, requestOptions);
+
+                if (response.ok) {
+                    const json = await response.json();
+                    const datas = json.data.users;
+
+                    if (datas.length > 0) {
+                        inputElementFilter.style = 'border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important;'
+                        inputSearchField.classList.remove('hidden');
+                        inputSearchField.innerHTML = datas.map((da) => {
+                            return `<label class="found_acievements" data-id="${da.id}">${da.lastname} ${da.firstname}</label>`;
+                        }).join('');
+
+                        document.querySelectorAll('.found_acievements').forEach((e) => {
+                            e.addEventListener('click', () => {
+                                foundChoiceFlag = 1
+                                navigation.classList.add('hidden')
+                                inputSearchField.classList.add('hidden');
+                                inputElementFilter.value = e.textContent;
+                                document.querySelector('.closeFilter').classList.remove('hidden')
+                                getUsers(offset, statusItems, e)
+                                inputElementFilter.removeAttribute('style')
+                                inputSearchField.innerHTML = '';
+                            });
+                        });
+                    } else {
+                        inputElementFilter.removeAttribute('style')
+                        inputSearchField.classList.add('hidden');
+                        inputSearchField.innerHTML = '';
+                    }
+                }
+            } catch (error) {
+
+            }
+
+            if (inputElementFilter.value === '') {
+                inputSearchField.innerHTML = '';
+                inputElementFilter.removeAttribute('style')
+                inputSearchField.classList.add('hidden');
+            }
+        }
+
+        // archive users
+
+        async function archiveAchievements(event) {
+
+            event.target.insertAdjacentHTML('afterend', `
+            <div class="skills__alert-popup department__wrapper-archive active" style="left: 100%; top: -20% !important; " >        
+                <p>Are you sure?</p>
+                <div class="btns">
+                    <button class="true">Yes</button>
+                    <button class="false">No</button>
+                </div>
+            </div>
+            `);
+            const falseButton = event.target.nextElementSibling.querySelector('.false');
+            const trueButton = event.target.nextElementSibling.querySelector('.true')
+
+            falseButton.addEventListener('click', () => {
+                event.target.nextElementSibling.remove();
+            });
+
+            trueButton.addEventListener('click', async () => {
+                let query = '';
+                let variables = {
+                    id: event.target.dataset.id
+                };
+
+                if (event.target.dataset.active === '1') {
+                    query = `mutation editUser( $active: Boolean, $id: Int) {
+                        update_users(where: {id: {_eq: $id}}, _set: {active: $active}) {
+                            affected_rows
+                        }}`;
+                    variables = {
+                        ...variables,
+                        active: false
+                    }
+                } else {
+                    query = `mutation editUser( $active: Boolean, $id: Int, $status: Int) {
+                        update_users(where: {id: {_eq: $id}}, _set: {active: $active, status: $status}) {
+                            affected_rows
+                        }}`;
+                    variables = {
+                        ...variables,
+                        active: true,
+                        status: 1,
+                    };
+                }
+
+                const data = JSON.stringify({ query, variables });
+
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'Content-Length': data.length,
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                };
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: data,
+                    signal: abortControllerFilter.signal
+                };
+
+                const response = await fetch(BaseUrl, requestOptions);
+
+
+
+
+                document.querySelector('.overlay').classList.add('active')
+
+                // const request = {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //         'x-hasura-admin-secret': HASURA_KEY
+                //     },
+                //     body: JSON.stringify({
+                //         query: `mutation editUser( $active: Boolean, $id: Int) {
+                //         update_users(where: {id: {_eq: $id}}, _set: {active: $active, }) {
+                //             affected_rows
+                //         }}`,
+                //         variables: {
+
+                //              active: event.target.dataset.active === '1' ? false : true  
+                //         }
+                //     })
+                // }
+
+
+
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                getUsers(offset, statusItems)
+                scrollToAnchor()
+            })
+        }
+
+        // error checking
+
+        function addErrorEmpty(element, text) {
+            if (text === '' || text.trim() === 'Please Select...' || text.trim() === 'Select Department First' || text.trim() === 'Please Select Another Department') {
+                element.classList.add("error");
+                if (element.parentNode.classList.contains('custom-select')) {
+                    element.parentNode.classList.add("error")
+                }
+            } else {
+                element.classList.remove("error");
+            }
+        }
+
+        // add and edit user
+
+        async function userAddEdit(event) {
+
+            const popupAdd = event.target.parentNode.parentNode
+
+            let fullname = document.getElementById('add-user-firstname')
+            let firstName = fullname.value.split(" ") //value
+            let lastName = firstName.slice(1).join(" ") //value
+            let email = popupAdd.children[0].children[0].children[1].querySelector('input') //value
+            let job = popupAdd.children[0].children[1].children[0].children[0].children[0] //dataset.id
+            let manager = popupAdd.children[0].children[0].children[4].children[0].children[0] //dataset
+            let role = document.getElementById('permissionRole') //textContent
+            let status = document.getElementById('statusAdd')
+
+            addErrorEmpty(fullname, fullname.value);
+            addErrorEmpty(email, email.value);
+            addErrorEmpty(job, job.textContent);
+            addErrorEmpty(manager, manager.textContent);
+            addErrorEmpty(role, role.textContent);
+            addErrorEmpty(status, status.textContent);
+
+            const elementValueArr = [fullname, email]
+
+            elementValueArr.forEach((e) => {
+                e.addEventListener('input', () => {
+                    e.classList.remove('error')
+                })
+            })
+
+            const elementTextContentArr = [job, manager, role, status]
+
+            elementTextContentArr.forEach((e) => {
+                e.addEventListener('click', () => {
+                    e.classList.remove('error')
+                    e.parentNode.classList.remove('error')
+                })
+            })
+
+            if (lastName === '') {
+                fullname.classList.add('error')
+            }
+
+            if (popupAdd.querySelectorAll('.error').length !== 0) {
+                return
+            }
+
+            document.querySelector('.overlay').classList.add('active')
+
+            let datas = []
+            let query = ''
+            let variables = {
+                active: true,
+                status: status.textContent === "Active" ? 1 : 0,
+                fn: firstName[0],
+                ln: lastName,
+                jid: job.dataset.id,
+                mid: manager.dataset.id,
+                role: role.textContent,
+            }
+            if (event.target.textContent === 'Add') {
+                query = `mutation addUser($active: Boolean,$status: Int,$email: String,$fn: String,$ln: String,$jid: Int,$mid: Int,$role: String) {
+                            insert_users(objects: {active: $active, status: $status, email: $email, firstname: $fn, job_id: $jid, lastname: $ln, manager_id: $mid, role: $role}) {
+                                affected_rows
+                            }
+                        }`
+
+                variables = {
+                    ...variables,
+                    email: email.value,
+                }
+            } else if (event.target.textContent === 'Edit') {
+                query = `mutation editUser($status: Int,$id: Int,$fn: String,$ln: String,$jid: Int,$mid: Int,$role: String,$active: Boolean) {
+                                update_users(where: {id: {_eq: $id},active:{_eq:$active}}, _set: {status: $status, firstname: $fn, job_id: $jid, lastname: $ln, manager_id: $mid, role: $role}) {
+                                    affected_rows
+                                }
+                            }`
+                variables = {
+                    ...variables,
+                    id: fullname.dataset.id
+                }
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            await allUsers()
+
+            if (!navigation.hasAttribute('style')) {
+                if (event.target.textContent === 'Add' && totalPages === parseInt(navigation.querySelector('.page.active').textContent)) {
+                    if (document.querySelectorAll('.row-item').length === limit) {
+                        totalPages++
+                        if (secondCircle.classList.contains('active')) {
+                            btnNext.style = 'display:flex;'
+                        }
+                        if (firstCircle.classList.contains('active') && secondCircle.hasAttribute('style')) {
+                            btnNext.style = 'display:flex;'
+                            secondCircle.removeAttribute('style')
+                        }
+                    } else {
+                        offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                        await getUsers(offset, statusItems)
+                    }
+                }
+            }
+
+            if (event.target.textContent === 'Edit' && !navigation.classList.contains('hidden')) {
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                getUsers(offset, statusItems)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && document.getElementById('filterSelect').textContent === 'All') {
+                foundChoiceFlag = 1
+                getUsers(offset, statusItems, firstName)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            }
+            else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && status.textContent === document.getElementById('filterSelect').textContent) {
+                foundChoiceFlag = 1
+                getUsers(offset, statusItems, firstName)
+                document.querySelector('.ninjable__popup-close').click()
+                return
+            } else if (event.target.textContent === 'Edit' && navigation.classList.contains('hidden') && status.textContent !== document.getElementById('filterSelect').textContent) {
+                offset = 0
+                await getUsers(offset, statusItems)
+                pagination(countItems)
+                document.querySelector('.ninjable__popup-close').click()
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            }
+            document.querySelector('.ninjable__popup-close').click()
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+        function orderId() {
+            if (order === 'asc') {
+                order = 'desc'
+            } else if (order === 'desc') {
+                order = 'asc'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            getUsers(offset, statusItems)
+        }
+
+
+    </script>
+
+    <script>
+
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        function scrollToAnchorPopup() {
+            let anchorPopup = []
+            const anchorPopupAll = document.querySelectorAll('.popup__users-content')
+            anchorPopupAll.forEach((e) => {
+                anchorPopup.push(e.firstElementChild)
+            })
+            anchorPopup.forEach((e) => {
+                e.scrollIntoView({ behavior: 'smooth' })
+            })
+
+        }
+
+    </script>
+
+    <script>
+
+        //get all departments for popup
+
+        async function allDepartments() {
+
+            let query = ''
+            let variables = {}
+
+            query = `query readDepartments {
+                         departments(where: {active: {_eq: true}}) {
+                           title
+                            id
+                         }
+                    }`
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.departments
+
+            const field = document.getElementById('selectDepatment')
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'select-option clan';
+                newRow.dataset.id = item.id
+                newRow.textContent = item.title
+                field.insertAdjacentElement('afterbegin', newRow)
+            });
+
+            allDepartment = document.querySelectorAll('.clan')
+        }
+
+        // get job from department
+
+        async function jobRank(departmentId) {
+            const field = document.getElementById('selectJob')
+            field.innerHTML = ''
+
+            let query = ''
+            let variables = {
+                d: departmentId
+            }
+
+            query = `query departmentJobs($d: Int) {
+                                jobs(where: {department_id: {_eq: $d}}) {
+                                    id
+                                    title
+                                    active
+                                }
+                            }`
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.jobs
+
+            if (datas.length === 0) {
+                document.getElementById('jobField').textContent = 'Please Select Another Department'
+                jobFieldText = 'Please Select Another Department'
+                document.getElementById('jobField').setAttribute('contentEditable', false)
+                document.getElementById('jobField').classList.remove('selected')
+            } else {
+                document.getElementById('jobField').textContent = 'Please Select...'
+                jobFieldText = 'Please Select...'
+                document.getElementById('jobField').setAttribute('contentEditable', true)
+                document.getElementById('jobField').classList.remove('selected')
+            }
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'select-option job';
+                newRow.dataset.id = item.id
+                newRow.textContent = item.title
+                field.insertAdjacentElement('afterbegin', newRow)
+            });
+
+            allJob = document.querySelectorAll('.job')
+
+        }
+
+        // get all manager for popup
+
+        async function allUsers() {
+
+            let query = ''
+            let variables = {}
+            query = `query getManager {
+	                    users(where:{active:{_eq:true}})  {
+  	                        firstname
+                            lastname
+                            id
+                            active
+                        }
+                    }`
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            datas = json.data.users
+
+            const field = document.getElementById('selectManager')
+            field.innerHTML = ''
+
+            datas.forEach((item) => {
+                const newRow = document.createElement('div');
+                newRow.className = 'select-option manager';
+                newRow.dataset.id = item.id
+                newRow.textContent = item.firstname + ' ' + item.lastname
+                field.insertAdjacentElement('afterbegin', newRow)
+            });
+
+            allManager = document.querySelectorAll('.manager')
+        }
+
+        // hidden selector
+
+        function hiddenSelector() {
+
+            if (document.getElementById('depatmentField').classList.contains('select-arrow-active') && document.getElementById('depatmentField').textContent === '') {
+                document.getElementById('depatmentField').textContent = depatmentFieldText
+            }
+
+            if (document.getElementById('jobField').classList.contains('select-arrow-active') && document.getElementById('jobField').textContent === '') {
+                document.getElementById('jobField').textContent = jobFieldText
+            }
+
+            if (document.getElementById('managerField').classList.contains('select-arrow-active') && document.getElementById('managerField').textContent === '') {
+                document.getElementById('managerField').textContent = managerFieldText
+            }
+
+
+            document.querySelectorAll('.custom-scrollbar-new').forEach((e) => {
+                e.scrollTop = 0
+            })
+
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.parentNode.classList.remove('active')
+                e.classList.remove('select-arrow-active')
+                e.parentNode.children[1].classList.add('select-hide')
+            })
+            popupContent.querySelectorAll('.custom-select').forEach((e) => {
+                e.classList.remove('active')
+                e.children[0].classList.remove('select-arrow-active')
+                e.children[1].classList.add('select-hide')
+            })
+        }
+
+        // scroll to top Page
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        // clear Form
+
+        function clearForm() {
+            popupContent.querySelectorAll('input').forEach((e) => {
+                e.value = ''
+                e.classList.remove("error")
+            })
+            popupContent.querySelectorAll('.select-selected-new').forEach((e) => {
+                e.textContent = 'Please Select...'
+                e.classList.remove('error')
+                e.removeAttribute('style')
+                e.parentElement.classList.remove('error')
+                e.parentElement.removeAttribute('style')
+                if (e.getAttribute('id') === 'jobField') {
+                    e.textContent = 'Select Department First'
+                }
+            })
+            popupContent.querySelectorAll('textarea').forEach((e) => {
+                e.value = ''
+                e.classList.remove('error')
+                e.removeAttribute('style')
+            })
+
+            popupContent.querySelectorAll('.selected').forEach((e) => {
+                e.classList.remove('selected')
+            })
+
+
+        }
+
+        // ALL EVENT
+
+        // close filter search
+
+        document.querySelector('.closeFilter').addEventListener('click', () => {
+            foundChoiceFlag = 0
+            offset = 0
+            getUsers(offset, statusItems)
+            navigation.classList.remove('hidden')
+            document.querySelector('.closeFilter').classList.add('hidden')
+            inputElementFilter.value = ''
+        })
+
+        // Close Popup 
+
+        document.querySelector('.ninjable__popup-close').addEventListener('click', () => {
+            scrollToAnchorPopup()
+            clearForm()
+            hiddenSelector()
+            document.getElementById('jobField').setAttribute('contentEditable', false)
+            depatmentFieldText = 'Please Select...'
+            jobFieldText = 'Select Department First'
+            managerFieldText = 'Please Select...'
+            document.getElementById('add-user-email').disabled = false
+        })
+
+        // event input department field popup
+
+        document.getElementById('depatmentField').addEventListener('input', () => {
+            searchField(allDepartment, event)
+            document.getElementById('jobField').textContent = 'Select Department First'
+            document.getElementById('jobField').setAttribute('contentEditable', false)
+            document.getElementById('jobField').classList.remove('selected')
+        })
+        document.getElementById('jobField').addEventListener('input', () => {
+            searchField(allJob, event)
+        })
+
+        document.getElementById('managerField').addEventListener('input', () => {
+            searchField(allManager, event)
+        })
+
+        // seatch item in field
+
+        function searchField(element, event) {
+            let input = event.target.textContent.toLowerCase().trim();
+            element.forEach(function (item) {
+                if (input === '') {
+                    item.removeAttribute('style')
+                }
+                let text = item.textContent.toLowerCase().trim();
+                if (text.startsWith(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // document event
+
+        let depatmentFieldText = 'Please Select...'
+        let jobFieldText = 'Select Department First'
+        let managerFieldText = 'Please Select...'
+
+        document.addEventListener('click', async () => {
+
+
+            if (event.target.parentNode.classList.contains('filter-select') && event.target.parentNode.classList.contains('active')) {
+                event.target.style = 'border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important;'
+            } else if (event.target.parentNode.classList.contains('filter-select') && !event.target.parentNode.classList.contains('active')) {
+                event.target.removeAttribute('style')
+            }
+
+            if (event.target === document.getElementById('cellId')) {
+                orderId()
+            }
+
+            if (event.target !== document.getElementById('filterSelect')) {
+                document.querySelector('.filter-select').classList.remove('active')
+                document.querySelector('.select-selected').removeAttribute('style')
+                filter.classList.add('select-hide')
+            }
+
+            if (event.target !== document.getElementById('search-input')) {
+                document.querySelector('.search-input-selector').classList.add('hidden')
+                if (document.querySelector('.closeFilter ').classList.contains('hidden')) {
+                    inputElementFilter.value = ''
+                    inputElementFilter.removeAttribute('style')
+                }
+            }
+
+            if (event.target.classList.contains('archive')) {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+                archiveAchievements(event)
+            } else {
+                document.querySelectorAll('.skills__alert-popup').forEach((e) => {
+                    e.remove()
+                })
+            }
+
+            if (event.target.classList.contains('user-add')) {
+                userAddEdit(event)
+            }
+
+            if (event.target.classList.contains('clan')) {
+                event.target.parentNode.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].classList.add('selected')
+                depatmentFieldText = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].setAttribute('data-id', event.target.dataset.id)
+                document.getElementById('jobField').setAttribute('contentEditable', true)
+                departmentId = event.target.parentNode.parentNode.parentNode.children[0].dataset.id
+                jobRank(departmentId)
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('job')) {
+                event.target.parentNode.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].classList.add('selected')
+                jobFieldText = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].setAttribute('data-id', event.target.dataset.id)
+                hiddenSelector()
+            }
+
+            if (event.target.getAttribute('id') === 'jobField') {
+                if (event.target.textContent === 'Select Department First' || event.target.textContent === 'Please Select Another Department') {
+                    hiddenSelector()
+                    return
+                } else if (event.target.textContent === '') {
+                    event.target.textContent = jobFieldText
+                } else {
+                    event.target.textContent = ''
+                }
+            }
+
+            if (event.target.classList.contains('manager')) {
+                event.target.parentNode.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].classList.add('selected')
+                managerFieldText = event.target.textContent
+                event.target.parentNode.parentNode.parentNode.children[0].setAttribute('data-id', event.target.dataset.id)
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('status')) {
+                event.target.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.children[0].classList.add('selected')
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('level')) {
+                event.target.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.children[0].classList.add('selected')
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('role')) {
+                event.target.parentNode.parentNode.children[0].textContent = event.target.textContent
+                event.target.parentNode.parentNode.children[0].classList.add('selected')
+                hiddenSelector()
+            }
+
+            if (event.target.getAttribute('id') === 'depatmentField') {
+                if (event.target.textContent === '') {
+                    event.target.textContent = depatmentFieldText
+                } else {
+                    event.target.textContent = ''
+                    document.querySelectorAll('.clan').forEach((e) => {
+                        e.removeAttribute('style')
+                    })
+                }
+            }
+
+            if (event.target.getAttribute('id') === 'managerField') {
+                if (event.target.textContent === '') {
+                    event.target.textContent = managerFieldText
+                } else {
+                    event.target.textContent = ''
+                    document.querySelectorAll('.manager').forEach((e) => {
+                        e.removeAttribute('style')
+                    })
+                }
+            }
+
+            if (event.target.parentNode.getAttribute('id') === 'mainPopup' || event.target.tagName === 'LABEL') {
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('popup__users-col')) {
+                hiddenSelector()
+            }
+
+            if (event.target.tagName === 'INPUT') {
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('select-selected-new') && !event.target.classList.contains('select-arrow-active')) {
+                hiddenSelector()
+            }
+
+            if (event.target.classList.contains('select-selected-new')) {
+                event.target.parentNode.classList.toggle('active')
+                event.target.classList.toggle('select-arrow-active')
+                event.target.parentNode.children[1].classList.toggle('select-hide')
+            }
+
+            if (event.target.classList.contains('add-user-btn')) {
+                document.getElementById('add-users_popup').querySelector('h3').textContent = 'ADD USER'
+                document.querySelector('.user-add').textContent = 'Add'
+            }
+
+            if (event.target.classList.contains('edit')) {
+
+                document.querySelector('.overlay').classList.add('active')
+                document.getElementById('add-users_popup').querySelector('h3').textContent = 'EDIT USER'
+                document.querySelector('.user-add').textContent = 'Edit'
+
+                document.getElementById('add-user-email').disabled = true
+
+                const popup = document.getElementById('popup')
+
+                let fullname = document.getElementById('add-user-firstname')
+                let email = popup.children[0].children[1].querySelector('input')
+                let role = document.getElementById('permissionRole')
+                let status = document.getElementById('statusAdd')
+
+                fullname.value = event.target.parentNode.parentNode.children[1].textContent
+                email.value = event.target.parentNode.parentNode.children[2].textContent
+                role.textContent = event.target.parentNode.parentNode.children[3].textContent.trim()
+                status.textContent = event.target.parentNode.parentNode.children[4].textContent.trim()
+
+                fullname.setAttribute('data-id', event.target.dataset.id)
+
+                try {
+                    let variables = {
+                        id: event.target.dataset.id
+                    }
+                    query = `query getUser($id: Int) {
+                                users(where: {id: {_eq: $id}}) {
+                                    users_job {
+                                        department_id
+                                        title
+                                        id
+                                    }
+                                users_manager {
+                                    id
+                                    lastname
+                                    firstname
+                                }
+                            }
+                        }`
+
+                    const data = JSON.stringify({ query, variables });
+
+                    const headers = {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    };
+
+                    const response = await fetch(
+                        BaseUrl,
+                        {
+                            method: 'post',
+                            headers,
+                            body: data
+                        }
+                    );
+
+                    const json = await response.json();
+                    datas = json.data.users
+
+                    let department = ''
+                    let job = datas[0].users_job.title
+
+                    document.getElementById('jobField').setAttribute('data-id', datas[0].users_job.id)
+                    document.getElementById('managerField').textContent = datas[0].users_manager.firstname + ' ' + datas[0].users_manager.lastname
+                    document.getElementById('managerField').setAttribute('data-id', datas[0].users_manager.id)
+
+                    document.getElementById('depatmentField').parentNode.querySelectorAll('.clan').forEach(async (e) => {
+                        if (parseInt(e.dataset.id) === datas[0].users_job.department_id) {
+                            department = e.textContent
+                            depatmentFieldText = department
+                            departmentId = parseInt(e.dataset.id)
+                            await jobRank(departmentId)
+                            document.getElementById('jobField').textContent = job
+                            document.getElementById('jobField').classList.add('selected')
+                            jobFieldText = job
+                            managerFieldText = document.getElementById('managerField').textContent
+                            document.getElementById('depatmentField').textContent = department
+                        }
+                    })
+
+                    document.querySelectorAll('.select-selected-new').forEach((e) => {
+                        e.classList.add('selected')
+                        if (e.getAttribute('id') === 'levelField') {
+                            e.classList.remove('selected')
+                        }
+                    })
+
+                    setTimeout(() => {
+                        document.getElementById('add-users_popup').classList.add('active')
+                        document.querySelector('.overlay').classList.remove('active')
+                    }, 300);
+
+                } catch {
+                    let role = document.getElementById('permissionRole').textContent = 'Please Select...'
+                    let status = document.getElementById('statusAdd').textContent = 'Please Select...'
+                    document.getElementById('add-users_popup').classList.add('active')
+                    document.querySelector('.overlay').classList.remove('active')
+                }
+            }
+        })
+
+        document.querySelectorAll('[contentEditable]').forEach((e)=>{
+            e.addEventListener('keydown', (event)=>{
+                if(event.key === 'Enter'){
+                    event.preventDefault()
+                }
+            })
+        })
+
+    </script>
+
+    <script src="./js/main.js"></script>
 
 </body>
+
+
 
 </html>
