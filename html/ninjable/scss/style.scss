@@ -2639,10 +2639,29 @@ body.requests-page {
 
             .skills-filter-select {
                 .new__custom-select {
-                    position: relative;
-                    top: -3vw;
+                 position: relative;
+                    top: 1vw;
                 }
 
+                .new__custom-options {
+                   top: 0;
+                   position: relative;
+                }
+
+                .new__custom-select__trigger {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 1.199vw;
+                        transform: translateY(-50%);
+                        width: 0;
+                        height: 0;
+                        border-left: 0.261vw solid rgba(0,0,0,0);
+                        border-right: 0.261vw solid rgba(0,0,0,0);
+                        border-top: 0.261vw solid #555;
+                    }
+                }
 
                 .skills-tags-list {
                     border: 0.052vw solid $border-color;
@@ -2724,6 +2743,10 @@ body.requests-page {
                         width: 0.521vw;
                         height: 0.261vw;
                     }
+                }
+
+                .select-open-btn.hidden {
+                    display: none;
                 }
 
                 .select-open-btn.active {

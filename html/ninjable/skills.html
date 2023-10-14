@@ -285,7 +285,7 @@
                         <label>* Department (Clan)
                             <div class="new__custom-select-wrapper add-new__custom-select-wrapper skills-filter-select">
                                 <div class="skills-tags-list add-skills-tags-list" id="skills-tags-list"></div>
-                                <span class="select-open-btn">
+                                <span class="select-open-btn hidden">
                                     <div class="arrow"></div>
                                 </span>
                                 <div class="new__custom-select" id="newCustomSelectField">
@@ -1185,14 +1185,14 @@
 
             // info popup for add skill btn (if skils > 6)
             const deactivePopup = document.querySelector('.deactive-info-popup');
-            const deactiveBtn = document.querySelector('.deactive-btn'); 
+            const deactiveBtn = document.querySelector('.deactive-btn');
 
             if (deactivePopup && deactiveBtn) {
                 deactiveBtn.addEventListener('click', () => {
                     deactivePopup.classList.add('act');
                     setTimeout(() => {
                         deactivePopup.classList.remove('act');
-                    }, 3000); 
+                    }, 3000);
                 });
             }
 
@@ -2747,13 +2747,37 @@
         }
         document.addEventListener('click', filterSelectScrollOutside)
 
-        document.querySelectorAll('[contentEditable]').forEach((e)=>{
-            e.addEventListener('keydown', (event)=>{
-                if(event.key === 'Enter'){
+        document.querySelectorAll('[contentEditable]').forEach((e) => {
+            e.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
                     event.preventDefault()
                 }
             })
-        })
+        });
+
+
+        
+        const selectOpenbtn = document.querySelector('.select-open-btn');
+        const skillsTagsList = document.querySelector('.skills-tags-list');
+
+
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (skillsTagsList.classList.contains('active')) {
+                        selectOpenbtn.classList.remove('hidden');
+                    } else {
+                        selectOpenbtn.classList.add('hidden');
+                    }
+                }
+            }
+        });
+
+        if (skillsTagsList) {
+            observer.observe(skillsTagsList, { attributes: true });
+        }
+
+
 
 
     </script>
