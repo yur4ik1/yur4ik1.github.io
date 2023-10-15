@@ -3607,7 +3607,10 @@
     }
 
     .footer__logo {
-        display: none;
+        width: 23.077vw;
+        height: 4.654vw;
+        order: 2;
+        margin-top: 15.385vw;
     }
 
     .footer h4 {
@@ -3690,8 +3693,31 @@
         font-size: 3.846vw;
     }
 
+    .footer .row:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer__social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__contact {
         display: none;
+    }
+
+    .footer__social-list {
+        gap: 4.615vw;
+    }
+
+    .footer__social-item img {
+        width: 6.154vw;
+        height: 6.154vw;
+
     }
 
     .footer__certificates {
