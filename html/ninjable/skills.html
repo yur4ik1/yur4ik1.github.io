@@ -291,9 +291,11 @@
                                 <div class="new__custom-select" id="newCustomSelectField">
                                     <span class="line"></span>
 
-                                    <div class="new__custom-select__trigger" id="newCustomSelectTrigger"> Type here to
-                                        search for Clan...</div>
+                                    <div class="new__custom-select__trigger" id="newCustomSelectTrigger">
+                                        Type here to search for Clan...
+                                    </div>
                                     <div class="new__custom-options add-new__custom-options">
+
                                     </div>
                                     <div class="custom-scrollbar"></div>
                                 </div>
@@ -742,8 +744,42 @@
         selectOpenBtn.addEventListener('click', () => {
             skillsTagsListField.classList.toggle('hidden')
             skillsTagsListField.classList.add('open')
-
         });
+
+        const selectOpenbtn = document.querySelector('.select-open-btn');
+        const skillsTagsList = document.querySelector('.skills-tags-list');
+        const customSelectTrigger = document.querySelector('.new__custom-select__trigger');
+        const newCustomSelect = document.querySelector('.new__custom-select');
+
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (skillsTagsList.classList.contains('active')) {
+                        selectOpenbtn.classList.remove('hidden');
+
+                        customSelectTrigger.classList.add('after-hide');
+                    } else {
+                        selectOpenbtn.classList.add('hidden');
+                        customSelectTrigger.classList.remove('after-hide');
+                    }
+
+                    // Перевірка наявності класу 'hidden' у newCustomSelect
+                    if (newCustomSelect.classList.contains('hidden')) {
+                        selectOpenbtn.classList.add('act'); // Додавання класу 'act' до selectOpenbtn
+                    } else {
+                        selectOpenbtn.classList.remove('act'); // Видалення класу 'act' з selectOpenbtn
+                    }
+                }
+            }
+        });
+
+        if (skillsTagsList) {
+            observer.observe(skillsTagsList, { attributes: true });
+        }
+
+
+
+
 
         async function openSkillLevelAddDialog(tableLevelsFind) {
             scrollToAnchorPopup()
@@ -2754,30 +2790,6 @@
                 }
             })
         });
-
-
-        
-        const selectOpenbtn = document.querySelector('.select-open-btn');
-        const skillsTagsList = document.querySelector('.skills-tags-list');
-
-
-        const observer = new MutationObserver((mutationsList) => {
-            for (const mutation of mutationsList) {
-                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    if (skillsTagsList.classList.contains('active')) {
-                        selectOpenbtn.classList.remove('hidden');
-                    } else {
-                        selectOpenbtn.classList.add('hidden');
-                    }
-                }
-            }
-        });
-
-        if (skillsTagsList) {
-            observer.observe(skillsTagsList, { attributes: true });
-        }
-
-
 
 
     </script>

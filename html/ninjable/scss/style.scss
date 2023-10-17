@@ -2639,16 +2639,19 @@ body.requests-page {
 
             .skills-filter-select {
                 .new__custom-select {
-                 position: relative;
-                    top: 1vw;
+                    position: relative;
+                    top: -0.5vw;
+                    background: #fff;
+                    z-index: 999999999999999999999999;
                 }
 
                 .new__custom-options {
-                   top: 0;
-                   position: relative;
+                    top: 0;
+                    position: relative;
                 }
 
                 .new__custom-select__trigger {
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -2657,10 +2660,27 @@ body.requests-page {
                         transform: translateY(-50%);
                         width: 0;
                         height: 0;
-                        border-left: 0.261vw solid rgba(0,0,0,0);
-                        border-right: 0.261vw solid rgba(0,0,0,0);
+                        border-left: 0.261vw solid rgba(0, 0, 0, 0);
+                        border-right: 0.261vw solid rgba(0, 0, 0, 0);
                         border-top: 0.261vw solid #555;
                     }
+                }
+
+                .new__custom-select__trigger.after-hide {
+                    border-top: 0;
+                    &::after {
+                        display: none;
+                       
+                    }
+                }
+
+                .new__custom-select.open {
+                    .new__custom-select__trigger {
+                        border-radius: 0;
+                      
+                        box-shadow: 0vw 0.1vw 0.126vw 0.032vw #d7dee6;
+                    }
+
                 }
 
                 .skills-tags-list {
@@ -2716,11 +2736,11 @@ body.requests-page {
 
                 .select-open-btn {
                     position: absolute;
-                    right: 0;
+                    right: 0.104vw;
                     top: 0;
                     width: 2.607vw;
                     height: 2.7vw;
-                    border: 0.052vw solid #C0C8D1CC;
+
                     border-radius: 0vw 0.417vw 0.417vw 0.521vw;
 
                     display: flex;
@@ -2745,8 +2765,16 @@ body.requests-page {
                     }
                 }
 
+                .select-open-btn.act {
+                    border: 0.052vw solid #C0C8D1CC;
+                }
+
                 .select-open-btn.hidden {
                     display: none;
+                }
+
+                .select-open-btn.active {
+                    border: none !important;
                 }
 
                 .select-open-btn.active {

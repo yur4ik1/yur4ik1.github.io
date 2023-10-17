@@ -1012,34 +1012,3 @@ if (passwordInput && passwordIcon) {
 
 
 
-const addSkillsTagsList = document.querySelector('.add-skills-tags-list');
-const customSelectTrigger = document.querySelector('.new__custom-select__trigger');
-
-if (addSkillsTagsList && customSelectTrigger) {
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        if (addSkillsTagsList.classList.contains('active')) {
-          customSelectTrigger.classList.add('hidden');
-        } else {
-          customSelectTrigger.classList.remove('hidden');
-        }
-
-        if (customSelectTrigger.classList.contains('open')) {
-          selectOpenBtn.classList.add('active');
-        } else {
-          selectOpenBtn.classList.remove('active');
-        }
-      }
-    }
-  });
-
-  observer.observe(addSkillsTagsList, { attributes: true });
-
-  if (addSkillsTagsList.classList.contains('active')) {
-    customSelectTrigger.classList.add('hidden');
-  }
-}
-
-
-
