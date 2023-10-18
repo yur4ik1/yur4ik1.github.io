@@ -47,7 +47,7 @@ if (mobileMenu) {
 let menuItems = document.querySelectorAll('.header__menu-item.sub');
 
 function toggleActiveClass() {
-  menuItems.forEach(function(menuItem) {
+  menuItems.forEach(function (menuItem) {
     menuItem.classList.remove('active');
   });
 
@@ -55,18 +55,18 @@ function toggleActiveClass() {
 }
 
 if (window.innerWidth < 720) {
-  menuItems.forEach(function(item) {
+  menuItems.forEach(function (item) {
     item.addEventListener('click', toggleActiveClass);
   });
 }
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   if (window.innerWidth < 720) {
-    menuItems.forEach(function(item) {
+    menuItems.forEach(function (item) {
       item.addEventListener('click', toggleActiveClass);
     });
   } else {
-    menuItems.forEach(function(item) {
+    menuItems.forEach(function (item) {
       item.removeEventListener('click', toggleActiveClass);
     });
   }
@@ -127,28 +127,28 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const svgObject = document.getElementById('svg-object');
 
- 
-  function toggleActiveClassAndChangeFill(path) {
-      path.classList.add('active'); 
-      path.setAttribute('fill', '#4855DC'); 
-      path.parentElement.removeAttribute('filter'); 
 
+  function toggleActiveClassAndChangeFill(path) {
+    path.classList.add('active');
+    path.setAttribute('fill', '#4855DC');
+    path.parentElement.removeAttribute('filter');
+
+    setTimeout(() => {
+      path.classList.remove('active');
+      path.setAttribute('fill', '#F2EDE9');
       setTimeout(() => {
-          path.classList.remove('active');
-          path.setAttribute('fill', '#F2EDE9');
-          setTimeout(() => {
-              toggleActiveClassAndChangeFill(path); 
-          }, Math.random() * 2500); 
-      }, 2500); 
+        toggleActiveClassAndChangeFill(path);
+      }, Math.random() * 2500);
+    }, 2500);
   }
 
   svgObject.addEventListener('load', function () {
-      const svgDocument = svgObject.contentDocument;
-      const bluePaths = svgDocument.querySelectorAll('path.blue');
-      const bluePathsArray = Array.from(bluePaths);
-      bluePathsArray.forEach(path => {
-          toggleActiveClassAndChangeFill(path);
-      });
+    const svgDocument = svgObject.contentDocument;
+    const bluePaths = svgDocument.querySelectorAll('path.blue');
+    const bluePathsArray = Array.from(bluePaths);
+    bluePathsArray.forEach(path => {
+      toggleActiveClassAndChangeFill(path);
+    });
   });
 });
 
@@ -190,19 +190,62 @@ window.addEventListener('load', toggleDarkHeader);
 
 // gradient animation
 
-document.addEventListener('mousemove', function(event) {
+document.addEventListener('mousemove', function (event) {
   let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
-  
+
   let mouseXpercentage = event.pageX / windowWidth * 50;
   let mouseYpercentage = event.pageY / windowHeight * 50;
-  
+
   let radialGradient1 = document.querySelector('.radial-gradient');
   let radialGradient2 = document.querySelector('.radial-gradient-2');
-  
+
   radialGradient1.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #FC7CFF, rgba(218, 113, 231, 0.00))';
   radialGradient2.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, rgba(146, 112, 243, 0.74), rgba(77, 87, 209, 0.00))';
 });
+
+
+// filter blog
+
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownList = document.querySelector('.dropdown-list');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+if (dropdownBtn && dropdownList) {
+  dropdownBtn.addEventListener('click', () => {
+    dropdownBtn.classList.toggle('active');
+    dropdownList.classList.toggle('active');
+  });
+
+  dropdownItems.forEach(function (dropdownItem) {
+    dropdownItem.addEventListener('click', () => {
+      dropdownList.classList.remove('active');
+      dropdownBtn.textContent = dropdownItem.textContent;
+    });
+  });
+}
+
+// faq
+
+let faqItems = document.querySelectorAll(".faq__items-item");
+
+if (faqItems) {
+  faqItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      faqItems.forEach(function (otherItem) {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+      
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+      } else {
+        item.classList.add("active");
+      }
+    });
+  });
+}
 
 
 
