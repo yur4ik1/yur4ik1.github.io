@@ -88,6 +88,7 @@
 
 .hero {
     padding-top: 6.875vw;
+    padding-bottom: 5.156vw;
     width: 100%;
     height: 62.344vw;
     position: relative;
@@ -261,6 +262,103 @@
 
         &:hover {
             border: 0.052vw solid #D0F5FB;
+        }
+    }
+}
+
+
+.product {
+    padding: 4.167vw 0;
+
+    .container {
+        display: flex;
+    }
+
+    &__menu {
+        width: 10.781vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.042vw;
+        margin-right: 2.083vw;
+
+        .item {
+            color: var(--gray-40, #9CA1A8);
+            font-size: 0.938vw;
+            font-weight: 600;
+            line-height: 1.458vw;
+        }
+
+        .item.active {
+            color: var(--brand-blue, #24BBEB);
+        }
+    }
+
+    &__titles {
+        width: 30.052vw;
+    }
+
+    &__icon {
+        width: 4.323vw;
+        height: 4.323vw;
+        border: 0.052vw solid #EEEEEE;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 2.292vw;
+            height: 2.292vw;
+        }
+    }
+
+    &__title {
+        color: var(--brand-dark, #081425);
+        font-size: 3.75vw;
+        font-weight: 800;
+        line-height: 4.792vw;
+        letter-spacing: 0.075vw;
+        text-transform: uppercase;
+        margin-top: 1.042vw;
+    }
+
+    &__desc {
+        color: var(--gray-60, #6B727C);
+        font-size: 1.042vw;
+        font-weight: 400;
+        line-height: 1.667vw;
+        letter-spacing: 0.021vw;
+        margin-top: 1.042vw;
+    }
+
+    &__illustration {
+        width: 26.094vw;
+        height: 30.729vw;
+        margin-left: 5.99vw;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__cta {
+        display: inline-flex;
+        padding: 0.833vw 2.083vw;
+        justify-content: center;
+        align-items: center;
+        gap: 0.521vw;
+        border-radius: 0.521vw;
+        background: var(--brand-blue, #24BBEB);
+        color: var(--brand-white, #FFF);
+        font-size: 0.885vw;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 2.604vw;
+
+        &:hover {
+            background: #56D4FC;
         }
     }
 }
