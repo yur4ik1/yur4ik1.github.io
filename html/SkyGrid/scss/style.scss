@@ -269,6 +269,7 @@
 
 .product {
     padding: 4.167vw 0;
+    position: relative;
 
     .container {
         display: flex;
@@ -321,6 +322,11 @@
         letter-spacing: 0.075vw;
         text-transform: uppercase;
         margin-top: 1.042vw;
+
+        span {
+            font-weight: 800;
+            color: var(--gray-40, #9CA1A8);
+        }
     }
 
     &__desc {
@@ -336,8 +342,11 @@
         width: 26.094vw;
         height: 30.729vw;
         margin-left: 5.99vw;
+        position: relative;
 
         img {
+            position: absolute;
+            right: 0;
             width: 100%;
             height: auto;
         }
@@ -361,4 +370,6 @@
             background: #56D4FC;
         }
     }
+
+    
 }
