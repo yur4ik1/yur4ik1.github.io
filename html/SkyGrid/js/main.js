@@ -70,7 +70,6 @@ subMenuItems.forEach(function (item) {
 });
 
 
-
 // price btn
 
 let retailText = document.querySelector('.retail-text');
