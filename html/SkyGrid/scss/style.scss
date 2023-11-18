@@ -90,7 +90,6 @@
     padding-top: 6.875vw;
     padding-bottom: 5.156vw;
     width: 100%;
-    height: 62.344vw;
     position: relative;
     overflow: hidden;
 
@@ -788,9 +787,14 @@
     }
 
     &__cards {
-        display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 2.083vw;
         margin-top: 3.958vw;
+        display: none;
+    }
+
+    &__cards.active {
+        display: flex;
     }
 
     &__cards-item {
