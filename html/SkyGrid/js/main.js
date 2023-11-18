@@ -23,7 +23,6 @@ window.onscroll = () => {
 
 }
 
-
 // mobile menu
 
 let burder = document.querySelector('.burger');
@@ -43,6 +42,33 @@ if (mobileMenu) {
     }
   });
 }
+
+// submenu
+
+let subMenuItems = document.querySelectorAll('.header__menu-item.sub');
+
+subMenuItems.forEach(function (item) {
+  let submenu = item.querySelector('.submenu');
+
+  if (submenu) {
+    item.addEventListener('mouseenter', function () {
+      submenu.classList.add('active');
+    });
+
+    item.addEventListener('mouseleave', function () {
+      submenu.classList.remove('active');
+    });
+
+    submenu.addEventListener('mouseenter', function () {
+      submenu.classList.add('active');
+    });
+
+    submenu.addEventListener('mouseleave', function () {
+      submenu.classList.remove('active');
+    });
+  }
+});
+
 
 
 // price btn
