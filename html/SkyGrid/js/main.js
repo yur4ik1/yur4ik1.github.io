@@ -1,3 +1,29 @@
+
+
+// Scroll header
+
+const header = document.querySelector(".header");
+const width = window.innerWidth
+
+window.onscroll = () => {
+  let posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  if (posTop > 1) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+
+  if (width < 1023) {
+    if (posTop > 0) {
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    }
+  }
+
+}
+
+
 // mobile menu
 
 let burder = document.querySelector('.burger');
@@ -39,3 +65,35 @@ if (filterBtn) {
         });
     });
 }
+
+
+// dark mode
+
+function toggleDarkHeader() {
+  const headerMain = document.querySelector('.header');
+  const plansSection = document.querySelector('.banner');
+  const integrationsSection = document.querySelector('.stories');
+  const contactsSection = document.querySelector('.countrys');
+  const footerSection = document.querySelector('.footer');
+
+  if (!headerMain) {
+    return;
+  }
+
+  const windowHeight = window.innerHeight;
+  const scrollPosition = window.scrollY;
+
+  const isInPlansSection = plansSection && scrollPosition >= plansSection.offsetTop && scrollPosition < plansSection.offsetTop + plansSection.offsetHeight;
+  const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
+  const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
+  const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
+
+  if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
+    headerMain.classList.add('dark');
+  } else {
+    headerMain.classList.remove('dark');
+  }
+}
+
+window.addEventListener('scroll', toggleDarkHeader);
+window.addEventListener('load', toggleDarkHeader);
