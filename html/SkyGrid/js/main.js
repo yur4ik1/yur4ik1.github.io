@@ -99,7 +99,7 @@ function toggleDarkHeader() {
   const plansSection = document.querySelector('.banner');
   const integrationsSection = document.querySelector('.stories');
   const contactsSection = document.querySelector('.countrys');
-  const footerSection = document.querySelector('.footer');
+  const footerSection = document.querySelector('.triggers');
 
   if (!headerMain) {
     return;
