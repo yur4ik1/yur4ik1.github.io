@@ -532,6 +532,7 @@
             width: auto;
             height: auto;
             position: absolute;
+            top: -2vw;
         }
     }
 
@@ -552,7 +553,7 @@
     .hero__style-2-bottom {
         width: 61.823vw;
         padding-top: 3.594vw;
-        padding-bottom: 4.792vw;  
+        padding-bottom: 4.792vw;
 
         .info {
             width: 100;
@@ -1345,6 +1346,100 @@
         }
     }
 }
+
+.text-with-image {
+    padding: 5.938vw 0;
+
+    .container {
+        max-width: 100%;
+        padding: 0 12.5vw;
+        padding-right: 10.417vw;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .text {
+        width: 36.458vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.042vw;
+
+        .subtitle {
+            color: var(--brand-blue, #24BBEB);
+            font-size: 1.042vw;
+            font-weight: 400;
+            line-height: 1.667vw;
+            letter-spacing: 0.021vw;
+            text-transform: uppercase;
+        }
+
+        .title {
+            color: var(--brand-dark, #081425);
+            font-size: 3.75vw;
+            font-weight: 800;
+            line-height: 4.792vw;
+            letter-spacing: 0.075vw;
+            text-transform: uppercase;
+        }
+
+        .text-content p {
+            color: var(--gray-60, #6B727C);
+            font-size: 1.042vw;
+            font-weight: 400;
+            line-height: 1.667vw;
+            letter-spacing: 0.021vw;
+            margin-bottom: 1.563vw;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .cta-btn {
+            width: 8.646vw;
+            display: flex;
+            padding: 0.833vw 2.083vw;
+            justify-content: center;
+            align-items: center;
+            gap: 0.521vw;
+            border-radius: 0.521vw;
+            background: var(--brand-blue, #24BBEB);
+            color: var(--brand-white, #FFF);
+            font-size: 0.885vw;
+            font-weight: 600;
+            line-height: normal;
+            &:hover {
+                background: #56D4FC;
+            }
+        }
+    }
+
+    .image {
+        width: 35vw;
+        height: auto;
+        position: relative;
+
+        img {
+            width: auto;
+            height: auto;
+            position: absolute;
+        
+        }
+    }
+}
+
+.text-with-image.left {
+    .text {
+        order: 2;
+    }
+    .image {
+        order: 1;
+    }
+}
+
+
 
 .footer {
     border-top: 1px solid #EEE;
