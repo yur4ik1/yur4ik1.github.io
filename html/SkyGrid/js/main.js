@@ -100,6 +100,7 @@ function toggleDarkHeader() {
   const integrationsSection = document.querySelector('.stories');
   const contactsSection = document.querySelector('.countrys');
   const footerSection = document.querySelector('.triggers');
+  const formSection = document.querySelector('.form');
 
   if (!headerMain) {
     return;
@@ -112,6 +113,7 @@ function toggleDarkHeader() {
   const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
   const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
   const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
+  const isInFormSection = formSection && scrollPosition >= formSection.offsetTop && scrollPosition < formSection.offsetTop + formSection.offsetHeight;
 
   if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
     headerMain.classList.add('dark');
