@@ -122,3 +122,27 @@ function toggleDarkHeader() {
 
 window.addEventListener('scroll', toggleDarkHeader);
 window.addEventListener('load', toggleDarkHeader);
+
+
+
+// faq
+
+let faqItems = document.querySelectorAll(".faq__items-item");
+
+if (faqItems) {
+  faqItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      faqItems.forEach(function (otherItem) {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+        }
+      });
+
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+      } else {
+        item.classList.add("active");
+      }
+    });
+  });
+}
