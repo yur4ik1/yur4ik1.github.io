@@ -126,19 +126,56 @@
                 <div class="add-department">
                     <a class="add-department-btn btn" href="#">Add Department</a>
 
+                   
                     <div class="new__custom-select-wrapper">
-                        <div class="new__custom-select filter-select-scroll">
-                            <div class="inputFilter">
-                                <input class="new__custom-select__trigge_new" type="text"
-                                    placeholder="Type here to search for Clan..." id="newCustomSelect"></input>
-                                <button class="closeFilter hidden">
-                                    <img src="./img/subscription__popup-close.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="new__custom-options" id="new__custom-options"></div>
-                            <div class="custom-scrollbar"></div>
-                        </div>
+                      <div class="new__custom-select">
+                          <span class="line"></span>
+                          <div class="arrow"></div>
+                          <div class="new__custom-select__trigger">Type here to search for Clan...</div>
+
+                          <div class="new__custom-options">
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all1">
+                                  <label for="all1">A Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all2">
+                                  <label for="all2">B Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all3">
+                                  <label for="all3">C Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all4">
+                                  <label for="all4">D Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all5">
+                                  <label for="all5">E Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all6">
+                                  <label for="all6">F Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all7">
+                                  <label for="all7">G Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all8">
+                                  <label for="all8">A Department</label>
+                              </div>
+                              <div class="new__custom-option" >
+                                  <input type="checkbox" id="all9">
+                                  <label for="all9">A Department</label>
+                              </div>
+                          </div>
+                          <div class="custom-scrollbar"></div>
+                      </div>
                     </div>
+                    
+
                 </div>
                 <div class="overlay">
                     <div class="overlay__inner">
@@ -171,10 +208,62 @@
                 <div class="positions__popup-content">
                     <div class="positions__popup-form">
                         <label>Department Name
+                        
                             <div class="field">
+                                <div class="new__custom-select-wrapper">
+                                    <div class="new__custom-select">
+                                        <span class="line"></span>
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger">Type here to search for Clan...</div>
+              
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all1">
+                                                <label for="all1">A Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all2">
+                                                <label for="all2">B Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all3">
+                                                <label for="all3">C Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all4">
+                                                <label for="all4">D Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all5">
+                                                <label for="all5">E Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all6">
+                                                <label for="all6">F Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all7">
+                                                <label for="all7">G Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all8">
+                                                <label for="all8">A Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all9">
+                                                <label for="all9">A Department</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar"></div>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                           <!-- <div class="field">
                                 <input type="text" placeholder="Type a department name" id="department">
                                 <button class="btn" onclick="AddElement()"></button>
-                            </div>
+                            </div> -->
+                            
                         </label>
                         <h4 class="departments-title">Added Departments</h4>
                         <div class="info-popup">
@@ -232,13 +321,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Junior</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Junior">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -266,13 +349,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Middle</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Middle">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -300,13 +377,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">ASenior</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Senior">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -334,13 +405,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Lead</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Lead">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -368,13 +433,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Manager</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Manager">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -402,13 +461,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">C-Level</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="C-Level">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -439,6 +492,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -484,13 +538,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Junior</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Junior">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -518,13 +566,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Middle</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Middle">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -552,13 +594,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">ASenior</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="ASenior">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -586,13 +622,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Lead</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Lead">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -620,13 +650,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">Manager</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="Manager">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -654,13 +678,7 @@
                         <div class="levels__fields">
                             <div class="left">
                                 <label>* Level
-                                    <div class="custom-select">
-                                        <div class="select-selected" id="select-selected">C-Level</div>
-                                        <div class="select-items select-hide">
-                                            <div class="select-option">Junior</div>
-                                            <div class="select-option">Middle</div>
-                                        </div>
-                                    </div>
+                                    <input type="text" placeholder="C-Level">
                                     <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
                                         skills</span>
                                 </label>
@@ -690,6 +708,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -865,7 +884,7 @@
 
         .department-field {
             padding-left: 2.086vw !important;
-            color: #1b2438;
+            color: #B9BABE;
             border: none;
             -webkit-box-shadow: none;
             box-shadow: none;
@@ -874,7 +893,6 @@
             font-size: 1.043vw;
             line-height: 2.503vw;
             letter-spacing: .014vw;
-            color: #1b2438;
             margin-right: 5px;
             transition: 0.4s;
             border-radius: .521vw;
@@ -957,6 +975,14 @@
         }
     </style>
 
+    <script>
+        // auto height for textarea
+        function autoExpand(element) {
+            element.style.height = "5px";
+            element.style.height = (element.scrollHeight) + "px";
+            console.log("textarea height test")
+        }
+    </script>
 
     <script>
 
@@ -1024,7 +1050,7 @@
                 return `<div class = "positions-item">
                     <div class="department__wrapper">
                         <div class="department">
-                            <p class="department-field" contentEditable="false" data-default-value="${da.title}" data-id="${da.id}">${da.title}</p>
+                            <p class="department-field department-field-custom-style" contentEditable="false" data-default-value="${da.title}" data-id="${da.id}">${da.title}</p>
                             <a class="edit" href="#"></a>
                             <a class="skills-archive" data-id="${da.id}" href="#"></a>
                             <div class="skills__alert-popup department__wrapper-archive" data-id="${da.id}">
@@ -1043,6 +1069,10 @@
                         <div class="add-job">
                             <button class="add-job-btn btn" onclick="openAddJobPopup('${da.id}')">Add Job</button>
                         </div>
+                    </div>
+
+                    <div class="new-department-field">
+                        <textarea id="autoExpand" rows="1" placeholder="Please type here to add Department’s Description..." oninput="autoExpand(this)"></textarea>
                     </div>
     
                     <div class="content__section">
@@ -1403,7 +1433,7 @@
                     }
                     else {
                         removeStyleAttribute(inputItem, index)
-                        inputItem[index].style = 'pointer-events: all; border: 0.104vw solid #E4E8EE; width: 100%;  padding-right:2.086vw; margin-right: 15px;';
+                        inputItem[index].style = 'pointer-events: all; border: 0.104vw solid #E4E8EE; width: 100%;  padding-right:2.086vw; margin-right: 15px; color: #1B2438;';
                         inputItem[index].textContent = inputItem[index].dataset.defaultValue
                     }
                 })
@@ -1926,7 +1956,7 @@
 
         function filter() {
             const filter = document.getElementById('new__custom-options');
-            const allCustomOption = filter.querySelectorAll('[data-value="ua"]');
+            const allCustomOption = filter.querySelectorAll('[]');
             const clickElementBoxes = filter.querySelectorAll('input');
             const allCustomLebel = filter.querySelectorAll('label')
 
@@ -2083,7 +2113,7 @@
         }
     </script>
 
-    <script>
+    <!-- <script>
         function filterSelectScrollOutside(event) {
             const folterSelectScroll = document.querySelector('.filter-select-scroll')
             if (event.target !== folterSelectScroll && !folterSelectScroll.contains(event.target)) {
@@ -2093,7 +2123,7 @@
 
         }
         document.addEventListener('click', filterSelectScrollOutside) 
-    </script>
+    </script> -->
 
     <script>
 
@@ -2258,8 +2288,38 @@
             newCustomSelectqueryDada = datas
         }
     </script>
-
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    // Находим все элементы .new__custom-select__trigger
+    var customSelectTriggers = document.querySelectorAll('.new__custom-select__trigger');
+
+    // Добавляем обработчик события к каждому триггеру
+    customSelectTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+            // Находим ближайший родительский элемент .new__custom-select
+            var customSelect = event.target.closest('.new__custom-select');
+            
+            // Добавляем/удаляем класс 'open' к родительскому элементу
+            if (customSelect) {
+                customSelect.classList.toggle('open');
+            }
+        });
+    });
+
+    // Добавляем обработчик события для закрытия выпадающего списка при клике за его пределами
+    document.addEventListener('click', function (event) {
+        customSelectTriggers.forEach(function (trigger) {
+            var customSelect = trigger.closest('.new__custom-select');
+            if (customSelect && !customSelect.contains(event.target) && customSelect.classList.contains('open')) {
+                // Если клик был вне .new__custom-select и .new__custom-select открыт, закрываем его
+                customSelect.classList.remove('open');
+            }
+        });
+    });
+});
+
+    </script>
+    <!-- <script>
 
         let filteredItems = []
         const newCustomSelectsNew = document.querySelector('.new__custom-select');
@@ -2273,7 +2333,7 @@
                     return item.title.toLowerCase().startsWith(document.getElementById('newCustomSelect').value.toLowerCase().substring(0, 10))
                 })
                 document.getElementById('new__custom-options').innerHTML = filteredItems.map((da, index) => {
-                    return `<div class="new__custom-option" data-value="ua">
+                    return `<div class="new__custom-option" >
                                     <input type="checkbox" id="all${index + 1}" data-title="${da.title}">
                                     <label class="new__custom-option-lable" for="all${index + 1}">${da.title}</label>
                                                             </div>`
@@ -2313,8 +2373,11 @@
             // document.querySelector('.closeFilter').classList.add('hidden')
         })
 
-    </script>
+    </script> -->
 
+
+
+   
 </body>
 
 </html>

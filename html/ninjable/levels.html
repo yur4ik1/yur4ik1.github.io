@@ -134,8 +134,9 @@
                     <table class="table table-wrapper" id="table">
                         <tr class="row row-header">
                             <th class="cell id">ID</th>
-                            <th class="cell">Title Level</th>
+                            <th class="cell">Seniority</th>
                             <th class="cell">Color</th>
+                            <th class="cell">Skill Level</th>
                             <th class="cell">Actions</th>
                         </tr>
 
@@ -160,11 +161,27 @@
                     <h4>Levels</h4>
                     <div class="level__popup-form" id="formPopupLevels">
                     </div>
+
+                    <h4>EntreComp Framework</h4>
+                    <div class="level__popup-form" id="formPopupLevels">
+                        <button>Foundation (Discover)</button>
+                        <button>Foundation (Explore)</button>
+                        <button>Intermediate (Experiment)</button>
+                        <button>Intermediate (Dare)</button>
+                        <button>Advanced (Improve)</button>
+                        <button>Advanced (Reinforce)</button>
+                        <button>Expert (Expand)</button>
+                        <button>Expert (Transform)</button>
+                    </div>
+
+                    
+                    <div class="level__popup-bottom">
+                        <a class="btn" href="#" id="btnLevelSave">Save</a>
+                    </div>
+
                 </div>
 
-                <div class="level__popup-bottom">
-                    <a class="btn" href="#" id="btnLevelSave">Save</a>
-                </div>
+
             </div>
 
         </div>
@@ -209,6 +226,8 @@
                 item.is_active && button.classList.add('active')
                 document.getElementById('formPopupLevels').append(button)
             })
+
+
             addPopupButtonsListeners()
 
 
@@ -218,11 +237,13 @@
                     document.getElementById('cellid').innerHTML += `<tr class="row row-item"> 
                             <td class="cell id">${da.id}</td>
                             <td class="cell name">${da.title}</td>
+                         
                             <td class="cell color">
                                 <div class="span-color__center">
                                     <span class="${da.color}">${da.color} - ${da.color} Ninja</span>
                                 </div>
                             </td>
+                            <td class="cell skill-level name">Junior</td>
                             <td class="cell actions">
                                 <span class="archive" data-id="${da.id}"></span>
                             </td> 
@@ -403,15 +424,19 @@
     }
 
     .row .cell:nth-child(1) {
-        width: 8.76vw;
+        width: 7.76vw;
     }
 
     .row .cell:nth-child(2) {
-        width: 12.49vw;
+        width: 8.49vw;
     }
 
     .row .cell:nth-child(3) {
-        width: 22.23vw;
+        width: 16.23vw;
+    }
+
+    .row .cell:nth-child(4) {
+        width: 10.23vw;
     }
 
     .overlay {

@@ -162,7 +162,7 @@
                     </div>
                     <div class="table">
                         <div class="row row-header">
-                            <div class="cell id" id="cellId">ID</div>
+                            <!-- <div class="cell id" id="cellId">ID</div> -->
                             <div class="cell">Full Name</div>
                             <div class="cell">Status</div>
                             <div class="cell">Item</div>
@@ -567,15 +567,18 @@
                 const newRow = document.createElement('div');
                 newRow.className = 'row row-item';
                 newRow.innerHTML = `
-                                <div class="cell id">${item.id}</div>
-                                <div class="cell">${item.approver != null ? item.requestee.firstname + " " + item.requestee.lastname : ''}</div>
+                                <div class="cell fullname">${item.approver != null ? item.requestee.firstname + " " + item.requestee.lastname : ''}</div>
                                 <div class="cell status">${item.status == 0 ? "Pending" : item.status == 1 ? "Approved" : "Rejected"}</div>
                                 <div class="cell">${item.reward.title}</div>
                                 <div class="cell name">${item.comment == null ? '' : item.comment}</div>
                                 <div class="cell actions">
                                     <span class="edit" data-id="${item.id}" data-approver-id="${item.approver == null ? '' : item.approver.id}"></span>
+                                    <span class="repost" data-id="${item.id}" data-approver-id="${item.approver == null ? '' : item.approver.id}"></span>
                                 </div>`;
-                rowHeader.appendChild(newRow)
+                rowHeader.appendChild(newRow);
+                if(item.status == 0) {
+                  newRow.classList.add('new');
+                }
             });
 
             document.querySelector('.overlay').classList.remove('active')

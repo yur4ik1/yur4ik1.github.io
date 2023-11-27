@@ -204,55 +204,55 @@
                     <div class="badge__popup-form" id="popup">
                         <label>* Icon
                             <div class="new__custom-select-wrapper acievements-select">
-                                <div class="new__custom-select">
-                                    <span class="line"></span>
-                                    <div class="arrow"></div>
-                                    <div class="new__custom-select__trigger">Please Select a icon
-                                    </div>
-                                    <div class="new__custom-options">
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-                                                <img src="./img/acievements-img-1.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-                                                <img src="./img/acievements-img-2.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-                                                <img src="./img/acievements-img-3.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-
-                                            </div>
-                                        </div>
-                                        <div class="new__custom-option" data-value="icon-1">
-                                            <div class="acievements-bg">
-
-                                            </div>
+                              <div class="new__custom-select">
+                                  <span class="line"></span>
+                                  <div class="arrow"></div>
+                                  <div class="new__custom-select__trigger">Please Select a icon.</div>
+        
+                                  <div class="new__custom-options">
+                                    <div class="new__custom-option active" data-value="icon-1">
+                                        <div class="acievements-bg">
+                                            <img src="./img/acievements-img-1.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="custom-scrollbar"></div>
-                                </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+                                            <img src="./img/acievements-img-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+                                            <img src="./img/acievements-img-3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+
+                                        </div>
+                                    </div>
+                                    <div class="new__custom-option" data-value="icon-1">
+                                        <div class="acievements-bg">
+
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="custom-scrollbar"></div>
+                              </div>
                             </div>
                             <span class="let-know">Please let us know icon</span>
                         </label>
@@ -327,7 +327,7 @@
                                 <input type="number" placeholder="10">
                                 <span class="let-know">Please let us know amount</span>
 
-                                <label class="info">* Badges Amount
+                                <label class="info" style="margin-top: 2.35vw;">* Badges Amount
                                     <div class="badge__info-popup badges">
                                         <p class="title">Badges Amount</p>
                                         <p class="desc">
@@ -1416,7 +1416,31 @@
 
 
     </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        let customSelectTriggers = document.querySelectorAll('.new__custom-select__trigger');
 
+        customSelectTriggers.forEach(function (trigger) {
+            trigger.addEventListener('click', function (event) {
+                let customSelect = event.target.closest('.new__custom-select');
+                
+                if (customSelect) {
+                    customSelect.classList.toggle('open');
+                }
+            });
+        });
+        и
+        document.addEventListener('click', function (event) {
+            customSelectTriggers.forEach(function (trigger) {
+                let customSelect = trigger.closest('.new__custom-select');
+                if (customSelect && !customSelect.contains(event.target) && customSelect.classList.contains('open')) {
+                    customSelect.classList.remove('open');
+                }
+            });
+        });
+        });
+
+        </script>
     <script src="./js/main.min.js"></script>
 
 </body>
