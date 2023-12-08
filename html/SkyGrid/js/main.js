@@ -78,17 +78,17 @@ let filterBtn = document.querySelector('.price__filter-btn');
 let priceCards = document.querySelectorAll('.price__cards');
 
 if (filterBtn) {
-    filterBtn.addEventListener('click', () => {
-        retailText.classList.toggle('active');
-        filterBtn.classList.toggle('active');
-        wholesaleText.classList.toggle('active');
+  filterBtn.addEventListener('click', () => {
+    retailText.classList.toggle('active');
+    filterBtn.classList.toggle('active');
+    wholesaleText.classList.toggle('active');
 
-        // Перевіряємо, який елемент price__cards вже має клас 'active'
-        priceCards.forEach((card) => {
-            // Перемикаємо клас 'active' для кожного елемента
-            card.classList.toggle('active');
-        });
+    // Перевіряємо, який елемент price__cards вже має клас 'active'
+    priceCards.forEach((card) => {
+      // Перемикаємо клас 'active' для кожного елемента
+      card.classList.toggle('active');
     });
+  });
 }
 
 
@@ -146,5 +146,92 @@ if (faqItems) {
         item.classList.add("active");
       }
     });
+  });
+}
+
+
+
+// scroll to id
+
+function smoothScrollTo(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    document.body.style.overflow = 'hidden';
+
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 1000);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if (hash) {
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    setTimeout(() => {
+      const element = document.querySelector(hash);
+      if (element) {
+        document.body.style.overflow = 'hidden';
+
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+
+        setTimeout(() => {
+          document.body.style.overflow = '';
+        }, 1000); 
+      }
+    }, 500);
+  }
+});
+
+
+// redirect for link
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Обробка кліку на посилання з класом trigger-5
+  document.querySelectorAll('.trigger-5').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      // Відкриття посилання у новій вкладці
+      window.open('/suppliers.html?trigger5Clicked=true#shops', '_blank');
+    });
+  });
+
+  // Перевірка URL на наявність параметра trigger5Clicked і відповідного шляху
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('trigger5Clicked') === 'true' && isSuppliersPage()) {
+    // Чекаємо завантаження динамічних елементів
+    waitForElements('.shops__table-country', (countryTables) => {
+      countryTables.forEach(table => {
+        const shopItems = table.querySelectorAll('.shop-item');
+        if (shopItems.length > 5) {
+          for (let i = 5; i < shopItems.length; i++) {
+            shopItems[i].classList.add('deactivate');
+          }
+        }
+      });
+    });
+  }
+});
+
+function isSuppliersPage() {
+  return window.location.pathname.includes('suppliers') || window.location.pathname.includes('temporary-slug');
+}
+
+function waitForElements(selector, callback) {
+  const observer = new MutationObserver(mutations => {
+    const elements = document.querySelectorAll(selector);
+    if (elements.length) {
+      callback(elements);
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
   });
 }
