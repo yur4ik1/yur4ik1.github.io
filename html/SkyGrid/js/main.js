@@ -196,42 +196,25 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       // Відкриття посилання у новій вкладці
-      window.open('suppliers.html?trigger5Clicked=true#shops', '_blank');
+      window.open('/suppliers.html?trigger5Clicked=true#shops', '_blank');
     });
   });
 
-  // Перевірка URL на наявність параметра trigger5Clicked і відповідного шляху
+  // Перевірка URL на наявність параметра trigger5Clicked
   const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('trigger5Clicked') === 'true' && isSuppliersPage()) {
-    // Чекаємо завантаження динамічних елементів
-    waitForElements('.shops__table-country', (countryTables) => {
-      countryTables.forEach(table => {
-        const shopItems = table.querySelectorAll('.shop-item');
-        if (shopItems.length > 5) {
-          for (let i = 5; i < shopItems.length; i++) {
-            shopItems[i].classList.add('deactivate');
-          }
+  if (window.location.pathname.endsWith('/suppliers.html') && urlParams.get('trigger5Clicked') === 'true') {
+    // Додавання класу deactivate до shop-item
+    const countryTables = document.querySelectorAll('.shops__table-country');
+    countryTables.forEach(table => {
+      const shopItems = table.querySelectorAll('.shop-item');
+      if (shopItems.length > 5) {
+        for (let i = 5; i < shopItems.length; i++) {
+          shopItems[i].classList.add('deactivate');
         }
-      });
+      }
     });
+
   }
 });
 
-function isSuppliersPage() {
-  return window.location.pathname.includes('suppliers') || window.location.pathname.includes('temporary-slug');
-}
 
-function waitForElements(selector, callback) {
-  const observer = new MutationObserver(mutations => {
-    const elements = document.querySelectorAll(selector);
-    if (elements.length) {
-      callback(elements);
-      observer.disconnect();
-    }
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-}
