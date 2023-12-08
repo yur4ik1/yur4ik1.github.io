@@ -196,13 +196,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       // Відкриття посилання у новій вкладці
-      window.open('/suppliers.html?trigger5Clicked=true#shops', '_blank');
+      window.open('suppliers.html?trigger5Clicked=true#shops', '_blank');
     });
   });
 
   // Перевірка URL на наявність параметра trigger5Clicked
   const urlParams = new URLSearchParams(window.location.search);
-  if (window.location.pathname.endsWith('/suppliers.html') && urlParams.get('trigger5Clicked') === 'true') {
+  if (window.location.pathname.endsWith('suppliers.html') && urlParams.get('trigger5Clicked') === 'true') {
     // Додавання класу deactivate до shop-item
     const countryTables = document.querySelectorAll('.shops__table-country');
     countryTables.forEach(table => {
