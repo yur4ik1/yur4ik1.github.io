@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       // Відкриття посилання у новій вкладці
-      window.open('/suppliers.html?trigger5Clicked=true#shops', '_blank');
+      window.open('suppliers.html?trigger5Clicked=true#shops', '_blank');
     });
   });
 
