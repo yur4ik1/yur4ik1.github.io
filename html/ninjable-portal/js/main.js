@@ -1280,7 +1280,7 @@ const skillMatrixPopup = document.getElementById("skill-matrix-popup");
 const skillMatrixPopupOpen = document.querySelectorAll(".skill-matrix-popup-opener");
 const skillMatrixPopupClose = document.querySelector(".in-progress-close");
 
-registerPopup(skillMatrixPopup, skillMatrixPopupOpen, skillMatrixPopupClose, true)
+registerPopup(skillMatrixPopup, skillMatrixPopupOpen, skillMatrixPopupClose)
 
 // workforce popup
 const workForcePopup = document.getElementById("workforce-popup");
