@@ -1273,6 +1273,24 @@ document.addEventListener('click', function(event) {
     }
 });
 
+/* custom period popup */
+
+const reportsPeriodPopup = document.querySelector(".custom-period-popup");
+const reportsPeriodBtns = document.querySelectorAll(".custom-period-btn");
+const reportsPeriodClose = document.querySelector(".custom-period-close");
+
+if (reportsPeriodPopup && reportsPeriodBtns.length > 0) {
+  reportsPeriodBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      reportsPeriodPopup.classList.add("active");
+    });
+  });
+
+  reportsPeriodClose.addEventListener("click", () => {
+    reportsPeriodPopup.classList.remove("active");
+  });
+}
+
 
 
 // Skill matrix popup
