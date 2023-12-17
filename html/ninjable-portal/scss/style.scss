@@ -12,7 +12,7 @@
 
 .header {
   width: 100%;
-  background: url('/img/header-background.webp') no-repeat center top / cover;
+  background: url('../img/header-background.webp') no-repeat center top / cover;
   background-color: rgb(104 117 145 / 80%);
   background-blend-mode: multiply;
   box-shadow: 0vw 0vw 2.737vw rgba(6, 8, 13, 0.75);
@@ -67,7 +67,7 @@
 
       .crystal::before {
         content: '';
-        background: url(/img/crystal-icon.svg) no-repeat center top / cover;
+        background: url(../img/crystal-icon.svg) no-repeat center top / cover;
         width: 1.408vw;
         height: 1.408vw;
         margin-right: 0.834vw;
@@ -79,7 +79,7 @@
 
       .coins::before {
         content: '';
-        background: url(/img/coins-icon.svg) no-repeat center top / cover;
+        background: url(../img/coins-icon.svg) no-repeat center top / cover;
         width: 1.043vw;
         height: 1.564vw;
         margin-right: 0.834vw;
@@ -116,7 +116,7 @@
 
       &::after {
         content: '';
-        background: url(/img/notification-icon.svg) no-repeat center top / cover;
+        background: url(../img/notification-icon.svg) no-repeat center top / cover;
         width: 1.176vw;
         height: 1.447vw;
         position: absolute;
@@ -146,7 +146,7 @@
 
       &::after {
         content: '';
-        background: url(/img/avatar-arrow.svg) no-repeat center top / cover;
+        background: url(../img/avatar-arrow.svg) no-repeat center top / cover;
         width: 0.938vw;
         height: 0.574vw;
         margin-left: 8.043vw;
@@ -187,7 +187,7 @@
 
       &::after {
         content: '';
-        background: url(/img/notification-line.svg) no-repeat center top / cover;
+        background: url(../img/notification-line.svg) no-repeat center top / cover;
         width: 17.727vw;
         height: 0.052vw;
         margin-top: 0.886vw;
@@ -245,7 +245,7 @@
 
   &__popup-menu::before {
     content: "";
-    background: url(/img/profile-line.svg) no-repeat center top/cover;
+    background: url(../img/profile-line.svg) no-repeat center top/cover;
     width: 16.163vw;
     height: 0.052vw;
     position: absolute;
@@ -350,7 +350,7 @@
 
       .term-field input[type=checkbox] + label:before {
         content: '';
-        background: url(/img/check.svg) no-repeat center top / cover;
+        background: url(../img/check.svg) no-repeat center top / cover;
         width: 0.834vw;
         height: 0.834vw;
         display: block;
@@ -359,7 +359,7 @@
       }
 
       .term-field input[type=checkbox]:checked + label::before {
-        background: url(/img/check-true.svg) no-repeat center top / cover;
+        background: url(../img/check-true.svg) no-repeat center top / cover;
       }
     }
 
@@ -392,7 +392,7 @@
   }
 
   .leaf {
-    background: url(/img/leaf.webp) no-repeat center top / cover;
+    background: url(../img/leaf.webp) no-repeat center top / cover;
     width: 6.83vw;
     height: 13.347vw;
     position: absolute;
@@ -457,7 +457,7 @@
 
       &::after {
         content: '';
-        background: url(/img/password-icon.svg) no-repeat center top / cover;
+        background: url(../img/password-icon.svg) no-repeat center top / cover;
         height: 0.73vw;
         width: 0.991vw;
         display: block;
@@ -468,7 +468,7 @@
     }
 
     .password-icon.active::after {
-      background: url(/img/password-icon-open.svg) no-repeat center top / cover;
+      background: url(../img/password-icon-open.svg) no-repeat center top / cover;
     }
 
 
@@ -501,7 +501,7 @@
 
       .term-field input[type=checkbox] + label:before {
         content: '';
-        background: url(/img/check.svg) no-repeat center top / cover;
+        background: url(../img/check.svg) no-repeat center top / cover;
         width: 0.834vw;
         height: 0.834vw;
         display: block;
@@ -510,7 +510,7 @@
       }
 
       .term-field input[type=checkbox]:checked + label::before {
-        background: url(/img/check-true.svg) no-repeat center top / cover;
+        background: url(../img/check-true.svg) no-repeat center top / cover;
       }
 
       .forgot {
@@ -664,7 +664,7 @@
 
   &__left-item.deactivate::after {
     content: '';
-    background: url(/img/lock-icon.svg) no-repeat center top / cover;
+    background: url(../img/lock-icon.svg) no-repeat center top / cover;
     width: 2.138vw;
     height: 2.45vw;
   }
@@ -675,7 +675,7 @@
 
     &::before {
       content: '';
-      background: url(/img/profile-item-active-icon.svg) no-repeat center top / cover;
+      background: url(../img/profile-item-active-icon.svg) no-repeat center top / cover;
       width: 1.043vw;
       height: 1.356vw;
       position: absolute;
@@ -727,7 +727,7 @@
 
         &::after {
           content: '';
-          background: url(/img/info-icon-2.svg) no-repeat center top / cover;
+          background: url(../img/info-icon-2.svg) no-repeat center top / cover;
           width: 0.677vw;
           height: 0.677vw;
           margin-left: 0.469vw;
@@ -798,7 +798,7 @@
     }
 
     .leaves {
-      background: url(/img/profile-leaves.webp) no-repeat center top / cover;
+      background: url(../img/profile-leaves.webp) no-repeat center top / cover;
       width: 48.54vw;
       height: 16.84vw;
       position: absolute;
@@ -875,7 +875,7 @@
 
         &::after {
           content: '';
-          background: url(/img/map-icon.svg) no-repeat center top / cover;
+          background: url(../img/map-icon.svg) no-repeat center top / cover;
           width: 2.607vw;
           height: 2.503vw;
           position: absolute;
@@ -1038,7 +1038,7 @@
 
         &::after {
           content: '';
-          background: url(/img/close-popup.svg) no-repeat center top / cover;
+          background: url(../img/close-popup.svg) no-repeat center top / cover;
           width: 1.095vw;
           height: 1.095vw;
           position: absolute;
@@ -1174,7 +1174,7 @@
 
             &::after {
               content: '';
-              background: url(/img/tick.svg) no-repeat center top / cover;
+              background: url(../img/tick.svg) no-repeat center top / cover;
               width: 0.938vw;
               height: 0.73vw;
               display: block;
@@ -1263,7 +1263,7 @@
 
             &::before {
               content: '';
-              background: url(/img/three-icon.svg) no-repeat center top / cover;
+              background: url(../img/three-icon.svg) no-repeat center top / cover;
               width: 1.251vw;
               height: 1.251vw;
               margin-right: 0.521vw;
@@ -1436,7 +1436,7 @@
 
           .crystal::before {
             content: '';
-            background: url(/img/coins-icon.svg) no-repeat center top / cover;
+            background: url(../img/coins-icon.svg) no-repeat center top / cover;
             width: 1.043vw;
             height: 1.564vw;
             margin-right: 0.834vw;
@@ -1490,7 +1490,7 @@
 
       &::before {
         content: "";
-        background: url(/img/coins-icon.svg) no-repeat center top/cover;
+        background: url(../img/coins-icon.svg) no-repeat center top/cover;
         width: 1.043vw;
         height: 1.564vw;
         margin-right: .834vw;
@@ -1591,7 +1591,7 @@
 
         &::before {
           content: "";
-          background: url(/img/coins-icon.svg) no-repeat center top/cover;
+          background: url(../img/coins-icon.svg) no-repeat center top/cover;
           width: 1.043vw;
           height: 1.564vw;
           margin-right: 0.417vw;
@@ -1785,7 +1785,7 @@
     overflow: hidden;
 
     .map-bg {
-      background: url(/img/skill-map.svg) no-repeat center top / cover;
+      background: url(../img/skill-map.svg) no-repeat center top / cover;
       width: 62.344vw;
       height: 33.25vw;
     }
@@ -1938,7 +1938,7 @@
 
     &::after {
       content: '';
-      background: url('/img/skill-add.svg') no-repeat center top / cover;
+      background: url('../img/skill-add.svg') no-repeat center top / cover;
       width: 2.242vw;
       height: 2.242vw;
     }
@@ -1955,7 +1955,7 @@
 
     &::after {
       content: '';
-      background: url('/img/skill-lock.svg') no-repeat center top / cover;
+      background: url('../img/skill-lock.svg') no-repeat center top / cover;
       width: 2.711vw;
       height: 3.076vw;
     }
@@ -1992,7 +1992,7 @@
     }
 
     .main__popup-top::after {
-      background: url(/img/popup-add-slill-line.svg) no-repeat center top/cover;
+      background: url(../img/popup-add-slill-line.svg) no-repeat center top/cover;
       width: 44.042vw;
     }
 
@@ -2627,7 +2627,7 @@
 
       &::before {
         content: "";
-        background: url(/img/upload-icon.svg) no-repeat center top/cover;
+        background: url(../img/upload-icon.svg) no-repeat center top/cover;
         width: 0.626vw;
         height: 0.852vw;
         margin-right: 0.417vw;
@@ -2645,7 +2645,7 @@
 
       &::after {
         content: "";
-        background: url(/img/file-tick.svg) no-repeat center top/cover;
+        background: url(../img/file-tick.svg) no-repeat center top/cover;
         width: 0.469vw;
         height: 0.417vw;
         margin-left: 0.417vw;
@@ -2684,7 +2684,7 @@
     }
 
     .main__popup-top::after {
-      background: url(/img/popup-add-slill-line.svg) no-repeat center top/cover;
+      background: url(../img/popup-add-slill-line.svg) no-repeat center top/cover;
       width: 41.042vw;
       position: relative;
       right: 2.2vw;
@@ -2806,7 +2806,7 @@
 
         &::after {
           content: '';
-          background: url('/img/tasks-arrow.svg') no-repeat center top / cover;
+          background: url('../img/tasks-arrow.svg') no-repeat center top / cover;
           width: 0.469vw;
           height: 0.261vw;
           margin-left: 0.574vw;
@@ -2983,7 +2983,7 @@
       .prev {
         &::after {
           content: '';
-          background: url(/img/prev.svg) no-repeat center top / cover;
+          background: url(../img/prev.svg) no-repeat center top / cover;
           width: 0.365vw;
           height: 0.678vw;
           position: absolute;
@@ -2993,7 +2993,7 @@
       .next {
         &::after {
           content: '';
-          background: url(/img/next.svg) no-repeat center top / cover;
+          background: url(../img/next.svg) no-repeat center top / cover;
           width: 0.365vw;
           height: 0.678vw;
           position: absolute;
@@ -3085,7 +3085,7 @@
 
       &::before {
         content: '';
-        background: url('/img/upload-icon.svg') no-repeat center top / cover;
+        background: url('../img/upload-icon.svg') no-repeat center top / cover;
         width: 0.686vw;
         height: 0.882vw;
         margin-right: 0.521vw;
@@ -3110,7 +3110,7 @@
 
       &::after {
         content: '';
-        background: url('/img/arrow.svg') no-repeat center top / cover;
+        background: url('../img/arrow.svg') no-repeat center top / cover;
         width: 0.574vw;
         height: 0.313vw;
         margin-left: 0.626vw;
@@ -3173,7 +3173,7 @@
       .bold-btn {
         &::after {
           content: '';
-          background: url('/img/bold-icon.svg') no-repeat center top / cover;
+          background: url('../img/bold-icon.svg') no-repeat center top / cover;
           width: 0.626vw;
           height: 0.834vw;
           position: absolute;
@@ -3183,7 +3183,7 @@
       .italic-btn {
         &::after {
           content: '';
-          background: url('/img/italic-icon.svg') no-repeat center top / cover;
+          background: url('../img/italic-icon.svg') no-repeat center top / cover;
           width: 0.417vw;
           height: 0.834vw;
           position: absolute;
@@ -3193,7 +3193,7 @@
       .underlined-btn {
         &::after {
           content: '';
-          background: url('/img/underlined-icon.svg') no-repeat center top / cover;
+          background: url('../img/underlined-icon.svg') no-repeat center top / cover;
           width: 0.626vw;
           height: 0.834vw;
           position: absolute;
@@ -3203,7 +3203,7 @@
       .bulleted-btn {
         &::after {
           content: '';
-          background: url('/img/bulleted-icon.svg') no-repeat center top / cover;
+          background: url('../img/bulleted-icon.svg') no-repeat center top / cover;
           width: 0.886vw;
           height: 0.834vw;
           position: absolute;
@@ -3213,7 +3213,7 @@
       .checkbox-btn {
         &::after {
           content: '';
-          background: url('/img/checkbox-icon.svg') no-repeat center top / cover;
+          background: url('../img/checkbox-icon.svg') no-repeat center top / cover;
           width: 0.834vw;
           height: 0.834vw;
           position: absolute;
@@ -3223,7 +3223,7 @@
       .link-btn {
         &::after {
           content: '';
-          background: url('/img/link-icon.svg') no-repeat center top / cover;
+          background: url('../img/link-icon.svg') no-repeat center top / cover;
           width: 0.834vw;
           height: 0.834vw;
           position: absolute;
@@ -3233,7 +3233,7 @@
       .at-btn {
         &::after {
           content: '';
-          background: url('/img/at-icon.svg') no-repeat center top / cover;
+          background: url('../img/at-icon.svg') no-repeat center top / cover;
           width: 0.834vw;
           height: 0.834vw;
           position: absolute;
@@ -3243,7 +3243,7 @@
       .smile-btn {
         &::after {
           content: '';
-          background: url('/img/smile-icon.svg') no-repeat center top / cover;
+          background: url('../img/smile-icon.svg') no-repeat center top / cover;
           width: 0.834vw;
           height: 0.834vw;
           position: absolute;
@@ -3300,7 +3300,7 @@
 
       input[type=checkbox] + label:before {
         content: '';
-        background: url(/img/check.svg) no-repeat center top / cover;
+        background: url(../img/check.svg) no-repeat center top / cover;
         width: 0.834vw;
         height: 0.834vw;
         display: block;
@@ -3309,7 +3309,7 @@
       }
 
       input[type=checkbox]:checked + label::before {
-        background: url(/img/check-true.svg) no-repeat center top / cover;
+        background: url(../img/check-true.svg) no-repeat center top / cover;
       }
 
       .at {
@@ -3360,7 +3360,7 @@
 
           &::after {
             content: '';
-            background: url(/img/attachments-delete.svg) no-repeat center top /cover;
+            background: url(../img/attachments-delete.svg) no-repeat center top /cover;
             width: 0.521vw;
             height: 0.521vw;
 
@@ -3432,7 +3432,7 @@
 
             &::after {
               content: '';
-              background: url('/img/close-popup.svg') no-repeat center top / cover;
+              background: url('../img/close-popup.svg') no-repeat center top / cover;
               width: 1.095vw;
               height: 1.095vw;
             }
@@ -3502,7 +3502,7 @@
           &::before {
             position: absolute;
             content: '';
-            background: url(/img/remove-icon.svg) no-repeat center top / cover;
+            background: url(../img/remove-icon.svg) no-repeat center top / cover;
             width: 0.574vw;
             height: 0.574vw;
           }
@@ -3521,7 +3521,7 @@
 
         &::after {
           content: '';
-          background: url(/img/add-icon.svg) no-repeat center top / cover;
+          background: url(../img/add-icon.svg) no-repeat center top / cover;
           width: 0.678vw;
           height: 0.782vw;
         }
@@ -3541,7 +3541,7 @@
       .file-btn {
         &::after {
           content: '';
-          background: url('/img/file-icon.svg') no-repeat center top / cover;
+          background: url('../img/file-icon.svg') no-repeat center top / cover;
           width: 0.73vw;
           height: 0.834vw;
           position: absolute;
@@ -3629,7 +3629,7 @@
           .add-icon {
             &::after {
               content: '';
-              background: url(/img/add-icons.svg) no-repeat center top / cover;
+              background: url(../img/add-icons.svg) no-repeat center top / cover;
               width: 0.834vw;
               height: 0.782vw;
             }
@@ -3666,7 +3666,7 @@
 
         &::before {
           content: '';
-          background: url('/img/answer.svg') no-repeat center top / cover;
+          background: url('../img/answer.svg') no-repeat center top / cover;
           width: 0.782vw;
           height: 0.626vw;
           margin-right: 0.313vw;
@@ -3705,7 +3705,7 @@
 
       &::after {
         content: '';
-        background: url(/img/arrow.svg) no-repeat center top / cover;
+        background: url(../img/arrow.svg) no-repeat center top / cover;
         width: 0.574vw;
         height: 0.313vw;
         margin-left: 0.521vw;
@@ -3771,7 +3771,7 @@
 
         &::before {
           content: "";
-          background: url(/img/crystal-icon.svg) no-repeat center top/cover;
+          background: url(../img/crystal-icon.svg) no-repeat center top/cover;
           width: 1.408vw;
           height: 1.408vw;
           margin-right: .834vw;
@@ -3892,7 +3892,7 @@
         button.today {
           &::after {
             content: '';
-            background: url(/img/today.svg) no-repeat center top / cover;
+            background: url(../img/today.svg) no-repeat center top / cover;
             width: 1.616vw;
             height: 1.616vw;
           }
@@ -3901,7 +3901,7 @@
         button.tomorrow {
           &::after {
             content: '';
-            background: url(/img/tomorrow.svg) no-repeat center top / cover;
+            background: url(../img/tomorrow.svg) no-repeat center top / cover;
             width: 1.616vw;
             height: 1.616vw;
           }
@@ -3910,7 +3910,7 @@
         button.noduedate {
           &::after {
             content: '';
-            background: url(/img/noduedate.svg) no-repeat center top / cover;
+            background: url(../img/noduedate.svg) no-repeat center top / cover;
             width: 1.616vw;
             height: 1.616vw;
           }
@@ -3919,7 +3919,7 @@
         button.calendar-btn {
           &::after {
             content: '';
-            background: url(/img/calendar.svg) no-repeat center top / cover;
+            background: url(../img/calendar.svg) no-repeat center top / cover;
             width: 1.616vw;
             height: 1.616vw;
           }
@@ -4187,7 +4187,7 @@
       }
 
       .profile__centre-content .leaves {
-        background: url(/img/profile-leaves-2.webp) no-repeat center top/cover;
+        background: url(../img/profile-leaves-2.webp) no-repeat center top/cover;
         width: 100%;
         height: 13.139vw;
         top: 7.521vw;
@@ -4350,7 +4350,7 @@
 
         &:nth-child(1):after {
           content: "";
-          background: url(/img/date-btn-arrow.svg) no-repeat center top/cover;
+          background: url(../img/date-btn-arrow.svg) no-repeat center top/cover;
           width: 1.043vw;
           height: 0.73vw;
           display: block;
@@ -4559,7 +4559,7 @@
 
       &::after {
         content: '';
-        background: url('/img/arrow.svg') no-repeat center top / cover;
+        background: url('../img/arrow.svg') no-repeat center top / cover;
         width: 0.626vw;
         height: 0.365vw;
         margin-left: 0.365vw;
@@ -4851,7 +4851,7 @@
 
       &::after {
         content: '';
-        background: url(/img/leaderboard-title-line.svg) no-repeat center top / cover;
+        background: url(../img/leaderboard-title-line.svg) no-repeat center top / cover;
         width: 69.135vw;
         height: 0.104vw;
         margin-top: 2.711vw;
@@ -4954,7 +4954,7 @@
         span.coins {
           &::before {
             content: '';
-            background: url('/img/leaderboard-coins.svg') no-repeat center top / cover;
+            background: url('../img/leaderboard-coins.svg') no-repeat center top / cover;
             width: 1.147vw;
             height: 1.147vw;
           }
@@ -4963,7 +4963,7 @@
         span.crystals {
           &::before {
             content: '';
-            background: url('/img/leaderboard-crystals.svg') no-repeat center top / cover;
+            background: url('../img/leaderboard-crystals.svg') no-repeat center top / cover;
             width: 0.886vw;
             height: 1.095vw;
             margin-left: 0.221vw;
@@ -4973,7 +4973,7 @@
         span.finished {
           &::before {
             content: '';
-            background: url('/img/leaderboard-finished.svg') no-repeat center top / cover;
+            background: url('../img/leaderboard-finished.svg') no-repeat center top / cover;
             width: 0.73vw;
             height: 0.886vw;
             margin-left: 0.3vw;
@@ -4983,7 +4983,7 @@
         span.upgraded {
           &::before {
             content: '';
-            background: url('/img/leaderboard-upgraded.svg') no-repeat center top / cover;
+            background: url('../img/leaderboard-upgraded.svg') no-repeat center top / cover;
             width: 1.251vw;
             height: 1.199vw;
             margin-right: 0.7vw;
@@ -5183,7 +5183,7 @@
   }
 
   &__list-item.yellow {
-    background: url(/img/leaderboard-yellow.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-yellow.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw rgba(140, 98, 39, 0.75);
@@ -5206,25 +5206,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-yellow.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-yellow.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-yellow.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-yellow.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-yellow.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-yellow.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-yellow.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-yellow.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5241,7 +5241,7 @@
 
 
   &__list-item.green {
-    background: url(/img/leaderboard-green.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-green.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw #3F655F;
@@ -5264,25 +5264,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-green.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-green.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-green.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-green.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-green.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-green.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-green.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-green.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5298,7 +5298,7 @@
   }
 
   &__list-item.white {
-    background: url(/img/leaderboard-white.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-white.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw #C6C6C6;
@@ -5321,25 +5321,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-white.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-white.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-white.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-white.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-white.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-white.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-white.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-white.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5355,7 +5355,7 @@
   }
 
   &__list-item.purple {
-    background: url(/img/leaderboard-purple.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-purple.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw #5D5F8B;
@@ -5378,25 +5378,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-purple.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-purple.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-purple.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-purple.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-purple.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-purple.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-purple.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-purple.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5413,7 +5413,7 @@
 
 
   &__list-item.black {
-    background: url(/img/leaderboard-black.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-black.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw rgba(6, 8, 13, 0.75);
@@ -5436,25 +5436,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-black.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-black.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-black.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-black.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-black.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-black.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-black.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-black.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5471,7 +5471,7 @@
   }
 
   &__list-item.red {
-    background: url(/img/leaderboard-red.webp) no-repeat center top / cover;
+    background: url(../img/leaderboard-red.webp) no-repeat center top / cover;
 
     .avatar {
       box-shadow: 0vw 0vw 0.574vw 0.261vw #885552;
@@ -5494,25 +5494,25 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins-red.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins-red.svg') no-repeat center top / cover;
         }
       }
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals-red.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals-red.svg') no-repeat center top / cover;
         }
       }
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished-red.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished-red.svg') no-repeat center top / cover;
         }
       }
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded-red.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded-red.svg') no-repeat center top / cover;
         }
       }
     }
@@ -5571,7 +5571,7 @@
 
     .arrow {
       position: absolute;
-      background: url(/img/dropdown-arrow.svg) no-repeat center top / cover;
+      background: url(../img/dropdown-arrow.svg) no-repeat center top / cover;
       width: 0.886vw;
       height: 0.521vw;
       display: flex;
@@ -5612,7 +5612,7 @@
 
       span.coins {
         &::before {
-          background: url('/img/leaderboard-coins.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-coins.svg') no-repeat center top / cover;
           width: 1.147vw;
           height: 1.147vw;
         }
@@ -5620,7 +5620,7 @@
 
       span.crystals {
         &::before {
-          background: url('/img/leaderboard-crystals.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-crystals.svg') no-repeat center top / cover;
           width: 0.991vw;
           height: 1.199vw;
         }
@@ -5628,7 +5628,7 @@
 
       span.finished {
         &::before {
-          background: url('/img/leaderboard-finished.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-finished.svg') no-repeat center top / cover;
           width: 0.73vw;
           height: 0.886vw;
         }
@@ -5636,7 +5636,7 @@
 
       span.upgraded {
         &::before {
-          background: url('/img/leaderboard-upgraded.svg') no-repeat center top / cover;
+          background: url('../img/leaderboard-upgraded.svg') no-repeat center top / cover;
           width: 1.251vw;
           height: 1.199vw;
         }
@@ -5719,7 +5719,7 @@
     padding-bottom: 5.005vw;
 
     .leaves {
-      background: url('/img/leaves-settings.webp') no-repeat center top / cover;
+      background: url('../img/leaves-settings.webp') no-repeat center top / cover;
       width: 100%;
       height: 14.911vw;
       position: absolute;
@@ -5736,7 +5736,7 @@
 
       &::after {
         content: "";
-        background: url(/img/settings-line.svg) no-repeat center top/cover;
+        background: url(../img/settings-line.svg) no-repeat center top/cover;
         width: 44.161vw;
         height: 0.104vw;
         margin-top: 2.711vw;
@@ -5876,7 +5876,7 @@
 
       &::after {
         content: "";
-        background: url(/img/approvals-line.svg) no-repeat center top/cover;
+        background: url(../img/approvals-line.svg) no-repeat center top/cover;
         width: 69.135vw;
         height: 0.104vw;
         margin-top: 2.711vw;
@@ -5970,7 +5970,7 @@
 
         &::after {
           content: '';
-          background: url('/img/repost-icon.svg') no-repeat center top / cover;
+          background: url('../img/repost-icon.svg') no-repeat center top / cover;
           width: 1.043vw;
           height: 0.73vw;
           position: absolute;
@@ -5991,7 +5991,7 @@
 
         &::after {
           content: '';
-          background: url('/img/edit-icon.svg') no-repeat center top / cover;
+          background: url('../img/edit-icon.svg') no-repeat center top / cover;
           width: 1.095vw;
           height: 1.095vw;
           position: absolute;
@@ -6008,7 +6008,7 @@
 
         &::before {
           content: '';
-          background: url('/img/circle.svg') no-repeat center top / cover;
+          background: url('../img/circle.svg') no-repeat center top / cover;
           width: 0.469vw;
           height: 0.521vw;
           display: block;
@@ -6134,7 +6134,7 @@
 
       &::after {
         content: "";
-        background: url(/img/feedback-popup-line.svg) no-repeat center top/cover;
+        background: url(../img/feedback-popup-line.svg) no-repeat center top/cover;
         width: 40.042vw;
         height: 0.104vw;
         margin-top: 2.607vw;
@@ -6256,7 +6256,7 @@
 
       &::after {
         content: "";
-        background: url(/img/cell-arrow.svg) no-repeat center top/cover;
+        background: url(../img/cell-arrow.svg) no-repeat center top/cover;
         width: 0.417vw;
         height: 0.834vw;
         display: block;
@@ -6270,7 +6270,7 @@
 
       &::before {
         content: "";
-        background: url(/img/cell-coins.svg) no-repeat center top/cover;
+        background: url(../img/cell-coins.svg) no-repeat center top/cover;
         width: 1.147vw;
         height: 1.147vw;
         display: block;
@@ -6288,7 +6288,7 @@
     }
 
     span.tick {
-      background: url(/img/cell-tick.svg) no-repeat center top/cover;
+      background: url(../img/cell-tick.svg) no-repeat center top/cover;
       width: 1.147vw;
       height: 1.147vw;
       display: block;
@@ -6370,7 +6370,7 @@
 
       &::after {
         content: '';
-        background: url(/img/open.svg) no-repeat center top / cover;
+        background: url(../img/open.svg) no-repeat center top / cover;
         width: 1.095vw;
         height: 1.095vw;
         position: absolute;
@@ -6492,7 +6492,7 @@
     .main__popup-top {
       &::after {
         content: "";
-        background: url(/img/skills-upgraded-line.svg) no-repeat center top/cover;
+        background: url(../img/skills-upgraded-line.svg) no-repeat center top/cover;
         width: 64.181vw;
         height: 0.104vw;
         margin-top: 2.607vw;
@@ -6719,7 +6719,7 @@
     .main__popup-top {
       &::after {
         content: "";
-        background: url(/img/skills-upgraded-line.svg) no-repeat center top/cover;
+        background: url(../img/skills-upgraded-line.svg) no-repeat center top/cover;
         width: 64.181vw;
         height: 0.104vw;
         margin-top: 2.607vw;
@@ -6890,7 +6890,7 @@
 
     .main__popup-top::after {
       content: "";
-      background: url(/img/course-popup-line.svg) no-repeat center top/cover;
+      background: url(../img/course-popup-line.svg) no-repeat center top/cover;
       width: 40.146vw;
       height: 0.104vw;
       margin-top: 2.607vw;
@@ -7597,7 +7597,7 @@
 
           &::after {
             content: '';
-            background: url(/img/open.svg) no-repeat center top / cover;
+            background: url(../img/open.svg) no-repeat center top / cover;
             width: 1.095vw;
             height: 1.095vw;
             position: absolute;
@@ -7770,7 +7770,7 @@
         .task {
           &::before {
             content: '';
-            background: url(../img/overload-task-icon.svg) no-repeat center top / cover;
+            background: url(..../img/overload-task-icon.svg) no-repeat center top / cover;
             width: 0.73vw;
             height: 0.886vw;
           }
@@ -7779,7 +7779,7 @@
         .okr {
           &::before {
             content: '';
-            background: url(../img/overload-ork-icon.svg) no-repeat center top / cover;
+            background: url(..../img/overload-ork-icon.svg) no-repeat center top / cover;
             width: 0.782vw;
             height: 0.782vw;
           }
@@ -7850,7 +7850,7 @@
 
         .icon-time {
           display: flex;
-          background: url(../img/Icon_time.svg) no-repeat center top / cover;
+          background: url(..../img/Icon_time.svg) no-repeat center top / cover;
           width: 4.275vw;
           height: 4.275vw;
         }
@@ -7891,7 +7891,7 @@
 
         .icon-time {
           display: flex;
-          background: url(../img/Icon_time.svg) no-repeat center top / cover;
+          background: url(..../img/Icon_time.svg) no-repeat center top / cover;
           width: 4.275vw;
           height: 4.275vw;
         }
@@ -7992,7 +7992,7 @@
 
         .icon-time {
           display: flex;
-          background: url(../img/Icon_time.svg) no-repeat center top / cover;
+          background: url(..../img/Icon_time.svg) no-repeat center top / cover;
           width: 4.275vw;
           height: 4.275vw;
         }
