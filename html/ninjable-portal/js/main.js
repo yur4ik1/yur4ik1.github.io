@@ -1273,7 +1273,7 @@ document.addEventListener('click', function(event) {
     }
 });
 
-/* custom period popup */
+/* custom period popup (reports page) */
 
 const reportsPeriodPopup = document.querySelector(".custom-period-popup");
 const reportsPeriodBtns = document.querySelectorAll(".custom-period-btn");
@@ -1675,10 +1675,9 @@ tooltiped.forEach(tooltipedElement => {
     tooltip.classList.add("active")
 
     var rect = tooltipedElement.getBoundingClientRect();
-    console.log(rect)
     
     tooltip.style.left= rect.right + "px";
-    tooltip.style.top = rect.top + "px";
+    tooltip.style.top = rect.top + document.documentElement.scrollTop + "px";
   });
 
   tooltipedElement.addEventListener('mouseout', function () {
@@ -1692,10 +1691,10 @@ function createTooltip() {
   tooltipContainer.classList.add('tooltip');
   document.documentElement.appendChild(tooltipContainer)
   
-  console.log(tooltipContainer)
-  
   return tooltipContainer;
 }
+
+
 
 
 
