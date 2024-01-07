@@ -388,7 +388,6 @@ if (wisdomScrollPopup && wisdomScrollOpen) {
 }
 
 /* Pop up (Status: In progress) */
-
 const inProgressPopup = document.querySelector(".in-progress");
 const inProgressOpen = document.querySelectorAll(".in-progress-btn");
 const inProgressClose = document.querySelector(".in-progress-close");
@@ -1273,4 +1272,433 @@ document.addEventListener('click', function(event) {
         });
     }
 });
+
+/* custom period popup (reports page) */
+
+const reportsPeriodPopup = document.querySelector(".custom-period-popup");
+const reportsPeriodBtns = document.querySelectorAll(".custom-period-btn");
+const reportsPeriodClose = document.querySelector(".custom-period-close");
+
+if (reportsPeriodPopup && reportsPeriodBtns.length > 0) {
+  reportsPeriodBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      reportsPeriodPopup.classList.add("active");
+    });
+  });
+
+  reportsPeriodClose.addEventListener("click", () => {
+    reportsPeriodPopup.classList.remove("active");
+  });
+}
+
+
+
+// Skill matrix popup
+const skillMatrixPopup = document.getElementById("skill-matrix-popup");
+const skillMatrixPopupOpen = document.querySelectorAll(".skill-matrix-popup-opener");
+const skillMatrixPopupClose = document.querySelector(".in-progress-close");
+
+registerPopup(skillMatrixPopup, skillMatrixPopupOpen, skillMatrixPopupClose)
+
+// workforce popup
+const workForcePopup = document.getElementById("workforce-popup");
+const workForcePopupOpeners = document.querySelectorAll(".workforce-popup-opener");
+const workForcePopupClose = document.querySelector(".workforce-popup-close");
+
+registerPopup(workForcePopup, workForcePopupOpeners, workForcePopupClose)
+
+// skillApproval popup
+const skillApprovalPopup = document.getElementById("skill-approval-popup");
+const skillApprovalPopupOpeners = document.querySelectorAll(".skill-approval-popup-opener");
+const skillApprovalPopupClose = document.querySelector(".skill-approval-popup-close");
+
+registerPopup(skillApprovalPopup, skillApprovalPopupOpeners, skillApprovalPopupClose)
+
+// skillProgress popup
+const skillProgressPopup = document.getElementById("skill-progress-popup");
+const skillProgressPopupOpeners = document.querySelectorAll(".skill-progress-popup-open");
+const skillProgressPopupClose = document.querySelector(".skill-progress-popup-close");
+
+registerPopup(skillProgressPopup, skillProgressPopupOpeners, skillProgressPopupClose)
+
+
+// Adding scroll to popup script
+function checkHeightAndMakeScrollIfNeeded(popupWrapper) {
+  let popupInner = popupWrapper.firstChild.nextElementSibling;
+  let popupHeight = parseFloat(getComputedStyle(popupInner).width.slice(0,-2));
+
+  if(popupHeight > window.innerHeight){
+    popupWrapper.style.alignItems = "flex-start";
+    popupWrapper.style.overflow = "auto";
+  }
+}
+
+// Custom multi-select
+const OPEN_CLASS = "opened";
+const VISUALLY_HIDDEN_CLASS = "visually-hidden";
+
+let customSelections = document.querySelectorAll(".custom-multi-select");
+
+customSelections.forEach((selection) => {
+  let valueInput = selection.querySelector(".custom-multi-select__value");
+  let label = selection.querySelector(".custom-multi-select__label");
+  let groupItems = document.querySelectorAll('[data-selectiongroup]');
+  let clearButtonId = selection.dataset.clearbuttonid;
+  let selectedItemsContainer = selection.querySelector(".custom-multi-select__selection-selected-items");
+  let inputs = selection.querySelectorAll(".custom-multi-select__selection-input input");
+  selection.selectedInputs = [];
+  
+  
+  if (clearButtonId){
+    let closeButton = document.getElementById(clearButtonId);
+    if (closeButton){
+      closeButton.addEventListener("click", ()=>{
+        inputs.forEach(input => {input.checked = false;})
+        
+        selection.selectedInputs = []
+        updateInputSelected();
+        updateMainInput();
+      })  
+    }
+  }
+  
+  setDefaultLabelValue();
+
+  
+  inputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        addInputToSelected(input);
+      } else {
+        removeInputFromSelected(input);
+      }
+    });
+  });
+
+  function addInputToSelected(input){
+    selection.selectedInputs.push(input);
+    updateInputSelected();
+    updateMainInput();
+  }
+
+  function removeInputFromSelected(input){
+    let indexToRemove = selection.selectedInputs.indexOf(input);
+    selection.selectedInputs.splice(indexToRemove, 1);
+
+    updateInputSelected();
+    updateMainInput();
+  }
+
+  let search = selection.querySelector(".custom-multi-select__selection-search");
+  
+  search.addEventListener("input", () => {
+    if (search.value == "") {
+      inputs.forEach((input) =>
+          input.parentNode.classList.remove(VISUALLY_HIDDEN_CLASS)
+      );
+    } else {
+      inputs.forEach((input) => {
+        let labelValue = input.parentNode.querySelector("label").innerText;
+        if (!labelValue.toLowerCase().includes(search.value.toLowerCase())) {
+          input.parentNode.classList.add(VISUALLY_HIDDEN_CLASS);
+        } else {
+          input.parentNode.classList.remove(VISUALLY_HIDDEN_CLASS);
+        }
+      });
+    }
+  });
+
+  label.addEventListener("click", () => {
+    closeGroupSelection();
+    selection.classList.toggle(OPEN_CLASS);
+  });
+
+  function closeGroupSelection(){
+    groupItems.forEach(groupItem=>{
+      if (groupItem != selection){
+        groupItem.classList.remove(OPEN_CLASS);
+      }
+    })
+  }
+  
+  function updateInputSelected() {
+    updateLabel();
+    updateSelected();
+  }
+
+  function updateSelected() {
+    selectedItemsContainer.innerHTML = "";
+
+    if (selection.selectedInputs.length > 0) {
+      selection.selectedInputs.forEach((input) => {
+        let createdItem = createCustomSelectItem(input.nextElementSibling.innerText);
+
+        let itemRemoveButton = createdItem.querySelector(".selected-item__button")
+        itemRemoveButton.addEventListener("click",_=>{
+          removeInputFromSelected(input);
+          input.checked = false;
+        })
+      });
+    }
+  }
+
+  function createCustomSelectItem(textContent) {
+    let container = document.createElement("div");
+    container.className = "custom-multi-select__selected-item";
+
+    let textSpan = document.createElement("span");
+    textSpan.className = "selected-item__text";
+    textSpan.textContent = textContent;
+
+    let buttonSpan = document.createElement("span");
+    buttonSpan.className = "selected-item__button";
+
+    container.appendChild(textSpan);
+    container.appendChild(buttonSpan);
+
+    let parentElement = selectedItemsContainer
+    if (parentElement) {
+      selectedItemsContainer.appendChild(container);
+    } else {
+      console.error("Parent element not found");
+    }
+
+    return container;
+  }
+
+  function updateLabel() {
+    if (selection.selectedInputs.length > 0) {
+      let newLabelValue = "";
+
+      selection.selectedInputs.forEach((input) => {
+        console.log(input.nextElementSibling);
+
+        newLabelValue += input.nextElementSibling.innerText + ", ";
+      });
+
+      setLabelValue(newLabelValue.slice(0, -2));
+    } else {
+      setDefaultLabelValue();
+    }
+  }
+
+  function updateMainInput(){
+    let newInputValue = "";
+    selection.selectedInputs.forEach(input=>{
+      newInputValue += input.nextElementSibling.innerText + ",";
+    })
+
+    valueInput.value = newInputValue.slice(0, -1);
+  }
+
+  function setLabelValue(value) {
+    label.innerText = value;
+  }
+
+  function setDefaultLabelValue() {
+    setLabelValue(selection.dataset.placeholder);
+  }
+});
+
+// Custom radio-select
+let radioSelections = document.querySelectorAll(".custom-radio-select");
+
+radioSelections.forEach((selection) => {
+  let valueInput = selection.querySelector(".custom-radio-select__value");
+  let label = selection.querySelector(".custom-radio-select__label");
+  let groupItems = document.querySelectorAll('[data-selectiongroup]');
+  let clearButtonId = selection.dataset.clearbuttonid;
+  let inputs = selection.querySelectorAll(".custom-radio-select__selection-input input");
+  selection.selectedInputs = [];
+
+
+  if (clearButtonId){
+    let closeButton = document.getElementById(clearButtonId);
+    if (closeButton){
+      closeButton.addEventListener("click", ()=>{
+        inputs.forEach(input => {input.checked = false;})
+
+        selection.selectedInputs = []
+        updateInputSelected();
+        updateMainInput();
+      })
+    }
+  }
+
+  setDefaultLabelValue();
+
+
+  inputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        addInputToSelected(input);
+      } else {
+        removeInputFromSelected(input);
+      }
+    });
+  });
+
+  function addInputToSelected(input){
+    selection.selectedInputs.push(input);
+    updateInputSelected();
+    updateMainInput();
+  }
+
+  function removeInputFromSelected(input){
+    let indexToRemove = selection.selectedInputs.indexOf(input);
+    selection.selectedInputs.splice(indexToRemove, 1);
+
+    updateInputSelected();
+    updateMainInput();
+  }
+
+  label.addEventListener("click", () => {
+    closeGroupSelection();
+    selection.classList.toggle(OPEN_CLASS);
+  });
+
+  function closeGroupSelection(){
+    groupItems.forEach(groupItem=>{
+      if (groupItem != selection){
+        groupItem.classList.remove(OPEN_CLASS);
+      }
+    })
+  }
+
+  function updateInputSelected() {
+    updateLabel();
+  }
+  
+  function updateLabel() {
+    if (selection.selectedInputs.length > 0) {
+      let newLabelValue = "";
+
+      selection.selectedInputs.forEach(input=>{
+        if (input.checked){
+          newLabelValue = input.nextElementSibling.innerText;
+        }
+      })
+
+      setLabelValue(newLabelValue.slice(0, -2));
+    } else {
+      setDefaultLabelValue();
+    }
+  }
+
+  function updateMainInput(){
+    let newInputValue = "";
+    selection.selectedInputs.forEach(input=>{
+      if (input.checked){
+        newInputValue = input.nextElementSibling.innerText;
+      }
+    })
+
+    valueInput.value = newInputValue;
+  }
+
+  function setLabelValue(value) {
+    label.innerText = value;
+  }
+
+  function setDefaultLabelValue() {
+    setLabelValue(selection.dataset.placeholder);
+  }
+});
+
+
+// handling clear popup
+const SHOW_BUTTON_ATTRIBUTE = "data-showButtonId";
+const POPUP_SHOWTIME = 3000;
+let clearPopups = document.querySelectorAll(`[${SHOW_BUTTON_ATTRIBUTE}]`)
+
+const ACTIVE_CLASS = "active";
+clearPopups.forEach(popup => {
+  let triggerButtonId = popup.getAttribute(SHOW_BUTTON_ATTRIBUTE)
+  let triggerButton = document.getElementById(triggerButtonId);
+  
+  if (triggerButton){
+    triggerButton.addEventListener("click", ()=>{
+      popup.classList.add(ACTIVE_CLASS);
+
+      setTimeout(()=>{
+        popup.classList.remove(ACTIVE_CLASS);
+      }, POPUP_SHOWTIME);
+    })
+  }
+})
+
+function registerPopup(popup, popupOpeners, popupClose, isOpened){
+  function open() {
+    checkHeightAndMakeScrollIfNeeded(popup);
+    popup.classList.add("active");
+    document.querySelector("html").style.overflow = "hidden"
+  }
+
+  if (popup && popupOpeners && popupClose) {
+    if (isOpened){
+      open();
+    }
+    
+    popupOpeners.forEach((button) => {
+      button.addEventListener("click", () => {
+        open();
+      });
+    });
+
+    popupClose.addEventListener("click", () => {
+      popup.classList.remove("active");
+      document.querySelector("html").style.overflow = "auto"
+    });
+  }
+}
+
+// skill-progress-popup
+
+const tableFilterPopup = document.querySelectorAll(".skill-progress-popup__table-filter");
+
+tableFilterPopup.forEach(filter=> {
+  let tableFilterPopupOpeners = filter.querySelector(".skill-progress-popup__table-filter-button");
+  
+  tableFilterPopupOpeners.addEventListener("click", ()=>{
+    filter.classList.toggle("active")
+  })
+})
+
+
+// tooltip
+const TOOLTIP_ATTRIBUTE = "[data-tooltip]";
+let tooltiped = document.querySelectorAll(TOOLTIP_ATTRIBUTE)
+let tooltip = createTooltip();
+tooltiped.forEach(tooltipedElement => {
+  tooltipedElement.addEventListener('mouseover', function () {
+    tooltip.innerHTML = tooltipedElement.getAttribute("data-tooltip");
+    tooltip.classList.add("active")
+
+    var rect = tooltipedElement.getBoundingClientRect();
+    
+    tooltip.style.left= rect.right + "px";
+    tooltip.style.top = rect.top + document.documentElement.scrollTop + "px";
+  });
+
+  tooltipedElement.addEventListener('mouseout', function () {
+    tooltip.classList.remove("active")
+  });
+})
+
+function createTooltip() {
+  var tooltipContainer = document.createElement('div');
+  
+  tooltipContainer.classList.add('tooltip');
+  document.documentElement.appendChild(tooltipContainer)
+  
+  return tooltipContainer;
+}
+
+
+
+
+
+
+
+
 

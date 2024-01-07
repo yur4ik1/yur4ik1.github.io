@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Approvals</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Approvals">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="approvals-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="reports.html">Reports</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="settings.html">Settings</a>
+                    </li>
+                    <li class="profile__menu-item active">
+                        <a href="approvals.html">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="login-in.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="approvals">
+            <div class="container">
+                <div class="approvals__content">
+                    <div class="top">
+                        <h1>APPROVALS</h1>
+                    </div>
+                    <div class="approvals__info-table">
+                        <div class="row row-top">
+                            <div class="cell">
+                                Status
+                            </div>
+                            <div class="cell">
+                                Skill
+                            </div>
+                            <div class="cell">
+                                Requester
+                            </div>
+                            <div class="cell">
+                                Derailed Report
+                            </div>
+                            <div class="cell">
+                                Actions
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="cell">
+                                PHP
+                            </div>
+                            <div class="cell">
+                                John Smith
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link to report</a>
+                            </div>
+                            <div class="cell">
+                                <a class="repost-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell pending">
+                                <span>Pending</span>
+                            </div>
+                            <div class="cell">
+                                Mongo DB
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link to report</a>
+                            </div>
+                            <div class="cell">
+                                <a class="repost-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Rejected
+                            </div>
+                            <div class="cell">
+                                JS
+                            </div>
+                            <div class="cell">
+                                Jane Daw
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-reject-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Communication
+                            </div>
+                            <div class="cell">
+                                Marina Semenova
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-approve-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Adobe Photoshop
+                            </div>
+                            <div class="cell">
+                                Aleksandr Sidorenko
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-approve-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                CSS
+                            </div>
+                            <div class="cell">
+                                Joe Doe
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-approve-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Adobe Illustrator
+                            </div>
+                            <div class="cell">
+                                Natalia Kovaleva
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-approve-btn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell">
+                                Approved
+                            </div>
+                            <div class="cell">
+                                Java
+                            </div>
+                            <div class="cell">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell">
+                                <a href="#">www.ninja.io/link</a>
+                            </div>
+                            <div class="cell">
+                                <a class="edit-btn edit-approve-btn" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                    <div class="approvals__filter-wrap">
+                        <h3>Approval’s History</h3>
+                        <div class="leaderboard__filter">
+                            <div class="filter new__custom-select-wrapper filter-name">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Name</span>
+                                        <input type="text" placeholder="Type here to search...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Abramenko">
+                                            <label for="Abramenko">Abramenko Nikita</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Antonov">
+                                            <label for="Antonov">Antonov Ivan</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Doe">
+                                            <label for="Doe">Doe Joe</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Eliseeva">
+                                            <label for="Eliseeva">Eliseeva Irina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Filimonova">
+                                            <label for="Filimonova">Filimonova Natalya</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Ivanova">
+                                            <label for="Ivanova">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Williams">
+                                            <label for="Williams">Williams Piter</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select new__custom-select-wrapper filter-skill">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Skill</span>
+                                        <input type="text" placeholder="Type here to search for Skill...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Art">
+                                            <label for="Art">Art</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Analysis">
+                                            <label for="Analysis">Analysis</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Design">
+                                            <label for="Design">Design</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="PHP">
+                                            <label for="PHP">PHP</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Program">
+                                            <label for="Program">Program</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="P-Skill">
+                                            <label for="P-Skill">P Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="W-Skill">
+                                            <label for="W-Skill">W Skill</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select filter-period">
+                                <div class="select-selected">
+                                    <span class="select-name">Status</span>
+                                    <span class="select-text">Select...</span>
+                                </div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Approved">
+                                        <label for="Approved">Approved</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="Rejected">
+                                        <label for="Rejected">Rejected</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter filter-select new__custom-select-wrapper filter-manager">
+                                <div class="new__custom-select filter-select-scroll">
+                                    <div class="arrow"></div>
+
+                                    <div class="new__custom-select__trigger">
+                                        <span>Manager</span>
+                                        <input type="text" placeholder="Type here to search...">
+                                    </div>
+
+                                    <div class="new__custom-options">
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Artists">
+                                            <label for="Artists">Abramenko Nikita</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Accounting">
+                                            <label for="Accounting">Antonov Ivan</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Developers">
+                                            <label for="Developers">Doe Joe</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Engineering">
+                                            <label for="Engineering">Eliseeva Irina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Financial">
+                                            <label for="Financial">Filimonova Natalya</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="HR">
+                                            <label for="HR">HR</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testers">
+                                            <label for="Testers">Ivanova Marina</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testers">
+                                            <label for="Testers">Williams Piter</label>
+                                        </div>
+                                        <div class="new__custom-option">
+                                            <input type="checkbox" id="Testerss">
+                                            <label for="Testerss">Williams Piter</label>
+                                        </div>
+                                    </div>
+                                    <div class="custom-scrollbar">
+                                        <div class="custom-scrollbar-thumb"></div>
+                                        <div class="custom-scrollbar-thumb"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="approvals__info-table history">
+                        <div class="row row-top">
+                            <div class="cell requester">
+                                Requester
+                            </div>
+                            <div class="cell status">
+                                Status
+                            </div>
+                            <div class="cell skill">
+                                Skill
+                            </div>
+                            <div class="cell date">
+                                Date
+                            </div>
+                            <div class="cell feedback">
+                                Feedback
+                            </div>
+                            <div class="cell manager">
+                                Manager
+                            </div>
+                        </div>
+
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                John Smith
+                            </div>
+                            <div class="cell status">
+                                Rejected
+                            </div>
+                            <div class="cell skill">
+                                PHP
+                            </div>
+                            <div class="cell date">
+                                11/26/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>I saw that you learned how to use pivot<br>tables for your Excel project and it
+                                    really
+                                    <br>helped display the data. Even though<br>that wasn’t in your job description,
+                                    it<br>shows
+                                    that you are a great learner and<br>hungry to do the best job possible.<br>
+
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Marina Markova
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Ivan Ivanov
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Mongo DB
+                            </div>
+                            <div class="cell date">
+                                10/20/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Sarah Jonson
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Jane Daw
+                            </div>
+                            <div class="cell status">
+                                Rejected
+                            </div>
+                            <div class="cell skill">
+                                JS
+                            </div>
+                            <div class="cell date">
+                                10/09/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Jan Ivanov
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Marina Semenova
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Communication
+                            </div>
+                            <div class="cell date">
+                                09/15/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#"> www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Sarah Jonson
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell requester">
+                                Aleksandr <br>Samsonenko
+                            </div>
+                            <div class="cell status">
+                                Approved
+                            </div>
+                            <div class="cell skill">
+                                Adobe <br>Photoshop
+                            </div>
+                            <div class="cell date">
+                                09/01/2021
+                            </div>
+                            <div class="cell feedback">
+                                <p>
+                                    I noticed last week that you <br>restructured our shared Google Sheet <br>with
+                                    conditional
+                                    formatting that made <br>it easier for me to understand and read <br>he data. I
+                                    appreciate
+                                    you taking the <br>initiative to learn how to do that.<br>
+                                    <a href="#">www.ninja.io/link</a>
+                                </p>
+                            </div>
+                            <div class="cell manager">
+                                Aleksandr <br>Sidorenko
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="main__popup feedback-popup feedback-reject">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>MANAGER’S FEEDBACK</h3>
+                    <span class="main__popup-close feedback-reject-close"></span>
+                </div>
+
+                <div class="form">
+                    <div class="field">
+                        <p><span>*</span> Status</p>
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">Approve</span>
+                                <span class="select-text">Please Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="approve">
+                                    <label for="approve">Approve</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="reject">
+                                    <label for="reject">Reject</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Feedback</p>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Additional Condition</p>
+                        <input type="text" placeholder="300 Coins">
+                    </div>
+                    <div class="bottom">
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__popup feedback-popup feedback-approve">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>MANAGER’S FEEDBACK</h3>
+                    <span class="main__popup-close feedback-approve-close"></span>
+                </div>
+
+                <div class="form">
+                    <div class="field">
+                        <p><span>*</span> Status</p>
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">Approve</span>
+                                <span class="select-text">Please Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="approve">
+                                    <label for="approve">Approve</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="reject">
+                                    <label for="reject">Reject</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Feedback</p>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                    </div>
+                    <div class="bottom">
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__popup feedback-popup edit-reject">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>EDIT</h3>
+                    <span class="main__popup-close edit-reject-close"></span>
+                </div>
+
+                <div class="form">
+                    <div class="field">
+                        <p><span>*</span> Status</p>
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">Approve</span>
+                                <span class="select-text">Please Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="approve">
+                                    <label for="approve">Approve</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="reject">
+                                    <label for="reject">Reject</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Feedback</p>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Additional Condition</p>
+                        <input type="text" placeholder="300 Coins">
+                    </div>
+                    <div class="bottom">
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main__popup feedback-popup edit-approve">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>EDIT</h3>
+                    <span class="main__popup-close edit-approve-close"></span>
+                </div>
+
+                <div class="form">
+                    <div class="field">
+                        <p><span>*</span> Status</p>
+                        <div class="filter filter-select filter-period">
+                            <div class="select-selected">
+                                <span class="select-name">Approve</span>
+                                <span class="select-text">Please Select...</span>
+                            </div>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="approve">
+                                    <label for="approve">Approve</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="reject">
+                                    <label for="reject">Reject</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <p><span>*</span> Feedback</p>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                    </div>
+                    <div class="bottom">
+                        <button class="btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="profile__info-popup rewards__pupup">
+            <div class="popup__inner">
+                <div class="profile__info-top">
+                    <div class="left">
+                        <img src="./img/popup-avatar.svg" alt="">
+                        <div class="title">
+                            <h4>MAKAROV IVAN</h4>
+                            <p>Green ninja (Senior)</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <p>15 Crystals</p>
+                        </div>
+                        <span class="close-popup rewards-close"></span>
+                    </div>
+                </div>
+
+                <div class="profile__info-content">
+                    
+                    <div class="skils__content">
+                        <div class="search-wrapper">
+                            <input class="search-input" type="text" placeholder="Ivan Ivanov">
+                            <div class="filter-select">
+                                <div class="select-selected">Select...</div>
+                                <div class="select-items select-hide">
+                                    <div class="select-option">
+                                        <input type="checkbox" id="all">
+                                        <label for="all">All</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="active">
+                                        <label for="active">Active</label>
+                                    </div>
+                                    <div class="select-option">
+                                        <input type="checkbox" id="archied">
+                                        <label for="archied">Archied</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rewards__list">
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-1.webp" alt="">
+                                    <span>300</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A little box with surprise</h5>
+                                    <p>
+                                        The box contains 2 items. <br>
+                                        Size 20x20 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img class="rewards-img-trigger" src="./img/rewards-2.webp" alt="">
+                                    <span>5</span>
+
+                                </div>
+                                <div class="text">
+                                    <h5>A big box with fun</h5>
+                                    <p>
+                                        The box contains 4 items. <br>
+                                        Size 60x60 cm.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-3.webp" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Bluetooth wireless headphones Air Pods</h5>
+                                    <p>
+                                        Compatible: iOS 10 or later, PCs, macOS Sierra-based laptops, and watchOS-based
+                                        watches.
+                                        Bluetooth: 4.0
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-4.webp" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Trip to Sochi</h5>
+                                    <p>
+                                        Duration: 5 days <br>
+                                        Location: Rosa Khutor and Krasnaya Polyana <br>
+                                        Includet: Breakfast, <br>
+                                        Guided tours, Delivery
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-5.webp" alt="">
+                                    <span>8</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Hoody</h5>
+                                    <p>
+                                        Hoody with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-6.webp" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>T-Shirt</h5>
+                                    <p>
+                                        T-Shirt with logo of company. <br>
+                                        Sizes: S,M,L,XL
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-7.webp" alt="">
+                                    <span>2</span>
+                                </div>
+                                <div class="text">
+                                    <h5>Cap with Logo</h5>
+                                    <p>
+                                        Cap with logo of company. The size is adjustable.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-8.webp" alt="">
+                                    <span>20</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                            <div class="rewards__list-item">
+                                <div class="rewards-img">
+                                    <img src="./img/rewards-9.webp" alt="">
+                                    <span>15</span>
+                                </div>
+                                <div class="text">
+                                    <h5>A Day Off</h5>
+                                    <p>
+                                        Day off for one day. The date
+                                        must be agreed with your
+                                        manager.
+                                    </p>
+                                </div>
+                                <div class="bottom">
+                                    <a class="btn" href="#">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <span class="prev"></span>
+                            <span class="page active">1</span>
+                            <span class="page">2</span>
+                            <span class="next"></span>
+                        </div>
+
+                    </div>
+                    <div class="big__photo-popup">
+                        <img src="./img/rewards-big-1.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

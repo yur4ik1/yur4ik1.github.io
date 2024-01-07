@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Settings</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Settings">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="settings-page">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="header__navigation">
+                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
+                <div class="resources">
+                    <span class="crystal">50</span>
+                    <span class="coins">15</span>
+                </div>
+                <div class="notification"><span>3</span></div>
+                <div class="avatar">
+                    <img src="./img/avatar.svg" alt="avatar">
+                </div>
+            </div>
+
+            <div class="header__popup-notification">
+                <ul class="notification__menu">
+                    <li class="notification__menu-item">
+                        <a href="#">You got the attribute of speed.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have received confirmation of the skill.</a>
+                    </li>
+                    <li class="notification__menu-item">
+                        <a href="#">You have a new task assigned to you in Jira</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__popup-menu">
+                <ul class="profile__menu">
+                    <li class="profile__menu-item">
+                        <a href="my-profile.html">My Profile </a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="leaderboard.html">Leaderboard</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="reports.html">Reports</a>
+                    </li>
+                    <li class="profile__menu-item active">
+                        <a href="settings.html">Settings</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="approvals.html">Approvals</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="profile__menu-item">
+                        <a href="login-in.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <section class="settings">
+            <div class="container">
+                <div class="settings__content">
+                    <div class="leaves"></div>
+                    <div class="top">
+                        <h1>SETTINGS</h1>
+                    </div>
+                    <div class="settings__head">
+                        <div class="wrap">
+                            <div class="avatar">
+                                <img src="./img/avatar.svg" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>YOU (2D ARTIST)</h2>
+                                <p>JoeDoe@company.com</p>
+                            </div>
+                        </div>
+                        <p class="status"><span>Status: </span> Frozen</p>
+                    </div>
+
+                    <div class="settings__form-wrap">
+                        <h5>Password</h5>
+
+                        <div class="settings__form">
+                            <div class="field">
+                                <p><span>*</span> Old Password</p>
+                                <input type="password" id="password" placeholder="**************************">
+                                <span class="password-icon"></span>
+                                <span class="let-know active">Please type here your password</span>
+                            </div>
+                            <div class="field">
+                                <p><span>*</span> New Password</p>
+                                <input type="text" placeholder="**************************">
+                                <span class="let-know">Please type your password</span>
+                            </div>
+                            <div class="field">
+                                <p><span>*</span> Confirm Password</p>
+                                <input type="text" placeholder="**************************">
+                                <span class="let-know">Please type your password</span>
+                            </div>
+                            <div class="bottom">
+                                <button class="btn">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

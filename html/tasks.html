@@ -7,6 +7,7 @@
     <title>NINJABLE - Tasks</title>
     <meta name="robots" content="index,follow">
     <meta name="description" content="NINJABLE - Tasks">
+    <link href="WYSIWYG-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,17 +20,22 @@
     <div class="wrapper">
         <header class="header">
             <a class="header__logo" href="skills.html">
-                <img src="./img/logo.svg" alt="logo">
+                <img src="/img/logo.svg" alt="logo">
             </a>
             <div class="header__navigation">
-                <a class="header__admin-btn btn" href="https://yur4ik1.github.io/html/ninjable/index.html">Admin</a>
                 <div class="resources">
                     <span class="crystal">50</span>
                     <span class="coins">15</span>
                 </div>
                 <div class="notification"><span>3</span></div>
                 <div class="avatar">
-                    <img src="./img/avatar.svg" alt="avatar">
+                    <img style="display: none;" src="" alt="avatar" />
+                </div>
+            </div>
+
+            <div class="overlay">
+                <div class="overlay__inner">
+                    <div class="overlay__content"><span class="spinner"></span></div>
                 </div>
             </div>
 
@@ -68,7 +74,7 @@
                         <a href="rewards.html">Rewards</a>
                     </li>
                     <li class="profile__menu-item">
-                        <a href="login-in.html">Log Out</a>
+                        <a href="#" id="logout">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -133,12 +139,12 @@
                                     <label for="open">Open</label>
                                 </div>
                                 <div class="select-option">
-                                    <input type="checkbox" id="review">
-                                    <label for="review">After Review</label>
-                                </div>
-                                <div class="select-option">
                                     <input type="checkbox" id="progress">
                                     <label for="progress">In Progress</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="review">
+                                    <label for="review">Under review</label>
                                 </div>
                             </div>
                         </div>
@@ -202,10 +208,6 @@
 
                             <div class="select-items select-hide">
                                 <div class="select-option">
-                                    <input type="checkbox" id="all">
-                                    <label for="all">All</label>
-                                </div>
-                                <div class="select-option">
                                     <input type="checkbox" id="low-price">
                                     <label for="low-price">Low price first</label>
                                 </div>
@@ -218,7 +220,7 @@
                     </div>
 
                     <div class="tasks__list">
-                        <div class="tasks__list-item">
+                        <!-- <div class="tasks__list-item">
                             <div class="price">
                                 <span>100</span>
                             </div>
@@ -325,12 +327,12 @@
                                 <p>Write Document</p>
                                 <a class="under-review-btn">Under review </a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="pagination">
                         <span class="prev"></span>
-                        <span class="page active">1</span>
-                        <span class="page">2</span>
+                        <!-- <span class="page active">1</span>
+                        <span class="page">2</span> -->
                         <span class="next"></span>
                     </div>
 
@@ -528,19 +530,19 @@
                     <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
                     <div class="attachments__list">
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-1.webp" alt="">
+                            <img class="photo" src="/img/attachments-1.webp" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-2.webp" alt="">
+                            <img class="photo" src="/img/attachments-2.webp" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-3.webp" alt="">
+                            <img class="photo" src="/img/attachments-3.webp" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-4.webp" alt="">
+                            <img class="photo" src="/img/attachments-4.webp" alt="">
                             <button class="remove"></button>
                         </div>
 
@@ -551,7 +553,7 @@
                                     <span class="close"></span>
                                 </div>
                                 <div class="images">
-                                    <img src="./img/photo.webp" alt="">
+                                    <img src="/img/photo.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -659,7 +661,7 @@
                         <div class="comments-item">
                             <div class="comment-wrapper">
                                 <div class="avatar">
-                                    <img src="./img/coment-avatar-1.webp" alt="">
+                                    <img src="/img/coment-avatar-1.webp" alt="">
                                 </div>
                                 <div class="coment-content">
                                     <p class="name">Ivan Makarov</p>
@@ -675,7 +677,7 @@
                                         quam vitae erat vehicula facilisis.
                                     </p>
                                     <div class="icons">
-                                        <span class="icon"><img src="./img/check-icon.svg" alt=""></span>
+                                        <span class="icon"><img src="/img/check-icon.svg" alt=""></span>
                                         <span class="add-icon"></span>
                                     </div>
                                 </div>
@@ -684,7 +686,7 @@
                             <div class="comments-item comments-child">
                                 <div class="comment-wrapper">
                                     <div class="avatar">
-                                        <img src="./img/coment-avatar-2.webp" alt="">
+                                        <img src="/img/coment-avatar-2.webp" alt="">
                                     </div>
                                     <div class="coment-content">
                                         <p class="name">Anton Ivanov (Manager)</p>
@@ -697,8 +699,8 @@
                                             vehicula facilisis.
                                         </p>
                                         <div class="comment-attachments">
-                                            <img src="./img/attachments-1.webp" alt="">
-                                            <img src="./img/attachments-2.webp" alt="">
+                                            <img src="/img/attachments-1.webp" alt="">
+                                            <img src="/img/attachments-2.webp" alt="">
                                         </div>
                                         <div class="icons">
                                             <span class="add-icon"></span>
@@ -738,7 +740,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="main__popup in-progress-popup under-review">
             <div class="main__popup-inner">
@@ -795,16 +796,16 @@
                     <h5 class="block-name">Attachments</h5>
                     <div class="attachments__list">
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-1.webp" alt="">
+                            <img class="photo" src="/img/attachments-1.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-2.webp" alt="">
+                            <img class="photo" src="/img/attachments-2.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-3.webp" alt="">
+                            <img class="photo" src="/img/attachments-3.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-4.webp" alt="">
+                            <img class="photo" src="/img/attachments-4.webp" alt="">
                         </div>
 
                         <div class="photo__popup">
@@ -814,7 +815,7 @@
                                     <span class="close"></span>
                                 </div>
                                 <div class="images">
-                                    <img src="./img/photo.webp" alt="">
+                                    <img src="/img/photo.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -900,16 +901,16 @@
                     <h5 class="block-name">Attachments</h5>
                     <div class="attachments__list">
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-1.webp" alt="">
+                            <img class="photo" src="/img/attachments-1.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-2.webp" alt="">
+                            <img class="photo" src="/img/attachments-2.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-3.webp" alt="">
+                            <img class="photo" src="/img/attachments-3.webp" alt="">
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-4.webp" alt="">
+                            <img class="photo" src="/img/attachments-4.webp" alt="">
                         </div>
 
                         <div class="photo__popup">
@@ -919,7 +920,7 @@
                                     <span class="close"></span>
                                 </div>
                                 <div class="images">
-                                    <img src="./img/photo.webp" alt="">
+                                    <img src="/img/photo.webp" alt="">
                                 </div>
                             </div>
                         </div>
@@ -956,7 +957,120 @@
             </div>
         </div>
 
-        <div class="main__popup in-progress-popup add-task active">
+        <div class="main__popup in-progress-popup done">
+            <div class="main__popup-inner">
+                <div class="main__popup-top">
+                    <h3>CREATE MOCKUP “MY PROFILE”</h3>
+                    <span class="main__popup-close done-close"></span>
+                </div>
+
+                <div class="main__popup-content">
+                    <div class="task__information">
+                        <span class="crystal">300</span>
+                        <p class="due-date-btn"><span>Due Date:</span>03/05/2023</p>
+                        <p class="priority-btn"><span>Priority:</span>Medium</p>
+                        <p class="player-btn"><span>Player:</span>Ivanov Ivan</p>
+                        <p class="status-btn"><span>Status:</span>In progress</p>
+                    </div>
+                    <h5 class="block-name">Description</h5>
+                    <div class="desc__editor">
+
+                        <div class="editor">
+                            <strong>Create mockup 😊</strong>
+                            <p>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="check1" checked>
+                                    <label for="check1"></label>
+                                    Create page
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2"></label>
+                                    Pop Up
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3"></label>
+                                    Pop Up
+                                </li>
+                            </ul>
+                            </p>
+                            <p><a href="#">ninjable.io</a></p>
+                            <p><span class="at">@Kris Ti</span></p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mauris at quam
+                                volutpat
+                                aliquet. Praesent consequat auctor tellus et pretium. Cras rhoncus rhoncus nisi mollis
+                                vulputate.
+                                Nullam malesuada leo nisi, at iaculis arcu maximus vitae. Suspendisse id quam vitae erat
+                                vehicula facilisis.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Attachments</h5>
+                    <div class="attachments__list">
+                        <div class="attachments__list-item">
+                            <img class="photo" src="/img/attachments-1.webp" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="/img/attachments-2.webp" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="/img/attachments-3.webp" alt="">
+                        </div>
+                        <div class="attachments__list-item">
+                            <img class="photo" src="/img/attachments-4.webp" alt="">
+                        </div>
+
+                        <div class="photo__popup">
+                            <div class="photo__popup-inner">
+                                <div class="top">
+                                    <p>PHOTO</p>
+                                    <span class="close"></span>
+                                </div>
+                                <div class="images">
+                                    <img src="/img/photo.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="block-name">Skills</h5>
+                    <div class="tag__list">
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Photoshop
+                        </div>
+                        <div class="skills__list-tag">
+                            Figma
+                        </div>
+                        <div class="skills__list-tag">
+                            Adobe Illustrator
+                        </div>
+                    </div>
+
+
+                    <div class="bottom">
+                        <button class="add-btn btn">Accept the Task</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Add Task -->
+        <div class="main__popup in-progress-popup add-task">
             <div class="main__popup-inner">
                 <div class="main__popup-top">
                     <h3>ADD TASK</h3>
@@ -965,12 +1079,13 @@
 
                 <div class="main__popup-content">
                     <h5 class="block-name">Task Information</h5>
-                    <div class="field">
+                    <div class="field taskInformation">
                         <input type="text" placeholder="Summary">
                         <span class="let-know active">Please let us know the summary</span>
                     </div>
 
-                    <div class="desc__editor">
+                    <!-- WYSIWYG -->
+                    <!-- <div class="desc__editor">
                         <div class="desc__editor-top">
                             <div class="settings-list">
                                 <button class="bold-btn active"></button>
@@ -990,18 +1105,24 @@
                             </div>
                         </div>
                         <div class="editor" id="editor" contenteditable="true">
-                            <p>Description</p>
+                            <u>Description</u>
                         </div>
+                    </div> -->
+
+
+                    <div class="desc__editor" id="WYSIWYG-editor">
+
                     </div>
+
 
                     <h5 class="block-name upload-btn">Attachments <span>+</span></h5>
                     <div class="attachments__list">
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-1.webp" alt="">
+                            <img class="photo" src="/img/attachments-1.webp" alt="">
                             <button class="remove"></button>
                         </div>
                         <div class="attachments__list-item">
-                            <img class="photo" src="./img/attachments-2.webp" alt="">
+                            <img class="photo" src="/img/attachments-2.webp" alt="">
                             <button class="remove"></button>
                         </div>
 
@@ -1012,32 +1133,32 @@
                                     <span class="close"></span>
                                 </div>
                                 <div class="images">
-                                    <img src="./img/photo.webp" alt="">
+                                    <img src="/img/photo.webp" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="filter-select">
+                    <div class="filter-select add-priority">
                         <div class="select-selected">
                             <span class="select-name">Priority</span>
                             <span class="select-text">Select...</span>
                         </div>
                         <div class="select-items select-hide">
                             <div class="select-option">
-                                <input type="checkbox" id="low1">
+                                <input type="checkbox" id="low1" value="1" data-label="Low">
                                 <label for="low1">Low</label>
                             </div>
                             <div class="select-option">
-                                <input type="checkbox" id="middle">
+                                <input type="checkbox" id="middle" value="2" data-label="Middle">
                                 <label for="middle">Middle</label>
                             </div>
                             <div class="select-option">
-                                <input type="checkbox" id="high1">
+                                <input type="checkbox" id="high1" value="3" data-label="High">
                                 <label for="high1">High</label>
                             </div>
                             <div class="select-option">
-                                <input type="checkbox" id="urgent">
+                                <input type="checkbox" id="urgent" value="4" data-label="Urgent">
                                 <label for="urgent">Urgent</label>
                             </div>
                         </div>
@@ -1139,12 +1260,13 @@
                     </div>
 
                     <div class="new__custom-select-wrapper">
-                        <div class="new__custom-select filter-select-scroll">
+                        <div class="new__custom-select filter-select-scroll custom-player">
                             <div class="arrow"></div>
 
                             <div class="new__custom-select__trigger">
                                 <span>Player</span>
-                                <input type="text" placeholder="Type here to search for Player...">
+                                <input type="text" placeholder="Type here to search for Player..."
+                                    class="player-autocomplete">
                             </div>
 
                             <div class="new__custom-options">
@@ -1189,16 +1311,17 @@
                         </div>
                     </div>
 
-                    <div class="new__custom-select-wrapper">
+                    <div class="new__custom-select-wrapper custom-skill multi-select" id="add-task-skills">
                         <div class="new__custom-select filter-select-scroll">
                             <div class="arrow"></div>
 
                             <div class="new__custom-select__trigger">
                                 <span>Skill</span>
-                                <input type="text" placeholder="Type here to search for Skill...">
+                                <input type="text" placeholder="Type here to search for Skill..."
+                                    class="skill-autocomplete">
                             </div>
 
-                            <div class="new__custom-options">
+                            <div class="new__custom-options" id="add-select-skill">
                                 <div class="new__custom-option">
                                     <input type="checkbox" id="skill11">
                                     <label for="skill11">A Skill</label>
@@ -1240,54 +1363,89 @@
                         </div>
                     </div>
 
+                    <!-- <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll custom-complexity">
+                            <div class="arrow"></div>
+
+                            <div class="new__custom-select__trigger">
+                                <span>Task complexity</span>
+                                <input type="text" placeholder="">
+                            </div>
+
+                            <div class="new__custom-options custom-radio">
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="Easy">
+                                    <label for="Easy">Easy</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="Intermediate">
+                                    <label for="Intermediate">Intermediate</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="Difficult">
+                                    <label for="Difficult">Difficult</label>
+                                </div>
+                                <div class="new__custom-option">
+                                    <input type="checkbox" id="Ninjable">
+                                    <label for="Ninjable">Ninjable</label>
+                                </div>
+                            </div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div> -->
+
                     <div class="field">
                         <div class="new__custom-select-wrapper">
                             <div class="new__custom-select filter-select-scroll">
                                 <div class="arrow"></div>
-    
+
                                 <div class="new__custom-select__trigger">
                                     <span>Complexity</span>
-                                    <input type="text" placeholder="Type here to search for Skill...">
+                                    <input type="text" placeholder="Type here to search for complexity...">
                                 </div>
-    
+
                                 <div class="new__custom-options">
                                     <div class="new__custom-option">
-                                        <input type="checkbox" id="option-Easy-Peasy">
+                                        <input type="checkbox" id="option-Easy-Peasy" value="1">
                                         <label for="option-Easy-Peasy">
                                             <span class="custom-option-additional-info">
                                                 <span>30</span>
-                                                <img src="./img/coins.svg" alt="coins icon">
+                                                <img src="/img/coins.svg" alt="coins icon">
                                             </span>Easy-Peasy</label>
                                     </div>
                                     <div class="new__custom-option">
-                                        <input type="checkbox" id="option-Easy">
-                                        <label for="option-Easy"><span class="custom-option-additional-info">
-                                                <span>30</span>
-                                                <img src="./img/coins.svg" alt="coins icon">
+                                        <input type="checkbox" id="option-Easy" value="2">
+                                        <label for="option-Easy">
+                                            <span class="custom-option-additional-info">
+                                                <span>60</span>
+                                                <img src="/img/coins.svg" alt="coins icon">
                                             </span>Easy</label>
                                     </div>
                                     <div class="new__custom-option">
-                                        <input type="checkbox" id="option-Intermediate">
-                                        <label for="option-Intermediate"><span class="custom-option-additional-info">
-                                                <span>30</span>
-                                                <img src="./img/coins.svg" alt="coins icon">
+                                        <input type="checkbox" id="option-Intermediate" value="3">
+                                        <label for="option-Intermediate">
+                                            <span class="custom-option-additional-info">
+                                                <span>120</span>
+                                                <img src="/img/coins.svg" alt="coins icon">
                                             </span>Intermediate</label>
                                     </div>
                                     <div class="new__custom-option">
-                                        <input type="checkbox" id="option-Difficult">
-                                        <label for="option-Difficult"><span class="custom-option-additional-info">
-                                                <span>30</span>
-                                                <img src="./img/coins.svg" alt="coins icon">
+                                        <input type="checkbox" id="option-Difficult" value="4">
+                                        <label for="option-Difficult">
+                                            <span class="custom-option-additional-info">
+                                                <span>240</span>
+                                                <img src="/img/coins.svg" alt="coins icon">
                                             </span>Difficult</label>
                                     </div>
                                     <div class="new__custom-option">
-                                        <input type="checkbox" id="option-Ninjable">
-                                        <label for="option-Ninjable"><span class="custom-option-additional-info">
-                                                <span>30</span>
-                                                <img src="./img/coins.svg" alt="coins icon">
+                                        <input type="checkbox" id="option-Ninjable" value="5">
+                                        <label for="option-Ninjable">
+                                            <span class="custom-option-additional-info">
+                                                <span>480</span>
+                                                <img src="/img/coins.svg" alt="coins icon">
                                             </span>Ninjable</label>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="custom-scrollbar"></div>
                             </div>
@@ -1481,11 +1639,12 @@
         </div>
 
 
+
         <div class="profile__info-popup rewards__pupup">
             <div class="popup__inner">
                 <div class="profile__info-top">
                     <div class="left">
-                        <img src="./img/popup-avatar.svg" alt="">
+                        <img src="/img/popup-avatar.svg" alt="">
                         <div class="title">
                             <h4>MAKAROV IVAN</h4>
                             <p>Green ninja (Senior)</p>
@@ -1500,7 +1659,7 @@
                 </div>
 
                 <div class="profile__info-content">
-                    
+
                     <div class="skils__content">
                         <div class="search-wrapper">
                             <input class="search-input" type="text" placeholder="Ivan Ivanov">
@@ -1525,7 +1684,7 @@
                         <div class="rewards__list">
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-1.webp" alt="">
+                                    <img src="/img/rewards-1.webp" alt="">
                                     <span>300</span>
                                 </div>
                                 <div class="text">
@@ -1541,7 +1700,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img class="rewards-img-trigger" src="./img/rewards-2.webp" alt="">
+                                    <img class="rewards-img-trigger" src="/img/rewards-2.webp" alt="">
                                     <span>5</span>
 
                                 </div>
@@ -1558,7 +1717,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-3.webp" alt="">
+                                    <img src="/img/rewards-3.webp" alt="">
                                     <span>20</span>
                                 </div>
                                 <div class="text">
@@ -1575,7 +1734,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-4.webp" alt="">
+                                    <img src="/img/rewards-4.webp" alt="">
                                     <span>20</span>
                                 </div>
                                 <div class="text">
@@ -1593,7 +1752,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-5.webp" alt="">
+                                    <img src="/img/rewards-5.webp" alt="">
                                     <span>8</span>
                                 </div>
                                 <div class="text">
@@ -1609,7 +1768,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-6.webp" alt="">
+                                    <img src="/img/rewards-6.webp" alt="">
                                     <span>2</span>
                                 </div>
                                 <div class="text">
@@ -1625,7 +1784,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-7.webp" alt="">
+                                    <img src="/img/rewards-7.webp" alt="">
                                     <span>2</span>
                                 </div>
                                 <div class="text">
@@ -1640,7 +1799,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-8.webp" alt="">
+                                    <img src="/img/rewards-8.webp" alt="">
                                     <span>20</span>
                                 </div>
                                 <div class="text">
@@ -1657,7 +1816,7 @@
                             </div>
                             <div class="rewards__list-item">
                                 <div class="rewards-img">
-                                    <img src="./img/rewards-9.webp" alt="">
+                                    <img src="/img/rewards-9.webp" alt="">
                                     <span>15</span>
                                 </div>
                                 <div class="text">
@@ -1682,16 +1841,15 @@
 
                     </div>
                     <div class="big__photo-popup">
-                        <img src="./img/rewards-big-1.webp" alt="">
+                        <img src="/img/rewards-big-1.webp" alt="">
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
+    <script type="text/javascript" src="WYSIWYG-editor/js/froala_editor.pkgd.min.js"></script>
     <script src="./js/main.min.js"></script>
-
 </body>
 
 </html>
