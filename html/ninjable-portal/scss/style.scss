@@ -4149,6 +4149,12 @@
     margin-top: -6vw;
   }
 
+  .acquired__titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .section-title {
     font-family: 'Karla';
     font-weight: 500;
@@ -4156,6 +4162,10 @@
     line-height: 1.408vw;
     letter-spacing: 0.035vw;
     color: #869DC8;
+
+    &:nth-child(2) {
+      margin-right: 7.1vw;
+    }
   }
 
   .acquired__wrapper {
@@ -9360,4 +9370,21 @@
   font-weight: 500;
   line-height: 1.147vw;
   letter-spacing: 0.278vw;
+}
+
+
+/* add multi-select (tasks page) */
+.new__custom-select-wrapper.multi-select .new__custom-select.filter-select-scroll .new__custom-option input[type=checkbox]:checked+label:before {
+  background: url(../img/sheck.svg) no-repeat center top/cover !important;
+}
+
+
+/* add multi-select (tasks page) */
+.filter-select .select-option input[type=checkbox]:checked+label:before {
+  background: url(../img/sheck.svg) no-repeat center top/cover!important;
+}
+
+/* add multi-select (LEADERBOARD page) */
+.new__custom-select-wrapper .new__custom-select.filter-select-scroll .new__custom-option input[type=checkbox]:checked+label:before {
+  background: url(../img/sheck.svg) no-repeat center top/cover!important;
 }

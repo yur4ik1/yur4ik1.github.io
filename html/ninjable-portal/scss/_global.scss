@@ -124,6 +124,11 @@ body.reports-page {
 
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
 
 input {
   width: 100%;
@@ -774,7 +779,7 @@ button {
       color: #fff;
     }
 
-    .new__custom-option input[type="checkbox"] + label:before {
+    .new__custom-option input[type="checkbox"]+label:before {
       content: "";
       display: inline-block;
       width: 0.882vw;
@@ -783,7 +788,7 @@ button {
       margin-right: 0.574vw;
     }
 
-    .new__custom-option input[type="checkbox"]:checked + label:before {
+    .new__custom-option input[type="checkbox"]:checked+label:before {
       content: "";
       width: 0.782vw;
       height: 0.782vw;
@@ -798,17 +803,17 @@ button {
       letter-spacing: 0.01vw;
       color: #FFFFFF;
 
-      
-      
+
+
     }
-    
-    .custom-option-additional-info{
+
+    .custom-option-additional-info {
       display: flex;
       gap: 0.417vw;
       padding-left: 0.433vw;
       padding-right: 1.094vw;
       align-items: flex-end;
-      
+
       &>img {
         display: inline-block;
         width: 0.938vw;
@@ -816,7 +821,7 @@ button {
       }
     }
 
-    .new__custom-option input[type="checkbox"]:checked + label {
+    .new__custom-option input[type="checkbox"]:checked+label {
       font-weight: 400;
       color: #869DC8;
     }
@@ -894,7 +899,7 @@ button {
     cursor: pointer;
   }
 
-  .select-option input[type="checkbox"] + label:before {
+  .select-option input[type="checkbox"]+label:before {
     content: "";
     display: inline-block;
     width: 0.982vw;
@@ -903,7 +908,7 @@ button {
     margin-right: 0.574vw;
   }
 
-  .select-option input[type="checkbox"]:checked + label:before {
+  .select-option input[type="checkbox"]:checked+label:before {
     content: "";
     width: 0.782vw;
     height: 0.782vw;
@@ -1029,3 +1034,4 @@ button {
   opacity: 0.6;
   border-radius: 0.521vw;
 }
+
