@@ -9388,3 +9388,15 @@
 .new__custom-select-wrapper .new__custom-select.filter-select-scroll .new__custom-option input[type=checkbox]:checked+label:before {
   background: url(../img/sheck.svg) no-repeat center top/cover!important;
 }
+
+/* add multi-select (rewards pupup ) */
+.rewards__pupup .filter-select .select-option input[type=checkbox]:checked+label:before {
+  background: url(../img/filter-cheked.svg) no-repeat center top/cover!important;
+}
+
+.tasks .filter__wrapper .filter-priority, .tasks .filter__wrapper .filter-price .select-option input[type=checkbox]:checked+label:before {
+  background: url(../img/filter-cheked.svg) no-repeat center top/cover!important;
+}
+.filter-period .select-option input[type=checkbox]:checked+label:before {
+  background: url(../img/filter-cheked.svg) no-repeat center top/cover!important;
+}
