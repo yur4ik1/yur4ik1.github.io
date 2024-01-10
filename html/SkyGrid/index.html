@@ -4,867 +4,1590 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkyGrid</title>
+  <title>SOAX</title>
+  <meta name="description" content="SOAX">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body>
+<body class="home-page">
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <div class="header__col">
-          <a class="header__logo" href="/">
-            <svg width="163" height="44" viewBox="0 0 163 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M39.0555 28.5191C39.0555 31.3739 38.202 33.8462 36.4656 35.8769C34.6114 37.996 32.2863 39.0555 29.4609 39.0555H23.5157V44H15.5692V39.0555H11.1251C8.03478 39.0555 5.41538 38.0254 3.23746 35.9652C1.08896 33.905 0 31.3445 0 28.2542V27.6361C2.00134 30.7264 7.94649 31.0796 11.1251 31.0796C17.2468 31.0796 23.3391 31.0796 29.4609 31.0796C30.5498 31.0796 31.109 30.2261 31.109 28.4896C31.109 26.7826 30.5498 25.8997 29.4609 25.8997H12.3318V17.9532H29.4609C32.2863 17.9532 34.6408 19.0127 36.4656 21.1318C38.2314 23.1625 39.0555 25.6348 39.0555 28.5191ZM0.0294332 19.5719V15.7458C0.0294332 12.6555 1.1184 10.095 3.26689 8.03478C5.41539 5.97458 8.06422 4.94448 11.1545 4.94448H15.5987V0H23.5452V4.94448H35.9652V12.891C27.695 12.891 19.4542 12.891 11.1839 12.891C9.06488 12.891 8.00535 13.8328 8.00535 15.7458V25.9291C5.00334 25.9291 0.0294332 24.0749 0.0294332 19.5719Z"
-                fill="#24BBEB" />
-              <path class="white"
-                d="M89.8542 29.8141C93.8274 29.8141 96.388 27.5184 96.388 22.986V14.3626H93.7097V23.1037C93.7097 25.8997 92.2676 27.3418 89.8836 27.3418C87.4997 27.3418 86.0281 25.8114 86.0281 23.0154V14.392H83.3793V23.1331C83.3793 27.5478 85.9104 29.8141 89.8542 29.8141ZM66.2502 29.5786H68.9284V25.1639L71.2829 22.7211L76.4629 29.5492H79.7003L73.1077 20.8963L79.4354 14.3626H76.1686L68.9284 22.0147V14.3626H66.2502V29.5786ZM55.7431 29.7846C58.9217 29.7846 61.1585 28.0776 61.1585 25.2522C61.1585 22.6917 59.4809 21.5438 56.2729 20.7492C53.3592 20.0428 52.6823 19.5425 52.6823 18.3652C52.6823 17.3351 53.5946 16.5111 55.1545 16.5111C56.5378 16.5111 57.9211 17.0408 59.2749 18.0709L60.717 16.0401C59.1866 14.804 57.4207 14.1271 55.2134 14.1271C52.2114 14.1271 50.0334 15.9224 50.0334 18.5418C50.0334 21.3967 51.8582 22.3385 55.0956 23.1037C57.9211 23.7806 58.5097 24.3692 58.5097 25.4582C58.5097 26.6649 57.4796 27.4007 55.8314 27.4007C53.9478 27.4007 52.4762 26.6943 51.0341 25.4288L49.4154 27.3418C51.2107 28.99 53.4181 29.7846 55.7431 29.7846Z"
-                fill="#081425" />
-              <path class="white"
-                d="M150.954 27.1358V16.8054H153.956C157.134 16.8054 159.224 18.9833 159.224 21.9559C159.224 24.9579 157.134 27.1064 153.956 27.1064H150.954V27.1358ZM148.305 29.5786H153.956C158.724 29.5786 162.02 26.2529 162.02 21.9853C162.02 17.6589 158.724 14.392 153.956 14.392H148.305V29.5786ZM139.593 29.5786H142.272V14.392H139.593V29.5786ZM124.466 21.9264V16.8348H128.351C130.322 16.8348 131.5 17.7177 131.5 19.3659C131.5 20.9552 130.293 21.9559 128.38 21.9559H124.466V21.9264ZM121.817 29.5786H124.495V24.281H127.791L131.559 29.5786H134.708L130.617 23.8395C132.736 23.2214 134.237 21.7204 134.237 19.2482C134.237 16.305 132.147 14.4214 128.586 14.4214H121.817V29.5786ZM110.044 29.8435C112.722 29.8435 114.871 28.7545 116.372 27.489V21.1024H109.897V23.4274H113.782V26.2823C112.84 26.9887 111.545 27.4301 110.103 27.4301C107.013 27.4301 104.953 25.1345 104.953 22.0147C104.953 19.0716 107.072 16.5994 109.868 16.5994C111.81 16.5994 112.958 17.2174 114.135 18.2181L115.842 16.1873C114.282 14.8629 112.664 14.1271 110.015 14.1271C105.423 14.1271 102.186 17.7177 102.186 21.9853C102.157 26.4589 105.306 29.8435 110.044 29.8435Z"
-                fill="#081425" />
-            </svg>
-          </a>
-          <nav>
-            <ul class="header__menu">
-             <!-- <li class="header__menu-item sub">
-                <a href="#">Features</a>
-                <ul class="submenu">
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="sort 1">
-                          <path id="Vector" fill-rule="evenodd" clip-rule="evenodd"
-                            d="M2.88738 17.1129C4.10777 18.3334 6.07195 18.3334 10.0003 18.3334C13.9287 18.3334 15.8929 18.3334 17.1132 17.1129C18.3337 15.8926 18.3337 13.9284 18.3337 10C18.3337 6.07165 18.3337 4.10746 17.1132 2.88708C15.8929 1.66669 13.9287 1.66669 10.0003 1.66669C6.07195 1.66669 4.10777 1.66669 2.88738 2.88708C1.66699 4.10746 1.66699 6.07165 1.66699 10C1.66699 13.9284 1.66699 15.8926 2.88738 17.1129ZM12.292 13.3334C12.292 13.6785 12.0122 13.9584 11.667 13.9584H8.33366C7.98848 13.9584 7.70866 13.6785 7.70866 13.3334C7.70866 12.9882 7.98848 12.7084 8.33366 12.7084H11.667C12.0122 12.7084 12.292 12.9882 12.292 13.3334ZM13.3337 10.625C13.6788 10.625 13.9587 10.3452 13.9587 10C13.9587 9.65485 13.6788 9.37502 13.3337 9.37502H6.66699C6.32182 9.37502 6.04199 9.65485 6.04199 10C6.04199 10.3452 6.32182 10.625 6.66699 10.625H13.3337ZM15.6253 6.66669C15.6253 7.01186 15.3455 7.29169 15.0003 7.29169H5.00033C4.65515 7.29169 4.37533 7.01186 4.37533 6.66669C4.37533 6.32151 4.65515 6.04169 5.00033 6.04169H15.0003C15.3455 6.04169 15.6253 6.32151 15.6253 6.66669Z"
-                            fill="#9CA1A8" />
-                        </g>
-                      </svg>
-                      Create Product Listings
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M10.4634 6.63018C10.2332 7.02876 10.3698 7.53842 10.7684 7.76854C11.167 7.99866 11.6766 7.86209 11.9067 7.46352C12.1369 7.06494 12.0003 6.55528 11.6017 6.32517C11.2031 6.09504 10.6935 6.23161 10.4634 6.63018Z"
-                          fill="#9CA1A8" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M9.00992 1.75618C10.4469 1.30283 11.3222 1.02668 12.1096 1.04232C13.7534 1.07495 15.2657 1.94806 16.1158 3.35529C16.5231 4.0294 16.7216 4.92548 17.0474 6.39663L17.0899 6.58834C17.2176 7.1642 17.2962 7.51853 17.3211 7.87405C17.3725 8.60902 17.2538 9.34593 16.9742 10.0275C16.8388 10.3572 16.653 10.6689 16.3508 11.1755L14.2115 14.7638C13.5306 15.9062 13.1151 16.6034 12.5878 17.0831C11.4227 18.1431 9.811 18.5629 8.27688 18.2058C7.58255 18.0442 6.87978 17.6384 5.72812 16.9732L5.51003 16.8473C4.35818 16.1824 3.65528 15.7768 3.16816 15.2563C2.09185 14.1062 1.64953 12.5006 1.98502 10.9616C2.13686 10.265 2.53283 9.5566 3.18174 8.39577L5.21955 4.74888C5.50723 4.23395 5.68425 3.91711 5.90214 3.63509C6.35259 3.05209 6.93142 2.58082 7.59362 2.25789C7.91394 2.10168 8.26008 1.99258 8.82267 1.81523L9.00992 1.75618ZM9.38058 6.00518C8.80533 7.00162 9.14675 8.27577 10.1432 8.8511C11.1396 9.42635 12.4138 9.08494 12.9891 8.08851C13.5643 7.09207 13.2229 5.81792 12.2265 5.24263C11.2301 4.66733 9.95592 5.00873 9.38058 6.00518Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      Manage Orders
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M10 8.625C10.7594 8.625 11.375 9.24058 11.375 10C11.375 10.7594 10.7594 11.375 10 11.375C9.24058 11.375 8.625 10.7594 8.625 10C8.625 9.24058 9.24058 8.625 10 8.625Z"
-                          fill="#9CA1A8" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M2.88738 2.88708C1.66699 4.10746 1.66699 6.07165 1.66699 10C1.66699 13.9284 1.66699 15.8926 2.88738 17.1129C4.10777 18.3334 6.07195 18.3334 10.0003 18.3334C13.9287 18.3334 15.8929 18.3334 17.1132 17.1129C18.3337 15.8926 18.3337 13.9284 18.3337 10C18.3337 6.07165 18.3337 4.10746 17.1132 2.88708C15.8929 1.66669 13.9287 1.66669 10.0003 1.66669C6.07195 1.66669 4.10777 1.66669 2.88738 2.88708ZM5.62533 10C5.62533 7.58377 7.58408 5.62502 10.0003 5.62502C12.4166 5.62502 14.3753 7.58377 14.3753 10C14.3753 10.5273 14.2823 11.0314 14.1124 11.4978C14.0829 11.5787 14.0249 11.6658 13.9322 11.7513L13.8651 11.8132C13.6144 12.0444 13.2381 12.074 12.9543 11.8849C12.7487 11.7479 12.6253 11.5172 12.6253 11.2701V10C12.6253 8.55027 11.4501 7.37502 10.0003 7.37502C8.55058 7.37502 7.37533 8.55027 7.37533 10C7.37533 11.4498 8.55058 12.625 10.0003 12.625C10.5851 12.625 11.1252 12.4338 11.5616 12.1104C11.7134 12.4361 11.9529 12.7196 12.2609 12.9249C13.0248 13.4342 14.0379 13.3544 14.7127 12.7319L14.7798 12.67C14.9882 12.4777 15.1762 12.2297 15.2869 11.9257C15.5061 11.3241 15.6253 10.6753 15.6253 10C15.6253 6.89342 13.1069 4.37502 10.0003 4.37502C6.89373 4.37502 4.37533 6.89342 4.37533 10C4.37533 13.1066 6.89373 15.625 10.0003 15.625C10.3455 15.625 10.6253 15.3452 10.6253 15C10.6253 14.6549 10.3455 14.375 10.0003 14.375C7.58408 14.375 5.62533 12.4163 5.62533 10Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      Email Notifications</a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M14.6486 3.69295L12.9819 2.81833C11.5189 2.05057 10.7874 1.66669 10.0005 1.66669C9.21359 1.66669 8.48208 2.05057 7.01908 2.81833L6.75098 2.95902L14.1868 7.20808L17.5341 5.53445C16.9956 4.9246 16.1268 4.46864 14.6486 3.69295Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M18.1237 6.63696L14.7917 8.30295V10.8333C14.7917 11.1785 14.5118 11.4583 14.1667 11.4583C13.8215 11.4583 13.5417 11.1785 13.5417 10.8333V8.92793L10.625 10.3863V18.2533C11.2233 18.1043 11.904 17.7471 12.9814 17.1817L14.6481 16.3071C16.4412 15.3661 17.3377 14.8957 17.8355 14.0503C18.3333 13.2048 18.3333 12.1528 18.3333 10.0488V9.95126C18.3333 8.3741 18.3333 7.38799 18.1237 6.63696Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M9.37533 18.2533V10.3863L1.87669 6.63696C1.66699 7.38799 1.66699 8.3741 1.66699 9.95126V10.0488C1.66699 12.1528 1.66699 13.2048 2.16483 14.0503C2.66265 14.8957 3.55918 15.3661 5.35223 16.3071L7.0189 17.1817C8.09636 17.7471 8.77708 18.1043 9.37533 18.2533Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M2.4668 5.53448L10.0004 9.3013L12.8431 7.87996L5.43752 3.64825L5.3523 3.69298C3.87418 4.46866 3.00531 4.92462 2.4668 5.53448Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      Compete for Buy Box
-                    </a>
-                  </li>
+        <div class="header__main">
+          <div class="header__main-wrap">
+            <a class="header__main-logo" href="#">
+              <svg width="90" height="19" viewBox="0 0 90 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_776_8800)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M89.1514 0.472339L82.4355 8.63705L90 17.679H83.4958L78.9943 11.7635L74.4226 17.679H67.9419L75.4831 8.63705L68.7903 0.472339H75.271L78.9708 5.71304L82.6707 0.472339H89.1514ZM50.8798 12.2583C50.8798 10.9762 51.7282 9.64921 55.2867 9.53675C57.1249 9.60421 59.3402 9.9866 60.7306 10.5489C60.2356 12.4832 58.3975 14.7774 54.7211 14.9799C51.7989 14.8224 50.8798 13.5179 50.8798 12.2583ZM56.5829 0C56.4179 0 56.2294 0 56.0644 0C55.9702 0 55.8523 0 55.758 0C55.6874 0 55.6167 0 55.546 0C48.2875 0 46.4965 3.37384 46.1194 6.07291H51.469C51.6339 4.52094 52.8122 3.08144 55.9466 2.92399C59.4108 3.05895 60.8484 4.6784 60.872 7.17503V7.55741C58.8924 7.06257 56.8421 6.81516 54.7683 6.79267C54.6033 6.79267 54.4384 6.79267 54.2734 6.79267C54.1791 6.79267 54.0613 6.79267 53.967 6.79267C53.8963 6.79267 53.8256 6.79267 53.7549 6.79267C47.3684 6.79267 45.4595 9.46921 45.4595 12.3932C45.4595 14.9574 46.8735 18.1288 53.0715 18.1288C53.1657 18.1288 53.2836 18.1288 53.3779 18.1288C53.4014 18.1288 53.4486 18.1288 53.4721 18.1288C53.6842 18.1288 53.8727 18.1288 54.0849 18.1288C56.9363 18.1288 59.3402 17.0941 60.8955 15.3172V15.4072V17.6564H66.3394V8.11974C66.3394 3.71122 64.6897 0 56.5829 0ZM26.5358 9.01944V9.10936C26.5358 12.8656 28.8217 14.6649 32.2624 14.8224C35.7031 14.6649 37.989 12.8656 37.989 9.10936V9.01944C37.989 5.28569 35.7031 3.5088 32.2624 3.35135C28.8217 3.5088 26.5358 5.28569 26.5358 9.01944ZM32.7808 0C39.4266 0 43.48 3.23889 43.48 8.9519V9.15436C43.48 14.8899 39.4266 18.1288 32.7808 18.1288C32.7102 18.1288 32.6394 18.1288 32.5687 18.1288C32.4745 18.1288 32.3567 18.1288 32.2624 18.1288C32.0974 18.1288 31.9325 18.1288 31.7439 18.1288C25.1217 18.1288 21.0448 14.8899 21.0448 9.15436V8.9519C21.0448 3.23889 25.0982 0 31.7439 0C31.8146 0 31.8853 0 31.956 0C32.0503 0 32.1681 0 32.2624 0C32.4274 0 32.6158 0 32.7808 0ZM5.98586 5.01578C5.98586 6.61272 7.49411 7.06257 10.8877 7.44494C17.0856 8.0522 19.6072 9.60421 19.6072 12.7532C19.6072 16.1719 16.6379 18.1513 10.5106 18.1513H9.47367C2.78083 18.1513 0 15.4297 0 12.0334H5.2553C5.42027 14.0577 7.30558 14.9574 10.1335 15.0473C13.0557 14.9574 14.0691 14.1702 14.0691 12.9781C14.0691 11.4036 12.5138 10.9312 8.74316 10.4364C3.04006 9.71667 0.447761 8.36713 0.447761 5.15073C0.447761 2.38418 2.4509 0 8.8374 0C8.90811 0 9.00235 0 9.07306 0C9.14377 0 9.23801 0 9.30872 0C9.49727 0 9.66222 0 9.85077 0C16.5201 0 19.183 2.87901 19.2302 5.62306H13.8335C13.6685 4.27353 12.2074 3.2164 9.21449 3.10393C6.85782 3.1939 5.98586 3.93615 5.98586 5.01578Z"
+                    fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_776_8800">
+                    <rect width="90" height="18.1513" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <nav>
+              <ul class="header__main-menu">
+                <li class="header__menu-item sub">
+                  <a href="#">Proxies</a>
 
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M13.1667 1.8417C12.8251 1.50003 12.2334 1.73337 12.2334 2.20837V5.1167C12.2334 6.33337 13.2667 7.3417 14.5251 7.3417C15.3167 7.35004 16.4167 7.35004 17.3584 7.35004C17.8334 7.35004 18.0834 6.7917 17.7501 6.45837C16.5501 5.25003 14.4001 3.07503 13.1667 1.8417Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M12.2998 16.0499C10.3415 16.1916 10.3415 19.0249 12.2998 19.1666H16.9331C17.4915 19.1666 18.0415 18.9583 18.4498 18.5833C19.8248 17.3833 19.0915 14.9833 17.2831 14.7583C16.6331 10.8499 10.9831 12.3333 12.3165 16.0583"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M17.9168 9.32502V12.0334C17.9168 12.2834 17.5502 12.4 17.3668 12.225C16.9668 11.8334 16.4752 11.5334 15.9085 11.3584C14.5085 10.925 12.8835 11.35 11.8752 12.4167C11.2002 13.1167 10.8585 14.0084 10.8668 14.975C10.8668 15.1334 10.7918 15.275 10.6668 15.3667C10.0002 15.875 9.5835 16.675 9.5835 17.6C9.5835 17.6667 9.5835 17.7334 9.59183 17.8C9.6085 18.0667 9.41683 18.325 9.14183 18.325H6.72516C4.1585 18.325 2.0835 16.6584 2.0835 13.6834V6.30835C2.0835 3.33335 4.1585 1.66669 6.72516 1.66669H10.2585C10.7168 1.66669 11.0918 2.04169 11.0918 2.50002V4.90835C11.0918 6.89169 12.6918 8.49169 14.6752 8.49169H17.0835C17.5418 8.49169 17.9168 8.86669 17.9168 9.32502Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      Import & Export Data Feeds
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.33633 3.83651C7.78288 2.38996 8.50617 1.66669 9.40492 1.66669C10.3037 1.66669 11.027 2.38996 12.4735 3.83651L16.1558 7.51882C17.6023 8.96535 18.3257 9.6886 18.3257 10.5874C18.3257 11.4862 17.6023 12.2094 16.1558 13.656C14.7093 15.1025 13.986 15.8259 13.0873 15.8259C12.1884 15.8259 11.4652 15.1025 10.0187 13.656L6.33633 9.97369C4.88978 8.52719 4.1665 7.80387 4.1665 6.9051C4.1665 6.00633 4.88978 5.28306 6.33633 3.83651Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M6.06984 11.4749L2.35468 15.1901C2.06931 15.4755 1.92662 15.6182 1.84092 15.7666C1.60836 16.1694 1.60836 16.6657 1.84092 17.0685C1.92662 17.2169 2.06931 17.3596 2.35466 17.6449C2.64003 17.9303 2.78274 18.073 2.93117 18.1587C3.33398 18.3913 3.83026 18.3913 4.23306 18.1587C4.3815 18.073 4.52418 17.9303 4.80956 17.645L8.52467 13.9298L6.06984 11.4749Z"
-                          fill="#9CA1A8" />
-                        <path d="M6.95361 10.5911L6.95727 10.5875L9.41215 13.0423L9.40848 13.046L6.95361 10.5911Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M16.3903 5.98553C16.6026 5.58944 16.5959 5.11055 16.3702 4.71968C16.2845 4.57125 16.1418 4.42856 15.8565 4.1432C15.5711 3.85782 15.4284 3.71514 15.28 3.62944C14.8891 3.40377 14.4102 3.39708 14.0142 3.60938L16.3903 5.98553Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      API Functionality
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M4.58317 13.3334V6.66669C4.58317 5.28598 3.46388 4.16669 2.08317 4.16669C1.85305 4.16669 1.6665 4.35324 1.6665 4.58335V15.4167C1.6665 15.6468 1.85305 15.8334 2.08317 15.8334C3.46388 15.8334 4.58317 14.7141 4.58317 13.3334Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M10.4167 4.16669C11.988 4.16669 12.7737 4.16669 13.2618 4.65485C13.75 5.143 13.75 5.92867 13.75 7.50002V12.5C13.75 14.0714 13.75 14.857 13.2618 15.3452C12.7737 15.8334 11.988 15.8334 10.4167 15.8334H9.58333C8.01198 15.8334 7.22631 15.8334 6.73816 15.3452C6.25 14.857 6.25 14.0714 6.25 12.5V7.50002C6.25 5.92867 6.25 5.143 6.73816 4.65485C7.22631 4.16669 8.01198 4.16669 9.58333 4.16669H10.4167Z"
-                          fill="#9CA1A8" />
-                        <path
-                          d="M15.4165 6.66669V13.3334C15.4165 14.7141 16.5358 15.8334 17.9165 15.8334C18.1466 15.8334 18.3332 15.6468 18.3332 15.4167V4.58335C18.3332 4.35324 18.1466 4.16669 17.9165 4.16669C16.5358 4.16669 15.4165 5.28598 15.4165 6.66669Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      Product Bundles
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.4585 9.99998C6.4585 9.42465 6.92486 8.95831 7.50016 8.95831C8.07546 8.95831 8.54183 9.42465 8.54183 9.99998C8.54183 10.5753 8.07546 11.0416 7.50016 11.0416C6.92486 11.0416 6.4585 10.5753 6.4585 9.99998Z"
-                          fill="#9CA1A8" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M3.29576 4.21756C2.5 5.31283 2.5 6.87522 2.5 10C2.5 13.1248 2.5 14.6872 3.29576 15.7824C3.55276 16.1362 3.86383 16.4472 4.21756 16.7042C5.31283 17.5 6.87522 17.5 10 17.5C13.1248 17.5 14.6872 17.5 15.7824 16.7042C16.1362 16.4472 16.4472 16.1362 16.7042 15.7824C17.5 14.6872 17.5 13.1248 17.5 10C17.5 6.87522 17.5 5.31283 16.7042 4.21756C16.4472 3.86383 16.1362 3.55276 15.7824 3.29576C14.6872 2.5 13.1248 2.5 10 2.5C6.87522 2.5 5.31283 2.5 4.21756 3.29576C3.86383 3.55276 3.55276 3.86383 3.29576 4.21756ZM7.5 7.70833C6.23435 7.70833 5.20833 8.73433 5.20833 10C5.20833 11.2657 6.23435 12.2917 7.5 12.2917C8.549 12.2917 9.43333 11.5869 9.70542 10.625H11.2406C11.2867 10.8508 11.257 11.0884 11.1517 11.2992L11.1077 11.3872C10.9532 11.6959 11.0784 12.0713 11.3872 12.2257C11.6959 12.3801 12.0713 12.2549 12.2257 11.9462L12.2697 11.8582C12.4629 11.4718 12.5404 11.0443 12.5022 10.625H13.7406C13.7867 10.8508 13.757 11.0884 13.6517 11.2992L13.6077 11.3872C13.4532 11.6959 13.5784 12.0713 13.8872 12.2257C14.1959 12.3801 14.5713 12.2549 14.7257 11.9462L14.7697 11.8582C15.0922 11.213 15.0922 10.4537 14.7697 9.8085C14.6368 9.54283 14.3653 9.375 14.0683 9.375H11.6792C11.6706 9.37483 11.6618 9.37483 11.6532 9.375H9.70542C9.43333 8.41308 8.549 7.70833 7.5 7.70833Z"
-                          fill="#9CA1A8" />
-                      </svg>
-                      VA Access
-                    </a>
-                  </li>
-                </ul>
-              </li> -->
-
-              <li class="header__menu-item sub integrations">
-                <a href="#">Integrations</a>
-
-                <div class="submenu">
-                  <ul class="submenu-integrations">
+                  <ul class="submenu">
                     <li>
-                      <a href="#">
-                        <img src="./img/ebay.svg" alt="">
-                        eBay
-                      </a>
+                      <a href="index.html"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <img src="./img/amazon.svg" alt="">
-                        Amazon
-                      </a>
+                      <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <img src="./img/facebook.svg" alt="">
-                        Facebook
-                      </a>
+                      <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <img src="./img/shopify.svg" alt="">
-                        Shopify
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./img/walmart.svg" alt="">
-                        Walmart
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img src="./img/etsy.svg" alt="">
-                        Etsy
-                      </a>
+                      <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
                     </li>
                   </ul>
-                  <div class="full-integrations">
-                    <a href="integrations.html">VIEW ALL INTEGRATION</a>
-                  </div>
-                </div>
-              </li>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#">Web Unblocker</a>
+                </li>
 
-              <li class="header__menu-item">
-                <a href="suppliers.html">Suppliers</a>
-              </li>
-              <li class="header__menu-item">
-                <a href="pricing.html">Price</a>
-              </li>
-              <li class="header__menu-item">
-                <a href="#">About</a>
-              </li>
-            </ul>
-          </nav>
+                <li class="header__menu-item sub">
+                  <a href="#">Scraper API’s</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#">Pricing</a>
+                </li>
+                <li class="header__menu-item sub">
+                  <a href="#">Use Cases</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__menu-item sub">
+                  <a href="#">Resources</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__main-right">
+              <a class="sales-btn" href="#">Log In</a>
+              <a class="start-btn" href="#">Sign Up</a>
+              <span class="burger"></span>
+            </div>
+          </div>
 
-          <ul class="mobile-menu">
-              <li>
-                <a href="#">Integrations</a>
-              </li>
-              <li>
-                <a href="#">Suppliers</a>
-              </li>
-              <li>
-                <a href="#">Price</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
+        </div>
+      </div>
+
+      <div class="header__mobile-menu">
+        <nav>
+          <ul class="header__mob-menu">
+            <li class="header__menu-item sub">
+              <a href="#">Proxies</a>
+
+              <ul class="submenu">
+                <li>
+                  <a href="index.html"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <a href="#">Data API’s</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#">Scraping Solutions</a>
+            </li>
+            <li class="header__menu-item sub">
+              <a href="#">Use Cases</a>
+              <ul class="submenu">
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__menu-item sub">
+              <a href="#">Resources</a>
+              <ul class="submenu">
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-1.svg" alt=""> Residential Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-2.svg" alt=""> Mobile Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-3.svg" alt=""> US ISP Proxies</a>
+                </li>
+                <li>
+                  <a href="#"><img src="./img/submenu-icon-4.svg" alt=""> Proxy locations</a>
+                </li>
+              </ul>
+            </li>
           </ul>
+        </nav>
 
-        </div>
-        <div class="header__btns">
-          <a class="started-btn" href="#">Log in</a>
-        </div>
+        <a class="login-btn" href="#">Log in</a>
 
-        <button class="burger"></button>
       </div>
     </header>
 
-    <section class="hero">
+    <div class="module hero">
       <div class="container">
-          <div>
-              <div class="hero__titles">
-                  <p class="hero__subtitle">Integration on Facebook</p>
-                  <h1 class="hero__title">
-                      Software for dropshipping
-                      on Facebook Marketplace.
-                  </h1>
-                  <p class="hero__desc">
-                      Empowering Facebook Marketplace dropshippers to reclaim their valuable time through the
-                      integration of cutting-edge eCommerce automation tools.
-                  </p>
-              </div>
-
-              <div class="hero__cta">
-                  <a class="hero__start-btn" href="#">Get Started</a>
-                  <div class="hero__reviews">
-                      <img class="hero__rating" src="./img/rating.svg" alt="">
-                      <div>
-                          <div class="hero__stars">
-                              <img class="hero__star" src="./img/star.svg" alt="">
-                              <img class="hero__star" src="./img/star.svg" alt="">
-                              <img class="hero__star" src="./img/star.svg" alt="">
-                              <img class="hero__star" src="./img/star.svg" alt="">
-                              <img class="hero__star" src="./img/star.svg" alt="">
-                          </div>
-                          <p class="hero__review-text">184 Reviews on <a href="#">Trustpilot</a></p>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="hero__illustration-wrap">
-                  <div class="hero__illustration-left">
-                      <img src="./img/illustration/home/1.webp" alt="">
-                  </div>
-                  <div class="hero__illustration-right">
-                      <img src="./img/illustration/home/2.webp" alt="">
-                  </div>
-              </div>
-          </div>
-
-          <div class="hero__illustration-style-2">
-              <img src="./img/illustration/hero-integration-1.png" alt="">
-          </div>
-
-          <div class="hero__bottom">
-              <div class="hero__bottom-wrap">
-                  <p class="hero__bottom-text">Don't know what Dropshipping is?</p>
-                  <a class="hero__bottom-btn" href="#">Learn more</a>
-              </div>
-          </div>
-      </div>
-
-      <div class="hero__style-2-container">
-          <div class="hero__style-2-bottom">
-              <div class="info">
-                  <a class="down" href="#"></a>
-                  <p>How we've assisted dropshipping businesses</p>
-              </div>
-
-              <div class="items">
-                  <div class="item">
-                      <h4>75M+</h4>
-                      <p>Products subject to ongoing monitoring</p>
-                  </div>
-                  <div class="item">
-                      <h4>12,000+</h4>
-                      <p>Entrepreneurs who have received
-                          suport from Sku Grid.
-                      </p>
-                  </div>
-                  <div class="item">
-                      <h4>$320M+</h4>
-                      <p>Yearly sales figures with assistance.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      
-  </section>
-
-    <section class="product product-inclusivity">
-      <div class="container">
-        <div class="product__menu">
-          <a class="item active" href="#">Inclusivity</a>
-          <a class="item" href="#">Efficiency</a>
-          <a class="item" href="#">Globalization</a>
-          <a class="item" href="#">Expansion</a>
+        <div class="hero__reviews">
+          <img src="./img/hero-reviews-1.svg" alt="">
+          <img src="./img/hero-reviews-2.svg" alt="">
+          <img src="./img/hero-reviews-3.svg" alt="">
         </div>
-        <div class="product__titles">
-          <div class="product__icon">
-            <img src="./img/product-icon-1.svg" alt="">
-          </div>
-          <h2 class="product__title">Wide Range of Products</h2>
-          <p class="product__desc">
-            By partnering with us, you avoid the need to invest substantial sums in purchasing products and storing
-            inventory. We take care of warehousing and inventory management, enabling you to focus on sales and
-            marketing.
+        <div class="hero__titles">
+          <h1 class="hidden">Collect web data at Scale</h1>
+          <p class="hero__title">
+            <span class="gray-text" id="randomText"></span>
           </p>
-          <a class="product__cta" href="#">Learn more</a>
-        </div>
-
-        <div class="product__illustration">
-          <img src="./img/illustration/home/product-illustration-1.webp" alt="">
-        </div>
-      </div>
-    </section>
-
-    <section class="product product-efficiency">
-      <div class="container">
-        <div class="product__menu">
-          <a class="item" href="#">Inclusivity</a>
-          <a class="item active" href="#">Efficiency</a>
-          <a class="item" href="#">Globalization</a>
-          <a class="item" href="#">Expansion</a>
-        </div>
-        <div class="product__titles">
-          <div class="product__icon">
-            <img src="./img/product-icon-2.svg" alt="">
-          </div>
-          <h2 class="product__title">Minimal Investment</h2>
-          <p class="product__desc">
-            By partnering with us, you avoid the need to invest substantial sums in purchasing products and storing
-            inventory. We take care of warehousing and inventory management, enabling you to focus on sales and
-            marketing.
+          <p class="hero__desc">
+            Unblock even the most difficult websites, turn pages into structured data and extract the data you need.
           </p>
-          <a class="product__cta" href="#">Learn more</a>
         </div>
+        <div class="hero__btns">
+          <div class="hero__btns-wrap">
+            <a class="hero__btn-price" href="#">Pricing</a>
+            <a class="hero__btn-trial" href="#">Start $1.99 Trial</a>
+          </div>
 
-        <div class="product__illustration">
-          <img src="./img/illustration/home/product-illustration-2.webp" alt="">
-        </div>
-      </div>
-    </section>
-
-    <section class="product product-globalization">
-      <div class="container">
-        <div class="product__menu">
-          <a class="item" href="#">Inclusivity</a>
-          <a class="item" href="#">Efficiency</a>
-          <a class="item active" href="#">Globalization</a>
-          <a class="item" href="#">Expansion</a>
-        </div>
-        <div class="product__titles">
-          <div class="product__icon">
-            <img src="./img/product-icon-3.svg" alt="">
-          </div>
-          <h2 class="product__title">Global Reach and Market</h2>
-          <p class="product__desc">
-            With our assistance, you can reach customers in different countries and regions, expanding your business on
-            the global stage. We offer integration with various global online marketplaces and ensure your brand's
-            global presence.
-          </p>
-          <a class="product__cta" href="#">Learn more</a>
-        </div>
-
-        <div class="product__illustration">
-          <img src="./img/illustration/home/product-illustration-3.webp" alt="">
-        </div>
-      </div>
-    </section>
-
-    <section class="product product-expansion">
-      <div class="container">
-        <div class="product__menu">
-          <a class="item" href="#">Inclusivity</a>
-          <a class="item" href="#">Efficiency</a>
-          <a class="item" href="#">Globalization</a>
-          <a class="item active" href="#">Expansion</a>
-        </div>
-        <div class="product__titles">
-          <div class="product__icon">
-            <img src="./img/product-icon-4.svg" alt="">
-          </div>
-          <h2 class="product__title">Flexibility <span>&</span> Scalability</h2>
-          <p class="product__desc">
-            Our dropshipping model provides you with flexibility in managing your business. You can easily scale your
-            operations based on demand, adding new products and categories with minimal effort.
-          </p>
-          <a class="product__cta" href="#">Learn more</a>
-        </div>
-
-        <div class="product__illustration">
-          <img src="./img/illustration/home/product-illustration-4.webp" alt="">
-        </div>
-      </div>
-    </section>
-
-    <section class="trusted">
-      <div class="container">
-        <div class="trusted__titles">
-          <p class="trusted__subtitle">We are trusted</p>
-          <h2 class="trusted__title">Who are we partnering with?</h2>
-        </div>
-        <div class="trusted__logos-list">
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-1.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-2.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-3.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-4.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-5.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-6.svg" alt="">
-          </div>
-          <div class="trusted__logos-item">
-            <img src="./img/trusted-logo-7.svg" alt="">
+          <div class="hero__features">
+            <p>3 day trial</p>
+            <p>No set-up costs</p>
+            <p>Cancel anytime</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="banner">
+    <div class="module logos">
       <div class="container">
-        <div class="banner__content">
-          <h2>30 Days Risk Free!</h2>
-          <ul class="banner__list">
-            <li>Monitoring up to 200 items</li>
-            <li>30 marketplaces</li>
+        <img class="logos__item" src="./img/logos-1.svg" alt="">
+        <img class="logos__item" src="./img/logos-2.svg" alt="">
+        <img class="logos__item" src="./img/logos-3.svg" alt="">
+        <img class="logos__item" src="./img/logos-4.svg" alt="">
+        <img class="logos__item" src="./img/logos-5.svg" alt="">
+      </div>
+    </div>
+
+
+    <section class="all-locations">
+      <div class="container">
+        <div class="module titles">
+          <h2>
+            All Locations
+          </h2>
+        </div>
+
+        <div class="all-locations-item">
+          <h3 class="location-title">Africa</h3>
+          <ul class="all-locations__list">
+            <li>
+              <a href="#">Algeria</a>
+            </li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <section class="stories">
-      <div class="container">
-        <div class="stories__head">
-          <div class="stories__titles">
-            <p>TESTIMONIALS</p>
-            <h2>Customer stories</h2>
+
+
+    <div class="module titles">
+      <p class="subtitle">SOAX Platform</p>
+      <h2>
+        One Platform, Multiple Ways to <br>
+        Get the Data You Need
+      </h2>
+    </div>
+
+    <section class="platform">
+      <div class="module text-with-image">
+        <div class="container">
+          <div class="text">
+            <span class="pretitle gradient-text">Starting at $2.20/GB</span>
+            <h3 class="title">Proxy Servers</h3>
+            <p>
+              Residential, mobile and ISP proxy servers. Ethically sourced, reliable and fast.
+            </p>
+            <ul>
+              <li>100% success rate</li>
+              <li>Pay only for successful requests</li>
+              <li>Save time and resources</li>
+            </ul>
+            <a href="#">Explore Proxy Servers</a>
           </div>
-          <div class="stories__rating">
-            <div class="stories__stars">
-              <img class="stories__star" src="./img/stories-star.svg" alt="">
-              <img class="stories__star" src="./img/stories-star.svg" alt="">
-              <img class="stories__star" src="./img/stories-star.svg" alt="">
-              <img class="stories__star" src="./img/stories-star.svg" alt="">
-              <img class="stories__star" src="./img/stories-star.svg" alt="">
-            </div>
-            <p class="stories__rating-text">Average customer rating</p>
+          <div class="image">
+            <img src="./img/pantalla-1.webp" alt="">
           </div>
         </div>
+      </div>
 
-        <div class="stories__list swiper storiesSwiper">
+      <div class="module text-with-image reverse">
+        <div class="container">
+          <div class="text">
+            <span class="pretitle gradient-text">Starting at $4.00/GB</span>
+            <h3 class="title">Web Unblocker</h3>
+            <p>
+              Residential, mobile and ISP proxy servers. Ethically sourced, reliable and fast.
+            </p>
+            <ul>
+              <li>100% success rate</li>
+              <li>Pay only for successful requests</li>
+              <li>Save time and resources</li>
+            </ul>
+            <a href="#">Explore Web Unblocker</a>
+          </div>
+          <div class="image">
+            <img src="./img/pantalla-2.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="module text-with-image">
+        <div class="container">
+          <div class="text">
+            <span class="pretitle gradient-text">Starting at $0.175/1,000 API requests</span>
+            <h3 class="title">Scraper API’s</h3>
+            <p>
+              Turn websites into structured data and collect public data effortlessly with a simple API.
+            </p>
+            <ul>
+              <li>100% success rate</li>
+              <li>Pay only for successful requests</li>
+              <li>Save time and resources</li>
+            </ul>
+            <a href="#">Explore Scraper API’s</a>
+          </div>
+          <div class="image">
+            <img src="./img/pantalla-3.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-btn">
+        <a href="#">Start $1.99 Trial</a>
+      </div>
+
+    </section>
+
+
+    <section class="testimonial">
+
+      <div class="titles">
+        <p class="subtitle">Testimonial</p>
+        <h2>
+          Trusted by <br>
+          Leading Companies
+        </h2>
+      </div>
+
+      <div class="testimonial__content">
+        <div class="swiper testimonialsSwiper">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
           <div class="swiper-wrapper">
-            <div class="stories__list-item swiper-slide">
-              <div class="stories__item-content">
-                <p class="stories__item-name">Excellent business kickstart!</p>
-                <p class="stories__item-text">
-                  My business took off with a flying start thanks to this dropshipping website! A vast product
-                  selection,
-                  order automation, and outstanding support. Highly recommended!
-                </p>
-              </div>
-              <div class="stories__item-author">
-                <img class="stories__author-img" src="./img/author.png" alt="">
-                <div class="stories__author-info">
-                  <p class="stories__author-name">Lambert Griffith</p>
-                  <p class="stories__author-position">Founder of EAanalytics</p>
+            <div class="swiper-slide">
+              <div class="testimonial__block">
+                <div class="left">
+                  <img class="testimonial__logo" src="./img/coca-cola-logo-svgrepo-com.svg" alt="">
+                  <h4 class="title">How we helped Coca-Cola efficiently scrape billions of Shopify datasets at scale
+                  </h4>
+                  <p class="desc">
+                    “We just gave Soax billions of search terms based around Distrix and got the content within hours.
+                    We
+                    just gave Soax billions of search terms based around Distrix and got the content within hours.”
+                  </p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="right">
+                  <img src="./img/testimonial-img.webp" alt="">
+                  <p class="info"><span>David Amezquita,</span> SVP Operations & Customer Success, Coca-Cola</p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="stories__list-item swiper-slide">
-              <div class="stories__item-content">
-                <p class="stories__item-name">Excellent business kickstart!</p>
-                <p class="stories__item-text">
-                  Reliable suppliers and competitive prices. The price and stock tracking system is worth its weight in
-                  gold. My business is flourishing thanks to this service!
-                </p>
-              </div>
-              <div class="stories__item-author">
-                <img class="stories__author-img" src="./img/author.png" alt="">
-                <div class="stories__author-info">
-                  <p class="stories__author-name">Lambert Griffith</p>
-                  <p class="stories__author-position">Founder of EAanalytics</p>
+
+            <div class="swiper-slide">
+              <div class="testimonial__block">
+                <div class="left">
+                  <img class="testimonial__logo" src="./img/coca-cola-logo-svgrepo-com.svg" alt="">
+                  <h4 class="title">How we helped Coca-Cola efficiently scrape billions of Shopify datasets at scale
+                  </h4>
+                  <p class="desc">
+                    “We just gave Soax billions of search terms based around Distrix and got the content within hours.
+                    We
+                    just gave Soax billions of search terms based around Distrix and got the content within hours.”
+                  </p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="right">
+                  <img src="./img/testimonial-img.webp" alt="">
+                  <p class="info"><span>David Amezquita,</span> SVP Operations & Customer Success, Coca-Cola</p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="stories__list-item swiper-slide">
-              <div class="stories__item-content">
-                <p class="stories__item-name">Excellent business kickstart!</p>
-                <p class="stories__item-text">
-                  I've been partnering with this website for several years, and I couldn't be happier. Their global
-                  integration has given my business a worldwide presence.
-                </p>
-              </div>
-              <div class="stories__item-author">
-                <img class="stories__author-img" src="./img/author.png" alt="">
-                <div class="stories__author-info">
-                  <p class="stories__author-name">Lambert Griffith</p>
-                  <p class="stories__author-position">Founder of EAanalytics</p>
+
+            <div class="swiper-slide">
+              <div class="testimonial__block">
+                <div class="left">
+                  <img class="testimonial__logo" src="./img/coca-cola-logo-svgrepo-com.svg" alt="">
+                  <h4 class="title">How we helped Coca-Cola efficiently scrape billions of Shopify datasets at scale
+                  </h4>
+                  <p class="desc">
+                    “We just gave Soax billions of search terms based around Distrix and got the content within hours.
+                    We
+                    just gave Soax billions of search terms based around Distrix and got the content within hours.”
+                  </p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="right">
+                  <img src="./img/testimonial-img.webp" alt="">
+                  <p class="info"><span>David Amezquita,</span> SVP Operations & Customer Success, Coca-Cola</p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="stories__list-item swiper-slide">
-              <div class="stories__item-content">
-                <p class="stories__item-name">Excellent business kickstart!</p>
-                <p class="stories__item-text">
-                  My business took off with a flying start thanks to this dropshipping website! A vast product
-                  selection,
-                  order automation, and outstanding support. Highly recommended!
-                </p>
-              </div>
-              <div class="stories__item-author">
-                <img class="stories__author-img" src="./img/author.png" alt="">
-                <div class="stories__author-info">
-                  <p class="stories__author-name">Lambert Griffith</p>
-                  <p class="stories__author-position">Founder of EAanalytics</p>
+
+            <div class="swiper-slide">
+              <div class="testimonial__block">
+                <div class="left">
+                  <img class="testimonial__logo" src="./img/coca-cola-logo-svgrepo-com.svg" alt="">
+                  <h4 class="title">How we helped Coca-Cola efficiently scrape billions of Shopify datasets at scale
+                  </h4>
+                  <p class="desc">
+                    “We just gave Soax billions of search terms based around Distrix and got the content within hours.
+                    We
+                    just gave Soax billions of search terms based around Distrix and got the content within hours.”
+                  </p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="right">
+                  <img src="./img/testimonial-img.webp" alt="">
+                  <p class="info"><span>David Amezquita,</span> SVP Operations & Customer Success, Coca-Cola</p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="stories__list-item swiper-slide">
-              <div class="stories__item-content">
-                <p class="stories__item-name">Excellent business kickstart!</p>
-                <p class="stories__item-text">
-                  My business took off with a flying start thanks to this dropshipping website! A vast product
-                  selection,
-                  order automation, and outstanding support. Highly recommended!
+
+            <div class="swiper-slide">
+              <div class="testimonial__block">
+                <div class="left">
+                  <img class="testimonial__logo" src="./img/coca-cola-logo-svgrepo-com.svg" alt="">
+                  <h4 class="title">How we helped Coca-Cola efficiently scrape billions of Shopify datasets at scale
+                  </h4>
+                  <p class="desc">
+                    “We just gave Soax billions of search terms based around Distrix and got the content within hours.
+                    We
+                    just gave Soax billions of search terms based around Distrix and got the content within hours.”
+                  </p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="right">
+                  <img src="./img/testimonial-img.webp" alt="">
+                  <p class="info"><span>David Amezquita,</span> SVP Operations & Customer Success, Coca-Cola</p>
+                  <a class="testimonial__btn" href="#">
+                    Read full case study
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.66406 8.49976H13.3307M13.3307 8.49976L9.33073 4.49976M13.3307 8.49976L9.33073 12.4998"
+                        stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <div class="module titles">
+      <p class="subtitle">Proxy Servers</p>
+      <h2>
+        Choose the Proxy Solution for <br>
+        Your Needs
+      </h2>
+    </div>
+
+    <div class="module cards">
+      <div class="container">
+        <div class="cards__content">
+          <div class="cards__list">
+            <div class="cards__item">
+              <div class="content">
+                <img src="./img/home-line.svg" alt="">
+                <h4>Residential Proxies</h4>
+                <p>
+                  Use only real IP addresses provided by real internet service providers from all over the world
+                  (Excluding State of Texas, USA)
                 </p>
               </div>
-              <div class="stories__item-author">
-                <img class="stories__author-img" src="./img/author.png" alt="">
-                <div class="stories__author-info">
-                  <p class="stories__author-name">Lambert Griffith</p>
-                  <p class="stories__author-position">Founder of EAanalytics</p>
-                </div>
+              <div class="bottom">
+                <a href="#">Explore Residential Proxies</a>
+              </div>
+            </div>
+            <div class="cards__item">
+              <div class="content">
+                <img src="./img/refresh-cw-05.svg" alt="">
+                <h4>US ISP Proxies</h4>
+                <p>
+                  SOAX US ISP network is built of residential IPs bought or leased from Internet Service Providers
+                  (ISPs) for commercial use, rather than for use from private homes.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">Explore ISP Proxies</a>
+              </div>
+            </div>
+            <div class="cards__item">
+              <div class="content">
+                <img src="./img/phone-01.svg" alt="">
+                <h4>Mobile Proxies</h4>
+                <p>
+                  Easily collect publicly available data with highly reliable mobile proxies from all over the world
+                  (Excluding State of Texas, USA)
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">Explore Mobile Proxies</a>
+              </div>
+            </div>
+            <div class="cards__item">
+              <div class="content">
+                <img src="./img/database-01.svg" alt="">
+                <h4>Data Center</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </div>
+              <div class="bottom">
+                <a href="#">Explore Data Center</a>
               </div>
             </div>
           </div>
+          <div class="content__bottom">
+            <a href="#">Start $1.99 Trial</a>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </section>
+    </div>
 
-    <section class="countrys">
+
+    <div class="module pricing">
+      <div class="module titles">
+        <p class="subtitle">Plans and Pricing</p>
+        <h2>
+          Choose Your Proxy Plan
+        </h2>
+      </div>
+      <div class="pricing__tabs-wrap">
+        <div class="pricing__tabs">
+          <span class="pricing__tabs-item active" id="tab-1">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.5433 11.2664C17.3118 13.4413 16.0795 15.4794 14.0404 16.6567C10.6524 18.6127 6.32035 17.4519 4.36434 14.064L4.156 13.7032M3.45429 9.77799C3.6858 7.60308 4.91812 5.56498 6.95728 4.38767C10.3452 2.43166 14.6773 3.59244 16.6333 6.98035L16.8416 7.34119M3.41016 15.5772L4.0202 13.3005L6.29691 13.9105M14.7012 7.13383L16.9779 7.74387L17.5879 5.46716"
+                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Residential
+          </span>
+          <span class="pricing__tabs-item" id="tab-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path
+                d="M10.0013 15.1051H10.0096M6.83464 18.8551H13.168C14.1014 18.8551 14.5681 18.8551 14.9246 18.6735C15.2382 18.5137 15.4932 18.2587 15.653 17.9451C15.8346 17.5886 15.8346 17.1219 15.8346 16.1885V4.85514C15.8346 3.92172 15.8346 3.45501 15.653 3.09849C15.4932 2.78489 15.2382 2.52992 14.9246 2.37013C14.5681 2.18848 14.1014 2.18848 13.168 2.18848H6.83464C5.90121 2.18848 5.4345 2.18848 5.07798 2.37013C4.76438 2.52992 4.50941 2.78489 4.34962 3.09849C4.16797 3.45501 4.16797 3.92172 4.16797 4.85514V16.1885C4.16797 17.1219 4.16797 17.5886 4.34962 17.9451C4.50941 18.2587 4.76438 18.5137 5.07798 18.6735C5.4345 18.8551 5.90121 18.8551 6.83464 18.8551ZM10.418 15.1051C10.418 15.3353 10.2314 15.5218 10.0013 15.5218C9.77118 15.5218 9.58464 15.3353 9.58464 15.1051C9.58464 14.875 9.77118 14.6885 10.0013 14.6885C10.2314 14.6885 10.418 14.875 10.418 15.1051Z"
+                stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Mobile
+          </span>
+          <span class="pricing__tabs-item" id="tab-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path
+                d="M6.66667 14.6887H13.3333M9.18141 2.82543L3.52949 7.22137C3.15168 7.51522 2.96278 7.66214 2.82669 7.84614C2.70614 8.00913 2.61633 8.19275 2.56169 8.38797C2.5 8.60836 2.5 8.84768 2.5 9.32631V15.3554C2.5 16.2888 2.5 16.7555 2.68166 17.1121C2.84144 17.4257 3.09641 17.6806 3.41002 17.8404C3.76654 18.0221 4.23325 18.0221 5.16667 18.0221H14.8333C15.7668 18.0221 16.2335 18.0221 16.59 17.8404C16.9036 17.6806 17.1586 17.4257 17.3183 17.1121C17.5 16.7555 17.5 16.2888 17.5 15.3554V9.32631C17.5 8.84768 17.5 8.60836 17.4383 8.38797C17.3837 8.19275 17.2939 8.00913 17.1733 7.84614C17.0372 7.66214 16.8483 7.51522 16.4705 7.22137L10.8186 2.82543C10.5258 2.59772 10.3794 2.48386 10.2178 2.4401C10.0752 2.40148 9.92484 2.40148 9.78221 2.4401C9.62057 2.48386 9.47418 2.59772 9.18141 2.82543Z"
+                stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            ISP
+          </span>
+        </div>
+      </div>
+
+
+      <div class="pricing__items tabs" id="tabs">
+
+        <div class="tabs-item active">
+
+          <div class="swiper pricingSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide pricing__wrap-item">
+                <div class="top">
+                  <p class="starts">Starts at $2.99/GB</p>
+                  <h2 class="amout">50GB</h2>
+                  <span class="price">$300/month</span>
+                </div>
+                <div class="content">
+                  <ul class="list">
+                    <li>Unlimited Concurrent Sessions</li>
+                    <li>Automatic Proxy Rotation</li>
+                    <li>Proxy Servers in 195+ Countries</li>
+                    <li>API Access</li>
+                    <li class="deactivate">Customer success manager</li>
+                  </ul>
+                </div>
+                <div class="bottom">
+                  <a href="#">Start $1.99 Trial</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide pricing__wrap-item">
+                <div class="top">
+                  <p class="starts">Starts at $2.99/GB</p>
+                  <h2 class="amout">50GB</h2>
+                  <span class="price">$300/month</span>
+                </div>
+                <div class="content">
+                  <ul class="list">
+                    <li>Unlimited Concurrent Sessions</li>
+                    <li>Automatic Proxy Rotation</li>
+                    <li>Proxy Servers in 195+ Countries</li>
+                    <li>API Access</li>
+                    <li class="deactivate">Customer success manager</li>
+                  </ul>
+                </div>
+                <div class="bottom">
+                  <a href="#">Start $1.99 Trial</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide pricing__wrap-item popular">
+                <div class="popular-block">Most popular</div>
+                <div class="top">
+                  <p class="starts">Starts at $2.99/GB</p>
+                  <h2 class="amout">500GB</h2>
+                  <span class="price">$300/month</span>
+                </div>
+                <div class="content">
+                  <ul class="list">
+                    <li>Everything in 50GB +</li>
+                    <li class="green">Customer success manager</li>
+                  </ul>
+                </div>
+                <div class="bottom">
+                  <a href="#">Start $1.99 Trial</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide pricing__wrap-item">
+                <div class="top">
+                  <p class="starts">Starts at $2.99/GB</p>
+                  <h2 class="amout">50GB</h2>
+                  <span class="price">$300/month</span>
+                </div>
+                <div class="content">
+                  <ul class="list">
+                    <li>Unlimited Concurrent Sessions</li>
+                    <li>Automatic Proxy Rotation</li>
+                    <li>Proxy Servers in 195+ Countries</li>
+                    <li>API Access</li>
+                    <li class="deactivate">Customer success manager</li>
+                  </ul>
+                </div>
+                <div class="bottom">
+                  <a href="#">Start $1.99 Trial</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-3-pagination"></div>
+        </div>
+
+        <div class="tabs-item">
+
+        </div>
+
+        <div class="tabs-item">
+
+        </div>
+      </div>
+
+
+      <div class="pricing__style-2 active">
+        <div class="table">
+          <div class="head row">
+            <div class="frame">
+              <p>Plan</p>
+            </div>
+            <div class="frame">
+              <p>Traffic</p>
+            </div>
+            <div class="frame">
+              <p>Price per GB</p>
+            </div>
+            <div class="frame">
+              <p>Monthly</p>
+            </div>
+            <div class="frame">
+              <p>Success Manager</p>
+            </div>
+          </div>
+
+          <div class="pricing-section">
+
+            <div class="row">
+              <div class="frame">
+                <p class="text">ISP 15</p>
+                <span class="popular">Most Popular</span>
+              </div>
+              <div class="frame">
+                <p class="text">15 GB</p>
+              </div>
+              <div class="frame">
+                <p class="text">$6.6 / GB</p>
+              </div>
+              <div class="frame">
+                <p class="text monthly">$6.6 / GB</p>
+              </div>
+              <div class="frame">
+                <img class="icon" src="./img/pricing-check.svg" alt="">
+              </div>
+              <div class="frame">
+                <a href="#">Start $1.99 Trial</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="pricing__bottom">
+        <div class="wrap">
+          <span>Ethical Data</span>
+          <span>/</span>
+          <span>3-Day Trial</span>
+          <span>/</span>
+          <span>Cancel anytime</span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="module reviews">
       <div class="container">
-        <div class="countrys__titles">
-          <h2>
-            <span>WE SPAN THE GLOBE</span> <br>
-            PROVIDING ACCESS WHERE IT IS NEEDED
+        <div class="titles reviews__titles">
+          <h2 class="reviews__title">
+            Recognised by Industry Experts
           </h2>
-          <p>
-            Sky Grid is a story of global reach and endless possibilities. We work with clients around the world,
-            helping them build and expand successful online businesses.
+          <div class="reviews__text-wrap">
+            <p class="section__desc reviews__desc">Soax is rated 4.4/5 stars on 100+ Trustpilot reviews.</p>
+            <a class="reviews__btn" href="#">
+              See what they’re saying
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.16406 8.71387H13.8307M13.8307 8.71387L9.83073 4.71387M13.8307 8.71387L9.83073 12.7139"
+                  stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="reviews__items-wrap">
+          <div class="reviews__items">
+            <div class="swiper reviewsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="reviews__items-item">
+                    <div class="reviews__item-content">
+                      <div class="top">
+                        <div class="reviews__stars">
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                        </div>
+                        <p class="reviews__text">
+                          I've used a few proxy services and this is TOP NOTCH.
+                        </p>
+                      </div>
+                      <div class="reviews__author">
+                        <img src="./img/author-1.webp" alt="">
+                        <p>Operations Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="reviews__items-item">
+                    <div class="reviews__item-content">
+                      <div class="top">
+                        <div class="reviews__stars">
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                        </div>
+                        <p class="reviews__text">
+                          Great proxies and support is unbelievable, Emily was a total star this morning!
+                        </p>
+                      </div>
+                      <div class="reviews__author">
+                        <img src="./img/author-2.webp" alt="">
+                        <p>Software Engineer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="reviews__items-item last">
+                    <div class="reviews__item-content">
+                      <div class="top">
+                        <div class="reviews__stars">
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                          <span class="reviews__star"></span>
+                        </div>
+                        <p class="reviews__text">
+                          Best proxy service in the business, with the most premium proxies that actually work!
+                        </p>
+                      </div>
+                      <div class="reviews__author">
+                        <img src="./img/author-3.webp" alt="">
+                        <p>CMO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-2-pagination"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module logos logos-v2">
+      <div class="container scroll">
+        <div class="swiper logosSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-1.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-2.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-3.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-4.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-5.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-6.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-7.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-8.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-9.svg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img class="logos__item" src="./img/reviews-logo-10.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div class="module cards-v2">
+      <div class="container">
+        <div class="titles">
+          <div class="cards-v2__illustration"></div>
+          <p class="subtitle">Popular use cases</p>
+          <h2>
+            Explore Popular <span>Use Cases</span>
+          </h2>
+        </div>
+
+        <div class="cards-v2__list-wrap">
+          <p class="cards-v2__list-title">SOAX offers a wide pool of legitimate and stable IPv6/IPv4 addresses</p>
+          <div class="fcards-v2__list">
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Data Collection</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Social Media</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Price Comparison</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Consumer Trends</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">SEO Monitoring</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Brand Protection</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Advanced Cybersecurity</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+            <a class="cards-v2__list-item" href="#">
+              <img class="icon" src="./img/features-icon-1.svg" alt="">
+              <div class="text">
+                <p class="name">Goods Purchasing</p>
+                <p class="desc">Collect any data you need quickly and easily.</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="cards-v2__style-2 active">
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability </p>
+            </div>
+          </div>
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+
+          <div class="cards-v2__style-2-item">
+            <div class="head">
+              <img src="./img/thumbs-up.svg" alt="">
+              <p class="head__text">Stable and Reliable</p>
+            </div>
+            <div class="text">
+              <p>99.99% uptime for extreme stability</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="module module-btn">
+      <a href="#">Start $1.99 Trial</a>
+    </div>
+
+
+
+    <section class="module worldwide">
+      <div class="container">
+        <div class="titles worldwide__titles">
+          <div class="worldwide__illustration">
+            <object id="svg-object" data="./img/worldwide-illustration.svg" type="image/svg+xml" width="774"
+              height="179"></object>
+          </div>
+          <h2 class="worldwide__title">
+            Worldwide Proxy Coverage
+          </h2>
+          <p class="section__desc worldwide__desc">Our global proxy technology and network are managed by DiViNetworks.
           </p>
         </div>
 
-        <div class="countrys__map">
-          <img src="./img/map.webp" alt="">
+        <div class="worldwide__items">
+          <div class="worldwide__items-item">
+            <img src="./img/unitedstates.svg" alt="">
+            <div class="text">
+              <p class="name">USA</p>
+              <p class="ips">10,034,043 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/united-kingdom.svg" alt="">
+            <div class="text">
+              <p class="name">United Kingdom</p>
+              <p class="ips">3,549,423 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/germany.svg" alt="">
+            <div class="text">
+              <p class="name">Germany</p>
+              <p class="ips">2,549,954 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/china.svg" alt="">
+            <div class="text">
+              <p class="name">China</p>
+              <p class="ips">12,054,154 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/italy.svg" alt="">
+            <div class="text">
+              <p class="name">Italy</p>
+              <p class="ips">2,054,154 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/brazil.svg" alt="">
+            <div class="text">
+              <p class="name">Brazil</p>
+              <p class="ips">10,034,043 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/japan.svg" alt="">
+            <div class="text">
+              <p class="name">Japan</p>
+              <p class="ips">3,549,423 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/poland.svg" alt="">
+            <div class="text">
+              <p class="name">Poland</p>
+              <p class="ips">12,549,954 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/iceland.svg" alt="">
+            <div class="text">
+              <p class="name">Iceland</p>
+              <p class="ips">2,054,154 IPs</p>
+            </div>
+          </div>
+          <div class="worldwide__items-item">
+            <img src="./img/greece.svg" alt="">
+            <div class="text">
+              <p class="name">Greece</p>
+              <p class="ips">2,054,154 IPs</p>
+            </div>
+          </div>
         </div>
-
-        <div class="countrys__cards">
-          <div class="countrys__cards-item">
-            <p class="title">
-              <img src="./img/i.svg" alt="">
-              50 000+
-            </p>
-            <p class="desc">Customers working with Sku Grid</p>
-          </div>
-          <div class="countrys__cards-item">
-            <p class="title">
-              <img src="./img/24px-set-1.svg" alt="">
-              12
-            </p>
-            <p class="desc">Customers working with Sku Grid</p>
-          </div>
-          <div class="countrys__cards-item">
-            <p class="title">
-              <img src="./img/money.svg" alt="">
-              3000$
-            </p>
-            <p class="desc">Customers working with Sku Grid</p>
-          </div>
-          <div class="countrys__cards-item">
-            <p class="title">
-              <img src="./img/f.svg" alt="">
-              3M+
-            </p>
-            <p class="desc">Customers working with Sku Grid</p>
-          </div>
+        <div class="worldwide__bottom">
+          <a class="btn" href="#">
+            View all 182 proxy locations
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.16406 8.71387H13.8307M13.8307 8.71387L9.83073 4.71387M13.8307 8.71387L9.83073 12.7139"
+                stroke="black" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
-
-        <div class="countrys__bottom">
-          <h5 class="countrys__bottom-text">Don't know what Dropshipping is?</h5>
-          <a class="countrys__bottom-btn" href="#">Learn more</a>
-        </div>
-
       </div>
     </section>
 
-    <section class="price">
+
+    <section class="module contacts">
       <div class="container">
-        <div class="price__titles">
-          <h2>Choose your plan</h2>
-          <p>We believe that the price-quality match speaks for itself.</p>
-        </div>
-
-        <div class="price__filter">
-          <p class="price__filter-text retail-text active">Retail arbitrage</p>
-          <button class="price__filter-btn">
-            <span class="layer"></span>
-          </button>
-          <p class="price__filter-text wholesale-text">Wholesale Drop Shipper</p>
-        </div>
-
-        <div class="price__cards-tabs">
-
-          <div class="price__cards active" id="tab">
-              <div class="price__cards-item start">
-                  <div class="head">
-                      <div>
-                          <p class="name">Starting Up</p>
-                          <p class="price-value"><span>$</span> 4.9</p>
-                      </div>
-                      <span class="start">Start</span>
-                      <span class="popular">Most Popular</span>
-                  </div>
-                  <div class="list">
-                      <a class="list-item trigger-5" href="/suppliers.html#shops" target="_blank">25 Suppliers Included</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                  </div>
-                  <a class="price-btn" href="#">Select Plan</a>
-              </div>
-
-              <div class="price__cards-item popular">
-                  <div class="head">
-                      <div>
-                          <p class="name">Growing</p>
-                          <p class="price-value"><span>$</span> 4.9</p>
-                      </div>
-                      <span class="start">Start</span>
-                      <span class="popular">Most Popular</span>
-                  </div>
-                  <ul class="list">
-                      <a class="list-item trigger-5" href="/suppliers.html#shops">25 Suppliers Included</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                  </ul>
-                  <a class="price-btn" href="#">Select Plan</a>
-              </div>
-
-              <div class="price__cards-item">
-                  <div class="head">
-                      <p class="price-value"><span>$</span> 4.9</p>
-                      <span class="start">Start</span>
-                      <span class="popular">Most Popular</span>
-                  </div>
-                  <ul class="list">
-                      <a class="list-item" href="/suppliers.html#shops">25 Suppliers Included</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                  </ul>
-                  <a class="price-btn" href="#">Select Plan</a>
-              </div>
-
-              <div class="price__cards-item">
-                  <div class="head">
-                      <p class="price-value"><span>$</span> 4.9</p>
-                      <span class="start">Start</span>
-                      <span class="popular">Most Popular</span>
-                  </div>
-                  <ul class="list">
-                      <a class="list-item" href="/suppliers.html#shops">25 Suppliers Included</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                      <a class="list-item" href="#">Top five suppliers</a>
-                  </ul>
-                  <a class="price-btn" href="#">Select Plan</a>
-              </div>
+        <div class="contacts__block">
+          <h2 class="contacts__title">
+            Looking for a managed service? Need help building <br>
+            your data collection pipeline?
+            <span>Talk to our Experts.</span>
+          </h2>
+          <div class="contacts__btns">
+            <a class="experts-btn" href="#">
+              Talk to our experts
+              <img src="./img/avatar.svg" alt="">
+            </a>
+            <a class="start-btn" href="#">Start $1.99 Trial</a>
           </div>
-
-          <div class="price__cards" id="tab">
-              <div class="price__cards-item popular">
-                  <div class="head">
-                      <p class="price-value"><span>$</span> 4.9</p>
-                      <span class="start">Start</span>
-                      <span class="popular">Most Popular</span>
-                  </div>
-                  <ul class="list">
-                      <li>Top five suppliers</li>
-                      <li>up to 100 products</li>
-                      <li>checked up to every 3 hours</li>
-                  </ul>
-                  <a class="price-btn" href="#">Select Plan</a>
-              </div>
+          <div class="contacts__info">
+            <p>3 day trial</p>
+            <span>/</span>
+            <p>No set-up costs</p>
+            <span>/</span>
+            <p>Cancel anytime</p>
           </div>
-
-      </div>
-
-        <div class="price__bottom">
-          <p>
-            <span>Extra Retail Supplier:</span> $9 per month (check store for functionality before adding it) <br>
-            <span>New Retail Supplier Request:</span> annual prepay for this store: $290 <br>
-            <span>Extra 5,000 records:</span> $99
-          </p>
         </div>
       </div>
+      <div class="contacts__bottom"></div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <div class="footer__top">
-          <a class="footer__logo" href="#">
-            <img src="./img/header-logo.svg" alt="logo">
-          </a>
+        <div class="row">
+          <a class="footer__logo" href="#"><img src="./img/footer-logo.svg" alt=""></a>
+
+          <div class="footer__contact">
+            <h4>Contact</h4>
+            <div class="footer__contact-item">
+              <p class="text">Help</p>
+            </div>
+            <div class="footer__contact-item">
+              <p class="text">Chat with us</p>
+            </div>
+          </div>
+
           <div class="footer__social">
-            <p class="text">Social Network:</p>
-            <a href="#"><img src="./img/fb.svg" alt=""></a>
-            <a href="#"><img src="./img/inst.svg" alt=""></a>
-            <a href="#"><img src="./img/in.svg" alt=""></a>
+            <h4>Reach us here</h4>
+            <div class="footer__social-list">
+              <a class="footer__social-item" href="#">
+                <img src="./img/in.svg" alt="">
+              </a>
+              <a class="footer__social-item" href="#">
+                <img src="./img/twiter.svg" alt="">
+              </a>
+              <a class="footer__social-item" href="#">
+                <img src="./img/facebook.svg" alt="">
+              </a>
+              <a class="footer__social-item" href="#">
+                <img src="./img/youtube.svg" alt="">
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="footer__menu-container">
+            <h4>Company</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">About us</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Our values</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Affiliate program</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Service partners</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Press area</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Residential proxies sourcing</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Careers</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Our products</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__menu-container">
+            <h4>Resources</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">FAQ</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Documentation</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
 
-        <div class="footer__content">
-          <ul class="footer__menu">
-            <li>
-              <a href="#">Suppliers</a>
-            </li>
-            <li>
-              <a href="#">Price</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Feedback</a>
-            </li>
-            <li>
-              <a href="#">Help Center</a>
-            </li>
-          </ul>
+        <div class="row">
+          <div class="footer__menu-container">
+            <h4>Proxies</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">Datacenter proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Shared datacenter proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Dedicated datacenter proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Residential proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Static residential proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">SOCKS5 proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Mobile proxies</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Rotating ISP proxies</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-          <ul class="footer__menu">
-            <li>
-              <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="#">Marketplace</a>
-            </li>
-            <li>
-              <a href="#">Price & Stock Monitoring</a>
-            </li>
-            <li>
-              <a href="#">Products Importer</a>
-            </li>
-            <li>
-              <a href="#">Automatic Orders</a>
-            </li>
-          </ul>
-
-          <ul class="footer__menu">
-            <li>
-              <a href="#">Assistance</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Courses</a>
-            </li>
-            <li>
-              <a href="#">Mentorship</a>
-            </li>
-            <li>
-              <a href="#">Webinars</a>
-            </li>
-          </ul>
-
-          <ul class="footer__menu">
-            <li>
-              <a href="#">Top platforms</a>
-            </li>
-            <li>
-              <a href="#">eBay</a>
-            </li>
-            <li>
-              <a href="#">Shopify</a>
-            </li>
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <a href="#">Amazon</a>
-            </li>
-          </ul>
-
+          <div class="footer__menu-container">
+            <h4>Scraper APIs</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">SERP scraper API</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">e-Commerce scraper API</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Real estate scraper API</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Web scraper API</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
 
-        <div class="footer__copyright">
-          SkuGrid is a registered trademark of NIR Rachitsky LLC © SkuGrid 2023
+        <div class="row">
+          <div class="footer__menu-container">
+            <h4>Advanced proxy solutions</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">Web unblocker</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__menu-container">
+            <h4>Top locations</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">United States</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">United Kingdom</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Canada</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">Germany</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">India</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">All locations</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__menu-container">
+            <h4>Innovation hub</h4>
+            <nav>
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">Adaptive parser</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#">SOAX patents</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
+        <div class="footer__bg-mob">
+          <div class="radial-gradient-mob-1"></div>
+          <div class="radial-gradient-mob-2"></div>
+        </div>
+
+        <div class="radial-gradient"></div>
+        <div class="radial-gradient-2"></div>
+
+
       </div>
     </footer>
 
   </div>
 
-  <script src="./js/main.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".storiesSwiper", {
+    let swiper = new Swiper(".testimonialsSwiper", {
       slidesPerView: "auto",
-      spaceBetween: 30,
-      grabCursor: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+      centeredSlides: true,
+      spaceBetween: 20,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        beforeInit: function () {
+          let allSlides = this.slides;
+          for (let i = 0; i < allSlides.length; i++) {
+            allSlides[i].style.opacity = 0.2;
+          }
+        },
+        slideChange: function () {
+          let allSlides = this.slides;
+          let currentIndex = this.activeIndex;
+          for (let i = 0; i < allSlides.length; i++) {
+            if (i !== currentIndex) {
+              allSlides[i].style.opacity = 0.2;
+            } else {
+              allSlides[i].style.opacity = 1;
+            }
+          }
+        },
+      },
     });
   </script>
 
+  <!-- Reviews swiper -->
+  <script>
+    var swiper2;
+    function initReviewsSwiper() {
+      if (window.innerWidth <= 720) {
+        swiper2 = new Swiper(".reviewsSwiper", {
+          slidesPerView: 'auto',
+          spaceBetween: 12,
+          pagination: {
+            el: ".swiper-2-pagination",
+            clickable: true,
+          },
+        });
+      } else {
+        if (swiper2) {
+          swiper2.destroy();
+          swiper2 = undefined;
+        }
+      }
+    }
+    initReviewsSwiper();
+    window.addEventListener("resize", function () {
+      initReviewsSwiper();
+    });
+  </script>
+
+  <!-- Pricing swiper -->
+  <script>
+    var swiper3;
+    function initPricingSwiper() {
+      if (window.innerWidth <= 720) {
+        swiper3 = new Swiper(".pricingSwiper", {
+          slidesPerView: 'auto',
+          spaceBetween: 12,
+          initialSlide: 2,
+          pagination: {
+            el: ".swiper-3-pagination",
+            clickable: true,
+          },
+        });
+      } else {
+        if (swiper3) {
+          swiper3.destroy();
+          swiper3 = undefined;
+        }
+      }
+    }
+    initPricingSwiper();
+    window.addEventListener("resize", function () {
+      initPricingSwiper();
+    });
+  </script>
+
+  <!-- Logos swiper -->
+  <script>
+    var swiper4;
+    function initLogosSwiper() {
+      if (window.innerWidth <= 720) {
+        swiper4 = new Swiper(".logosSwiper", {
+          slidesPerView: 5,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 1500,
+          },
+        });
+      } else {
+        if (swiper4) {
+          swiper4.destroy();
+          swiper4 = undefined;
+        }
+      }
+    }
+    initLogosSwiper();
+    window.addEventListener("resize", function () {
+      initLogosSwiper();
+    });
+  </script>
+
+  <script src="./js/main.min.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+
+    function generateRandomText(length) {
+      const characters = 'abcdefghijklmnopqrstuvwxyz';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
+    }
+
+    const randomTextElement = document.getElementById('randomText');
+    const randomText = generateRandomText(23);
+    randomTextElement.innerText = randomText;
+    const typedText = 'Collect web data at Scale';
+
+    function animateText(index) {
+      if (index < typedText.length) {
+        const originalText = randomTextElement.innerText;
+        const before = originalText.substr(0, index);
+        const after = originalText.substr(index + 1);
+        const beforeWithSpan = '<span class="dud">' + before.slice(0, -1) + '</span>' + before.slice(-1);
+        const newText = beforeWithSpan + typedText.charAt(index) + after;
+        randomTextElement.innerHTML = newText;
+        setTimeout(function () {
+          animateText(index + 1);
+        }, 55);
+      } else {
+        randomTextElement.classList.remove("gray-text");
+      }
+    }
+
+    setTimeout(function () {
+      animateText(0);
+    }, 500);
+
+  </script>
 </body>
 
 </html>
