@@ -2525,7 +2525,7 @@
 
 /* global */
 
-.mobile-menu {
+.header__mobile-menu {
     display: none;
 }
 
@@ -2565,6 +2565,10 @@
 
     .header {
         height: 18vw;
+    }
+
+    .header.act {
+        background: #fff;
     }
 
     .header.active {
@@ -2622,33 +2626,10 @@
         height: 6vw;
     }
 
-    .mobile-menu {
-        position: fixed;
-        top: 17.5vw;
-        bottom: 0;
-        right: 0;
-        transform: translate(-150%);
-        height: 1000vw;
-        max-width: 694px;
-        width: 100%;
-        background-color: #fff;
-        padding: 6.917vw;
-        padding-top: 0;
-        z-index: 999999;
-        transition: .3s;
-        display: block;
-        overflow: scroll;
-        z-index: 1000000000000000000000000000000000;
-    }
-
-    .mobile-menu.active {
-        transform: translate(0%);
-    }
-
 
     .header__mobile-menu {
         position: fixed;
-        top: 20.5vw;
+        top: 17.5vw;
         bottom: 0;
         right: 0;
         transform: translate(-150%);
