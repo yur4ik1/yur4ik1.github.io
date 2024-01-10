@@ -276,7 +276,7 @@
         }
     }
 
-    .header__menu-item a {
+    .menu-item a {
         color: #fff;
     }
 
@@ -2231,6 +2231,42 @@
                 font-weight: 400;
                 line-height: 1.25vw;
 
+                &::-webkit-input-placeholder {
+                    color: var(--gray-40, #9CA1A8);
+                    font-family: Barlow;
+                    font-size: 0.833vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.25vw;
+                }
+
+                &::-moz-placeholder {
+                    color: var(--gray-40, #9CA1A8);
+                    font-family: Barlow;
+                    font-size: 0.833vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.25vw;
+                }
+
+                &:-ms-input-placeholder {
+                    color: var(--gray-40, #9CA1A8);
+                    font-family: Barlow;
+                    font-size: 0.833vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.25vw;
+                }
+
+                &::-ms-input-placeholder {
+                    color: var(--gray-40, #9CA1A8);
+                    font-family: Barlow;
+                    font-size: 0.833vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.25vw;
+                }
+
                 &::placeholder {
                     color: var(--gray-40, #9CA1A8);
                     font-family: Barlow;
@@ -2272,7 +2308,8 @@
 
                 a {
                     color: var(--brand-blue, #24BBEB);
-                    text-decoration-line: underline;
+                    -webkit-text-decoration-line: underline;
+                            text-decoration-line: underline;
                 }
             }
 
@@ -2532,7 +2569,8 @@
 
     .header.active {
         height: 18vw;
-        backdrop-filter: blur(2.4vw);
+        -webkit-backdrop-filter: blur(2.4vw);
+                backdrop-filter: blur(2.4vw);
     }
 
     .header__menu {
@@ -2597,20 +2635,61 @@
         padding: 6.917vw;
         padding-top: 0;
         z-index: 999999;
-        -webkit-transition: .3s;
-        -o-transition: .3s;
         transition: .3s;
         display: block;
         overflow: scroll;
         z-index: 1000000000000000000000000000000000;
+    }
 
+    .mobile-menu.active {
+        transform: translate(0%);
+    }
+
+
+    .header__mobile-menu {
+        position: fixed;
+        top: 20.5vw;
+        bottom: 0;
+        right: 0;
+        transform: translate(-150%);
+        height: 100%;
+        max-width: 694px;
+        width: 100%;
+        background-color: #fff;
+        padding: 6.917vw;
+        padding-top: 0;
+        z-index: 999999;
+        transition: .3s;
+        display: block;
+        z-index: 999999999999999999999999999999999;
+        overflow: scroll;
+    }
+
+
+    .header__mobile-menu.active {
+        transform: translate(0%);
+    }
+
+    .header__mobile-menu {
+
+        .login-btn {
+            color: var(--Blue-500, #4855DC);
+            font-size: 5.128vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 8.205vw;
+            padding: 5.128vw 5.128vw;
+            display: block;
+        }
+    }
+
+    .header__mob-menu {
         li {
             padding: 5.128vw 5.128vw;
             border-top: 0.156vw solid #ccc;
             border-bottom: 0.156vw solid #ccc;
             align-items: flex-start !important;
             flex-direction: column !important;
-            list-style: none;
             width: 100%;
 
             a {
@@ -2619,7 +2698,7 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: 8.205vw;
-                display: flex !important;
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
@@ -2627,8 +2706,90 @@
         }
     }
 
-    .mobile-menu.active {
-        transform: translate(0%);
+    .header__mob-menu .menu-item.sub::after {
+        display: none;
+    }
+
+    .header__mob-menu .menu-item.sub {
+        overflow: hidden;
+        max-height: 18vw;
+        transition: 0.3s;
+    }
+
+    .header__mob-menu .menu-item.sub a {
+        &::after {
+            content: '';
+            background: url(https://25298778.fs1.hubspotusercontent-eu1.net/hubfs/25298778/chevron-down-1.svg) no-repeat center top / cover;
+            width: 7.692vw;
+            height: 7.692vw;
+            transition: 0.3s;
+            transform: rotate(180deg);
+        }
+    }
+
+
+    .menu-item.sub .submenu {
+        position: initial !important;
+        width: auto !important;
+        top: 0vw !important;
+        z-index: 9999999999999;
+        display: flex;
+        padding: 1.538vw 5.128vw !important;
+        align-items: center;
+        gap: 1.026vw !important;
+        align-self: stretch;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 3.077vw;
+        flex-direction: column;
+    }
+
+    .header__mob-menu .menu-item.sub .submenu li {
+        padding: 0;
+        border: none;
+        margin-bottom: 2.821vw;
+    }
+
+    .header__mob-menu .menu-item.sub .submenu li a {
+        color: var(--Black, #000);
+        font-size: 4.103vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 7.179vw;
+
+        /* 175% */
+        &::after {
+            display: none;
+        }
+    }
+
+    .header__mob-menu .menu-item.sub .submenu li img {
+        display: none;
+    }
+
+    .menu-item.sub.active {
+        max-height: 150vw;
+
+        a {
+            transition: 0.3s;
+
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    .header__mobile-menu.dark {
+
+
+        .header__mob-menu li a {
+            color: #000;
+        }
+
+        .header__mob-menu .menu-item.sub .submenu li a {
+            color: var(--Blue-700, #595B7C);
+        }
     }
 
 

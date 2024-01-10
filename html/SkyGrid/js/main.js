@@ -2,7 +2,7 @@
 
 // Scroll header
 
-const header = document.querySelector(".header__main");
+const header = document.querySelector(".header");
 const width = window.innerWidth
 
 window.onscroll = () => {
@@ -27,13 +27,11 @@ window.onscroll = () => {
 
 let burder = document.querySelector('.burger');
 let mobileMenu = document.querySelector('.header__mobile-menu');
-let headerMain = document.querySelector('.header__main')
 
 if (mobileMenu) {
   burder.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
     burder.classList.toggle('active');
-    headerMain.classList.toggle('act');
 
     if (mobileMenu.classList.contains('active')) {
       document.body.style.overflow = 'hidden';
@@ -44,7 +42,10 @@ if (mobileMenu) {
 }
 
 
-let menuItems = document.querySelectorAll('.header__menu-item.sub');
+
+// submenu
+
+let menuItems = document.querySelectorAll('.menu-item.sub');
 
 function toggleActiveClass() {
   menuItems.forEach(function (menuItem) {
@@ -73,10 +74,7 @@ window.addEventListener('resize', function () {
 });
 
 
-
-// submenu
-
-let subMenuItems = document.querySelectorAll('.header__menu-item.sub');
+let subMenuItems = document.querySelectorAll('.menu-item.sub');
 
 subMenuItems.forEach(function (item) {
   let submenu = item.querySelector('.submenu');
@@ -101,97 +99,37 @@ subMenuItems.forEach(function (item) {
 });
 
 
-// Pricing 
+// price btn
 
-document.addEventListener("DOMContentLoaded", function () {
-  const selectItems = document.querySelectorAll(".pricing__tabs-item");
-  const tabsItems = document.querySelectorAll(".tabs-item");
+let retailText = document.querySelector('.retail-text');
+let wholesaleText = document.querySelector('.wholesale-text');
+let filterBtn = document.querySelector('.price__filter-btn');
+let priceCards = document.querySelectorAll('.price__cards');
 
-  if (selectItems && tabsItems) {
-    selectItems.forEach((selectItem, index) => {
-      selectItem.addEventListener("click", () => {
-        selectItems.forEach(item => {
-          item.classList.remove("active");
-        });
-        selectItem.classList.add("active");
-        tabsItems.forEach(item => {
-          item.classList.remove("active");
-        });
-        tabsItems[index].classList.add("active");
-      });
+if (filterBtn) {
+  filterBtn.addEventListener('click', () => {
+    retailText.classList.toggle('active');
+    filterBtn.classList.toggle('active');
+    wholesaleText.classList.toggle('active');
+
+    // Перевіряємо, який елемент price__cards вже має клас 'active'
+    priceCards.forEach((card) => {
+      // Перемикаємо клас 'active' для кожного елемента
+      card.classList.toggle('active');
     });
-  }
-});
-
-
-const activeStyleElements = document.querySelectorAll('.pricing__style-2.active');
-const hiddenItems = document.querySelectorAll('.pricing__items');
-
-activeStyleElements.forEach(styleElement => {
-  hiddenItems.forEach(item => {
-    if (!styleElement.contains(item)) {
-      item.classList.add('hidden');
-    }
   });
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  let rows = document.querySelectorAll(".pricing-section .row");
-
-  if (rows) {
-    rows.forEach(function (row, index) {
-      if (index % 2 !== 0) {
-        row.classList.add("white");
-      }
-    });
-  }
-});
-
-
-
-// dots animation
-
-document.addEventListener("DOMContentLoaded", function () {
-  const svgObject = document.getElementById('svg-object');
-
-  if (svgObject) {
-    function toggleActiveClassAndChangeFill(path) {
-      path.classList.add('active');
-      path.setAttribute('fill', '#4855DC');
-      path.parentElement.removeAttribute('filter');
-
-      setTimeout(() => {
-        path.classList.remove('active');
-        path.setAttribute('fill', '#F2EDE9');
-        setTimeout(() => {
-          toggleActiveClassAndChangeFill(path);
-        }, Math.random() * 2500);
-      }, 2500);
-    }
-
-    svgObject.addEventListener('load', function () {
-      const svgDocument = svgObject.contentDocument;
-      const bluePaths = svgDocument.querySelectorAll('path.blue');
-      const bluePathsArray = Array.from(bluePaths);
-      bluePathsArray.forEach(path => {
-        toggleActiveClassAndChangeFill(path);
-      });
-    });
-  }
-});
+}
 
 
 // dark mode
 
 function toggleDarkHeader() {
-  const headerMain = document.querySelector('.header__main');
-  const plansSection = document.querySelector('.plans');
-  const integrationsSection = document.querySelector('.integrations');
-  const contactsSection = document.querySelector('.contacts');
-  const footerSection = document.querySelector('.footer');
-  const mobileMenu = document.querySelector('.header__mobile-menu');
+  const headerMain = document.querySelector('.header');
+  const plansSection = document.querySelector('.banner');
+  const integrationsSection = document.querySelector('.stories');
+  const contactsSection = document.querySelector('.countrys');
+  const footerSection = document.querySelector('.triggers');
+  const formSection = document.querySelector('.form');
 
   if (!headerMain) {
     return;
@@ -204,13 +142,12 @@ function toggleDarkHeader() {
   const isInIntegrationsSection = integrationsSection && scrollPosition >= integrationsSection.offsetTop && scrollPosition < integrationsSection.offsetTop + integrationsSection.offsetHeight;
   const isInContactsSection = contactsSection && scrollPosition >= contactsSection.offsetTop && scrollPosition < contactsSection.offsetTop + contactsSection.offsetHeight;
   const isInFooterSection = footerSection && scrollPosition >= footerSection.offsetTop && scrollPosition < footerSection.offsetTop + footerSection.offsetHeight;
+  const isInFormSection = formSection && scrollPosition >= formSection.offsetTop && scrollPosition < formSection.offsetTop + formSection.offsetHeight;
 
   if (isInPlansSection || isInIntegrationsSection || isInContactsSection || isInFooterSection) {
     headerMain.classList.add('dark');
-    mobileMenu.classList.add('dark');
   } else {
     headerMain.classList.remove('dark');
-    mobileMenu.classList.remove('dark');
   }
 }
 
@@ -218,42 +155,6 @@ window.addEventListener('scroll', toggleDarkHeader);
 window.addEventListener('load', toggleDarkHeader);
 
 
-// gradient animation
-
-document.addEventListener('mousemove', function (event) {
-  let windowWidth = window.innerWidth;
-  let windowHeight = window.innerHeight;
-
-  let mouseXpercentage = event.pageX / windowWidth * 50;
-  let mouseYpercentage = event.pageY / windowHeight * 50;
-
-  let radialGradient1 = document.querySelector('.radial-gradient');
-  let radialGradient2 = document.querySelector('.radial-gradient-2');
-
-  radialGradient1.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #FC7CFF, rgba(218, 113, 231, 0.00))';
-  radialGradient2.style.background = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, rgba(146, 112, 243, 0.74), rgba(77, 87, 209, 0.00))';
-});
-
-
-// filter blog
-
-const dropdownBtn = document.querySelector('.dropdown-btn');
-const dropdownList = document.querySelector('.dropdown-list');
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-
-if (dropdownBtn && dropdownList) {
-  dropdownBtn.addEventListener('click', () => {
-    dropdownBtn.classList.toggle('active');
-    dropdownList.classList.toggle('active');
-  });
-
-  dropdownItems.forEach(function (dropdownItem) {
-    dropdownItem.addEventListener('click', () => {
-      dropdownList.classList.remove('active');
-      dropdownBtn.textContent = dropdownItem.textContent;
-    });
-  });
-}
 
 // faq
 
@@ -277,343 +178,72 @@ if (faqItems) {
   });
 }
 
-// feature module
 
-let cardLists = document.querySelectorAll('.cards__list');
 
-if (cardLists) {
-  cardLists.forEach(function (cardList) {
-    let cardItems = cardList.querySelectorAll('.cards__item');
+// scroll to id
 
-    if (cardItems.length < 4) {
-      cardList.classList.add('three');
-    }
-  });
+function smoothScrollTo(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    document.body.style.overflow = 'hidden';
+
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    setTimeout(() => {
+      document.body.style.overflow = '';
+    }, 1000);
+  }
 }
 
-// cart v2
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if (hash) {
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    setTimeout(() => {
+      const element = document.querySelector(hash);
+      if (element) {
+        document.body.style.overflow = 'hidden';
 
-let cardsItems = document.querySelectorAll(".cards-v2__style-2-item");
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
 
-if (cardsItems) {
-  cardsItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      cardsItems.forEach(function (otherItem) {
-        if (otherItem !== item) {
-          otherItem.classList.remove("act");
-        }
-      });
-
-      if (item.classList.contains("act")) {
-        item.classList.remove("act");
-      } else {
-        item.classList.add("act");
+        setTimeout(() => {
+          document.body.style.overflow = '';
+        }, 1000); 
       }
-    });
-  });
-}
-
-let cardsStyle2Elements = document.querySelectorAll(".cards-v2__style-2");
-let fCardsListElements = document.querySelectorAll(".fcards-v2__list");
-
-if (cardsStyle2Elements) {
-  cardsStyle2Elements.forEach(function (element) {
-    if (element.classList.contains("active")) {
-      let parentElement = element.closest(".cards-v2");
-
-      if (parentElement) {
-        parentElement.classList.add("active-style-2");
-      }
-    }
-  });
-}
-
-cardsStyle2Elements.forEach(function (element) {
-  if (element.classList.contains("active")) {
-    fCardsListElements.forEach(function (fCardsListElement) {
-      fCardsListElement.style.display = "none";
-    });
+    }, 500);
   }
 });
 
 
-const style2Elements = document.querySelectorAll(".cards-v2__style-2");
+// redirect for link
 
-if (style2Elements) {
-  style2Elements.forEach(element => {
-
-    const style2ItemElements = element.querySelectorAll(".cards-v2__style-2-item");
-
-    if (style2ItemElements.length > 6) {
-      element.classList.add("three");
-      element.classList.add("two");
-    } else if (style2ItemElements.length > 3) {
-      element.classList.add("two");
-    }
-  });
-}
-
-
-
-
-
-/*
-
-// hero animation
-
-const bgElement1 = document.querySelector('.bg-1');
-const bgElement2 = document.querySelector('.bg-2');
-let marginLeftValue1 = 0; // Начальное значение margin-left для .bg-1
-let marginLeftValue2 = 0; // Начальное значение margin-left для .bg-2
-
-// Функция для анимации .bg-1 (влево)
-function animateMarginLeft1() {
-  marginLeftValue1 += 3; // Увеличиваем значение margin-left на 100px (или любое другое значение)
-  bgElement1.style.marginLeft = marginLeftValue1 + 'px';
-
-  // Если достигнута необходимая позиция, останавливаем анимацию
-  if (marginLeftValue1 < 400) { // Замените на нужное вам значение
-    requestAnimationFrame(animateMarginLeft1);
-  }
-}
-
-// Функция для анимации .bg-2 (вправо)
-function animateMarginLeft2() {
-  marginLeftValue2 -= 3; // Увеличиваем значение margin-left на 100px (или любое другое значение)
-  bgElement2.style.marginLeft = marginLeftValue2 + 'px';
-
-  // Если достигнута необходимая позиция, останавливаем анимацию
-  if (marginLeftValue2 < 100) { // Замените на нужное вам значение
-    requestAnimationFrame(animateMarginLeft2);
-  }
-}
-
-// Запускаем анимации
-animateMarginLeft1(); // Для .bg-1 (влево)
-animateMarginLeft2(); // Для .bg-2 (вправо)
-
-*/
-
-
-
-/*
-
-// Plans Dropdown 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const listItems = document.querySelectorAll(".plans__list-item");
-
-  listItems.forEach(function (item) {
-    const head = item.querySelector(".plans__list-head");
-
-    head.addEventListener("click", function () {
-      listItems.forEach(function (otherItem) {
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
-        }
-      });
-      item.classList.toggle("active");
+document.addEventListener('DOMContentLoaded', () => {
+  // Обробка кліку на посилання з класом trigger-5
+  document.querySelectorAll('.trigger-5').forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      // Відкриття посилання у новій вкладці
+      window.open('/suppliers.html?trigger5Clicked=true#shops', '_blank');
     });
   });
+
+  // Перевірка URL на наявність параметра trigger5Clicked
+  const urlParams = new URLSearchParams(window.location.search);
+  if (window.location.pathname.endsWith('suppliers.html') && urlParams.get('trigger5Clicked') === 'true') {
+    // Додавання класу deactivate до shop-item
+    const countryTables = document.querySelectorAll('.shops__table-country');
+    countryTables.forEach(table => {
+      const shopItems = table.querySelectorAll('.shop-item');
+      if (shopItems.length > 5) {
+        for (let i = 5; i < shopItems.length; i++) {
+          shopItems[i].classList.add('deactivate');
+        }
+      }
+    });
+
+  }
 });
 
 
-
-// Line animatiton
-
-function toggleAnimatedBorderForContainer1() {
-  const container1 = document.querySelector('.integrations__items-row.right-scroll:first-child');
-  if (!container1) return;
-  const items1 = container1.querySelectorAll('.integrations__items-item.animated-border');
-
-  if (items1.length > 0) {
-    items1.forEach((item) => {
-      item.classList.remove('animated-border');
-    });
-  }
-
-  const items = container1.querySelectorAll('.integrations__items-item');
-  const randomIndex = Math.floor(Math.random() * items.length);
-  const randomItem = items[randomIndex];
-
-  randomItem.classList.add('animated-border');
-}
-
-function toggleAnimatedBorderForContainer2() {
-  const container2 = document.querySelector('.integrations__items-row.left-scroll:nth-child(2)');
-  if (!container2) return;
-
-  const items2 = container2.querySelectorAll('.integrations__items-item.animated-border');
-
-  if (items2.length > 0) {
-    items2.forEach((item) => {
-      item.classList.remove('animated-border');
-    });
-  }
-
-  const items = container2.querySelectorAll('.integrations__items-item');
-
-  const randomIndex = Math.floor(Math.random() * items.length);
-  const randomItem = items[randomIndex];
-
-  randomItem.classList.add('animated-border');
-}
-
-setInterval(toggleAnimatedBorderForContainer1, 1800);
-setInterval(toggleAnimatedBorderForContainer2, 2000);
-
-
-
-
-
-/*
-const gradient1 = document.getElementById('gradient-1');
-const gradient2 = document.getElementById('gradient-2');
-const peopleBlock = document.querySelector('.integrations__people');
-
-peopleBlock.addEventListener('mousemove', (event) => {
-  const mouseX = event.clientX - peopleBlock.getBoundingClientRect().left;
-  const mouseY = event.clientY - peopleBlock.getBoundingClientRect().top;
-  
-  // Обчислення позиції градієнту відносно курсора
-  const gradientX = mouseX - gradient1.offsetWidth / 2;
-  const gradientY = mouseY - gradient1.offsetHeight / 2;
-
-  // Оновлення стилів позиції градієнтів
-  gradient1.style.left = `${gradientX}px`;
-  gradient1.style.top = `${gradientY}px`;
-  
-  gradient2.style.left = `${gradientX}px`;
-  gradient2.style.top = `${gradientY}px`;
-}); 
-
-
-
-
-
-// hubspot js 
-
-(function () {
-  // Variables
-  var nav = document.querySelector('.header__navigation');
-  var langSwitcher = document.querySelector('.header__language-switcher');
-  var search = document.querySelector('.header__search');
-  var allToggles = document.querySelectorAll('.header--toggle');
-  var navToggle = document.querySelector('.header__navigation--toggle');
-  var langToggle = document.querySelector('.header__language-switcher--toggle');
-  var searchToggle = document.querySelector('.header__search--toggle');
-  var closeToggle = document.querySelector('.header__close--toggle');
-  var allElements = document.querySelectorAll(
-    '.header--element, .header--toggle'
-  );
-  var emailGlobalUnsub = document.querySelector('input[name="globalunsub"]');
-
-  // Functions
-
-  // Function for executing code on document ready
-  function domReady(callback) {
-    if (['interactive', 'complete'].indexOf(document.readyState) >= 0) {
-      callback();
-    } else {
-      document.addEventListener('DOMContentLoaded', callback);
-    }
-  }
-
-  // Function for toggling mobile navigation
-  function toggleNav() {
-    allToggles.forEach(function (toggle) {
-      toggle.classList.toggle('hide');
-    });
-
-    nav.classList.toggle('open');
-    navToggle.classList.toggle('open');
-
-    closeToggle.classList.toggle('show');
-  }
-
-  // Function for toggling mobile language selector
-  function toggleLang() {
-    allToggles.forEach(function (toggle) {
-      toggle.classList.toggle('hide');
-    });
-
-    langSwitcher.classList.toggle('open');
-    langToggle.classList.toggle('open');
-
-    closeToggle.classList.toggle('show');
-  }
-
-  // Function for toggling mobile search field
-  function toggleSearch() {
-    allToggles.forEach(function (toggle) {
-      toggle.classList.toggle('hide');
-    });
-
-    search.classList.toggle('open');
-    searchToggle.classList.toggle('open');
-
-    closeToggle.classList.toggle('show');
-  }
-
-  // Function for the header close option on mobile
-  function closeAll() {
-    allElements.forEach(function (element) {
-      element.classList.remove('hide', 'open');
-    });
-
-    closeToggle.classList.remove('show');
-  }
-
-  // Function to disable the other checkbox inputs on the email subscription system page template
-  function toggleDisabled() {
-    var emailSubItem = document.querySelectorAll('#email-prefs-form .item');
-
-    emailSubItem.forEach(function (item) {
-      var emailSubItemInput = item.querySelector('input');
-
-      if (emailGlobalUnsub.checked) {
-        item.classList.add('disabled');
-        emailSubItemInput.setAttribute('disabled', 'disabled');
-        emailSubItemInput.checked = false;
-      } else {
-        item.classList.remove('disabled');
-        emailSubItemInput.removeAttribute('disabled');
-      }
-    });
-  }
-
-  // Execute JavaScript on document ready
-  domReady(function () {
-    if (!document.body) {
-      return;
-    } else {
-      // Function dependent on language switcher
-      if (langSwitcher) {
-        langToggle.addEventListener('click', toggleLang);
-      }
-
-      // Function dependent on navigation
-      if (navToggle) {
-        navToggle.addEventListener('click', toggleNav);
-      }
-
-      // Function dependent on search field
-      if (searchToggle) {
-        searchToggle.addEventListener('click', toggleSearch);
-      }
-
-      // Function dependent on close toggle
-      if (closeToggle) {
-        closeToggle.addEventListener('click', closeAll);
-      }
-
-      // Function dependent on email unsubscribe from all input
-      if (emailGlobalUnsub) {
-        emailGlobalUnsub.addEventListener('change', toggleDisabled);
-      }
-    }
-  });
-})();
-
-
-*/
