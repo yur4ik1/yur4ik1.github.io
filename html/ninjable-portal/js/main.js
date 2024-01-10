@@ -25,6 +25,40 @@ if (window.location.pathname === "/achievements.html") {
 
 */
 
+// сonfirmation popup
+
+document.addEventListener("DOMContentLoaded", function() {
+  const buyButtons = document.querySelectorAll('.buy-btn');
+
+  buyButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          document.querySelectorAll('.rewards__list-item').forEach(item => {
+              item.classList.remove('active');
+              item.style.zIndex = '';
+
+              const confirmationPopups = item.querySelectorAll('.сonfirmation-popup');
+              confirmationPopups.forEach(popup => {
+                  popup.classList.remove('active');
+              });
+          });
+
+          const listItem = button.closest('.rewards__list-item');
+          listItem.classList.add('active');
+          listItem.style.zIndex = '9999999999999';
+
+          const confirmationPopup = listItem.querySelector('.сonfirmation-popup');
+          confirmationPopup.classList.add('active');
+
+          const noButton = confirmationPopup.querySelector('.no');
+          noButton.addEventListener('click', () => {
+              confirmationPopup.classList.remove('active');
+          });
+      });
+  });
+});
+
+
+
 /* menu popup */
 
 const avatarBtn = document.querySelector(".avatar");
@@ -1693,7 +1727,6 @@ function createTooltip() {
   
   return tooltipContainer;
 }
-
 
 
 
