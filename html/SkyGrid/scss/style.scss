@@ -2484,6 +2484,18 @@
 }
 
 
+
+
+/* global */
+
+.mobile-menu {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
 
     h1,
@@ -2492,17 +2504,21 @@
     h4,
     h5,
     h6 {
-        line-height: 1.5!important;
+        line-height: 1.5 !important;
     }
 
     p {
-        line-height: 1.5!important;
-        width: 100%!important;
+        line-height: 1.5 !important;
+        width: 100% !important;
     }
 
     h1 {
-        font-size: 10vw!important;
-        width: 100%!important;
+        font-size: 10vw !important;
+        width: 100% !important;
+    }
+
+    h2 {
+        font-size: 7.6vw !important;
     }
 
     .container {
@@ -2511,11 +2527,11 @@
     }
 
     .header {
-        height: 15vw;
+        height: 18vw;
     }
 
     .header.active {
-        height: 15vw;
+        height: 18vw;
         backdrop-filter: blur(2.4vw);
     }
 
@@ -2525,7 +2541,7 @@
 
     .header__logo svg {
         width: auto;
-        height: 6.292vw;
+        height: 7.292vw;
     }
 
     .header__btns {
@@ -2536,11 +2552,93 @@
         font-size: 3.25vw;
         padding: 1.833vw 6.25vw;
         border-radius: 2.564vw;
+        position: relative;
+        left: 10vw;
+    }
+
+    .burger {
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border: none;
+        background: none;
+        padding: 0.933vw 2.25vw;
+        border-radius: 2.564vw;
+        transition: 0.2s;
+    }
+
+    .burger::before {
+        content: "";
+        background: url(https://25298778.fs1.hubspotusercontent-eu1.net/hubfs/25298778/burger.svg) no-repeat center top/cover;
+        width: 6vw;
+        height: 6vw;
+    }
+    .burger.active {
+        background: #000;
+    }
+    .burger.active::before {
+        content: "";
+        background: url(https://25298778.fs1.hubspotusercontent-eu1.net/hubfs/25298778/x-1.svg) no-repeat center top/cover;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 17.5vw;
+        bottom: 0;
+        right: 0;
+        transform: translate(-150%);
+        height: 1000vw;
+        max-width: 694px;
+        width: 100%;
+        background-color: #fff;
+        padding: 6.917vw;
+        padding-top: 0;
+        z-index: 999999;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        display: block;
+        overflow: scroll;
+        z-index: 1000000000000000000000000000000000;
+
+        li {
+            padding: 5.128vw 5.128vw;
+            border-top: 0.156vw solid #ccc;
+            border-bottom: 0.156vw solid #ccc;
+            align-items: flex-start !important;
+            flex-direction: column !important;
+            list-style: none;
+            width: 100%;
+
+            a {
+                color: var(--Black, #000);
+                font-size: 5.128vw;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 8.205vw;
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+
+    .mobile-menu.active {
+        transform: translate(0%);
     }
 
 
+}
+
+/* hero */
+@media screen and (max-width: 768px) {
     .hero {
-        padding-top: 20.75vw;
+        padding-top: 30vw;
+        padding-bottom: 20vw;
     }
 
     .hero__illustration-wrap {
@@ -2559,9 +2657,11 @@
     .hero__desc {
         font-size: 4vw;
     }
+
     .hero__cta {
         margin-top: 4.604vw;
     }
+
     .hero__start-btn {
         width: 100%;
         border-radius: 10px;
@@ -2574,6 +2674,165 @@
     }
 
     .hero__reviews {
-        margin-top: 4.563vw;
+        margin-top: 5.563vw;
+    }
+
+    .hero__rating {
+        width: 11.692vw;
+        height: auto;
+        margin-right: 1.925vw;
+    }
+
+    .hero__stars {
+        gap: 0.5vw;
+    }
+
+    .hero__star {
+        width: 2.433vw;
+        height: 2.433vw;
+    }
+
+    .hero__review-text {
+        font-size: 2.938vw;
+    }
+
+    .hero__bottom {
+        margin-top: 10vw;
+    }
+
+    .hero__bottom-wrap {
+        gap: 2vw;
+    }
+
+    .hero__bottom-text {
+        font-size: 3vw;
+    }
+
+    .hero__bottom-btn {
+        border: 0.256vw solid var(--line-2, #C0DEE3);
+        border-radius: 2.564vw;
+        font-size: 3.25vw;
+        padding: 1.833vw 6.25vw;
+        width: auto;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+        padding: 8vw 0;
+    }
+
+    .product .container {
+        max-width: 100%;
+        padding: 0 5.128vw;
+        flex-direction: column;
+        gap: 8vw;
+    }
+
+    .product__menu {
+        width: auto;
+    }
+
+    .product__menu .item {
+        display: none;
+        font-size: 3.5vw;
+    }
+
+    .product__menu .item.active {
+        display: block;
+    }
+
+    .product__titles {
+        width: 100%;
+    }
+
+    .product__icon {
+        width: 10.323vw;
+        height: 10.323vw;
+    }
+
+    .product__icon img {
+        width: 5.292vw;
+        height: 5.292vw;
+    }
+
+    .product__title {
+        font-size: 7.6vw;
+        margin-top: 3.5vw;
+    }
+
+    .product__desc {
+        font-size: 4.103vw;
+        margin-top: 3.5vw;
+    }
+
+    .product__cta {
+        width: 100%;
+        border-radius: 10px;
+        font-size: 3.59vw;
+        font-weight: 500;
+        gap: 2.051vw;
+        height: 9.821vw;
+        line-height: 9.487vw;
+        padding: 1.538vw 10.256vw;
+        margin-top: 7vw;
+    }
+
+    .product__illustration {
+        width: 100%;
+        margin: 0;
+    }
+
+    .product-inclusivity .product__illustration img {
+        height: 100%;
+    }
+
+    .product-efficiency .product__illustration img {
+        height: 100%;
+    }
+
+    .product-globalization .product__illustration img {
+        height: 100%;
+    }
+
+    .product-expansion .product__illustration img {
+        height: 100%;
+        left: 5vw;
+    }
+}
+
+
+/* trusted */
+@media screen and (max-width: 768px) {
+    .trusted {
+        padding-top: 10.167vw;
+    }
+
+    .trusted .container {
+        padding: 10vw 5.128vw;
+        border-top: 0.256vw solid #ced0d3;
+    }
+
+    .trusted__titles p {
+        font-size: 3.5vw;
+    }
+
+    .trusted__titles h2 {
+        font-size: 7.6vw;
+    }
+
+    .trusted__logos-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .trusted__logos-item {
+        height: auto;
+
+    }
+
+    .trusted__logos-item img {
+        width: 19vw;
     }
 }
