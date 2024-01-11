@@ -3010,6 +3010,7 @@
 @media screen and (max-width: 768px) {
     .stories {
         height: auto;
+        padding-top: 14.25vw;
         padding-bottom: 10.167vw;
     }
 
@@ -3045,6 +3046,7 @@
     .stories__list {
         padding: 0;
     }
+
     .stories__list-item {
         width: 100% !important;
         height: auto;
@@ -3082,6 +3084,69 @@
 
 
     .stories .swiper-pagination {
-        top: 90vw !important;
+        top: 93vw !important;
+    }
+}
+
+/* countrys */
+
+@media screen and (max-width: 768px) {
+    .countrys {
+        padding: 18.513vw 0;
+    }
+
+    .countrys__titles h2 {
+        width: 100%;
+    }
+
+    .countrys__titles p {
+        font-size: 4.103vw;
+    }
+
+    .countrys__map img {
+        width: 100%;
+        height: auto;
+    }
+
+    .countrys__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4vw;
+    }
+
+    .countrys__cards-item {
+        width: 42vw;
+        height: auto;
+        padding: 3.042vw 3.667vw;
+
+    }
+
+    .countrys__cards-item .title {
+        font-size: 5.128vw;
+        gap: 1.781vw;
+    }
+
+    .countrys__cards-item .title img {
+        width: 3.25vw;
+        height: 3.25vw;
+    }
+
+    .countrys__cards-item .desc {
+        font-size: 3.5vw;
+    }
+
+    .countrys__bottom {
+        margin-top: 8.167vw;
+        gap: 3.667vw;
+    }
+
+    .countrys__bottom-text {
+        font-size: 3vw;
+    }
+
+    .countrys__bottom-btn {
+        font-size: 3.25vw;
+        padding: 1.833vw 6.25vw;
+        border-radius: 2.564vw;
     }
 }
