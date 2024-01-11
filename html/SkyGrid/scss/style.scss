@@ -3150,3 +3150,111 @@
         border-radius: 2.564vw;
     }
 }
+
+/* countrys */
+
+@media screen and (max-width: 768px) {
+    .price {
+        padding: 18.513vw 0;
+    }
+
+    .price__titles {
+        margin-bottom: 10.656vw;
+    }
+
+    .price__titles p {
+        font-size: 3.59vw;
+    }
+
+    .price__filter {
+        gap: 3.563vw;
+        left: -2vw;
+        position: relative;
+    
+    }
+
+    .price__filter-text {
+        font-size: 3vw;
+    }
+
+    .price__filter-btn {
+        width: 30.323vw;
+        height: 7.292vw;
+    }
+
+    .price__filter-btn .layer {
+        width: 4.563vw;
+        height: 4.563vw;
+    }
+
+    .price__filter-text.retail-text {
+        left: 14vw;
+        position: relative;
+    }
+
+    .price__cards {
+        margin-top: 8.958vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 8.083vw;
+    }
+
+    .price__cards-item {
+        width: 100%;
+        padding: 6.563vw;
+    }
+
+    .price__cards-item .head {
+        padding-bottom: 3.042vw;
+    }
+
+    .price__cards-item .name {
+        font-size: 5vw;
+    }
+
+    .price__cards-item .price-value {
+        font-size: 7.292vw;
+    }
+
+    .price__cards-item .start {
+        font-size: 2.5vw;
+        padding: 2.313vw 2.833vw 2.417vw 2.833vw;
+    }
+
+    .price__cards-item .popular {
+        font-size: 2.5vw;
+        padding: 2.313vw 2.833vw 2.417vw 2.833vw;
+    }
+
+    .price__cards-item .price-value span {
+        font-size: 4.25vw;
+    }
+
+    .price__cards-item .list .list-item {
+        font-size: 4.103vw;
+        gap: 1.521vw;
+        line-height: 1.5;
+
+    }
+
+    .price__cards-item .list {
+        margin-top: 5.198vw;
+        margin-bottom: 5.51vw;
+        gap: 2.521vw;
+    }
+
+    .price__cards-item .list .list-item::before {
+        width: 3.042vw;
+        height: 3.042vw;
+    }
+
+    .price__cards-item .list .list-item:nth-child(1)::after {
+        display: none;
+    }
+
+    .price__cards-item .price-btn {
+        font-size: 3.25vw;
+        padding: 4.833vw 6.25vw;
+        border-radius: 2.564vw;
+    }
+}
