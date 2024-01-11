@@ -2309,7 +2309,7 @@
                 a {
                     color: var(--brand-blue, #24BBEB);
                     -webkit-text-decoration-line: underline;
-                            text-decoration-line: underline;
+                    text-decoration-line: underline;
                 }
             }
 
@@ -2574,7 +2574,7 @@
     .header.active {
         height: 18vw;
         -webkit-backdrop-filter: blur(2.4vw);
-                backdrop-filter: blur(2.4vw);
+        backdrop-filter: blur(2.4vw);
     }
 
     .header__menu {
@@ -2616,9 +2616,11 @@
         width: 6vw;
         height: 6vw;
     }
+
     .burger.active {
         background: #000;
     }
+
     .burger.active::before {
         content: "";
         background: url(https://25298778.fs1.hubspotusercontent-eu1.net/hubfs/25298778/x-1.svg) no-repeat center top/cover;
@@ -2976,5 +2978,110 @@
 
     .trusted__logos-item img {
         width: 19vw;
+    }
+}
+
+/* banner */
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 5.128vw 0;
+    }
+
+    .banner h2 {
+        margin-bottom: 3.042vw;
+    }
+
+    .banner__list li {
+        font-size: 3vw;
+        gap: 1.521vw;
+    }
+
+    .banner__list li::before {
+        width: 3.667vw;
+        height: 3.667vw;
+
+    }
+}
+
+/* stories */
+
+@media screen and (max-width: 768px) {
+    .stories {
+        height: auto;
+        padding-bottom: 10.167vw;
+    }
+
+    .stories__head {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stories__titles p {
+        font-size: 3.5vw;
+    }
+
+    .stories__rating {
+        margin-top: 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+
+    .stories__stars {
+        gap: 1.417vw;
+    }
+
+    .stories__star {
+        width: 2.833vw;
+        height: 2.833vw;
+    }
+
+    .stories__rating-text {
+        margin-top: 1.521vw;
+        font-size: 2.8vw;
+    }
+
+    .stories__list {
+        padding: 0;
+    }
+    .stories__list-item {
+        width: 100% !important;
+        height: auto;
+        padding: 4.083vw;
+        padding-bottom: 4.406vw;
+    }
+
+    .stories__item-name {
+        font-size: 4.615vw;
+        margin-bottom: 1.781vw;
+    }
+
+    .stories__item-text {
+        font-size: 3.5vw;
+        margin-bottom: 3.5vw;
+
+    }
+
+    .stories__item-author {
+        gap: 2.781vw;
+    }
+
+    .stories__author-name {
+        font-size: 3.2vw;
+    }
+
+    .stories__author-position {
+        font-size: 3vw;
+    }
+
+    .stories__author-img {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+
+
+    .stories .swiper-pagination {
+        top: 90vw !important;
     }
 }
