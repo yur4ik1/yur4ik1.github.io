@@ -3376,7 +3376,7 @@
     .text-with-image .text .cta-btn {
         width: 100%;
         font-size: 3.25vw;
-        padding: 1.833vw 6.25vw;
+        padding: 3.1vw 6.25vw;
         border-radius: 2.564vw;
     }
 
@@ -3443,6 +3443,55 @@
 
     .triggers__card .text p {
         font-size: 3.59vw;
+    }
+}
+
+/* marketplaces */
+@media screen and (max-width: 768px) {
+    .marketplaces {
+        padding-top: 18.333vw;
+        padding-bottom: 18.167vw;
+    }
+
+    .marketplaces__list {
+        gap: 5.083vw;
+        margin-top: 6.604vw;
+    }
+
+    .marketplaces__list-item {
+        width: 25.581vw;
+        height: auto;
+        padding: 3vw;
+    }
+}
+
+/* dropshipping */
+@media screen and (max-width: 768px) {
+    .dropshipping {
+        padding-top: 18.333vw;
+        padding-bottom: 15.042vw;
+    }
+
+    .dropshipping__titles {
+        width: 100%;
+    }
+
+    .dropshipping__start {
+        flex-direction: column;
+        margin-top: 8.604vw;
+    }
+
+    .dropshipping__start-btn {
+        order: 2;
+        font-size: 3.25vw;
+        padding: 1.833vw 6.25vw;
+        border-radius: 2.564vw;
+        width: auto;
+        margin-top: 5vw;
+    }
+
+    .dropshipping__illustration img {
+        width: 100%;
     }
 }
 
