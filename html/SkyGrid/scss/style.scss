@@ -2935,6 +2935,10 @@
     .hero.style-3 .hero__style-2-container {
         padding: 0 5.128vw;
     }
+
+    .hero.style-3 .hero__subtitle {
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -3044,6 +3048,7 @@
     .trusted__logos-list {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 6.531vw;
     }
 
     .trusted__logos-item {
@@ -3492,6 +3497,103 @@
 
     .dropshipping__illustration img {
         width: 100%;
+    }
+}
+
+/* faq */
+@media screen and (max-width: 768px) {
+    .faq {
+        padding: 18.333vw 0;
+    }
+    .faq__titles {
+        width: 100%;
+    }
+
+    .faq__titles-wrap {
+        margin-bottom: 8.167vw;
+    }
+
+    .faq__titles p {
+        font-size: 4.615vw;
+    }
+
+    .faq__items {
+        gap: 5vw;
+    }
+
+    .faq__items-item {
+        width: 100%;
+        max-height: 11.167vw;
+        padding: 2.354vw 5.667vw;
+    }
+
+    .faq__items-item .head h4 {
+        font-size: 4.103vw;
+    }
+
+    .faq__items-item .content {
+        font-size: 3.59vw;
+        margin-top: 3.406vw;
+    }
+
+    .faq__items-item .head::after {
+        width: 3.25vw;
+        height: 3.25vw;    
+    }
+}
+
+/* shops */
+@media screen and (max-width: 768px) {
+    .shops {
+        padding-top: 18vw;
+        padding-bottom: 18vw;
+    }
+
+    .auto__titles-wrap {
+        margin-bottom: 9.167vw;
+    }
+
+    .auto__titles {
+        width: 100%;
+        gap: 4.042vw;
+    }
+
+    .auto__titles .subtitle {
+        font-size: 4.615vw;
+    }
+
+    .auto__titles p {
+        font-size: 4.103vw;
+    }
+
+    .shops__table {
+        border: 0.256vw solid #dee4ea;
+            flex-wrap: wrap;
+    }
+
+    .shops__table-country {
+        width: 29.7vw;
+    }
+
+    .shops__table-country .country-logo {
+        height: auto;
+        border-right: 0.256vw solid #dee4ea;
+        border-bottom: 0.256vw solid #dee4ea;
+        padding: 2vw;
+    }
+
+    .shops__table-country .country-logo img {
+        width: 8.667vw;
+        height: 8.25vw;
+    }
+
+    .shops__table-country .shop-item {
+        height: auto;
+    }
+
+    .shops__table-country .shop-item img {
+        width: 11.667vw;
+        height: 11.25vw;
     }
 }
 
