@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkuGrid - Create account</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="authorization сreate-account">
+            <div class="left-bg"></div>
+            <div class="authorization__container">
+                <div class="authorization__header">
+                    <a class="home-btn" href="#">Return to Home</a>
+                    <a class="create-account-btn" href="login.html">Login</a>
+                </div>
+                <div class="authorization__content">
+                    <img class="logo" src="./img/logo-login.svg" alt="">
+                    <h2 class="title">Welcome to Sku Grid</h2>
+                    <p class="desc">Create an account</p>
+
+                    <form class="form" action="#">
+                        <div class="wrap">
+                            <div class="row">
+                                <div class="field">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="You name">
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="text" id="email" placeholder="Enter your email">
+                                </div>
+
+                                <div class="field">
+                                    <label for="password">Password</label>
+                                    <input type="text" id="password" placeholder="· · · · · · · · · · ·">
+                                </div>
+
+                                <div class="remember-field">
+                                    <div class="remember-checkbox">
+                                        <label class="remember-label" for="remember">
+                                            <input type="checkbox" id="remember">
+                                        </label>
+                                        <p class="label">Agree <a href="#">Terms of Service</a></p>
+                                    </div>
+
+                                </div>
+
+                                <button class="form-btn" type="submit">Create account</button>
+
+                                <div class="or">or</div>
+
+                                <div class="or-lst">
+                                    <a href="#" class="item">
+                                        <img src="./img/google.svg" alt="">
+                                        <p>Google</p>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <img src="./img/twitter.svg" alt="">
+                                        <p>Twitter</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" placeholder="Enter login">
+                                </div>
+                                <div class="field">
+                                    <label for="confirm-email">Confirm Email</label>
+                                    <input type="text" id="confirm-email" placeholder="Enter your email">
+                                </div>
+
+                                <div class="field">
+                                    <label for="confirm-password">Confirm Password</label>
+                                    <input type="text" id="confirm-password" placeholder="· · · · · · · · · · ·">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+
+
+
+                </div>
+                <div class="authorization__footer">
+                    <p class="copyright">© Copyright 2023. All Rights Reserved.</p>
+
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let checkbox = document.getElementById('remember');
+            let label = document.querySelector('.remember-label');
+
+            if (checkbox && label) {
+                checkbox.addEventListener('change', function () {
+                    if (checkbox.checked) {
+                        label.classList.add('active');
+                    } else {
+                        label.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

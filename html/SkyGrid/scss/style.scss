@@ -3514,7 +3514,7 @@
     }
 
     .faq__titles p {
-        font-size: 4.615vw;
+        font-size: 4.103vw;
     }
 
     .faq__items {
@@ -3572,7 +3572,7 @@
     }
 
     .shops__table-country {
-        width: 29.7vw;
+        width: 29.76vw;
     }
 
     .shops__table-country .country-logo {
@@ -3594,6 +3594,57 @@
     .shops__table-country .shop-item img {
         width: 11.667vw;
         height: 11.25vw;
+    }
+
+    .shops__table-country .shop-item span {
+        font-size: 2vw;
+        top: 8.6vw;
+        right: 1.6vw;
+    }
+    .shops__table-country .country-logo p {
+        font-size: 2.5vw;
+    }
+
+    .shops .op-link a {
+        font-size: 3vw;
+        margin-top: 5vw;
+    }
+}
+
+/* auto */
+@media screen and (max-width: 768px) {
+    .auto {
+        padding-top: 18.167vw;
+        padding-bottom: 18.125vw;
+    }
+
+    .auto .container {
+        max-width: 100%;
+    }
+
+    .auto__list {
+        gap: 6.083vw;
+    }
+
+    .auto__list-item {
+        width: 46%;
+        height: auto;
+        gap: 2.25vw;
+    }
+
+    .auto__list-item .text-content h4 {
+        font-size: 4.103vw;
+    }
+
+    .auto__list-item .text-content p {
+        font-size: 3.333vw;
+        margin-top: 1.625vw;
+    }
+
+    .auto__list-item .icon {
+        width: 4.875vw;
+        height: 4.875vw;
+        margin-top: 0.6vw;
     }
 }
 
