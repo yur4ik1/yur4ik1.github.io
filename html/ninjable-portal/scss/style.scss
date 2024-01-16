@@ -9621,6 +9621,10 @@
   background: url(../img/filter-cheked.svg) no-repeat center top/cover !important;
 }
 
+.profile__info-popup.rewards__pupup .search-wrapper {
+  z-index: 999999999999999999;
+}
+
 /* add multi-select (filter price) */
 .filter-price .select-option input[type=checkbox]:checked+label:before {
   background: url(../img/filter-cheked.svg) no-repeat center top/cover !important;

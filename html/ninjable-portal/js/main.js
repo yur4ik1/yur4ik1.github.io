@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           const listItem = button.closest('.rewards__list-item');
           listItem.classList.add('active');
-          listItem.style.zIndex = '9999999999999';
+          listItem.style.zIndex = '99999';
 
           const confirmationPopup = listItem.querySelector('.сonfirmation-popup');
           confirmationPopup.classList.add('active');
