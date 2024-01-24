@@ -9663,7 +9663,6 @@
   letter-spacing: 0.01vw;
   padding: 0.886vw;
   position: absolute;
-  bottom: 3vw;
 
   &::after {
     content: '';
@@ -9690,7 +9689,7 @@
   background: #1B2439;
   box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
   position: absolute;
-  top: -21.5vw;
+  top: -16.5vw;
   display: flex;
   flex-direction: column;
   gap: 1.095vw;
@@ -9776,25 +9775,43 @@
 
 .languages.reports-lang {
   .languages-dropbtn {
-    bottom: 4vw;
     right: 8vw;
   }
 
   .languages-droplist {
-    top: -22.5vw;
     right: 8vw;
   }
 }
 
 .languages.settings-lang {
   .languages-dropbtn {
-    bottom: 4vw;
     right: 17vw;
+  }
+
+  .languages-droplist {
+    right: 17vw;
+  }
+}
+
+.languages.login-in {
+  .languages-dropbtn {
+    bottom: -3vw;
+    right: 19vw;
 
   }
 
   .languages-droplist {
-    top: -22.5vw;
-    right: 17vw;
+    top: -15.5vw;
+    right: 19vw;
+  }
+}
+
+.languages.my-profile-languages {
+  .languages-dropbtn {
+    bottom: 3vw;
+  }
+
+  .languages-droplist {
+    top: -21.5vw;
   }
 }
