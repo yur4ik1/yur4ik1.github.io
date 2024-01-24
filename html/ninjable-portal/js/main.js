@@ -25,35 +25,75 @@ if (window.location.pathname === "/achievements.html") {
 
 */
 
+
+
+// languages dropdwn
+document.addEventListener('DOMContentLoaded', function () {
+  let languagesBtn = document.querySelector('.languages-dropbtn');
+  let languagesList = document.querySelector('.languages-droplist');
+  let checkboxes = document.querySelectorAll('.languages-option input[type="checkbox"]');
+  let isActive = false;
+
+  languagesBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    isActive = !isActive;
+    languagesList.classList.toggle('active', isActive);
+    languagesBtn.classList.toggle('active', isActive); 
+  });
+
+  document.addEventListener('click', (event) => {
+    const targetElement = event.target;
+    if (!languagesList.contains(targetElement) && !languagesBtn.contains(targetElement)) {
+      languagesList.classList.remove('active');
+      isActive = false;
+      languagesBtn.classList.remove('active'); 
+    }
+  });
+
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      checkboxes.forEach(function (otherCheckbox) {
+        if (otherCheckbox !== checkbox) {
+          otherCheckbox.checked = false;
+        }
+      });
+      languagesBtn.textContent = checkbox.id;
+    });
+  });
+});
+
+
+
+
 // сonfirmation popup
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const buyButtons = document.querySelectorAll('.buy-btn');
 
   buyButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          document.querySelectorAll('.rewards__list-item').forEach(item => {
-              item.classList.remove('active');
-              item.style.zIndex = '';
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.rewards__list-item').forEach(item => {
+        item.classList.remove('active');
+        item.style.zIndex = '';
 
-              const confirmationPopups = item.querySelectorAll('.сonfirmation-popup');
-              confirmationPopups.forEach(popup => {
-                  popup.classList.remove('active');
-              });
-          });
-
-          const listItem = button.closest('.rewards__list-item');
-          listItem.classList.add('active');
-          listItem.style.zIndex = '99999';
-
-          const confirmationPopup = listItem.querySelector('.сonfirmation-popup');
-          confirmationPopup.classList.add('active');
-
-          const noButton = confirmationPopup.querySelector('.no');
-          noButton.addEventListener('click', () => {
-              confirmationPopup.classList.remove('active');
-          });
+        const confirmationPopups = item.querySelectorAll('.сonfirmation-popup');
+        confirmationPopups.forEach(popup => {
+          popup.classList.remove('active');
+        });
       });
+
+      const listItem = button.closest('.rewards__list-item');
+      listItem.classList.add('active');
+      listItem.style.zIndex = '99999';
+
+      const confirmationPopup = listItem.querySelector('.сonfirmation-popup');
+      confirmationPopup.classList.add('active');
+
+      const noButton = confirmationPopup.querySelector('.no');
+      noButton.addEventListener('click', () => {
+        confirmationPopup.classList.remove('active');
+      });
+    });
   });
 });
 
@@ -1266,45 +1306,45 @@ if (skillMapPopup && skillMapPopup && skillMapClose) {
 // color info popup 
 var itemsColor = document.querySelectorAll('.item');
 
-itemsColor.forEach(function(item) {
-    item.addEventListener('click', function() {
-       
+itemsColor.forEach(function (item) {
+  item.addEventListener('click', function () {
+
+    var popup = item.querySelector('.item-popup');
+
+    if (popup) {
+
+      itemsColor.forEach(function (item) {
         var popup = item.querySelector('.item-popup');
-
         if (popup) {
-            
-            itemsColor.forEach(function(item) {
-                var popup = item.querySelector('.item-popup');
-                if (popup) {
-                    popup.classList.remove('act');
-                }
-            });
-
-            popup.classList.add('act');
+          popup.classList.remove('act');
         }
-    });
+      });
+
+      popup.classList.add('act');
+    }
+  });
 });
 
 
-document.addEventListener('click', function(event) {
-   
-    var isInsideItem = false;
-    for (var i = 0; i < itemsColor.length; i++) {
-        if (itemsColor[i].contains(event.target)) {
-            isInsideItem = true;
-            break;
-        }
-    }
+document.addEventListener('click', function (event) {
 
-    if (!isInsideItem) {
-       
-        itemsColor.forEach(function(item) {
-            var popup = item.querySelector('.item-popup');
-            if (popup) {
-                popup.classList.remove('act');
-            }
-        });
+  var isInsideItem = false;
+  for (var i = 0; i < itemsColor.length; i++) {
+    if (itemsColor[i].contains(event.target)) {
+      isInsideItem = true;
+      break;
     }
+  }
+
+  if (!isInsideItem) {
+
+    itemsColor.forEach(function (item) {
+      var popup = item.querySelector('.item-popup');
+      if (popup) {
+        popup.classList.remove('act');
+      }
+    });
+  }
 });
 
 /* custom period popup (reports page) */
@@ -1359,9 +1399,9 @@ registerPopup(skillProgressPopup, skillProgressPopupOpeners, skillProgressPopupC
 // Adding scroll to popup script
 function checkHeightAndMakeScrollIfNeeded(popupWrapper) {
   let popupInner = popupWrapper.firstChild.nextElementSibling;
-  let popupHeight = parseFloat(getComputedStyle(popupInner).width.slice(0,-2));
+  let popupHeight = parseFloat(getComputedStyle(popupInner).width.slice(0, -2));
 
-  if(popupHeight > window.innerHeight){
+  if (popupHeight > window.innerHeight) {
     popupWrapper.style.alignItems = "flex-start";
     popupWrapper.style.overflow = "auto";
   }
@@ -1381,24 +1421,24 @@ customSelections.forEach((selection) => {
   let selectedItemsContainer = selection.querySelector(".custom-multi-select__selection-selected-items");
   let inputs = selection.querySelectorAll(".custom-multi-select__selection-input input");
   selection.selectedInputs = [];
-  
-  
-  if (clearButtonId){
+
+
+  if (clearButtonId) {
     let closeButton = document.getElementById(clearButtonId);
-    if (closeButton){
-      closeButton.addEventListener("click", ()=>{
-        inputs.forEach(input => {input.checked = false;})
-        
+    if (closeButton) {
+      closeButton.addEventListener("click", () => {
+        inputs.forEach(input => { input.checked = false; })
+
         selection.selectedInputs = []
         updateInputSelected();
         updateMainInput();
-      })  
+      })
     }
   }
-  
+
   setDefaultLabelValue();
 
-  
+
   inputs.forEach((input) => {
     input.addEventListener("change", () => {
       if (input.checked) {
@@ -1409,13 +1449,13 @@ customSelections.forEach((selection) => {
     });
   });
 
-  function addInputToSelected(input){
+  function addInputToSelected(input) {
     selection.selectedInputs.push(input);
     updateInputSelected();
     updateMainInput();
   }
 
-  function removeInputFromSelected(input){
+  function removeInputFromSelected(input) {
     let indexToRemove = selection.selectedInputs.indexOf(input);
     selection.selectedInputs.splice(indexToRemove, 1);
 
@@ -1424,11 +1464,11 @@ customSelections.forEach((selection) => {
   }
 
   let search = selection.querySelector(".custom-multi-select__selection-search");
-  
+
   search.addEventListener("input", () => {
     if (search.value == "") {
       inputs.forEach((input) =>
-          input.parentNode.classList.remove(VISUALLY_HIDDEN_CLASS)
+        input.parentNode.classList.remove(VISUALLY_HIDDEN_CLASS)
       );
     } else {
       inputs.forEach((input) => {
@@ -1447,14 +1487,14 @@ customSelections.forEach((selection) => {
     selection.classList.toggle(OPEN_CLASS);
   });
 
-  function closeGroupSelection(){
-    groupItems.forEach(groupItem=>{
-      if (groupItem != selection){
+  function closeGroupSelection() {
+    groupItems.forEach(groupItem => {
+      if (groupItem != selection) {
         groupItem.classList.remove(OPEN_CLASS);
       }
     })
   }
-  
+
   function updateInputSelected() {
     updateLabel();
     updateSelected();
@@ -1468,7 +1508,7 @@ customSelections.forEach((selection) => {
         let createdItem = createCustomSelectItem(input.nextElementSibling.innerText);
 
         let itemRemoveButton = createdItem.querySelector(".selected-item__button")
-        itemRemoveButton.addEventListener("click",_=>{
+        itemRemoveButton.addEventListener("click", _ => {
           removeInputFromSelected(input);
           input.checked = false;
         })
@@ -1516,9 +1556,9 @@ customSelections.forEach((selection) => {
     }
   }
 
-  function updateMainInput(){
+  function updateMainInput() {
     let newInputValue = "";
-    selection.selectedInputs.forEach(input=>{
+    selection.selectedInputs.forEach(input => {
       newInputValue += input.nextElementSibling.innerText + ",";
     })
 
@@ -1546,11 +1586,11 @@ radioSelections.forEach((selection) => {
   selection.selectedInputs = [];
 
 
-  if (clearButtonId){
+  if (clearButtonId) {
     let closeButton = document.getElementById(clearButtonId);
-    if (closeButton){
-      closeButton.addEventListener("click", ()=>{
-        inputs.forEach(input => {input.checked = false;})
+    if (closeButton) {
+      closeButton.addEventListener("click", () => {
+        inputs.forEach(input => { input.checked = false; })
 
         selection.selectedInputs = []
         updateInputSelected();
@@ -1572,13 +1612,13 @@ radioSelections.forEach((selection) => {
     });
   });
 
-  function addInputToSelected(input){
+  function addInputToSelected(input) {
     selection.selectedInputs.push(input);
     updateInputSelected();
     updateMainInput();
   }
 
-  function removeInputFromSelected(input){
+  function removeInputFromSelected(input) {
     let indexToRemove = selection.selectedInputs.indexOf(input);
     selection.selectedInputs.splice(indexToRemove, 1);
 
@@ -1591,9 +1631,9 @@ radioSelections.forEach((selection) => {
     selection.classList.toggle(OPEN_CLASS);
   });
 
-  function closeGroupSelection(){
-    groupItems.forEach(groupItem=>{
-      if (groupItem != selection){
+  function closeGroupSelection() {
+    groupItems.forEach(groupItem => {
+      if (groupItem != selection) {
         groupItem.classList.remove(OPEN_CLASS);
       }
     })
@@ -1602,13 +1642,13 @@ radioSelections.forEach((selection) => {
   function updateInputSelected() {
     updateLabel();
   }
-  
+
   function updateLabel() {
     if (selection.selectedInputs.length > 0) {
       let newLabelValue = "";
 
-      selection.selectedInputs.forEach(input=>{
-        if (input.checked){
+      selection.selectedInputs.forEach(input => {
+        if (input.checked) {
           newLabelValue = input.nextElementSibling.innerText;
         }
       })
@@ -1619,10 +1659,10 @@ radioSelections.forEach((selection) => {
     }
   }
 
-  function updateMainInput(){
+  function updateMainInput() {
     let newInputValue = "";
-    selection.selectedInputs.forEach(input=>{
-      if (input.checked){
+    selection.selectedInputs.forEach(input => {
+      if (input.checked) {
         newInputValue = input.nextElementSibling.innerText;
       }
     })
@@ -1649,19 +1689,19 @@ const ACTIVE_CLASS = "active";
 clearPopups.forEach(popup => {
   let triggerButtonId = popup.getAttribute(SHOW_BUTTON_ATTRIBUTE)
   let triggerButton = document.getElementById(triggerButtonId);
-  
-  if (triggerButton){
-    triggerButton.addEventListener("click", ()=>{
+
+  if (triggerButton) {
+    triggerButton.addEventListener("click", () => {
       popup.classList.add(ACTIVE_CLASS);
 
-      setTimeout(()=>{
+      setTimeout(() => {
         popup.classList.remove(ACTIVE_CLASS);
       }, POPUP_SHOWTIME);
     })
   }
 })
 
-function registerPopup(popup, popupOpeners, popupClose, isOpened){
+function registerPopup(popup, popupOpeners, popupClose, isOpened) {
   function open() {
     checkHeightAndMakeScrollIfNeeded(popup);
     popup.classList.add("active");
@@ -1669,10 +1709,10 @@ function registerPopup(popup, popupOpeners, popupClose, isOpened){
   }
 
   if (popup && popupOpeners && popupClose) {
-    if (isOpened){
+    if (isOpened) {
       open();
     }
-    
+
     popupOpeners.forEach((button) => {
       button.addEventListener("click", () => {
         open();
@@ -1690,10 +1730,10 @@ function registerPopup(popup, popupOpeners, popupClose, isOpened){
 
 const tableFilterPopup = document.querySelectorAll(".skill-progress-popup__table-filter");
 
-tableFilterPopup.forEach(filter=> {
+tableFilterPopup.forEach(filter => {
   let tableFilterPopupOpeners = filter.querySelector(".skill-progress-popup__table-filter-button");
-  
-  tableFilterPopupOpeners.addEventListener("click", ()=>{
+
+  tableFilterPopupOpeners.addEventListener("click", () => {
     filter.classList.toggle("active")
   })
 })
@@ -1709,8 +1749,8 @@ tooltiped.forEach(tooltipedElement => {
     tooltip.classList.add("active")
 
     var rect = tooltipedElement.getBoundingClientRect();
-    
-    tooltip.style.left= rect.right + "px";
+
+    tooltip.style.left = rect.right + "px";
     tooltip.style.top = rect.top + document.documentElement.scrollTop + "px";
   });
 
@@ -1721,17 +1761,11 @@ tooltiped.forEach(tooltipedElement => {
 
 function createTooltip() {
   var tooltipContainer = document.createElement('div');
-  
+
   tooltipContainer.classList.add('tooltip');
   document.documentElement.appendChild(tooltipContainer)
-  
+
   return tooltipContainer;
 }
-
-
-
-
-
-
 
 
