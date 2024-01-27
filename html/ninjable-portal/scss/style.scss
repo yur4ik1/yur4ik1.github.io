@@ -266,7 +266,8 @@
 
   &__content {
     width: 77.685vw;
-    height: 45.725vw;
+    height: auto;
+    padding-bottom: 4.327vw;
     background: rgba(29, 36, 56, 0.75);
     box-shadow: 0vw 0vw 1.303vw 0.261vw rgba(6, 8, 13, 0.75);
     border-radius: 1.356vw;
@@ -285,9 +286,11 @@
       letter-spacing: 0.014vw;
       color: #869DC8;
       margin-bottom: 0.834vw;
+      text-transform: none;
     }
 
     p {
+      width: 18.665vw;
       font-size: 0.782vw;
       line-height: 1.303vw;
       letter-spacing: 0.01vw;
@@ -380,6 +383,100 @@
         color: #FFFFFF;
       }
     }
+
+    .filter-select {
+      background: none;
+      border-radius: 0.417vw;
+      z-index: 999999999;
+      width: 17.623vw;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .filter-select .select-selected {
+      background: #202A40;
+      border: 0.052vw solid #252E42;
+      border-radius: 0.417vw;
+      transition: 0s !important;
+      color: rgba(134, 157, 200, 0.3);
+    }
+
+    .select-selected:after {
+      top: 50%;
+      right: 0;
+      width: 2.607vw;
+      height: 2.555vw;
+      background: #1B2439;
+      box-shadow: 0vw 0vw 0.313vw 0.209vw rgba(6, 8, 13, 0.45);
+      border-radius: 0vw 0.417vw 0.417vw 0vw;
+      border: none;
+    }
+
+    .select-selected::before {
+      content: "";
+      position: absolute;
+      top: 48%;
+      right: 1vw;
+      width: 0;
+      height: 0;
+      border-left: 0.261vw solid rgba(0, 0, 0, 0);
+      border-right: 0.261vw solid rgba(0, 0, 0, 0);
+      border-top: 0.261vw solid #869dc8;
+      z-index: 99999;
+    }
+
+    .filter-select.active {
+      .select-selected {
+        background: #1B2439;
+        border: none;
+
+        .select-text {
+          color: rgba(134, 157, 200, 0.55);
+          font-weight: 300;
+        }
+      }
+
+      .select-selected:after {
+        top: 0;
+        box-shadow: none;
+      }
+
+      .select-selected::before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .countryFilter {
+    .select-items {
+      padding-right: 1.1vw;
+      padding-bottom: 1vw;
+    }
+    .country-list {
+      width: 100%;
+      height: 14vw;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: red transparent;
+
+
+      &::-webkit-scrollbar {
+        width: 0.3vw;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgb(95, 120, 167);
+        border-radius: 0.209vw;
+        opacity: 0.6;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #202a40;
+      }
+    }
   }
 }
 
@@ -420,9 +517,11 @@
       line-height: 2.503vw;
       letter-spacing: 0.014vw;
       color: #869DC8;
+      text-transform: none;
     }
 
     p {
+      width: 18.665vw;
       font-size: 0.782vw;
       line-height: 2.086vw;
       letter-spacing: 0.01vw;
@@ -540,6 +639,23 @@
         border-radius: 0.469vw;
       }
     }
+  }
+}
+
+/* forgot-password */
+
+.login.forgot-password {
+  .login__content-right {
+    padding-top: 12.446vw;
+  }
+
+  .login__content-left p {
+    margin-top: 1.825vw;
+  }
+
+  .login__content-form .form-bottom .btn {
+    width: auto;
+    padding: 0.73vw 1.721vw;
   }
 }
 

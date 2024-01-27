@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Register ( EntreComp Framework)</title>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="NINJABLE - Register">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="register-EntreComp">
+    <div class="wrapper">
+        <header class="header">
+            <a class="header__logo" href="skills.html">
+                <img src="./img/logo.svg" alt="logo">
+            </a>
+        </header>
+
+        <section class="register">
+            <div class="container">
+                <div class="register__content">
+                    <div class="register__content-left">
+                        <h1>Sign up for free</h1>
+                        <p>Full access. No credit card needed.</p>
+                        <p>Already have an account? <a href="login-in.html">Log In</a></p>
+                    </div>
+                    <div class="register__content-right">
+                        <form class="register__content-form" action="#">
+
+                            <div class="row">
+                                <div class="field">
+                                    <p><span>*</span> First Name</p>
+                                    <input type="text" placeholder="Joe">
+                                </div>
+                                <div class="field">
+                                    <p>Last Name</p>
+                                    <input type="text" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field">
+                                    <p><span>*</span> Occupation</p>
+                                    <div class="filter filter-select filter-period occupationFilter">
+                                        <div class="select-selected">
+                                            <span class="select-name">Student</span>
+                                            <span class="select-text">Please Select...</span>
+                                        </div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Student">
+                                                <label for="Student">Student</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Employee">
+                                                <label for="Employee">Employee</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="EmployerEntrepreneur">
+                                                <label for="EmployerEntrepreneur">Employer Entrepreneur</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Soloentrepreneur">
+                                                <label for="Soloentrepreneur">Solo entrepreneur</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Educator">
+                                                <label for="Educator">Educator</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Unemployed">
+                                                <label for="Unemployed">Unemployed</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <p><span>*</span> Gender</p>
+                                    <div class="filter filter-select filter-period">
+                                        <div class="select-selected">
+                                            <span class="select-name">Female</span>
+                                            <span class="select-text">Please Select...</span>
+                                        </div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Female">
+                                                <label for="Female">Female</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Male">
+                                                <label for="Male">Male</label>
+                                            </div>
+                                            <div class="select-option">
+                                                <input type="checkbox" id="Prefernottodisclose">
+                                                <label for="Prefernottodisclose">Prefer not to disclose</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field">
+                                    <p>Country</p>
+                                    <div class="filter filter-select filter-period countryFilter">
+                                        <div class="select-selected">
+                                            <span class="select-name">A Country</span>
+                                            <span class="select-text">Please Select...</span>
+                                        </div>
+                                        <div class="select-items select-hide">
+                                            <div class="country-list">
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="A Country">
+                                                    <label for="A Country">A Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="B Country">
+                                                    <label for="B Country">B Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="D Country">
+                                                    <label for="D Country">D Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="E Country">
+                                                    <label for="E Country">E Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="F Country">
+                                                    <label for="F Country">F Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="G Countrye">
+                                                    <label for="G Country">G Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="D Country">
+                                                    <label for="D Country">D Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="E Country">
+                                                    <label for="E Country">E Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="F Country">
+                                                    <label for="F Country">F Country</label>
+                                                </div>
+                                                <div class="select-option">
+                                                    <input type="checkbox" id="G Countrye">
+                                                    <label for="G Country">G Country</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field type-password">
+                                    <p>Company/Institution</p>
+                                    <input type="text" placeholder="Ninjable">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="field type-password">
+                                    <p><span>*</span> Email</p>
+                                    <input type="email" placeholder="JoeDoe@ninjable.com">
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="field type-password">
+                                    <p><span>*</span> Password</p>
+                                    <input type="password" id="password" placeholder="***********************">
+                                    <span class="password-icon"></span>
+                                </div>
+                                <div class="field">
+                                    <p><span>*</span> Confirm Password</p>
+                                    <input type="password" placeholder="***********************">
+                                </div>
+                            </div>
+
+                            <div class="term">
+                                <div class="term-field">
+                                    <input type="checkbox" id="emails">
+                                    <label for="emails">Yes, I want to receive Ninjable Emails</label>
+                                </div>
+                                <div class="term-field">
+                                    <input type="checkbox" id="privacy">
+                                    <label for="privacy">I agree to all <a href="#"> Term and Conditions, Privacy Policy
+                                        </a> and <a href="#"> Fees</a>
+                                    </label>
+                                </div>
+                                <div class="term-field">
+                                    <input type="checkbox" id="years">
+                                    <label for="years">I confirm that I'm 18 years old or older</label>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <button class="btn register-btn" onclick="window.location.href = 'my-profile.html';"
+                                    type="button">Create Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="languages login">
+            <div class="languages-dropbtn">EN</div>
+            <div class="languages-droplist">
+                <div class="languages-droplist-content">
+                    <div class="languages-option">
+                        <input type="checkbox" id="EN">
+                        <label for="EN">English</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="fr">
+                        <label for="fr">French</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="de">
+                        <label for="de">Dutch</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="sp">
+                        <label for="sp">Spanish</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="it">
+                        <label for="it">Italian</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="tu">
+                        <label for="tu">Turkish</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="po">
+                        <label for="po">Portuguese</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="sp">
+                        <label for="sp">Spanish</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="it">
+                        <label for="it">Italian</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="tu">
+                        <label for="tu">Turkish</label>
+                    </div>
+                    <div class="languages-option">
+                        <input type="checkbox" id="po">
+                        <label for="po">Portuguese</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.min.js"></script>
+
+    <script>
+        document.querySelector('.occupationFilter').addEventListener('click', function () {
+            const countryFilter = document.querySelector('.countryFilter');
+            const currentZIndex = parseInt(countryFilter.style.zIndex) || 1;
+            countryFilter.style.zIndex = (currentZIndex === 0) ? '999999' : '1';
+        });
+    </script>
+
+
+</body>
+
+</html>

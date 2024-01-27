@@ -63,8 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
 // сonfirmation popup
 
 document.addEventListener("DOMContentLoaded", function () {
