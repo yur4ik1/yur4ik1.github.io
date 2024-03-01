@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="pricing-container">
+      <h2 class="calculate-title">Get Started in Just a Few clicks</h2>
+
+      <div class="tabs-head-wrap">
+        <div class="tabs-head-block">
+          <button class="tab-btn active">Residential Proxy</button>
+          <button class="tab-btn">Mobile Proxy</button>
+        </div>
+      </div>
+
+      <div class="tabs-list">
+        <div class="tab-item active" id="residential">
+          <div class="calculate-block">
+            <div class="slider-container" onload="calculatePrice()">
+
+              <div class="calculate-block-head">
+                <label class="traffic-amout" for="sliderResidential">
+                  <span>TRAFFIC AMOUNT:</span>
+                  <span class="value" id="gbAmountResidential"></span>
+                </label>
+
+                <p class="total">
+                  <span>TOTAL:</span>
+                  <span class="value" id="totalPriceResidential"></span>
+                  <a class="contact-btn" id="contactBtnResidential" href="#">Contact us</a>
+                </p>
+              </div>
+
+              <div class="slider-wrap">
+                <div class="slider-tooltip" id="slider-tooltip-Residential">
+                  100+ Gb
+                </div>
+
+                <input class="slider-range" type="range" id="sliderResidential" min="1" max="100" value="15" step="1"
+                  oninput="calculatePrice('sliderResidential', 'gbAmountResidential', 'totalPriceResidential', false)">
+
+                <div class="slider-marks">
+                  <span class="mark">$6.0/Gb</span>
+                  <span class="mark">$5.5/Gb</span>
+                  <span class="mark">$5/Gb</span>
+                  <span class="mark">$4.5/Gb</span>
+                </div>
+              </div>
+
+              <div class="calculate-block-bottom">
+                <p class="title">What’s included</p>
+                <div class="info-list-wrap">
+                  <div class="info-list">
+                    <p class="info-item">8M+ ethically-sourced IPs</p>
+                    <p class="info-item">Thousands concurrent sessions</p>
+                  </div>
+                  <div class="info-list">
+                    <p class="info-item">HTTPS & SOCKS5 support</p>
+                    <p class="info-item">Country & city-level targeting</p>
+                  </div>
+                  <div class="info-list">
+                    <p class="info-item">99.3% success rate</p>
+                    <p class="info-item">Rotating and sticky sessions</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-item" id="mobile">
+          <div class="calculate-block">
+            <div class="slider-container" onload="calculatePrice()">
+
+              <div class="calculate-block-head">
+                <label class="traffic-amout" for="sliderMobile">
+                  <span>TRAFFIC AMOUNT:</span>
+                  <span class="value" id="gbAmountMobile"></span>
+                </label>
+
+                <p class="total">
+                  <span>TOTAL:</span>
+                  <span class="value" id="totalPriceMobile"></span>
+                  <a class="contact-btn" id="contactBtnMobile" href="#">Contact us</a>
+                </p>
+              </div>
+
+              <div class="slider-wrap">
+                <div class="slider-tooltip" id="slider-tooltip-Mobile">
+                  100+ Gb
+                </div>
+                <input type="range" id="sliderMobile" min="1" max="100" value="15" step="1"
+                  oninput="calculatePrice('sliderMobile', 'gbAmountMobile', 'totalPriceMobile', true)">
+
+                <div class="slider-marks">
+                  <span class="mark">$8.0/Gb</span>
+                  <span class="mark">$7.5/Gb</span>
+                  <span class="mark">$7/Gb</span>
+                  <span class="mark">$6.5/Gb</span>
+                </div>
+              </div>
+
+              <div class="calculate-block-bottom">
+                <p class="title">What’s included</p>
+                <div class="info-list-wrap">
+                  <div class="info-list">
+                    <p class="info-item">8M+ ethically-sourced IPs</p>
+                    <p class="info-item">Thousands concurrent sessions</p>
+                  </div>
+                  <div class="info-list">
+                    <p class="info-item">HTTPS & SOCKS5 support</p>
+                    <p class="info-item">Country & city-level targeting</p>
+                  </div>
+                  <div class="info-list">
+                    <p class="info-item">99.3% success rate</p>
+                    <p class="info-item">Rotating and sticky sessions</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-bottom">
+        <a class="get-started-btn" href="#">Get Started</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
