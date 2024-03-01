@@ -186,7 +186,7 @@ body {
 
 .slider-tooltip::after {
     content: '';
-    background: url(https://uploads-ssl.webflow.com/65b3f777da794db0bb094a94/65e10b180675d36201ba48ed_botto-beak.svg) no-repeat center top / cover;
+    background: url(../img/botto-beak.svg) no-repeat center top / cover;
     width: 19px;
     height: 11.875px;
     position: absolute;
@@ -229,7 +229,6 @@ body {
 .slider-marks {
     position: relative;
     display: flex;
-    gap: 184px;
     margin-top: 10px;
     z-index: 0;
 }
@@ -245,6 +244,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
 }
 
 .mark::before {
@@ -254,6 +254,15 @@ body {
     background: #9CA3AF;
 }
 
+.mark:first-child {
+    left: 0;
+    transform: translateX(0%);
+}
+
+.mark:last-child {
+    left: 100%;
+    transform: translateX(-100%);
+}
 
 .calculate-block-bottom {
     margin-top: 120px;
@@ -302,7 +311,7 @@ body {
 
 .info-item::before {
     content: '';
-    background: url(https://uploads-ssl.webflow.com/65b3f777da794db0bb094a94/65e10aeb4820730a9598a733_check.svg) no-repeat center top / cover;
+    background: url(../img/check.svg) no-repeat center top / cover;
     width: 20px;
     height: 20px;
 }
