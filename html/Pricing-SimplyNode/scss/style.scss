@@ -83,7 +83,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 55px
+    margin-bottom: 35px;
+    height: 62px;
 }
 
 .traffic-amout {
@@ -113,6 +114,7 @@ body {
 .total {
     color: #FFF; /* Припущене значення для --Advanced-Forms-Range-Slider-Touch-Area-Bg-Color */
     text-align: right;
+    align-items: flex-end;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -154,6 +156,7 @@ body {
     background: #FFF; /* Припущене значення для --Advanced-Forms-Range-Slider-Tooltip-Bg-Color */
     text-transform: none;
     margin-top: 5px;
+    width: 125px;
 }
 
 
@@ -316,6 +319,16 @@ body {
     height: 20px;
 }
 
+
+.total-text-resid.hide {
+    display: none;
+}
+.total-text-сontact-resid {
+    display: none;
+}
+.total-text-сontact-resid.active {
+    display: block;
+}
 
 
 

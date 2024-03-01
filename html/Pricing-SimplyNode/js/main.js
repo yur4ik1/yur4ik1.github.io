@@ -30,18 +30,20 @@ function switchTab(activeIndex) {
 
 
 
-
-// calc
-
 var lastGbValue = 0;
+
 function calculatePrice(sliderId, gbAmountId, totalPriceId, tooltipId, contactButtonId, isMobile) {
   var slider = document.getElementById(sliderId);
   var gbAmount = document.getElementById(gbAmountId);
   var totalPrice = document.getElementById(totalPriceId);
   var tooltip = document.getElementById(tooltipId);
   var contactButton = document.getElementById(contactButtonId);
+  var totalTextResid = document.querySelector('.total-text-resid');
+  var totalTextMob = document.querySelector('.total-text-mob');
+  var totalTextContactResid = document.querySelector('.total-text-сontact-resid');
+  var totalTextContactMob = document.querySelector('.total-text-сontact-mob');
 
-  if (!slider || !gbAmount || !totalPrice || !tooltip || !contactButton) {
+  if (!slider || !gbAmount || !totalPrice || !tooltip || !contactButton || !totalTextResid || !totalTextMob || !totalTextContactResid || !totalTextContactMob) {
     console.warn('Some elements are not found!');
     return;
   }
@@ -77,23 +79,58 @@ function calculatePrice(sliderId, gbAmountId, totalPriceId, tooltipId, contactBu
 
   var total = gb * pricePerGb;
   totalPrice.innerText = '$' + total.toFixed(2);
-  gbAmount.innerText = gb + ' Gb';
-  tooltip.innerText = gb + ' Gb';
 
   if (gb === 100) {
+    gbAmount.innerText = gb + '+ Gb';
     contactButton.classList.add('active');
     totalPrice.style.display = 'none';
+
+    if (isMobile) {
+      totalTextMob.classList.add('hide');
+      totalTextContactMob.classList.add('active');
+    } else {
+      totalTextResid.classList.add('hide');
+      totalTextContactResid.classList.add('active');
+    }
   } else {
+    gbAmount.innerText = gb + ' Gb';
     contactButton.classList.remove('active');
     totalPrice.style.display = '';
+
+    if (isMobile) {
+      totalTextMob.classList.remove('hide');
+      totalTextContactMob.classList.remove('active');
+    } else {
+      totalTextResid.classList.remove('hide');
+      totalTextContactResid.classList.remove('active');
+    }
+  }
+
+  if (gb === 100) {
+    tooltip.innerText = '100+ Gb';
+    totalPrice.innerText = '$' + total.toFixed(2) + '+';
+  } else {
+    tooltip.innerText = gb + ' Gb';
+    totalPrice.innerText = '$' + total.toFixed(2);
   }
 
   updateTooltipPosition(slider, tooltip);
+
+  // Add these lines to change thumb color dynamically based on slider position
+  var thumbColor = calculateThumbColor(slider);
+  slider.style.background = `linear-gradient(to right, ${thumbColor} ${slider.value}%, #515151 ${slider.value}%)`;
+}
+
+function calculateThumbColor(slider) {
+  var percent = (slider.value - slider.min) / (slider.max - slider.min);
+  var red = 255 * percent;
+  var green = 255 * (1 - percent);
+  return `#fff`;
 }
 
 function updateTooltipPosition(slider, tooltip) {
   var sliderWidth = slider.offsetWidth;
-  var thumbWidth = 40; 
+  var thumbWidth = 40;
   var max = slider.max;
   var min = slider.min;
   var percent = ((slider.value - min) / (max - min));
@@ -102,8 +139,6 @@ function updateTooltipPosition(slider, tooltip) {
 }
 
 function initializeCalculators() {
-  
-
   calculatePrice('sliderResidential', 'gbAmountResidential', 'totalPriceResidential', 'slider-tooltip-Residential', 'contactBtnResidential', false);
   calculatePrice('sliderMobile', 'gbAmountMobile', 'totalPriceMobile', 'slider-tooltip-Mobile', 'contactBtnMobile', true);
 
@@ -111,20 +146,16 @@ function initializeCalculators() {
   var sliderMobile = document.getElementById('sliderMobile');
 
   if (sliderResidential) {
-    sliderResidential.oninput = function() {
+    sliderResidential.oninput = function () {
       calculatePrice('sliderResidential', 'gbAmountResidential', 'totalPriceResidential', 'slider-tooltip-Residential', 'contactBtnResidential', false);
     };
   }
 
   if (sliderMobile) {
-    sliderMobile.oninput = function() {
+    sliderMobile.oninput = function () {
       calculatePrice('sliderMobile', 'gbAmountMobile', 'totalPriceMobile', 'slider-tooltip-Mobile', 'contactBtnMobile', true);
     };
   }
-  
 }
 
 window.onload = initializeCalculators;
-
-
-
