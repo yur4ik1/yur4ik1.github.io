@@ -605,8 +605,8 @@
     .menu-item {
         display: flex;
         padding: 3.077vw 4.103vw;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 4.103vw;
         column-gap: 1.026vw;
         position: relative;
@@ -630,6 +630,8 @@
             width: 5.128vw;
             height: 5.128vw;
             transition: 0.3s;
+            position: absolute;
+            right: 5vw;
         }
     }
 
@@ -647,6 +649,9 @@
             background: url(../img/new.svg) no-repeat center top / cover;
             width: 10.769vw;
             height: 5.897vw;
+            position: absolute;
+            left: 94%;
+            
         }
     }
 
@@ -704,9 +709,11 @@
         border-radius: 4.103vw;
         background: var(--White, #FFF);
         box-shadow: 0vw 5.128vw 10.256vw -1.026vw rgba(145, 158, 171, 0.24), 0vw 0vw 0.513vw 0vw rgba(145, 158, 171, 0.24);
-        position: absolute;
-        top: 13vw;
         z-index: 999999;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        display: none;
 
         .title {
             color: var(--Primary, #4855DC);
@@ -826,4 +833,11 @@
             }
         }
     }
+
+    .menu-item.active .mobile-submenu.mobile-submenu-proxies {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+ 
 }

@@ -31,3 +31,15 @@ menuBurger.addEventListener('click', () => {
   mobileNavigation.classList.toggle('active');
   menuBurger.classList.toggle('active');
 });
+
+
+
+// Припускаємо, що усі елементи menu-item знаходяться в межах контейнера з класом menu
+const menu = document.querySelector('.menu-list');
+
+menu.addEventListener('click', (event) => {
+  // Перевіряємо, чи клік був зроблений на елементі з класом 'menu-item' та 'sub'
+  if (event.target.classList.contains('menu-item') && event.target.classList.contains('sub')) {
+    event.target.classList.toggle('active');
+  }
+});
