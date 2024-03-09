@@ -577,7 +577,7 @@
         height: auto;
         max-width: 694px;
         overflow: scroll;
-        padding: 0 6.917vw 6.917vw;
+        padding: 0;
         position: fixed;
         right: 0;
         top: 20.5vw;
@@ -609,6 +609,7 @@
         justify-content: space-between;
         gap: 4.103vw;
         column-gap: 1.026vw;
+        position: relative;
 
         a {
             color: var(--Black, #101828);
@@ -692,7 +693,137 @@
         }
     }
 
-    .submenu.proxies {
-        
+    .mobile-submenu.mobile-submenu-proxies {
+        width: 91vw;
+        display: flex;
+        padding: 4.103vw 0vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6.154vw;
+        align-self: stretch;
+        border-radius: 4.103vw;
+        background: var(--White, #FFF);
+        box-shadow: 0vw 5.128vw 10.256vw -1.026vw rgba(145, 158, 171, 0.24), 0vw 0vw 0.513vw 0vw rgba(145, 158, 171, 0.24);
+        position: absolute;
+        top: 13vw;
+        z-index: 999999;
+
+        .title {
+            color: var(--Primary, #4855DC);
+            font-family: Inter;
+            font-size: 3.59vw;
+            font-weight: 500;
+            line-height: 5.128vw;
+            display: flex;
+            padding: 0vw 4.103vw;
+            align-items: flex-start;
+        }
+
+        .sub-menu-item {
+            display: flex;
+            padding: 3.077vw 4.103vw;
+            align-items: flex-start;
+            gap: 4.103vw;
+        }
+
+        .sub-menu-item-link {
+            display: flex;
+            gap: 4.103vw;
+        }
+
+        .sub-menu-icon {
+            width: 6.154vw;
+            height: 6.154vw;
+        }
+
+        .sub-menu-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.026vw;
+        }
+
+        .sub-menu-title {
+            color: var(--Black, #101828);
+            font-family: Inter;
+            font-size: 4.103vw;
+            font-weight: 600;
+            line-height: 6.154vw;
+        }
+
+        .sub-menu-desc {
+            color: var(--Description-gray, #667085);
+            font-family: Inter;
+            font-size: 3.59vw;
+            font-weight: 400;
+            line-height: 5.128vw;
+        }
+
+        .more-btn {
+            width: 100%;
+            display: flex;
+            padding: 5.128vw;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.026vw;
+            background: var(--Hover, #F9FAFB);
+
+            a {
+                color: var(--Primary, #4855DC);
+                font-family: Inter;
+                font-size: 3.59vw;
+                font-weight: 600;
+                line-height: 5.128vw;
+                display: flex;
+                align-items: center;
+                gap: 2.051vw;
+
+                &::after {
+                    content: '';
+                    background: url(../img/arrow-right.svg) no-repeat center top / cover;
+                    width: 5.128vw;
+                    height: 5.128vw;
+                }
+            }
+        }
+
+        .sub-menu-location {
+            .item {
+                display: flex;
+                height: 10.256vw;
+                padding: 2.051vw 4.103vw;
+                align-items: center;
+                gap: 4.103vw;
+
+                a {
+                    color: var(--Black, #101828);
+                    font-family: Inter;
+                    font-size: 4.103vw;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 6.154vw;
+                }
+            }
+
+            .more-location-btn {
+                color: var(--Primary, #4855DC);
+                font-family: Inter;
+                font-size: 3.59vw;
+                font-weight: 600;
+                line-height: 5.128vw;
+                display: flex;
+                align-items: center;
+                gap: 2.051vw;
+                height: 10.256vw;
+                padding: 2.564vw 4.103vw;
+
+                &::after {
+                    content: '';
+                    background: url(../img/arrow-right.svg) no-repeat center top / cover;
+                    width: 5.128vw;
+                    height: 5.128vw;
+                }
+            }
+        }
     }
 }
