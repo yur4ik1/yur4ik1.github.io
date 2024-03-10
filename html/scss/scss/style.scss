@@ -651,7 +651,7 @@
             height: 5.897vw;
             position: absolute;
             left: 94%;
-            
+
         }
     }
 
@@ -698,7 +698,7 @@
         }
     }
 
-    .mobile-submenu.mobile-submenu-proxies {
+    .mobile-submenu {
         width: 91vw;
         display: flex;
         padding: 4.103vw 0vw;
@@ -832,12 +832,21 @@
                 }
             }
         }
+
+        .solutions-item {
+            width: 100%;
+            border: 0.256vw rgba(145, 158, 171, 0.24);   
+            
+            .title {
+                margin-bottom: 2.051vw;
+            }
+        }
     }
 
-    .menu-item.active .mobile-submenu.mobile-submenu-proxies {
+    .menu-item.active .mobile-submenu {
         display: flex;
         opacity: 1;
         visibility: visible;
     }
- 
+
 }
