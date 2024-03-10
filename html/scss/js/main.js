@@ -37,13 +37,6 @@ const menu = document.querySelector('.menu-list');
 
 menu.addEventListener('click', (event) => {
   if (event.target.classList.contains('menu-item') && event.target.classList.contains('sub')) {
-    // Спочатку видаляємо клас 'active' з усіх елементів
-    document.querySelectorAll('.menu-item.sub.active').forEach((item) => {
-      item.classList.remove('active');
-    });
-
-    // Потім додаємо клас 'active' тільки до того елемента, який був натиснутий
-    event.target.classList.add('active');
+    event.target.classList.toggle('active');
   }
 });
-
