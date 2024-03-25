@@ -433,6 +433,10 @@
     padding-top: 25.521vw;
     padding-bottom: 6.302vw;
 
+    &__bg-mob {
+        display: none;
+    }
+
     .container {
         max-width: 78vw;
     }
@@ -494,6 +498,160 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1440px) {
+    .how {
+        padding-top: 26.667vw;
+    }
+
+    .how .container {
+        max-width: 85.764vw;
+    }
+
+    .how__title {
+        font-size: 2.639vw;
+        line-height: 4vw;
+        letter-spacing: 0.083vw;
+        margin-bottom: 5.694vw;
+    }
+
+    .how__item {
+        width: 14.306vw;
+        height: 20.694vw;
+        border-radius: 1.389vw;
+        box-shadow: 0vw 0vw 0.417vw 0.417vw rgba(142, 161, 186, 0.20);
+        gap: 2.222vw;
+    }
+
+    .how__icon {
+        width: 2.986vw;
+        height: 3.958vw;
+    }
+
+    .how__text h4 {
+        font-size: 1.528vw;
+        line-height: 2.778vw;
+        letter-spacing: 0.017vw;
+    }
+
+    .how__text p {
+        font-size: 1.111vw;
+        line-height: 1.875vw;
+        letter-spacing: 0.017vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .how {
+        padding-top: 26.25vw;
+    }
+
+    .how .container {
+        max-width: 85.764vw;
+    }
+
+    .how__title {
+        font-size: 2.734vw;
+        line-height: 4.501vw;
+        letter-spacing: 0.094vw;
+        margin-bottom: 5.781vw;
+    }
+
+    .how__item {
+        width: 14.531vw;
+        height: 21.875vw;
+        border-radius: 1.563vw;
+        box-shadow: 0vw 0vw 0.469vw 0.469vw rgba(142, 161, 186, 0.20);
+    }
+
+    .how__icon {
+        width: 3.203vw;
+        height: 4.219vw;
+    }
+
+    .how__text h4 {
+        font-size: 1.563vw;
+        line-height: 3.125vw;
+        letter-spacing: 0.019vw;
+    }
+
+    .how__text p {
+        font-size: 1.172vw;
+        line-height: 1.797vw;
+        letter-spacing: 0.019vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .how {
+        padding-top: 61.026vw;
+        position: relative;
+        background: #fff;
+    }
+
+    .how__bg-mob {
+        background: url(../img/how-bg-mob.png) no-repeat center top / cover;
+        width: 100%;
+        height: 131.026vw;
+        position: absolute;
+        display: block;
+        z-index: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .how .container {
+        max-width: 100%;
+        padding: 0 8.462vw;
+        z-index: 99999;
+        position: relative;
+    }
+
+    .how__title {
+        font-size: 6.41vw;
+        line-height: 14.771vw;
+        letter-spacing: 0.308vw;
+        margin-bottom: 8.974vw;
+    }
+
+    .how__items {
+        flex-direction: column;
+        align-items: center;
+        gap: 8.462vw;
+    }
+
+    .how__item {
+        width: 100%;
+        height: 56.667vw;
+        flex-shrink: 0;
+        border-radius: 5.128vw;
+        box-shadow: 0vw 0vw 1.538vw 1.538vw rgba(142, 161, 186, 0.20);
+        padding-top: 7.692vw;
+        padding-bottom: 7.692vw;
+        padding-left: 11.538vw;
+        padding-right: 11.538vw;
+        gap: 4.359vw;
+    }
+
+    .how__icon {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .how__text h4 {
+        font-size: 5.128vw;
+        line-height: 10.256vw;
+        letter-spacing: 0.062vw;
+    }
+
+    .how__text p {
+        font-size: 3.846vw;
+        line-height: 5.897vw;
+        letter-spacing: 0.062vw;
+    }
+}
+
 
 .get {
     padding-top: 5.469vw;
@@ -596,6 +754,186 @@
             width: 1.198vw;
             height: 0.729vw;
         }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .get {
+        padding-bottom: 16.875vw;
+
+        .container {
+            max-width: 53.844vw;
+        }
+    }
+
+    .get__title {
+        font-size: 2.639vw;
+        line-height: 4vw;
+        letter-spacing: 0.083vw;
+        margin-bottom: 4.653vw;
+    }
+
+    .get__item-title {
+        font-size: 1.736vw;
+        line-height: 2.778vw;
+        letter-spacing: 0.022vw;
+    }
+
+    .get__list-item {
+        font-size: 1.111vw;
+        line-height: 1.875vw;
+        letter-spacing: 0.017vw;
+    }
+
+    .get__list-item::before {
+        width: 1.389vw;
+        height: 1.389vw;
+        left: -3vw;
+    }
+
+    .get__top {
+        right: 7vw;
+        width: 4.028vw;
+        height: 4.028vw;
+        border-radius: 0.972vw;
+        box-shadow: 0vw 0vw 0.417vw 0.208vw rgba(142, 161, 186, 0.25);
+    }
+
+    .get__illustration_leaves {
+        width: 16.389vw;
+        height: 50.069vw;
+    }
+
+    .get__illustration_character {
+        width: 28.431vw;
+        height: 25vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .get {
+        padding-bottom: 16.875vw;
+
+        .container {
+            max-width: 53.844vw;
+        }
+    }
+
+    .get__title {
+        font-size: 2.734vw;
+        font-weight: 700;
+        line-height: 4.501vw;
+        letter-spacing: 0.094vw;
+    }
+
+    .get__item-title {
+        font-size: 1.563vw;
+        line-height: 3.125vw;
+        letter-spacing: 0.025vw;
+    }
+
+
+    .get__list-item {
+        font-size: 1.172vw;
+        line-height: 2.109vw;
+        letter-spacing: 0.019vw;
+    }
+
+    .get__list-item::before {
+        width: 1.406vw;
+        height: 1.406vw;
+    }
+
+    .get__top {
+        right: 7vw;
+        width: 4.297vw;
+        height: 4.297vw;
+        border-radius: 1.094vw;
+        box-shadow: 0vw 0vw 0.469vw 0.234vw rgba(142, 161, 186, 0.25);
+    }
+
+    .get__illustration_leaves {
+        width: 13.906vw;
+        height: 42.578vw;
+    }
+
+    .get__illustration_character {
+        width: 29.094vw;
+        height: 24.141vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .get {
+        padding-bottom: 16.875vw;
+
+        .container {
+            max-width: 100%;
+            padding: 0 8.462vw;
+        }
+    }
+
+    .get__title {
+        font-size: 6.41vw;
+        line-height: 14.771vw;
+        letter-spacing: 0.308vw;
+        white-space: nowrap;
+    }
+
+    .get__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .get__list {
+        gap: 6.846vw;
+        margin-left: 8vw;
+        margin-bottom: 12.308vw;
+    }
+
+    .get__item {
+        width: 100%;
+    }
+
+    .get__item-title {
+        font-size: 5.128vw;
+        line-height: 10.258vw;
+        letter-spacing: 0.082vw;
+        text-align: center;
+        margin-bottom: 5.385vw;
+    }
+
+
+    .get__list-item {
+        font-size: 3.846vw;
+        line-height: 6.923vw;
+        letter-spacing: 0.062vw;
+    }
+
+    .get__list-item::before {
+        width: 4.615vw;
+        height: 4.615vw;
+        left: -8vw;
+        top: 2.2vw;
+    }
+
+    .get__top {
+        right: 7vw;
+        width: 4.297vw;
+        height: 4.297vw;
+        border-radius: 1.094vw;
+        box-shadow: 0vw 0vw 0.469vw 0.234vw rgba(142, 161, 186, 0.25);
+    }
+
+    .get__illustration_leaves {
+        width: 13.906vw;
+        height: 42.578vw;
+    }
+
+    .get__illustration_character {
+        width: 29.094vw;
+        height: 24.141vw;
     }
 }
 
