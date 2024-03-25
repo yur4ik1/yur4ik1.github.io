@@ -321,7 +321,7 @@
         padding-top: 1.51vw;
         padding-bottom: 1.563vw;
         padding-left: 1.406vw;
-        padding-right: 0.677vw;
+        padding-right: 1.563vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1790,6 +1790,57 @@
         line-height: 1.042vw;
         letter-spacing: 0.009vw;
     }
+
+    .footer {
+        padding-top: 5.694vw;
+        padding-bottom: 5.833vw;
+    }
+
+    .footer .container {
+        max-width: 82.986vw;
+    }
+
+    .footer__logo-img {
+        width: 16.944vw;
+        height: 3.882vw;
+    }
+
+    .footer__col-1 {
+        gap: 3.194vw;
+    }
+
+    .footer__social {
+        gap: 1.597vw;
+    }
+
+    .footer__social-item {
+        width: 2.847vw;
+        height: 2.847vw;
+        border-radius: 1.701vw;
+        border: 0.069vw solid rgba(192, 200, 209, 0.80);
+    }
+
+    .footer__social-item img {
+        width: 1.589vw;
+        height: 1.589vw;
+    }
+
+    .footer__col-2 {
+        gap: 9.653vw;
+    }
+
+    .footer__menu-name {
+        margin-bottom: 3.125vw;
+        font-size: 1.528vw;
+        line-height: 2.778vw;
+        letter-spacing: 0.019vw;
+    }
+
+    .footer__menu-item a {
+        font-size: 1.111vw;
+        line-height: 2.431vw;
+        letter-spacing: 0.019vw;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -1834,9 +1885,66 @@
         line-height: 1.172vw;
         letter-spacing: 0.01vw;
     }
+
+    .footer {
+        padding-top: 4.422vw;
+        padding-bottom: 4.375vw;
+    }
+
+    .footer .container {
+        max-width: 84.453vw;
+    }
+
+    .footer__logo-img {
+        width: 19.062vw;
+        height: 4.367vw;
+    }
+
+    .footer__col-1 {
+        gap: 2.734vw;
+    }
+
+    .footer__social {
+        gap: 1.719vw;
+    }
+
+    .footer__social-item {
+        width: 3.203vw;
+        height: 3.203vw;
+        border-radius: 1.914vw;
+        border: 0.078vw solid rgba(192, 200, 209, 0.80);
+    }
+
+    .footer__social-item img {
+        width: 1.341vw;
+        height: 1.341vw;
+    }
+
+    .footer__copyright {
+        font-size: 1.25vw;
+        line-height: 3.125vw;
+        letter-spacing: 0.019vw;
+    }
+
+    .footer__col-2 {
+        gap: 9.453vw;
+    }
+
+    .footer__menu-name {
+        margin-bottom: 3.125vw;
+        font-size: 1.719vw;
+        line-height: 3.125vw;
+        letter-spacing: 0.021vw;
+    }
+
+    .footer__menu-item a {
+        font-size: 1.25vw;
+        line-height: 2.734vw;
+        letter-spacing: 0.021vw;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
 
     .container {
         max-width: 100%;
@@ -1932,5 +2040,79 @@
         .mobile-menu-item.active>a {
             color: #1B2438;
         }
+    }
+
+
+    .footer {
+        padding-top: 16.154vw;
+        padding-bottom: 18.462vw;
+    }
+
+    .footer .container {
+        max-width: 100%;
+        padding: 0 8.462vw;
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        width: 62.561vw;
+        height: 14.333vw;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .footer__col-1 {
+        gap: 8.974vw;
+        order: 2;
+    }
+
+    .footer__social {
+        gap: 5.897vw;
+    }
+
+    .footer__social-item {
+        width: 10.513vw;
+        height: 10.513vw;
+        border-radius: 6.282vw;
+        border: 0.256vw solid rgba(192, 200, 209, 0.80);
+    }
+
+    .footer__social-item img {
+        width: 5.868vw;
+        height: 5.868vw;
+    }
+
+    .footer__copyright {
+        font-size: 4.103vw;
+        font-weight: 400;
+        line-height: 10.258vw;
+        letter-spacing: 0.062vw;
+    }
+
+    .footer__col-2 {
+        gap: 7.692vw;
+        order: 1;
+        margin-bottom: 21.538vw;
+    }
+
+    .footer__menu-name {
+        margin-bottom: 12.188px;
+        font-size: 5.128vw;
+        line-height: 8.974vw;
+        letter-spacing: 0.068vw;
+        white-space: nowrap;
+    }
+
+    .footer__menu-item {
+        margin-bottom: 0;
+    }
+
+    .footer__menu-item a {
+        font-size: 3.846vw;
+        line-height: 8.821vw;
+        letter-spacing: 0.068vw;
     }
 }
