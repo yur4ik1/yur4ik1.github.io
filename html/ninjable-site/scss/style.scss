@@ -189,6 +189,8 @@
         background-color: #fff;
         bottom: 0;
         display: block;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
         max-width: 694px;
         overflow: scroll;
@@ -1272,71 +1274,146 @@
 
 @media screen and (max-width: 1280px) {
     .effectively {
-        padding-top: 148.997px;
-        padding-bottom: 11.111vw;
+        padding-top: 10vw;
+        padding-bottom: 11.094vw;
     }
 
     .effectively__illustration {
-        width: 13.819vw;
-        height: 26.875vw;
+        width: 12.031vw;
+        height: 23.516vw;
     }
 
     .effectively .container {
-        max-width: 86vw;
+        max-width: 84.5vw;
     }
 
     .effectively__titles {
-        gap: 1.111vw;
-        margin-bottom: 8.125vw;
+        gap: 0.781vw;
+        margin-bottom: 6.875vw;
     }
 
     .effectively__title {
-        font-size: 2.639vw;
-        line-height: 3.472vw;
-        letter-spacing: 0.083vw;
+        font-size: 2.734vw;
+        line-height: 3.906vw;
+        letter-spacing: 0.094vw;
     }
 
     .effectively__subtitle {
-        font-size: 1.111vw;
-        line-height: 2.083vw;
-        letter-spacing: 0.017vw;
+        font-size: 1.25vw;
+        line-height: 2.344vw;
+        letter-spacing: 0.019vw;
     }
 
     .effectively__items {
-        gap: 3.75vw;
+        gap: 2.969vw;
     }
 
     .effectively__item {
-        width: 26.111vw;
-        height: 25.347vw;
-        border-radius: 1.389vw;
-        box-shadow: 0vw 0vw 0.417vw 0.417vw rgba(142, 161, 186, 0.20);
-        padding: 2.431vw;
+        width: 26.094vw;
+        height: 25vw;
+        border-radius: 1.563vw;
+        background: #FAFCFB;
+        box-shadow: 0vw 0vw 0.469vw 0.469vw rgba(142, 161, 186, 0.20);
+        padding: 2.891vw;
+        padding-left: 1.8vw;
+        padding-right: 1.8vw;
     }
 
     .effectively__icon {
-        width: 4.444vw;
-        height: 4.444vw;
+        width: 4.297vw;
+        height: 5.234vw;
     }
 
     .effectively__text {
-        margin-top: 1.736vw;
+        margin-top: 1.563vw;
     }
 
     .effectively__text h5 {
-        font-size: 1.528vw;
-        letter-spacing: 0.017vw;
-        margin-bottom: 1.5vw;
-        text-align: center;
+        font-size: 1.563vw;
+        letter-spacing: 0.019vw;
+        margin-bottom: 1.7vw;
     }
 
     .effectively__text p {
-        font-size: 1.111vw;
-        letter-spacing: 0.017vw;
+        font-size: 1.172vw;
+        letter-spacing: 0.019vw;
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .effectively {
+        padding-top: 15.385vw;
+        padding-bottom: 15.385vw;
+    }
+
+    .effectively__illustration {
+        width: 23.59vw;
+        height: 46.154vw;
+        z-index: -1;
+    }
+
+    .effectively .container {
+        max-width: 100%;
+        padding: 0 7vw;
+    }
+
+    .effectively__titles {
+        gap: 4.359vw;
+        margin-bottom: 16.154vw;
+    }
+
+    .effectively__title {
+        font-size: 6.41vw;
+        line-height: 8.974vw;
+        letter-spacing: 0.308vw;
+        text-align: left;
+    }
+
+    .effectively__subtitle {
+        font-size: 3.846vw;
+        line-height: 6.923vw;
+        letter-spacing: 0.062vw;
+        text-align: left;
+    }
+
+    .effectively__items {
+        gap: 8.462vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .effectively__item {
+        width: 100%;
+        height: -webkit-max-content;
+        height: -moz-max-content;
+        height: max-content;
+        border-radius: 5.128vw;
+        box-shadow: 0vw 0vw 1.538vw 1.538vw rgba(142, 161, 186, 0.20);
+        padding: 7.949vw 6.41vw;
+    }
+
+    .effectively__icon {
+        width: 12.308vw;
+        height: 15.385vw;
+    }
+
+    .effectively__text {
+        margin-top: 4.872vw;
+    }
+
+    .effectively__text h5 {
+        font-size: 5.128vw;
+        line-height: 7.231vw;
+        letter-spacing: 0.062vw;
+        margin-bottom: 3.256vw;
+    }
+
+    .effectively__text p {
+        font-size: 3.846vw;
+        line-height: 7.231vw;
+        letter-spacing: 0.062vw;
+    }
+}
 
 .contact {
     background: url(../img/contact-bg.png) no-repeat center top / cover;
@@ -1448,6 +1525,209 @@
             cursor: pointer;
             box-shadow: 0vw 0vw 0.26vw 0.052vw rgba(142, 161, 186, 0.60);
         }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .contact {
+        padding-top: 22.014vw;
+        padding-bottom: 8.611vw;
+    }
+
+    .contact__illustration {
+        width: 21.944vw;
+        height: 30.278vw;
+    }
+
+    .contact__title {
+        font-size: 2.639vw;
+        line-height: 3.472vw;
+        letter-spacing: 0.083vw;
+        margin-bottom: 1.875vw;
+    }
+
+    .contact__desc {
+        font-size: 1.111vw;
+        line-height: 2.083vw;
+        letter-spacing: 0.017vw;
+    }
+
+    .contact__form-wrap {
+        margin-top: 3.403vw;
+    }
+
+    .contact__form-wrap input {
+        width: 20.556vw;
+        height: 3.403vw;
+    }
+
+    .contact__form-wrap button {
+        width: 16.111vw;
+        height: 3.4vw;
+        border-radius: 0vw 0.556vw 0.556vw 0vw;
+        box-shadow: 0vw 0vw 0.347vw 0.069vw rgba(142, 161, 186, 0.60);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .contact {
+        padding-top: 62.566vw;
+        padding-bottom: 8.359vw;
+
+        .container {
+            max-width: 56.875vw;
+        }
+    }
+
+    .contact__illustration {
+        width: 21.641vw;
+        height: 29.844vw;
+    }
+
+    .contact__title {
+        font-size: 2.734vw;
+        line-height: 3.672vw;
+        letter-spacing: 0.094vw;
+        margin-bottom: 2.109vw;
+    }
+
+    .contact__desc {
+        font-size: 1.25vw;
+        line-height: 2.344vw;
+        letter-spacing: 0.019vw;
+    }
+
+    .contact__form-wrap {
+        margin-top: 3.828vw;
+    }
+
+    .contact__form-wrap input {
+        width: 23.203vw;
+        height: 3.828vw;
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap input::-webkit-input-placeholder {
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap input::-moz-placeholder {
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap input:-ms-input-placeholder {
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap input::-ms-input-placeholder {
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap input::placeholder {
+        font-size: 1.172vw;
+        line-height: 1.084vw;
+        letter-spacing: 0.016vw;
+    }
+
+    .contact__form-wrap button {
+        width: 16.111vw;
+        height: 3.828vw;
+        border-radius: 0vw 0.625vw 0.625vw 0vw;
+        box-shadow: 0vw 0vw 0.391vw 0.078vw rgba(142, 161, 186, 0.60);
+        font-size: 1.25vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding-top: 62.564vw;
+        padding-bottom: 28.205vw;
+        background: url(../img/contact-bg-mob.png) no-repeat center top / cover;
+
+        .container {
+            max-width: 100%;
+            padding: 0 8.462vw;
+        }
+    }
+
+    .contact__illustration {
+        display: none;
+    }
+
+    .contact__title {
+        font-size: 6.41vw;
+        line-height: 8.974vw;
+        letter-spacing: 0.308vw;
+        margin-bottom: 4.103vw;
+    }
+
+    .contact__desc {
+        font-size: 3.846vw;
+        line-height: 7.692vw;
+        letter-spacing: 0.062vw;
+    }
+
+    .contact__form-wrap {
+        margin-top: 8.974vw;
+    }
+
+    .contact__form-wrap input {
+        width: 45.897vw;
+        height: 10.769vw;
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+        padding: 3.59vw;
+    }
+
+    .contact__form-wrap input::-webkit-input-placeholder {
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+    }
+
+    .contact__form-wrap input::-moz-placeholder {
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+    }
+
+    .contact__form-wrap input:-ms-input-placeholder {
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+    }
+
+    .contact__form-wrap input::-ms-input-placeholder {
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+    }
+
+    .contact__form-wrap input::placeholder {
+        font-size: 3.59vw;
+        line-height: 3.558vw;
+        letter-spacing: 0.051vw;
+    }
+
+    .contact__form-wrap button {
+        width: 32.821vw;
+        height: 10.769vw;
+        border-radius: 0vw 2.051vw 2.051vw 0vw;
+        box-shadow: 0vw 0vw 1.282vw 0.256vw rgba(142, 161, 186, 0.60);
+        font-size: 3.59vw;
+        line-height: 4.615vw;
+        letter-spacing: 0.096vw;
     }
 }
 
@@ -1642,7 +1922,7 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width:768px) {
     .container {
         max-width: 100%;
         padding: 0 2.578vw;
