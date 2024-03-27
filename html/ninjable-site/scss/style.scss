@@ -153,6 +153,8 @@
     }
 }
 
+/*
+
 @media screen and (max-width: 1440px) {
     .hero {
         padding-top: 9.161vw;
@@ -191,6 +193,8 @@
         height: 34.097vw;
     }
 }
+
+*/
 
 @media screen and (max-width: 1280px) {
     .hero {
@@ -354,6 +358,7 @@
     }
 }
 
+/*
 
 @media screen and (max-width: 1440px) {
     .how {
@@ -396,6 +401,8 @@
         letter-spacing: 0.017vw;
     }
 }
+
+*/
 
 @media screen and (max-width: 1280px) {
     .how {
@@ -612,6 +619,7 @@
     }
 }
 
+/*
 @media screen and (max-width: 1440px) {
     .get {
         padding-bottom: 16.875vw;
@@ -664,6 +672,7 @@
         height: 25vw;
     }
 }
+*/
 
 @media screen and (max-width: 1280px) {
     .get {
@@ -801,19 +810,21 @@
 
 .text-with-image {
     padding-top: 10.469vw;
-    padding-bottom: 4.792vw;
-    background: url(../img/4.png) no-repeat center top / cover;
+    padding-bottom: 6.792vw;
+    height: 57.135vw;
+    position: relative;
 
     .container {
-        max-width: 64.677vw;
+        max-width: 65.979vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .illustration {
-        max-width: 30.458vw;
+        width: 30.458vw;
         height: auto;
+        z-index: 999999;
     }
 
     .text {
@@ -821,6 +832,7 @@
         flex-direction: column;
         gap: 1.823vw;
         width: 30.501vw;
+        z-index: 99999999;
 
         h2 {
             color: #1B2438;
@@ -851,40 +863,114 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .text-with-image {
-        padding-top: 10.764vw;
-        padding-bottom: 12.639vw;
+.text-with-image.style-1 {
+    background: url(../img/4.png) no-repeat center top / cover;
+}
+
+.text-with-image.style-2 {
+    background: url(../img/5.png) no-repeat center top / cover;
+    height: 57.135vw;
+
+    .illustration {
+        width: 35.349vw;
     }
 
-    .text-with-image .container {
-        max-width: 69.861vw;
-        justify-content: normal;
-        gap: 4.861vw;
-    }
-
-    .text-with-image .illustration {
-        width: 34.167vw;
-        height: 33.75vw;
-    }
-
-    .text-with-image .text {
-        width: 30.764vw;
-        gap: 1.944vw;
-    }
-
-    .text-with-image .text h2 {
-        font-size: 2.639vw;
-        line-height: 3.472vw;
-        letter-spacing: 0.083vw;
-    }
-
-    .text-with-image .text p {
-        font-size: 1.111vw;
-        line-height: 2.083vw;
-        letter-spacing: 0.017vw;
+    .text {
+        margin-bottom: 10vw;
     }
 }
+
+.text-with-image.style-3 {
+    background: url(../img/6.png) no-repeat center top / cover;
+    height: 59.427vw;
+    padding-top: 8.698vw;
+    padding-bottom: 16.625vw;
+
+    .illustration {
+        width: 33.629vw;
+    }
+
+    .text {
+        margin-bottom: 7vw;
+    }
+}
+
+.text-with-image.style-4 {
+    background: url(../img/7.png) no-repeat center top / cover;
+    height: 49.167vw;
+    padding-top: 3.073vw;
+    padding-bottom: 10.938vw;
+
+    .leaves {
+        background: url(../img/illustration_leaves-4.svg) no-repeat center top / cover;
+        width: 10.636vw;
+        height: 14.74vw;
+        position: absolute;
+        left: 0;
+        top: -7vw;
+        z-index: 0;
+    }
+
+    .mushroom {
+        background: url(../img/mushroom.png) no-repeat center top / cover;
+        width: 25.6vw;
+        height: 23.125vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    .illustration {
+        width: 36.966vw;
+        position: relative;
+        left: -7vw;
+
+    }
+}
+
+.text-with-image.style-5 {
+    background: url(../img/8.png) no-repeat center top / cover;
+    height: 56.354vw;
+    padding-top: 8.542vw;
+    padding-bottom: 10vw;
+
+    .illustration {
+        width: 28.259vw;
+    }
+
+    .text {
+        margin-bottom: 7vw;
+    }
+}
+
+.text-with-image.style-6 {
+    background: url(../img/9.png) no-repeat center top / cover;
+    height: 56.354vw;
+    padding-top: 2.396vw;
+    padding-bottom: 4.115vw;
+
+    .bug {
+        background: url(../img/bug.svg) no-repeat center top / cover;
+        width: 21.533vw;
+        height: 26.354vw;
+        position: absolute;
+        top: -15vw;
+        right: 0;
+    }
+
+    .illustration {
+        width: 35.975vw;
+        position: relative;
+        top: -3vw;
+        left: 4vw;
+    }
+
+    .text {
+        margin-bottom: 20vw;
+    }
+}
+
 
 @media screen and (max-width: 1280px) {
     .text-with-image {
@@ -919,12 +1005,108 @@
         line-height: 2.344vw;
         letter-spacing: 0.019vw;
     }
+
+
+
+    .text-with-image.style-2 {
+        height: 57.813vw;
+        padding-top: 7.813vw;
+        padding-bottom: 3.75vw;
+
+        .illustration {
+            width: 39.063vw;
+        }
+
+        .text {
+            margin-bottom: 0vw;
+        }
+    }
+
+    .text-with-image.style-3 {
+        height: 63.359vw;
+        padding-top: 9.375vw;
+        padding-bottom: 14.766vw;
+
+        .illustration {
+            width: 38.594vw;
+        }
+
+        .text {
+            margin-bottom: 6vw;
+        }
+    }
+
+    .text-with-image.style-4 {
+        height: 52.344vw;
+        padding-top: 4.375vw;
+        padding-bottom: 9.063vw;
+
+        .text {
+            position: relative;
+            right: 10vw;
+        }
+
+        .leaves {
+            width: 12.813vw;
+            height: 17.734vw;
+        }
+
+        .mushroom {
+            width: 26.172vw;
+            height: 23.672vw;
+        }
+
+        .illustration {
+            width: 40.859vw;
+        }
+    }
+
+    .text-with-image.style-5 {
+        height: 58.906vw;
+        padding-top: 12.813vw;
+        padding-bottom: 7.5vw;
+
+        .illustration {
+            width: 28.828vw;
+        }
+
+        .text {
+            margin-bottom: 1vw;
+        }
+    }
+
+    .text-with-image.style-6 {
+        height: 56.354vw;
+        padding-top: 2.396vw;
+        padding-bottom: 5.781vw;
+
+        .container {
+            gap: 0vw;
+            justify-content: space-between;
+        }
+
+        .bug {
+            width: 21.533vw;
+            height: 26.354vw;
+            top: -15vw;
+            right: 0;
+        }
+
+        .illustration {
+            width: 43.984vw;
+        }
+
+        .text {
+            margin-bottom: 0vw;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     .text-with-image {
         padding-top: 87px;
         padding-bottom: 61.538vw;
+        height: 213.846vw;
         background: url(../img/4-mob.png) no-repeat center top / cover;
     }
 
@@ -957,6 +1139,108 @@
         font-size: 3.846vw;
         line-height: 6.923vw;
         letter-spacing: 0.062vw;
+    }
+
+
+    .text-with-image.style-2 {
+        height: 190vw;
+        padding-top: 14.872vw;
+        padding-bottom: 0;
+
+        .illustration {
+            width: 100%;
+            order: 1;
+        }
+
+        .text {
+            order: 2;
+        }
+    }
+
+    .text-with-image.style-3 {
+        height: auto;
+        padding-top: 9.375vw;
+        padding-bottom: 14.766vw;
+
+        .illustration {
+            width: 100%;
+            order: 1;
+        }
+
+        .text {
+            order: 2;
+            margin-bottom: 0;
+        }
+    }
+
+    .text-with-image.style-4 {
+        height: auto;
+        padding-top: 19.744vw;
+        padding-bottom: 63.795vw;
+
+        .text {
+            position: relative;
+            right: 0vw;
+        }
+
+        .leaves {
+            display: none;
+        }
+
+        .mushroom {
+            width: 59.231vw;
+            height: 53.59vw;
+        }
+
+        .illustration {
+            width: 100%;
+        }
+    }
+
+    .text-with-image.style-5 {
+        height: auto;
+        padding-top: 22.051vw;
+        padding-bottom: 61.282vw;
+
+        .illustration {
+            width: 100%;
+            height: auto;
+            order: 1;
+        }
+
+        .text {
+            margin-bottom: 0vw;
+            order: 2;
+        }
+    }
+
+    .text-with-image.style-6 {
+        height: auto;
+        padding-top: 2.396vw;
+        padding-bottom: 17.949vw;
+
+        .container {
+            gap: 0vw;
+            justify-content: space-between;
+        }
+
+        .bug {
+            width: 48.718vw;
+            height: 59.744vw;
+            top: -42vw;
+            right: 0;
+        }
+
+        .illustration {
+            width: 100%;
+            height: auto;
+            order: 1;
+        }
+
+        .text {
+            margin-bottom: 0vw;
+            order: 2;
+        }
     }
 }
 
@@ -1059,6 +1343,8 @@
     }
 }
 
+/*
+
 @media screen and (max-width: 1440px) {
     .effectively {
         padding-top: 148.997px;
@@ -1124,6 +1410,8 @@
         letter-spacing: 0.017vw;
     }
 }
+
+*/
 
 @media screen and (max-width: 1280px) {
     .effectively {
@@ -1381,6 +1669,8 @@
     }
 }
 
+/*
+
 @media screen and (max-width: 1440px) {
     .contact {
         padding-top: 22.014vw;
@@ -1421,6 +1711,7 @@
         box-shadow: 0vw 0vw 0.347vw 0.069vw rgba(142, 161, 186, 0.60);
     }
 }
+*/
 
 @media screen and (max-width: 1280px) {
     .contact {
@@ -1735,7 +2026,7 @@
 }
 
 
-
+/*
 @media screen and (max-width: 1440px) {
     .container {
         max-width: 83.333vw;
@@ -1842,6 +2133,7 @@
         letter-spacing: 0.019vw;
     }
 }
+*/
 
 @media screen and (max-width: 1280px) {
     .container {
