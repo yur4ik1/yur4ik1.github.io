@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Positions</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Positions">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/variables.js" defer></script>
+</head>
+
+<body class="positions-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content positions" id="positionsSection">
+                <div id='anchor'>
+                    <h2>POSITIONS</h2>
+                </div>
+                <div class="add-department">
+                    <a class="add-department-btn btn" href="#">Add Department</a>
+
+                    <div class="new__custom-select-wrapper">
+                        <div class="new__custom-select filter-select-scroll">
+                            <div class="inputFilter">
+                                <input class="new__custom-select__trigge_new" type="text"
+                                    placeholder="Type here to search for Clan..." id="newCustomSelect"></input>
+                                <button class="closeFilter hidden">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="new__custom-options" id="new__custom-options"></div>
+                            <div class="custom-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="overlay__inner">
+                        <div class="overlay__content"><span class="spinner"></span></div>
+                    </div>
+                </div>
+
+                <div id="departments-view"></div>
+
+                <div class="navigation" id="navigation">
+                    <span class="prev" id="btnPrev"></span>
+                    <span class="page active" id="firstCircle">1</span>
+                    <span class="page" id="secondCircle">2</span>
+                    <span class="next" id="btnNext"></span>
+                </div>
+
+            </section>
+        </section>
+
+
+        <div class="ninjable__popup positions__popup add-department">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close edit-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>ADD DEPARTMENT</h3>
+                </div>
+
+                <div class="positions__popup-content">
+                    <div class="positions__popup-form">
+                        <label>Department Name
+                           <!-- <div class="field">
+                                <input type="text" placeholder="Type a department name" id="department">
+                                <button class="btn" onclick="AddElement()"></button>
+                            </div> -->
+
+                            <div class="field">
+                                <div class="new__custom-select-wrapper">
+                                    <div class="new__custom-select">
+                                        <span class="line"></span>
+                                        <div class="arrow"></div>
+                                        <div class="new__custom-select__trigger">Type here to search for Clan...</div>
+              
+                                        <div class="new__custom-options">
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all1">
+                                                <label for="all1">A Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all2">
+                                                <label for="all2">B Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all3">
+                                                <label for="all3">C Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all4">
+                                                <label for="all4">D Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all5">
+                                                <label for="all5">E Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all6">
+                                                <label for="all6">F Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all7">
+                                                <label for="all7">G Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all8">
+                                                <label for="all8">A Department</label>
+                                            </div>
+                                            <div class="new__custom-option" >
+                                                <input type="checkbox" id="all9">
+                                                <label for="all9">A Department</label>
+                                            </div>
+                                        </div>
+                                        <div class="custom-scrollbar"></div>
+                                    </div>
+                                  </div>
+                                  <button class="btn" onclick="AddElement()"></button>
+                            </div>
+                        </label>
+                        <h4 class="departments-title">Added Departments</h4>
+                        <div class="info-popup">
+                            <p class="title">Added Departments</p>
+                            <p class="desc">
+                                These departments are in preview mode. Please click the "Add" button to add these
+                                departments to the page.
+                            </p>
+                        </div>
+                        <div id="departlist">
+
+                        </div>
+                        <div class="bottom">
+                            <button class="btn" onclick="DepartmentAdd()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ninjable__popup positions__popup job add-job">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close add-job-close" id="addJobPopupClose">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3 id="titlePopupJob">ADD JOB</h3>
+                </div>
+
+                <div class="positions__popup-content">
+                    <div class="positions__popup-form">
+                        <label>* Job Title (Rank)
+                            <div class="field">
+                                <input type="text" placeholder="Designer" id="add-job-title">
+                            </div>
+                            <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                title</span>
+                        </label>
+                        <label>* Description
+                            <div class="field">
+                                <textarea name="" cols="30" rows="10" placeholder="Text"
+                                    id="add-job-description"></textarea>
+                            </div>
+                            <span class="let-know-required" id="required-add-job-description">Please let us know the
+                                description</span>
+                        </label>
+                        <label>* Skills
+                            <div class="add-skils" id="add-job-skills-selected">
+                            </div>
+                            <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                skills</span>
+                        </label>
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Junior</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+                        
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Middle</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">ASenior</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Lead</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Manager</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">C-Level</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="bottom">
+                            <button class="btn" id="add-job-skills-add-button">Add</button>
+                            <button class="btn hidden" id="add-job-skills-save-button">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ninjable__popup positions__popup job edit-job">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close edit-job-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <div id="anchorPopup">
+                        <h3>EDIT JOB</h3>
+                    </div>
+                </div>
+
+                <div class="positions__popup-content">
+                    <div class="positions__popup-form">
+                        <label>* Job Title (Rank)
+                            <div class="field">
+                                <input type="text" placeholder="Designer">
+                            </div>
+                        </label>
+
+                        <label>* Description
+                            <div class="field">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Text"></textarea>
+                            </div>
+                        </label>
+                        <label>* Skills
+                            <div class="add-skils">
+                                <button class="skill">Blender 3D</button>
+                                <button class="skill">Adobe Photoshop</button>
+                                <button class="skill">ZBrush</button>
+                                <button class="skill">Sketch</button>
+                                <button class="skill">Figma</button>
+                                <button class="skill">Adobe Illustrator</button>
+                                <button class="skill">Adobe Photoshop</button>
+                                <button class="skill">ZBrush</button>
+                                <button class="skill active">Blender 3D</button>
+                            </div>
+
+                        </label>
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Junior</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+                        
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Middle</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">ASenior</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Lead</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">Manager</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="levels__fields">
+                            <div class="left">
+                                <label>* Level
+                                    <div class="custom-select">
+                                        <div class="select-selected" id="select-selected">C-Level</div>
+                                        <div class="select-items select-hide">
+                                            <div class="select-option">Junior</div>
+                                            <div class="select-option">Middle</div>
+                                        </div>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-skills-selected">Please let us know the
+                                        skills</span>
+                                </label>
+
+                                <label>* Title
+                                    <div class="field">
+                                        <input type="text" placeholder="Manager Developer" id="add-job-title">
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-title">Please let us know the
+                                        title</span>
+                                </label>
+                            </div>
+                            <div class="right">
+                                <label>* Level Description
+                                    <div class="field">
+                                        <textarea name="" cols="30" rows="10" placeholder="Text"
+                                            id="add-job-description"></textarea>
+                                    </div>
+                                    <span class="let-know-required" id="required-add-job-description">Please let us know the level
+                                        description</span>
+                                </label>
+                            </div>
+                        </div> 
+
+                        <div class="bottom">
+                            <button class="btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .row-header :nth-child(1) {
+            width: 12.4vw !important;
+        }
+
+        .row-header :nth-child(2) {
+            width: 19vw !important;
+        }
+
+        .row-header :nth-child(3) {
+            width: 11vw !important;
+        }
+
+        .row-header :nth-child(4) {
+            width: 5.30vw !important;
+        }
+
+        .description {
+            padding-right: 10px !important;
+        }
+
+        .name {
+            padding-right: 10px !important;
+        }
+
+        .new__custom-select__trigge_new {
+            padding-top: 0.938vw;
+            padding-bottom: 0.938vw;
+            padding-left: 2.086vw;
+            padding-right: 1.199vw;
+            font-weight: 300;
+            font-size: .782vw;
+            line-height: .73vw;
+            letter-spacing: .01vw;
+            color: #b9babe;
+            background: #fff;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            font-family: Rubik;
+            border: none !important;
+        }
+
+
+        .inputFilter {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border: 0.052vw solid #d7dee6;
+            border-radius: 0.417vw;
+        }
+
+        .inputFilter:focus {
+            box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;
+        }
+
+        .inputFilter input:focus {
+            box-shadow: none !important;
+        }
+
+
+        .closeFilter {
+            z-index: 9999;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 2.555vw;
+            background: #fff;
+            cursor: pointer;
+            border: none !important;
+        }
+
+        .closeFilter img {
+            width: 1.033vw;
+            height: 1.033vw;
+        }
+
+        .span-skill {
+            width: auto;
+            padding: 0.365vw 0.574vw;
+            background: #fafcfb;
+            -webkit-box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, .25);
+            box-shadow: 0vw 0vw 0.052vw 0.052vw rgba(142, 161, 186, .25);
+            border-radius: 0.417vw;
+            font-size: .782vw;
+            line-height: .782vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            letter-spacing: .007vw;
+            color: #b9babe;
+            border: none;
+            margin-bottom: 1.043vw;
+            margin-right: 1.043vw;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .active-span {
+            color: #b1ccbc;
+            background: #eaf6ef;
+            padding-left: 1.721vw;
+            -webkit-box-shadow: 0vw 0vw 0.052vw 0.052vw #d7e7dd;
+            box-shadow: 0vw 0vw 0.052vw 0.052vw #d7e7dd;
+        }
+
+        .active-span::before {
+            content: "";
+            background: url(../img/btn-tick.svg) no-repeat center top/cover;
+            width: 0.73vw;
+            height: 0.73vw;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: absolute;
+            top: 0.352vw;
+            left: 0.552vw;
+        }
+
+
+        .table .row-item:nth-child(odd) {
+            background-color: #f7f8fa;
+        }
+
+        .new__custom-option {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+
+        }
+
+        .new__custom-option-lable {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .hidden {
+            display: none;
+        }
+
+        .department-field {
+            padding-left: 2.086vw !important;
+            color: #1b2438;
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-family: "Karla";
+            font-weight: 500;
+            font-size: 1.043vw;
+            line-height: 2.503vw;
+            letter-spacing: .014vw;
+            color: #1b2438;
+            margin-right: 5px;
+            transition: 0.4s;
+            border-radius: .521vw;
+        }
+
+        .department {
+            position: relative;
+        }
+
+        .department__wrapper-archive {
+            position: absolute;
+            top: -100% !important;
+            left: 120%;
+        }
+
+        .let-know-required {
+            display: none;
+            font-weight: 400;
+            font-size: 0.678vw;
+            line-height: 0.73vw;
+            letter-spacing: 0.01vw;
+            color: red;
+            margin-top: 0.782vw;
+        }
+
+        .let-know-required.active {
+            display: block;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            const datas = await renderPositions();
+            renderSkill()
+            await newCustomSelectquery()
+            filter()
+        });
+
+        let filterFlag = false
+        const limit = 3
+
+        async function renderPositions(offset) {
+            document.querySelector('.overlay').classList.add('active')
+            const data = JSON.stringify({
+                query: `query DepartmentsQuery($limit: Int, $offset: Int) {
+                    departments(limit: $limit, offset: $offset, where: {active: {_eq: true}, title: {}}, order_by: {id: desc}) {
+                        id
+                        title
+                        active
+                        departments_jobs(where: {active: {_eq: true}}) {
+                        active
+                        description
+                        title
+                         id
+                        jobs_skills_jobs(where: {}) {
+                            skills_jobs_skill {
+                            title
+                            status
+                            id
+                            }
+                        }
+                        }
+                    },
+                    departments_aggregate(where: {active: {_eq: true}}) {
+                        aggregate {
+                        count
+                        }
+                    }
+                    }`, variables: {
+                    limit: limit,
+                    offset: offset
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.departments
+            const datasCount = json.data.departments_aggregate
+            countItems = datasCount.aggregate.count
+
+            document.getElementById('departments-view').innerHTML = datas.map((da, index) => {
+                return `<div class = "positions-item">
+                    <div class="department__wrapper">
+                        <div class="department">
+                            <p class="department-field" contentEditable="false" data-default-value="${da.title}" data-id="${da.id}">${da.title}</p>
+                            <a class="edit" href="#"></a>
+                            <a class="skills-archive" data-id="${da.id}" href="#"></a>
+                            <div class="skills__alert-popup department__wrapper-archive" data-id="${da.id}">
+                            <p>Are you sure?</p>
+                            <div class="btns">
+                                <button class="true">Yes</button>
+                                <button class="false">No</button>
+                            </div>
+                        </div>
+    
+                        <div class="skills__archive-popup">
+                            <p>Department can't be deactivated until you have at least one active user with this department.</p>
+                        </div>
+    
+                        </div>
+                        <div class="add-job">
+                            <button class="add-job-btn btn" onclick="openAddJobPopup('${da.id}')">Add Job</button>
+                        </div>
+                    </div>
+    
+                    <div class="content__section">
+                        <div class="table">
+                            <div class="row row-header">
+                                <div class="cell">Job Title (Rank)</div>
+                                <div class="cell">Description</div>
+                                <div class="cell">Skills</div>
+                                <div class="cell">Actions</div>
+                            </div>
+                            ${da.departments_jobs.length ? `${da.departments_jobs.map((departmentJob, id) => {
+                    return departmentJob.active ? `<div class="row row-item" data-row-item-id=${departmentJob.id}>
+                                <div class="cell name">${departmentJob.title}</div>
+                                <div class="cell description">
+                                    ${departmentJob.description}
+                                </div>
+                                <div class="cell tags">
+                                    <div>
+                                        ${departmentJob.jobs_skills_jobs.length ? departmentJob.jobs_skills_jobs.map((jobSkillDepartment) => {
+                        return `<a href="#" data-tag-id="${jobSkillDepartment.skills_jobs_skill.id}">${jobSkillDepartment.skills_jobs_skill.title}</a>`
+                    }).join(' ') : ''}
+                                    </div>
+                                </div>
+                                <div class="cell actions">
+                                    <span class="edit edit-job-btn" data-row-archive-id=${departmentJob.id}></span>
+                                    <span class="archive" data-row-archive-id=${departmentJob.id}></span>
+                                </div>
+                            </div>`
+                        : ''
+                }).join(' ')}` : ''}
+                        </div>
+                    </div>
+                </div>`
+            }).join(' ')
+
+            document.querySelector('.overlay').classList.remove('active')
+            btnEdit = []
+            archiveListJob()
+            editTitleList()
+            popupArhive()
+            editListJob()
+            pagination(countItems)
+            return datas;
+        }
+
+        // ....... 
+
+        async function addJob(department_id) {
+
+            let jobTitle = document.getElementById('add-job-title')
+            let description = document.getElementById('add-job-description')
+            let selectedSkills = document.getElementById('add-job-skills-selected')
+
+
+            let activeSkillsIds = []
+            Array.from(selectedSkills.children).map((skill, index) => {
+                if (skill.classList.contains('active-span')) {
+                    activeSkillsIds.push(Number(skill.id.split('-')[1]))
+                }
+            })
+
+            if (!jobTitle.value || !description.value || !activeSkillsIds.length) {
+                if (!activeSkillsIds.length) {
+                    selectedSkills.classList.add('error');
+                    document.getElementById('required-add-job-skills-selected').classList.add('active');
+                    document.getElementById('add-job-skills-selected').addEventListener('click', () => {
+                        document.getElementById('required-add-job-skills-selected').classList.remove('active')
+                        document.getElementById('add-job-skills-selected').classList.remove('error')
+                    })
+                }
+                if (!jobTitle.value) {
+                    jobTitle.classList.add('error');
+                    document.getElementById('required-add-job-title').classList.add('active');
+                    document.getElementById('add-job-title').addEventListener('click', () => {
+                        document.getElementById('required-add-job-title').classList.remove('active')
+                        document.getElementById('add-job-title').classList.remove('error')
+                    })
+                }
+                if (!description.value) {
+                    description.classList.add('error');
+                    document.getElementById('required-add-job-description').classList.add('active');
+                    document.getElementById('add-job-description').addEventListener('click', () => {
+                        document.getElementById('required-add-job-description').classList.remove('active')
+                        document.getElementById('add-job-description').classList.remove('error')
+                    })
+                }
+                return
+            }
+            document.querySelector('.positions__popup.add-job').classList.remove('active');
+            document.querySelector('.overlay').classList.add('active')
+
+            const data = JSON.stringify({
+                query: `mutation insertJob($title: String, $description: String, $department_id: Int) {
+                  insert_jobs(objects: {department_id: $department_id, description: $description, title: $title}) {
+                    returning {
+                      id
+                      description
+                      department_id
+                    }
+                  }
+                }`, variables: {
+                    title: jobTitle.value,
+                    description: description.value,
+                    department_id: Number(department_id)
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+
+            const jsonJob = await response.json();
+            const jobId = jsonJob.data.insert_jobs.returning[0].id
+
+
+            for (let i = 0; i < activeSkillsIds.length; i++) {
+                activeSkillsIds[i]
+                const dataSkillJob = JSON.stringify({
+                    query: `mutation insertSkillsJobs ($job_id: Int, $skill_id: Int) {
+                      insert_skills_jobs(objects: [{job_id: $job_id, skill_id: $skill_id}]) {
+                        affected_rows
+                      }
+                    }`, variables: {
+                        job_id: jobId,
+                        skill_id: activeSkillsIds[i]
+                    }
+                });
+                const response = await fetch(
+                    BaseUrl,
+                    {
+                        method: 'post',
+
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Content-Length': dataSkillJob.length,
+                            'Authorization': 'Bearer ' + localStorage.getItem('token')
+                        },
+                        body: dataSkillJob
+                    }
+                );
+            }
+            // activeSkillsIds = []
+            if (!filterFlag) {
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                renderPositions(offset)
+                filterFlag = false
+                navigation.style = 'display:flex;'
+            } else {
+                renderFilter(titleOptions)
+                navigation.style = 'display:none;'
+            }
+
+        }
+        // ....... 
+
+        // button-open-popup: "Add Job"
+        const addJobPopup = document.querySelector('.positions__popup.add-job');
+        async function openAddJobPopup(department_id) {
+            scrollToAnchorPopup()
+
+            document.getElementById('add-job-skills-save-button').classList.add('hidden')
+            document.getElementById('add-job-skills-add-button').classList.remove('hidden')
+            document.getElementById('titlePopupJob').textContent = 'ADD JOB'
+            addJobPopupClear(addJobPopup)
+            addJobPopup.classList.add('active');
+            // SkillsQuery in popup "Add Job"
+            const data = JSON.stringify({
+                query: `query SkillsQuery ($limit: Int, $offset: Int) {
+                      skills(limit: $limit, offset: $offset) {
+                        id
+                        status
+                        title
+                        skills_skills_departments {
+                          skills_departments_department {
+                            title
+                          }
+                        }
+                      }
+                    }`, variables: {
+                    limit: 20,
+                    offset: 0
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const dataJsonSkills = json.data.skills
+
+
+            document.getElementById('add-job-skills-selected').innerHTML = dataJsonSkills.map((da, index) => {
+                return `<span class="skill span-skill" onclick="addSkillToSelectedJob('${da.id}')" id="addJobSkillSelectedWithId-${da.id}" data-tag-id="${da.id}">${da.title}</span>`
+            }).join(' ')
+
+            document.getElementById('add-job-skills-add-button').setAttribute('data-department-id', department_id)
+
+        }
+
+        document.getElementById('add-job-skills-add-button').addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const department_id = e.target.getAttribute('data-department-id')
+
+            addJob(department_id)
+        })
+
+        function addSkillToSelectedJob(skill_id) {
+            let department_skill_selected_id = `addJobSkillSelectedWithId-${skill_id}`
+            document.getElementById(department_skill_selected_id).classList.toggle('active-span')
+        };
+
+    </script>
+
+    <script src="./js/main.min.js"></script>
+    <script>
+        let arr = []
+        let titleOptions = ''
+
+        function DeleteElement(element) {
+            const elementTitle = element.querySelector('input').value
+            const indexToRemove = arr.findIndex(item => item.title === elementTitle);
+            if (indexToRemove !== -1) {
+                arr.splice(indexToRemove, 1);
+            }
+            element.remove()
+        }
+
+        document.querySelector('.edit-close').addEventListener('click', () => {
+            document.getElementById('departlist').innerHTML = ''
+        })
+
+        function AddElement() {
+            const value = document.getElementById('department')
+            const valueTitle = value.value
+            value.addEventListener('input', () => {
+                value.classList.remove('error')
+            })
+            if (valueTitle === '') {
+                value.classList.add('error')
+                return
+            }
+            document.getElementById('departlist').innerHTML = '';
+            arr.push({ title: valueTitle })
+            arr.forEach((e) => {
+                if (e.title != "") {
+                    document.getElementById('departlist').innerHTML += `<label id="${e.title}">
+                                Department Name
+                                <div class="field added">
+                                <input type="" placeholder="Development" value="${e.title}">
+                                <button class="btn" onclick="DeleteElement(this.parentNode.parentNode)"></button>
+                                </div>
+                            </label>`
+                }
+            })
+            value.value = ''
+        }
+        async function DepartmentAdd() {
+            if (arr.length === 0) {
+                return
+            }
+            positionsPopup.classList.remove('active');
+            document.querySelector('.overlay').classList.add('active')
+            document.querySelector('.overlay').style = 'z-index: 99999'
+            const obj = Object.assign({}, arr)
+            const newobj = { ...obj }
+
+            const data = JSON.stringify({
+                query: `mutation InsertDepartmentsMutation($arr: [departments_insert_input!]!) {
+                                      insert_departments(objects: $arr) {
+                                      returning {
+                                      id
+                                      title
+                                        }
+                                      }
+                                    }`
+                , variables: {
+                    arr: arr
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.levels
+            let body = "";
+            document.querySelector('.overlay').classList.remove('active')
+            document.querySelector('.overlay').removeAttribute('style')
+            arr = [];
+            setTimeout(() => {
+                document.getElementById('departlist').innerHTML = '';
+            }, 500)
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        }
+    </script>
+
+    <script>
+        let btnEdit = []
+        const inputItem = []
+        let inputTitleChange = ''
+        let defaultInputTitle = ''
+        let inputIndex = ''
+
+        function editTitleList() {
+            const departmentsView = document.getElementById('departments-view');
+            const departmentsViewEdit = departmentsView.querySelectorAll('.edit');
+            const inputItem = departmentsView.querySelectorAll('.department-field');
+
+            for (let i = 0; i < departmentsViewEdit.length; i++) {
+                if (departmentsViewEdit[i].tagName.toLowerCase() === 'a') {
+                    btnEdit.push(departmentsViewEdit[i]);
+                }
+            }
+            btnEdit.forEach((element, index) => {
+                element.addEventListener('click', (e) => {
+                    popupArhivehidden()
+                    inputIndex = index
+                    defaultInputTitle = inputItem[index].dataset.defaultValue
+                    inputTitleChange = inputItem[index].textContent
+                    inputItem[index].contentEditable = true
+                    inputItem[index].addEventListener('input', () => {
+                        inputTitleChange = inputItem[index].textContent
+                    })
+                    e.preventDefault()
+                    element.blur()
+                    if (inputItem[index].hasAttribute('style')) {
+                        removeStyleAttribute(inputItem, index)
+                        inputItem[index].textContent = inputItem[index].dataset.defaultValue
+                    }
+                    else {
+                        removeStyleAttribute(inputItem, index)
+                        inputItem[index].style = 'pointer-events: all; border: 0.104vw solid #E4E8EE; width: 100%;  padding-right:2.086vw; margin-right: 15px;';
+                        inputItem[index].textContent = inputItem[index].dataset.defaultValue
+                    }
+                })
+            })
+        }
+
+        function removeStyleAttribute(inputItem, index) {
+            inputItem[index].textContent = inputItem[index].dataset.defaultValue
+            for (let i = 0; i < inputItem.length; i++) {
+                if (inputItem[i].hasAttribute('style')) {
+                    inputItem[i].removeAttribute('style');
+                    inputItem[i].blur()
+                    inputItem[i].contentEditable = false
+                    inputItem[i].textContent = inputItem[i].dataset.defaultValue
+                    inputTitleChange = ''
+                }
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            scrollToAnchorPopup()
+            if (e.key === 'Enter' && inputTitleChange === defaultInputTitle) {
+                const departmentsView = document.getElementById('departments-view');
+                const inputItem = departmentsView.querySelectorAll('.department-field');
+                removeStyleAttribute(inputItem, inputIndex)
+                inputTitleChange = ''
+            }
+            else if (e.key === 'Enter' && inputTitleChange !== defaultInputTitle) {
+                updateTitleDepartment(defaultInputTitle, inputTitleChange)
+                const departmentsView = document.getElementById('departments-view');
+                const inputItem = departmentsView.querySelectorAll('.department-field');
+                removeStyleAttribute(inputItem, inputIndex)
+            }
+        });
+
+        async function updateTitleDepartment(defaultInputTitle, inputTitleChange) {
+            const departmentsView = document.getElementById('departments-view');
+            const inputItem = departmentsView.querySelectorAll('.department-field');
+            defaultInputTitle = inputTitleChange
+            inputItem[inputIndex].setAttribute('data-default-value', defaultInputTitle);
+            inputItem[inputIndex].textContent = defaultInputTitle
+            const requestOptionsSave = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                                    mutation updateDept($id: Int, $title:String) {
+                                    update_departments(where: {id: {_eq: $id}}, _set: {title: $title}) {
+                                        affected_rows
+                                    }
+                                    }`,
+                    variables: {
+                        "id": inputItem[inputIndex].dataset.id,
+                        "title": inputTitleChange
+                    }
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptionsSave)
+            const data = await response.json();
+            inputTitleChange = ''
+            defaultInputTitle = ''
+            inputIndex = ''
+        }
+    </script>
+
+    <script>
+        let archiveIndex = ''
+
+        function popupArhivehidden() {
+            const archiveDeleteBtns = document.querySelectorAll('.skills-archive')
+            const archivePopup = document.querySelectorAll('.skills__alert-popup')
+            archivePopup.forEach((e) => {
+                e.classList.remove('active')
+            })
+        }
+
+        function popupArhive() {
+            const archiveDeleteBtns = document.querySelectorAll('.skills-archive');
+            const archivePopup = document.querySelectorAll('.skills__alert-popup');
+            archiveDeleteBtns.forEach((e, index) => {
+                popupArhivehidden()
+
+                e.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if (archivePopup[index].classList.contains('active')) {
+                        popupArhivehidden()
+                        return
+                    }
+                    else {
+                        popupArhivehidden()
+                        archivePopup[index].classList.add('active')
+                        archivePopup[index].querySelector('.false').addEventListener('click', () => {
+                            popupArhivehidden()
+                        })
+
+                        archivePopup[index].querySelector('.true').addEventListener('click', async () => {
+                            document.querySelector('.overlay').classList.add('active')
+                            const requestOptionsSave = {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                                },
+                                body: JSON.stringify({
+                                    query: `
+                                                mutation DisableDepartment($departmentId: Int!) {
+                                                    update_departments(where: { id: { _eq: $departmentId } }, _set: { active: false }) {
+                                                    affected_rows
+                                                    }
+                                                }
+                    
+                                                `,
+                                    variables: {
+                                        departmentId: parseInt(e.getAttribute('data-id'))
+                                    }
+
+                                })
+                            }
+                            const response = await fetch(BaseUrl, requestOptionsSave)
+                            const data = await response.json();
+                            popupArhivehidden()
+                            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                            renderPositions(offset)
+                            document.querySelector('.overlay').classList.add('active')
+                        })
+                    }
+                });
+            });
+        }
+
+    </script>
+
+    <script>
+        async function renderSkill() {
+            {
+                const addJobPopup = document.querySelector('.positions__popup.add-job');
+                const data = JSON.stringify({
+                    query: `query SkillsQuery ($limit: Int, $offset: Int) {
+                          skills(limit: $limit, offset: $offset) {
+                            id
+                            status
+                            title
+                            skills_skills_departments {
+                              skills_departments_department {
+                                title
+                              }
+                            }
+                          }
+                        }`, variables: {
+                        limit: 20,
+                        offset: 0
+                    }
+                });
+                const response = await fetch(
+                    BaseUrl,
+                    {
+                        method: 'post',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Content-Length': data.length,
+                            'Authorization': 'Bearer ' + localStorage.getItem('token')
+                        },
+                        body: data
+                    }
+                );
+                const json = await response.json();
+                const dataJsonSkills = json.data.skills
+                dataJsonSkills.sort((a, b) => a.id - b.id)
+
+
+                document.getElementById('add-job-skills-selected').innerHTML = dataJsonSkills.map((da, index) => {
+                    return `<span class="skill span-skill" onclick="addSkillToSelectedJob('${da.id}')" id="addJobSkillSelectedWithId-${da.id}" data-tag-id="${da.id}">${da.title}</span>`
+                }).join(' ')
+            }
+        }
+
+        document.getElementById('addJobPopupClose').addEventListener('click', (e) => {
+            e.preventDefault()
+            document.querySelector('.positions__popup.add-job').classList.remove('active');
+            document.getElementById('add-job-skills-save-button').classList.add('hidden')
+            document.getElementById('add-job-skills-add-button').classList.remove('hidden')
+
+        })
+
+
+    </script>
+
+    <script>
+
+        function archiveListJob() {
+            const departmentsView = document.getElementById('departments-view')
+            const positionsItem = departmentsView.querySelectorAll('.positions-item');
+            const archiveBtn = [];
+
+            positionsItem.forEach((item) => {
+                const archiveItems = item.querySelectorAll('.archive');
+                archiveItems.forEach((archiveElement) => {
+
+                    const archiveInfo = {
+                        positionsItem: item,
+                        archiveElement: archiveElement
+                    };
+                    archiveBtn.push(archiveInfo);
+                });
+            });
+
+            archiveBtn.forEach((e) => {
+                e.archiveElement.addEventListener('click', () => {
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                        return
+                    }
+                    removeSkillsAlertPopup(archiveBtn)
+                    e.archiveElement.insertAdjacentHTML('afterend', `
+                                            <div class="skills__alert-popup department__wrapper-archive active" style="left: 100%; top: -50% !important; " >        
+                                                <p>Are you sure?</p>
+                                                <div class="btns">
+                                                    <button class="true">Yes</button>
+                                                    <button class="false">No</button>
+                                                </div>
+                                            </div>
+                                        `);
+                    const popup = e.archiveElement.nextElementSibling;
+                    const falseButton = popup.querySelector('.false');
+                    const trueButton = popup.querySelector('.true')
+
+                    falseButton.addEventListener('click', () => {
+                        popup.remove();
+                    });
+                    trueButton.addEventListener('click', async () => {
+                        document.querySelector('.overlay').classList.add('active')
+                        popup.remove();
+                        const requestOptionsSave = {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer ' + localStorage.getItem('token')
+                            },
+                            body: JSON.stringify({
+                                query: `
+                                            mutation updateJob($id: Int) {
+                                                update_jobs(where: {id: {_eq: $id}}, _set: {active: false}) {
+                                                    affected_rows
+                                                }
+                                                }
+                                                    `,
+                                variables: {
+                                    id: parseInt(e.archiveElement.dataset.rowArchiveId)
+                                }
+
+                            })
+                        }
+                        const response = await fetch(BaseUrl, requestOptionsSave)
+                        const data = await response.json();
+
+                        if (!filterFlag) {
+                            filterFlag = false
+                            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                            renderPositions(offset)
+                        } else {
+                            renderFilter(titleOptions)
+                        }
+
+
+                    })
+                });
+            });
+
+
+            function removeSkillsAlertPopup(archiveBtn) {
+                archiveBtn.forEach((e) => {
+                    if (e.archiveElement.nextElementSibling != null && e.archiveElement.nextElementSibling.hasAttribute('style')) {
+                        e.archiveElement.nextElementSibling.remove()
+                    }
+                })
+            }
+        }
+        archiveListJob()
+
+        function addJobPopupClear(addJobPopup) {
+
+            const inputs = addJobPopup.getElementsByTagName('input');
+            const textareas = addJobPopup.getElementsByTagName('textarea');
+            const selectedSkills = document.getElementById('add-job-skills-selected')
+
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].value = '';
+            }
+            for (let i = 0; i < textareas.length; i++) {
+                textareas[i].value = '';
+            }
+            selectedSkills.querySelectorAll('span').forEach((e) => {
+                e.classList.remove('active-span')
+            })
+        }
+
+    </script>
+
+    <script>
+        let firstTags = []
+        let secongTags = []
+        let addJobTagMap = {}
+        const btnSave = document.getElementById('add-job-skills-save-button')
+        const departmentsView = document.getElementById('departments-view')
+
+        function editListJob() {
+            const addJobPopup = document.querySelector('.positions__popup.add-job');
+            const positionsItem = departmentsView.querySelectorAll('.positions-item');
+            const rowItems = departmentsView.querySelectorAll('.row-item')
+            const editBtn = [];
+
+            positionsItem.forEach((item) => {
+                const editItems = item.querySelectorAll('.edit-job-btn');
+                editItems.forEach((editElement) => {
+                    const editInfo = {
+                        positionsItem: item,
+                        editElement: editElement
+                    };
+                    editBtn.push(editInfo);
+                });
+            });
+
+            editBtn.forEach((e) => {
+                e.editElement.addEventListener('click', () => {
+                    scrollToAnchorPopup()
+                    addJobPopup.querySelectorAll('.span-skill').forEach((e) => {
+                        e.classList.remove('active-span')
+                    })
+
+
+                    addJobId = e.editElement.dataset.rowArchiveId
+                    btnSave.classList.remove('hidden')
+                    const allTags = addJobPopup.querySelectorAll('.span-skill')
+                    allTags.forEach((e) => {
+                        e.classList.remove('active-span')
+                    })
+
+
+
+                    targetElement = Array.from(rowItems).find(item => item.dataset.rowItemId === addJobId);
+                    const addJobTitle = targetElement.querySelector('.name').textContent.trim()
+                    const addJobDescription = targetElement.querySelector('.description').textContent.trim()
+                    const addJobTag = targetElement.querySelectorAll('a')
+                    addJobPopup.classList.add('active');
+
+                    addJobTag.forEach((tag) => {
+                        const tagId = tag.getAttribute('data-tag-id');
+                        addJobTagMap[tagId] = tag;
+                    });
+
+                    allTags.forEach((tag) => {
+                        const tagId = tag.getAttribute('data-tag-id');
+                        if (addJobTagMap[tagId]) {
+                            tag.classList.add('active-span');
+                            firstTags.push(tag)
+                        }
+                    });
+                    addJobTagMap = {}
+                    document.getElementById('add-job-skills-add-button').classList.add('hidden')
+                    document.getElementById('titlePopupJob').textContent = 'EDIT JOB'
+                    document.getElementById('add-job-title').value = addJobTitle
+                    document.getElementById('add-job-description').value = addJobDescription
+
+                })
+            })
+        }
+
+
+        btnSave.addEventListener('click', async () => {
+            addJobPopup.classList.remove('active');
+            document.querySelector('.overlay').classList.add('active')
+            const positionsItem = departmentsView.querySelectorAll('.positions-item');
+            const rowItems = departmentsView.querySelectorAll('.row-item')
+            let addJobTitle = document.getElementById('add-job-title').value
+            let addJobDescription = document.getElementById('add-job-description').value
+            const allTags = addJobPopup.querySelectorAll('.span-skill')
+
+            allTags.forEach((e) => {
+                if (e.classList.contains('active-span')) {
+                    secongTags.push(e)
+                }
+            })
+
+            if (firstTags.length !== secongTags.length) {
+
+                deleteJobs(addJobId)
+
+                await deleteJobs(addJobId)
+                for (const e of secongTags) {
+                    let newJobTgs = e.getAttribute('data-tag-id');
+                    await addJobs(newJobTgs);
+                }
+
+                await updateText(addJobTitle, addJobDescription, addJobId)
+                addJobPopupClear(addJobPopup)
+                firstTags = []
+                secongTags = []
+                return
+            }
+
+            const sortedFirstTags = firstTags.slice().sort()
+            const sortedSecongTags = secongTags.slice().sort()
+
+            for (let i = 0; i < sortedFirstTags.length; i++) {
+                if (sortedFirstTags[i] !== sortedSecongTags[i]) {
+
+                    await deleteJobs(addJobId)
+                    for (const e of secongTags) {
+                        let newJobTgs = e.getAttribute('data-tag-id');
+                        await addJobs(newJobTgs);
+                    }
+                    await updateText(addJobTitle, addJobDescription, addJobId)
+
+                    firstTags = []
+                    secongTags = []
+                    return
+                }
+            }
+
+            updateText(addJobTitle, addJobDescription, addJobId)
+
+            addJobTitle = ''
+            addJobDescription = ''
+            addJobId = ''
+        })
+
+        async function deleteJobs(addJobId) {
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                        mutation deleteSkillsJob ($id: Int) {
+                                delete_skills_jobs(where: {job_id: {_eq: $id}}) {
+                                    affected_rows
+                                }
+                                }
+                                `,
+                    variables: {
+                        id: addJobId
+                    }
+
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptions)
+            const data = await response.json();
+        }
+
+        async function addJobs(newJobTgs) {
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                        mutation insertSkillsJobs ($job_id: Int, $skill_id: Int) {
+                        insert_skills_jobs(objects: [{job_id: $job_id, skill_id: $skill_id}]) { affected_rows }
+                        }
+                                `,
+                    variables: {
+                        job_id: addJobId,
+                        skill_id: newJobTgs,
+                    }
+
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptions)
+            const data = await response.json();
+        }
+
+        async function updateText(addJobTitle, addJobDescription, addJobId) {
+            addJobPopupClear(addJobPopup)
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                                        mutation updateJobs($id: Int, $title: String, $desc: String) {
+                                        update_jobs(where: {id: {_eq: $id}}, _set: {description: $desc, title: $title}) {
+                                            affected_rows
+                                        }
+                                        }
+                                        `,
+                    variables: {
+                        id: addJobId,
+                        title: addJobTitle,
+                        desc: addJobDescription
+                    }
+
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptions)
+            const data = await response.json();
+            if (!filterFlag) {
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                renderPositions(offset)
+            } else {
+                renderFilter(titleOptions)
+            }
+
+
+        }
+    </script>
+
+    <script>
+
+        // filter
+
+
+        function filter() {
+            const filter = document.getElementById('new__custom-options');
+            const allCustomOption = filter.querySelectorAll('[data-value="ua"]');
+            const clickElementBoxes = filter.querySelectorAll('input');
+            const allCustomLebel = filter.querySelectorAll('label')
+
+            allCustomLebel.forEach((e) => {
+                if (e.tagName === 'DIV' || e.tagName === 'INPUT') {
+                    return;
+                }
+                e.addEventListener('click', (event) => customOptionClickAction(event, clickElementBoxes, e));
+            });
+        }
+
+        function customOptionClickAction(event, clickElementBoxes, e) {
+            document.getElementById('newCustomSelect').value = event.target.textContent
+            document.querySelector('.closeFilter').classList.remove('hidden')
+            newCustomSelectsNew.classList.remove('open')
+            document.querySelector('.inputFilter').removeAttribute('style')
+            const inputItem = event.target.parentNode.querySelector('input');
+            let activeInput = '';
+            clickElementBoxes.forEach((e) => {
+                if (e !== inputItem) {
+                    e.checked = false;
+                }
+            });
+
+            clickElementBoxes.forEach((input) => {
+                if (input.id === e.getAttribute('for')) {
+                    foundInput = input;
+                    return;
+                }
+            });
+            if (foundInput.checked) {
+                navigation.style = 'display:flex;'
+                offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+                renderPositions(offset)
+                filterFlag = false
+                document.getElementById('newCustomSelect').value = ''
+                document.querySelector('.closeFilter').classList.add('hidden')
+                return
+            } else {
+                navigation.style = 'display:none;'
+                titleOptions = foundInput.dataset.title
+                renderFilter(titleOptions)
+            }
+
+        }
+
+        async function renderFilter(titleOptions) {
+            filterFlag = true
+
+            document.querySelector('.overlay').classList.add('active')
+            document.getElementById('departments-view').innerHTML = ``
+
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `query DepartmentsQuery($limit: Int, $offset: Int, $f: String) {
+                                    departments(limit: $limit, offset: $offset, where: {active: {_eq: true}, title: {_eq: $f}}) {
+                                        id
+                                        title
+                                        active
+                                        departments_jobs(where: {active: {_eq: true}}order_by:{id:asc}) {
+                                        active
+                                        description
+                                        title
+                                        id
+                                        jobs_skills_jobs(where: {}) {
+                                            skills_jobs_skill {
+                                            title
+                                            status
+                                        id
+                                        }
+                                        }
+                                        }
+                                        }
+                                        }
+                                    `,
+                    variables: {
+                        f: titleOptions,
+                    }
+
+                })
+            }
+            const responsetest = await fetch(BaseUrl, requestOptions)
+            const data = await responsetest.json();
+
+
+            document.getElementById('departments-view').innerHTML = data.data.departments.map((da, index) => {
+                return `<div class = "positions-item">
+                                <div class="department__wrapper">
+                                    <div class="department">
+                                        <p class="department-field" contentEditable="false" data-default-value="${da.title}" data-id="${da.id}">${da.title}</p>
+                                        <a class="edit" href="#"></a>
+                                        <a class="skills-archive" data-id="${da.id}" href="#"></a>
+                                        <div class="skills__alert-popup department__wrapper-archive" data-id="${da.id}">
+                                        <p>Are you sure?</p>
+                                        <div class="btns">
+                                            <button class="true">Yes</button>
+                                            <button class="false">No</button>
+                                        </div>
+                                    </div>
+                
+                                    <div class="skills__archive-popup">
+                                        <p>Department can't be deactivated until you have at least one active user with this department.</p>
+                                    </div>
+                
+                                    </div>
+                                    <div class="add-job">
+                                        <button class="add-job-btn btn" onclick="openAddJobPopup('${da.id}')">Add Job</button>
+                                    </div>
+                                </div>
+                
+                                <div class="content__section">
+                                    <div class="table">
+                                        <div class="row row-header">
+                                            <div class="cell">Job Title (Rank)</div>
+                                            <div class="cell">Description</div>
+                                            <div class="cell">Skills</div>
+                                            <div class="cell">Actions</div>
+                                        </div>
+                                        ${da.departments_jobs.length ? `${da.departments_jobs.map((departmentJob, id) => {
+                    return departmentJob.active ? `<div class="row row-item" data-row-item-id=${departmentJob.id}>
+                                            <div class="cell name">${departmentJob.title}</div>
+                                            <div class="cell description">
+                                                ${departmentJob.description}
+                                            </div>
+                                            <div class="cell tags">
+                                                <div>
+                                                    ${departmentJob.jobs_skills_jobs.length ? departmentJob.jobs_skills_jobs.map((jobSkillDepartment) => {
+                        return `<a href="#" data-tag-id="${jobSkillDepartment.skills_jobs_skill.id}">${jobSkillDepartment.skills_jobs_skill.title}</a>`
+                    }).join(' ') : ''}
+                                                </div>
+                                            </div>
+                                            <div class="cell actions">
+                                                <span class="edit edit-job-btn" data-row-archive-id=${departmentJob.id}></span>
+                                                <span class="archive" data-row-archive-id=${departmentJob.id}></span>
+                                            </div>
+                                        </div>`
+                        : ''
+                }).join(' ')}` : ''}
+                                    </div>
+                                </div>
+                            </div>`
+            }).join(' ')
+            document.querySelector('.overlay').classList.remove('active')
+            btnEdit = []
+            archiveListJob()
+            editTitleList()
+            popupArhive()
+            editListJob()
+        }
+    </script>
+
+    <script>
+        function filterSelectScrollOutside(event) {
+            const folterSelectScroll = document.querySelector('.filter-select-scroll')
+            if (event.target !== folterSelectScroll && !folterSelectScroll.contains(event.target)) {
+                folterSelectScroll.classList.remove('open')
+                document.querySelector('.inputFilter').removeAttribute('style')
+            }
+
+        }
+        document.addEventListener('click', filterSelectScrollOutside) 
+    </script>
+
+    <script>
+
+        btnPrev.style = 'display:none;'
+        let totalPages = ''
+        let currentPage = 1;
+        const navigation = document.getElementById('navigation')
+
+
+        function pagination(countItems) {
+            const btnPrev = document.getElementById('btnPrev');
+            const firstCircle = document.getElementById('firstCircle');
+            const secondCircle = document.getElementById('secondCircle');
+            const btnNext = document.getElementById('btnNext');
+            totalPages = Math.ceil(countItems / limit);
+        }
+
+        btnNext.addEventListener('click', () => {
+            scrollToAnchor()
+            if (parseInt(secondCircle.textContent) <= totalPages) {
+                if (firstCircle.classList.contains('active')) {
+                    secondCircle.classList.add('active');
+                    firstCircle.classList.remove('active');
+                } else if (secondCircle.classList.contains('active')) {
+                    firstCircle.classList.add('active');
+                    secondCircle.classList.remove('active');
+                    currentPage++
+                    firstCircle.textContent = currentPage + 1;
+                    secondCircle.textContent = currentPage + 2;
+                }
+            }
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+
+            if (parseInt(secondCircle.textContent) > totalPages) {
+                btnNext.style = 'display:none;'
+                secondCircle.style = 'display:none;'
+            }
+
+
+
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            if (parseInt(firstCircle.textContent) === 1 && secondCircle.classList.contains('active')) {
+                btnPrev.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        });
+        // pagination prev
+        btnPrev.addEventListener('click', () => {
+            scrollToAnchor()
+            let currentPageLast = secondCircle.textContent
+            if (parseInt(firstCircle.textContent) <= totalPages) {
+                if (secondCircle.classList.contains('active')) {
+                    secondCircle.classList.remove('active');
+                    firstCircle.classList.add('active');
+                }
+                else if (firstCircle.classList.contains('active')) {
+                    firstCircle.classList.remove('active');
+                    secondCircle.classList.add('active');
+                    currentPage--
+                    firstCircle.textContent = parseInt(secondCircle.textContent) - 3;
+                    secondCircle.textContent = parseInt(firstCircle.textContent) + 1;
+                }
+            }
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            if (parseInt(firstCircle.textContent) + 2 > totalPages) {
+                btnNext.style = 'display:flex;'
+            }
+
+            if (parseInt(secondCircle.textContent) < totalPages) {
+                btnNext.style = 'display:flex;'
+                secondCircle.style = 'display:flex;'
+            }
+
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        })
+
+        firstCircle.addEventListener('click', () => {
+            scrollToAnchor()
+            firstCircle.classList.add('active')
+            secondCircle.classList.remove('active')
+            btnNext.style = 'display:flex;'
+            if (parseInt(firstCircle.textContent) === 1 && firstCircle.classList.contains('active')) {
+                btnPrev.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        })
+
+        secondCircle.addEventListener('click', () => {
+            scrollToAnchor()
+            firstCircle.classList.remove('active')
+            secondCircle.classList.add('active')
+            btnPrev.style = 'display:flex;'
+            if (parseInt(secondCircle.textContent) === totalPages && secondCircle.classList.contains('active')) {
+                btnNext.style = 'display:none;'
+            }
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        })
+
+        function scrollToAnchor() {
+            const anchor = document.getElementById('anchor')
+            anchor.scrollIntoView({ behavior: 'smooth' })
+        }
+
+        function scrollToAnchorPopup() {
+            let anchorPopup = []
+            const anchorPopupAll = document.querySelectorAll('.positions__popup-form')
+            anchorPopupAll.forEach((e) => {
+                anchorPopup.push(e.firstElementChild)
+            })
+            anchorPopup.forEach((e) => {
+                e.scrollIntoView({ behavior: 'smooth' })
+            })
+
+        }
+
+        document.querySelector('.add-department-btn').addEventListener('click', () => scrollToAnchorPopup())
+
+
+
+
+    </script>
+
+    <script>
+        let newCustomSelectqueryDada = []
+
+        async function newCustomSelectquery() {
+            const data = JSON.stringify({
+                query: `query DepartmentsQuery($limit: Int, $offset: Int) {
+                                departments(limit: $limit, offset: $offset, where: {active: {_eq: true}, title: {}}, order_by: {id: desc}) {
+                                    title
+                                    }
+                                }`, variables: {
+                }
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.departments
+            newCustomSelectqueryDada = datas
+        }
+    </script>
+
+    <script>
+
+        let filteredItems = []
+        const newCustomSelectsNew = document.querySelector('.new__custom-select');
+        document.getElementById('newCustomSelect').addEventListener('input', (e) => {
+            if (document.getElementById('newCustomSelect').value.length < 3) {
+                document.querySelector('.inputFilter').style = 'box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;'
+                newCustomSelectsNew.classList.remove('open')
+                return
+            } else {
+                filteredItems = newCustomSelectqueryDada.filter(function (item) {
+                    return item.title.toLowerCase().startsWith(document.getElementById('newCustomSelect').value.toLowerCase().substring(0, 10))
+                })
+                document.getElementById('new__custom-options').innerHTML = filteredItems.map((da, index) => {
+                    return `<div class="new__custom-option" data-value="ua">
+                                    <input type="checkbox" id="all${index + 1}" data-title="${da.title}">
+                                    <label class="new__custom-option-lable" for="all${index + 1}">${da.title}</label>
+                                                            </div>`
+                }).join('')
+                if (filteredItems.length === 0) {
+                    newCustomSelectsNew.classList.remove('open')
+                    document.querySelector('.inputFilter').style = 'box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;'
+                } else {
+                    newCustomSelectsNew.classList.add('open')
+                    document.querySelector('.inputFilter').style = 'box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;border-bottom-left-radius: 0; border-bottom-right-radius: 0;'
+                    filter()
+                    document.getElementById('new__custom-options').querySelectorAll('.new__custom-option').forEach
+                }
+                if (filteredItems.length > 7) {
+                    document.querySelector('.custom-scrollbar').removeAttribute('style')
+                } else (
+                    document.querySelector('.custom-scrollbar').style = "display: none;"
+                )
+            }
+        })
+
+        document.querySelector('.closeFilter').addEventListener('click', () => {
+            document.querySelector('.inputFilter').removeAttribute('style')
+            document.querySelector('.closeFilter').classList.add('hidden')
+            document.getElementById('newCustomSelect').value = ''
+            navigation.removeAttribute('style')
+            filterFlag = false
+            offset = parseInt(navigation.querySelector('.page.active').textContent) * limit - limit
+            renderPositions(offset)
+        })
+
+        let firstCustomSelectValue = ''
+
+        document.getElementById('newCustomSelect').addEventListener('click', () => {
+            firstCustomSelectValue = document.getElementById('newCustomSelect').value
+            document.querySelector('.inputFilter').style = 'box-shadow: 0vw 0vw 0.156vw 0.052vw #869DC8;'
+            // document.querySelector('.closeFilter').classList.add('hidden')
+        })
+
+    </script>
+
+</body>
+
+</html>

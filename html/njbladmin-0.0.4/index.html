@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NINJABLE</title>
+  <meta name="robots" content="index,follow">
+  <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+  <meta name="description" content="NINJABLE">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <script src="./js/config.js"></script>
+  <script src="./js/variables.js"></script>
+</head>
+
+<body class="account-settings">
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <a class="header__logo" href="index.html">
+          <img src="./img/header-logo.svg" alt="logo">
+        </a>
+        <div class="header__profile">
+          <a class="header__avatar" href="#">
+            <div class="avatar-img">
+              <img src="./img/avatar.svg" alt="avatar">
+            </div>
+          </a>
+          <div class="header__profile-popup">
+            <p>My Profile</p>
+            <ul class="header__profile-menu">
+              <li class="profile__menu-item">
+                <a href="#">Leaderboard</a>
+              </li>
+              <li class="profile__menu-item">
+                <a href="#">Reports</a>
+              </li>
+              <li class="profile__menu-item">
+                <a href="#">Settings</a>
+              </li>
+              <li class="profile__menu-item">
+                <a href="#">Approvals</a>
+              </li>
+              <li class="profile__menu-item">
+                <a href="#">Rewards</a>
+              </li>
+              <li class="profile__menu-item">
+                <a href="#">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="another__wrapper">
+      <section class="sidebar">
+        <ul class="sidemenu">
+          <li class="sidemenu__item active">
+            <a class="sidemenu__item-link" href="#">Company</a>
+            <ul class="submenu">
+              <li class="submenu__item active">
+                <a class="submenu__item-link active" href="index.html">Account Settings</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="branding.html">Branding</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="billing.html">Billing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidemenu__item">
+            <a class="sidemenu__item-link" href="#">Directory</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="users.html">Users</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="positions.html">Positions</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="levels.html">Levels</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="skills.html">Skills</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidemenu__item">
+            <a class="sidemenu__item-link" href="rewards.html">Rewards</a>
+          </li>
+          <li class="sidemenu__item">
+            <a class="sidemenu__item-link soon" href="integrations.html">
+              <p>Integrations <br><span>Coming soon</span></p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content">
+        <div class="leaves"></div>
+        <h2>ACCOUNT SETTING</h2>
+
+        <form class="account-setting" id="account-setting" action="#">
+          <div class="account-owner">
+            <label>* Account Owner
+              <div class="new__custom-select-wrapper">
+                <div class="new__custom-select ownerField">
+                  <span class="line"></span>
+                  <div class="arrow"></div>
+                  <div class="new__custom-select__trigger" id="searchInput" contentEditable="true">Type here to search
+                    for Clan...</div>
+                  <div class="new__custom-options" id="selectOwner">
+                  </div>
+                  <div class="custom-scrollbar ownerscroll"></div>
+                </div>
+              </div>
+            </label>
+            <button type="submit">Change</button>
+          </div>
+
+          <div class="company-info">
+            <div class="left">
+              <h4>Company Information</h4>
+              <label>* Company Name
+                <input type="text" placeholder="Company" id="companyName">
+              </label>
+              <div class="country">
+                <label>* Country
+                  <div class="new__custom-select-wrapper">
+                    <div class="new__custom-select">
+                      <div class="new__custom-select__trigger" id="country">Type here to search for...
+                        <div class="arrow"></div>
+                      </div>
+                      <div class="new__custom-options">
+                      </div>
+                      <div class="custom-scrollbar"></div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <label>State
+                <input type="text" placeholder="DE" id="state">
+              </label>
+            </div>
+            <div class="right">
+              <label>Ninjable URL
+                <input type="text" placeholder="Company.Ninjable.io" id="ninjableUrl" readonly>
+              </label>
+              <label>City
+                <input type="text" placeholder="Wilmington" id="city">
+              </label>
+              <label>Zip
+                <input type="text" placeholder="123456" id="zip">
+              </label>
+            </div>
+          </div>
+          <div class="company-info address">
+            <label>Address 1
+              <input type="text" placeholder="Gorodetskaya street, 8A" id="address1">
+            </label>
+            <label>Address 2
+              <input type="text" placeholder="Gorodetskaya street, 8A" id="address2">
+            </label>
+          </div>
+          <div class="save-btn">
+            <button class="btn" type="submit" id="btnSave">Save</button>
+          </div>
+
+          <div class="overlay" id="overlay">
+            <div class="overlay__inner">
+              <div class="overlay__content"><span class="spinner"></span></div>
+            </div>
+          </div>
+
+        </form>
+      </section>
+    </section>
+  </div>
+
+  <style>
+    .soon {
+      display: block;
+      line-height: 1vw !important;
+    }
+
+    .soon span {
+      font-size: 0.65vw;
+    }
+
+    .disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .overlay {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.5);
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .overlay__inner {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .overlay__content {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .spinner {
+      width: 75px;
+      height: 75px;
+      display: inline-block;
+      border-width: 2px;
+      border-color: rgba(0, 0, 0, 0.5);
+      border-top-color: #fff;
+      animation: spin 1s infinite linear;
+      border-radius: 100%;
+      border-style: solid;
+    }
+
+    .overlay__content {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading {
+      display: block;
+    }
+
+    #searchInput {
+      height: 2.75vw;
+      padding-left: 3vw;
+      color: black;
+    }
+
+    #searchInput::before {
+      content: "";
+      background: url(../img/search-icon.svg) no-repeat center top/cover;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 0.678vw;
+      height: 0.678vw;
+      position: absolute;
+      top: 0.921vw;
+      left: 1.621vw;
+    }
+
+    .owner {
+      width: 100% !important;
+      mix-blend-mode: normal;
+      font-weight: 300;
+      font-size: .782vw;
+      line-height: .834vw;
+      letter-spacing: .01vw;
+      color: #8d919b;
+    }
+
+    .owner:hover {
+      color: #869dc8;
+    }
+
+    .line {
+      left: 22.5vw !important;
+    }
+
+    #searchInput:hover {
+      border-radius: 0.417vw;
+      box-shadow: 0vw 0vw 0.156vw 0.052vw #d7dee6;
+      transition: 0.3s !important;
+    }
+  </style>
+  <script>
+
+
+    if (!sessionTime || sessionTime > sessionTime + expiresIn) {
+      document.querySelector('.overlay').classList.add('active')
+      // console.log('promise on')
+      waitForValidateTmpsession()
+        .then(async () => {
+          // console.log('promise ok')
+          document.querySelector('.overlay').classList.add('active')
+          await getCompany()
+          await getAllUsers()
+          document.querySelector('.overlay').classList.remove('active')
+        })
+        .catch((error) => {
+          // console.log('promise error')
+        });
+    } else {
+      // console.log('promise off')
+      loadPage()
+    }
+
+    async function loadPage() {
+      document.querySelector('.overlay').classList.add('active')
+      await getCompany()
+      await getAllUsers()
+      document.querySelector('.overlay').classList.remove('active')
+    }
+
+
+    let ownerName = ''
+    let owner = 'Type here to search for User...'
+
+    const inputElementFilter = document.getElementById('searchInput')
+
+    async function getCompany() {
+      const data = JSON.stringify({
+        query: `query getCompany {
+              company(where: {slug: {_eq: "main"}}) {
+                address1
+                address2
+                city
+                company_owner {
+                  id
+                  firstname
+                  lastname
+                }
+                country
+                cstate
+                id
+                name
+                slug
+                url
+                zip
+              }
+            }`
+      });
+      const response = await fetch(
+        BaseUrl,
+        {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length,
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+          },
+          body: data
+        });
+      const json = await response.json();
+      overlay.classList.remove('loading')
+      const company = json?.data?.company ? json.data.company[0] : [];
+      if (company.length === 0) {
+        return;
+      }
+
+      if (company.company_owner.firstname) {
+        owner = company.company_owner.lastname + ' ' + company.company_owner.firstname
+      }
+      inputElementFilter.textContent = company.company_owner.lastname + ' ' + company.company_owner.firstname
+      inputElementFilter.style = 'color: #1b2438; font-size: .782vw; line-height: .73vw; letter-spacing: .01vw; font-weight: 400; font-family: "Roboto",sans-serif;'
+      const companyName = document.getElementById('companyName').value = company.name ?? '';
+      const ninjableUrl = document.getElementById('ninjableUrl').value = company.url ?? '';
+      const city = document.getElementById('city').value = company.city ?? '';
+      const state = document.getElementById('state').value = company.cstate ?? '';
+      const zip = document.getElementById('zip').value = company.zip ?? '';
+      const address1 = document.getElementById('address1').value = company.address1 ?? '';
+      const address2 = document.getElementById('address2').value = company.address2 ?? '';
+      const country = document.getElementById('country')
+      country.textContent = company.country ?? '';
+      country.style.cssText = `
+          font-family: 'Karla';
+          font-weight: 500;
+          font-size: .782vw;
+          line-height: .73vw;
+          letter-spacing: .01vw;
+          color: #1b2438;
+          `
+      ownerName = company.company_owner.lastname + ' ' + company.company_owner.firstname
+    }
+
+    const btnSave = document.getElementById('btnSave')
+    btnSave.addEventListener('click', (e) => updateAccountSetting(e))
+
+    async function updateAccountSetting(e) {
+      e.preventDefault()
+      if (btnSave.classList.contains('btn-loading')) {
+        return
+      }
+      overlay.classList.add('loading')
+      btnSave.classList.add('btn-loading')
+      const countryText = country.textContent;
+
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+          query: `mutation CompanyMutation($address1: String, $address2: String, $city: String, $country: String, $cstate: String, $name: String, $url: String, $zip: String) {
+            update_company(where: {slug: {_eq: "main"}}, _set: {address1: $address1, address2: $address2, city: $city, country: $country, cstate: $cstate, name: $name, url: $url, zip: $zip}) {
+              returning {
+                address1
+                address2
+                city
+                country
+                cstate
+                id
+                name
+                url
+                zip
+                }
+               }
+              }`,
+
+          variables:
+          {
+            "address1": address1.value,
+            "address2": address2.value,
+            "city": city.value,
+            "country": countryText,
+            "cstate": state.value,
+            "name": companyName.value,
+            "url": ninjableUrl.value,
+            "zip": zip.value,
+          }
+        })
+      }
+      const response = await fetch(BaseUrl, requestOptions);
+      const data = await response.json();
+      overlay.classList.remove('loading')
+      btnSave.classList.remove('btn-loading')
+      // console.log(data);
+    };
+
+
+    async function getAllUsers() {
+      let variables = {
+        active: true
+      }
+
+      let query = `query getUsers($active: Boolean, $order: order_by = asc) {
+        users(order_by: {id: $order}, where: {active: {_eq: $active}}) {
+        firstname
+        lastname
+        id
+        status
+        }
+      }`
+
+      const data = JSON.stringify({ query, variables });
+      const headers = {
+        'Content-Type': 'application/json',
+        'Content-Length': data.length,
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
+      };
+      const response = await fetch(
+        BaseUrl,
+        {
+          method: 'post',
+          headers,
+          body: data
+        }
+      );
+
+      const json = await response.json();
+      const datas = json.data.users
+      const field = document.getElementById('selectOwner')
+
+      datas.forEach((item) => {
+        const newRow = document.createElement('div');
+        newRow.className = 'new__custom-option owner';
+        newRow.dataset.id = item.id
+        newRow.textContent = item.firstname + ' ' + item.lastname
+        field.insertAdjacentElement('afterbegin', newRow)
+      })
+    }
+
+
+    document.addEventListener('click', () => {
+      if (event.target.getAttribute('id') === 'searchInput') {
+        document.querySelector('.ownerscroll').removeAttribute('style')
+        document.querySelectorAll('.owner').forEach((e) => {
+          e.removeAttribute('style')
+        })
+        if (!document.querySelector('.ownerField').classList.contains('open')) {
+          ownerName = event.target.textContent
+          event.target.textContent = ''
+          document.querySelector('.ownerField').classList.add('open')
+        } else {
+          event.target.textContent = ownerName
+          document.querySelector('.ownerField').classList.remove('open')
+        }
+      } else {
+        if (event.target.getAttribute('id') === 'searchInput') {
+
+        }
+        document.getElementById('searchInput').textContent = ownerName
+        document.querySelector('.ownerField').classList.remove('open')
+      }
+      if (event.target.classList.contains('owner')) {
+        ownerName = event.target.textContent
+        document.getElementById('searchInput').textContent = event.target.textContent
+        document.querySelector('.ownerField').classList.remove('open')
+        document.querySelector('.ownerscroll').removeAttribute('style')
+        document.querySelectorAll('.owner').forEach((e) => {
+          e.removeAttribute('style')
+        })
+      }
+    }
+    )
+
+
+    inputElementFilter.addEventListener('input', () => {
+      const allActiveOwner = document.querySelectorAll('.owner')
+      searchField(allActiveOwner, event)
+    })
+
+    function searchField(element, event) {
+      document.querySelector('.ownerscroll').style = 'display:none'
+      let input = event.target.textContent.toLowerCase().trim();
+      element.forEach(function (item) {
+        if (input === '') {
+          item.removeAttribute('style')
+        }
+        let text = item.textContent.toLowerCase().trim();
+        if (text.startsWith(input)) {
+
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    document.querySelectorAll('[contentEditable]').forEach((e) => {
+      e.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          event.preventDefault()
+        }
+      })
+    })
+
+  </script>
+
+
+
+  <!-- <script>
+
+
+    let abortControllerFilter = new AbortController();
+
+    inputElementFilter.addEventListener('click', () => {
+      owner = inputElementFilter.textContent
+      inputElementFilter.textContent = ''
+      inputElementFilter.classList.remove('select-arrow-active')
+
+      if (!document.querySelector('.select-items-new').classList.contains('select-hide')) {
+        document.querySelector('.select-items-new').classList.add('select-hide')
+      }
+    })
+
+    inputElementFilter.addEventListener('input', filterSearch)
+
+    async function filterSearch() {
+      inputElementFilter.removeAttribute('style')
+      inputElementFilter.classList.remove('select-arrow-active')
+
+      if (inputElementFilter.textContent === '') {
+        document.querySelector('.select-items-new').classList.add('select-hide')
+      }
+
+      setTimeout(async () => {
+        const inputValue = inputElementFilter.textContent.trim();
+
+        abortControllerFilter.abort();
+        abortControllerFilter = new AbortController();
+        abortControllerFilter.signal.addEventListener('abort', () => {
+          console.log('Request has been canceled');
+        });
+        if (inputValue.length > 0 && status === '') {
+          try {
+            const query = `query getUsers($active: Boolean, $order: order_by = asc) {
+              users(order_by: {id: $order}, where: {active: {_eq: $active}}) {
+                firstname
+                lastname
+                id
+                status
+                }
+              }`;
+
+            const variables = {
+              active: true,
+            };
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+              'Content-Type': 'application/json',
+              'Content-Length': data.length,
+              'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const requestOptions = {
+              method: 'POST',
+              headers: headers,
+              body: data,
+              signal: abortControllerFilter.signal
+            };
+
+            const response = await fetch(BaseUrl, requestOptions);
+
+            if (response.ok) {
+              const json = await response.json();
+              const datas = json.data.users;
+
+              if (datas.length > 0) {
+                document.querySelector('.select-items-new').classList.remove('hidden')
+                document.querySelector('.select-items-new').innerHTML = datas.map((da, index) => {
+                  return `<label class="found_user" data-id="${da.id}">${da.lastname} ${da.firstname}</label>`
+                }).join('')
+
+                document.querySelector('.select-items-new').classList.remove('select-hide')
+
+                document.querySelectorAll('.found_user').forEach((e) => {
+                  e.addEventListener('click', () => {
+                    inputElementFilter.textContent = e.textContent
+                    inputElementFilter.setAttribute('data-id', e.dataset.id)
+                    document.querySelector('.select-items-new').classList.add('select-hide')
+                    inputElementFilter.style = 'color: #1b2438; font-size: .782vw; line-height: .73vw; letter-spacing: .01vw; font-weight: 400; font-family: "Roboto",sans-serif;'
+                    owner = e.textContent
+                    inputElementFilter.classList.remove('select-arrow-active')
+                    document.querySelector('.select-items-new').innerHTML = ''
+                  })
+                })
+              }
+            } else {
+
+            }
+          } catch (error) {
+          }
+        }
+      }, 500)
+    }
+
+
+    document.addEventListener('click', () => {
+      if (event.target !== inputElementFilter) {
+        document.querySelector('.select-items-new').classList.add('select-hide')
+        document.querySelector('.select-items-new').innerHTML = ''
+        inputElementFilter.classList.remove('select-arrow-active')
+        inputElementFilter.textContent = owner
+        if (owner !== 'Type here to search for User...') {
+          inputElementFilter.style = 'color: #1b2438; font-size: .782vw; line-height: .73vw; letter-spacing: .01vw; font-weight: 400; font-family: "Roboto",sans-serif;'
+        }
+      }
+    })
+
+  </script> -->
+
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

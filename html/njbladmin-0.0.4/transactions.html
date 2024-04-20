@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Users</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Users">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/variables.js"></script>
+</head>
+
+<body class="users-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content users skills transactons">
+                <h2>TRANSACTIONS</h2>
+                <div class="content__section">
+                    <div class="search__wrapper">
+                        <span class="search-icon">
+                            <input class="search-input" type="text" placeholder="Joe Doe">
+                        </span>
+                        <div class="filter-select">
+                            <div class="select-selected">Select...</div>
+                            <span class="line"></span>
+                            <div class="select-items select-hide">
+                                <div class="select-option">
+                                    <input type="checkbox" id="all">
+                                    <label for="all">All</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="active">
+                                    <label for="active">Active</label>
+                                </div>
+                                <div class="select-option">
+                                    <input type="checkbox" id="archied">
+                                    <label for="archied">Archied</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="row row-header">
+                            <div class="cell id">ID</div>
+                            <div class="cell">Full Name</div>
+                            <div class="cell">Skill / Achievement</div>
+                            <div class="cell">Reward</div>
+                            <div class="cell">Created at</div>
+                            <div class="cell">Actions</div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">1</div>
+                            <div class="cell name">Andrey Olishchuck</div>
+                            <div class="cell skill">Communication<br>Middle PHP Mid</div>
+                            <div class="cell coins">50</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">2</div>
+                            <div class="cell name">Mila Pater</div>
+                            <div class="cell skill">Communication <br>
+                                Junior PHP</div>
+                            <div class="cell coins">10</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive archive-alert"></span>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">3</div>
+                            <div class="cell name">Jasmin Morgan</div>
+                            <div class="cell skill">Photoshop<br>Middle Mid</div>
+                            <div class="cell coins">150</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">4</div>
+                            <div class="cell name">Felix McCoy</div>
+                            <div class="cell skill">Crowned Eagle Mask</div>
+                            <div class="cell coins">20</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">5</div>
+                            <div class="cell name">Olga Grekova</div>
+                            <div class="cell skill">Java</div>
+                            <div class="cell coins">50</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+                        <div class="row row-item">
+                            <div class="cell id">6</div>
+                            <div class="cell name">Samuel Bekele</div>
+                            <div class="cell skill">Indigo Sing</div>
+                            <div class="cell coins">10</div>
+                            <div class="cell">09/20/2021</div>
+                            <div class="cell actions">
+                                <span class="edit"></span>
+                                <span class="archive"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation">
+                        <span class="prev"></span>
+                        <span class="page active">1</span>
+                        <span class="page">2</span>
+                        <span class="next"></span>
+                    </div>
+
+                </div>
+
+            </section>
+        </section>
+
+
+    </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+    </style>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

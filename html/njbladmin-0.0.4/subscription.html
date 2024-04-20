@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Subscription</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Subscription">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/variables.js"></script>
+</head>
+
+<body class="subscription-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content subscription">
+                <div class="overlay">
+                    <div class="overlay__inner">
+                        <div class="overlay__content"><span class="spinner"></span></div>
+                    </div>
+                </div>
+                <h2>SUBSCRIPION</h2>
+                <div class="content__section">
+                    <h3 class="content__section-title">Subscription Summary</h3>
+                    <div class="content__block">
+                        <div class="summary">
+                            <p class="number" id="userCount"></p>
+                            <p class="text">Licensed Users</p>
+                        </div>
+                    </div>
+                    <div class="content__block pro">
+                        <div class="summary">
+                            <p class="number">Light</p>
+                            <p class="text">Current Plan</p>
+                            <div class="summary__btns">
+                                <a class="downgrade__btn btn" href="#">Downgrade</a>
+                                <a class="upgrade__btn btn">Upgrade</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subscription__content-bottom">
+                        <p class="zone">Danger Zone</p>
+                        <a class="zone__btn" href="#">Cancel Subscription</a>
+                        <div class="branding__popup">
+                            <p class="title">Cancel Subscription</p>
+                            <p class="desc">
+                                Please contact the support team to request your subscription cancelling.
+                            </p>
+                            <a href="#" id="closeBtn">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <div class="ninjable__popup subscription__popup">
+            <div class="ninjable__popup-inner">
+                <div class="light-bg"></div>
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <div class="subscription__header-list">
+                        <div>
+                            <p>FREE</p>
+                        </div>
+                        <div>
+                            <p>LIGHT</p>
+                        </div>
+                        <div>
+                            <p>PRO</p>
+                        </div>
+                        <div>
+                            <p>ENTERPRISE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__users-content">
+                    <div class="subscription__list-content">
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Users</div>
+                            <div class="cell subscription-free">3</div>
+                            <div class="cell subscription-light">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-pro">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active skills/User</div>
+                            <div class="cell subscription-free">9</div>
+                            <div class="cell subscription-light">9</div>
+                            <div class="cell subscription-pro">18</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active departments/Company</div>
+                            <div class="cell subscription-free">1</div>
+                            <div class="cell subscription-light">15</div>
+                            <div class="cell subscription-pro">26</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill Map (Positoions/ <br>
+                                Department)
+                            </div>
+                            <div class="cell subscription-free">10</div>
+                            <div class="cell subscription-light">10</div>
+                            <div class="cell subscription-pro">16</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKRs (Company OKRs x <br>
+                                Departments drill down levels)
+                            </div>
+                            <div class="cell subscription-free">2х3</div>
+                            <div class="cell subscription-light">2х3</div>
+                            <div class="cell subscription-pro">10х3</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Standart Reporting</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill approval flow</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Integrations</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Branding</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Performance Review</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKR analytics</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Reporting</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                    </div>
+                    <div class="subscription__bottom">
+                        <div class="subscription__bottom-item">
+                            <p class="price">$0</p>
+                            <button class="btn">Downgrade</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <p class="price">$5</p>
+                            <p class="sale">
+                                <span>user/month</span><br>
+                                -25% annual commit
+                            </p>
+                            <button class="btn active">Current</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Coming Soon</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .subscription__content-bottom {
+            position: relative;
+        }
+
+        .branding__popup {
+            width: 14.139vw !important;
+            top: unset !important;
+            left: 38% !important;
+            bottom: 0 !important;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getUsers()
+            document.querySelector('.overlay').classList.remove('active')
+        })
+
+        async function getUsers() {
+            let datas = []
+            let query = `query getUsers {
+                            users_aggregate(where: {active: {_eq: true}}) {
+                                aggregate {
+                                    count
+                                }
+                            }
+                        }`
+            let variables = {
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            usersAggregate = json.data.users_aggregate.aggregate.count
+            document.getElementById('userCount').textContent = usersAggregate
+        }
+
+        document.querySelector('.zone__btn').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelector('.branding__popup').classList.toggle('active')
+        })
+
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            event.preventDefault()
+            document.querySelector('.branding__popup').classList.remove('active')
+        })
+
+        document.addEventListener('click', ()=>{
+            // console.log(event.target)
+            if (document.querySelector('.branding__popup').classList.contains('active') && !event.target.classList.contains('zone__btn') && !event.target.classList.contains('branding__popup') && !event.target.parentNode.classList.contains('branding__popup')){
+                document.querySelector('.branding__popup').classList.remove('active')
+            }
+        })
+
+
+
+    </script>
+
+    <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

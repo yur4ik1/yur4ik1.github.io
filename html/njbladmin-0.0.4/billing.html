@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Billing</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Billing">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/config.js"></script>
+    <script src="./js/variables.js"></script>
+</head>
+
+<body class="billing-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content billing">
+                <h2>BILLING</h2>
+                <div class="content__section">
+                    <h3 class="content__section-title">Your Subscription</h3>
+                    <div class="content__block subdomain">
+                        <p>You are currently on the Core Monthly plan (monthly payments). </p>
+                        <a href="#" id="upgradeBtn">Upgrade</a>
+                    </div>
+                    <div class="content__block">
+                        <div class="subscription__info">
+                            <div class="subscription__info-item">
+                                <p class="info-title">Users:</p>
+                                <p class="info-number" id="userCount"></p>
+                            </div>
+                            <div class="subscription__info-item">
+                                <p class="info-title">Monthly cost:</p>
+                                <p class="info-number" id='monthlyCost'></p>
+                            </div>
+                            <div class="subscription__info-item">
+                                <p class="info-title">Next payment due:</p>
+                                <p class="info-number" id="nextPay"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content__section">
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
+                    <div class="invoices-title">
+                        <h3 class="content__section-title">Invoices</h3>
+                        <a class="invoices-btn disabled">
+                            <img src="./img/invoices-icon.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="content__block invoices">
+                        <div class="invoices__table">
+                            <div class="invoices__table-header">
+                                <p>Invoice</p>
+                                <p>Date</p>
+                                <p>Amount</p>
+                                <p>Download</p>
+                            </div>
+                            <!-- <div class="invoices__list">
+                                <div class="invoices__list-item">
+                                    <p>#120587</p>
+                                    <p>22/08/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                                <div class="invoices__list-item">
+                                    <p>#520211</p>
+                                    <p>22/07/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                                <div class="invoices__list-item">
+                                    <p>#355899</p>
+                                    <p>22/06/21</p>
+                                    <p>$ 276.00</p>
+                                    <a href="#">PDF File</a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="content__section">
+                    <div class="payment-method">
+                        <h3 class="content__section-title">Payment Method</h3>
+                        <a href="#" class="disabled">
+                            <img src="./img/payment-method-icon.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="content__block payment-table">
+                        <table class="payment__method-table">
+                            <thead class="payment__method-header">
+                                <tr>
+                                    <td>Card</td>
+                                    <td>Number</td>
+                                    <td>Expires</td>
+                                    <td>Active</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr class="payment__method-item row-item active">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-1.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 0587</p>
+                                        <p class="desc">added 3 years ago</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">12/22</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc"> August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="payment__method-item row-item">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-2.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 0211</p>
+                                        <p class="desc">added 1 year ago</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">10/23</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc">August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr>
+                                <tr class="payment__method-item row-item">
+                                    <td class="payment-cart-col">
+                                        <img class="payment-icon" src="./img/payment-method-3.svg" alt="">
+                                    </td>
+                                    <td class="payment-number">
+                                        <p class="title">Ends with 5899</p>
+                                        <p class="desc">added 2 months ag</p>
+                                    </td>
+                                    <td class="payment-expires">
+                                        <p class="desc">09/21</p>
+                                    </td>
+                                    <td class="payment-active">
+                                        <p class="sub">Active since</p>
+                                        <p class="desc"> August 20, 2021</p>
+                                    </td>
+                                    <td class="payment-delete">
+                                        <span class="delete-icon"></span>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="payment__method-bottom">
+                        <a class="payment-btn btn disabled" href="#">Switch active card</a>
+                        <a class="cancel" href="#">Cancel</a>
+                    </div>
+
+                    <div class="custom__period-popup">
+                        <div class="custom__period-inner">
+                            <div class="custom__period-header">
+                                <span class="custom__period-close">
+                                    <img src="./img/subscription__popup-close.svg" alt="">
+                                </span>
+                                <div>
+                                    <h4>CUSTOM PERIOD</h4>
+                                    <p>5 Nov 2019 - Present Day</p>
+                                </div>
+                            </div>
+                            <div class="custom__period-content">
+                                <div class="date">
+                                    <span class="date-btn active">11/05/2017</span>
+                                    <span class="date-btn">mm/dd/yyyy</span>
+                                </div>
+                                <div class="date__list">
+                                    <div class="date__list-item">
+                                        <h4>From</h4>
+                                        <div class="date__select-wrapper">
+                                            <div class="new__custom-select-wrapper date-select">
+                                                <div class="new__custom-select">
+                                                    <div class="arrow"></div>
+                                                    <div class="new__custom-select__trigger month">Month</div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">January</div>
+                                                        <div class="new__custom-option" data-value="us">February</div>
+                                                        <div class="new__custom-option" data-value="ca">March</div>
+                                                        <div class="new__custom-option" data-value="mx">April</div>
+                                                        <div class="new__custom-option" data-value="br">May</div>
+                                                        <div class="new__custom-option" data-value="ua">June</div>
+                                                        <div class="new__custom-option" data-value="us">July</div>
+                                                        <div class="new__custom-option" data-value="ca">August</div>
+                                                        <div class="new__custom-option" data-value="mx">September</div>
+                                                        <div class="new__custom-option" data-value="br">October</div>
+                                                        <div class="new__custom-option" data-value="br">November</div>
+                                                        <div class="new__custom-option" data-value="br">December</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
+                                                </div>
+                                                <div class="new__custom-select years">
+                                                    <div class="arrow"></div>
+                                                    <div class="new__custom-select__trigger years">Year</div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">2023</div>
+                                                        <div class="new__custom-option" data-value="us">2024</div>
+                                                        <div class="new__custom-option" data-value="ca">2025</div>
+                                                        <div class="new__custom-option" data-value="us">2026</div>
+                                                        <div class="new__custom-option" data-value="ca">2027</div>
+                                                        <div class="new__custom-option" data-value="us">2028</div>
+                                                        <div class="new__custom-option" data-value="ca">2029</div>
+                                                        <div class="new__custom-option" data-value="ca">2030</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="datepicker__calendar">
+                                            <table>
+                                                <thead class="datepicker__calendar-header">
+                                                    <tr>
+                                                        <td>Su</td>
+                                                        <td>Mo</td>
+                                                        <td>Tu</td>
+                                                        <td>We</td>
+                                                        <td>Th</td>
+                                                        <td>Fr</td>
+                                                        <td>Sa</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="datepicker__calendar-content calendar-from">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td class="active">5</td>
+                                                        <td>6</td>
+                                                        <td>7</td>
+                                                        <td>8</td>
+                                                        <td>9</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>12</td>
+                                                        <td>13</td>
+                                                        <td>14</td>
+                                                        <td>15</td>
+                                                        <td>16</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>19</td>
+                                                        <td>20</td>
+                                                        <td>21</td>
+                                                        <td>22</td>
+                                                        <td>23</td>
+                                                        <td>24</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25</td>
+                                                        <td>26</td>
+                                                        <td>27</td>
+                                                        <td>28</td>
+                                                        <td>29</td>
+                                                        <td>30</td>
+                                                        <td>31</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="date__list-item">
+                                        <h4>To</h4>
+                                        <div class="date__select-wrapper">
+                                            <div class="new__custom-select-wrapper date-select">
+                                                <div class="new__custom-select">
+                                                    <div class="arrow"></div>
+                                                    <div class="new__custom-select__trigger month">Month</div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">January</div>
+                                                        <div class="new__custom-option" data-value="us">February</div>
+                                                        <div class="new__custom-option" data-value="ca">March</div>
+                                                        <div class="new__custom-option" data-value="mx">April</div>
+                                                        <div class="new__custom-option" data-value="br">May</div>
+                                                        <div class="new__custom-option" data-value="ua">June</div>
+                                                        <div class="new__custom-option" data-value="us">July</div>
+                                                        <div class="new__custom-option" data-value="ca">August</div>
+                                                        <div class="new__custom-option" data-value="mx">September</div>
+                                                        <div class="new__custom-option" data-value="br">October</div>
+                                                        <div class="new__custom-option" data-value="br">November</div>
+                                                        <div class="new__custom-option" data-value="br">December</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
+                                                </div>
+
+                                                <div class="new__custom-select years">
+                                                    <div class="arrow"></div>
+                                                    <div class="new__custom-select__trigger years">Year</div>
+                                                    <div class="new__custom-options">
+                                                        <div class="new__custom-option" data-value="ua">2023</div>
+                                                        <div class="new__custom-option" data-value="us">2024</div>
+                                                        <div class="new__custom-option" data-value="ca">2025</div>
+                                                        <div class="new__custom-option" data-value="us">2026</div>
+                                                        <div class="new__custom-option" data-value="ca">2027</div>
+                                                        <div class="new__custom-option" data-value="us">2028</div>
+                                                        <div class="new__custom-option" data-value="ca">2029</div>
+                                                        <div class="new__custom-option" data-value="ca">2030</div>
+                                                    </div>
+                                                    <div class="custom-scrollbar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="datepicker__calendar">
+                                            <table>
+                                                <thead class="datepicker__calendar-header">
+                                                    <tr>
+                                                        <td>Su</td>
+                                                        <td>Mo</td>
+                                                        <td>Tu</td>
+                                                        <td>We</td>
+                                                        <td>Th</td>
+                                                        <td>Fr</td>
+                                                        <td>Sa</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="datepicker__calendar-content calendar-to">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>5</td>
+                                                        <td>6</td>
+                                                        <td>7</td>
+                                                        <td>8</td>
+                                                        <td>9</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>12</td>
+                                                        <td>13</td>
+                                                        <td>14</td>
+                                                        <td>15</td>
+                                                        <td>16</td>
+                                                        <td>17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>19</td>
+                                                        <td>20</td>
+                                                        <td>21</td>
+                                                        <td>22</td>
+                                                        <td>23</td>
+                                                        <td>24</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25</td>
+                                                        <td>26</td>
+                                                        <td>27</td>
+                                                        <td>28</td>
+                                                        <td>29</td>
+                                                        <td>30</td>
+                                                        <td>31</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom__period-footer">
+                                <a href="#">Select</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <div class="ninjable__popup subscription__popup">
+            <div class="ninjable__popup-inner">
+                <div class="light-bg"></div>
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <div class="subscription__header-list">
+                        <div>
+                            <p>FREE</p>
+                        </div>
+                        <div>
+                            <p>LIGHT</p>
+                        </div>
+                        <div>
+                            <p>PRO</p>
+                        </div>
+                        <div>
+                            <p>ENTERPRISE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__users-content">
+                    <div class="subscription__list-content">
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Users</div>
+                            <div class="cell subscription-free">3</div>
+                            <div class="cell subscription-light">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-pro">
+                                <span class="infinity"></span>
+                            </div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active skills/User</div>
+                            <div class="cell subscription-free">9</div>
+                            <div class="cell subscription-light">9</div>
+                            <div class="cell subscription-pro">18</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Active departments/Company</div>
+                            <div class="cell subscription-free">1</div>
+                            <div class="cell subscription-light">15</div>
+                            <div class="cell subscription-pro">26</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill Map (Positoions/ <br>
+                                Department)
+                            </div>
+                            <div class="cell subscription-free">10</div>
+                            <div class="cell subscription-light">10</div>
+                            <div class="cell subscription-pro">16</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKRs (Company OKRs x <br>
+                                Departments drill down levels)
+                            </div>
+                            <div class="cell subscription-free">2х3</div>
+                            <div class="cell subscription-light">2х3</div>
+                            <div class="cell subscription-pro">10х3</div>
+                            <div class="cell subscription-enterprise">
+                                <span class="infinity"></span>
+                            </div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Standart Reporting</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Skill approval flow</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Integrations</div>
+                            <div class="cell subscription-free"><span class="tick"></span></div>
+                            <div class="cell subscription-light"><span class="tick"></span></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Branding</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Performance Review</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">OKR analytics</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                        <div class="subscription__list-row">
+                            <div class="cell subscription-name">Custom Reporting</div>
+                            <div class="cell subscription-free"></div>
+                            <div class="cell subscription-light"></div>
+                            <div class="cell subscription-pro"><span class="tick"></span></div>
+                            <div class="cell subscription-enterprise"><span class="tick"></span></div>
+                        </div>
+                    </div>
+                    <div class="subscription__bottom">
+                        <div class="subscription__bottom-item">
+                            <p class="price">$0</p>
+                            <button class="btn">Downgrade</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <p class="price">$5</p>
+                            <p class="sale">
+                                <span>user/month</span><br>
+                                -25% annual commit
+                            </p>
+                            <button class="btn active">Current</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Coming Soon</button>
+                        </div>
+                        <div class="subscription__bottom-item">
+                            <button class="btn">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .soon {
+            display: block;
+            line-height: 1vw !important;
+        }
+
+        .soon span {
+            font-size: 0.65vw;
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .overlay {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(255, 255, 255, 0.5);
+            display: none;
+            z-index: 9999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .overlay__inner {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .overlay__content {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner {
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.5);
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+            border-radius: 100%;
+            border-style: solid;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            document.querySelector('.overlay').classList.add('active')
+            await getUsers()
+            document.querySelector('.overlay').classList.remove('active')
+        })
+
+        async function getUsers() {
+            let datas = []
+            let query = `query getUsers {
+                users_aggregate(where: {active: {_eq: true}}) {
+                aggregate {
+                    count
+                }}company {
+                    billing_cycle
+                }
+            }`
+            let variables = {
+            }
+
+            const data = JSON.stringify({ query, variables });
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Content-Length': data.length,
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            };
+
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers,
+                    body: data
+                }
+            );
+
+            const json = await response.json();
+            usersAggregate = json.data.users_aggregate.aggregate.count
+            company = new Date(json.data.company[0].billing_cycle)
+            monthlyCost = usersAggregate * 5
+
+            // console.log('pay:', company)
+
+            company.setMonth(company.getMonth() + 3)
+            // console.log('next pay:', company)
+
+            document.getElementById('userCount').textContent = usersAggregate + ' Users - $5 per month'
+            document.getElementById('monthlyCost').textContent = '$ ' + monthlyCost.toFixed(2).toString()
+            document.getElementById('nextPay').textContent = company.getDate() + '-' + (company.toLocaleString('en-US', { month: 'short' })) + '-' + company.getFullYear()
+        }
+
+        document.getElementById('upgradeBtn').addEventListener('click',()=>{
+            document.querySelector('.subscription__popup').classList.add('active')
+        })
+
+        document.querySelector('.ninjable__popup-close').addEventListener('click', ()=>{
+            document.querySelector('.subscription__popup').classList.remove('active')
+        })
+
+    </script>
+
+<script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

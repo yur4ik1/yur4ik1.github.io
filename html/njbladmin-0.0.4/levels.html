@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NINJABLE - Positions</title>
+    <meta name="robots" content="index,follow">
+    <meta name="GOOGLEBOT" content="INDEX,FOLLOW">
+    <meta name="description" content="NINJABLE - Positions">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Roboto:wght@400;500&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+      <script src="./js/config.js"></script>
+    <script src="./js/variables.js"></script>
+</head>
+
+<body class="levels-page">
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="./img/header-logo.svg" alt="logo">
+                </a>
+                <div class="header__profile">
+                    <a class="header__avatar" href="#">
+                        <div class="avatar-img">
+                            <img src="./img/avatar.svg" alt="avatar">
+                        </div>
+                    </a>
+                    <div class="header__profile-popup">
+                        <p>My Profile</p>
+                        <ul class="header__profile-menu">
+                            <li class="profile__menu-item">
+                                <a href="#">Leaderboard</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Reports</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Settings</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Approvals</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Rewards</a>
+                            </li>
+                            <li class="profile__menu-item">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="another__wrapper">
+            <section class="sidebar">
+                <ul class="sidemenu">
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Company</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="index.html">Account Settings</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="branding.html">Branding</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="subscription.html">Subscription</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="billing.html">Billing</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item active">
+                        <a class="sidemenu__item-link" href="#">Directory</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="users.html">Users</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="positions.html">Positions</a>
+                            </li>
+                            <li class="submenu__item active">
+                                <a class="submenu__item-link active" href="levels.html">Levels</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="skills.html">Skills</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="acievements.html">Achievements</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="transactions.html">Transactons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link" href="#">Rewards</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="rewards.html">Inventory</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a class="submenu__item-link" href="requests.html">Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidemenu__item">
+                        <a class="sidemenu__item-link soon" href="integrations.html">
+                            <p>Integrations <br><span>Coming soon</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content levels">
+                <h2>LEVELS</h2>
+                <div class="add__level-wrapper">
+                    <button class="add-level btn">Modify Level</button>
+                </div>
+                <div class="content__section">
+                    <div class="overlay">
+                        <div class="overlay__inner">
+                            <div class="overlay__content"><span class="spinner"></span></div>
+                        </div>
+                    </div>
+                    <table class="table table-wrapper" id="table">
+                        <tr class="row row-header">
+                            <th class="cell id">ID</th>
+                            <th class="cell">Title Level</th>
+                            <th class="cell">Color</th>
+                            <th class="cell">Actions</th>
+                        </tr>
+
+                        <tbody id="cellid"></tbody>
+                    </table>
+
+                </div>
+
+            </section>
+        </section>
+
+        <div class="ninjable__popup level__popup">
+            <div class="ninjable__popup-inner">
+                <div class="ninjable__popup-header">
+                    <span class="ninjable__popup-close level-close">
+                        <img src="./img/subscription__popup-close.svg" alt="">
+                    </span>
+                    <h3>MODIFY LEVEL</h3>
+                </div>
+
+                <div class="level__popup-content">
+                    <h4>Levels</h4>
+                    <div class="level__popup-form" id="formPopupLevels">
+                    </div>
+                </div>
+
+                <div class="level__popup-bottom">
+                    <a class="btn" href="#" id="btnLevelSave">Save</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+        async function renderLevels() {
+            document.querySelector('.overlay').classList.add('active')
+            const data = JSON.stringify({
+                query: `query MyLevels {
+                    levels(order_by: { id: asc }) {
+                    color
+                    id
+                    is_active
+                    slug
+                    title
+                    }
+                }`,
+            });
+            const response = await fetch(
+                BaseUrl,
+                {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Length': data.length,
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                    },
+                    body: data
+                }
+            );
+            const json = await response.json();
+            const datas = json.data.levels.sort((a, b) => a.id - b.id);
+            let body = "";
+
+            document.getElementById('formPopupLevels').innerHTML = '';
+            datas.map((item) => {
+                const button = document.createElement('button')
+                button.innerHTML = item.title
+                button.setAttribute('data-id', item.id)
+                item.is_active && button.classList.add('active')
+                document.getElementById('formPopupLevels').append(button)
+            })
+            addPopupButtonsListeners()
+
+
+            document.getElementById('cellid').innerHTML = '';
+            datas.forEach((da) => {
+                if (da.is_active === true) {
+                    document.getElementById('cellid').innerHTML += `<tr class="row row-item"> 
+                            <td class="cell id">${da.id}</td>
+                            <td class="cell name">${da.title}</td>
+                            <td class="cell color">
+                                <div class="span-color__center">
+                                    <span class="${da.color}">${da.color} - ${da.color} Ninja</span>
+                                </div>
+                            </td>
+                            <td class="cell actions">
+                                <span class="archive" data-id="${da.id}"></span>
+                            </td> 
+                        </tr>`
+                }
+            })
+
+            archiveButton()
+            document.querySelector('.overlay').classList.remove('active')
+        };
+        renderLevels();
+    </script>
+
+    <script>
+        const btnLevelSave = document.getElementById('btnLevelSave')
+        btnLevelSave.addEventListener('click', (e) => modifyLevel(e))
+        async function modifyLevel(e) {
+            document.querySelector('.overlay').classList.add('active')
+            document.querySelector('.ninjable__popup').classList.remove('active')
+            e.preventDefault()
+            const btnsLevelIs = formPopupLevels.querySelectorAll('button')
+            const btnsLevelIsArr = []
+
+            for (let i = 0; i < btnsLevelIs.length; i++) {
+                btnsLevelIsArr.push({
+                    id: parseInt(btnsLevelIs[i].getAttribute('data-id')),
+                    is_active: btnsLevelIs[i].classList.contains('active')
+                })
+            }
+
+            const requestOptionsSave = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                },
+                body: JSON.stringify({
+                    query: `
+                    mutation LevelsMutation($l1: Boolean, $l2: Boolean, $l3: Boolean, $l4: Boolean, $l5: Boolean, $l6: Boolean) {
+                    update_levels_many (
+                        updates: [
+                        {
+                            where: {id: {_eq: 1}},
+                            _set: {is_active: $l1}
+                        },
+                        {
+                            where: {id: {_eq: 2}},
+                            _set: {is_active: $l2}
+                        },
+                        {
+                            where: {id: {_eq: 3}},
+                            _set: {is_active: $l3}
+                        },
+                        {
+                            where: {id: {_eq: 4}},
+                            _set: {is_active: $l4}
+                        },
+                        {
+                            where: {id: {_eq: 5}},
+                            _set: {is_active: $l5}
+                        },
+                        {
+                            where: {id: {_eq: 6}},
+                            _set: {is_active: $l6}
+                        },
+                        ]
+                    ) {
+                        affected_rows
+                    }
+                    }`,
+
+                    variables: {
+                        "l1": btnsLevelIsArr[0].is_active,
+                        "l2": btnsLevelIsArr[1].is_active,
+                        "l3": btnsLevelIsArr[2].is_active,
+                        "l4": btnsLevelIsArr[3].is_active,
+                        "l5": btnsLevelIsArr[4].is_active,
+                        "l6": btnsLevelIsArr[5].is_active,
+                    }
+                })
+            }
+            const response = await fetch(BaseUrl, requestOptionsSave)
+            const data = await response.json();
+            renderLevels();
+            document.querySelector('.overlay').classList.remove('active')
+        }
+
+    </script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+<style>
+    .soon {
+        display: block;
+        line-height: 1vw !important;
+    }
+
+    .soon span {
+        font-size: 0.65vw;
+    }
+
+    #formPopupLevels {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    #formPopupLevels button[data-id="1"] {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="2"] {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="3"] {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    #formPopupLevels button[data-id="4"] {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #formPopupLevels button[data-id="5"] {
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #formPopupLevels button[data-id="6"] {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .name {
+        text-align: center;
+    }
+
+    .span-color__center {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: auto;
+        margin-left: 0;
+        text-transform: capitalize;
+        align-items: center;
+    }
+
+    .cell {
+        text-align: start;
+    }
+
+    .row-item .cell {
+        height: 5.2vw;
+    }
+
+    #cellid .row:nth-child(odd) {
+        background-color: #f7f8fa;
+    }
+
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .row-header {
+        height: 5.01vw !important;
+    }
+
+    .row .cell:nth-child(1) {
+        width: 8.76vw;
+    }
+
+    .row .cell:nth-child(2) {
+        width: 12.49vw;
+    }
+
+    .row .cell:nth-child(3) {
+        width: 22.23vw;
+    }
+
+    .overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.5);
+        display: none;
+        z-index: 999999;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .overlay__inner {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+    }
+
+    .overlay__content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .spinner {
+        width: 75px;
+        height: 75px;
+        display: inline-block;
+        border-width: 2px;
+        border-color: rgba(0, 0, 0, 0.5);
+        border-top-color: #fff;
+        animation: spin 1s infinite linear;
+        border-radius: 100%;
+        border-style: solid;
+    }
+
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+</html>
