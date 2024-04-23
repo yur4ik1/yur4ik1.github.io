@@ -1,4 +1,4 @@
-var BaseUrl = "https://dev-lizzard-0523.hasura.app/v1/graphql";
+var BaseUrl = "https://dev-fox-47.hasura.app/v1/graphql";
 
 if (!localStorage.getItem('authKey')) {
   window.location.href = 'login.html'
@@ -33,7 +33,7 @@ async function refreshToken() {
     const refreshToken = localStorage.getItem("refreshToken");
     if (refreshToken) {
       const response = await fetch(
-        "https://securetoken.googleapis.com/v1/token?key=AIzaSyAVjk5hBPjknNiLPvGN4G4hJ3aoZXNWGzE",
+        "https://securetoken.googleapis.com/v1/token?key=AIzaSyAUGwfsR5Y3loDFqL8SA2smKqNRPUood1g",
         {
           method: "post",
           headers: {
