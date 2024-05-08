@@ -4661,6 +4661,17 @@
 .pricing-new {
     padding: 5.053vw 0;
 
+    h2 {
+        width: 100%;
+        color: var(--Gray-900, #101828);
+        text-align: center;
+        font-size: 1.895vw;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: -0.038vw;
+        margin-bottom: 2.105vw;
+    }
+
     .container {
         max-width: 67.368vw;
     }
@@ -5035,17 +5046,6 @@
 
     .leaders-logos {
         padding: 5.053vw 0;
-
-        .title {
-            width: 100%;
-            color: var(--Gray-900, #101828);
-            text-align: center;
-            font-size: 1.895vw;
-            font-weight: 500;
-            line-height: 140%;
-            letter-spacing: -0.038vw;
-            margin-bottom: 2.526vw;
-        }
     }
 
     .leaders-logos-list {
@@ -5069,19 +5069,21 @@
 
     .compare-plans {
         padding: 5.053vw 0;
+        position: relative;
 
-        .title {
-            width: 100%;
-            text-align: center;
-            color: var(--Gray-900, #101828);
-            font-size: 1.895vw;
-            font-weight: 500;
-            line-height: 140%;
-            letter-spacing: -0.038vw;
-            margin-bottom: 2.105vw;
+        .gradient {
+            width: 26.316vw;
+            height: 26.316vw;
+            position: absolute;
+            left: -30.5vw;
+            top: 21.789vw;
+      
+            border-radius: 15.789vw;
+            opacity: 0.5;
+            background: radial-gradient(442.25% 71.72% at 49.29% 312.72%, #FFF 0%, #FAC4E4 100%);
+            filter: blur(5.263vw);
         }
     }
-
 
 
     .pricing-table {
@@ -5345,7 +5347,7 @@
         letter-spacing: -0.008vw;
         text-transform: capitalize;
         padding: 1.263vw !important;
-        left: 50%;
+        left: 60%;
         top: 90%;
         opacity: 0;
         visibility: hidden;
@@ -5354,7 +5356,94 @@
         a {
             color: var(--Primary, #4855DC);
         }
+    }
 
+
+    .features {
+        padding: 5.053vw 0;
+    }
+
+    .features-wrap {
+        margin-top: 2.105vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .features-wrap-item {
+        width: 32.632vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1.263vw;
+        border: 0.053vw solid var(--Divider-gray, rgba(145, 158, 171, 0.24));
+
+        .top {
+            width: 100%;
+            display: flex;
+            padding: 0.842vw;
+            align-items: center;
+            justify-content: center;
+            gap: 0.421vw;
+            background: rgba(145, 158, 171, 0.16);
+            color: var(--Primary, #4855DC);
+            text-align: center;
+            font-size: 0.947vw;
+            font-weight: 500;
+            line-height: normal;
+            border-top-right-radius: 1.263vw;
+            border-top-left-radius: 1.263vw;
+        }
+    }
+
+    .features-list-wrap {
+        display: flex;
+        padding: 2.105vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.105vw;
+    }
+
+    .features-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.053vw;
+        min-height: 6.684vw;
+    }
+
+    .features-icon {
+        display: flex;
+        padding: 0.421vw;
+        align-items: flex-start;
+        gap: 0.421vw;
+        border-radius: 5.263vw;
+        background: var(--transparent-primary-10, rgba(72, 85, 220, 0.10));
+
+        img {
+            width: 1.263vw;
+            height: 1.263vw;
+        }
+    }
+
+    .features-text {
+        width: 25.263vw;
+
+        .name {
+            color: var(--Black, #101828);
+            font-size: 0.947vw;
+            font-weight: 500;
+            line-height: 1.474vw;
+            text-transform: capitalize;
+        }
+
+        .desc {
+            color: var(--Description-gray, #667085);
+            font-size: 0.842vw;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: -0.008vw;
+            margin-top: 0.421vw;
+        }
     }
 }
 
