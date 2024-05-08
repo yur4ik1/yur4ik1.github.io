@@ -1,3 +1,37 @@
+document.querySelectorAll('.info-trigger').forEach(trigger => {
+  const popup = trigger.nextElementSibling;
+
+  trigger.addEventListener('mouseenter', function () {
+      if (popup && popup.classList.contains('table-popup-info')) {
+          popup.style.opacity = '1';
+          popup.style.visibility = 'visible';
+      }
+  });
+
+  trigger.addEventListener('mouseleave', function () {
+      if (popup && popup.classList.contains('table-popup-info')) {
+          popup.style.opacity = '0';
+          popup.style.visibility = 'hidden';
+      }
+  });
+
+  if (popup) {
+      popup.addEventListener('mouseenter', function () {
+          popup.style.opacity = '1';
+          popup.style.visibility = 'visible';
+      });
+
+      popup.addEventListener('mouseleave', function () {
+          popup.style.opacity = '0';
+          popup.style.visibility = 'hidden';
+      });
+  }
+});
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll('.slider-item');
 
