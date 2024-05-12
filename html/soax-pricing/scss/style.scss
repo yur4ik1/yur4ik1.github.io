@@ -4661,6 +4661,18 @@
 .pricing-new {
     padding: 5.053vw 0;
 
+    a {
+        transition: 0.3s;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
     h2 {
         width: 100%;
         color: var(--Gray-900, #101828);
@@ -4674,6 +4686,7 @@
 
     .container {
         max-width: 67.368vw;
+        padding: 0;
     }
 
     &__hero {
@@ -4717,6 +4730,7 @@
                 font-size: 1.053vw;
                 font-weight: 500;
                 line-height: 160%;
+                margin: 0;
             }
         }
     }
@@ -4841,10 +4855,35 @@
         }
     }
 
+    .pricing-cards-wrap {
+        position: relative;
+        height: 45vw;
+        padding-top: 3.368vw;
+        padding-bottom: 5.053vw;
+    }
+
     .cards-list {
+        position: absolute;
         display: flex;
         gap: 1.263vw;
         margin-top: 2.105vw;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        gap: 1.263vw;
+        margin-top: 2.105vw;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1vw);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.4s;
+    }
+
+    .cards-list.act {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+
     }
 
     .cards-list-item {
@@ -5062,7 +5101,7 @@
     }
 
     .logos__item {
-        width: 88.368px;
+        width: 4.651vw;
         height: auto;
         opacity: 1;
     }
@@ -5077,7 +5116,7 @@
             position: absolute;
             left: -30.5vw;
             top: 21.789vw;
-      
+
             border-radius: 15.789vw;
             opacity: 0.5;
             background: radial-gradient(442.25% 71.72% at 49.29% 312.72%, #FFF 0%, #FAC4E4 100%);
@@ -5447,7 +5486,261 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .pricing-new {
+        padding: 16vw 0;
+    }
 
+    .pricing-new h2 {
+        color: var(--Black, #101828);
+        text-align: center;
+        font-size: 6vw;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: -0.12vw;
+        margin-bottom: 6vw;
+    }
+
+    .pricing-new .container {
+        max-width: 100%;
+        padding: 0 2vw;
+    }
+
+    .pricing-new__hero {
+        gap: 6vw;
+        padding-bottom: 8vw;
+    }
+
+    .pricing-new__hero .pricing-logos {
+        gap: 8vw;
+    }
+
+    .pricing-new__hero .logo-item {
+        width: 22.122vw;
+        height: 12.017vw;
+    }
+
+    .pricing-new__hero .pricing-titles {
+        gap: 6vw;
+        width: 100%;
+        align-items: center;
+    }
+
+    .pricing-new__hero .pricing-titles h1 {
+        width: 100%;
+        font-size: 10vw;
+        line-height: 130%;
+        letter-spacing: -0.2vw;
+        width: 77.5vw;
+    }
+
+    .pricing-new__hero .pricing-titles p {
+        font-size: 4vw;
+        line-height: 160%;
+        padding: 0 2vw;
+    }
+
+    .pricing-new .pricing-cards-wrap {
+        padding: 8vw 0vw;
+        height: 550vw;
+    }
+
+    .pricing-new .pricing-cards {
+        padding: 0;
+    }
+
+    .gradient-wrap {
+        display: none;
+    }
+
+    .pricing-new .control-panel {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .pricing-new .switch-1 {
+        padding: 1vw;
+        border-radius: 25vw;
+        background: rgba(145, 158, 171, 0.14);
+    }
+
+    .pricing-new .switch-1 span {
+        padding: 2vw 2vw 2vw 2vw;
+        border-radius: 16.665vw;
+        font-size: 4vw;
+        font-weight: 500;
+        line-height: normal;
+        width: 100%;
+        height: 11.5vw;
+        gap: 2vw;
+    }
+
+    .pricing-new .switch-1 .annually {
+        padding-right: 2vw;
+    }
+
+    .pricing-new .switch-1 .annually .save {
+        padding: 1.5vw;
+        border-radius: 4vw;
+        font-size: 3.5vw;
+        font-weight: 500;
+        line-height: normal;
+        height: 7.5vw;
+    }
+
+    .pricing-new .switch-2 {
+        padding: 1vw;
+        border-radius: 25vw;
+        border: 0.25vw solid rgba(145, 158, 171, 0.14);
+        background: #fff;
+    }
+
+    .pricing-new .switch-2 span {
+        height: 11.5vw;
+        padding: 2vw 4vw;
+        font-size: 4vw;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 16.665vw;
+        width: 100%;
+    }
+
+    .pricing-new .cards-list {
+        width: 100%;
+        margin-top: 6vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+
+    .pricing-new .cards-list-item {
+        width: 100%;
+        min-height: auto;
+        padding: 4vw;
+        gap: 2vw;
+        border-radius: 6vw;
+        box-shadow: 0vw 0vw 0.5vw 0vw rgba(145, 158, 171, 0.24), 0vw 4vw 8vw -1vw rgba(145, 158, 171, 0.24);
+    }
+
+    .pricing-new .save {
+        gap: 3vw;
+    }
+
+    .pricing-new .save-price {
+        font-size: 5vw;
+        line-height: 160%;
+    }
+
+    .pricing-new .save-info {
+        font-size: 3.5vw;
+        padding: 1.5vw;
+        gap: 2vw;
+        border-radius: 6vw;
+    }
+
+    .pricing-new .price-wrap {
+        gap: 2vw;
+        height: auto;
+    }
+
+    .pricing-new .current-price {
+        font-size: 14vw;
+        line-height: 20vw;
+    }
+
+    .pricing-new .price-info {
+        font-size: 6vw;
+        line-height: 9.998vw;
+        margin-top: 7vw;
+    }
+
+    .pricing-new .pricing-info {
+        margin-top: 2vw;
+        padding-bottom: 4vw;
+    }
+
+    .pricing-new .pricing-info .name {
+        font-size: 6vw;
+        line-height: normal;
+    }
+
+    .pricing-new .pricing-info .desc {
+        font-size: 4vw;
+        line-height: 130%;
+        letter-spacing: -0.04vw;
+        margin-top: 2vw;
+    }
+
+    .pricing-new .pricing-amout {
+        margin-top: 4vw;
+        padding-bottom: 4vw;
+        gap: 4vw;
+    }
+
+    .pricing-new .pricing-amout .name {
+        width: 29.75vw;
+        font-size: 4.5vw;
+        line-height: normal;
+    }
+
+    .pricing-new .pricing-amout .info {
+        width: 25.75vw;
+        gap: 1vw;
+    }
+
+    .pricing-new .pricing-amout .amout {
+        font-size: 4.5vw;
+        line-height: normal;
+    }
+
+    .pricing-new .pricing-amout .requests {
+        font-size: 3.5vw;
+        line-height: normal;
+    }
+
+    .pricing-new .pricing-bottom {
+        margin-top: 4vw;
+    }
+
+    .pricing-new .pricing-btn {
+        padding: 3.5vw 4.5vw;
+        gap: 2vw;
+        border-radius: 14vw;
+        box-shadow: 0vw 0.25vw 0.5vw 0vw rgba(16, 24, 40, 0.05);
+        font-size: 4.5vw;
+        line-height: 6vw;
+    }
+
+    .leaders-logos {
+        padding: 8vw 0;
+    }
+
+    .pricing-new .leaders-logos-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .pricing-new .leaders-swiper-slide {
+        padding: 5vw 6.241vw 5.225vw 6.25vw;
+    }
+
+    .pricing-new .logos__item {
+        width: 16.093vw;
+        height: auto;
+        margin: 0;
+    }
+
+
+    .pricing-new .compare-plans {
+        padding: 8vw 0;
+    }
+    .pricing-new .compare-plans .gradient {
+        display: none;
+    }
+    .pricing-new .pricing-table {
+        display: none;
+    }
+}
 
 
 

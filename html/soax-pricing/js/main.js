@@ -1,32 +1,84 @@
+
+// popup info for new pricing
 document.querySelectorAll('.info-trigger').forEach(trigger => {
   const popup = trigger.nextElementSibling;
+  let showTimeout, hideTimeout;
 
-  trigger.addEventListener('mouseenter', function () {
-      if (popup && popup.classList.contains('table-popup-info')) {
-          popup.style.opacity = '1';
-          popup.style.visibility = 'visible';
-      }
-  });
+  const showPopup = () => {
+      clearTimeout(hideTimeout);
+      showTimeout = setTimeout(() => {
+          if (popup && popup.classList.contains('table-popup-info')) {
+              popup.style.opacity = '1';
+              popup.style.visibility = 'visible';
+          }
+      }, 200);
+  };
 
-  trigger.addEventListener('mouseleave', function () {
-      if (popup && popup.classList.contains('table-popup-info')) {
-          popup.style.opacity = '0';
-          popup.style.visibility = 'hidden';
-      }
-  });
+  const hidePopup = () => {
+      clearTimeout(showTimeout);
+      hideTimeout = setTimeout(() => {
+          if (popup && popup.classList.contains('table-popup-info')) {
+              popup.style.opacity = '0';
+              popup.style.visibility = 'hidden';
+          }
+      }, 200); 
+  };
+
+  trigger.addEventListener('mouseenter', showPopup);
+  trigger.addEventListener('mouseleave', hidePopup);
 
   if (popup) {
-      popup.addEventListener('mouseenter', function () {
-          popup.style.opacity = '1';
-          popup.style.visibility = 'visible';
-      });
-
-      popup.addEventListener('mouseleave', function () {
-          popup.style.opacity = '0';
-          popup.style.visibility = 'hidden';
-      });
+      popup.addEventListener('mouseenter', showPopup);
+      popup.addEventListener('mouseleave', hidePopup);
   }
 });
+
+
+// pricing tabs
+document.addEventListener('DOMContentLoaded', () => {
+  // Переключення між Annually та Monthly
+  const switch1Items = document.querySelectorAll('.switch-1 span');
+  const cardLists = document.querySelectorAll('.cards-list');
+
+  switch1Items.forEach(item => {
+      item.addEventListener('click', () => {
+          switch1Items.forEach(i => i.classList.remove('act'));
+          item.classList.add('act');
+
+          const targetClass = item.classList.contains('annually') ? 'annually' : 'monthly';
+
+          cardLists.forEach(list => {
+              if (list.classList.contains(targetClass)) {
+                  list.classList.add('act');
+              } else {
+                  list.classList.remove('act');
+              }
+          });
+      });
+  });
+
+  // Переключення між Individual та Enterprise
+  const switch2Items = document.querySelectorAll('.switch-2 span');
+  const cardLists2 = document.querySelectorAll('.cards-list');
+
+  switch2Items.forEach(item => {
+      item.addEventListener('click', () => {
+          switch2Items.forEach(i => i.classList.remove('act'));
+          item.classList.add('act');
+
+          const targetClass = item.classList.contains('individual') ? 'individual' : 'enterprise';
+
+          cardLists2.forEach(list => {
+              if (list.classList.contains(targetClass)) {
+                  list.classList.add('act');
+              } else {
+                  list.classList.remove('act');
+              }
+          });
+      });
+  });
+});
+
 
 
 
