@@ -5767,14 +5767,15 @@
 
     .slider-container {
         overflow: hidden;
-    position: relative;
-    width: 100vw;
+        position: relative;
+        width: 100vw;
     }
+
     .slider-wrapper {
         display: flex;
         gap: 2vw;
         transition: transform 0.3s ease-out;
-      }
+    }
 
     .table-mobile-item {
         width: 100%;
@@ -5919,7 +5920,7 @@
         text-align: center;
         padding-top: 10px;
     }
-    
+
     .slider-pagination .dot {
         height: 10px;
         width: 10px;
@@ -5928,9 +5929,10 @@
         border-radius: 50%;
         display: inline-block;
     }
-    
+
     .slider-pagination .dot.active {
-        background-color: #4855DC; /* Adjust the color to match your theme */
+        background-color: #4855DC;
+        /* Adjust the color to match your theme */
     }
 
 

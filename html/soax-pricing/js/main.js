@@ -3,7 +3,11 @@ const pagination = document.getElementById('pagination');
 let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID = 0;
 let currentIndex = 0;
 
-document.addEventListener('DOMContentLoaded', createPagination); // Create pagination on document load
+document.addEventListener('DOMContentLoaded', () => {
+    createPagination();
+    updateSlidePosition(); // Ensure initial slide position is set
+});
+
 slider.addEventListener('touchstart', touchStart);
 slider.addEventListener('touchend', touchEnd);
 slider.addEventListener('touchmove', touchMove);
@@ -39,22 +43,22 @@ function touchEnd() {
     cancelAnimationFrame(animationID);
     isDragging = false;
     const movedBy = currentTranslate - prevTranslate;
-    
-    if (movedBy < -50) {
+
+    if (movedBy < -5) { // Adjust sensitivity based on your needs in vw
         currentIndex = Math.min(currentIndex + 1, slider.children.length - 1);
-    } else if (movedBy > 50) {
+    } else if (movedBy > 5) {
         currentIndex = Math.max(currentIndex - 1, 0);
     }
 
-    centerSlide();
-    updatePagination(); // Update pagination on slide change
+    updateSlidePosition();
+    updatePagination();
     slider.classList.remove('grabbing');
 }
 
 function touchMove(e) {
     if (isDragging) {
         const currentPosition = getPositionX(e);
-        currentTranslate = prevTranslate + currentPosition - startPos;
+        currentTranslate = prevTranslate + (currentPosition - startPos) * (100 / window.innerWidth);
         setSliderPosition();
     }
 }
@@ -68,18 +72,18 @@ function animation() {
 }
 
 function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`;
+    slider.style.transform = `translateX(${currentTranslate}vw)`;
 }
 
-function centerSlide() {
-    const slideWidth = slider.children[currentIndex].offsetWidth;
-    const containerWidth = slider.parentNode.offsetWidth;
+function updateSlidePosition() {
+    // Calculate and update the position of the slider in vw
+    const slideWidth = 88; // Assuming each slide is 90vw wide; adjust as necessary
+    const containerWidth = 100; // Container width in vw
     const newTranslate = (containerWidth / 2) - (slideWidth / 2) - (currentIndex * slideWidth);
     currentTranslate = newTranslate;
     prevTranslate = currentTranslate;
     setSliderPosition();
 }
-
 
 
 
