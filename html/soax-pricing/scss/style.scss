@@ -5775,6 +5775,7 @@
         display: flex;
         gap: 2vw;
         transition: transform 0.3s ease-out;
+        touch-action: pan-y;
     }
 
     .table-mobile-item {
@@ -5918,13 +5919,13 @@
 
     .slider-pagination {
         text-align: center;
-        padding-top: 10px;
+        padding-top: 2.5vw;
     }
 
     .slider-pagination .dot {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
+        width: 2vw;
+        height: 2vw;
+        margin: 0 1vw;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;

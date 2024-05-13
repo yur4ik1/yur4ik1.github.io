@@ -1,89 +1,91 @@
-const slider = document.getElementById('slider');
-const pagination = document.getElementById('pagination');
-let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID = 0;
-let currentIndex = 0;
-
 document.addEventListener('DOMContentLoaded', () => {
-    createPagination();
-    updateSlidePosition(); // Ensure initial slide position is set
+  const slider = document.getElementById('slider');
+  const pagination = document.getElementById('pagination');
+  let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID = 0;
+  let currentIndex = 0;
+
+  createPagination();
+  updateSlidePosition(); // Ensure initial slide position is set
+
+  slider.addEventListener('touchstart', touchStart, { passive: false });
+  slider.addEventListener('touchend', touchEnd);
+  slider.addEventListener('touchmove', touchMove, { passive: false });
+
+  function createPagination() {
+      for (let i = 0; i < slider.children.length; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          if (i === 0) dot.classList.add('active');
+          pagination.appendChild(dot);
+      }
+  }
+
+  function updatePagination() {
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((dot, index) => {
+          if (index === currentIndex) {
+              dot.classList.add('active');
+          } else {
+              dot.classList.remove('active');
+          }
+      });
+  }
+
+  function touchStart(e) {
+      e.preventDefault(); // Prevent the default touch behavior like scrolling
+      isDragging = true;
+      startPos = getPositionX(e);
+      animationID = requestAnimationFrame(animation);
+      slider.classList.add('grabbing');
+  }
+
+  function touchEnd() {
+      cancelAnimationFrame(animationID);
+      isDragging = false;
+      const movedBy = currentTranslate - prevTranslate;
+
+      if (movedBy < -5) { // Adjust sensitivity based on your needs in vw
+          currentIndex = Math.min(currentIndex + 1, slider.children.length - 1);
+      } else if (movedBy > 5) {
+          currentIndex = Math.max(currentIndex - 1, 0);
+      }
+
+      updateSlidePosition();
+      updatePagination();
+      slider.classList.remove('grabbing');
+  }
+
+  function touchMove(e) {
+      e.preventDefault(); // Keep preventing the default to ensure smooth tracking
+      if (isDragging) {
+          const currentPosition = getPositionX(e);
+          currentTranslate = prevTranslate + (currentPosition - startPos) * (100 / window.innerWidth);
+          setSliderPosition();
+      }
+  }
+
+  function getPositionX(e) {
+      return e.touches[0].clientX;
+  }
+
+  function animation() {
+      if (isDragging) requestAnimationFrame(animation);
+  }
+
+  function setSliderPosition() {
+      slider.style.transform = `translateX(${currentTranslate}vw)`;
+  }
+
+  function updateSlidePosition() {
+      // Calculate and update the position of the slider in vw
+      const slideWidth = 88; // Assuming each slide is 90vw wide; adjust as necessary
+      const containerWidth = 100; // Container width in vw
+      const newTranslate = (containerWidth / 2) - (slideWidth / 2) - (currentIndex * slideWidth);
+      currentTranslate = newTranslate;
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+  }
 });
-
-slider.addEventListener('touchstart', touchStart);
-slider.addEventListener('touchend', touchEnd);
-slider.addEventListener('touchmove', touchMove);
-
-function createPagination() {
-    for (let i = 0; i < slider.children.length; i++) {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if (i === 0) dot.classList.add('active');
-        pagination.appendChild(dot);
-    }
-}
-
-function updatePagination() {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        if (index === currentIndex) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
-
-function touchStart(e) {
-    isDragging = true;
-    startPos = getPositionX(e);
-    animationID = requestAnimationFrame(animation);
-    slider.classList.add('grabbing');
-}
-
-function touchEnd() {
-    cancelAnimationFrame(animationID);
-    isDragging = false;
-    const movedBy = currentTranslate - prevTranslate;
-
-    if (movedBy < -5) { // Adjust sensitivity based on your needs in vw
-        currentIndex = Math.min(currentIndex + 1, slider.children.length - 1);
-    } else if (movedBy > 5) {
-        currentIndex = Math.max(currentIndex - 1, 0);
-    }
-
-    updateSlidePosition();
-    updatePagination();
-    slider.classList.remove('grabbing');
-}
-
-function touchMove(e) {
-    if (isDragging) {
-        const currentPosition = getPositionX(e);
-        currentTranslate = prevTranslate + (currentPosition - startPos) * (100 / window.innerWidth);
-        setSliderPosition();
-    }
-}
-
-function getPositionX(e) {
-    return e.touches[0].clientX;
-}
-
-function animation() {
-    if (isDragging) requestAnimationFrame(animation);
-}
-
-function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}vw)`;
-}
-
-function updateSlidePosition() {
-    // Calculate and update the position of the slider in vw
-    const slideWidth = 88; // Assuming each slide is 90vw wide; adjust as necessary
-    const containerWidth = 100; // Container width in vw
-    const newTranslate = (containerWidth / 2) - (slideWidth / 2) - (currentIndex * slideWidth);
-    currentTranslate = newTranslate;
-    prevTranslate = currentTranslate;
-    setSliderPosition();
-}
 
 
 
