@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cURL Converter</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Якщо є CSS -->
+</head>
+<body>
+    <div class="cURL-container">
+        <div class="cURL-container__card">
+            <label for="cURL-input" class="cURL-container__title">Enter CURL Command</label>
+            <textarea id="cURL-input" class="cURL-container__input" rows="10" cols="30" placeholder="Enter CURL command here">curl https://example.com</textarea>
+        </div>
+
+        <div class="cURL-container__card">
+            <label for="output" class="cURL-container__title">Output (Python)</label>
+            <pre class="cURL-container__output">
+                <code id="output" class="language-python" data-output-language="javascript"></code>
+            </pre>
+            <button id="copy-btn" class="cURL__copy">Copy</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script> <!-- Підключення JS -->
+</body>
+</html>
