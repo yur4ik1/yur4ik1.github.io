@@ -1,0 +1,259 @@
+/* pricing-new module */
+@media screen and (max-width: 1040px) {
+    .pricing-new .compare-plans {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .pricing-new .compare-plans .gradient {
+        display: none;
+    }
+
+    .pricing-new .pricing-table {
+        display: none !important;
+    }
+
+    .pricing-table-mobile {
+        display: block;
+    }
+
+    .slider-container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        left: 0;
+        padding-left: var(--spacing-md);
+        padding-top: var(--spacing-xl);
+    }
+
+    div:has(>.table-mobile-item) {
+        width: 427px;
+        padding: var(--spacing-sm);
+        box-sizing: border-box;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-out;
+    }
+
+    .slider-wrapper.active {
+        transition: none;
+    }
+
+    .slider-wrapper.active,
+    .slider.active a {
+        cursor: grab;
+    }
+
+    .slider-wrapper.active+.slider-indicator-bar .slider-indicator {
+        transition: none;
+    }
+
+    .table-mobile-item {
+        width: 418px;
+        height: auto;
+        border-radius: var(--radius-12);
+        background: var(--color-base-white);
+        box-shadow: var(--shadow-md);
+        touch-action: pan-y;
+    }
+
+    .plan-name p {
+        color: var(--color-base-black);
+        text-align: center;
+        font-size: var(--font-display-xs-size);
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xl);
+    }
+
+    .pricing-table-mobile .cat {
+        margin-top: var(--spacing-xl);
+    }
+
+    .pricing-table-mobile .top {
+        display: flex;
+        padding: var(--spacing-xl);
+        align-items: center;
+        gap: var(--spacing-md);
+        border-radius: var(--radius-8);
+        background: rgba(145, 158, 171, 0.16);
+        margin-left: var(--spacing-md);
+        margin-right: var(--spacing-md);
+    }
+
+    .pricing-table-mobile .top .cat-name {
+        color: var(--color-brand-primary);
+        font-size: var(--font-text-md-size);
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        position: relative;
+    }
+
+    .pricing-table-mobile .top .cat-name .requests {
+        color: var(--color-gray-description);
+        font-size: var(--font-text-sm-size);
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.14px;
+    }
+
+    .info-trigger-mob {
+        background: url("https://25298778.fs1.hubspotusercontent-eu1.net/hubfs/25298778/info-icon.svg") no-repeat center top / cover;
+        width: 24.3px;
+        height: 24.3px;
+    }
+
+    .pricing-table-mobile .item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(145, 158, 171, 0.24);
+        justify-content: space-between;
+    }
+
+    .pricing-table-mobile .item .info {
+        display: flex;
+        width: 486px;
+        padding: var(--spacing-xl);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .pricing-table-mobile .item .info .name {
+        color: var(--color-base-black);
+        font-size: var(--font-text-md-size);
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .pricing-table-mobile .item .info .desc {
+        color: var(--color-gray-description);
+        font-size: var(--font-text-sm-size);
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.14px;
+    }
+
+    .pricing-table-mobile .item .price {
+        width: 136.688px;
+        display: flex;
+        padding: var(--spacing-xl);
+        font-weight: 500;
+        font-size: var(--font-text-md-size);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .pricing-table-mobile .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-xl);
+    }
+
+    .pricing-table-mobile .bottom .price {
+        color: var(--color-base-black);
+        text-align: center;
+        font-size: var(--font-text-xl-size);
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .pricing-table-mobile .bottom .price span {
+        color: var(--color-gray-description);
+        font-size: var(--font-text-lg-size);
+        font-weight: 500;
+        line-height: 40.491px;
+    }
+
+    .pricing-table-mobile .bottom .bottom-btn {
+        color: var(--color-base-white);
+        font-size: var(--font-text-md-size);
+        font-weight: 500;
+        line-height: var(--font-text-md-line-height);
+        display: flex;
+        padding: var(--spacing-md) var(--spacing-xl);
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-md);
+        border-radius: var(--radius-24);
+        background: var(--color-base-black);
+        box-shadow: var(--shadow-xs);
+    }
+
+    .pricing-table-mobile .slider-pagination {
+        text-align: center;
+        padding-top: var(--spacing-lg);
+    }
+
+    .pricing-table-mobile .slider-pagination .dot {
+        width: var(--spacing-md);
+        height: var(--spacing-md);
+        margin: 0 var(--spacing-sm);
+        background-color: #bbb;
+        border-radius: var(--radius-full);
+        display: inline-block;
+    }
+
+    .pricing-table-mobile .slider-pagination .dot.active {
+        background-color: var(--color-brand-primary);
+    }
+
+    .table-mobile-item.starter .plan-name {
+        color: var(--color-brand-primary);
+    }
+
+    .table-mobile-item.starter .item .price {
+        color: var(--color-brand-primary);
+    }
+
+    .table-mobile-item.starter .bottom .bottom-btn {
+        background: var(--color-brand-primary);
+        box-shadow: var(--shadow-xs);
+    }
+
+    .table-mobile-item .info-popup-mob {
+        position: absolute;
+        width: 319px;
+        min-height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        border-radius: var(--radius-4);
+        background: var(--color-base-white);
+        transition: 0.4s;
+        box-shadow: var(--shadow-md);
+        color: var(--color-base-black);
+        font-size: var(--font-text-md-size);
+        line-height: 1.5;
+        letter-spacing: -0.032px;
+        padding: var(--spacing-md) !important;
+        left: var(--spacing-xl);
+        top: 13%;
+        z-index: 9999999999999;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+
+
+/* cta info module */
+@media screen and (max-width: 960px) {
+   
+}
