@@ -1,3 +1,5 @@
+// header menu
+
 const menuBurger = document.querySelector('.header__burger');
 const mobileNavigation = document.querySelector('.mobile-navigation');
 const signUpMobile = document.querySelector('.header__sign-up-mob');
@@ -70,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
+// header 
 const header = document.querySelector(".header");
 const width = window.innerWidth
 
@@ -95,6 +97,7 @@ if (header) {
 }
 
 
+// new pricing
 
 document.addEventListener('DOMContentLoaded', function() {
     const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
@@ -253,8 +256,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
 
 
 // Define threshold values
@@ -490,5 +491,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     togglePagination();
+});
+
+// cards v3
+
+let cardContainers = document.querySelectorAll(".cards-v2");
+
+function markLinesForEachNElem(featuresCards, nElem, classToAdd){
+    if (featuresCards.length > nElem){
+        for (let i = nElem; i < featuresCards.length; i+=nElem) {
+            featuresCards[i-1].classList.add(classToAdd)
+        }
+    }
+}
+
+if (cardContainers) {
+    console.log("im here!!")
+    console.log(cardContainers)
+    cardContainers.forEach(container =>{
+        console.log(container)
+        let featuresCards = container.querySelectorAll(".our-features__card");
+        console.log(featuresCards)
+
+        if (parentContainsClass( container,"active")) {
+            markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
+        } else if (parentContainsClass(container,"style_3")) {
+            markLinesForEachNElem(featuresCards, 4, "split-line_4cols");
+        } else if (parentContainsClass(container,"style_4")) {
+            markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
+        } else if (parentContainsClass(container,"style_5")) {
+            markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
+        } else if (parentContainsClass(container,"style_6")) {
+            markLinesForEachNElem(featuresCards, 4, "split-line_4cols");
+        }
+    })
+}
+
+function parentContainsClass(parent,style) {
+    console.log("parent -")
+    console.log(parent)
+    return parent.classList.contains(style);
+}
+
+
+const accordionBtns = document.querySelectorAll(".accordion");
+var allContents = [];
+
+accordionBtns.forEach((accordion) => {
+    allContents.push(accordion.nextElementSibling);
+});
+
+function closeAllContents() {
+    allContents.forEach((el) => {
+        closeContent(el);
+    })
+}
+
+
+const OPEN_CLASS = "is-open";
+
+function closeContent(content) {
+    content.style.maxHeight = null;
+    content.classList.remove(OPEN_CLASS);
+}
+
+accordionBtns.forEach((accordion) => {
+    accordion.onclick = function () {
+        closeAllContents();
+
+        let content = this.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            //this is if the accordion is open
+            closeContent(content);
+            accordion.classList.remove(OPEN_CLASS)
+        } else {
+            //if the accordion is currently closed
+            content.style.maxHeight = content.scrollHeight + "px";
+            accordion.classList.add(OPEN_CLASS)
+            content.classList.add(OPEN_CLASS);
+        }
+    };
 });
 
