@@ -125,13 +125,28 @@
         line-height: 38px;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .display-xs-medium {
+        font-size: 20px;
+    }
+
+    .text-lg-button {
         font-size: 16px;
     }
 
 
-    /* hero */
+    .btn-primary,
+    .btn-secondary {
+        font-size: 16px;
+        height: 48px;
+    }
+
+
+    /* hero module */
     .hero__illustration {
         display: none;
     }
@@ -181,13 +196,73 @@
     }
 
 
-    /* logos */
+    /* logos module */
     .logos .items {
         gap: 32px;
     }
 
     .logos .items img {
         height: auto;
+    }
+
+    /* benefits module  */
+    .benefits .container {
+        gap: 48px;
+    }
+
+
+    .benefits__icon {
+        width: 64px;
+        height: 64px;
+        padding: 17.6px 17.598px 17.6px 17.602px;
+        border-radius: 12.8px;
+        border: 0.8px solid var(--Base-White, #FFF);
+        box-shadow: 0px 12.8px 25.6px -3.2px rgba(145, 158, 171, 0.14);
+        backdrop-filter: blur(4px);
+    }
+
+    .benefits__icon img {
+        width: 28.8px;
+        height: 28.8px;
+    }
+
+    /* features module  */
+    .features__text-with-image {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .features__text-with-image .content {
+        order: 2;
+    }
+
+    .features__products-list {
+        justify-content: flex-start;
+    }
+
+    .features__illustration .union {
+        display: block;
+        width: 470.326px;
+        height: 410.56px;
+    }
+
+    .features__illustration::before {
+        width: 158.296px;
+        height: 332.233px;
+        border-radius: 332.233px;
+        background: radial-gradient(1329.47% 61.47% at 50% 59.7%, #9FA9FA 0%, #FFF 100%);
+        filter: blur(62.68844223022461px);
+    }
+
+    .features__illustration::after {
+        width: 271.413px;
+        height: 133.353px;
+        transform: rotate(-111.481deg);
+        border-radius: 271.413px;
+        background: radial-gradient(442.25% 71.72% at 49.29% 312.72%, #FFF 0%, #00A3FF 100%);
+        filter: blur(62.68844223022461px);
+        top: 128px;
+        right: 0;
     }
 
 
