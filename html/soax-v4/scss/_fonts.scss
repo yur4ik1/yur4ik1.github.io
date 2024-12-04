@@ -1,31 +1,39 @@
 @font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-Regular-WebXL.woff2') format('woff2');
-    font-weight: 400; /* Regular */
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-Medium-WebXL.woff2') format('woff2');
-    font-weight: 500; /* Medium */
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-SemiBold-WebXL.woff2') format('woff2');
-    font-weight: 600; /* SemiBold */
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: 'Suisse Intl';
-    src: url('/fonts/SuisseIntl-Bold-WebXL.woff2') format('woff2');
-    font-weight: 700; /* Bold */
-    font-style: normal;
-    font-display: swap;
-  }  
+  font-family: 'Suisse Intl';
+  src: url('/fonts/SuisseIntl-Regular-WebXL.woff2') format('woff2'),
+       url('/fonts/SuisseIntl-Regular-WebXL.woff') format('woff'),
+       url('/fonts/SuisseIntl-Regular-WebXL.eot'); 
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/fonts/SuisseIntl-Medium-WebXL.woff2') format('woff2'),
+       url('/fonts/SuisseIntl-Medium-WebXL.woff') format('woff'),
+       url('/fonts/SuisseIntl-Medium-WebXL.eot');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/fonts/SuisseIntl-SemiBold-WebXL.woff2') format('woff2'),
+       url('/fonts/SuisseIntl-SemiBold-WebXL.woff') format('woff'),
+       url('/fonts/SuisseIntl-SemiBold-WebXL.eot');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/fonts/SuisseIntl-Bold-WebXL.woff2') format('woff2'),
+       url('/fonts/SuisseIntl-Bold-WebXL.woff') format('woff'),
+       url('/fonts/SuisseIntl-Bold-WebXL.eot');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
