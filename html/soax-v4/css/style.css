@@ -3803,6 +3803,9 @@ a {
     font-size: 24px;
     line-height: 32px;
   }
+  .titles {
+    margin-bottom: 32px;
+  }
   .display-xs-medium {
     font-size: 20px;
   }
@@ -4319,5 +4322,106 @@ a {
   .pricing-new .features-text .name {
     font-size: 18px;
     line-height: 28px;
+  }
+  /* cta info module */
+  .contacts__block {
+    padding: 24px;
+  }
+  .contacts__block::after {
+    display: none;
+  }
+  .contacts__block::before {
+    top: 16px;
+  }
+  .contacts__btns {
+    flex-direction: column;
+  }
+  /* data sources module */
+  .data-sources .category:nth-child(1)::before {
+    display: none;
+  }
+  .data-sources .category:last-child::after {
+    display: none;
+  }
+  .data-sources__categories {
+    gap: 0;
+  }
+  .data-sources .category {
+    margin-top: 16px;
+    gap: 8px;
+  }
+  /* trust module */
+  .trust__block {
+    margin-top: 0;
+    padding: 24px;
+  }
+  .trust__block .features {
+    gap: 24px;
+  }
+  .trust__block .icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 12.8px;
+    box-shadow: 0px 12.8px 25.6px -3.2px rgba(145, 158, 171, 0.24);
+  }
+  .trust__block .icon img {
+    width: 28.8px;
+    height: 28.8px;
+  }
+  .trust__block .logos {
+    gap: 32px;
+  }
+  /* location module */
+  .worldwide__items {
+    gap: 32px;
+    justify-content: center;
+  }
+  .worldwide__items-item {
+    width: 155px;
+    gap: 12px;
+  }
+  .worldwide__items-item .name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .worldwide__items-item .ips {
+    font-size: 14px;
+  }
+  .worldwide__items-item img {
+    width: 42px;
+    height: 30px;
+  }
+  /* cards module */
+  .cards-v2 .fcards-v2__list {
+    margin-top: 0;
+  }
+  .cards-v2__list-item {
+    padding: 16px;
+    gap: 16px;
+  }
+  .cards-v2__list-item .name {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .cards-v2__list-item .icon {
+    width: 24px;
+    height: 24px;
+  }
+  /* blog list module */
+  .exploration__blog {
+    max-width: 100%;
+  }
+  .exploration__blog-items {
+    gap: 40px;
+  }
+  .exploration__blog-item {
+    max-width: 100%;
+  }
+  .exploration__blog-item .image {
+    width: 100%;
+    height: auto;
+  }
+  .exploration__wrap {
+    gap: 48px;
   }
 }
