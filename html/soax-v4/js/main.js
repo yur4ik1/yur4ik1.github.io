@@ -586,29 +586,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightButton = document.querySelector('.nav-button.right');
     const totalSlides = slides.length;
     let currentIndex = 0;
+
+    // Функція для прокручування до слайда
     const scrollToSlide = (index) => {
         slides[index].scrollIntoView({
             behavior: 'smooth',
             block: 'nearest',
-            inline: 'center', 
+            inline: 'center',
         });
     };
 
-    leftButton.addEventListener('click', () => {
+    // Перевірка розміру екрану
+    const isMobileScreen = () => window.innerWidth < 768;
+
+    // Ініціалізація прокрутки тільки для мобільних пристроїв
+    const initSlider = () => {
+        if (isMobileScreen()) {
+            // Додаємо події тільки для мобільного
+            leftButton.addEventListener('click', handleLeftClick);
+            rightButton.addEventListener('click', handleRightClick);
+            window.addEventListener('resize', handleResize);
+        } else {
+            // Видаляємо події для інших екранів
+            leftButton.removeEventListener('click', handleLeftClick);
+            rightButton.removeEventListener('click', handleRightClick);
+            window.removeEventListener('resize', handleResize);
+        }
+    };
+
+    // Обробники подій
+    const handleLeftClick = () => {
         if (currentIndex > 0) {
-            currentIndex--; 
+            currentIndex--;
             scrollToSlide(currentIndex);
         }
-    });
+    };
 
-    rightButton.addEventListener('click', () => {
+    const handleRightClick = () => {
         if (currentIndex < totalSlides - 1) {
-            currentIndex++; 
+            currentIndex++;
             scrollToSlide(currentIndex);
         }
-    });
+    };
 
-    window.addEventListener('resize', () => {
-        scrollToSlide(currentIndex);
-    });
+    const handleResize = () => {
+        if (isMobileScreen()) {
+            scrollToSlide(currentIndex);
+        }
+    };
+
+    // Викликаємо функцію ініціалізації при завантаженні сторінки
+    initSlider();
+
+    // Слухаємо зміни розміру екрана
+    window.addEventListener('resize', initSlider);
 });

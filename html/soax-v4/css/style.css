@@ -3160,6 +3160,9 @@ a {
 .reviews__author-position {
   margin-top: var(--spacing-xs);
 }
+.reviews .reviews__mobile-nav {
+  display: none;
+}
 
 /* cards module */
 .cards-v2 {
@@ -4428,7 +4431,7 @@ a {
   .reviews__mobile-nav {
     position: absolute;
     bottom: -44px;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     width: 100%;
   }
