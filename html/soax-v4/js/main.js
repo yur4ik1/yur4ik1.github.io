@@ -579,6 +579,7 @@ accordionBtns.forEach((accordion) => {
 
 
 // reviews module 
+// Reviews module 
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.reviews__wrap');
     const slides = slider.querySelectorAll('.reviews__item');
@@ -589,28 +590,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Функція для прокручування до слайда
     const scrollToSlide = (index) => {
-        slides[index].scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center',
-        });
-    };
-
-    // Перевірка розміру екрану
-    const isMobileScreen = () => window.innerWidth < 768;
-
-    // Ініціалізація прокрутки тільки для мобільних пристроїв
-    const initSlider = () => {
-        if (isMobileScreen()) {
-            // Додаємо події тільки для мобільного
-            leftButton.addEventListener('click', handleLeftClick);
-            rightButton.addEventListener('click', handleRightClick);
-            window.addEventListener('resize', handleResize);
-        } else {
-            // Видаляємо події для інших екранів
-            leftButton.removeEventListener('click', handleLeftClick);
-            rightButton.removeEventListener('click', handleRightClick);
-            window.removeEventListener('resize', handleResize);
+        if (window.innerWidth < 768) { // Перевірка мобільного екрану
+            slides[index].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center',
+            });
         }
     };
 
@@ -629,9 +614,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const handleResize = () => {
-        if (isMobileScreen()) {
-            scrollToSlide(currentIndex);
+    // Ініціалізація кнопок для мобільних екранів
+    const initSlider = () => {
+        if (window.innerWidth < 768) {
+            // Додаємо події
+            leftButton.addEventListener('click', handleLeftClick);
+            rightButton.addEventListener('click', handleRightClick);
+        } else {
+            // Видаляємо події
+            leftButton.removeEventListener('click', handleLeftClick);
+            rightButton.removeEventListener('click', handleRightClick);
         }
     };
 
