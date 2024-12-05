@@ -99,7 +99,7 @@ if (header) {
 
 // new pricing
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
     const heroElement = document.querySelector('.pricing-new__hero');
@@ -113,18 +113,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const homePageInfos = document.querySelectorAll('.table-popup-info.home-page');
 
     if (isHomePage) {
-        allPageInfos.forEach(info => info.remove()); 
+        allPageInfos.forEach(info => info.remove());
         homePageInfos.forEach(info => {
-            info.style.display = 'block'; 
-            info.style.opacity = '0'; 
-            info.style.visibility = 'hidden'; 
+            info.style.display = 'block';
+            info.style.opacity = '0';
+            info.style.visibility = 'hidden';
         });
     } else {
-        homePageInfos.forEach(info => info.remove()); 
+        homePageInfos.forEach(info => info.remove());
         allPageInfos.forEach(info => {
-            info.style.display = 'block'; 
-            info.style.opacity = '0'; 
-            info.style.visibility = 'hidden'; 
+            info.style.display = 'block';
+            info.style.opacity = '0';
+            info.style.visibility = 'hidden';
         });
     }
 
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelectorAll('.info-trigger-mob').forEach(trigger => {
-        trigger.addEventListener('click', function() {
+        trigger.addEventListener('click', function () {
             const togglePopup = (parentSelector) => {
                 const parent = trigger.closest(parentSelector);
                 if (parent) {
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (popupInfo.classList.contains('active')) {
                             setTimeout(() => {
                                 popupInfo.classList.remove('active');
-                            }, 3000); 
+                            }, 3000);
                         }
                     }
                 }
@@ -307,13 +307,13 @@ class SwipeSlider {
     calculateNextSnap(position, swipeNext) {
         let snapPosition = (parseInt((position / this.itemWidth), 10) - swipeNext) * this.itemWidth;
         let lastPositions = this.maxAllowedW + this.itemWidth;
-        
+
         if (snapPosition <= lastPositions)
             snapPosition = lastPositions;
 
         this.currentSlide = -(snapPosition / this.itemWidth);
         this.updatePagination(this.currentSlide);
-        
+
         return snapPosition;
     }
 
@@ -466,8 +466,10 @@ slidersV2.forEach((slider) => {
     new SwipeSliderV2(slider);
 });
 
+
+
 // Control panel logic to show/hide paginations
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const controlPanels = document.querySelectorAll('.control-panel .switch-2 span');
 
     const togglePagination = () => {
@@ -497,10 +499,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let cardContainers = document.querySelectorAll(".cards-v2");
 
-function markLinesForEachNElem(featuresCards, nElem, classToAdd){
-    if (featuresCards.length > nElem){
-        for (let i = nElem; i < featuresCards.length; i+=nElem) {
-            featuresCards[i-1].classList.add(classToAdd)
+function markLinesForEachNElem(featuresCards, nElem, classToAdd) {
+    if (featuresCards.length > nElem) {
+        for (let i = nElem; i < featuresCards.length; i += nElem) {
+            featuresCards[i - 1].classList.add(classToAdd)
         }
     }
 }
@@ -508,26 +510,26 @@ function markLinesForEachNElem(featuresCards, nElem, classToAdd){
 if (cardContainers) {
     console.log("im here!!")
     console.log(cardContainers)
-    cardContainers.forEach(container =>{
+    cardContainers.forEach(container => {
         console.log(container)
         let featuresCards = container.querySelectorAll(".our-features__card");
         console.log(featuresCards)
 
-        if (parentContainsClass( container,"active")) {
+        if (parentContainsClass(container, "active")) {
             markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
-        } else if (parentContainsClass(container,"style_3")) {
+        } else if (parentContainsClass(container, "style_3")) {
             markLinesForEachNElem(featuresCards, 4, "split-line_4cols");
-        } else if (parentContainsClass(container,"style_4")) {
+        } else if (parentContainsClass(container, "style_4")) {
             markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
-        } else if (parentContainsClass(container,"style_5")) {
+        } else if (parentContainsClass(container, "style_5")) {
             markLinesForEachNElem(featuresCards, 3, "split-line_3cols");
-        } else if (parentContainsClass(container,"style_6")) {
+        } else if (parentContainsClass(container, "style_6")) {
             markLinesForEachNElem(featuresCards, 4, "split-line_4cols");
         }
     })
 }
 
-function parentContainsClass(parent,style) {
+function parentContainsClass(parent, style) {
     console.log("parent -")
     console.log(parent)
     return parent.classList.contains(style);
@@ -574,3 +576,39 @@ accordionBtns.forEach((accordion) => {
     };
 });
 
+
+
+// reviews module 
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.reviews__wrap');
+    const slides = slider.querySelectorAll('.reviews__item');
+    const leftButton = document.querySelector('.nav-button.left');
+    const rightButton = document.querySelector('.nav-button.right');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    const scrollToSlide = (index) => {
+        slides[index].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center', 
+        });
+    };
+
+    leftButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--; 
+            scrollToSlide(currentIndex);
+        }
+    });
+
+    rightButton.addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++; 
+            scrollToSlide(currentIndex);
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        scrollToSlide(currentIndex);
+    });
+});
