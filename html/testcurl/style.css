@@ -1,0 +1,206 @@
+.cURL-container {
+    display: flex;
+    gap: 0.833vw;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 66.667vw;
+    padding: 5vw 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .cURL-container__card {
+    flex: calc(50% - 0.417vw);
+    position: relative;
+    width: calc(50% - 0.417vw);
+  }
+  
+  .cURL-container__title {
+    display: block;
+    font-size: 0.729vw;
+    font-weight: 500;
+    line-height: 1.146vw;
+    margin-bottom: 0.833vw;
+    text-align: left;
+  }
+  
+  .cURL-container__input,
+  .cURL-container__output {
+    background: var(--White, #fff) !important;
+    border: 1px solid var(--Divider-gray, #919EAB3D);
+    border-radius: 0.417vw;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    color: #101828;
+    font-size: 0.833vw!important;
+    font-weight: 400;
+    height: 200px;
+    letter-spacing: -0.01em;
+    line-height: 1.083vw;
+    min-height: 18.854vw;
+    outline: none;
+    padding: 0.521vw 0.729vw;
+    resize: none;
+    text-align: left;
+    width: 100%;
+    overflow: scroll;
+  }
+  
+  .cURL__copy {
+    align-items: center;
+    background-color: #4855dc;
+    border-radius: 50px;
+    bottom: 0.833vw;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.729vw;
+    gap: 0.5rem;
+    justify-content: center;
+    padding-right: 0px;
+    position: absolute;
+    right: 0.833vw;
+    bottom: 1.5vw;
+    width: 4.688vw;
+    z-index: 2;
+  }
+  
+  .cURL__copy:hover {
+    background-color: #3644db;
+  }
+  
+  .cURL__copy__label {
+    font-size: 0.729vw;
+  }
+  
+  .cURL__copy svg.copy-ic {
+    fill: #fff;
+    height: 0.833vw;
+    width: 0.833vw;
+  }
+  
+  /* Gradient styles */
+  .curl-module__bg-wrapper {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .curl-module__bg-styles {
+    height: 30vw;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .curl-module__bg-wrapper .bg__gradient {
+    border-radius: 14vw;
+    filter: blur(9vw);
+    position: absolute;
+    transform: translateZ(0);
+  }
+  
+  .curl-module__bg-wrapper .bg__gradient-1 {
+    background: radial-gradient(71.72% 442.25% at 49.29% 312.72%, #FFFFFF 0%, #00A3FF 100%);
+    height: 25.26vw;
+    left: 9vw;
+    opacity: 1;
+    top: 11vw;
+    width: 16.26vw;
+  }
+  
+  .curl-module__bg-wrapper .bg__gradient-2 {
+    background: radial-gradient(71.72% 442.25% at 49.29% 312.72%, #fff 0%, #9fa9fa 100%);
+    border-radius: 2vw;
+    height: 25.26vw;
+    left: 38vw;
+    opacity: 0.5;
+    top: 9vw;
+    width: 25.26vw;
+  }
+
+  pre[class*=language-] {
+    padding: 0!important;
+    margin: 0!important;
+    padding: 0.521vw 0.729vw!important;
+  }
+  
+  @media (max-width: 767.98px) {
+  
+    .cURL-container {
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 100vw;
+      overflow: hidden;
+      padding: 64px 12px;
+    }
+  
+    .cURL-container__card {
+      flex: 100%;
+      width: 100%;
+    }
+  
+    .cURL-container__title {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+  
+    .cURL-container__input,
+    .cURL-container__output {
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 18.2px;
+      letter-spacing: -0.01em;
+      min-height: 455px;
+      padding: 10px 14px;
+    }
+  
+    .cURL__copy {
+      bottom: 24px;
+      font-size: 14px;
+      right: 15px;
+      width: 90px;
+    }
+  
+    .cURL__copy svg.copy-ic {
+      height: 16px;
+      width: 16px;
+    }
+  
+    .curl-module__bg-wrapper .bg__gradient-1,
+    .curl-module__bg-wrapper .bg__gradient-2 {
+      border-radius: 300px 0px 0px 0px;
+      height: 479.33px;
+      opacity: 0.4;
+      transform: rotate(-75deg);
+      width: 479.33px;
+    }
+  
+    .curl-module__bg-wrapper .bg__gradient-1 {
+      left: -199.31px;
+      top: 186.67px;
+    }
+  
+    .curl-module__bg-wrapper .bg__gradient-2 {
+      left: 26.813vw;
+      opacity: 0.5;
+      top: 58%;
+    }
+  
+    .curl-module__bg-styles,
+    .curl-module__bg-wrapper {
+      height: 100%;
+    }
+    .cURL__copy__label {
+      font-size: 14px;
+    }
+  }
+  
+  pre code {
+    white-space: pre-wrap !important;    /* Wraps text within the pre element */
+    word-wrap: break-word !important;    /* Breaks long words if necessary */
+  }
