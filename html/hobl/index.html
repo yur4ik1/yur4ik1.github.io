@@ -61,10 +61,20 @@
           <!-- Left Column: Table of Contents -->
           <div class="gude__toc">
             <div id="toc" class="gude__toc__box sticky-top">
-              <h4 class="gude__toc-title">Table of Contents</h4>
-              <ul class="gude__toc__box__list" id="toc-list">
-                <!-- TOC items will be generated here -->
-              </ul>
+              <div class="box">
+                <h4 class="gude__toc-title">Table of Contents</h4>
+                <ul class="gude__toc__box__list" id="toc-list">
+                  <!-- TOC items will be generated here -->
+                </ul>
+              </div>
+              <div class="box subscribe-box">
+                <h4 class="gude__toc-title">Like this article?</h4>
+                <p>
+                  Subscribe to our Linkedin
+                  Newsletter to receive more educational content
+                </p>
+                <a class="subscribe-btn" href="#">Subscribe now</a>
+              </div>
             </div>
           </div>
 
@@ -81,6 +91,80 @@
                 rates, and time windows. Advanced topics like composite SLOs, SLO alerting strategies, common
                 challenges,
                 and recommendations for optimizing the use of SLOs are also explored.</p>
+
+
+
+              <div class="cards-module">
+                <div class="cards-module_heading">
+                  <img class="cards-module_logo" src="./img/nobl9_logo_2023_brand 1.svg" alt="">
+                  <h3 class="cards-module_title">Customer-Facing Reliability Powered by Service-Level Objectives</h3>
+                  <a class="cards-module_btn" href="#">Learn More</a>
+                </div>
+
+                <div class="cards-module_content">
+                  <div class="cards-module_item">
+                    <img src="./img/connectio.svg" alt="">
+                    <p>Integrate with your existing monitoring tools to create simple and composite SLOs</p>
+                  </div>
+                  <div class="cards-module_item">
+                    <img src="./img/drawing-compass.svg" alt="">
+                    <p>Rely on patented algorithms to calculate accurate and trustworthy SLOs </p>
+                  </div>
+                  <div class="cards-module_item">
+                    <img src="./img/fast-forward.svg" alt="">
+                    <p>Fast forward historical data to define accurate SLOs and SLIs in minutes</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-blog-banner">
+                <p class="text">Learn how 300 surveyed enterprises use SLOs</p>
+                <a class="cta" href="#">Download Report</a>
+              </div>
+
+              <div class="cards-module_table">
+                <div class="cards-module_heading">
+                  <img class="cards-module_logo" src="./img/nobl9_logo_2023_brand 1.svg" alt="">
+                  <h3 class="cards-module_title">Customer-Facing Reliability Powered by Service-Level Objectives</h3>
+                  <a class="cards-module_btn" href="#">Learn More</a>
+                </div>
+
+                <div class="cards-module_content">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Platform</th>
+                        <th>Single-metric SLOs</th>
+                        <th>Single-tool SLOs</th>
+                        <th>Cross-tool & multi-metric SLOs</th>
+                        <th>Full-stack data normalization</th>
+                        <th>Composite SLO logic</th>
+                        <th>Prescriptive SLOs based on historical data</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Your Existing Monitoring Tools</td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Your Existing Monitoring Tools + Nobl9</td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                        <td><span class="checkmark"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
               <h2>Summary of Key Concepts</h2>
               <table border="1">
@@ -127,22 +211,24 @@
 
               <div class="code-module">
                 <pre>
-                <code class="language-python">
-                  def process_checkout(cart_id, payment_info):
-                  with trace.span("checkout_operation") as span:
-                      span.set_attribute("cart_id", cart_id)
-                      
-                      validate_cart(cart_id)
-                      check_inventory(cart_id)
-                      process_payment(payment_info)
-                      create_order(cart_id)
-                </code>
-              </pre>
+                  <code class="language-python">
+                    def process_checkout(cart_id, payment_info):
+                    with trace.span("checkout_operation") as span:
+                        span.set_attribute("cart_id", cart_id)
+                        
+                        validate_cart(cart_id)
+                        check_inventory(cart_id)
+                        process_payment(payment_info)
+                        create_order(cart_id)
+                  </code>
+                </pre>
               </div>
-
 
               <h2>Key Concepts in Detail</h2>
               <h3>Service Level Objective (SLO)</h3>
+
+              <img src="./img/image.png" alt="">
+
               <p>SLOs are measurable targets expressed in percentages, helping ensure expected performance and
                 reliability
                 for users. For example, an SLO might specify 99.5% uptime over a year or 97% of web pages loading within
@@ -168,32 +254,7 @@
               </ul>
 
               <h3>Common SLI Metrics</h3>
-              <table border="1">
-                <thead>
-                  <tr>
-                    <th>Type of Service</th>
-                    <th>SLI Metric</th>
-                    <th>Description</th>
-                    <th>SLO Example</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Request-driven</td>
-                    <td>Availability</td>
-                    <td>The percentage of time the service is available without failures.</td>
-                    <td>99.5% uptime over the year.</td>
-                  </tr>
-                  <tr>
-                    <td>Request-driven</td>
-                    <td>Latency</td>
-                    <td>The time taken by a service to respond to a request.</td>
-                    <td>95% of web pages should load within 2 seconds over a 30-day period.</td>
-                  </tr>
-                </tbody>
-              </table>
 
-              <h3>SLO Time Windows</h3>
               <p>Time windows define the period for which an error budget is calculated. Common types:</p>
               <ul>
                 <li>Rolling window: Continuously moving time window.</li>
@@ -291,6 +352,44 @@
                 <a href="#!" class="btn">Next Chapter</a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reading">
+        <div class="container">
+          <h2>Continue reading this series</h2>
+          <div class="reading-items">
+
+            <div class="reading-items_item">
+              <div>
+                <p>CHAPTER 1</p>
+                <h3>Chapter 1: Tutorial & Best Practices</h3>
+              </div>
+              <a href="#" class="reading-btn">Read more</a>
+            </div>
+            <div class="reading-items_item">
+              <div>
+                <p>CHAPTER 1</p>
+                <h3>Chapter 1: Tutorial & Best Practices</h3>
+              </div>
+              <a href="#" class="reading-btn">Read more</a>
+            </div>
+            <div class="reading-items_item">
+              <div>
+                <p>CHAPTER 1</p>
+                <h3>Chapter 1: Tutorial & Best Practices</h3>
+              </div>
+              <a href="#" class="reading-btn">Read more</a>
+            </div>
+            <div class="reading-items_item">
+              <div>
+                <p>CHAPTER 1</p>
+                <h3>Chapter 1: Tutorial & Best Practices</h3>
+              </div>
+              <a href="#" class="reading-btn">Read more</a>
+            </div>
+
           </div>
         </div>
       </div>
