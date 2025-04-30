@@ -1,0 +1,154 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  outline: none;
+  font-style: normal;
+  line-height: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+
+.footer {
+  flex: 0 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Spectral", sans-serif;
+  font-weight: 700;
+}
+
+.bluebirdportraits-theme h1 {
+  color: #185D6F;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+.bluebirdportraits-theme h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.bluebirdportraits-theme .container {
+  max-width: 1132px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bluebirdportraits-theme .cta-btn {
+  display: flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  min-width: 200px;
+}
+
+.bluebirdportraits-theme .btn--primary {
+  border: 1px solid #185D6F;
+  background: #185D6F;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #FFF;
+
+  &:hover {
+    background: #0E4B5D;
+  }
+}
+
+.bluebirdportraits-theme .btn--secondary {
+  border: 1px solid #DDDDDE;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #494B4B;
+
+  &:hover {
+    background: #F2F2F2;
+  }
+}
+
+.bluebirdportraits-theme nav,
+ul,
+li,
+ol,
+p,
+span,
+strong {
+  padding: 0;
+  margin: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.bluebirdportraits-theme .module {
+  padding: 100px 0;
+}
+
+.bluebirdportraits-theme .titles-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .desc {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
