@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yurii Kachan - Frontend Developer Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #0f172a;
+            --accent: #2563eb;
+            --background: #f8fafc;
+            --sidebar-bg: #e2e8f0;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --space: 2rem;
+            --max-width: 1100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--primary);
+            line-height: 1.7;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 2.5rem auto;
+            background: var(--white);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            padding: calc(var(--space) * 1.5);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 2rem 0 1rem;
+            border-bottom: 1px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 32px;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        li {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--accent);
+            position: absolute;
+            left: -1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--secondary);
+            transition: color 0.3s ease;
+        }
+
+        .contact-info span:hover {
+            color: var(--accent);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills span {
+            background: var(--white);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .skills span:hover {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+        }
+
+        .job-period {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1e40af;
+        }
+
+        .position {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .upwork-screenshot {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .about p {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: var(--space);
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Юрій Качан</h1>
+        <p class="position">Frontend Developer</p>
+
+        <div class="contact-info">
+            <span>📍 Kiev, Ukraine</span>
+            <span>📞 +380675455731</span>
+            <span>✉️ <a target="_blank" href="mailto:yuriiklevets@gmail.com">yuriiklevets@gmail.com</a></span>
+            <span>🟦 <a target="_blank" href="https://www.linkedin.com/in/yurii-kachan-37919a224">Linkedin</a></span>
+        </div>
+
+        <div class="about">
+            <h2>Про мене</h2>
+            <p>
+                Вітаю! Мене звати Юрій. Я веб-розробник із досвідом понад 4 роки, з яких останні 3 роки працював
+                підрядником
+                у
+                компанії SOAX. </p>
+
+            <p>Верстаю адаптивні та швидкі сайти будь-якої складності. Маю практичний досвід із Next.js, React
+                та TypeScript - працював над великим проєктом міграції сайту <a target="_blank"
+                    href="https://soax.com/">soax.com</a> із HubSpot на Storyblok. За цей час створив
+                понад 60 компонентів різної складності для Next.js. </p>
+
+            <p>Маю великий досвід із HubSpot CMS — розробляв кастомні багатофункціональні модулі під різні
+                бізнес-завдання.</p>
+
+            <p>Ефективно використовую AI для прискорення розробки компонентів, завжди ретельно перевіряю, та
+                покращую згенерований код, щоб забезпечити якість і відповідність проектним вимогам.</p>
+
+            <p>В роботі використовую сучасні підходи, активно оптимізую процеси, реалізую проєкти з використанням
+                атомарного дизайну, впевнено працюю в команді, володію Git, GitLab і GitHub.</p>
+
+            <p>Шукаю нові можливості для професійного зростання та застосування своїх навичок.</p>
+        </div>
+
+        <h2>Навички</h2>
+        <div class="skills">
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>Next.js</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>SCSS/SASS</span>
+            <span>Storyblok</span>
+            <span>HubSpot CMS</span>
+            <span>Git</span>
+        </div>
+
+        <h2>Досвід роботи</h2>
+        <h3>Frontend Developer | <a target="_blank" href="https://soax.com/">SOAX</a></h3>
+        <p class="job-period">Nov 2023 – Jun 2025 | United Kingdom</p>
+        <p>
+            Розробив високопродуктивний веб-сайт на Next.js і Storyblok, покращивши SEO та швидкість
+            завантаження сторінок. Створив кастомні модулі для HubSpot CMS, що оптимізували маркетингові процеси й
+            підвищили ефективність команди. Автоматизував інтеграцію із зовнішніми API, скоротивши ручну роботу на 30%+.
+            Реалізував масштабовану, підтримувану архітектуру з TypeScript і атомарним дизайном для швидкої розробки та
+            простого супроводу.
+        </p>
+
+        <h3>Frontend Developer | <a target="_blank" href="https://ninjable.io/">Ninjable</a></h3>
+        <p class="job-period">Apr 2023 – Oct 2024 | Amsterdam</p>
+        <p>
+            Розробив платформу гейміфікації для Ninjable, створивши адаптивні компоненти інтерфейсу користувача на
+            основі дизайну Figma
+            за допомогою HTML, SCSS та інтегрувавши їх у додаток React.js + Vite. Співпрацював у
+            багатофункціональній команді. Крім того, створив та оптимізував маркетинговий веб-сайт компанії на HubSpot
+            CMS для підвищення впізнаваності бренду та залучення потенційних клієнтів.
+        </p>
+
+        <h3>Freelance Frontend Developer | <a target="_blank"
+                href="https://yur4ik1.github.io/html/Upwork/upwork.png">Upwork</a></h3>
+        <p class="job-period">2021 – 2025 | Remote</p>
+        <p>
+            Працював розробником на Upwork приблизно 4 роки, виконавши численні проекти для клієнтів з різних країн.<br>
+            На жаль, мій обліковий запис на Upwork був заблокований через підозрілу активність, спричинену зміною
+            IP-адрес під час повітряних тривог в Україні.
+        </p>
+
+        <!--
+        <h2>Освіта</h2>
+        <p><strong>Коледж</strong></p>
+        <p>ККТУ НАУ, Kiev | 2021</p>
+        -->
+
+        <h2>Рекомендації</h2>
+        <p><strong>Jake Cornish</strong> 🟦 <a target="_blank"
+                href="https://www.linkedin.com/in/yurii-kachan-37919a224"><strong>
+                    Посилання на рекомендацію в Linkedin</strong></a> 🟦</p>
+        <p>CIM Qualified Marketing Strategist | B2B Tech SaaS | Startups | Financial Services</p>
+        <p><strong>SOAX</strong></p>
+        <p><a href="mailto:j.cornish@soax.com">j.cornish@soax.com</a></p>
+        <p>24 June 2025, Jake: Former direct manager of Yurii</p>
+        <p>I had the pleasure of working with Yurii for nearly two years during our time at SOAX, and I can
+            confidently say he's one of the most skilled and reliable developers I've worked with. From early on, I
+            had complete trust in his ability to deliver high-quality work on time - no matter how complex the task
+            or project. What set Yurii apart was his determination to find solutions: he never once said something
+            wasn't possible without fully exploring all options, and often came back with creative workarounds or
+            smarter approaches. Any team would be lucky to have him!</p>
+    </div>
+</body>
+
+</html>
