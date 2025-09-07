@@ -19,6 +19,200 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check initial scroll position
     handleScroll();
+
+    // Initialize Reviews Swiper
+    const reviewsSwiper = new Swiper('.reviews-swiper', {
+        // Basic settings
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        centeredSlides: false,
+        loop: true,
+        
+        // Autoplay settings
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        
+        // Enable mouse/touch interaction
+        simulateTouch: true,
+        allowTouchMove: true,
+        touchRatio: 1,
+        touchAngle: 45,
+        
+        // Mouse wheel support
+        mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+        },
+        
+        // Grab cursor
+        grabCursor: true,
+        
+        // Free mode for smooth scrolling
+        freeMode: {
+            enabled: true,
+            sticky: false,
+            momentum: true,
+            momentumRatio: 0.5,
+            momentumVelocityRatio: 0.5,
+        },
+        
+        // Smooth scrolling
+        speed: 1000,
+        
+        // Responsive breakpoints
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                centeredSlides: true,
+                freeMode: false,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+                centeredSlides: false,
+                freeMode: false,
+            },
+            1024: {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+                centeredSlides: false,
+                freeMode: true,
+            }
+        }
+    });
+
+    // Pricing tabs functionality
+    const pricingTabs = document.querySelectorAll('.pricing__tabs-item');
+    const pricingContents = document.querySelectorAll('.pricing__content');
+
+    if (pricingTabs.length && pricingContents.length) {
+        pricingTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                pricingTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all content sections
+                pricingContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                // Show target content section
+                const targetContent = document.querySelector(`[data-content="${targetTab}"]`);
+                if (targetContent) {
+                    targetContent.style.display = 'flex';
+                }
+            });
+        });
+    }
+
+    // FAQ functionality
+    const faqItems = document.querySelectorAll('.faq__content-item');
+
+    if (faqItems.length) {
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq__content-item-question');
+            
+            if (question) {
+                question.addEventListener('click', function() {
+                    // Toggle active class
+                    item.classList.toggle('active');
+                    
+                    // Close other FAQ items (optional - for accordion behavior)
+                    // faqItems.forEach(otherItem => {
+                    //     if (otherItem !== item) {
+                    //         otherItem.classList.remove('active');
+                    //     }
+                    // });
+                });
+            }
+        });
+    }
+
+    // Link copying functionality
+    const linkButtons = document.querySelectorAll('.link-button');
+
+    if (linkButtons.length) {
+        linkButtons.forEach(button => {
+            button.addEventListener('click', async function() {
+                const link = this.getAttribute('data-link');
+                const type = this.getAttribute('data-type');
+                const img = this.querySelector('img');
+                
+                if (!link || !img) return;
+                
+                // Prevent multiple clicks
+                if (this.classList.contains('copying')) return;
+                
+                try {
+                    // Copy to clipboard
+                    await navigator.clipboard.writeText(link);
+                    
+                    // Add copying state
+                    this.classList.add('copying');
+                    
+                    // Store original src
+                    const originalSrc = img.src;
+                    
+                    // Change icon to check
+                    img.src = './img/click-check.svg';
+                    
+                    // Create and show badge
+                    const badge = document.createElement('div');
+                    badge.className = 'copied-badge';
+                    badge.textContent = 'Copied!';
+                    this.appendChild(badge);
+                    
+                    // Show badge with animation
+                    setTimeout(() => {
+                        badge.classList.add('show');
+                    }, 10);
+                    
+                    // Hide badge and restore icon after 2 seconds
+                    setTimeout(() => {
+                        badge.classList.remove('show');
+                        
+                        setTimeout(() => {
+                            // Restore original icon
+                            img.src = originalSrc;
+                            this.classList.remove('copying');
+                            
+                            // Remove badge
+                            if (badge.parentNode) {
+                                badge.parentNode.removeChild(badge);
+                            }
+                        }, 300);
+                    }, 2000);
+                    
+                } catch (err) {
+                    console.error('Failed to copy link: ', err);
+                    
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = link;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    
+                    try {
+                        document.execCommand('copy');
+                        console.log('Link copied using fallback method');
+                    } catch (fallbackErr) {
+                        console.error('Fallback copy failed: ', fallbackErr);
+                    }
+                    
+                    document.body.removeChild(textArea);
+                }
+            });
+        });
+    }
 });
 
 // Calculator functionality
