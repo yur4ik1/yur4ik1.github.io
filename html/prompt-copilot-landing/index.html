@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/" class="header__logo">
+            <img src="./img/logo.svg" alt="logo">
+          </a>
+          <div class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item active">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Compare</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">FAQ</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">How it Works</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__menu-btn">
+            <button class="btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <div class="hero__content-heading">
+                Join 2,847 founders and creators
+              </div>
+              <h1 class="hero__content-title text-hero">
+                Your AI Finally Has a Memory
+              </h1>
+              <div class="hero__content-description text-body">
+                Prompt Copilot autocompletes your thoughts, enhances your prompts and remembers everything for you
+              </div>
+              <a href="#" class="hero__content-btn btn-primary btn-icon">
+                <div class="shine-effect">
+                  <div class="shine-line shine-line--wide"></div>
+                  <div class="shine-line shine-line--thin"></div>
+                </div>
+                <img src="./img/chrome.svg" alt="chrome">
+                Add To Chrome
+              </a>
+            </div>
+          </div>
+          <div class="hero__logos">
+            <p class="hero__logos-text">Powered by</p>
+            <div class="hero__logos-list">
+              <div class="hero__logos-item hero__logos-item--notion">
+                <img src="./img/notion-logo.svg" alt="Notion">
+              </div>
+              <div class="hero__logos-item hero__logos-item--openai">
+                <img src="./img/openai-logo.svg" alt="OpenAI">
+              </div>
+              <div class="hero__logos-item hero__logos-item--good-promt">
+                <img src="./img/good-promt-logo.svg" alt="Good Prompt">
+              </div>
+              <div class="hero__logos-item hero__logos-item--gemini">
+                <img src="./img/gemini-logo.svg" alt="Gemini">
+              </div>
+              <div class="hero__logos-item hero__logos-item--claude">
+                <img src="./img/claude-logo.svg" alt="Claude">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="forgetting">
+        <div class="container">
+          <div class="forgetting__titles">
+            <h2 class="text-subtitle">
+              Every Time You Open a New Chat, Your AI Forgets Everything
+            </h2>
+          </div>
+          <div class="forgetting__content">
+            <div class="forgetting__content-item">
+              <div class="forgetting__content-item-text">
+                <p class="text-body">Your business goals?</p>
+                <span class="text-heading">Gone.</span>
+              </div>
+              <div class="forgetting__content-item-image">
+                <img src="./img/forgetting-icon-1.svg" alt="">
+              </div>
+            </div>
+            <div class="forgetting__content-item">
+              <div class="forgetting__content-item-text">
+                <p class="text-body">Your brand voice?</p>
+                <span class="text-heading">Muted.</span>
+              </div>
+              <div class="forgetting__content-item-image">
+                <img src="./img/forgetting-icon-2.svg" alt="">
+              </div>
+            </div>
+            <div class="forgetting__content-item">
+              <div class="forgetting__content-item-text">
+                <p class="text-body">Your product details?</p>
+                <span class="text-heading">Disappeared.</span>
+              </div>
+              <div class="forgetting__content-item-image">
+                <img src="./img/forgetting-icon-3.svg" alt="">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="forgetting__repetitive">
+            <div class="forgetting__repetitive-content">
+              <h3 class="forgetting__repetitive-content-title text-subtitle">
+                Your Time Is Worth More Than Repetitive Typing
+              </h3>
+              <p class="forgetting__repetitive-content-description text-body">
+                Retyping entire business plan again and again takes hours. Prompt Copilot does it for you.
+              </p>
+              <a class="forgetting__repetitive-content-btn btn-primary" href="#">Stop Wasting Time</a>
+            </div>
+            <div class="forgetting__repetitive-calc">
+              <p class="forgetting__repetitive-calc-title text-button-alt">Minutes Saved re-prompting per month</p>
+
+              <div class="calc-display">
+                <div class="calc-number calc-input">
+                  <span id="inputValue">5</span>
+                </div>
+                <div class="calc-arrow">
+                  <span class="calc-arrow-label">Prompts Saves</span>
+                  <img src="./img/arrow.svg" alt="arrow">
+                </div>
+                <div class="calc-number calc-result">
+                  <span id="resultValue">100</span><span class="calc-unit">min</span>
+                </div>
+              </div>
+
+              <div class="calc-slider">
+                <div class="slider-value" id="sliderValue">5</div>
+                <input type="range" id="timeSlider" min="0" max="100" value="5" class="slider">
+                <div class="slider-labels">
+                  <span>0</span>
+                  <span>100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="testimonials__image">
+            <img src="./img/testimonials-image.webp" alt="testimonials">
+          </div>
+          <div class="testimonials__content">
+            <p class="text-button-alt">
+              I was spending the first 10 minutes of every ChatGPT session explaining my startup.
+              One day I calculated it - I was wasting an entire work week every month just on context.
+              That's when i knew something had to change.
+            </p>
+            <p class="text-description">- Alex P., Co-founder of Prompt Copilot</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faster">
+        <div class="container">
+          <div class="faster__titles">
+            <h2 class="text-subtitle">
+              Start Prompting 10X Faster
+            </h2>
+            <p class="text-body">
+              Stop explaining yourself 1000 times. <br>
+              Your copilot helps you work faster, and better.
+            </p>
+          </div>
+          <div class="faster__content">
+            <div class="faster__content-item">
+              <p class="title text-subheading">Without Prompt Copilot</p>
+              <div class="faster__content-list">
+                <li class="faster__content-list-item text-description-alt">Typos everywhere</li>
+                <li class="faster__content-list-item text-description-alt">Poor structure</li>
+                <li class="faster__content-list-item text-description-alt">Context lost</li>
+                <li class="faster__content-list-item text-description-alt">Inconsistent formatting</li>
+              </div>
+            </div>
+            <div class="faster__content-item top">
+              <div class="faster__content-item-container">
+                <p class="title text-subheading">With Prompt Copilot</p>
+                <div class="faster__content-list">
+                  <li class="faster__content-list-item text-description-alt">Typos everywhere</li>
+                  <li class="faster__content-list-item text-description-alt">Poor structure</li>
+                  <li class="faster__content-list-item text-description-alt">Context lost</li>
+                  <li class="faster__content-list-item text-description-alt">Inconsistent formatting</li>
+                </div>
+              </div>
+              <a href="#" class="btn-primary">Start for free today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="container"> 
+
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>

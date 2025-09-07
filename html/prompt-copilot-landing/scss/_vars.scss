@@ -1,0 +1,236 @@
+// Variables for Landing
+:root {
+  // Colors
+  --black-landing: #000;
+  --background-landing: #100F0F;
+  --white-landing: #FFF;
+  --box-bg-landing: #171717;
+  --border-landing: #242423;
+  --border-hover-landing: #313130;
+  --dark-alt-landing: #807D75;
+  --alt-landing: #9F9D96;
+  --light-alt-landing: #EBEBEA;
+  --linear-gradient-landing: linear-gradient(180deg, #FDFD80 0%, #E6B142 100%);
+  
+  // Typography - Common values
+  --font-family-base: "Inter Variable", "Inter", sans-serif;
+  --font-weight-medium: 500;
+  --font-style-normal: normal;
+  --line-height-normal: normal;
+  --line-height-140: 140%;
+  --line-height-125: 125%;
+  --text-align-center: center;
+  
+  // Font sizes
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-42: 42px;
+  --font-size-52: 52px;
+  
+  // Letter spacing (based on font size pattern: -2% of font size)
+  --letter-spacing-14: -0.28px;
+  --letter-spacing-16: -0.32px;
+  --letter-spacing-18: -0.36px;
+  --letter-spacing-20-small: -0.4px;
+  --letter-spacing-20: -0.6px;
+  --letter-spacing-24: -0.72px;
+  --letter-spacing-28: -0.56px;
+  --letter-spacing-42: -1.26px;
+  --letter-spacing-52: -1.56px;
+  
+  // Button variables
+  --button-border-radius-primary: 11px;
+  --button-border-radius-secondary: 9px;
+  --button-gap-primary: 8px;
+  --button-gap-secondary: 10px;
+  --button-padding-primary: 10px 18px 10px 16px;
+  --button-padding-secondary: 9px 18px;
+  --button-width-secondary: 328px;
+  
+  // Button shadows
+  --button-shadow-primary: 
+    0 -3px 3px 0 rgba(0, 0, 0, 0.25) inset, 
+    0 3px 3px 0 rgba(255, 255, 255, 0.25) inset, 
+    0 -82px 23px 0 rgba(0, 0, 0, 0.00), 
+    0 -52px 21px 0 rgba(0, 0, 0, 0.03), 
+    0 -29px 18px 0 rgba(0, 0, 0, 0.08), 
+    0 -13px 13px 0 rgba(0, 0, 0, 0.14), 
+    0 -3px 7px 0 rgba(0, 0, 0, 0.17);
+}
+
+// Typography Classes
+.text-hero {
+  color: var(--white-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-52);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-52);
+}
+
+.text-subtitle {
+  color: var(--white-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-42);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-125);
+  letter-spacing: var(--letter-spacing-42);
+}
+
+.text-heading {
+  color: var(--white-landing);
+  font-size: var(--font-size-28);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-28);
+}
+
+.text-subheading {
+  color: var(--white-landing);
+  font-size: var(--font-size-24);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-24);
+}
+
+.text-button {
+  color: var(--white-landing);
+  font-size: var(--font-size-20);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-20);
+  text-transform: capitalize;
+}
+
+.text-button-alt {
+  color: var(--white-landing);
+  font-size: var(--font-size-20);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-20-small);
+}
+
+.text-body {
+  color: var(--alt-landing);
+  font-size: var(--font-size-18);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-18);
+}
+
+.text-description {
+  color: var(--white-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-16);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-16);
+}
+
+.text-description-alt {
+  color: var(--alt-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-16);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-16);
+}
+
+.text-description-light {
+  color: var(--light-alt-landing);
+  font-size: var(--font-size-16);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-16);
+}
+
+.text-small {
+  color: var(--dark-alt-landing);
+  font-size: var(--font-size-14);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-14);
+}
+
+// Button Classes
+.btn-primary {
+  display: inline-flex;
+  padding: var(--button-padding-primary);
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap-primary);
+  border: none;
+  border-radius: var(--button-border-radius-primary);
+  background: var(--linear-gradient-landing);
+  box-shadow: var(--button-shadow-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  // Typography
+  color: var(--black-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-18);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-140);
+  letter-spacing: var(--letter-spacing-18);
+}
+
+.btn-secondary {
+  display: flex;
+  width: var(--button-width-secondary);
+  padding: var(--button-padding-secondary);
+  justify-content: center;
+  align-items: center;
+  gap: var(--button-gap-secondary);
+  border: 1px solid var(--border-hover-landing);
+  border-radius: var(--button-border-radius-secondary);
+  background: var(--border-landing);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  // Typography
+  color: var(--white-landing);
+  text-align: var(--text-align-center);
+  font-size: var(--font-size-18);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-18);
+  
+  &:hover {
+    background: var(--border-hover-landing);
+    border-color: var(--alt-landing);
+  }
+  
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+// Button with icon support
+.btn-icon {
+  svg, 
+  img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: 0.4s ease;
+  }
+}
+
