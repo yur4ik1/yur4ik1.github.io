@@ -213,6 +213,113 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Custom smooth scroll with easing animation
+    const menuLinks = document.querySelectorAll('.header__menu-link');
+    const menuItems = document.querySelectorAll('.header__menu-item');
+    
+    // Flag to prevent auto-updating active menu during custom scroll animation
+    let isCustomScrolling = false;
+
+    // Easing function - ease-in-out-cubic for smooth acceleration/deceleration
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    // Custom smooth scroll function
+    function smoothScrollTo(targetPosition, duration = 1200) {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+        
+        // Set flag to prevent auto-updating active menu
+        isCustomScrolling = true;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            // Apply easing function
+            const easedProgress = easeInOutCubic(progress);
+            
+            window.scrollTo(0, startPosition + distance * easedProgress);
+            
+            if (progress < 1) {
+                requestAnimationFrame(animation);
+            } else {
+                // Animation finished, allow auto-updating active menu again
+                setTimeout(() => {
+                    isCustomScrolling = false;
+                }, 100); // Small delay to ensure scroll position is stable
+            }
+        }
+        
+        requestAnimationFrame(animation);
+    }
+
+    if (menuLinks.length) {
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Only handle anchor links
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        // Calculate offset for fixed header (header height + some padding)
+                        const headerHeight = 100; // Approximate header height
+                        const elementPosition = targetElement.offsetTop - headerHeight;
+                        
+                        // Use custom smooth scroll with easing
+                        smoothScrollTo(elementPosition, 1200);
+                        
+                        // Update active menu item
+                        menuItems.forEach(item => item.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+                    }
+                }
+            });
+        });
+    }
+
+    // Update active menu item on scroll
+    const sections = document.querySelectorAll('section[id], main[id]');
+    
+    if (sections.length && menuItems.length) {
+        window.addEventListener('scroll', function() {
+            // Don't update active menu during custom scroll animation
+            if (isCustomScrolling) {
+                return;
+            }
+            
+            const scrollPosition = window.scrollY + 100; // Offset for header
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            // Update active menu item only during manual scroll
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === '#' + currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    }
 });
 
 // Calculator functionality
