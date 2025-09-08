@@ -1,3 +1,96 @@
+// Heading blur animation for all h1, h2 and h3 elements
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to split text into letters and prepare for animation
+    function prepareHeadingAnimation(heading, isHero = false) {
+        const text = heading.textContent;
+        const className = isHero ? 'hero-letter' : 'heading-letter';
+        
+        // Split text into words
+        const words = text.split(' ');
+        let htmlString = '';
+        let letterIndex = 0;
+        
+        let addedWordsCount = 0;
+        
+        words.forEach((word) => {
+            // Skip empty words
+            if (!word.trim()) {
+                return;
+            }
+            
+            // Add space before word (except first added word)
+            if (addedWordsCount > 0) {
+                htmlString += ' ';
+            }
+            
+            // Create word wrapper
+            htmlString += '<span class="word-wrapper">';
+            
+            // Create spans for each letter in the word
+            word.split('').forEach((char) => {
+                const delay = letterIndex * 0.01;
+                htmlString += `<span class="${className}" style="animation-delay: ${delay}s">${char}</span>`;
+                letterIndex++;
+            });
+            
+            htmlString += '</span>';
+            addedWordsCount++;
+        });
+        
+        heading.innerHTML = htmlString;
+    }
+
+    // Function to trigger animation
+    function triggerHeadingAnimation(heading) {
+        heading.classList.add('animate');
+    }
+
+    // Get all h1, h2 and h3 elements
+    const headings = document.querySelectorAll('h1, h2, h3');
+    
+    if (headings.length === 0) return;
+
+    // Prepare all headings for animation
+    headings.forEach(heading => {
+        const isHero = heading.classList.contains('hero__content-title');
+        prepareHeadingAnimation(heading, isHero);
+    });
+
+    // Special case: trigger hero title immediately
+    const heroTitle = document.querySelector('.hero__content-title');
+    if (heroTitle) {
+        setTimeout(() => {
+            triggerHeadingAnimation(heroTitle);
+        }, 100);
+    }
+
+    // Set up Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+        threshold: 0.3, // Trigger when 30% of heading is visible
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully visible
+    };
+
+    const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+                // Small delay for smoother effect
+                setTimeout(() => {
+                    triggerHeadingAnimation(entry.target);
+                }, 0);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all headings except hero title (it animates immediately)
+    headings.forEach(heading => {
+        if (!heading.classList.contains('hero__content-title')) {
+            headingObserver.observe(heading);
+        }
+    });
+});
+
+
+
 // Header scroll functionality
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
@@ -343,17 +436,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Dynamic font size based on slider value
         function adjustFontSize(element, number, baseFontSize) {
             let fontSize = baseFontSize;
-            
-            if (number < 50) {
-                fontSize = baseFontSize; // 128px for values under 50
-            } else if (number >= 50 && number < 75) {
-                fontSize = baseFontSize * 0.85; // ~109px for 50-74
-            } else if (number >= 75 && number < 90) {
-                fontSize = baseFontSize * 0.85; // ~96px for 75-89
-            } else {
-                fontSize = baseFontSize * 0.75; // ~83px for 90-100
-            }
-            
             element.style.setProperty('font-size', fontSize + 'px', 'important');
         }
         
@@ -362,8 +444,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('minutes:', minutes, 'length:', minutes.toString().length);
         
         // Adjust font sizes
-        adjustFontSize(inputValue, minutes, 128);
-        adjustFontSize(resultValue, minutes, 128); // Use minutes (inputValue) for resultValue scaling too
+        adjustFontSize(inputValue, minutes, 100);
+        adjustFontSize(resultValue, minutes, 100); // Use minutes (inputValue) for resultValue scaling too
         adjustFontSize(sliderValue, minutes, 14);
         
         // Calculate exact position for the slider value (number above thumb)
@@ -392,4 +474,121 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize calculation
     updateCalculation();
+});
+
+// Smooth infinite scroll for hero logos
+document.addEventListener('DOMContentLoaded', function() {
+    const logosList = document.querySelector('.hero__logos-list');
+    
+    if (logosList) {
+        // Clone logos for seamless infinite scroll
+        const logoItems = Array.from(logosList.children);
+        
+        // Duplicate logos multiple times for smooth infinite scroll
+        for (let i = 0; i < 4; i++) {
+            logoItems.forEach(item => {
+                const clone = item.cloneNode(true);
+                logosList.appendChild(clone);
+            });
+        }
+        
+        // Set up smooth scroll animation
+        let scrollPosition = 0;
+        const scrollSpeed = 1; // pixels per frame
+        const totalWidth = logosList.scrollWidth;
+        const resetPoint = totalWidth / 5; // Reset when we've scrolled one set of logos
+        
+        function animateScroll() {
+            scrollPosition += scrollSpeed;
+            
+            // Reset position when we've scrolled one complete set
+            if (scrollPosition >= resetPoint) {
+                scrollPosition = 0;
+            }
+            
+            logosList.style.transform = `translateX(-${scrollPosition}px)`;
+            requestAnimationFrame(animateScroll);
+        }
+        
+        // Start animation
+        requestAnimationFrame(animateScroll);
+    }
+});
+
+
+// Custom fadeInUp animation with Intersection Observer
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fadeInUp');
+    
+    if (fadeElements.length === 0) return;
+
+    // Group elements by their parent container for stagger effect
+    const elementGroups = new Map();
+    
+    fadeElements.forEach(element => {
+        const parent = element.parentElement;
+        if (!elementGroups.has(parent)) {
+            elementGroups.set(parent, []);
+        }
+        elementGroups.get(parent).push(element);
+    });
+
+    // Create intersection observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const parent = element.parentElement;
+                const siblings = elementGroups.get(parent) || [element];
+                
+                // Check if element is in FAQ section or has no-stagger class
+                const isFaqSection = element.closest('.faq') !== null;
+                const hasNoStagger = element.classList.contains('no-stagger') || 
+                                   parent.classList.contains('no-stagger');
+                
+                if (isFaqSection || hasNoStagger) {
+                    // No stagger delay - animate immediately
+                    element.classList.add('animate');
+                } else {
+                    // Find the index of current element among siblings
+                    const elementIndex = siblings.indexOf(element);
+                    
+                    // Calculate stagger delay (100ms between each element)
+                    const staggerDelay = elementIndex * 100;
+                    
+                    // Trigger animation with stagger delay
+                    setTimeout(() => {
+                        element.classList.add('animate');
+                    }, staggerDelay);
+                }
+                
+                // Stop observing this element (animate only once)
+                observer.unobserve(element);
+            }
+        });
+    }, {
+        threshold: 0.1,           // Trigger when 10% visible
+        rootMargin: '0px 0px -50px 0px'  // Trigger 50px before element comes into view
+    });
+
+    // Start observing all fadeInUp elements
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Utility function to manually trigger fadeInUp animation
+    window.triggerFadeInUp = function(selector) {
+        const element = document.querySelector(selector);
+        if (element && element.classList.contains('fadeInUp')) {
+            element.classList.add('animate');
+        }
+    };
+    
+    // Utility function to reset fadeInUp animation
+    window.resetFadeInUp = function(selector) {
+        const element = document.querySelector(selector);
+        if (element && element.classList.contains('fadeInUp')) {
+            element.classList.remove('animate');
+        }
+    };
 });
