@@ -433,10 +433,10 @@ document.addEventListener('DOMContentLoaded', function() {
         resultValue.textContent = savedMinutes;
         sliderValue.textContent = minutes;
         
-        // Dynamic font size based on slider value
+        // Keep font sizes static - no dynamic sizing
         function adjustFontSize(element, number, baseFontSize) {
-            let fontSize = baseFontSize;
-            element.style.setProperty('font-size', fontSize + 'px', 'important');
+            // Do nothing - keep original CSS font sizes
+            // This prevents numbers from jumping when they change
         }
         
         // Debug: check if elements are found
@@ -444,8 +444,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('minutes:', minutes, 'length:', minutes.toString().length);
         
         // Adjust font sizes
-        adjustFontSize(inputValue, minutes, 100);
-        adjustFontSize(resultValue, minutes, 100); // Use minutes (inputValue) for resultValue scaling too
+        adjustFontSize(inputValue, minutes, 90);
+        adjustFontSize(resultValue, minutes, 90); // Use minutes (inputValue) for resultValue scaling too
         adjustFontSize(sliderValue, minutes, 14);
         
         // Calculate exact position for the slider value (number above thumb)

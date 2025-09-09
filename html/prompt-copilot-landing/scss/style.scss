@@ -223,7 +223,7 @@ html {
         flex-direction: column;
         margin: 0 auto;
         margin-top: 200px;
-        width: 765px;
+        max-width: 765px;
         position: relative;
         overflow: hidden;
 
@@ -824,39 +824,50 @@ h1, h2, h3 {
         background: url('../img/mini-stars.svg') no-repeat center top / cover;
 
         .calc-display {
+            position: relative;
+            height: 150px;
+            margin: 60px 0;
+            width: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
-            margin: 70px 0;
-            position: relative;
         }
 
         .calc-number {
+            position: absolute;
             display: flex;
             align-items: baseline;
-            gap: 4px;
-            
+            gap: 8px;
+            top: 50%;
+            transform: translateY(-50%);
 
             span {
-                font-size: 128px;
+                font-size: 90px;
                 font-weight: var(--font-weight-medium);
                 line-height: var(--line-height-125);
                 letter-spacing: -3.84px;
+                white-space: nowrap;
             }
 
-            &.calc-input span {
-                background: var(--linear-gradient-landing);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                color: transparent;
+            &.calc-input {
+                right: calc(50% + 80px); // 80px відступ від центру стрілочки
+                
+                span {
+                    background: var(--linear-gradient-landing);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    color: transparent;
+                }
             }
 
-            &.calc-result span {
-                color: var(--white-landing);
+            &.calc-result {
+                left: calc(50% + 80px); // 80px відступ від центру стрілочки
+                
+                span {
+                    color: var(--white-landing);
+                }
             }
-
 
             .calc-unit {
                 color: var(--white-landing);
@@ -869,10 +880,15 @@ h1, h2, h3 {
         
 
         .calc-arrow {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4px;
+            width: 118px;
 
             .calc-arrow-label {
                 color: var(--alt-landing);
