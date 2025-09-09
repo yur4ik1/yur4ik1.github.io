@@ -2094,9 +2094,66 @@ h3 {
         line-height: 125%;
         letter-spacing: -0.72px;
     }
+
     .text-description-alt {
         font-size: 14px;
         line-height: 140%;
         letter-spacing: -0.28px;
+    }
+
+    .text-heading {
+        font-size: 24px;
+    }
+
+    .forgetting__repetitive-content {
+        width: 100%;
+    }
+
+    .forgetting__repetitive-calc .calc-number span {
+        font-size: 11.5vw;
+        letter-spacing: normal;
+    }
+
+    .forgetting__repetitive-calc .calc-arrow {
+        width: auto;
+    }
+
+    .forgetting__repetitive-calc .calc-arrow img {
+        width: 16vw;
+    }
+
+    .forgetting__repetitive-calc .calc-arrow .calc-arrow-label {
+        font-size: 2.4vw;
+    }
+
+    .forgetting__repetitive-calc .calc-display {
+        width: auto;
+        margin-right: 23vw;
+    }
+
+    .forgetting__repetitive-calc #inputValue::after {
+        right: -6.75vw;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .forgetting__repetitive-calc .text-button-alt {
+        text-align: center;
+    }
+
+    .forgetting__repetitive-calc .calc-number.calc-input {
+        right: calc(50% + 15vw);
+    }
+
+    .forgetting__repetitive-calc .calc-number.calc-result {
+        left: calc(50% + 15vw);
+    }
+
+    .forgetting__repetitive-calc .calc-arrow {
+        transform: translate(-30%, -50%);
+    }
+
+    .forgetting__repetitive-calc .calc-number .calc-unit {
+        font-size: 7vw;
     }
 }
