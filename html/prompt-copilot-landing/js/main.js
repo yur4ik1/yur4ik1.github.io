@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check initial scroll position
     handleScroll();
 
-    // Initialize Reviews Swiper
-    const reviewsSwiper = new Swiper('.reviews-swiper', {
+    // Initialize Reviews Swiper - Desktop version
+    const reviewsSwiperDesktop = new Swiper('.reviews-swiper-desktop', {
         // Basic settings
         slidesPerView: 'auto',
         spaceBetween: 12,
@@ -159,8 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
         breakpoints: {
             320: {
                 slidesPerView: 1,
+                slidesPerGroup: 1,
                 spaceBetween: 12,
-                centeredSlides: true,
+                centeredSlides: false,
                 freeMode: false,
             },
             768: {
@@ -176,6 +177,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 freeMode: true,
             }
         }
+    });
+
+    // Initialize Reviews Swiper - Mobile version
+    const reviewsSwiperMobile = new Swiper('.reviews-swiper-mobile', {
+        // Basic settings
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+        loop: true,
+        
+        // Autoplay settings
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        
+        // Disable manual touch interaction
+        simulateTouch: false,
+        allowTouchMove: false,
+        grabCursor: false,
+        
+        // Speed
+        speed: 300,
+        
+        // Navigation
+        navigation: {
+            nextEl: '.reviews__nav-next',
+            prevEl: '.reviews__nav-prev',
+        },
     });
 
     // Pricing tabs functionality

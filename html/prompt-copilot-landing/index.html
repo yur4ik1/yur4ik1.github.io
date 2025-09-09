@@ -271,10 +271,10 @@
       <section class="reviews">
         <h2 class="text-subtitle">Hear From Our Happy Users</h2>
         <div class="reviews__content fadeInUp slow">
-          <div class="swiper reviews-swiper">
+          <!-- Desktop version - each card in separate slide -->
+          <div class="swiper reviews-swiper reviews-swiper-desktop">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-
                 <div class="reviews__content-item">
                   <div class="reviews__content-item-head">
                     <div class="avatar">
@@ -371,54 +371,132 @@
                       <img src="./img/avatar.svg" alt="avatar">
                     </div>
                     <div class="reviews__content-item-head-text">
-                      <p class="text-button-alt">David Kim</p>
-                      <p class="text-small">Startup Founder</p>
+                      <p class="text-button-alt">Lisa Park</p>
+                      <p class="text-small">UX Designer</p>
                     </div>
                   </div>
                   <div class="reviews__content-item-text text-description-alt">
-                    This is what AI should have been from day one. Context-aware, personalized, and actually useful for
-                    real work.
+                    The context awareness is incredible. It remembers our design system, brand guidelines, and project specifics across all conversations.
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide">
-                <div class="reviews__content-item">
-                  <div class="reviews__content-item-head">
-                    <div class="avatar">
-                      <img src="./img/avatar.svg" alt="avatar">
-                    </div>
-                    <div class="reviews__content-item-head-text">
-                      <p class="text-button-alt">David Kim</p>
-                      <p class="text-small">Startup Founder</p>
-                    </div>
-                  </div>
-                  <div class="reviews__content-item-text text-description-alt">
-                    This is what AI should have been from day one. Context-aware, personalized, and actually useful for
-                    real work.
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="reviews__content-item">
-                  <div class="reviews__content-item-head">
-                    <div class="avatar">
-                      <img src="./img/avatar.svg" alt="avatar">
-                    </div>
-                    <div class="reviews__content-item-head-text">
-                      <p class="text-button-alt">David Kim</p>
-                      <p class="text-small">Startup Founder</p>
-                    </div>
-                  </div>
-                  <div class="reviews__content-item-text text-description-alt">
-                    This is what AI should have been from day one. Context-aware, personalized, and actually useful for
-                    real work.
-                  </div>
-                </div>
-              </div>
-
             </div>
+          </div>
+
+          <!-- Mobile version - 2 cards per slide -->
+          <div class="swiper reviews-swiper reviews-swiper-mobile">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">Marcus Thompson</p>
+                      <p class="text-small">Solo Founder</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    I have different copilots for customer support, code reviews, and marketing. It's like having
+                    specialized AI employees who actually know my business.
+                  </div>
+                </div>
+                
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">Jennifer Wu</p>
+                      <p class="text-small">Marketing Agency Owner</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    Each client gets their own copilot. No more mixing up brand voices or accidentally using the wrong
+                    context. Game changer for agency work.
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">Sarah Chen</p>
+                      <p class="text-small">Content Director</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    Cut our AI briefing time from 15 minutes down to less than 15 minutes now knows our team uses Prompt
+                    Copilot.
+                  </div>
+                </div>
+                
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">Alex Rodriguez</p>
+                      <p class="text-small">Product Manager</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    Finally, an AI tool that remembers our product context. No more re-explaining features every single
+                    conversation.
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">David Kim</p>
+                      <p class="text-small">Startup Founder</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    This is what AI should have been from day one. Context-aware, personalized, and actually useful for
+                    real work.
+                  </div>
+                </div>
+                
+                <div class="reviews__content-item">
+                  <div class="reviews__content-item-head">
+                    <div class="avatar">
+                      <img src="./img/avatar.svg" alt="avatar">
+                    </div>
+                    <div class="reviews__content-item-head-text">
+                      <p class="text-button-alt">Lisa Park</p>
+                      <p class="text-small">UX Designer</p>
+                    </div>
+                  </div>
+                  <div class="reviews__content-item-text text-description-alt">
+                    The context awareness is incredible. It remembers our design system, brand guidelines, and project specifics across all conversations.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mobile navigation buttons -->
+          <div class="reviews__navigation-mobile">
+            <button class="reviews__nav-btn reviews__nav-prev" type="button">
+              <img src="./img/slider-arrow-left.svg" alt="Previous" width="30" height="30">
+            </button>
+            <button class="reviews__nav-btn reviews__nav-next" type="button">
+              <img src="./img/slider-arrow-right.svg" alt="Next" width="30" height="30">
+            </button>
           </div>
         </div>
       </section>

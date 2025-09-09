@@ -603,6 +603,44 @@ h3 {
     }
 }
 
+// Base styles for reviews swipers - both hidden by default
+.reviews-swiper-desktop,
+.reviews-swiper-mobile {
+    display: none;
+}
+
+// Hide mobile navigation by default
+.reviews__navigation-mobile {
+    display: none;
+}
+
+// Reviews responsive visibility with !important to override any conflicts
+// Desktop: show desktop version, hide mobile
+@media (min-width: 769px) {
+    .reviews-swiper-desktop {
+        display: block !important;
+    }
+
+    .reviews-swiper-mobile {
+        display: none !important;
+    }
+}
+
+// Mobile: hide desktop version, show mobile
+@media (max-width: 768px) {
+    .reviews-swiper-desktop {
+        display: none !important;
+    }
+
+    .reviews-swiper-mobile {
+        display: block !important;
+    }
+
+    .reviews__navigation-mobile {
+        display: flex !important;
+    }
+}
+
 // Custom elegant fadeInUp animation
 .fadeInUp {
     // Initial state - invisible and shifted down
@@ -2155,5 +2193,155 @@ h3 {
 
     .forgetting__repetitive-calc .calc-number .calc-unit {
         font-size: 7vw;
+    }
+
+    .testimonials .container .testimonials__image {
+        order: 2;
+    }
+
+    .testimonials {
+        padding-top: 130px;
+    }
+
+    .testimonials .container {
+        gap: 32px;
+    }
+
+    .testimonials .container .testimonials__content::before {
+        width: 39px;
+        height: 22px;
+    }
+
+    .testimonials .container .testimonials__image {
+        border-radius: 16px;
+    }
+
+    .faster__content-item {
+        min-height: 297px;
+    }
+
+
+
+    .reviews .reviews-swiper-mobile::after {
+        display: none;
+    }
+
+    .reviews .reviews-swiper-mobile::before {
+        display: none;
+    }
+
+    // Mobile reviews styling - 2 cards vertically stacked per slide
+    .reviews-swiper-mobile .swiper-slide {
+        height: auto !important;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reviews-swiper-mobile {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    // Mobile navigation buttons
+    .reviews__navigation-mobile {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        margin-top: 24px;
+        padding: 0 20px;
+    }
+
+    .reviews__nav-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 6px;
+        border: 1px solid #242423;
+        background: #171717;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: #242423;
+            border-color: #313130;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .reviews__content-item {
+        width: 100% !important;
+        min-height: 140px;
+
+        .reviews__content-item-head {
+            margin-bottom: 12px;
+
+            .avatar {
+                width: 32px;
+                height: 32px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .reviews__content-item-text {
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: -0.28px;
+        }
+    }
+
+    .pricing__tabs-container {
+        margin-top: 42px;
+    }
+
+    .pricing__content {
+        gap: 17px
+    }
+
+    .pricing__content-item .btn-secondary {
+        width: 100%;
+    }
+
+    .pricing__content-item.pro {
+        background-size: cover;
+    }
+
+    .pricing__content-item {
+        min-height: 453px;
+    }
+
+    .pricing__content-item-body {
+        height: 253px;
+    }
+
+    .built .text-description {
+        font-size: 16px;
+        line-height: 140%; 
+        letter-spacing: -0.48px;
+        gap: 16px;
+    }
+    .built .container {
+        gap: 20px;
+    }
+
+    .built .text-subtitle, .built .text-description {
+        text-align: center;
     }
 }
