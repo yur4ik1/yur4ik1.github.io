@@ -1,0 +1,124 @@
+/* Button classes based on your specs */
+
+.btn {
+  display: inline-flex;
+  height: 56px;
+  padding: 12px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  background: var(--color-accent-1);
+  border-radius: var(--button-radius);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-48 {
+  display: inline-flex;
+  height: 48px;
+  padding: 12px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-40 {
+  display: inline-flex;
+  height: 40px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-32 {
+  display: inline-flex;
+  height: 32px;
+  padding: 7px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* Button variants */
+.btn-primary { 
+  background: var(--color-accent-1); 
+  color: var(--color-dark); 
+}
+.btn-primary:hover { 
+  background: var(--color-accent-1-hover); 
+}
+
+.btn-secondary { 
+  background: var(--color-accent-2); 
+  color: var(--color-dark); 
+}
+.btn-secondary:hover { 
+  background: #9ae600; 
+}
+
+
+/* Outlined buttons */
+.btn-outlined-light { 
+  background: var(--color-white); 
+  color: #000; 
+  border: 1px solid rgba(0, 0, 0, 0.16); 
+}
+.btn-outlined-light:hover { 
+  background: #f8f8f8; 
+}
+
+.btn-outlined-dark { 
+  background: #15362e; 
+  color: var(--color-white); 
+  border: 1px solid rgba(255, 255, 255, 0.16); 
+  line-height: 24px; 
+}
+.btn-outlined-dark:hover { 
+  background: #1a4037; 
+}
+
+/* Size variants for outlined buttons */
+.btn-outlined-48 { 
+  height: 48px; 
+  padding: 8px 16px; 
+}
+
+.btn-outlined-40 { 
+  height: 40px; 
+  padding: 8px 16px; 
+  gap: 4px; 
+}
+
+.btn-outlined-56 { 
+  height: 56px; 
+  padding: 8px 32px; 
+}
+
+.btn-leading {
+    width: 186px;
+    display: flex;
+    height: 48px;
+    padding: 12px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    background: var(--Background-White, #FFF);
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+}

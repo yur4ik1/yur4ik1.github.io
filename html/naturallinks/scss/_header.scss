@@ -1,0 +1,90 @@
+/* Header Styles */
+.header {
+  position: absolute;
+  width: 100%;
+  top: 24px;
+  z-index: 100;
+  height: 72px;
+}
+
+.header__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url(../img/header.webp) no-repeat center top / cover;
+  padding: 16px 16px;
+  border-radius: 16px;
+}
+/* Brand */
+.brand__logo {
+  width: 170px;
+  height: 32px;
+  aspect-ratio: 85/16;
+}
+
+/* Navigation */
+.header__nav {
+  flex: 1;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav__link {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-white);
+}
+
+.nav__arrow {
+  width: 24px;
+  height: 24px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav__item:hover .nav__arrow {
+  color: var(--color-white);
+  transform: rotate(180deg);
+}
+
+/* Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .btn-outlined-dark {
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .header__actions {
+    display: none;
+  }
+
+  .header__nav {
+    display: none;
+  }
+}

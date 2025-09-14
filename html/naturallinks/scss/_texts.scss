@@ -1,0 +1,173 @@
+/* Typography - Responsive headings */
+h1 {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    letter-spacing: -0.03em;
+    text-align: center;
+
+    span {
+        font-weight: 700;
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 59px;
+    letter-spacing: -0.03em;
+    text-align: center;
+
+    span {
+        font-weight: 700;
+        color: var(--color-accent-1);
+    }
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 47px;
+
+    span {
+        font-weight: 700;
+        color: var(--color-accent-1);
+    }
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 37px;
+    color: var(--color-white);
+
+    span {
+        font-weight: 700;
+        color: var(--color-accent-1);
+    }
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    span {
+        font-weight: 700;
+        color: var(--color-accent-1);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    h2 {
+        font-size: 29px;
+        line-height: 44px;
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 39px;
+    }
+
+    h4 {
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+/* Body text classes */
+.subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.body-16 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-16-semibold {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-16-bold {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-14 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.body-14-bold {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.caption-13 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.overline-10 {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+/* Button text classes */
+.button-large {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.button-medium {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.button-small {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+/* Color classes */
+.text-white {
+    color: var(--color-white);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+.text-accent {
+    color: var(--color-accent-1);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}

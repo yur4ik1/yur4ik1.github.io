@@ -1,0 +1,42 @@
+.numbers {
+    padding: 260px 0;
+    padding-bottom: 0;
+
+    &__content {
+        width: 100%;
+        padding: 40px 64px;
+        border-radius: 60px 0;
+        background: #F8F8F8;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 16px;
+    }
+
+    &__item {
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        border-radius: 16px;
+        background: #FFF;
+    }
+
+    &__item-title {
+        color: #03271E;
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 37px;
+    }
+
+    &__item-description {
+        color: rgba(3, 39, 30, 0.60);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
