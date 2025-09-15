@@ -6,6 +6,7 @@
 
         h2 {
             width: 443px;
+            text-align: left;
         }
 
         p {
@@ -67,6 +68,11 @@
         align-items: center;
         border-radius: 100px;
         background: rgba(176, 180, 174, 0.24);
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #DCDDDB;
+        }
     }
 
     &__card-content {
@@ -139,6 +145,11 @@
         background: #ECEDEC;
         border: none;
         cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: #DCDDDB;
+        }
     }
 
     &__seo-swiper {

@@ -5,6 +5,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 36px;
     }
 
     &__left {
@@ -27,25 +28,8 @@
     &__swiper-wrapper {
         position: relative;
         width: 100%;
-        min-height: 400px;
-    }
-
-    &__slide {
-        display: flex;
-        width: 100%;
-        padding: 48px 24px 24px 24px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        pointer-events: none;
         border-radius: 16px;
         background: #F8F8F8;
-
 
         &::before {
             content: '';
@@ -57,10 +41,25 @@
             background: url(../img/quotes.svg) no-repeat center center / cover;
             z-index: 2;
         }
+    }
+
+    &__slides-container {
+        width: 100%;
+    }
+
+    &__slide {
+        display: none;
+        width: 100%;
+        padding: 48px 24px 24px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
 
         &.active {
+            display: flex;
             opacity: 1;
-            pointer-events: auto;
         }
     }
 

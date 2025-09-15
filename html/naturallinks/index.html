@@ -69,9 +69,39 @@
             <a href="#" class="btn btn-outlined-dark btn-outlined-40">Sign In</a>
             <a href="#" class="btn btn-primary btn-outlined-40">Sign Up</a>
           </div>
+
+          <div class="header__burger"></div>
         </div>
       </div>
     </header>
+
+    <!-- Mobile Burger Menu -->
+    <div class="mobile__menu">
+      <ul class="mobile__menu-list">
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link submenu">Services</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link submenu">Markets</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link submenu">Company</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link">Case studies</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link">Blog</a>
+        </li>
+        <li class="mobile__menu-item">
+          <a href="#" class="mobile__menu-link">Contact</a>
+        </li>
+      </ul>
+      <div class="mobile__menu-actions">
+        <a href="#" class="btn btn-outlined-dark">Sign In</a>
+        <a href="#" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -753,7 +783,7 @@
       <div class="container">
         <div class="reviews__section">
           <div class="reviews__left">
-            <h2>Clients are <span>Loving Our App</span></h2>
+            <h2>What Our <br> <span>Clients Say</span></h2>
             <div class="industries__seo-pagination reviews__navigation">
               <button class="industries__seo-pagination-button pagination-reviews__left left">
                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
@@ -780,132 +810,165 @@
 
           <div class="reviews__right">
             <div class="reviews__swiper-wrapper">
-              <div class="reviews__slide active">
-                <div class="reviews__right-stars">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star-bg.svg" alt="">
-                </div>
-                <p class="reviews__right-text">
-                  NaturalLinks helps us build high-quality pillow links for different projects we work on (e-commerce,
-                  dating, educational, etc.). The partnership helped us to get a large number of quality backlinks
-                  within
-                  the specified timeframe from quality and relevant resources, which led to boosting the "authority" of
-                  website pages in the eyes of Google. Communication is always at its best level. The team works quickly
-                  and efficiently, is flexible to any changes or requirements, project deadlines are always met, and if
-                  any problems arise during the execution of tasks, they are warned and agreed upon in advance. Over the
-                  2
-                  years of partnership, any problems have been resolved quickly and efficiently with the best possible
-                  result.
-                </p>
-                <div class="reviews__right-author">
-                  <div class="reviews__right-author-image">
-                    <img src="./img/clutch-logo.svg" alt="">
+              <div class="reviews__slides-container">
+                <div class="reviews__slide active">
+                  <div class="reviews__right-stars">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star-bg.svg" alt="">
                   </div>
-                  <div class="reviews__right-author-content">
-                    <p class="reviews__right-author-name">
-                      Sofiia Yanul
-                    </p>
-                    <p class="reviews__right-author-position">
-                      <span>Services: Link Building</span>
-                      <span>Industry: Digital Marketing</span>
-                    </p>
+                  <p class="reviews__right-text">
+                    NaturalLinks helps us build high-quality pillow links for different projects we work on (e-commerce,
+                    dating, educational, etc.). The partnership helped us to get a large number of quality backlinks
+                    within
+                    the specified timeframe from quality and relevant resources, which led to boosting the "authority"
+                    of
+                    website pages in the eyes of Google. Communication is always at its best level. The team works
+                    quickly
+                    and efficiently, is flexible to any changes or requirements, project deadlines are always met, and
+                    if
+                    any problems arise during the execution of tasks, they are warned and agreed upon in advance. Over
+                    the
+                    2
+                    years of partnership, any problems have been resolved quickly and efficiently with the best possible
+                    result.
+                  </p>
+                  <div class="reviews__right-author">
+                    <div class="reviews__right-author-image">
+                      <img src="./img/clutch-logo.svg" alt="">
+                    </div>
+                    <div class="reviews__right-author-content">
+                      <p class="reviews__right-author-name">
+                        Sofiia Yanul
+                      </p>
+                      <p class="reviews__right-author-position">
+                        <span>Services: Link Building</span>
+                        <span>Industry: Digital Marketing</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="reviews__slide">
-                <div class="reviews__right-stars">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                </div>
-                <p class="reviews__right-text">
-                  Working with NaturalLinks has been an exceptional experience. Their team delivers high-quality
-                  backlinks that significantly improved our search rankings. The communication is professional,
-                  deadlines are always met, and the results speak for themselves. We've seen a 40% increase in organic
-                  traffic within just 3 months of starting our partnership.
-                </p>
-                <div class="reviews__right-author">
-                  <div class="reviews__right-author-image">
-                    <img src="./img/review-1.svg" alt="">
+                <div class="reviews__slide">
+                  <div class="reviews__right-stars">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
                   </div>
-                  <div class="reviews__right-author-content">
-                    <p class="reviews__right-author-name">
-                      Michael Johnson
-                    </p>
-                    <p class="reviews__right-author-position">
-                      <span>Services: SEO Strategy</span>
-                      <span>Industry: E-commerce</span>
-                    </p>
+                  <p class="reviews__right-text">
+                    Working with NaturalLinks has been an exceptional experience. Their team delivers high-quality
+                    backlinks that significantly improved our search rankings. The communication is professional,
+                    deadlines are always met, and the results speak for themselves. We've seen a 40% increase in organic
+                    traffic within just 3 months of starting our partnership.
+                  </p>
+                  <div class="reviews__right-author">
+                    <div class="reviews__right-author-image">
+                      <img src="./img/review-1.svg" alt="">
+                    </div>
+                    <div class="reviews__right-author-content">
+                      <p class="reviews__right-author-name">
+                        Michael Johnson
+                      </p>
+                      <p class="reviews__right-author-position">
+                        <span>Services: SEO Strategy</span>
+                        <span>Industry: E-commerce</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="reviews__slide">
-                <div class="reviews__right-stars">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                </div>
-                <p class="reviews__right-text">
-                  NaturalLinks team exceeded our expectations with their link building strategy. They provided detailed
-                  reports, transparent communication, and delivered quality backlinks that helped us rank higher for
-                  competitive keywords. Their expertise in the digital marketing space is evident in every campaign they
-                  execute.
-                </p>
-                <div class="reviews__right-author">
-                  <div class="reviews__right-author-image">
-                    <img src="./img/review-2.svg" alt="">
+                <div class="reviews__slide">
+                  <div class="reviews__right-stars">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
                   </div>
-                  <div class="reviews__right-author-content">
-                    <p class="reviews__right-author-name">
-                      Sarah Williams
-                    </p>
-                    <p class="reviews__right-author-position">
-                      <span>Services: Content Marketing</span>
-                      <span>Industry: Technology</span>
-                    </p>
+                  <p class="reviews__right-text">
+                    NaturalLinks team exceeded our expectations with their link building strategy. They provided
+                    detailed
+                    reports, transparent communication, and delivered quality backlinks that helped us rank higher for
+                    competitive keywords. Their expertise in the digital marketing space is evident in every campaign
+                    they
+                    execute.
+                  </p>
+                  <div class="reviews__right-author">
+                    <div class="reviews__right-author-image">
+                      <img src="./img/review-2.svg" alt="">
+                    </div>
+                    <div class="reviews__right-author-content">
+                      <p class="reviews__right-author-name">
+                        Sarah Williams
+                      </p>
+                      <p class="reviews__right-author-position">
+                        <span>Services: Content Marketing</span>
+                        <span>Industry: Technology</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="reviews__slide">
-                <div class="reviews__right-stars">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                  <img src="./img/star.svg" alt="">
-                </div>
-                <p class="reviews__right-text">
-                  Outstanding service and results! NaturalLinks helped us build a strong backlink profile that improved
-                  our domain authority significantly. Their team is responsive, professional, and delivers exactly what
-                  they promise. We've been working together for over a year and couldn't be happier with the
-                  partnership.
-                </p>
-                <div class="reviews__right-author">
-                  <div class="reviews__right-author-image">
-                    <img src="./img/clutch-logo.svg" alt="">
+                <div class="reviews__slide">
+                  <div class="reviews__right-stars">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
+                    <img src="./img/star.svg" alt="">
                   </div>
-                  <div class="reviews__right-author-content">
-                    <p class="reviews__right-author-name">
-                      David Chen
-                    </p>
-                    <p class="reviews__right-author-position">
-                      <span>Services: Link Building</span>
-                      <span>Industry: Healthcare</span>
-                    </p>
+                  <p class="reviews__right-text">
+                    Outstanding service and results! NaturalLinks helped us build a strong backlink profile that
+                    improved
+                    our domain authority significantly. Their team is responsive, professional, and delivers exactly
+                    what
+                    they promise. We've been working together for over a year and couldn't be happier with the
+                    partnership.
+                  </p>
+                  <div class="reviews__right-author">
+                    <div class="reviews__right-author-image">
+                      <img src="./img/clutch-logo.svg" alt="">
+                    </div>
+                    <div class="reviews__right-author-content">
+                      <p class="reviews__right-author-name">
+                        David Chen
+                      </p>
+                      <p class="reviews__right-author-position">
+                        <span>Services: Link Building</span>
+                        <span>Industry: Healthcare</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="industries__seo-pagination reviews__navigation mobile">
+            <button class="industries__seo-pagination-button pagination-reviews__left left">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                <path
+                  d="M6.71141 2.1207L2.83141 6.0007L6.71141 9.8807C7.10141 10.2707 7.10141 10.9007 6.71141 11.2907C6.32141 11.6807 5.69141 11.6807 5.30141 11.2907L0.711406 6.7007C0.321406 6.3107 0.321406 5.6807 0.711406 5.2907L5.30141 0.700703C5.69141 0.310703 6.32141 0.310703 6.71141 0.700703C7.09141 1.0907 7.10141 1.7307 6.71141 2.1207Z"
+                  fill="#03271E" />
+              </svg>
+            </button>
+            <div class="pagination">
+              <span class="pagination__item reviews__pagination-item active"></span>
+              <span class="pagination__item reviews__pagination-item"></span>
+              <span class="pagination__item reviews__pagination-item"></span>
+              <span class="pagination__item reviews__pagination-item"></span>
+            </div>
+            <button class="industries__seo-pagination-button pagination-reviews__right right">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                <path
+                  d="M0.288594 9.8793L4.16859 5.9993L0.288593 2.1193C-0.101407 1.7293 -0.101407 1.0993 0.288593 0.709296C0.678593 0.319296 1.30859 0.319296 1.69859 0.709296L6.28859 5.2993C6.67859 5.6893 6.67859 6.3193 6.28859 6.7093L1.69859 11.2993C1.30859 11.6893 0.678594 11.6893 0.288594 11.2993C-0.0914063 10.9093 -0.101406 10.2693 0.288594 9.8793Z"
+                  fill="#03271E" />
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -1073,7 +1136,7 @@
           </a>
         </div>
         <div class="blog__list">
-          <div class="blog__item">
+          <div class="blog__item active">
             <div class="image">
               <img src="./img/blog-1.svg" alt="">
             </div>
@@ -1084,6 +1147,32 @@
               </div>
               <p class="title">
                 How To Do SEO For SaaS Companies: Practice Guide
+              </p>
+              <p class="description">
+                SaaS (Software as a service) is a fairly popular and growing business model today. This was facilitated
+                by a significant…
+              </p>
+              <a class="btn btn-contact" href="#">
+                Read now
+                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                  <path
+                    d="M0.290547 9.8793L4.17055 5.9993L0.290546 2.1193C-0.0994536 1.7293 -0.0994536 1.0993 0.290546 0.709296C0.680546 0.319296 1.31055 0.319296 1.70055 0.709296L6.29055 5.2993C6.68055 5.6893 6.68055 6.3193 6.29055 6.7093L1.70055 11.2993C1.31055 11.6893 0.680547 11.6893 0.290547 11.2993C-0.0894532 10.9093 -0.0994532 10.2693 0.290547 9.8793Z"
+                    fill="#03271E" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="blog__item">
+            <div class="image">
+              <img src="./img/blog-1.svg" alt="">
+            </div>
+            <div class="content">
+              <div class="head">
+                <span class="tag">SaaS</span>
+                <div class="date">12 hours ago</div>
+              </div>
+              <p class="title">
+                How To Do SEO For SaaS Companies: Practice Guide2
               </p>
               <p class="description">
                 SaaS (Software as a service) is a fairly popular and growing business model today. This was facilitated
@@ -1125,32 +1214,29 @@
               </a>
             </div>
           </div>
-          <div class="blog__item">
-            <div class="image">
-              <img src="./img/blog-1.svg" alt="">
-            </div>
-            <div class="content">
-              <div class="head">
-                <span class="tag">SaaS</span>
-                <div class="date">12 hours ago</div>
-              </div>
-              <p class="title">
-                How To Do SEO For SaaS Companies: Practice Guide
-              </p>
-              <p class="description">
-                SaaS (Software as a service) is a fairly popular and growing business model today. This was facilitated
-                by a significant…
-              </p>
-              <a class="btn btn-contact" href="#">
-                Read now
-                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
-                  <path
-                    d="M0.290547 9.8793L4.17055 5.9993L0.290546 2.1193C-0.0994536 1.7293 -0.0994536 1.0993 0.290546 0.709296C0.680546 0.319296 1.31055 0.319296 1.70055 0.709296L6.29055 5.2993C6.68055 5.6893 6.68055 6.3193 6.29055 6.7093L1.70055 11.2993C1.31055 11.6893 0.680547 11.6893 0.290547 11.2993C-0.0894532 10.9093 -0.0994532 10.2693 0.290547 9.8793Z"
-                    fill="#03271E" />
-                </svg>
-              </a>
-            </div>
+        </div>
+
+        <div class="industries__seo-pagination blog__pagination">
+          <button class="industries__seo-pagination-button left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+              <path
+                d="M6.71141 2.1207L2.83141 6.0007L6.71141 9.8807C7.10141 10.2707 7.10141 10.9007 6.71141 11.2907C6.32141 11.6807 5.69141 11.6807 5.30141 11.2907L0.711406 6.7007C0.321406 6.3107 0.321406 5.6807 0.711406 5.2907L5.30141 0.700703C5.69141 0.310703 6.32141 0.310703 6.71141 0.700703C7.09141 1.0907 7.10141 1.7307 6.71141 2.1207Z"
+                fill="#03271E" />
+            </svg>
+          </button>
+          <div class="pagination">
+            <span class="pagination__item blog__pagination-item active"></span>
+            <span class="pagination__item blog__pagination-item"></span>
+            <span class="pagination__item blog__pagination-item"></span>
+            <span class="pagination__item blog__pagination-item"></span>
           </div>
+          <button class="industries__seo-pagination-button right">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+              <path
+                d="M0.288594 9.8793L4.16859 5.9993L0.288593 2.1193C-0.101407 1.7293 -0.101407 1.0993 0.288593 0.709296C0.678593 0.319296 1.30859 0.319296 1.69859 0.709296L6.28859 5.2993C6.67859 5.6893 6.67859 6.3193 6.28859 6.7093L1.69859 11.2993C1.30859 11.6893 0.678594 11.6893 0.288594 11.2993C-0.0914063 10.9093 -0.101406 10.2693 0.288594 9.8793Z"
+                fill="#03271E" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

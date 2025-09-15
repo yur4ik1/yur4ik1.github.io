@@ -16,7 +16,7 @@
     border: none;
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: 0.4s ease;
     white-space: nowrap;
 }
 
@@ -57,7 +57,8 @@
 }
 
 .btn-primary:hover {
-    background: var(--color-accent-1-hover);
+    background: #72A119;
+    color: var(--color-white);
 }
 
 .btn-secondary {
@@ -66,7 +67,8 @@
 }
 
 .btn-secondary:hover {
-    background: #9ae600;
+    background: #5F9300;
+    color: var(--color-white);
 }
 
 .btn-white {
