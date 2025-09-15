@@ -195,6 +195,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize reviews slider
     reviewsSlider.init();
 
+    // Case navigation hover functionality
+    var caseList = document.querySelector('.case');
+    var caseNavigation = document.querySelector('.case__navigation');
+    
+    if (caseList && caseNavigation) {
+        var isHoveringNavigation = false;
+        var isHoveringList = false;
+        
+        function showNavigation() {
+            caseNavigation.style.opacity = '1';
+            caseNavigation.style.visibility = 'visible';
+        }
+        
+        function hideNavigation() {
+            if (!isHoveringNavigation && !isHoveringList) {
+                caseNavigation.style.opacity = '0';
+                caseNavigation.style.visibility = 'hidden';
+            }
+        }
+        
+        // Case list events
+        caseList.addEventListener('mouseenter', function() {
+            isHoveringList = true;
+            showNavigation();
+        });
+        
+        caseList.addEventListener('mouseleave', function() {
+            isHoveringList = false;
+            setTimeout(hideNavigation, 100);
+        });
+        
+        // Navigation events
+        caseNavigation.addEventListener('mouseenter', function() {
+            isHoveringNavigation = true;
+            showNavigation();
+        });
+        
+        caseNavigation.addEventListener('mouseleave', function() {
+            isHoveringNavigation = false;
+            setTimeout(hideNavigation, 100);
+        });
+    }
+
     // FAQ functionality
     var faqItems = document.querySelectorAll('.faq-item');
     

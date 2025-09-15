@@ -144,6 +144,9 @@
         width: 100%;
         top: 280px;
         z-index: 999999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
 
         &-button {
             display: flex;
@@ -156,15 +159,12 @@
             background: rgba(176, 180, 174, 0.24);
             border: none;
             cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+
 
             &.left {
                 position: relative;
                 left: -15px;
-            }
-
-            &.right {
-                position: relative;
-                right: -15px;
             }
         }
     }
