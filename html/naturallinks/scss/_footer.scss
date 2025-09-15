@@ -1,0 +1,205 @@
+.footer {
+    background: #03271E;
+    padding: 60px 0 40px 0;
+    padding-bottom: 0;
+    color: #fff;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__content {
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 416px;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img {
+            width: 170px;
+            height: auto;
+        }
+    }
+
+    .title {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21px;
+    }
+
+    &__subscribe {
+        max-width: 480px;
+
+        &-text {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            margin-top: 8px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        gap: 8px;
+        align-items: stretch;
+        margin-top: 24px;
+
+        .footer__input {
+            display: flex;
+            padding: 0 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            align-self: stretch;
+            color: #03271E;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            outline: none;
+            border-radius: 12px;
+            background: #F8F8F8;
+            border: none;
+            width: 290px;
+
+            &::placeholder {
+                color: #03271E;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .btn-secondary {
+        font-weight: 600;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 33px;
+        flex: 1;
+
+        &-column {
+            min-width: 160px;
+        }
+
+        .title {
+            margin-bottom: 18px;
+        }
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            li {
+                margin: 0;
+            }
+
+            a {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__social {
+
+        .title {
+            margin-bottom: 12px;
+        }
+
+        &-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        &-icon {
+            display: flex;
+            width: 48px;
+            height: 48px;
+            padding: 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 1000px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.08);
+
+            img,
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+
+            &:hover img,
+            &:hover svg {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        margin-top: 40px;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+        .footer__copyright {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+
+    &__bottom-list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+}

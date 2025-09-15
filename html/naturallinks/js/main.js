@@ -27,26 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
             this.updateSlider();
 
             // Add event listeners
-            this.leftBtn?.addEventListener('click', () => this.prevSlide());
-            this.rightBtn?.addEventListener('click', () => this.nextSlide());
+            if (this.leftBtn) this.leftBtn.addEventListener('click', this.prevSlide.bind(this));
+            if (this.rightBtn) this.rightBtn.addEventListener('click', this.nextSlide.bind(this));
 
             // Add pagination click events
-            this.paginationItems.forEach((item, index) => {
-                item.addEventListener('click', () => this.goToSlide(index));
+            var self = this;
+            this.paginationItems.forEach(function(item, index) {
+                item.addEventListener('click', function() {
+                    self.goToSlide(index);
+                });
             });
 
-            // Auto-play (optional)
-            setInterval(() => {
-                this.nextSlide();
-            }, 5000);
         },
 
         updateSlider: function() {
             const translateX = -this.currentSlide * this.slideWidth;
             this.wrapper.style.transform = `translateX(${translateX}px)`;
 
-            this.paginationItems.forEach((item, index) => {
-                if (index === this.currentSlide) item.classList.add('active');
+            var currentSlide = this.currentSlide;
+            this.paginationItems.forEach(function(item, index) {
+                if (index === currentSlide) item.classList.add('active');
                 else item.classList.remove('active');
             });
 
@@ -115,24 +115,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Add event listeners
             if (this.leftBtn) {
-                this.leftBtn.addEventListener('click', () => {
+                var self = this;
+                this.leftBtn.addEventListener('click', function() {
                     console.log('Left button clicked');
-                    this.prevSlide();
+                    self.prevSlide();
                 });
             }
 
             if (this.rightBtn) {
-                this.rightBtn.addEventListener('click', () => {
+                var self = this;
+                this.rightBtn.addEventListener('click', function() {
                     console.log('Right button clicked');
-                    this.nextSlide();
+                    self.nextSlide();
                 });
             }
 
             // Add pagination click events
-            this.paginationItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
+            var self = this;
+            this.paginationItems.forEach(function(item, index) {
+                item.addEventListener('click', function() {
                     console.log('Pagination clicked:', index);
-                    this.goToSlide(index);
+                    self.goToSlide(index);
                 });
             });
         },
@@ -141,8 +144,9 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Updating slider to slide:', this.currentSlide);
             
             // Update slides visibility
-            this.slides.forEach((slide, index) => {
-                if (index === this.currentSlide) {
+            var currentSlide = this.currentSlide;
+            this.slides.forEach(function(slide, index) {
+                if (index === currentSlide) {
                     slide.classList.add('active');
                 } else {
                     slide.classList.remove('active');
@@ -150,8 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Update pagination
-            this.paginationItems.forEach((item, index) => {
-                if (index === this.currentSlide) {
+            var currentSlide = this.currentSlide;
+            this.paginationItems.forEach(function(item, index) {
+                if (index === currentSlide) {
                     item.classList.add('active');
                 } else {
                     item.classList.remove('active');
@@ -190,15 +195,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize reviews slider
     reviewsSlider.init();
 
+    // FAQ functionality
+    var faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(function(item) {
+        var header = item.querySelector('.faq-item__header');
+        
+        header.addEventListener('click', function() {
+            var isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(function(otherItem) {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+
     // Initialize Swiper for CASE section
     (function initCaseSwiper(){
-        const root = document.querySelector('.case');
-        const el = root?.querySelector('.case-swiper');
+        var root = document.querySelector('.case');
+        var el = root ? root.querySelector('.case-swiper') : null;
         if (!el || typeof Swiper === 'undefined') return;
 
-        const paginationEl = root.querySelector('.pagination');
+        var paginationEl = root.querySelector('.pagination');
 
-        const swiper = new Swiper(el, {
+        var swiper = new Swiper(el, {
             slidesPerView: 1,
             spaceBetween: 36,
             speed: 500,

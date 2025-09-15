@@ -1,0 +1,90 @@
+.blog {
+    padding-bottom: 64px;
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 16px;
+        background: #F8F8F8;
+
+        .image {
+            border-radius: 8px;
+            height: 200px;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: space-between;
+            width: 100%;
+
+            .tag {
+                display: flex;
+                padding: var(--Spacing-System-Spacing-6px, 6px) var(--Spacing-System-Spacing-10px, 10px);
+                align-items: center;
+                gap: var(--Spacing-System-Spacing-6px, 6px);
+                border-radius: var(--Radius-System-rounded-full, 9999px);
+                border: 1px solid rgba(217, 119, 6, 0.12);
+                background: #FFFBEB;
+            }
+        }
+
+        .date {
+            color: #03271E;
+            text-align: right;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            color: #03271E;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-top: 8px;
+        }
+
+        .description {
+            color: rgba(3, 39, 30, 0.60);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        .btn-contact {
+            width: fit-content;
+        }
+    }
+}
