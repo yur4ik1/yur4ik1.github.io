@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yurii Kachan - Senior Frontend Developer</title>
   <meta name="description" content="Senior Frontend Developer with 5+ years of experience in React, Next.js, TypeScript, and Webflow. Portfolio and resume.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -298,9 +299,7 @@
             <div class="webflow__image">
               <div class="webflow__mockup">
                 <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
-                <div class="webflow__placeholder">
-                  <img src="./img/gop.webp" alt="God of Prompt">
-                </div>
+                <img src="./img/gop.png" alt="God of Prompt">
               </div>
             </div>
             <div class="webflow__body">
@@ -313,9 +312,7 @@
             <div class="webflow__image">
               <div class="webflow__mockup">
                 <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
-                <div class="webflow__placeholder">
-                  <img src="./img/simplynode.webp" alt="SimplyNode">
-                </div>
+                <img src="./img/simplynode.png" alt="SimplyNode">
               </div>
             </div>
             <div class="webflow__body">
@@ -328,9 +325,7 @@
             <div class="webflow__image">
               <div class="webflow__mockup">
                 <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
-                <div class="webflow__placeholder">
-                  <img src="./img/tiesa.webp" alt="TIESA">
-                </div>
+                <img src="./img/tiesa.png" alt="TIESA">
               </div>
             </div>
             <div class="webflow__body">
@@ -343,9 +338,7 @@
             <div class="webflow__image">
               <div class="webflow__mockup">
                 <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
-                <div class="webflow__placeholder">
-                  <img src="./img/1iv.webp" alt="1IV">
-                </div>
+                <img src="./img/1v.png" alt="1IV">
               </div>
             </div>
             <div class="webflow__body">
@@ -394,121 +387,108 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonial">
+    <!-- Reviews -->
+    <section class="reviews" id="testimonial">
       <div class="container">
         <div class="section-label fadeInUp">Feedback</div>
         <h2 class="section-title">What Clients Say</h2>
-
-        <div class="testimonial__slider fadeInUp" id="testimonialSlider">
-          <div class="testimonial__track" id="testimonialTrack">
-
-            <div class="testimonial__slide">
-              <div class="testimonial__card">
-                <p class="testimonial__text">
-                  Yurii took full ownership of our frontend - from a legacy HubSpot theme to a modern
-                  Next.js + Storyblok stack. He delivered fast, handled edge cases we hadn't even thought of,
-                  and consistently pushed for better solutions. One of the most reliable developers I've worked with.
-                </p>
-                <div class="testimonial__author">Product Manager, SOAX</div>
-                <div class="testimonial__role">UK-based proxy services company</div>
-              </div>
-            </div>
-
-            <div class="testimonial__slide">
-              <div class="testimonial__card">
-                <p class="testimonial__text">
-                  We needed someone who could build a complex Chrome extension that works across
-                  multiple AI platforms. Yurii delivered a polished product with a full React dashboard,
-                  OAuth, and Stripe integration. He thought through architecture from day one.
-                </p>
-                <div class="testimonial__author">CEO, God of Prompt</div>
-                <div class="testimonial__role">AI prompt marketplace - US</div>
-              </div>
-            </div>
-
-            <div class="testimonial__slide">
-              <div class="testimonial__card">
-                <p class="testimonial__text">
-                  Yurii built our entire B2B marketplace frontend - customer portal, admin dashboard
-                  with RBAC, three payment integrations. He works independently, communicates clearly,
-                  and writes clean code that's easy to maintain. Would hire again without hesitation.
-                </p>
-                <div class="testimonial__author">CTO, Natural Links</div>
-                <div class="testimonial__role">Link-building marketplace - EU</div>
-              </div>
-            </div>
-
-            <div class="testimonial__slide">
-              <div class="testimonial__card">
-                <p class="testimonial__text">
-                  I've worked with many Webflow developers, but Yurii stands out. He built our entire
-                  marketing site with pixel-perfect attention to design, smooth interactions, and clean
-                  structure. Fast turnaround, zero drama. Exactly what you want in a freelancer.
-                </p>
-                <div class="testimonial__author">Head of Marketing, SimplyNode</div>
-                <div class="testimonial__role">Proxy solutions provider - US</div>
-              </div>
-            </div>
-
-            <div class="testimonial__slide">
-              <div class="testimonial__card">
-                <p class="testimonial__text">
-                  Yurii joined mid-project and ramped up in no time. He took our Figma mockups
-                  and turned them into responsive, accessible React components. Great at asking
-                  the right questions and suggesting better approaches to UI problems.
-                </p>
-                <div class="testimonial__author">Product Designer, Ninjable</div>
-                <div class="testimonial__role">Gamification platform - Amsterdam</div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="testimonial__controls">
-            <button class="testimonial__arrow testimonial__arrow--prev" id="testimonialPrev" aria-label="Previous">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="testimonial__dots" id="testimonialDots">
-              <button class="testimonial__dot active" data-index="0" aria-label="Slide 1"></button>
-              <button class="testimonial__dot" data-index="1" aria-label="Slide 2"></button>
-              <button class="testimonial__dot" data-index="2" aria-label="Slide 3"></button>
-              <button class="testimonial__dot" data-index="3" aria-label="Slide 4"></button>
-              <button class="testimonial__dot" data-index="4" aria-label="Slide 5"></button>
-            </div>
-            <button class="testimonial__arrow testimonial__arrow--next" id="testimonialNext" aria-label="Next">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-        </div>
       </div>
-    </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner bg-alt">
-      <div class="cta-banner__bg"></div>
-      <div class="container cta-banner__content">
-        <h2 class="cta-banner__title fadeInUp">Let's Build Something Great</h2>
-        <p class="cta-banner__desc fadeInUp">
-          Looking for a frontend developer who takes ownership and delivers production-ready code? I'm available for remote work - full-time or contract.
-        </p>
-        <div class="cta-banner__actions fadeInUp">
-          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Start a conversation</a>
-          <a href="https://www.linkedin.com/in/yurii-kachan-37919a224" target="_blank" class="btn btn-ghost">LinkedIn</a>
+      <div class="reviews__content fadeInUp">
+        <div class="swiper reviews-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="reviews__card">
+                <div class="reviews__head">
+                  <div class="reviews__avatar">PM</div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Product Manager</div>
+                    <div class="reviews__company">SOAX - UK</div>
+                  </div>
+                </div>
+                <div class="reviews__body">
+                  Yurii took full ownership of our frontend - from a legacy HubSpot theme to a modern Next.js + Storyblok stack. He delivered fast, handled edge cases we hadn't even thought of, and consistently pushed for better solutions. One of the most reliable developers I've worked with.
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="reviews__card">
+                <div class="reviews__head">
+                  <div class="reviews__avatar">CEO</div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">CEO</div>
+                    <div class="reviews__company">God of Prompt - US</div>
+                  </div>
+                </div>
+                <div class="reviews__body">
+                  We needed someone who could build a complex Chrome extension that works across multiple AI platforms. Yurii delivered a polished product with a full React dashboard, OAuth, and Stripe integration. He thought through architecture from day one.
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="reviews__card">
+                <div class="reviews__head">
+                  <div class="reviews__avatar">CTO</div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">CTO</div>
+                    <div class="reviews__company">Natural Links - EU</div>
+                  </div>
+                </div>
+                <div class="reviews__body">
+                  Yurii built our entire B2B marketplace frontend - customer portal, admin dashboard with RBAC, three payment integrations. He works independently, communicates clearly, and writes clean code that's easy to maintain. Would hire again without hesitation.
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="reviews__card">
+                <div class="reviews__head">
+                  <div class="reviews__avatar">HM</div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Head of Marketing</div>
+                    <div class="reviews__company">SimplyNode - US</div>
+                  </div>
+                </div>
+                <div class="reviews__body">
+                  I've worked with many Webflow developers, but Yurii stands out. He built our entire marketing site with pixel-perfect attention to design, smooth interactions, and clean structure. Fast turnaround, zero drama. Exactly what you want in a freelancer.
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="reviews__card">
+                <div class="reviews__head">
+                  <div class="reviews__avatar">PD</div>
+                  <div class="reviews__info">
+                    <div class="reviews__name">Product Designer</div>
+                    <div class="reviews__company">Ninjable - Amsterdam</div>
+                  </div>
+                </div>
+                <div class="reviews__body">
+                  Yurii joined mid-project and ramped up in no time. He took our Figma mockups and turned them into responsive, accessible React components. Great at asking the right questions and suggesting better approaches to UI problems.
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section class="contact bg-alt" id="contact">
+      <div class="cta-banner__bg"></div>
       <div class="container">
         <div class="section-label fadeInUp">Let's talk</div>
-        <h2 class="section-title">Get In Touch</h2>
+        <h2 class="section-title">Let's Build Something Great</h2>
         <p class="contact__text fadeInUp">
-          Open to remote opportunities - full-time or contract.
+          Looking for a frontend developer who takes ownership and delivers production-ready code? I'm available for remote work - full-time or contract.
         </p>
         <div class="contact__links fadeInUp">
-          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Email me</a>
+          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Start a conversation</a>
           <a href="https://www.linkedin.com/in/yurii-kachan-37919a224" target="_blank" class="btn btn-ghost">LinkedIn</a>
           <a href="https://github.com/yur4ik1" target="_blank" class="btn btn-ghost">GitHub</a>
           <a href="https://t.me/yur4ik_69" target="_blank" class="btn btn-ghost">Telegram</a>
@@ -522,6 +502,7 @@
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/main.min.js"></script>
 </body>
 

@@ -289,6 +289,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // =============================================
+// Reviews Swiper
+// =============================================
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Swiper === 'undefined') return;
+    var el = document.querySelector('.reviews-swiper');
+    if (!el) return;
+
+    new Swiper('.reviews-swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        centeredSlides: false,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        simulateTouch: true,
+        allowTouchMove: true,
+        grabCursor: true,
+        freeMode: {
+            enabled: true,
+            sticky: false,
+            momentum: true,
+            momentumRatio: 0.5,
+            momentumVelocityRatio: 0.5
+        },
+        speed: 800,
+        breakpoints: {
+            320: {
+                slidesPerView: 1.15,
+                spaceBetween: 12,
+                freeMode: false
+            },
+            600: {
+                slidesPerView: 1.8,
+                spaceBetween: 14,
+                freeMode: false
+            },
+            900: {
+                slidesPerView: 'auto',
+                spaceBetween: 16,
+                freeMode: true
+            }
+        }
+    });
+});
+
+
+// =============================================
 // Smooth scroll for nav links
 // =============================================
 document.addEventListener('DOMContentLoaded', function() {

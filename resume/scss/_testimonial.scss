@@ -1,137 +1,114 @@
-.testimonial {
-  &__slider {
-    max-width: 750px;
-    margin: 0 auto;
+.reviews {
+  overflow: hidden;
+  position: relative;
+
+  &__content {
+    margin-top: 3rem;
     position: relative;
   }
 
-  &__track {
-    overflow: hidden;
-    border-radius: 16px;
-  }
+  .reviews-swiper {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    padding: 0 2rem;
 
-  &__slide {
-    display: none;
-    animation: testimonialFadeIn 0.5s ease;
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
 
-    &.active {
-      display: block;
+    .swiper-slide {
+      width: 380px;
+      height: auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -40px;
+      width: 120px;
+      height: calc(100% + 80px);
+      background: var(--bg);
+      filter: blur(25px);
+      pointer-events: none;
+      z-index: 2;
+      transition: background 0.5s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 120px;
+      height: calc(100% + 80px);
+      background: var(--bg);
+      filter: blur(25px);
+      pointer-events: none;
+      z-index: 2;
+      transition: background 0.5s;
     }
   }
 
   &__card {
-    text-align: center;
-    padding: 3rem 2.5rem;
-    background: var(--bg-card);
+    height: 100%;
+    border-radius: 14px;
     border: 1px solid var(--border);
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    position: relative;
-    transition: background 0.5s, border-color 0.4s, box-shadow 0.4s;
-
-    &::before {
-      content: '\201C';
-      position: absolute;
-      top: -0.2rem;
-      left: 2rem;
-      font-size: 5rem;
-      color: var(--accent);
-      opacity: 0.15;
-      line-height: 1;
-      font-family: Georgia, serif;
-    }
+    background: var(--bg-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.5s, border-color 0.4s;
   }
 
-  &__text {
-    font-size: 1.05rem;
-    color: var(--text-mid);
-    line-height: 1.8;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    transition: color 0.4s;
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1.25rem;
   }
 
-  &__author {
-    font-size: 0.9rem;
+  &__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
     font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+    transition: all 0.4s;
+  }
+
+  &__name {
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--text);
     transition: color 0.4s;
   }
 
-  &__role {
-    font-size: 0.78rem;
+  &__company {
+    font-size: 0.72rem;
     color: var(--text-dim);
-    margin-top: 0.15rem;
+    margin-top: 2px;
     transition: color 0.4s;
   }
 
-  &__controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.75rem;
-  }
-
-  &__arrow {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: var(--bg-card);
-    color: var(--text-dim);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-
-    &:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    svg {
-      display: block;
-    }
-  }
-
-  &__dots {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  &__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: none;
-    background: var(--border);
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.3s;
-
-    &.active {
-      background: var(--accent);
-      width: 24px;
-      border-radius: 4px;
-    }
-
-    &:hover:not(.active) {
-      background: var(--text-dim);
-    }
-  }
-}
-
-@keyframes testimonialFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  &__body {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+    padding: 1.25rem;
+    border-top: 1px solid var(--border);
+    background: var(--bg-alt);
+    flex: 1;
+    transition: all 0.4s;
   }
 }
