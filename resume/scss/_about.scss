@@ -1,0 +1,25 @@
+.about-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about {
+  position: sticky;
+  top: 6rem;
+
+  &__text {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+    transition: color 0.4s;
+
+    &:last-child {
+      margin-bottom: 0;
+      color: var(--text);
+      font-weight: 500;
+    }
+  }
+}

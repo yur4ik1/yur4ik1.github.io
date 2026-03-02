@@ -1,0 +1,44 @@
+.cta-banner {
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 50%, #3b82f6 100%);
+    opacity: 0.08;
+    transition: opacity 0.4s;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    transition: color 0.4s;
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    transition: color 0.4s;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+}

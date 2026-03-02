@@ -1,0 +1,137 @@
+.testimonial {
+  &__slider {
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__track {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  &__slide {
+    display: none;
+    animation: testimonialFadeIn 0.5s ease;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__card {
+    text-align: center;
+    padding: 3rem 2.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: background 0.5s, border-color 0.4s, box-shadow 0.4s;
+
+    &::before {
+      content: '\201C';
+      position: absolute;
+      top: -0.2rem;
+      left: 2rem;
+      font-size: 5rem;
+      color: var(--accent);
+      opacity: 0.15;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    transition: color 0.4s;
+  }
+
+  &__author {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: color 0.4s;
+  }
+
+  &__role {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 0.15rem;
+    transition: color 0.4s;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  &__arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s;
+
+    &.active {
+      background: var(--accent);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    &:hover:not(.active) {
+      background: var(--text-dim);
+    }
+  }
+}
+
+@keyframes testimonialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

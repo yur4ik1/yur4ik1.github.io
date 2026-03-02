@@ -1,0 +1,190 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 70%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+    transition: background 0.5s;
+  }
+
+  &__shape {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    transition: background 0.5s, border-color 0.4s;
+
+    &--1 {
+      width: 400px;
+      height: 400px;
+      right: -100px;
+      top: -100px;
+      animation: float 12s ease-in-out infinite;
+    }
+
+    &--2 {
+      width: 250px;
+      height: 250px;
+      left: -80px;
+      bottom: 10%;
+      animation: float 10s ease-in-out infinite 2s;
+    }
+
+    &--3 {
+      width: 150px;
+      height: 150px;
+      right: 15%;
+      bottom: -40px;
+      animation: float 8s ease-in-out infinite 4s;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__overline {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-soft);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    border: 1px solid var(--accent-border);
+    transition: all 0.4s;
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+
+  &__heading {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    transition: color 0.4s;
+
+    .accent-text {
+      .hero-letter {
+        background: linear-gradient(135deg, var(--accent), #a78bfa, #60a5fa);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: heroLetterReveal 0.4s ease-out forwards, gradientShift 6s ease infinite;
+        animation-play-state: paused, running;
+      }
+    }
+
+    &.animate .accent-text .hero-letter {
+      animation-play-state: running, running;
+    }
+  }
+
+  &__desc {
+    font-size: 1.1rem;
+    color: var(--text-mid);
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    transition: color 0.4s;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    transition: color 0.4s;
+  }
+
+  &__stat-label {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    font-weight: 500;
+    margin-top: -2px;
+    transition: color 0.4s;
+  }
+}
+
+// Scroll indicator
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+
+  span {
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    transition: color 0.4s;
+  }
+}
+
+.scroll-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: scrollBounce 2s ease-in-out infinite;
+
+  &__line {
+    width: 1px;
+    height: 24px;
+    background: linear-gradient(to bottom, transparent, var(--accent));
+  }
+
+  &__chevron {
+    width: 10px;
+    height: 10px;
+    border-right: 1.5px solid var(--accent);
+    border-bottom: 1.5px solid var(--accent);
+    transform: rotate(45deg);
+    margin-top: -6px;
+  }
+}

@@ -1,0 +1,97 @@
+.nav {
+  position: fixed;
+  top: -80px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.5s ease;
+  padding: 0.75rem 0;
+
+  &.visible {
+    top: 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: color 0.4s;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+// Theme toggle switch
+.theme-toggle {
+  width: 40px;
+  height: 22px;
+  border-radius: 100px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  [data-theme="light"] &::after {
+    transform: translateX(18px);
+  }
+}
+
+.theme-toggle-hero {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1002;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s ease;
+
+  .theme-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    transition: color 0.4s;
+  }
+}

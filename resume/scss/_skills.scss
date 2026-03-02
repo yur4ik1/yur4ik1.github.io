@@ -1,0 +1,46 @@
+.skills {
+  &__group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__group-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    margin-bottom: 0.65rem;
+    transition: color 0.4s;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    span {
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      background: var(--bg-card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease, color 0.4s, background 0.4s, border-color 0.4s;
+      animation: slideInTag 0.5s ease backwards;
+
+      &:hover {
+        border-color: var(--border-hover);
+        background: var(--accent-soft);
+        box-shadow: var(--shadow-hover);
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i - 1) * 0.03}s;
+        }
+      }
+    }
+  }
+}

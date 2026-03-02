@@ -1,0 +1,91 @@
+@media (max-width: 900px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .about-skills {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .hero__heading {
+    font-size: 2.2rem;
+  }
+
+  .hero__stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero__stat-number {
+    font-size: 1.4rem;
+  }
+
+  .webflow__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ticker__item {
+    padding: 0 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial__card {
+    padding: 2rem 1.5rem;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .nav__links {
+    gap: 0.75rem;
+
+    a {
+      font-size: 0.72rem;
+    }
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+
+  .hero__shape {
+    display: none;
+  }
+
+  .theme-toggle-hero {
+    top: 1rem;
+    right: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__links a.hide-mobile {
+    display: none;
+  }
+}

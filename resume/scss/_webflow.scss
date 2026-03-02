@@ -1,0 +1,103 @@
+.webflow {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  &__card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease, background 0.5s, border-color 0.4s;
+    backdrop-filter: blur(10px);
+
+    &:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+  }
+
+  &__image {
+    padding: 1rem 1rem 0;
+    background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.05));
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.4s;
+  }
+
+  &__mockup {
+    background: var(--bg-card-solid);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+    transition: background 0.5s, border-color 0.4s;
+
+    &-bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.4s;
+
+      span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--border);
+        transition: background 0.4s;
+      }
+
+      span:first-child { background: #ff5f57; }
+      span:nth-child(2) { background: #ffbd2e; }
+      span:nth-child(3) { background: #28c840; }
+    }
+  }
+
+  &__placeholder {
+    height: 140px;
+    background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.03));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    padding: 1.25rem;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      transition: color 0.4s;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 1.55;
+      margin-bottom: 0.65rem;
+      transition: color 0.4s;
+    }
+
+    a {
+      font-size: 0.78rem;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

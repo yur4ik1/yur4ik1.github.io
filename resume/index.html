@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yurii Kachan - Senior Frontend Developer</title>
+  <meta name="description" content="Senior Frontend Developer with 5+ years of experience in React, Next.js, TypeScript, and Webflow. Portfolio and resume.">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Theme Toggle (hero position) -->
+    <div class="theme-toggle-hero" id="themeToggleHero">
+      <span class="theme-label">Theme</span>
+      <div class="theme-toggle" id="themeSwitch" role="button" tabindex="0" aria-label="Toggle theme"></div>
+    </div>
+
+    <!-- Sticky Nav -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">YK</a>
+        <div class="nav__links">
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#webflow" class="hide-mobile">Webflow</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <div class="theme-toggle" id="themeSwitchNav" role="button" tabindex="0" aria-label="Toggle theme"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__shape hero__shape--1"></div>
+      <div class="hero__shape hero__shape--2"></div>
+      <div class="container hero__content">
+        <div class="hero__overline fadeInUp">Available for work</div>
+        <h1 class="hero__heading">Yurii Kachan<br><span class="accent-text">Senior Frontend Developer</span></h1>
+        <p class="hero__desc fadeInUp">
+          5+ years building production-grade interfaces with React, Next.js, and Webflow.
+          From Chrome extensions to B2B marketplaces - I own the frontend end to end.
+        </p>
+        <div class="hero__cta fadeInUp">
+          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Get in touch</a>
+          <a href="https://www.linkedin.com/in/yurii-kachan-37919a224" target="_blank" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://github.com/yur4ik1" target="_blank" class="btn btn-ghost">GitHub</a>
+          <a href="https://t.me/yur4ik_69" target="_blank" class="btn btn-ghost">Telegram</a>
+        </div>
+        <div class="hero__stats fadeInUp">
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="5">0</span>
+            <span class="hero__stat-label">Years experience</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="10">0</span>
+            <span class="hero__stat-label">Projects delivered</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" data-count="4">0</span>
+            <span class="hero__stat-label">Countries worked with</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow">
+          <div class="scroll-arrow__line"></div>
+          <div class="scroll-arrow__chevron"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Skills -->
+    <section id="skills" class="bg-alt">
+      <div class="container">
+        <div class="about-skills">
+
+          <div class="about fadeInUp">
+            <div class="section-label">About</div>
+            <h2 class="section-title">Who I Am</h2>
+            <p class="about__text">
+              I'm a frontend developer based in Ukraine with 5+ years of hands-on experience.
+              I started coding long before AI tools existed - and that foundation lets me build
+              things faster and smarter now that I use them.
+            </p>
+            <p class="about__text">
+              I've been the sole frontend developer on a corporate website serving millions
+              of visitors, built a Chrome extension from zero to production, and shipped a full
+              B2B marketplace with payment integrations and RBAC. I take ownership of
+              the entire frontend - from architecture decisions to the last pixel.
+            </p>
+            <p class="about__text">
+              Clean code, strong typing, scalable architecture.
+              I treat every project like it's my own product.
+            </p>
+          </div>
+
+          <div class="skills-col">
+            <div class="section-label fadeInUp">Toolkit</div>
+            <h2 class="section-title">Skills & Technologies</h2>
+
+            <div class="skills__group fadeInUp">
+              <div class="skills__group-title">Frameworks & Libraries</div>
+              <div class="skills__tags">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Zustand</span>
+                <span>Radix UI</span>
+                <span>React Hook Form</span>
+                <span>Zod</span>
+              </div>
+            </div>
+
+            <div class="skills__group fadeInUp">
+              <div class="skills__group-title">Styling</div>
+              <div class="skills__tags">
+                <span>Tailwind CSS</span>
+                <span>SASS / SCSS</span>
+                <span>CSS Modules</span>
+              </div>
+            </div>
+
+            <div class="skills__group fadeInUp">
+              <div class="skills__group-title">CMS & No-Code</div>
+              <div class="skills__tags">
+                <span>Webflow</span>
+                <span>Storyblok</span>
+                <span>HubSpot CMS</span>
+                <span>WordPress / Elementor</span>
+              </div>
+            </div>
+
+            <div class="skills__group fadeInUp">
+              <div class="skills__group-title">Testing & Tools</div>
+              <div class="skills__tags">
+                <span>Storybook</span>
+                <span>Jest</span>
+                <span>Chrome Extensions API</span>
+                <span>Rollup</span>
+                <span>Vercel Edge</span>
+              </div>
+            </div>
+
+            <div class="skills__group fadeInUp">
+              <div class="skills__group-title">Architecture</div>
+              <div class="skills__tags">
+                <span>Atomic Design</span>
+                <span>Feature-Sliced Design</span>
+                <span>AI-assisted Development</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-label fadeInUp">Work</div>
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects__grid">
+
+          <!-- Prompt Copilot -->
+          <div class="projects__card fadeInUp">
+            <div class="projects__image">
+              <div class="projects__mockup">
+                <div class="projects__mockup-bar"><span></span><span></span><span></span></div>
+                <img src="./img/pcp.webp" alt="Prompt Copilot">
+              </div>
+            </div>
+            <div class="projects__body">
+              <div class="projects__header">
+                <div class="projects__name">Prompt Copilot</div>
+                <div class="projects__type">Chrome Extension</div>
+              </div>
+              <p class="projects__desc">
+                Chrome extension that injects AI-powered autocomplete
+                and prompt enhancement into ChatGPT, Gemini, Google, and Perplexity.
+                Each platform - separate module with custom DOM handling.
+                Full React dashboard with OAuth, Stripe billing,
+                multi-step wizard, SASS Modules + Atomic Design.
+              </p>
+              <div class="projects__tech">
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>Vite</span>
+                <span>Rollup</span>
+                <span>SASS Modules</span>
+                <span>Atomic Design</span>
+                <span>Manifest V3</span>
+                <span>Stripe</span>
+                <span>OAuth</span>
+              </div>
+              <a href="https://chromewebstore.google.com/publisher/god-of-prompt-o%C3%BC/uc3dc3053176d6b01f693186b1309567a" target="_blank" class="projects__link">Chrome Web Store</a>
+            </div>
+          </div>
+
+          <!-- Natural Links -->
+          <div class="projects__card fadeInUp">
+            <div class="projects__image">
+              <div class="projects__mockup">
+                <div class="projects__mockup-bar"><span></span><span></span><span></span></div>
+                <img src="./img/nl.webp" alt="Natural Links">
+              </div>
+            </div>
+            <div class="projects__body">
+              <div class="projects__header">
+                <div class="projects__name">Natural Links</div>
+                <div class="projects__type">B2B Marketplace</div>
+              </div>
+              <p class="projects__desc">
+                B2B marketplace for link-building with customer and admin portals.
+                Domain catalog with metric-based filtering, cart, checkout with
+                three payment providers. Admin: task manager with workflow states,
+                RBAC with granular permissions. Also built the marketing
+                website as a custom WordPress/Elementor theme.
+              </p>
+              <div class="projects__tech">
+                <span>Next.js 14</span>
+                <span>TypeScript</span>
+                <span>Tailwind</span>
+                <span>Zustand</span>
+                <span>Radix UI</span>
+                <span>Zod</span>
+                <span>FSD</span>
+                <span>Stripe</span>
+                <span>AWS Cognito</span>
+              </div>
+              <a href="https://naturallinks.net" target="_blank" class="projects__link">naturallinks.net</a>
+            </div>
+          </div>
+
+          <!-- SOAX -->
+          <div class="projects__card fadeInUp">
+            <div class="projects__image">
+              <div class="projects__mockup">
+                <div class="projects__mockup-bar"><span></span><span></span><span></span></div>
+                <img src="./img/soax.png" alt="SOAX">
+              </div>
+            </div>
+            <div class="projects__body">
+              <div class="projects__header">
+                <div class="projects__name">SOAX</div>
+                <div class="projects__type">HubSpot &rarr; Next.js + Storyblok</div>
+              </div>
+              <p class="projects__desc">
+                Corporate website for a proxy service provider. First phase - built a custom
+                HubSpot CMS theme from scratch with flexible modules. Second phase - full migration
+                to Next.js 15 + Storyblok: component library following Atomic Design, interactive tools
+                (proxy checker, IP checker, cURL converter), dynamic sitemap, schema markup,
+                Vercel Edge middleware. Storybook for docs, Jest + RTL for tests.
+              </p>
+              <div class="projects__tech">
+                <span>Next.js 15</span>
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>Storyblok</span>
+                <span>SASS</span>
+                <span>Atomic Design</span>
+                <span>SWR</span>
+                <span>Storybook</span>
+                <span>Jest</span>
+                <span>Vercel Edge</span>
+                <span>HubSpot CMS</span>
+              </div>
+              <a href="https://soax.com/" target="_blank" class="projects__link">soax.com</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Webflow -->
+    <section id="webflow" class="bg-alt">
+      <div class="container">
+        <div class="section-label fadeInUp">No-Code</div>
+        <h2 class="section-title">Webflow Projects</h2>
+
+        <div class="webflow__grid">
+          <div class="webflow__card fadeInUp">
+            <div class="webflow__image">
+              <div class="webflow__mockup">
+                <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
+                <div class="webflow__placeholder">
+                  <img src="./img/gop.webp" alt="God of Prompt">
+                </div>
+              </div>
+            </div>
+            <div class="webflow__body">
+              <h3>God of Prompt</h3>
+              <p>AI prompt marketplace and toolkit. 20K+ active users, full marketing platform with blog, pricing, and guides.</p>
+              <a href="https://www.godofprompt.ai/" target="_blank">godofprompt.ai &rarr;</a>
+            </div>
+          </div>
+          <div class="webflow__card fadeInUp">
+            <div class="webflow__image">
+              <div class="webflow__mockup">
+                <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
+                <div class="webflow__placeholder">
+                  <img src="./img/simplynode.webp" alt="SimplyNode">
+                </div>
+              </div>
+            </div>
+            <div class="webflow__body">
+              <h3>SimplyNode</h3>
+              <p>Corporate website for a proxy solutions provider with interactive pricing calculator and FAQ.</p>
+              <a href="https://www.simplynode.io/" target="_blank">simplynode.io &rarr;</a>
+            </div>
+          </div>
+          <div class="webflow__card fadeInUp">
+            <div class="webflow__image">
+              <div class="webflow__mockup">
+                <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
+                <div class="webflow__placeholder">
+                  <img src="./img/tiesa.webp" alt="TIESA">
+                </div>
+              </div>
+            </div>
+            <div class="webflow__body">
+              <h3>TIESA</h3>
+              <p>Landing page for an AI mental health startup with scroll animations and waitlist form.</p>
+              <a href="https://tiesa.ai/" target="_blank">tiesa.ai &rarr;</a>
+            </div>
+          </div>
+          <div class="webflow__card fadeInUp">
+            <div class="webflow__image">
+              <div class="webflow__mockup">
+                <div class="webflow__mockup-bar"><span></span><span></span><span></span></div>
+                <div class="webflow__placeholder">
+                  <img src="./img/1iv.webp" alt="1IV">
+                </div>
+              </div>
+            </div>
+            <div class="webflow__body">
+              <h3>1IV</h3>
+              <p>Smart TV app platform for streaming and advertising solutions.</p>
+              <a href="https://1iv.webflow.io/" target="_blank">1iv.webflow.io &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-label fadeInUp">Career</div>
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"></div>
+
+          <div class="timeline__item fadeInUp">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">Nov 2023 - Jun 2025</div>
+            <h3><a href="https://soax.com/" target="_blank">SOAX</a></h3>
+            <div class="timeline__role">Frontend Developer - UK (Remote)</div>
+            <p>Sole frontend developer. Built HubSpot CMS theme, then led the full migration to Next.js + Storyblok.</p>
+          </div>
+
+          <div class="timeline__item fadeInUp">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">Apr 2023 - Oct 2024</div>
+            <h3><a href="https://ninjable.io/" target="_blank">Ninjable</a></h3>
+            <div class="timeline__role">Frontend Developer - Amsterdam (Remote)</div>
+            <p>Built the UI for a gamification platform using React.js + Vite. Developed responsive components from Figma designs. Also built the marketing website on HubSpot CMS.</p>
+          </div>
+
+          <div class="timeline__item fadeInUp">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2021 - 2023</div>
+            <h3>Freelance</h3>
+            <div class="timeline__role">Frontend Developer - Upwork & Direct Clients</div>
+            <p>Responsive layouts, React apps, Webflow websites, WordPress integrations. Clients from the US, UK, EU, and Asia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonial">
+      <div class="container">
+        <div class="section-label fadeInUp">Feedback</div>
+        <h2 class="section-title">What Clients Say</h2>
+
+        <div class="testimonial__slider fadeInUp" id="testimonialSlider">
+          <div class="testimonial__track" id="testimonialTrack">
+
+            <div class="testimonial__slide">
+              <div class="testimonial__card">
+                <p class="testimonial__text">
+                  Yurii took full ownership of our frontend - from a legacy HubSpot theme to a modern
+                  Next.js + Storyblok stack. He delivered fast, handled edge cases we hadn't even thought of,
+                  and consistently pushed for better solutions. One of the most reliable developers I've worked with.
+                </p>
+                <div class="testimonial__author">Product Manager, SOAX</div>
+                <div class="testimonial__role">UK-based proxy services company</div>
+              </div>
+            </div>
+
+            <div class="testimonial__slide">
+              <div class="testimonial__card">
+                <p class="testimonial__text">
+                  We needed someone who could build a complex Chrome extension that works across
+                  multiple AI platforms. Yurii delivered a polished product with a full React dashboard,
+                  OAuth, and Stripe integration. He thought through architecture from day one.
+                </p>
+                <div class="testimonial__author">CEO, God of Prompt</div>
+                <div class="testimonial__role">AI prompt marketplace - US</div>
+              </div>
+            </div>
+
+            <div class="testimonial__slide">
+              <div class="testimonial__card">
+                <p class="testimonial__text">
+                  Yurii built our entire B2B marketplace frontend - customer portal, admin dashboard
+                  with RBAC, three payment integrations. He works independently, communicates clearly,
+                  and writes clean code that's easy to maintain. Would hire again without hesitation.
+                </p>
+                <div class="testimonial__author">CTO, Natural Links</div>
+                <div class="testimonial__role">Link-building marketplace - EU</div>
+              </div>
+            </div>
+
+            <div class="testimonial__slide">
+              <div class="testimonial__card">
+                <p class="testimonial__text">
+                  I've worked with many Webflow developers, but Yurii stands out. He built our entire
+                  marketing site with pixel-perfect attention to design, smooth interactions, and clean
+                  structure. Fast turnaround, zero drama. Exactly what you want in a freelancer.
+                </p>
+                <div class="testimonial__author">Head of Marketing, SimplyNode</div>
+                <div class="testimonial__role">Proxy solutions provider - US</div>
+              </div>
+            </div>
+
+            <div class="testimonial__slide">
+              <div class="testimonial__card">
+                <p class="testimonial__text">
+                  Yurii joined mid-project and ramped up in no time. He took our Figma mockups
+                  and turned them into responsive, accessible React components. Great at asking
+                  the right questions and suggesting better approaches to UI problems.
+                </p>
+                <div class="testimonial__author">Product Designer, Ninjable</div>
+                <div class="testimonial__role">Gamification platform - Amsterdam</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="testimonial__controls">
+            <button class="testimonial__arrow testimonial__arrow--prev" id="testimonialPrev" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="testimonial__dots" id="testimonialDots">
+              <button class="testimonial__dot active" data-index="0" aria-label="Slide 1"></button>
+              <button class="testimonial__dot" data-index="1" aria-label="Slide 2"></button>
+              <button class="testimonial__dot" data-index="2" aria-label="Slide 3"></button>
+              <button class="testimonial__dot" data-index="3" aria-label="Slide 4"></button>
+              <button class="testimonial__dot" data-index="4" aria-label="Slide 5"></button>
+            </div>
+            <button class="testimonial__arrow testimonial__arrow--next" id="testimonialNext" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner bg-alt">
+      <div class="cta-banner__bg"></div>
+      <div class="container cta-banner__content">
+        <h2 class="cta-banner__title fadeInUp">Let's Build Something Great</h2>
+        <p class="cta-banner__desc fadeInUp">
+          Looking for a frontend developer who takes ownership and delivers production-ready code? I'm available for remote work - full-time or contract.
+        </p>
+        <div class="cta-banner__actions fadeInUp">
+          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Start a conversation</a>
+          <a href="https://www.linkedin.com/in/yurii-kachan-37919a224" target="_blank" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact bg-alt" id="contact">
+      <div class="container">
+        <div class="section-label fadeInUp">Let's talk</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact__text fadeInUp">
+          Open to remote opportunities - full-time or contract.
+        </p>
+        <div class="contact__links fadeInUp">
+          <a href="mailto:yuriiklevets@gmail.com" class="btn btn-primary">Email me</a>
+          <a href="https://www.linkedin.com/in/yurii-kachan-37919a224" target="_blank" class="btn btn-ghost">LinkedIn</a>
+          <a href="https://github.com/yur4ik1" target="_blank" class="btn btn-ghost">GitHub</a>
+          <a href="https://t.me/yur4ik_69" target="_blank" class="btn btn-ghost">Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">&copy; 2026 Yurii Kachan</div>
+    </footer>
+
+  </div>
+
+  <script src="./js/main.min.js"></script>
+</body>
+
+</html>

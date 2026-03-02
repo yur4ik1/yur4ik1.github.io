@@ -1,0 +1,173 @@
+// =============================================
+// Keyframes
+// =============================================
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 0.8; }
+}
+
+@keyframes slideInTag {
+  from { opacity: 0; transform: translateY(10px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes dotPulse {
+  0%   { box-shadow: 0 0 0 0 var(--accent-glow-strong); }
+  70%  { box-shadow: 0 0 0 10px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50%      { transform: translateY(6px); opacity: 1; }
+}
+
+// =============================================
+// Letter-by-letter blur reveal (pcp-landing style)
+// =============================================
+
+@keyframes heroLetterReveal {
+  0% {
+    opacity: 0.1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 0.8;
+    filter: blur(12px);
+    transform: translateY(6px) scale(1.06);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(5px);
+    transform: translateY(2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0.1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 0.8;
+    filter: blur(10px);
+    transform: translateY(5px) scale(1.05);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(5px);
+    transform: translateY(2px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Letter wrappers
+.word-wrapper {
+  display: inline-block;
+}
+
+.heading-letter {
+  display: inline-block;
+  opacity: 0.1;
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+  animation: letterReveal 0.35s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.animate .heading-letter {
+  animation-play-state: running;
+}
+
+.hero-letter {
+  display: inline-block;
+  opacity: 0.1;
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+  animation: heroLetterReveal 0.4s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.animate .hero-letter {
+  animation-play-state: running;
+}
+
+// =============================================
+// FadeInUp (JS-triggered)
+// =============================================
+
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+
+  &.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// =============================================
+// Scroll progress bar
+// =============================================
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #a78bfa, #60a5fa);
+  z-index: 1001;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+// =============================================
+// Cursor glow
+// =============================================
+
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--cursor-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  opacity: 0;
+
+  body:hover & {
+    opacity: 1;
+  }
+}
